@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1861,7 +1862,8 @@ public open class CfnLaunchConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty):
-          BlockDeviceProperty = Wrapper(cdkObject)
+          BlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? BlockDeviceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlockDeviceProperty):
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty =
@@ -2149,7 +2151,8 @@ public open class CfnLaunchConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = Wrapper(cdkObject)
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlockDeviceMappingProperty):
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty
@@ -2374,7 +2377,8 @@ public open class CfnLaunchConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty):
-          MetadataOptionsProperty = Wrapper(cdkObject)
+          MetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetadataOptionsProperty):
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty

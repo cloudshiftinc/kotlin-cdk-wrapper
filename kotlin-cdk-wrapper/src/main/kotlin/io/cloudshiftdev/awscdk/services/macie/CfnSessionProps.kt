@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.macie
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -148,7 +149,8 @@ public interface CfnSessionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnSessionProps):
-        CfnSessionProps = Wrapper(cdkObject)
+        CfnSessionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSessionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSessionProps):
         software.amazon.awscdk.services.macie.CfnSessionProps = (wrapped as CdkObject).cdkObject as

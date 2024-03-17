@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -41,7 +42,8 @@ public interface IBucketNotificationDestination {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.IBucketNotificationDestination):
-        IBucketNotificationDestination = Wrapper(cdkObject)
+        IBucketNotificationDestination = CdkObjectWrappers.wrap(cdkObject) as?
+        IBucketNotificationDestination ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IBucketNotificationDestination):
         software.amazon.awscdk.services.s3.IBucketNotificationDestination = (wrapped as

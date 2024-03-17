@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -232,7 +233,8 @@ public interface SsmParameterImageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SsmParameterImageOptions):
-        SsmParameterImageOptions = Wrapper(cdkObject)
+        SsmParameterImageOptions = CdkObjectWrappers.wrap(cdkObject) as? SsmParameterImageOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SsmParameterImageOptions):
         software.amazon.awscdk.services.ec2.SsmParameterImageOptions = (wrapped as

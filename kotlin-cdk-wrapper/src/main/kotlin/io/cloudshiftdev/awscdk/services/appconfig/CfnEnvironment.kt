@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -457,7 +458,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty):
-          MonitorProperty = Wrapper(cdkObject)
+          MonitorProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitorProperty):
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty = (wrapped as
@@ -554,7 +556,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty):
-          MonitorsProperty = Wrapper(cdkObject)
+          MonitorsProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitorsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitorsProperty):
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty = (wrapped as

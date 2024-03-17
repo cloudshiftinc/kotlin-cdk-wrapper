@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -187,7 +188,7 @@ public interface GitPushFilter {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.GitPushFilter):
-        GitPushFilter = Wrapper(cdkObject)
+        GitPushFilter = CdkObjectWrappers.wrap(cdkObject) as? GitPushFilter ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitPushFilter):
         software.amazon.awscdk.services.codepipeline.GitPushFilter = (wrapped as

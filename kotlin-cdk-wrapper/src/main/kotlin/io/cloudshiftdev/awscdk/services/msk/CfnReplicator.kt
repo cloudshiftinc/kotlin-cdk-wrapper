@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -552,7 +553,8 @@ public open class CfnReplicator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.AmazonMskClusterProperty):
-          AmazonMskClusterProperty = Wrapper(cdkObject)
+          AmazonMskClusterProperty = CdkObjectWrappers.wrap(cdkObject) as? AmazonMskClusterProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AmazonMskClusterProperty):
           software.amazon.awscdk.services.msk.CfnReplicator.AmazonMskClusterProperty = (wrapped as
@@ -819,7 +821,8 @@ public open class CfnReplicator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty):
-          TopicReplicationProperty = Wrapper(cdkObject)
+          TopicReplicationProperty = CdkObjectWrappers.wrap(cdkObject) as? TopicReplicationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicReplicationProperty):
           software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty = (wrapped as
@@ -981,7 +984,8 @@ public open class CfnReplicator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty):
-          KafkaClusterClientVpcConfigProperty = Wrapper(cdkObject)
+          KafkaClusterClientVpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KafkaClusterClientVpcConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KafkaClusterClientVpcConfigProperty):
           software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty =
@@ -1154,7 +1158,8 @@ public open class CfnReplicator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterProperty):
-          KafkaClusterProperty = Wrapper(cdkObject)
+          KafkaClusterProperty = CdkObjectWrappers.wrap(cdkObject) as? KafkaClusterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KafkaClusterProperty):
           software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterProperty = (wrapped as
@@ -1412,7 +1417,8 @@ public open class CfnReplicator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationInfoProperty):
-          ReplicationInfoProperty = Wrapper(cdkObject)
+          ReplicationInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicationInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationInfoProperty):
           software.amazon.awscdk.services.msk.CfnReplicator.ReplicationInfoProperty = (wrapped as
@@ -1650,7 +1656,8 @@ public open class CfnReplicator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty):
-          ConsumerGroupReplicationProperty = Wrapper(cdkObject)
+          ConsumerGroupReplicationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConsumerGroupReplicationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConsumerGroupReplicationProperty):
           software.amazon.awscdk.services.msk.CfnReplicator.ConsumerGroupReplicationProperty =

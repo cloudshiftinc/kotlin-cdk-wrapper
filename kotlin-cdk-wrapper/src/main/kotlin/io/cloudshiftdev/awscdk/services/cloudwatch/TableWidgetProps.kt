@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -560,7 +561,8 @@ public interface TableWidgetProps : MetricWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.TableWidgetProps):
-        TableWidgetProps = Wrapper(cdkObject)
+        TableWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? TableWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableWidgetProps):
         software.amazon.awscdk.services.cloudwatch.TableWidgetProps = (wrapped as

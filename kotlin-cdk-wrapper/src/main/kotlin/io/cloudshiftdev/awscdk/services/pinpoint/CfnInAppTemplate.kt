@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -846,7 +847,8 @@ public open class CfnInAppTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty):
-          InAppMessageContentProperty = Wrapper(cdkObject)
+          InAppMessageContentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InAppMessageContentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InAppMessageContentProperty):
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty =
@@ -989,7 +991,8 @@ public open class CfnInAppTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty):
-          BodyConfigProperty = Wrapper(cdkObject)
+          BodyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BodyConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BodyConfigProperty):
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty = (wrapped as
@@ -1242,7 +1245,8 @@ public open class CfnInAppTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty):
-          DefaultButtonConfigurationProperty = Wrapper(cdkObject)
+          DefaultButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultButtonConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultButtonConfigurationProperty):
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty
@@ -1378,7 +1382,8 @@ public open class CfnInAppTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty):
-          OverrideButtonConfigurationProperty = Wrapper(cdkObject)
+          OverrideButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OverrideButtonConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OverrideButtonConfigurationProperty):
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty
@@ -1521,7 +1526,8 @@ public open class CfnInAppTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty):
-          HeaderConfigProperty = Wrapper(cdkObject)
+          HeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeaderConfigProperty):
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty = (wrapped
@@ -1874,7 +1880,8 @@ public open class CfnInAppTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty):
-          ButtonConfigProperty = Wrapper(cdkObject)
+          ButtonConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ButtonConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ButtonConfigProperty):
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty = (wrapped

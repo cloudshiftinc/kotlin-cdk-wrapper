@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -677,7 +678,8 @@ public open class CfnGraph internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty):
-          VectorSearchConfigurationProperty = Wrapper(cdkObject)
+          VectorSearchConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VectorSearchConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VectorSearchConfigurationProperty):
           software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty =

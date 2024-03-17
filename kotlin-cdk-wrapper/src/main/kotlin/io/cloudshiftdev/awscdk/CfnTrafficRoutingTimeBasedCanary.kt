@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -113,7 +114,8 @@ public interface CfnTrafficRoutingTimeBasedCanary {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedCanary):
-        CfnTrafficRoutingTimeBasedCanary = Wrapper(cdkObject)
+        CfnTrafficRoutingTimeBasedCanary = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrafficRoutingTimeBasedCanary ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficRoutingTimeBasedCanary):
         software.amazon.awscdk.CfnTrafficRoutingTimeBasedCanary = (wrapped as CdkObject).cdkObject

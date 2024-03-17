@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.pipes
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -787,7 +788,7 @@ public interface CfnPipeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipeProps): CfnPipeProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? CfnPipeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeProps): software.amazon.awscdk.services.pipes.CfnPipeProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.pipes.CfnPipeProps

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Number
@@ -190,7 +191,8 @@ public interface LambdaFunctionProps : TargetBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.LambdaFunctionProps):
-        LambdaFunctionProps = Wrapper(cdkObject)
+        LambdaFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaFunctionProps):
         software.amazon.awscdk.services.events.targets.LambdaFunctionProps = (wrapped as

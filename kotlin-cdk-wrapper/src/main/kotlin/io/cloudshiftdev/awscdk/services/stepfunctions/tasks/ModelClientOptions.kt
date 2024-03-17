@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -123,7 +124,8 @@ public interface ModelClientOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions):
-        ModelClientOptions = Wrapper(cdkObject)
+        ModelClientOptions = CdkObjectWrappers.wrap(cdkObject) as? ModelClientOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ModelClientOptions):
         software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions = (wrapped as

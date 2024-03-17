@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -216,7 +217,8 @@ public interface LookupMachineImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LookupMachineImageProps):
-        LookupMachineImageProps = Wrapper(cdkObject)
+        LookupMachineImageProps = CdkObjectWrappers.wrap(cdkObject) as? LookupMachineImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LookupMachineImageProps):
         software.amazon.awscdk.services.ec2.LookupMachineImageProps = (wrapped as

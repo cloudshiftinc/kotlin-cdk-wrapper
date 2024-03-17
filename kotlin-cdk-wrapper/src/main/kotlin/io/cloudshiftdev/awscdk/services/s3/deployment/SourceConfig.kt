@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3.deployment
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Any
 import kotlin.String
@@ -127,7 +128,7 @@ public interface SourceConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.SourceConfig):
-        SourceConfig = Wrapper(cdkObject)
+        SourceConfig = CdkObjectWrappers.wrap(cdkObject) as? SourceConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceConfig):
         software.amazon.awscdk.services.s3.deployment.SourceConfig = (wrapped as

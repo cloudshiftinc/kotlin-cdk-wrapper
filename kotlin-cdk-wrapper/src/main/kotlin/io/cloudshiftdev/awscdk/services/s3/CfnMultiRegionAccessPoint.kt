@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -723,7 +724,8 @@ public open class CfnMultiRegionAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty):
-          PublicAccessBlockConfigurationProperty = Wrapper(cdkObject)
+          PublicAccessBlockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublicAccessBlockConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicAccessBlockConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty
@@ -836,7 +838,8 @@ public open class CfnMultiRegionAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty):
-          RegionProperty = Wrapper(cdkObject)
+          RegionProperty = CdkObjectWrappers.wrap(cdkObject) as? RegionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegionProperty):
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty = (wrapped as

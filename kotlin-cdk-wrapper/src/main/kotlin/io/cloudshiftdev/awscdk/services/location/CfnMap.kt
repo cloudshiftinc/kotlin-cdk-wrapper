@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1009,7 +1010,8 @@ public open class CfnMap internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty):
-          MapConfigurationProperty = Wrapper(cdkObject)
+          MapConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? MapConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MapConfigurationProperty):
           software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty = (wrapped as

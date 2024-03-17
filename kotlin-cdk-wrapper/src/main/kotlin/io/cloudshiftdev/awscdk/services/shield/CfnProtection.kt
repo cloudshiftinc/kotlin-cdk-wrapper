@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -726,7 +727,8 @@ public open class CfnProtection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty):
-          ApplicationLayerAutomaticResponseConfigurationProperty = Wrapper(cdkObject)
+          ApplicationLayerAutomaticResponseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? ApplicationLayerAutomaticResponseConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationLayerAutomaticResponseConfigurationProperty):
           software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty
@@ -892,7 +894,8 @@ public open class CfnProtection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.shield.CfnProtection.ActionProperty = (wrapped as

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1740,7 +1741,8 @@ public open class CfnAccountAuditConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty):
-          AuditCheckConfigurationsProperty = Wrapper(cdkObject)
+          AuditCheckConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuditCheckConfigurationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuditCheckConfigurationsProperty):
           software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty
@@ -1891,7 +1893,8 @@ public open class CfnAccountAuditConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty):
-          AuditNotificationTargetProperty = Wrapper(cdkObject)
+          AuditNotificationTargetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuditNotificationTargetProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuditNotificationTargetProperty):
           software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetProperty
@@ -1986,7 +1989,8 @@ public open class CfnAccountAuditConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty):
-          AuditCheckConfigurationProperty = Wrapper(cdkObject)
+          AuditCheckConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuditCheckConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuditCheckConfigurationProperty):
           software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditCheckConfigurationProperty
@@ -2101,7 +2105,8 @@ public open class CfnAccountAuditConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty):
-          AuditNotificationTargetConfigurationsProperty = Wrapper(cdkObject)
+          AuditNotificationTargetConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuditNotificationTargetConfigurationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuditNotificationTargetConfigurationsProperty):
           software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty

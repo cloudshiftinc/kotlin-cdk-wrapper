@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.Number
 import kotlin.String
@@ -147,7 +148,8 @@ public interface IPlacementGroup : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IPlacementGroup):
-        IPlacementGroup = Wrapper(cdkObject)
+        IPlacementGroup = CdkObjectWrappers.wrap(cdkObject) as? IPlacementGroup ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPlacementGroup):
         software.amazon.awscdk.services.ec2.IPlacementGroup = (wrapped as CdkObject).cdkObject as

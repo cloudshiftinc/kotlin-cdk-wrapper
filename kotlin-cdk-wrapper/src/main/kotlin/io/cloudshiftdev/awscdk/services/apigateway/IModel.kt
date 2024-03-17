@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -25,7 +26,7 @@ public interface IModel {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.IModel): IModel =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IModel ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IModel): software.amazon.awscdk.services.apigateway.IModel =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.IModel

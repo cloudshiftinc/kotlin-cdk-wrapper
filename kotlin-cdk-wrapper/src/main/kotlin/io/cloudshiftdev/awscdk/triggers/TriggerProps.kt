@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.triggers
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.Function
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
@@ -254,7 +255,7 @@ public interface TriggerProps : TriggerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.triggers.TriggerProps): TriggerProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? TriggerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TriggerProps): software.amazon.awscdk.triggers.TriggerProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.triggers.TriggerProps

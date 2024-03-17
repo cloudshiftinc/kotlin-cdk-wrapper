@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -45,7 +46,8 @@ public interface IEnvironmentPlaceholderProvider {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.IEnvironmentPlaceholderProvider):
-        IEnvironmentPlaceholderProvider = Wrapper(cdkObject)
+        IEnvironmentPlaceholderProvider = CdkObjectWrappers.wrap(cdkObject) as?
+        IEnvironmentPlaceholderProvider ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEnvironmentPlaceholderProvider):
         software.amazon.awscdk.cxapi.IEnvironmentPlaceholderProvider = (wrapped as

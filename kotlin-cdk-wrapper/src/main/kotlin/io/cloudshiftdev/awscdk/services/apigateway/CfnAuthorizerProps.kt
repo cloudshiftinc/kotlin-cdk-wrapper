@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -517,7 +518,8 @@ public interface CfnAuthorizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnAuthorizerProps):
-        CfnAuthorizerProps = Wrapper(cdkObject)
+        CfnAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAuthorizerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAuthorizerProps):
         software.amazon.awscdk.services.apigateway.CfnAuthorizerProps = (wrapped as

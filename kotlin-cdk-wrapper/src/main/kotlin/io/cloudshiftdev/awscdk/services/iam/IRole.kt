@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 import kotlin.Unit
@@ -190,7 +191,7 @@ public interface IRole : IIdentity {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IRole): IRole =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IRole ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRole): software.amazon.awscdk.services.iam.IRole = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.iam.IRole

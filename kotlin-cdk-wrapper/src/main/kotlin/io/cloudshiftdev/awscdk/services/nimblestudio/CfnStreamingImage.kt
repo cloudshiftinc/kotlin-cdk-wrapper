@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -401,7 +402,8 @@ public open class CfnStreamingImage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty):
-          StreamingImageEncryptionConfigurationProperty = Wrapper(cdkObject)
+          StreamingImageEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamingImageEncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamingImageEncryptionConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty

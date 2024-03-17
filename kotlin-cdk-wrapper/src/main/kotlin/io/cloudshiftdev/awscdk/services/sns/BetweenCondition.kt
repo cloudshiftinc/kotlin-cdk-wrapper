@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -108,7 +109,8 @@ public interface BetweenCondition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.BetweenCondition):
-        BetweenCondition = Wrapper(cdkObject)
+        BetweenCondition = CdkObjectWrappers.wrap(cdkObject) as? BetweenCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BetweenCondition):
         software.amazon.awscdk.services.sns.BetweenCondition = (wrapped as CdkObject).cdkObject as

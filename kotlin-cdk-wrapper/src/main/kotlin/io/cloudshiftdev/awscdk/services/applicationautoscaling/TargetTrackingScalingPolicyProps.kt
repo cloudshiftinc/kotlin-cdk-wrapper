@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.applicationautoscaling
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.IMetric
 import kotlin.Boolean
 import kotlin.Number
@@ -314,7 +315,8 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicyProps):
-        TargetTrackingScalingPolicyProps = Wrapper(cdkObject)
+        TargetTrackingScalingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        TargetTrackingScalingPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TargetTrackingScalingPolicyProps):
         software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicyProps =

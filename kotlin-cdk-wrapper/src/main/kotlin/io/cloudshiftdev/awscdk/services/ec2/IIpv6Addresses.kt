@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -180,7 +181,7 @@ public interface IIpv6Addresses {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IIpv6Addresses): IIpv6Addresses
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IIpv6Addresses ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IIpv6Addresses): software.amazon.awscdk.services.ec2.IIpv6Addresses
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.IIpv6Addresses

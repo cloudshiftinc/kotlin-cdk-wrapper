@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -358,7 +359,8 @@ public open class CfnVdmAttributes internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes.DashboardAttributesProperty):
-          DashboardAttributesProperty = Wrapper(cdkObject)
+          DashboardAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashboardAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DashboardAttributesProperty):
           software.amazon.awscdk.services.ses.CfnVdmAttributes.DashboardAttributesProperty =
@@ -451,7 +453,8 @@ public open class CfnVdmAttributes internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes.GuardianAttributesProperty):
-          GuardianAttributesProperty = Wrapper(cdkObject)
+          GuardianAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GuardianAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GuardianAttributesProperty):
           software.amazon.awscdk.services.ses.CfnVdmAttributes.GuardianAttributesProperty = (wrapped

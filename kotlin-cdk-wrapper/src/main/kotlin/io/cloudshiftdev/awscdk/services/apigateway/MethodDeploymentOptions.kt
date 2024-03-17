@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -331,7 +332,8 @@ public interface MethodDeploymentOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.MethodDeploymentOptions):
-        MethodDeploymentOptions = Wrapper(cdkObject)
+        MethodDeploymentOptions = CdkObjectWrappers.wrap(cdkObject) as? MethodDeploymentOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MethodDeploymentOptions):
         software.amazon.awscdk.services.apigateway.MethodDeploymentOptions = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 import io.cloudshiftdev.awscdk.CfnCapabilities
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Number
@@ -620,7 +621,8 @@ public interface CloudFormationDeployStackSetActionProps : CommonAwsActionProps,
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackSetActionProps):
-        CloudFormationDeployStackSetActionProps = Wrapper(cdkObject)
+        CloudFormationDeployStackSetActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationDeployStackSetActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationDeployStackSetActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackSetActionProps

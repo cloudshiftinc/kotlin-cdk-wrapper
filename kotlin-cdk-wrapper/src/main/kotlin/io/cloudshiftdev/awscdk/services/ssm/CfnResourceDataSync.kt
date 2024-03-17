@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -670,7 +671,8 @@ public open class CfnResourceDataSync internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty):
-          AwsOrganizationsSourceProperty = Wrapper(cdkObject)
+          AwsOrganizationsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsOrganizationsSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsOrganizationsSourceProperty):
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty =
@@ -872,7 +874,8 @@ public open class CfnResourceDataSync internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty):
-          S3DestinationProperty = Wrapper(cdkObject)
+          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DestinationProperty):
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty = (wrapped
@@ -1122,7 +1125,8 @@ public open class CfnResourceDataSync internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty):
-          SyncSourceProperty = Wrapper(cdkObject)
+          SyncSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SyncSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SyncSourceProperty):
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty = (wrapped as

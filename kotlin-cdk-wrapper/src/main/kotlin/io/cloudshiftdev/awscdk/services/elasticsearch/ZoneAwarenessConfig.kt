@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticsearch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.Number
@@ -181,7 +182,8 @@ public interface ZoneAwarenessConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig):
-        ZoneAwarenessConfig = Wrapper(cdkObject)
+        ZoneAwarenessConfig = CdkObjectWrappers.wrap(cdkObject) as? ZoneAwarenessConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ZoneAwarenessConfig):
         software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig = (wrapped as

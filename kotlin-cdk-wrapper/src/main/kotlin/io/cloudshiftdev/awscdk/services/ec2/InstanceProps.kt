@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -1026,7 +1027,7 @@ public interface InstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InstanceProps): InstanceProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? InstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceProps): software.amazon.awscdk.services.ec2.InstanceProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.InstanceProps

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.gamelift
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -201,7 +202,8 @@ public interface CfnMatchmakingRuleSetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps):
-        CfnMatchmakingRuleSetProps = Wrapper(cdkObject)
+        CfnMatchmakingRuleSetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMatchmakingRuleSetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMatchmakingRuleSetProps):
         software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps = (wrapped as

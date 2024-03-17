@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -54,7 +55,7 @@ public abstract class Authorization internal constructor(
         oauth(OAuthAuthorizationProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.Authorization):
-        Authorization = Wrapper(cdkObject)
+        Authorization = CdkObjectWrappers.wrap(cdkObject) as? Authorization ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Authorization):
         software.amazon.awscdk.services.events.Authorization = (wrapped as CdkObject).cdkObject as

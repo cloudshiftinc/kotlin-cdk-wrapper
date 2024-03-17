@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -126,7 +127,7 @@ public interface HttpTimeout {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpTimeout): HttpTimeout =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? HttpTimeout ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpTimeout): software.amazon.awscdk.services.appmesh.HttpTimeout =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.HttpTimeout

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -102,7 +103,8 @@ public interface CloudAssemblyBuilderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps):
-        CloudAssemblyBuilderProps = Wrapper(cdkObject)
+        CloudAssemblyBuilderProps = CdkObjectWrappers.wrap(cdkObject) as? CloudAssemblyBuilderProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudAssemblyBuilderProps):
         software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps = (wrapped as CdkObject).cdkObject as

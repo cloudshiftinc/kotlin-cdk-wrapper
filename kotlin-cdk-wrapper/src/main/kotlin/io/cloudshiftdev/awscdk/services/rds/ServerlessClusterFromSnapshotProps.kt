@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -588,7 +589,8 @@ public interface ServerlessClusterFromSnapshotProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps):
-        ServerlessClusterFromSnapshotProps = Wrapper(cdkObject)
+        ServerlessClusterFromSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerlessClusterFromSnapshotProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessClusterFromSnapshotProps):
         software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps = (wrapped as

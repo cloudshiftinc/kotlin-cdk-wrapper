@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -123,7 +124,8 @@ public interface ResponseCustomHeadersBehavior {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior):
-        ResponseCustomHeadersBehavior = Wrapper(cdkObject)
+        ResponseCustomHeadersBehavior = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseCustomHeadersBehavior ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseCustomHeadersBehavior):
         software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior = (wrapped as

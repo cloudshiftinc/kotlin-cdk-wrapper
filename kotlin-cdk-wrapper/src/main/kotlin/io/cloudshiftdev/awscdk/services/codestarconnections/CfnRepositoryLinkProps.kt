@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codestarconnections
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -212,7 +213,8 @@ public interface CfnRepositoryLinkProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarconnections.CfnRepositoryLinkProps):
-        CfnRepositoryLinkProps = Wrapper(cdkObject)
+        CfnRepositoryLinkProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRepositoryLinkProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepositoryLinkProps):
         software.amazon.awscdk.services.codestarconnections.CfnRepositoryLinkProps = (wrapped as

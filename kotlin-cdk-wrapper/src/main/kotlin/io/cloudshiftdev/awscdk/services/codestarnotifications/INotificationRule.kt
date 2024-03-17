@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.Boolean
 import kotlin.String
@@ -87,7 +88,8 @@ public interface INotificationRule : IResource {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarnotifications.INotificationRule):
-        INotificationRule = Wrapper(cdkObject)
+        INotificationRule = CdkObjectWrappers.wrap(cdkObject) as? INotificationRule ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INotificationRule):
         software.amazon.awscdk.services.codestarnotifications.INotificationRule = (wrapped as

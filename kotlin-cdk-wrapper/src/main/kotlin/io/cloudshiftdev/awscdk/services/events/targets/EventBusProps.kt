@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Unit
@@ -136,7 +137,7 @@ public interface EventBusProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.EventBusProps):
-        EventBusProps = Wrapper(cdkObject)
+        EventBusProps = CdkObjectWrappers.wrap(cdkObject) as? EventBusProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventBusProps):
         software.amazon.awscdk.services.events.targets.EventBusProps = (wrapped as

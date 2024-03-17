@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.customresources
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -560,7 +561,7 @@ public interface ProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.customresources.ProviderProps):
-        ProviderProps = Wrapper(cdkObject)
+        ProviderProps = CdkObjectWrappers.wrap(cdkObject) as? ProviderProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProviderProps):
         software.amazon.awscdk.customresources.ProviderProps = (wrapped as CdkObject).cdkObject as

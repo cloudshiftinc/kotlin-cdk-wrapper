@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Interface for constructs that can be targets of an network load balancer.
@@ -38,7 +39,8 @@ public interface INetworkLoadBalancerTarget {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget):
-        INetworkLoadBalancerTarget = Wrapper(cdkObject)
+        INetworkLoadBalancerTarget = CdkObjectWrappers.wrap(cdkObject) as?
+        INetworkLoadBalancerTarget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INetworkLoadBalancerTarget):
         software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget = (wrapped

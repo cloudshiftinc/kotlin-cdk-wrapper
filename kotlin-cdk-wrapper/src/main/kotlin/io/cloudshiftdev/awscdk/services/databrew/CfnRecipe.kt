@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -448,7 +449,8 @@ public open class CfnRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ConditionExpressionProperty):
-          ConditionExpressionProperty = Wrapper(cdkObject)
+          ConditionExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConditionExpressionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionExpressionProperty):
           software.amazon.awscdk.services.databrew.CfnRecipe.ConditionExpressionProperty = (wrapped
@@ -658,7 +660,8 @@ public open class CfnRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.DataCatalogInputDefinitionProperty):
-          DataCatalogInputDefinitionProperty = Wrapper(cdkObject)
+          DataCatalogInputDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCatalogInputDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataCatalogInputDefinitionProperty):
           software.amazon.awscdk.services.databrew.CfnRecipe.DataCatalogInputDefinitionProperty =
@@ -779,7 +782,8 @@ public open class CfnRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.databrew.CfnRecipe.ActionProperty = (wrapped as
@@ -886,7 +890,8 @@ public open class CfnRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty):
-          S3LocationProperty = Wrapper(cdkObject)
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.databrew.CfnRecipe.S3LocationProperty = (wrapped as
@@ -1065,7 +1070,7 @@ public open class CfnRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.InputProperty):
-          InputProperty = Wrapper(cdkObject)
+          InputProperty = CdkObjectWrappers.wrap(cdkObject) as? InputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputProperty):
           software.amazon.awscdk.services.databrew.CfnRecipe.InputProperty = (wrapped as
@@ -4065,7 +4070,8 @@ public open class CfnRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.RecipeParametersProperty):
-          RecipeParametersProperty = Wrapper(cdkObject)
+          RecipeParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipeParametersProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecipeParametersProperty):
           software.amazon.awscdk.services.databrew.CfnRecipe.RecipeParametersProperty = (wrapped as
@@ -4244,7 +4250,8 @@ public open class CfnRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty):
-          SecondaryInputProperty = Wrapper(cdkObject)
+          SecondaryInputProperty = CdkObjectWrappers.wrap(cdkObject) as? SecondaryInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SecondaryInputProperty):
           software.amazon.awscdk.services.databrew.CfnRecipe.SecondaryInputProperty = (wrapped as
@@ -4445,7 +4452,8 @@ public open class CfnRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe.RecipeStepProperty):
-          RecipeStepProperty = Wrapper(cdkObject)
+          RecipeStepProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipeStepProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecipeStepProperty):
           software.amazon.awscdk.services.databrew.CfnRecipe.RecipeStepProperty = (wrapped as

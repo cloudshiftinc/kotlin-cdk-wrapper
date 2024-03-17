@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -71,7 +72,8 @@ public abstract class GatewayRouteSpec internal constructor(
         http2(HttpGatewayRouteSpecOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec):
-        GatewayRouteSpec = Wrapper(cdkObject)
+        GatewayRouteSpec = CdkObjectWrappers.wrap(cdkObject) as? GatewayRouteSpec ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayRouteSpec):
         software.amazon.awscdk.services.appmesh.GatewayRouteSpec = (wrapped as CdkObject).cdkObject

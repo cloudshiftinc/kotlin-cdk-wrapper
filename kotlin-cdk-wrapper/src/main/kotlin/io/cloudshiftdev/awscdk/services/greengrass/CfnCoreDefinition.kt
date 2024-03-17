@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -590,7 +591,7 @@ public open class CfnCoreDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty):
-          CoreProperty = Wrapper(cdkObject)
+          CoreProperty = CdkObjectWrappers.wrap(cdkObject) as? CoreProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoreProperty):
           software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty = (wrapped as
@@ -725,7 +726,8 @@ public open class CfnCoreDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty):
-          CoreDefinitionVersionProperty = Wrapper(cdkObject)
+          CoreDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CoreDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoreDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty

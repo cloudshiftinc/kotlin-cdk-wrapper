@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.constructs.Node
@@ -137,7 +138,7 @@ public interface IInstance : IResource, IConnectable, IGrantable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IInstance): IInstance =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IInstance ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IInstance): software.amazon.awscdk.services.ec2.IInstance =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.IInstance

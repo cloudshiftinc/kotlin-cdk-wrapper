@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rekognition
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -118,7 +119,8 @@ public interface CfnCollectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnCollectionProps):
-        CfnCollectionProps = Wrapper(cdkObject)
+        CfnCollectionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCollectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCollectionProps):
         software.amazon.awscdk.services.rekognition.CfnCollectionProps = (wrapped as

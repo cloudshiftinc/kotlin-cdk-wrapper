@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -616,7 +617,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty):
-          LifecycleConfigurationProperty = Wrapper(cdkObject)
+          LifecycleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LifecycleConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LifecycleConfigurationProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty =
@@ -713,7 +715,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty):
-          FilterTagProperty = Wrapper(cdkObject)
+          FilterTagProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterTagProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty = (wrapped as
@@ -979,7 +982,7 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty):
-          RuleProperty = Wrapper(cdkObject)
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty = (wrapped as
@@ -1071,7 +1074,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty):
-          AbortIncompleteMultipartUploadProperty = Wrapper(cdkObject)
+          AbortIncompleteMultipartUploadProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AbortIncompleteMultipartUploadProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AbortIncompleteMultipartUploadProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty
@@ -1254,7 +1258,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty):
-          FilterProperty = Wrapper(cdkObject)
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty = (wrapped as
@@ -1367,7 +1372,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty):
-          FilterAndOperatorProperty = Wrapper(cdkObject)
+          FilterAndOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FilterAndOperatorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterAndOperatorProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty = (wrapped

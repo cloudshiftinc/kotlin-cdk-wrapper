@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -92,7 +93,8 @@ public interface IResourceWithPolicy : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IResourceWithPolicy):
-        IResourceWithPolicy = Wrapper(cdkObject)
+        IResourceWithPolicy = CdkObjectWrappers.wrap(cdkObject) as? IResourceWithPolicy ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IResourceWithPolicy):
         software.amazon.awscdk.services.iam.IResourceWithPolicy = (wrapped as CdkObject).cdkObject

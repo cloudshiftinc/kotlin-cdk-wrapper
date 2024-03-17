@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -109,7 +110,8 @@ public interface RuntimePlatform {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.RuntimePlatform):
-        RuntimePlatform = Wrapper(cdkObject)
+        RuntimePlatform = CdkObjectWrappers.wrap(cdkObject) as? RuntimePlatform ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuntimePlatform):
         software.amazon.awscdk.services.ecs.RuntimePlatform = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -123,7 +124,8 @@ public interface PrivateSubnetAttributes : SubnetAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnetAttributes):
-        PrivateSubnetAttributes = Wrapper(cdkObject)
+        PrivateSubnetAttributes = CdkObjectWrappers.wrap(cdkObject) as? PrivateSubnetAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PrivateSubnetAttributes):
         software.amazon.awscdk.services.ec2.PrivateSubnetAttributes = (wrapped as

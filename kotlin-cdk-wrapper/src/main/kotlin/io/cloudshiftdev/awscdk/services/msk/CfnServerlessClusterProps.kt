@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.msk
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -219,7 +220,8 @@ public interface CfnServerlessClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessClusterProps):
-        CfnServerlessClusterProps = Wrapper(cdkObject)
+        CfnServerlessClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServerlessClusterProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServerlessClusterProps):
         software.amazon.awscdk.services.msk.CfnServerlessClusterProps = (wrapped as

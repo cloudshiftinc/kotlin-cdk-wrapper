@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -161,7 +162,7 @@ public abstract class MachineImage internal constructor(
         resolveSsmParameterAtLaunch(parameterName, SsmParameterImageOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MachineImage): MachineImage =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? MachineImage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MachineImage): software.amazon.awscdk.services.ec2.MachineImage =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.MachineImage

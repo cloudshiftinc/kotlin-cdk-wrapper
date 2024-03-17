@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -296,7 +297,8 @@ public open class CfnMonitoringSubscription internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty):
-          RealtimeMetricsSubscriptionConfigProperty = Wrapper(cdkObject)
+          RealtimeMetricsSubscriptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RealtimeMetricsSubscriptionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RealtimeMetricsSubscriptionConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty
@@ -425,7 +427,8 @@ public open class CfnMonitoringSubscription internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty):
-          MonitoringSubscriptionProperty = Wrapper(cdkObject)
+          MonitoringSubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringSubscriptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringSubscriptionProperty):
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty

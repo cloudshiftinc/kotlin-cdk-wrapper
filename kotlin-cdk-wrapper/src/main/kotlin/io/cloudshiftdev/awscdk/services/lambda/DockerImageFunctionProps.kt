@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codeguruprofiler.IProfilingGroup
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -1452,7 +1453,8 @@ public interface DockerImageFunctionProps : FunctionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.DockerImageFunctionProps):
-        DockerImageFunctionProps = Wrapper(cdkObject)
+        DockerImageFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? DockerImageFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageFunctionProps):
         software.amazon.awscdk.services.lambda.DockerImageFunctionProps = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Boolean
@@ -254,7 +255,7 @@ public interface LogGroupProps : TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.LogGroupProps):
-        LogGroupProps = Wrapper(cdkObject)
+        LogGroupProps = CdkObjectWrappers.wrap(cdkObject) as? LogGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogGroupProps):
         software.amazon.awscdk.services.events.targets.LogGroupProps = (wrapped as

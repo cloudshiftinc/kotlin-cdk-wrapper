@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.servicediscovery.DnsRecordType
 import io.cloudshiftdev.awscdk.services.servicediscovery.INamespace
 import kotlin.Number
@@ -263,7 +264,8 @@ public interface CloudMapOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CloudMapOptions):
-        CloudMapOptions = Wrapper(cdkObject)
+        CloudMapOptions = CdkObjectWrappers.wrap(cdkObject) as? CloudMapOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudMapOptions):
         software.amazon.awscdk.services.ecs.CloudMapOptions = (wrapped as CdkObject).cdkObject as

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -995,7 +996,7 @@ public open class CfnConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ScopeProperty):
-          ScopeProperty = Wrapper(cdkObject)
+          ScopeProperty = CdkObjectWrappers.wrap(cdkObject) as? ScopeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScopeProperty):
           software.amazon.awscdk.services.config.CfnConfigRule.ScopeProperty = (wrapped as
@@ -1086,7 +1087,8 @@ public open class CfnConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty):
-          EvaluationModeConfigurationProperty = Wrapper(cdkObject)
+          EvaluationModeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EvaluationModeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EvaluationModeConfigurationProperty):
           software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty =
@@ -1464,7 +1466,8 @@ public open class CfnConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty):
-          SourceProperty = Wrapper(cdkObject)
+          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceProperty):
           software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty = (wrapped as
@@ -1721,7 +1724,8 @@ public open class CfnConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty):
-          SourceDetailProperty = Wrapper(cdkObject)
+          SourceDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceDetailProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceDetailProperty):
           software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty = (wrapped as
@@ -1902,7 +1906,8 @@ public open class CfnConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty):
-          CustomPolicyDetailsProperty = Wrapper(cdkObject)
+          CustomPolicyDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomPolicyDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomPolicyDetailsProperty):
           software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty =
@@ -2033,7 +2038,8 @@ public open class CfnConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty):
-          ComplianceProperty = Wrapper(cdkObject)
+          ComplianceProperty = CdkObjectWrappers.wrap(cdkObject) as? ComplianceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComplianceProperty):
           software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty = (wrapped as

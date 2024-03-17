@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -425,7 +426,8 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty):
-          AccessRightsProperty = Wrapper(cdkObject)
+          AccessRightsProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessRightsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessRightsProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty

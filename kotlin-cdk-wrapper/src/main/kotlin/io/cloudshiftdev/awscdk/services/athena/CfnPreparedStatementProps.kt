@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.athena
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -157,7 +158,8 @@ public interface CfnPreparedStatementProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnPreparedStatementProps):
-        CfnPreparedStatementProps = Wrapper(cdkObject)
+        CfnPreparedStatementProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPreparedStatementProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPreparedStatementProps):
         software.amazon.awscdk.services.athena.CfnPreparedStatementProps = (wrapped as

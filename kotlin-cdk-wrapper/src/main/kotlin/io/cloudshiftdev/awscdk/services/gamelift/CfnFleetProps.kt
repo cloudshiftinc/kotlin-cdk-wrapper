@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.gamelift
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.Number
@@ -1730,7 +1731,7 @@ public interface CfnFleetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleetProps):
-        CfnFleetProps = Wrapper(cdkObject)
+        CfnFleetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFleetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleetProps):
         software.amazon.awscdk.services.gamelift.CfnFleetProps = (wrapped as CdkObject).cdkObject as

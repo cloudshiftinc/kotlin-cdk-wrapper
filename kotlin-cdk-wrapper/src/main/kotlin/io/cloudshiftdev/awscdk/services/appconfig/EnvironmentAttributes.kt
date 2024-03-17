@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -189,7 +190,8 @@ public interface EnvironmentAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentAttributes):
-        EnvironmentAttributes = Wrapper(cdkObject)
+        EnvironmentAttributes = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentAttributes):
         software.amazon.awscdk.services.appconfig.EnvironmentAttributes = (wrapped as

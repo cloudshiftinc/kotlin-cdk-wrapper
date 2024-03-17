@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 
@@ -67,7 +68,8 @@ public interface GetContextValueResult {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.GetContextValueResult):
-        GetContextValueResult = Wrapper(cdkObject)
+        GetContextValueResult = CdkObjectWrappers.wrap(cdkObject) as? GetContextValueResult ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GetContextValueResult):
         software.amazon.awscdk.GetContextValueResult = (wrapped as CdkObject).cdkObject as

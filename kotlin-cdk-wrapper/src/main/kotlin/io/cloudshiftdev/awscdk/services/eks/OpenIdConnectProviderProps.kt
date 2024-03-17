@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -117,7 +118,8 @@ public interface OpenIdConnectProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.OpenIdConnectProviderProps):
-        OpenIdConnectProviderProps = Wrapper(cdkObject)
+        OpenIdConnectProviderProps = CdkObjectWrappers.wrap(cdkObject) as?
+        OpenIdConnectProviderProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OpenIdConnectProviderProps):
         software.amazon.awscdk.services.eks.OpenIdConnectProviderProps = (wrapped as

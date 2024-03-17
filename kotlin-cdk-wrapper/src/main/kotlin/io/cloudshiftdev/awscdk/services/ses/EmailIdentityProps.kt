@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -299,7 +300,8 @@ public interface EmailIdentityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.EmailIdentityProps):
-        EmailIdentityProps = Wrapper(cdkObject)
+        EmailIdentityProps = CdkObjectWrappers.wrap(cdkObject) as? EmailIdentityProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmailIdentityProps):
         software.amazon.awscdk.services.ses.EmailIdentityProps = (wrapped as CdkObject).cdkObject as

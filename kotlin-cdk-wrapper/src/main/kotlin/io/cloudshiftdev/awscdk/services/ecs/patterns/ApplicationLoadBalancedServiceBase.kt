@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationListener
@@ -70,7 +71,8 @@ public abstract class ApplicationLoadBalancedServiceBase internal constructor(
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase):
-        ApplicationLoadBalancedServiceBase = Wrapper(cdkObject)
+        ApplicationLoadBalancedServiceBase = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancedServiceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedServiceBase):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase = (wrapped

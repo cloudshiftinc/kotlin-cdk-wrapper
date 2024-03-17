@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -422,7 +423,8 @@ public open class CfnEndpointAccess internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty):
-          VpcSecurityGroupProperty = Wrapper(cdkObject)
+          VpcSecurityGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcSecurityGroupProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcSecurityGroupProperty):
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty =
@@ -597,7 +599,8 @@ public open class CfnEndpointAccess internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty):
-          VpcEndpointProperty = Wrapper(cdkObject)
+          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcEndpointProperty):
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty = (wrapped
@@ -760,7 +763,8 @@ public open class CfnEndpointAccess internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty):
-          NetworkInterfaceProperty = Wrapper(cdkObject)
+          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkInterfaceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkInterfaceProperty):
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty =

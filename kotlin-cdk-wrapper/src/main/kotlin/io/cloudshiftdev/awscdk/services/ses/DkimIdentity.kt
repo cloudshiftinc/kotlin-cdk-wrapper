@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.route53.IPublicHostedZone
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -66,7 +67,7 @@ public abstract class DkimIdentity internal constructor(
         software.amazon.awscdk.services.ses.DkimIdentity.easyDkim(signingKeyLength.let(EasyDkimSigningKeyLength::unwrap)).let(DkimIdentity::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.DkimIdentity): DkimIdentity =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? DkimIdentity ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DkimIdentity): software.amazon.awscdk.services.ses.DkimIdentity =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.DkimIdentity

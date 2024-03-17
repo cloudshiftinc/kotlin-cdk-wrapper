@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -141,7 +142,8 @@ public interface CfnVPNGatewayRoutePropagationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagationProps):
-        CfnVPNGatewayRoutePropagationProps = Wrapper(cdkObject)
+        CfnVPNGatewayRoutePropagationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPNGatewayRoutePropagationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPNGatewayRoutePropagationProps):
         software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagationProps = (wrapped as

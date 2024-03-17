@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -780,7 +781,8 @@ public open class CfnUserSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty):
-          CookieSynchronizationConfigurationProperty = Wrapper(cdkObject)
+          CookieSynchronizationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CookieSynchronizationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookieSynchronizationConfigurationProperty):
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty
@@ -917,7 +919,8 @@ public open class CfnUserSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty):
-          CookieSpecificationProperty = Wrapper(cdkObject)
+          CookieSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CookieSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookieSpecificationProperty):
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty

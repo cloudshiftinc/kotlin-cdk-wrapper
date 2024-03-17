@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ses
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -128,7 +129,7 @@ public interface ByoDkimOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.ByoDkimOptions): ByoDkimOptions
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? ByoDkimOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ByoDkimOptions): software.amazon.awscdk.services.ses.ByoDkimOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.ByoDkimOptions

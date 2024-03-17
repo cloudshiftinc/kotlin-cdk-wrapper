@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.globalaccelerator.endpoints
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -86,7 +87,8 @@ public interface NetworkLoadBalancerEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpointProps):
-        NetworkLoadBalancerEndpointProps = Wrapper(cdkObject)
+        NetworkLoadBalancerEndpointProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancerEndpointProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancerEndpointProps):
         software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpointProps

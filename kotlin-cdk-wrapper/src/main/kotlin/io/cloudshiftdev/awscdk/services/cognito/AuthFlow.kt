@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -153,7 +154,7 @@ public interface AuthFlow {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.AuthFlow): AuthFlow =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? AuthFlow ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuthFlow): software.amazon.awscdk.services.cognito.AuthFlow =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cognito.AuthFlow

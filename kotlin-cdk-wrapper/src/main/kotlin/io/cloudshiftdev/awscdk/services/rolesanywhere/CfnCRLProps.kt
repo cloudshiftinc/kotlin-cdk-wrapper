@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -200,7 +201,7 @@ public interface CfnCRLProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnCRLProps):
-        CfnCRLProps = Wrapper(cdkObject)
+        CfnCRLProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCRLProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCRLProps):
         software.amazon.awscdk.services.rolesanywhere.CfnCRLProps = (wrapped as CdkObject).cdkObject

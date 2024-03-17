@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.devopsguru
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -124,7 +125,8 @@ public interface CfnNotificationChannelProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannelProps):
-        CfnNotificationChannelProps = Wrapper(cdkObject)
+        CfnNotificationChannelProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNotificationChannelProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotificationChannelProps):
         software.amazon.awscdk.services.devopsguru.CfnNotificationChannelProps = (wrapped as

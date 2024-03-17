@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -84,7 +85,8 @@ public interface SubnetIpamOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SubnetIpamOptions):
-        SubnetIpamOptions = Wrapper(cdkObject)
+        SubnetIpamOptions = CdkObjectWrappers.wrap(cdkObject) as? SubnetIpamOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubnetIpamOptions):
         software.amazon.awscdk.services.ec2.SubnetIpamOptions = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codestarnotifications
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -267,7 +268,8 @@ public interface NotificationRuleProps : NotificationRuleOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRuleProps):
-        NotificationRuleProps = Wrapper(cdkObject)
+        NotificationRuleProps = CdkObjectWrappers.wrap(cdkObject) as? NotificationRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NotificationRuleProps):
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleProps = (wrapped as

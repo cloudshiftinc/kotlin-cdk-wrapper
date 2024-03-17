@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import kotlin.Boolean
 import kotlin.String
@@ -566,7 +567,8 @@ public interface SpecRestApiProps : RestApiBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.SpecRestApiProps):
-        SpecRestApiProps = Wrapper(cdkObject)
+        SpecRestApiProps = CdkObjectWrappers.wrap(cdkObject) as? SpecRestApiProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SpecRestApiProps):
         software.amazon.awscdk.services.apigateway.SpecRestApiProps = (wrapped as

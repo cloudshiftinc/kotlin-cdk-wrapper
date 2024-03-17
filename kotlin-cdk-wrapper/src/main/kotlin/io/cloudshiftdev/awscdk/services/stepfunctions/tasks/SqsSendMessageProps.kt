@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -564,7 +565,8 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessageProps):
-        SqsSendMessageProps = Wrapper(cdkObject)
+        SqsSendMessageProps = CdkObjectWrappers.wrap(cdkObject) as? SqsSendMessageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SqsSendMessageProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessageProps = (wrapped as

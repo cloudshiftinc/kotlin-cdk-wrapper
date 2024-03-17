@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.simspaceweaver
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -408,7 +409,8 @@ public interface CfnSimulationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulationProps):
-        CfnSimulationProps = Wrapper(cdkObject)
+        CfnSimulationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSimulationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimulationProps):
         software.amazon.awscdk.services.simspaceweaver.CfnSimulationProps = (wrapped as

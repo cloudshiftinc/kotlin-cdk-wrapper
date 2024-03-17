@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -75,7 +76,8 @@ public abstract class ParamsAndSecretsLayerVersion internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion):
-        ParamsAndSecretsLayerVersion = Wrapper(cdkObject)
+        ParamsAndSecretsLayerVersion = CdkObjectWrappers.wrap(cdkObject) as?
+        ParamsAndSecretsLayerVersion ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParamsAndSecretsLayerVersion):
         software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -27,7 +28,8 @@ public abstract class ProxyConfiguration internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration):
-        ProxyConfiguration = Wrapper(cdkObject)
+        ProxyConfiguration = CdkObjectWrappers.wrap(cdkObject) as? ProxyConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProxyConfiguration):
         software.amazon.awscdk.services.ecs.ProxyConfiguration = (wrapped as CdkObject).cdkObject as

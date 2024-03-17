@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.collections.List
@@ -74,7 +75,7 @@ public abstract class SubnetFilter internal constructor(
         software.amazon.awscdk.services.ec2.SubnetFilter.onePerAz().let(SubnetFilter::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter): SubnetFilter =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? SubnetFilter ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubnetFilter): software.amazon.awscdk.services.ec2.SubnetFilter =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.SubnetFilter

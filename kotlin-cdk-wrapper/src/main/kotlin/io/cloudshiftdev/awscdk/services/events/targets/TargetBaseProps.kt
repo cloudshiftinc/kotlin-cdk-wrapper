@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Number
 import kotlin.Unit
@@ -183,7 +184,8 @@ public interface TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.TargetBaseProps):
-        TargetBaseProps = Wrapper(cdkObject)
+        TargetBaseProps = CdkObjectWrappers.wrap(cdkObject) as? TargetBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TargetBaseProps):
         software.amazon.awscdk.services.events.targets.TargetBaseProps = (wrapped as

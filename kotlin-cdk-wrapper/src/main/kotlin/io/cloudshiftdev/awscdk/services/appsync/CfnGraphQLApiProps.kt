@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1072,7 +1073,8 @@ public interface CfnGraphQLApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApiProps):
-        CfnGraphQLApiProps = Wrapper(cdkObject)
+        CfnGraphQLApiProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGraphQLApiProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraphQLApiProps):
         software.amazon.awscdk.services.appsync.CfnGraphQLApiProps = (wrapped as

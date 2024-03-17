@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -119,7 +120,8 @@ public interface WebSocketRouteAuthorizerConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig):
-        WebSocketRouteAuthorizerConfig = Wrapper(cdkObject)
+        WebSocketRouteAuthorizerConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        WebSocketRouteAuthorizerConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketRouteAuthorizerConfig):
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig = (wrapped as

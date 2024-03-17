@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -128,7 +129,8 @@ public interface ApiDefinitionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionConfig):
-        ApiDefinitionConfig = Wrapper(cdkObject)
+        ApiDefinitionConfig = CdkObjectWrappers.wrap(cdkObject) as? ApiDefinitionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiDefinitionConfig):
         software.amazon.awscdk.services.apigateway.ApiDefinitionConfig = (wrapped as

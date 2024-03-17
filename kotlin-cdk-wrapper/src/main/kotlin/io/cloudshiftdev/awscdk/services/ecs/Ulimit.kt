@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -126,7 +127,7 @@ public interface Ulimit {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Ulimit): Ulimit =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Ulimit ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Ulimit): software.amazon.awscdk.services.ecs.Ulimit = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ecs.Ulimit

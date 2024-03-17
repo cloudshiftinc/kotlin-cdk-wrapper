@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
@@ -89,7 +90,7 @@ public abstract class Secret internal constructor(
         software.amazon.awscdk.services.ecs.Secret.fromSsmParameter(parameter.let(IParameter::unwrap)).let(Secret::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Secret): Secret =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Secret ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Secret): software.amazon.awscdk.services.ecs.Secret = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ecs.Secret

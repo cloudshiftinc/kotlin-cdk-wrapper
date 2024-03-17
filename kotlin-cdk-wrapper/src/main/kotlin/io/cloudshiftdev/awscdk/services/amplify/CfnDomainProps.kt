@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.amplify
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -564,7 +565,7 @@ public interface CfnDomainProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomainProps):
-        CfnDomainProps = Wrapper(cdkObject)
+        CfnDomainProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDomainProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainProps):
         software.amazon.awscdk.services.amplify.CfnDomainProps = (wrapped as CdkObject).cdkObject as

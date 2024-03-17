@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.certificatemanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Boolean
@@ -437,7 +438,8 @@ public interface DnsValidatedCertificateProps : CertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificateProps):
-        DnsValidatedCertificateProps = Wrapper(cdkObject)
+        DnsValidatedCertificateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DnsValidatedCertificateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DnsValidatedCertificateProps):
         software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificateProps = (wrapped

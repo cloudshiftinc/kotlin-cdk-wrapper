@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -406,7 +407,8 @@ public open class CfnServiceAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty):
-          DefinitionParameterProperty = Wrapper(cdkObject)
+          DefinitionParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefinitionParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefinitionParameterProperty):
           software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty

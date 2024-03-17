@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codestarnotifications
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -33,7 +34,8 @@ public interface INotificationRuleTarget {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarnotifications.INotificationRuleTarget):
-        INotificationRuleTarget = Wrapper(cdkObject)
+        INotificationRuleTarget = CdkObjectWrappers.wrap(cdkObject) as? INotificationRuleTarget ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INotificationRuleTarget):
         software.amazon.awscdk.services.codestarnotifications.INotificationRuleTarget = (wrapped as

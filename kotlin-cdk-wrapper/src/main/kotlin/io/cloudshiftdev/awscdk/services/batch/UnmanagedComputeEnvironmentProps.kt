@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.Number
@@ -195,7 +196,8 @@ public interface UnmanagedComputeEnvironmentProps : ComputeEnvironmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.UnmanagedComputeEnvironmentProps):
-        UnmanagedComputeEnvironmentProps = Wrapper(cdkObject)
+        UnmanagedComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        UnmanagedComputeEnvironmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UnmanagedComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.UnmanagedComputeEnvironmentProps = (wrapped as

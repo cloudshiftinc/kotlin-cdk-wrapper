@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.globalaccelerator
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -276,7 +277,8 @@ public interface CfnListenerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListenerProps):
-        CfnListenerProps = Wrapper(cdkObject)
+        CfnListenerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnListenerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnListenerProps):
         software.amazon.awscdk.services.globalaccelerator.CfnListenerProps = (wrapped as

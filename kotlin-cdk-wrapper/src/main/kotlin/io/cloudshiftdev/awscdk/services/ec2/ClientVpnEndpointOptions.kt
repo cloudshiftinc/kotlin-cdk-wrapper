@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.logs.ILogStream
 import kotlin.Boolean
@@ -675,7 +676,8 @@ public interface ClientVpnEndpointOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions):
-        ClientVpnEndpointOptions = Wrapper(cdkObject)
+        ClientVpnEndpointOptions = CdkObjectWrappers.wrap(cdkObject) as? ClientVpnEndpointOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClientVpnEndpointOptions):
         software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions = (wrapped as

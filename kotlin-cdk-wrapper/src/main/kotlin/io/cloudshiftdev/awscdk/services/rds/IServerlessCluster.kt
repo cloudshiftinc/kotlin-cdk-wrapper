@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -129,7 +130,8 @@ public interface IServerlessCluster : IResource, IConnectable, ISecretAttachment
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.IServerlessCluster):
-        IServerlessCluster = Wrapper(cdkObject)
+        IServerlessCluster = CdkObjectWrappers.wrap(cdkObject) as? IServerlessCluster ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IServerlessCluster):
         software.amazon.awscdk.services.rds.IServerlessCluster = (wrapped as CdkObject).cdkObject as

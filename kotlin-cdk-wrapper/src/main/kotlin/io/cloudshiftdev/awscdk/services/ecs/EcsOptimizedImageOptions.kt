@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -127,7 +128,8 @@ public interface EcsOptimizedImageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EcsOptimizedImageOptions):
-        EcsOptimizedImageOptions = Wrapper(cdkObject)
+        EcsOptimizedImageOptions = CdkObjectWrappers.wrap(cdkObject) as? EcsOptimizedImageOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsOptimizedImageOptions):
         software.amazon.awscdk.services.ecs.EcsOptimizedImageOptions = (wrapped as

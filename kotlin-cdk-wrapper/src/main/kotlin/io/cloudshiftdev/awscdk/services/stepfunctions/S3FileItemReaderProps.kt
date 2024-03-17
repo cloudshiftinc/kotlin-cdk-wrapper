@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Number
 import kotlin.String
@@ -119,7 +120,8 @@ public interface S3FileItemReaderProps : ItemReaderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.S3FileItemReaderProps):
-        S3FileItemReaderProps = Wrapper(cdkObject)
+        S3FileItemReaderProps = CdkObjectWrappers.wrap(cdkObject) as? S3FileItemReaderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3FileItemReaderProps):
         software.amazon.awscdk.services.stepfunctions.S3FileItemReaderProps = (wrapped as

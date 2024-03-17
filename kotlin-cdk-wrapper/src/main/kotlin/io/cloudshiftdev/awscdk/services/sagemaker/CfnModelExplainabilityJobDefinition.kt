@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1072,7 +1073,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ConstraintsResourceProperty):
-          ConstraintsResourceProperty = Wrapper(cdkObject)
+          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConstraintsResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConstraintsResourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ConstraintsResourceProperty
@@ -1224,7 +1226,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty):
-          StoppingConditionProperty = Wrapper(cdkObject)
+          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StoppingConditionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StoppingConditionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.StoppingConditionProperty
@@ -1428,7 +1431,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.DatasetFormatProperty):
-          DatasetFormatProperty = Wrapper(cdkObject)
+          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetFormatProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.DatasetFormatProperty
@@ -1549,7 +1553,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty):
-          MonitoringResourcesProperty = Wrapper(cdkObject)
+          MonitoringResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringResourcesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringResourcesProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringResourcesProperty
@@ -1735,7 +1740,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty):
-          ClusterConfigProperty = Wrapper(cdkObject)
+          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClusterConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ClusterConfigProperty
@@ -1855,7 +1861,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty):
-          MonitoringOutputProperty = Wrapper(cdkObject)
+          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringOutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputProperty
@@ -1997,7 +2004,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityBaselineConfigProperty):
-          ModelExplainabilityBaselineConfigProperty = Wrapper(cdkObject)
+          ModelExplainabilityBaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelExplainabilityBaselineConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelExplainabilityBaselineConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityBaselineConfigProperty
@@ -2191,7 +2199,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityJobInputProperty):
-          ModelExplainabilityJobInputProperty = Wrapper(cdkObject)
+          ModelExplainabilityJobInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelExplainabilityJobInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelExplainabilityJobInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityJobInputProperty
@@ -2423,7 +2432,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.NetworkConfigProperty):
-          NetworkConfigProperty = Wrapper(cdkObject)
+          NetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.NetworkConfigProperty
@@ -2759,7 +2769,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty):
-          BatchTransformInputProperty = Wrapper(cdkObject)
+          BatchTransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchTransformInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchTransformInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.BatchTransformInputProperty
@@ -2853,7 +2864,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty):
-          JsonProperty = Wrapper(cdkObject)
+          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.JsonProperty
@@ -3019,7 +3030,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty):
-          ModelExplainabilityAppSpecificationProperty = Wrapper(cdkObject)
+          ModelExplainabilityAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelExplainabilityAppSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelExplainabilityAppSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.ModelExplainabilityAppSpecificationProperty
@@ -3173,7 +3185,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.S3OutputProperty):
-          S3OutputProperty = Wrapper(cdkObject)
+          S3OutputProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3OutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.S3OutputProperty
@@ -3340,7 +3353,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.VpcConfigProperty
@@ -3495,7 +3509,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty):
-          MonitoringOutputConfigProperty = Wrapper(cdkObject)
+          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.MonitoringOutputConfigProperty
@@ -3772,7 +3787,8 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty):
-          EndpointInputProperty = Wrapper(cdkObject)
+          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.EndpointInputProperty
@@ -3866,7 +3882,7 @@ public open class CfnModelExplainabilityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty):
-          CsvProperty = Wrapper(cdkObject)
+          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CsvProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition.CsvProperty

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -98,7 +99,8 @@ public interface ILambdaDeploymentGroup : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentGroup):
-        ILambdaDeploymentGroup = Wrapper(cdkObject)
+        ILambdaDeploymentGroup = CdkObjectWrappers.wrap(cdkObject) as? ILambdaDeploymentGroup ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILambdaDeploymentGroup):
         software.amazon.awscdk.services.codedeploy.ILambdaDeploymentGroup = (wrapped as

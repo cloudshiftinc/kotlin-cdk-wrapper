@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.pinpoint
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -355,7 +356,8 @@ public interface CfnInAppTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps):
-        CfnInAppTemplateProps = Wrapper(cdkObject)
+        CfnInAppTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnInAppTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInAppTemplateProps):
         software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps = (wrapped as

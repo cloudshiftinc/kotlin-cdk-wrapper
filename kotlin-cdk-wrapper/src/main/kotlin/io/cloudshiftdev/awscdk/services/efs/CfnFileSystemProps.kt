@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.efs
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1016,7 +1017,8 @@ public interface CfnFileSystemProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystemProps):
-        CfnFileSystemProps = Wrapper(cdkObject)
+        CfnFileSystemProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFileSystemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFileSystemProps):
         software.amazon.awscdk.services.efs.CfnFileSystemProps = (wrapped as CdkObject).cdkObject as

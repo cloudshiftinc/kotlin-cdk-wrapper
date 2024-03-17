@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.pcaconnectorad
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -518,7 +519,8 @@ public interface CfnTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateProps):
-        CfnTemplateProps = Wrapper(cdkObject)
+        CfnTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTemplateProps):
         software.amazon.awscdk.services.pcaconnectorad.CfnTemplateProps = (wrapped as

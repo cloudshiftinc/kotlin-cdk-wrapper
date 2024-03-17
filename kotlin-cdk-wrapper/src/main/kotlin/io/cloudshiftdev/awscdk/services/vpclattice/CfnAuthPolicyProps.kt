@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.vpclattice
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -108,7 +109,8 @@ public interface CfnAuthPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnAuthPolicyProps):
-        CfnAuthPolicyProps = Wrapper(cdkObject)
+        CfnAuthPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAuthPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAuthPolicyProps):
         software.amazon.awscdk.services.vpclattice.CfnAuthPolicyProps = (wrapped as

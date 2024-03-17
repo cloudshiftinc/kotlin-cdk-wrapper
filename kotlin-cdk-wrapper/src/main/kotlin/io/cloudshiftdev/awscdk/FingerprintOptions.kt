@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -157,7 +158,7 @@ public interface FingerprintOptions : CopyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.FingerprintOptions): FingerprintOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? FingerprintOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FingerprintOptions): software.amazon.awscdk.FingerprintOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.FingerprintOptions

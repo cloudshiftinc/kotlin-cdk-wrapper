@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -146,7 +147,8 @@ public interface FunctionUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionUrlOptions):
-        FunctionUrlOptions = Wrapper(cdkObject)
+        FunctionUrlOptions = CdkObjectWrappers.wrap(cdkObject) as? FunctionUrlOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionUrlOptions):
         software.amazon.awscdk.services.lambda.FunctionUrlOptions = (wrapped as CdkObject).cdkObject

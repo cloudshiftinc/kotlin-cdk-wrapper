@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IDependable
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
@@ -83,7 +84,8 @@ public interface IClientVpnEndpoint : IResource, IConnectable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IClientVpnEndpoint):
-        IClientVpnEndpoint = Wrapper(cdkObject)
+        IClientVpnEndpoint = CdkObjectWrappers.wrap(cdkObject) as? IClientVpnEndpoint ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IClientVpnEndpoint):
         software.amazon.awscdk.services.ec2.IClientVpnEndpoint = (wrapped as CdkObject).cdkObject as

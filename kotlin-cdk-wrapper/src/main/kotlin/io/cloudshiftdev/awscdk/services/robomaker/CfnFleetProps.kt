@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.robomaker
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -103,7 +104,7 @@ public interface CfnFleetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnFleetProps):
-        CfnFleetProps = Wrapper(cdkObject)
+        CfnFleetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFleetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleetProps):
         software.amazon.awscdk.services.robomaker.CfnFleetProps = (wrapped as CdkObject).cdkObject

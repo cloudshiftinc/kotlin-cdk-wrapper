@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.sso
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
@@ -264,7 +265,8 @@ public interface CfnInstanceAccessControlAttributeConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfigurationProps):
-        CfnInstanceAccessControlAttributeConfigurationProps = Wrapper(cdkObject)
+        CfnInstanceAccessControlAttributeConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInstanceAccessControlAttributeConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceAccessControlAttributeConfigurationProps):
         software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfigurationProps =

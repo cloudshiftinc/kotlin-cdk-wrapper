@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.amazonmq
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1145,7 +1146,7 @@ public interface CfnBrokerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBrokerProps):
-        CfnBrokerProps = Wrapper(cdkObject)
+        CfnBrokerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBrokerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBrokerProps):
         software.amazon.awscdk.services.amazonmq.CfnBrokerProps = (wrapped as CdkObject).cdkObject

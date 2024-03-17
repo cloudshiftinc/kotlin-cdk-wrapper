@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import kotlin.String
 import kotlin.Unit
@@ -93,7 +94,8 @@ public interface VpcLinkAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes):
-        VpcLinkAttributes = Wrapper(cdkObject)
+        VpcLinkAttributes = CdkObjectWrappers.wrap(cdkObject) as? VpcLinkAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcLinkAttributes):
         software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes = (wrapped as

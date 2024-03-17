@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.pipelines
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -185,7 +186,7 @@ public interface StackSteps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.StackSteps): StackSteps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? StackSteps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSteps): software.amazon.awscdk.pipelines.StackSteps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.pipelines.StackSteps

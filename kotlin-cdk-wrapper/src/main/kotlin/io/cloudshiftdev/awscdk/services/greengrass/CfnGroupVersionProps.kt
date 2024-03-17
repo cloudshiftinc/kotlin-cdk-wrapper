@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.greengrass
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -315,7 +316,8 @@ public interface CfnGroupVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupVersionProps):
-        CfnGroupVersionProps = Wrapper(cdkObject)
+        CfnGroupVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGroupVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroupVersionProps):
         software.amazon.awscdk.services.greengrass.CfnGroupVersionProps = (wrapped as

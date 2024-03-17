@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2531,7 +2532,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty):
-          CloudWatchAlarmDefinitionProperty = Wrapper(cdkObject)
+          CloudWatchAlarmDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchAlarmDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchAlarmDefinitionProperty):
           software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty =
@@ -2644,7 +2646,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty):
-          MetricDimensionProperty = Wrapper(cdkObject)
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricDimensionProperty):
           software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty = (wrapped as
@@ -2823,7 +2826,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty):
-          StepConfigProperty = Wrapper(cdkObject)
+          StepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? StepConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StepConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty = (wrapped as
@@ -2914,7 +2918,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty):
-          PlacementTypeProperty = Wrapper(cdkObject)
+          PlacementTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? PlacementTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementTypeProperty):
           software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty = (wrapped as
@@ -3010,7 +3015,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty):
-          AutoTerminationPolicyProperty = Wrapper(cdkObject)
+          AutoTerminationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoTerminationPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoTerminationPolicyProperty):
           software.amazon.awscdk.services.emr.CfnCluster.AutoTerminationPolicyProperty = (wrapped as
@@ -3230,7 +3236,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty):
-          AutoScalingPolicyProperty = Wrapper(cdkObject)
+          AutoScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoScalingPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoScalingPolicyProperty):
           software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty = (wrapped as
@@ -3490,7 +3497,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty):
-          ComputeLimitsProperty = Wrapper(cdkObject)
+          ComputeLimitsProperty = CdkObjectWrappers.wrap(cdkObject) as? ComputeLimitsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputeLimitsProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ComputeLimitsProperty = (wrapped as
@@ -5030,7 +5038,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.JobFlowInstancesConfigProperty):
-          JobFlowInstancesConfigProperty = Wrapper(cdkObject)
+          JobFlowInstancesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JobFlowInstancesConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JobFlowInstancesConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.JobFlowInstancesConfigProperty = (wrapped
@@ -5453,7 +5462,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty):
-          InstanceFleetConfigProperty = Wrapper(cdkObject)
+          InstanceFleetConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceFleetConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceFleetConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty = (wrapped as
@@ -5755,7 +5765,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty):
-          SpotProvisioningSpecificationProperty = Wrapper(cdkObject)
+          SpotProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotProvisioningSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpotProvisioningSpecificationProperty):
           software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty =
@@ -5996,7 +6007,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty):
-          InstanceFleetProvisioningSpecificationsProperty = Wrapper(cdkObject)
+          InstanceFleetProvisioningSpecificationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceFleetProvisioningSpecificationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceFleetProvisioningSpecificationsProperty):
           software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
@@ -6211,7 +6223,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty):
-          SimpleScalingPolicyConfigurationProperty = Wrapper(cdkObject)
+          SimpleScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SimpleScalingPolicyConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SimpleScalingPolicyConfigurationProperty):
           software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty =
@@ -6342,7 +6355,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty):
-          ScalingConstraintsProperty = Wrapper(cdkObject)
+          ScalingConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScalingConstraintsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScalingConstraintsProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty = (wrapped as
@@ -6502,7 +6516,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty):
-          EbsConfigurationProperty = Wrapper(cdkObject)
+          EbsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsConfigurationProperty):
           software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty = (wrapped as
@@ -6727,7 +6742,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty):
-          KerberosAttributesProperty = Wrapper(cdkObject)
+          KerberosAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KerberosAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KerberosAttributesProperty):
           software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty = (wrapped as
@@ -6873,7 +6889,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty):
-          ManagedScalingPolicyProperty = Wrapper(cdkObject)
+          ManagedScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManagedScalingPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManagedScalingPolicyProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ManagedScalingPolicyProperty = (wrapped as
@@ -6976,7 +6993,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty):
-          OnDemandProvisioningSpecificationProperty = Wrapper(cdkObject)
+          OnDemandProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnDemandProvisioningSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnDemandProvisioningSpecificationProperty):
           software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty =
@@ -7126,7 +7144,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty):
-          BootstrapActionConfigProperty = Wrapper(cdkObject)
+          BootstrapActionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BootstrapActionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BootstrapActionConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty = (wrapped as
@@ -7652,7 +7671,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty):
-          InstanceGroupConfigProperty = Wrapper(cdkObject)
+          InstanceGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceGroupConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceGroupConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty = (wrapped as
@@ -7759,7 +7779,8 @@ public open class CfnCluster internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty):
-          KeyValueProperty = Wrapper(cdkObject)
+          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyValueProperty):
           software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty = (wrapped as
@@ -7924,7 +7945,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty):
-          EbsBlockDeviceConfigProperty = Wrapper(cdkObject)
+          EbsBlockDeviceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EbsBlockDeviceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsBlockDeviceConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty = (wrapped as
@@ -8069,7 +8091,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty):
-          ScalingTriggerProperty = Wrapper(cdkObject)
+          ScalingTriggerProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingTriggerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScalingTriggerProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty = (wrapped as
@@ -8291,7 +8314,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty):
-          HadoopJarStepConfigProperty = Wrapper(cdkObject)
+          HadoopJarStepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HadoopJarStepConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HadoopJarStepConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty = (wrapped as
@@ -8480,7 +8504,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty):
-          ConfigurationProperty = Wrapper(cdkObject)
+          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty = (wrapped as
@@ -8866,7 +8891,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty):
-          InstanceTypeConfigProperty = Wrapper(cdkObject)
+          InstanceTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceTypeConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceTypeConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty = (wrapped as
@@ -8998,7 +9024,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty):
-          PlacementGroupConfigProperty = Wrapper(cdkObject)
+          PlacementGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementGroupConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementGroupConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.PlacementGroupConfigProperty = (wrapped as
@@ -9185,7 +9212,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty):
-          VolumeSpecificationProperty = Wrapper(cdkObject)
+          VolumeSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VolumeSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VolumeSpecificationProperty):
           software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty = (wrapped as
@@ -9395,7 +9423,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty):
-          ApplicationProperty = Wrapper(cdkObject)
+          ApplicationProperty = CdkObjectWrappers.wrap(cdkObject) as? ApplicationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty = (wrapped as
@@ -9556,7 +9585,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty):
-          ScalingActionProperty = Wrapper(cdkObject)
+          ScalingActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScalingActionProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty = (wrapped as
@@ -9814,7 +9844,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty):
-          ScalingRuleProperty = Wrapper(cdkObject)
+          ScalingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScalingRuleProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty = (wrapped as
@@ -9938,7 +9969,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty):
-          ScriptBootstrapActionConfigProperty = Wrapper(cdkObject)
+          ScriptBootstrapActionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScriptBootstrapActionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScriptBootstrapActionConfigProperty):
           software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty =

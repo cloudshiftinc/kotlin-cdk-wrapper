@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sso
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -249,7 +250,8 @@ public interface CfnAssignmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnAssignmentProps):
-        CfnAssignmentProps = Wrapper(cdkObject)
+        CfnAssignmentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAssignmentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssignmentProps):
         software.amazon.awscdk.services.sso.CfnAssignmentProps = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -566,7 +567,8 @@ public interface ContainerImageAssetMetadataEntry {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry):
-        ContainerImageAssetMetadataEntry = Wrapper(cdkObject)
+        ContainerImageAssetMetadataEntry = CdkObjectWrappers.wrap(cdkObject) as?
+        ContainerImageAssetMetadataEntry ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerImageAssetMetadataEntry):
         software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry = (wrapped as

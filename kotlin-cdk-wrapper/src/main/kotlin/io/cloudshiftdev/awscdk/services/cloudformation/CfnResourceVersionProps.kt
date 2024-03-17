@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudformation
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -332,7 +333,8 @@ public interface CfnResourceVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnResourceVersionProps):
-        CfnResourceVersionProps = Wrapper(cdkObject)
+        CfnResourceVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceVersionProps):
         software.amazon.awscdk.services.cloudformation.CfnResourceVersionProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
@@ -176,7 +177,8 @@ public interface TransformOutput {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput):
-        TransformOutput = Wrapper(cdkObject)
+        TransformOutput = CdkObjectWrappers.wrap(cdkObject) as? TransformOutput ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TransformOutput):
         software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput = (wrapped as

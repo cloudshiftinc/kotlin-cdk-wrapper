@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1854,7 +1855,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty):
-          SelfManagedKafkaEventSourceConfigProperty = Wrapper(cdkObject)
+          SelfManagedKafkaEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedKafkaEventSourceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelfManagedKafkaEventSourceConfigProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty
@@ -1949,7 +1951,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty):
-          FilterProperty = Wrapper(cdkObject)
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty = (wrapped as
@@ -2069,7 +2072,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty):
-          SelfManagedEventSourceProperty = Wrapper(cdkObject)
+          SelfManagedEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedEventSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelfManagedEventSourceProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty
@@ -2175,7 +2179,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty):
-          AmazonManagedKafkaEventSourceConfigProperty = Wrapper(cdkObject)
+          AmazonManagedKafkaEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmazonManagedKafkaEventSourceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AmazonManagedKafkaEventSourceConfigProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty
@@ -2281,7 +2286,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty):
-          FilterCriteriaProperty = Wrapper(cdkObject)
+          FilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterCriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterCriteriaProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty =
@@ -2424,7 +2430,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty):
-          OnFailureProperty = Wrapper(cdkObject)
+          OnFailureProperty = CdkObjectWrappers.wrap(cdkObject) as? OnFailureProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnFailureProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty = (wrapped
@@ -2535,7 +2542,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty):
-          DestinationConfigProperty = Wrapper(cdkObject)
+          DestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationConfigProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty =
@@ -2755,7 +2763,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty):
-          SourceAccessConfigurationProperty = Wrapper(cdkObject)
+          SourceAccessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceAccessConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceAccessConfigurationProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty
@@ -2841,7 +2850,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty):
-          ScalingConfigProperty = Wrapper(cdkObject)
+          ScalingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScalingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScalingConfigProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty =
@@ -3001,7 +3011,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty):
-          DocumentDBEventSourceConfigProperty = Wrapper(cdkObject)
+          DocumentDBEventSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentDBEventSourceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentDBEventSourceConfigProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty
@@ -3102,7 +3113,8 @@ public open class CfnEventSourceMapping internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty):
-          EndpointsProperty = Wrapper(cdkObject)
+          EndpointsProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointsProperty):
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty = (wrapped

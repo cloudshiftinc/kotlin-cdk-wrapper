@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -133,7 +134,8 @@ public interface CfnUsagePlanKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanKeyProps):
-        CfnUsagePlanKeyProps = Wrapper(cdkObject)
+        CfnUsagePlanKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnUsagePlanKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUsagePlanKeyProps):
         software.amazon.awscdk.services.apigateway.CfnUsagePlanKeyProps = (wrapped as

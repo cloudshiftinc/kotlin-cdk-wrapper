@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -661,7 +662,8 @@ public interface FileSystemProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.FileSystemProps):
-        FileSystemProps = Wrapper(cdkObject)
+        FileSystemProps = CdkObjectWrappers.wrap(cdkObject) as? FileSystemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSystemProps):
         software.amazon.awscdk.services.efs.FileSystemProps = (wrapped as CdkObject).cdkObject as

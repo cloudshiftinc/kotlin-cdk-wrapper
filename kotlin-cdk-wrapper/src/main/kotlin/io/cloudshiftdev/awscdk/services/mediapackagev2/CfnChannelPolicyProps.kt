@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.mediapackagev2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -133,7 +134,8 @@ public interface CfnChannelPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelPolicyProps):
-        CfnChannelPolicyProps = Wrapper(cdkObject)
+        CfnChannelPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnChannelPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannelPolicyProps):
         software.amazon.awscdk.services.mediapackagev2.CfnChannelPolicyProps = (wrapped as

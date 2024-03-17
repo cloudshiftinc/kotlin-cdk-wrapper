@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -125,7 +126,8 @@ public interface ExternalServiceAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExternalServiceAttributes):
-        ExternalServiceAttributes = Wrapper(cdkObject)
+        ExternalServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as? ExternalServiceAttributes
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExternalServiceAttributes):
         software.amazon.awscdk.services.ecs.ExternalServiceAttributes = (wrapped as

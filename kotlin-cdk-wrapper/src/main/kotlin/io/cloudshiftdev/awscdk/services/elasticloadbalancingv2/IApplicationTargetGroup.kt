@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.ec2.Port
 import io.cloudshiftdev.constructs.IConstruct
@@ -191,7 +192,8 @@ public interface IApplicationTargetGroup : ITargetGroup {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup):
-        IApplicationTargetGroup = Wrapper(cdkObject)
+        IApplicationTargetGroup = CdkObjectWrappers.wrap(cdkObject) as? IApplicationTargetGroup ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IApplicationTargetGroup):
         software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup = (wrapped as

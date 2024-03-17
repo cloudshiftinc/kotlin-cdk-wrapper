@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecr.IRepository
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
@@ -166,7 +167,7 @@ public abstract class Code internal constructor(
         software.amazon.awscdk.services.lambda.Code.fromInline(code).let(InlineCode::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.Code): Code =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Code ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Code): software.amazon.awscdk.services.lambda.Code = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.lambda.Code

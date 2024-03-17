@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -259,7 +260,8 @@ public interface CfnVPCPeeringConnectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCPeeringConnectionProps):
-        CfnVPCPeeringConnectionProps = Wrapper(cdkObject)
+        CfnVPCPeeringConnectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPCPeeringConnectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCPeeringConnectionProps):
         software.amazon.awscdk.services.ec2.CfnVPCPeeringConnectionProps = (wrapped as

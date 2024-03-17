@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
 import kotlin.String
@@ -150,7 +151,8 @@ public interface S3LoggingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.S3LoggingOptions):
-        S3LoggingOptions = Wrapper(cdkObject)
+        S3LoggingOptions = CdkObjectWrappers.wrap(cdkObject) as? S3LoggingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3LoggingOptions):
         software.amazon.awscdk.services.codebuild.S3LoggingOptions = (wrapped as

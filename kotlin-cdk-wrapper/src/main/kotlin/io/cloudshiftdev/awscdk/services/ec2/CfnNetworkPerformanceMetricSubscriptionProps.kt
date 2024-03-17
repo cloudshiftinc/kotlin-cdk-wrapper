@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -174,7 +175,8 @@ public interface CfnNetworkPerformanceMetricSubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscriptionProps):
-        CfnNetworkPerformanceMetricSubscriptionProps = Wrapper(cdkObject)
+        CfnNetworkPerformanceMetricSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNetworkPerformanceMetricSubscriptionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkPerformanceMetricSubscriptionProps):
         software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscriptionProps = (wrapped

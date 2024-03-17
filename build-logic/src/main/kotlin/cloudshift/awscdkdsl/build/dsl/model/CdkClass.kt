@@ -20,6 +20,7 @@ internal interface CdkClass {
     val isEnum : Boolean
     val enumFields : List<EnumField>
     val isOuterClass : Boolean
+    val hasJsiiProxy : Boolean
 
     fun implementsInterface(name: ClassName): Boolean
 

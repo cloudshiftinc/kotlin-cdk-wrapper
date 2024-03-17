@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -154,7 +155,8 @@ public interface CfnGraphQLSchemaProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps):
-        CfnGraphQLSchemaProps = Wrapper(cdkObject)
+        CfnGraphQLSchemaProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGraphQLSchemaProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraphQLSchemaProps):
         software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps = (wrapped as

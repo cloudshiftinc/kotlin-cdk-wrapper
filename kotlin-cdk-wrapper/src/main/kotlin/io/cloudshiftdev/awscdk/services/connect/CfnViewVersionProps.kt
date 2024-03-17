@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.connect
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -144,7 +145,8 @@ public interface CfnViewVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnViewVersionProps):
-        CfnViewVersionProps = Wrapper(cdkObject)
+        CfnViewVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnViewVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnViewVersionProps):
         software.amazon.awscdk.services.connect.CfnViewVersionProps = (wrapped as

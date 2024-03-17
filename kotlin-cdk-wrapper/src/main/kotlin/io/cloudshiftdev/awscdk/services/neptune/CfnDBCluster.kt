@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1678,7 +1679,8 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster.DBClusterRoleProperty):
-          DBClusterRoleProperty = Wrapper(cdkObject)
+          DBClusterRoleProperty = CdkObjectWrappers.wrap(cdkObject) as? DBClusterRoleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DBClusterRoleProperty):
           software.amazon.awscdk.services.neptune.CfnDBCluster.DBClusterRoleProperty = (wrapped as
@@ -1809,7 +1811,8 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster.ServerlessScalingConfigurationProperty):
-          ServerlessScalingConfigurationProperty = Wrapper(cdkObject)
+          ServerlessScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerlessScalingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerlessScalingConfigurationProperty):
           software.amazon.awscdk.services.neptune.CfnDBCluster.ServerlessScalingConfigurationProperty

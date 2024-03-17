@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -792,7 +793,8 @@ public open class CfnCollaboration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty):
-          PaymentConfigurationProperty = Wrapper(cdkObject)
+          PaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PaymentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PaymentConfigurationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
@@ -1038,7 +1040,8 @@ public open class CfnCollaboration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty):
-          MemberSpecificationProperty = Wrapper(cdkObject)
+          MemberSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemberSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemberSpecificationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty =
@@ -1190,7 +1193,8 @@ public open class CfnCollaboration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty):
-          QueryComputePaymentConfigProperty = Wrapper(cdkObject)
+          QueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryComputePaymentConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryComputePaymentConfigProperty):
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
@@ -1437,7 +1441,8 @@ public open class CfnCollaboration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty):
-          DataEncryptionMetadataProperty = Wrapper(cdkObject)
+          DataEncryptionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataEncryptionMetadataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataEncryptionMetadataProperty):
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty

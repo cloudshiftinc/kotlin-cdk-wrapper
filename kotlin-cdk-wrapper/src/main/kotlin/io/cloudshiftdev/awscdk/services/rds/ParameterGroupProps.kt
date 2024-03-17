@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -210,7 +211,8 @@ public interface ParameterGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ParameterGroupProps):
-        ParameterGroupProps = Wrapper(cdkObject)
+        ParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as? ParameterGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParameterGroupProps):
         software.amazon.awscdk.services.rds.ParameterGroupProps = (wrapped as CdkObject).cdkObject

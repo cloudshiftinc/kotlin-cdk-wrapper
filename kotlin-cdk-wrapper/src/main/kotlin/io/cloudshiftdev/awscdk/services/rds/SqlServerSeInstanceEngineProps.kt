@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -75,7 +76,8 @@ public interface SqlServerSeInstanceEngineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps):
-        SqlServerSeInstanceEngineProps = Wrapper(cdkObject)
+        SqlServerSeInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SqlServerSeInstanceEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SqlServerSeInstanceEngineProps):
         software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps = (wrapped as

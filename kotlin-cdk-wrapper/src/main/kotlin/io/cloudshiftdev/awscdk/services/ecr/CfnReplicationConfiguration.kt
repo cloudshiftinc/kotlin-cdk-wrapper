@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -311,7 +312,8 @@ public open class CfnReplicationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty):
-          ReplicationDestinationProperty = Wrapper(cdkObject)
+          ReplicationDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationDestinationProperty):
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty
@@ -434,7 +436,8 @@ public open class CfnReplicationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty):
-          ReplicationConfigurationProperty = Wrapper(cdkObject)
+          ReplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationConfigurationProperty):
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty
@@ -627,7 +630,8 @@ public open class CfnReplicationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty):
-          ReplicationRuleProperty = Wrapper(cdkObject)
+          ReplicationRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicationRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationRuleProperty):
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty =
@@ -760,7 +764,8 @@ public open class CfnReplicationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty):
-          RepositoryFilterProperty = Wrapper(cdkObject)
+          RepositoryFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? RepositoryFilterProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RepositoryFilterProperty):
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty =

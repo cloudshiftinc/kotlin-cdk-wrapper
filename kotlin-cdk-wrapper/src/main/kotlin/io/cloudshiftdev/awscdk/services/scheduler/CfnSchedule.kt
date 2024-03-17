@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -828,7 +829,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty):
-          RetryPolicyProperty = Wrapper(cdkObject)
+          RetryPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RetryPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetryPolicyProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.RetryPolicyProperty = (wrapped as
@@ -915,7 +917,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty):
-          SqsParametersProperty = Wrapper(cdkObject)
+          SqsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? SqsParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SqsParametersProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.SqsParametersProperty = (wrapped as
@@ -1089,7 +1092,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = Wrapper(cdkObject)
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.CapacityProviderStrategyItemProperty
@@ -1228,7 +1232,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty):
-          FlexibleTimeWindowProperty = Wrapper(cdkObject)
+          FlexibleTimeWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FlexibleTimeWindowProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FlexibleTimeWindowProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.FlexibleTimeWindowProperty =
@@ -1344,7 +1349,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty):
-          EventBridgeParametersProperty = Wrapper(cdkObject)
+          EventBridgeParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventBridgeParametersProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.EventBridgeParametersProperty =
@@ -1499,7 +1505,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty):
-          PlacementStrategyProperty = Wrapper(cdkObject)
+          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementStrategyProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementStrategyProperty = (wrapped
@@ -1695,7 +1702,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty):
-          AwsVpcConfigurationProperty = Wrapper(cdkObject)
+          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty =
@@ -2415,7 +2423,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.EcsParametersProperty):
-          EcsParametersProperty = Wrapper(cdkObject)
+          EcsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? EcsParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsParametersProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.EcsParametersProperty = (wrapped as
@@ -2550,7 +2559,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = Wrapper(cdkObject)
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.NetworkConfigurationProperty =
@@ -2662,7 +2672,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty):
-          SageMakerPipelineParameterProperty = Wrapper(cdkObject)
+          SageMakerPipelineParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerPipelineParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SageMakerPipelineParameterProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParameterProperty =
@@ -3415,7 +3426,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty):
-          TargetProperty = Wrapper(cdkObject)
+          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.TargetProperty = (wrapped as
@@ -3504,7 +3516,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty):
-          DeadLetterConfigProperty = Wrapper(cdkObject)
+          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeadLetterConfigProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.DeadLetterConfigProperty = (wrapped
@@ -3601,7 +3614,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty):
-          KinesisParametersProperty = Wrapper(cdkObject)
+          KinesisParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisParametersProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.KinesisParametersProperty = (wrapped
@@ -3742,7 +3756,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty):
-          PlacementConstraintProperty = Wrapper(cdkObject)
+          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementConstraintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementConstraintProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.PlacementConstraintProperty =
@@ -3862,7 +3877,8 @@ public open class CfnSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty):
-          SageMakerPipelineParametersProperty = Wrapper(cdkObject)
+          SageMakerPipelineParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerPipelineParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SageMakerPipelineParametersProperty):
           software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty

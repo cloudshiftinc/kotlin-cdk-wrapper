@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -76,7 +77,8 @@ public interface IApiDestination : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.IApiDestination):
-        IApiDestination = Wrapper(cdkObject)
+        IApiDestination = CdkObjectWrappers.wrap(cdkObject) as? IApiDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IApiDestination):
         software.amazon.awscdk.services.events.IApiDestination = (wrapped as CdkObject).cdkObject as

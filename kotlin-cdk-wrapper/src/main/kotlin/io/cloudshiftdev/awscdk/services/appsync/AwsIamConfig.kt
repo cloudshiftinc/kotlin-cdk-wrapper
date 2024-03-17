@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -103,7 +104,7 @@ public interface AwsIamConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.AwsIamConfig): AwsIamConfig
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? AwsIamConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsIamConfig): software.amazon.awscdk.services.appsync.AwsIamConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.AwsIamConfig

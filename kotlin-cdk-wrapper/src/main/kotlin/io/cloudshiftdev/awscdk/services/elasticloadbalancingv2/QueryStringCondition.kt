@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -100,7 +101,8 @@ public interface QueryStringCondition {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.QueryStringCondition):
-        QueryStringCondition = Wrapper(cdkObject)
+        QueryStringCondition = CdkObjectWrappers.wrap(cdkObject) as? QueryStringCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueryStringCondition):
         software.amazon.awscdk.services.elasticloadbalancingv2.QueryStringCondition = (wrapped as

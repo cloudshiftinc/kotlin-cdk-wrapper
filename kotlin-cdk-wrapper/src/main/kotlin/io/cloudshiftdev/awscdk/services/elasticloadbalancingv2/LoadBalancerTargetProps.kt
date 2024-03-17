@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 
@@ -104,7 +105,8 @@ public interface LoadBalancerTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps):
-        LoadBalancerTargetProps = Wrapper(cdkObject)
+        LoadBalancerTargetProps = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerTargetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerTargetProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps = (wrapped as

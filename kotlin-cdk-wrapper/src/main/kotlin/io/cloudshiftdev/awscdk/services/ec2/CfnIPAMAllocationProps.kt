@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -218,7 +219,8 @@ public interface CfnIPAMAllocationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMAllocationProps):
-        CfnIPAMAllocationProps = Wrapper(cdkObject)
+        CfnIPAMAllocationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIPAMAllocationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMAllocationProps):
         software.amazon.awscdk.services.ec2.CfnIPAMAllocationProps = (wrapped as

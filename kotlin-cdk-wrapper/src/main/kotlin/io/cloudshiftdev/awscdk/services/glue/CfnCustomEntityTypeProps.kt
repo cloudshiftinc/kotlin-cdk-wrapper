@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.glue
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -206,7 +207,8 @@ public interface CfnCustomEntityTypeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityTypeProps):
-        CfnCustomEntityTypeProps = Wrapper(cdkObject)
+        CfnCustomEntityTypeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCustomEntityTypeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomEntityTypeProps):
         software.amazon.awscdk.services.glue.CfnCustomEntityTypeProps = (wrapped as

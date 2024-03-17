@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecr
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -124,7 +125,8 @@ public interface CfnReplicationConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps):
-        CfnReplicationConfigurationProps = Wrapper(cdkObject)
+        CfnReplicationConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnReplicationConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationConfigurationProps):
         software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps = (wrapped as

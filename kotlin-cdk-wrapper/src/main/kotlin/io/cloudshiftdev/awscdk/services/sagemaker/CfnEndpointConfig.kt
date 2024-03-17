@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1189,7 +1190,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty):
-          ServerlessConfigProperty = Wrapper(cdkObject)
+          ServerlessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ServerlessConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerlessConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty =
@@ -1379,7 +1381,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty):
-          AsyncInferenceNotificationConfigProperty = Wrapper(cdkObject)
+          AsyncInferenceNotificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsyncInferenceNotificationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AsyncInferenceNotificationConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty
@@ -1571,7 +1574,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceConfigProperty):
-          AsyncInferenceConfigProperty = Wrapper(cdkObject)
+          AsyncInferenceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsyncInferenceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AsyncInferenceConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceConfigProperty =
@@ -1717,7 +1721,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty):
-          ClarifyTextConfigProperty = Wrapper(cdkObject)
+          ClarifyTextConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyTextConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClarifyTextConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty =
@@ -1815,7 +1820,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty):
-          AsyncInferenceClientConfigProperty = Wrapper(cdkObject)
+          AsyncInferenceClientConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsyncInferenceClientConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AsyncInferenceClientConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty
@@ -1985,7 +1991,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureContentTypeHeaderProperty):
-          CaptureContentTypeHeaderProperty = Wrapper(cdkObject)
+          CaptureContentTypeHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CaptureContentTypeHeaderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptureContentTypeHeaderProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureContentTypeHeaderProperty
@@ -2641,7 +2648,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyInferenceConfigProperty):
-          ClarifyInferenceConfigProperty = Wrapper(cdkObject)
+          ClarifyInferenceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyInferenceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClarifyInferenceConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyInferenceConfigProperty
@@ -2760,7 +2768,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty = (wrapped
@@ -3403,7 +3412,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ProductionVariantProperty):
-          ProductionVariantProperty = Wrapper(cdkObject)
+          ProductionVariantProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProductionVariantProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProductionVariantProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ProductionVariantProperty =
@@ -3479,7 +3489,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.RoutingConfigProperty):
-          RoutingConfigProperty = Wrapper(cdkObject)
+          RoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RoutingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoutingConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.RoutingConfigProperty =
@@ -3602,7 +3613,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty):
-          ManagedInstanceScalingProperty = Wrapper(cdkObject)
+          ManagedInstanceScalingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManagedInstanceScalingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManagedInstanceScalingProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty
@@ -3944,7 +3956,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty):
-          ClarifyShapConfigProperty = Wrapper(cdkObject)
+          ClarifyShapConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyShapConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClarifyShapConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty =
@@ -4306,7 +4319,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty):
-          DataCaptureConfigProperty = Wrapper(cdkObject)
+          DataCaptureConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCaptureConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataCaptureConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty =
@@ -4541,7 +4555,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty):
-          ClarifyExplainerConfigProperty = Wrapper(cdkObject)
+          ClarifyExplainerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyExplainerConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClarifyExplainerConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty
@@ -4691,7 +4706,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty):
-          ExplainerConfigProperty = Wrapper(cdkObject)
+          ExplainerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ExplainerConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExplainerConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty =
@@ -4773,7 +4789,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty):
-          CaptureOptionProperty = Wrapper(cdkObject)
+          CaptureOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? CaptureOptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptureOptionProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty =
@@ -5001,7 +5018,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty):
-          ClarifyShapBaselineConfigProperty = Wrapper(cdkObject)
+          ClarifyShapBaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClarifyShapBaselineConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClarifyShapBaselineConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty
@@ -5212,7 +5230,8 @@ public open class CfnEndpointConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty):
-          AsyncInferenceOutputConfigProperty = Wrapper(cdkObject)
+          AsyncInferenceOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AsyncInferenceOutputConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AsyncInferenceOutputConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty

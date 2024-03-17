@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -217,7 +218,8 @@ public interface CodeImageConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CodeImageConfig):
-        CodeImageConfig = Wrapper(cdkObject)
+        CodeImageConfig = CdkObjectWrappers.wrap(cdkObject) as? CodeImageConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeImageConfig):
         software.amazon.awscdk.services.lambda.CodeImageConfig = (wrapped as CdkObject).cdkObject as

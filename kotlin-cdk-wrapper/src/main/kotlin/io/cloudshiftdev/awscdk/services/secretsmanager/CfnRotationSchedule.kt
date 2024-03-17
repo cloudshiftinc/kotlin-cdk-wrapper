@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -856,7 +857,8 @@ public open class CfnRotationSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty):
-          RotationRulesProperty = Wrapper(cdkObject)
+          RotationRulesProperty = CdkObjectWrappers.wrap(cdkObject) as? RotationRulesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RotationRulesProperty):
           software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty =
@@ -1723,7 +1725,8 @@ public open class CfnRotationSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty):
-          HostedRotationLambdaProperty = Wrapper(cdkObject)
+          HostedRotationLambdaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HostedRotationLambdaProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HostedRotationLambdaProperty):
           software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty

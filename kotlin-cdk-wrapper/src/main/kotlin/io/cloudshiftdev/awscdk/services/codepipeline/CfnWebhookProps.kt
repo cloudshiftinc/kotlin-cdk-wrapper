@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -458,7 +459,8 @@ public interface CfnWebhookProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhookProps):
-        CfnWebhookProps = Wrapper(cdkObject)
+        CfnWebhookProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWebhookProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebhookProps):
         software.amazon.awscdk.services.codepipeline.CfnWebhookProps = (wrapped as

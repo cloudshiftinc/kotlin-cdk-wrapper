@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.dynamodb.ITable
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
@@ -214,7 +215,8 @@ public interface DynamoDbDataSourceProps : BackedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.DynamoDbDataSourceProps):
-        DynamoDbDataSourceProps = Wrapper(cdkObject)
+        DynamoDbDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? DynamoDbDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DynamoDbDataSourceProps):
         software.amazon.awscdk.services.appsync.DynamoDbDataSourceProps = (wrapped as

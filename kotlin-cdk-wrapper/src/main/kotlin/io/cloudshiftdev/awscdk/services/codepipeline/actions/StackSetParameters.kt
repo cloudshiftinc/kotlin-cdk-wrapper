@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
 import kotlin.String
 import kotlin.collections.List
@@ -41,7 +42,8 @@ public abstract class StackSetParameters internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetParameters):
-        StackSetParameters = Wrapper(cdkObject)
+        StackSetParameters = CdkObjectWrappers.wrap(cdkObject) as? StackSetParameters ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSetParameters):
         software.amazon.awscdk.services.codepipeline.actions.StackSetParameters = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Any class that produces, or is itself, a `FileSet`.
@@ -30,7 +31,8 @@ public interface IFileSetProducer {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.IFileSetProducer):
-        IFileSetProducer = Wrapper(cdkObject)
+        IFileSetProducer = CdkObjectWrappers.wrap(cdkObject) as? IFileSetProducer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFileSetProducer):
         software.amazon.awscdk.pipelines.IFileSetProducer = (wrapped as CdkObject).cdkObject as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecr.IRepository
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import io.cloudshiftdev.constructs.Construct
@@ -147,7 +148,8 @@ public interface IBindableBuildImage : IBuildImage {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.IBindableBuildImage):
-        IBindableBuildImage = Wrapper(cdkObject)
+        IBindableBuildImage = CdkObjectWrappers.wrap(cdkObject) as? IBindableBuildImage ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IBindableBuildImage):
         software.amazon.awscdk.services.codebuild.IBindableBuildImage = (wrapped as

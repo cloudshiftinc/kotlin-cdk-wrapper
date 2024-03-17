@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -44,7 +45,7 @@ public abstract class AclCidr internal constructor(
         software.amazon.awscdk.services.ec2.AclCidr.ipv6(ipv6Cidr).let(AclCidr::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclCidr): AclCidr =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? AclCidr ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AclCidr): software.amazon.awscdk.services.ec2.AclCidr = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ec2.AclCidr

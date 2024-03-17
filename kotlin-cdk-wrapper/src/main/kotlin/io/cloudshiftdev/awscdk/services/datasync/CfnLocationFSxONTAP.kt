@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -639,7 +640,8 @@ public open class CfnLocationFSxONTAP internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SmbMountOptionsProperty):
-          SmbMountOptionsProperty = Wrapper(cdkObject)
+          SmbMountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SmbMountOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SmbMountOptionsProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SmbMountOptionsProperty =
@@ -753,7 +755,7 @@ public open class CfnLocationFSxONTAP internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty):
-          NFSProperty = Wrapper(cdkObject)
+          NFSProperty = CdkObjectWrappers.wrap(cdkObject) as? NFSProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NFSProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty = (wrapped as
@@ -893,7 +895,8 @@ public open class CfnLocationFSxONTAP internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NfsMountOptionsProperty):
-          NfsMountOptionsProperty = Wrapper(cdkObject)
+          NfsMountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? NfsMountOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NfsMountOptionsProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NfsMountOptionsProperty =
@@ -1082,7 +1085,8 @@ public open class CfnLocationFSxONTAP internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty):
-          ProtocolProperty = Wrapper(cdkObject)
+          ProtocolProperty = CdkObjectWrappers.wrap(cdkObject) as? ProtocolProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProtocolProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty = (wrapped
@@ -1373,7 +1377,7 @@ public open class CfnLocationFSxONTAP internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty):
-          SMBProperty = Wrapper(cdkObject)
+          SMBProperty = CdkObjectWrappers.wrap(cdkObject) as? SMBProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SMBProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty = (wrapped as

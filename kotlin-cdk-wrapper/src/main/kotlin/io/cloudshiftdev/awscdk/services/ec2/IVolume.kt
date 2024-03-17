@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.kms.IKey
@@ -363,7 +364,7 @@ public interface IVolume : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IVolume): IVolume =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IVolume ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IVolume): software.amazon.awscdk.services.ec2.IVolume = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ec2.IVolume

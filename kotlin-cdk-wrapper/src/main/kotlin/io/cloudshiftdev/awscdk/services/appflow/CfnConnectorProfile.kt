@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -683,7 +684,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty):
-          MarketoConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          MarketoConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MarketoConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfilePropertiesProperty
@@ -1886,7 +1888,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileCredentialsProperty):
-          ConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          ConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileCredentialsProperty
@@ -2311,7 +2314,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty):
-          ConnectorProfileConfigProperty = Wrapper(cdkObject)
+          ConnectorProfileConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorProfileConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorProfileConfigProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfileConfigProperty
@@ -2471,7 +2475,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty):
-          CustomConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          CustomConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfilePropertiesProperty
@@ -2582,7 +2587,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty):
-          SnowflakeConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          SnowflakeConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnowflakeConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfileCredentialsProperty
@@ -2802,7 +2808,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty):
-          OAuthCredentialsProperty = Wrapper(cdkObject)
+          OAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuthCredentialsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OAuthCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthCredentialsProperty =
@@ -3696,7 +3703,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfilePropertiesProperty):
-          ConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          ConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorProfilePropertiesProperty
@@ -3780,7 +3788,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty):
-          DynatraceConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          DynatraceConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DynatraceConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynatraceConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfilePropertiesProperty
@@ -3864,7 +3873,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty):
-          InforNexusConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          InforNexusConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InforNexusConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InforNexusConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfilePropertiesProperty
@@ -4018,7 +4028,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty):
-          OAuthPropertiesProperty = Wrapper(cdkObject)
+          OAuthPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuthPropertiesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OAuthPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuthPropertiesProperty =
@@ -4189,7 +4200,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty):
-          ServiceNowConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          ServiceNowConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceNowConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty
@@ -4273,7 +4285,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty):
-          ServiceNowConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          ServiceNowConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceNowConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfilePropertiesProperty
@@ -4469,7 +4482,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty):
-          PardotConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          PardotConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PardotConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PardotConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfileCredentialsProperty
@@ -4553,7 +4567,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfilePropertiesProperty):
-          DatadogConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          DatadogConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatadogConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatadogConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfilePropertiesProperty
@@ -4663,7 +4678,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty):
-          ApiKeyCredentialsProperty = Wrapper(cdkObject)
+          ApiKeyCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApiKeyCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApiKeyCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ApiKeyCredentialsProperty =
@@ -4747,7 +4763,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty):
-          ZendeskConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          ZendeskConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZendeskConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfilePropertiesProperty
@@ -4864,7 +4881,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty):
-          ConnectorOAuthRequestProperty = Wrapper(cdkObject)
+          ConnectorOAuthRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorOAuthRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorOAuthRequestProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ConnectorOAuthRequestProperty
@@ -4974,7 +4992,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty):
-          BasicAuthCredentialsProperty = Wrapper(cdkObject)
+          BasicAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BasicAuthCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BasicAuthCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.BasicAuthCredentialsProperty =
@@ -5309,7 +5328,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty):
-          SalesforceConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          SalesforceConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfilePropertiesProperty
@@ -5393,7 +5413,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfileCredentialsProperty):
-          DynatraceConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          DynatraceConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DynatraceConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynatraceConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.DynatraceConnectorProfileCredentialsProperty
@@ -5654,7 +5675,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty):
-          SnowflakeConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          SnowflakeConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnowflakeConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SnowflakeConnectorProfilePropertiesProperty
@@ -5809,7 +5831,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty):
-          PardotConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          PardotConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PardotConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PardotConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.PardotConnectorProfilePropertiesProperty
@@ -6017,7 +6040,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty):
-          MarketoConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          MarketoConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MarketoConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.MarketoConnectorProfileCredentialsProperty
@@ -6128,7 +6152,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty):
-          VeevaConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          VeevaConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VeevaConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VeevaConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfileCredentialsProperty
@@ -6373,7 +6398,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.GoogleAnalyticsConnectorProfileCredentialsProperty):
-          GoogleAnalyticsConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          GoogleAnalyticsConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GoogleAnalyticsConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GoogleAnalyticsConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.GoogleAnalyticsConnectorProfileCredentialsProperty
@@ -6461,7 +6487,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty):
-          SingularConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          SingularConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingularConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingularConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SingularConnectorProfileCredentialsProperty
@@ -6545,7 +6572,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty):
-          SlackConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          SlackConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlackConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlackConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfilePropertiesProperty
@@ -6870,7 +6898,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty):
-          SalesforceConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          SalesforceConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty
@@ -6994,7 +7023,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty):
-          CustomAuthCredentialsProperty = Wrapper(cdkObject)
+          CustomAuthCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomAuthCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomAuthCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomAuthCredentialsProperty
@@ -7359,7 +7389,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfilePropertiesProperty):
-          RedshiftConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          RedshiftConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedshiftConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfilePropertiesProperty
@@ -7567,7 +7598,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty):
-          ZendeskConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          ZendeskConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZendeskConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ZendeskConnectorProfileCredentialsProperty
@@ -7901,7 +7933,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty):
-          CustomConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          CustomConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.CustomConnectorProfileCredentialsProperty
@@ -7985,7 +8018,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty):
-          VeevaConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          VeevaConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VeevaConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VeevaConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.VeevaConnectorProfilePropertiesProperty
@@ -8203,7 +8237,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty):
-          OAuth2CredentialsProperty = Wrapper(cdkObject)
+          OAuth2CredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OAuth2CredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OAuth2CredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2CredentialsProperty =
@@ -8314,7 +8349,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty):
-          RedshiftConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          RedshiftConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedshiftConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty
@@ -8493,7 +8529,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SAPODataConnectorProfileCredentialsProperty):
-          SAPODataConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          SAPODataConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SAPODataConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SAPODataConnectorProfileCredentialsProperty
@@ -8662,7 +8699,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty):
-          OAuth2PropertiesProperty = Wrapper(cdkObject)
+          OAuth2PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuth2PropertiesProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OAuth2PropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.OAuth2PropertiesProperty =
@@ -8992,7 +9030,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SAPODataConnectorProfilePropertiesProperty):
-          SAPODataConnectorProfilePropertiesProperty = Wrapper(cdkObject)
+          SAPODataConnectorProfilePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataConnectorProfilePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SAPODataConnectorProfilePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SAPODataConnectorProfilePropertiesProperty
@@ -9157,7 +9196,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty):
-          InforNexusConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          InforNexusConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InforNexusConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InforNexusConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.InforNexusConnectorProfileCredentialsProperty
@@ -9241,7 +9281,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty):
-          TrendmicroConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          TrendmicroConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrendmicroConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrendmicroConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.TrendmicroConnectorProfileCredentialsProperty
@@ -9449,7 +9490,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfileCredentialsProperty):
-          SlackConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          SlackConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlackConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlackConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.SlackConnectorProfileCredentialsProperty
@@ -9578,7 +9620,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty):
-          DatadogConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          DatadogConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatadogConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatadogConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.DatadogConnectorProfileCredentialsProperty
@@ -9693,7 +9736,8 @@ public open class CfnConnectorProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty):
-          AmplitudeConnectorProfileCredentialsProperty = Wrapper(cdkObject)
+          AmplitudeConnectorProfileCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmplitudeConnectorProfileCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AmplitudeConnectorProfileCredentialsProperty):
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.AmplitudeConnectorProfileCredentialsProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -189,7 +190,8 @@ public interface CodeStarSourceVariables {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeStarSourceVariables):
-        CodeStarSourceVariables = Wrapper(cdkObject)
+        CodeStarSourceVariables = CdkObjectWrappers.wrap(cdkObject) as? CodeStarSourceVariables ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeStarSourceVariables):
         software.amazon.awscdk.services.codepipeline.actions.CodeStarSourceVariables = (wrapped as

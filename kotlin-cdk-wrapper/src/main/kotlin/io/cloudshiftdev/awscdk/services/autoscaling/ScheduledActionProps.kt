@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import java.time.Instant
 import kotlin.Number
 import kotlin.String
@@ -272,7 +273,8 @@ public interface ScheduledActionProps : BasicScheduledActionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.ScheduledActionProps):
-        ScheduledActionProps = Wrapper(cdkObject)
+        ScheduledActionProps = CdkObjectWrappers.wrap(cdkObject) as? ScheduledActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledActionProps):
         software.amazon.awscdk.services.autoscaling.ScheduledActionProps = (wrapped as

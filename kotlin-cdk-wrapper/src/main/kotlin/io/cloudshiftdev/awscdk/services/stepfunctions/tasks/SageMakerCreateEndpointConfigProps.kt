@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -547,7 +548,8 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfigProps):
-        SageMakerCreateEndpointConfigProps = Wrapper(cdkObject)
+        SageMakerCreateEndpointConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SageMakerCreateEndpointConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SageMakerCreateEndpointConfigProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfigProps =

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1305,7 +1306,8 @@ public open class CfnEventDataStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty):
-          InsightSelectorProperty = Wrapper(cdkObject)
+          InsightSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? InsightSelectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InsightSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty =
@@ -3441,7 +3443,8 @@ public open class CfnEventDataStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty):
-          AdvancedFieldSelectorProperty = Wrapper(cdkObject)
+          AdvancedFieldSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedFieldSelectorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedFieldSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty
@@ -3617,7 +3620,8 @@ public open class CfnEventDataStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty):
-          AdvancedEventSelectorProperty = Wrapper(cdkObject)
+          AdvancedEventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedEventSelectorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedEventSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty

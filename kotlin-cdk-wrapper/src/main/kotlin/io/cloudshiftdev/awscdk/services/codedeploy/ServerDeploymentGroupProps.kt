@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.IAutoScalingGroup
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarm
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -609,7 +610,8 @@ public interface ServerDeploymentGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps):
-        ServerDeploymentGroupProps = Wrapper(cdkObject)
+        ServerDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerDeploymentGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerDeploymentGroupProps):
         software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps = (wrapped as

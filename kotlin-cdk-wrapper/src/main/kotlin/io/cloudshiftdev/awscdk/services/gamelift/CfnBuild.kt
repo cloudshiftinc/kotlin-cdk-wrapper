@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -573,7 +574,8 @@ public open class CfnBuild internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty):
-          StorageLocationProperty = Wrapper(cdkObject)
+          StorageLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? StorageLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageLocationProperty):
           software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty = (wrapped as

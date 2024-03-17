@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -214,7 +215,8 @@ public interface CommonCloudFormationStackSetOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CommonCloudFormationStackSetOptions):
-        CommonCloudFormationStackSetOptions = Wrapper(cdkObject)
+        CommonCloudFormationStackSetOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        CommonCloudFormationStackSetOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonCloudFormationStackSetOptions):
         software.amazon.awscdk.services.codepipeline.actions.CommonCloudFormationStackSetOptions =

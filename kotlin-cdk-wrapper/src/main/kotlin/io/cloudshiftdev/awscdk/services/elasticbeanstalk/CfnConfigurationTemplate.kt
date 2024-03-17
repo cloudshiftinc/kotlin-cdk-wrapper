@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -715,7 +716,8 @@ public open class CfnConfigurationTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty):
-          SourceConfigurationProperty = Wrapper(cdkObject)
+          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConfigurationProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty
@@ -900,7 +902,8 @@ public open class CfnConfigurationTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty):
-          ConfigurationOptionSettingProperty = Wrapper(cdkObject)
+          ConfigurationOptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationOptionSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationOptionSettingProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty

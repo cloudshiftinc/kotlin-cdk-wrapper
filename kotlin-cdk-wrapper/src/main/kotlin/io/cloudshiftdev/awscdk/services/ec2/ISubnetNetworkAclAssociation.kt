@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -67,7 +68,8 @@ public interface ISubnetNetworkAclAssociation : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ISubnetNetworkAclAssociation):
-        ISubnetNetworkAclAssociation = Wrapper(cdkObject)
+        ISubnetNetworkAclAssociation = CdkObjectWrappers.wrap(cdkObject) as?
+        ISubnetNetworkAclAssociation ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISubnetNetworkAclAssociation):
         software.amazon.awscdk.services.ec2.ISubnetNetworkAclAssociation = (wrapped as

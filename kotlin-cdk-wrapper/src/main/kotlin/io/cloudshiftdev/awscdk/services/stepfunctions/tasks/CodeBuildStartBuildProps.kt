@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codebuild.BuildEnvironmentVariable
 import io.cloudshiftdev.awscdk.services.codebuild.IProject
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
@@ -469,7 +470,8 @@ public interface CodeBuildStartBuildProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildProps):
-        CodeBuildStartBuildProps = Wrapper(cdkObject)
+        CodeBuildStartBuildProps = CdkObjectWrappers.wrap(cdkObject) as? CodeBuildStartBuildProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildStartBuildProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildProps = (wrapped as

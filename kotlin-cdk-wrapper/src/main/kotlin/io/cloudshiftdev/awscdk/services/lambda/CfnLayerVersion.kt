@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -576,7 +577,8 @@ public open class CfnLayerVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty):
-          ContentProperty = Wrapper(cdkObject)
+          ContentProperty = CdkObjectWrappers.wrap(cdkObject) as? ContentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContentProperty):
           software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty = (wrapped as

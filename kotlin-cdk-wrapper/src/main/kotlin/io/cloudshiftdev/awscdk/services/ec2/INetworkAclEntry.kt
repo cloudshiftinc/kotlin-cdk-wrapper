@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 
 /**
@@ -65,7 +66,8 @@ public interface INetworkAclEntry : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.INetworkAclEntry):
-        INetworkAclEntry = Wrapper(cdkObject)
+        INetworkAclEntry = CdkObjectWrappers.wrap(cdkObject) as? INetworkAclEntry ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INetworkAclEntry):
         software.amazon.awscdk.services.ec2.INetworkAclEntry = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
@@ -164,7 +165,8 @@ public interface ConnectionsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ConnectionsProps):
-        ConnectionsProps = Wrapper(cdkObject)
+        ConnectionsProps = CdkObjectWrappers.wrap(cdkObject) as? ConnectionsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConnectionsProps):
         software.amazon.awscdk.services.ec2.ConnectionsProps = (wrapped as CdkObject).cdkObject as

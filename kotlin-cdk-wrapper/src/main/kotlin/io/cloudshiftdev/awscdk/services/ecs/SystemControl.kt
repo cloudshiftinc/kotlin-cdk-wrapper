@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -91,7 +92,7 @@ public interface SystemControl {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.SystemControl): SystemControl =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? SystemControl ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SystemControl): software.amazon.awscdk.services.ecs.SystemControl =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.SystemControl

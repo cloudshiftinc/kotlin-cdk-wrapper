@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IDependable
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
@@ -90,7 +91,8 @@ public interface INetworkTargetGroup : ITargetGroup {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup):
-        INetworkTargetGroup = Wrapper(cdkObject)
+        INetworkTargetGroup = CdkObjectWrappers.wrap(cdkObject) as? INetworkTargetGroup ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INetworkTargetGroup):
         software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup = (wrapped as

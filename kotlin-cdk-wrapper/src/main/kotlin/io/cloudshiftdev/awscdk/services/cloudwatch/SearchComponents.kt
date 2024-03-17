@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -165,7 +166,8 @@ public interface SearchComponents {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.SearchComponents):
-        SearchComponents = Wrapper(cdkObject)
+        SearchComponents = CdkObjectWrappers.wrap(cdkObject) as? SearchComponents ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SearchComponents):
         software.amazon.awscdk.services.cloudwatch.SearchComponents = (wrapped as

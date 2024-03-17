@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1056,7 +1057,8 @@ public open class CfnCloudFormationProduct internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty):
-          ProvisioningArtifactPropertiesProperty = Wrapper(cdkObject)
+          ProvisioningArtifactPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisioningArtifactPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisioningArtifactPropertiesProperty):
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty
@@ -1231,7 +1233,8 @@ public open class CfnCloudFormationProduct internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty):
-          CodeStarParametersProperty = Wrapper(cdkObject)
+          CodeStarParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeStarParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeStarParametersProperty):
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty
@@ -1346,7 +1349,8 @@ public open class CfnCloudFormationProduct internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty):
-          ConnectionParametersProperty = Wrapper(cdkObject)
+          ConnectionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionParametersProperty):
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty
@@ -1495,7 +1499,8 @@ public open class CfnCloudFormationProduct internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty):
-          SourceConnectionProperty = Wrapper(cdkObject)
+          SourceConnectionProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceConnectionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConnectionProperty):
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty

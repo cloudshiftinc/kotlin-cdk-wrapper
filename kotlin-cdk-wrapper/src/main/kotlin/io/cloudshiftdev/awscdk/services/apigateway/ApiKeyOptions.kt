@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -268,7 +269,7 @@ public interface ApiKeyOptions : ResourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiKeyOptions):
-        ApiKeyOptions = Wrapper(cdkObject)
+        ApiKeyOptions = CdkObjectWrappers.wrap(cdkObject) as? ApiKeyOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiKeyOptions):
         software.amazon.awscdk.services.apigateway.ApiKeyOptions = (wrapped as CdkObject).cdkObject

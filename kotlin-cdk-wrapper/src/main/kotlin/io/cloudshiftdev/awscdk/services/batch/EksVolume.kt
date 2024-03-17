@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -86,7 +87,7 @@ public abstract class EksVolume internal constructor(
         secret(SecretPathVolumeOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EksVolume): EksVolume =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? EksVolume ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksVolume): software.amazon.awscdk.services.batch.EksVolume =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.batch.EksVolume

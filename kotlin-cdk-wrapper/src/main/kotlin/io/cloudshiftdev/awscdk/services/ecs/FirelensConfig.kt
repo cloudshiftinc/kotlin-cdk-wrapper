@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -121,7 +122,7 @@ public interface FirelensConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FirelensConfig): FirelensConfig
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? FirelensConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FirelensConfig): software.amazon.awscdk.services.ecs.FirelensConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.FirelensConfig

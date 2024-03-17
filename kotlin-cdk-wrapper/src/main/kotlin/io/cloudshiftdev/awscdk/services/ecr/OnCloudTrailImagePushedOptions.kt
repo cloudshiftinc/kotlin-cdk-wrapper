@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecr
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.EventPattern
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.OnEventOptions
@@ -239,7 +240,8 @@ public interface OnCloudTrailImagePushedOptions : OnEventOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions):
-        OnCloudTrailImagePushedOptions = Wrapper(cdkObject)
+        OnCloudTrailImagePushedOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        OnCloudTrailImagePushedOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OnCloudTrailImagePushedOptions):
         software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions = (wrapped as

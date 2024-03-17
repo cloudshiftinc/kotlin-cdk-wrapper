@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.IEventBus
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
@@ -159,7 +160,8 @@ public interface EventBridgeDataSourceProps : BackedDataSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appsync.EventBridgeDataSourceProps):
-        EventBridgeDataSourceProps = Wrapper(cdkObject)
+        EventBridgeDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EventBridgeDataSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventBridgeDataSourceProps):
         software.amazon.awscdk.services.appsync.EventBridgeDataSourceProps = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticbeanstalk
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -541,7 +542,8 @@ public interface CfnConfigurationTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplateProps):
-        CfnConfigurationTemplateProps = Wrapper(cdkObject)
+        CfnConfigurationTemplateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnConfigurationTemplateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationTemplateProps):
         software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplateProps = (wrapped as

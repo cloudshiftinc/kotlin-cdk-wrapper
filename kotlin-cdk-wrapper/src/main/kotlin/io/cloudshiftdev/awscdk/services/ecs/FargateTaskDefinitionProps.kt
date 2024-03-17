@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Number
 import kotlin.String
@@ -526,7 +527,8 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinitionProps):
-        FargateTaskDefinitionProps = Wrapper(cdkObject)
+        FargateTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        FargateTaskDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateTaskDefinitionProps):
         software.amazon.awscdk.services.ecs.FargateTaskDefinitionProps = (wrapped as

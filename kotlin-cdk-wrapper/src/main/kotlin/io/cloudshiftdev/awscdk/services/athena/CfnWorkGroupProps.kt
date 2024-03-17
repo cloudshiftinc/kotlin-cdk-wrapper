@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -497,7 +498,8 @@ public interface CfnWorkGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroupProps):
-        CfnWorkGroupProps = Wrapper(cdkObject)
+        CfnWorkGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkGroupProps):
         software.amazon.awscdk.services.athena.CfnWorkGroupProps = (wrapped as CdkObject).cdkObject

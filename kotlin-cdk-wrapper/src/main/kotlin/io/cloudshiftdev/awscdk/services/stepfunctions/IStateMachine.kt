@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -666,7 +667,7 @@ public interface IStateMachine : IResource, IGrantable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.IStateMachine):
-        IStateMachine = Wrapper(cdkObject)
+        IStateMachine = CdkObjectWrappers.wrap(cdkObject) as? IStateMachine ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IStateMachine):
         software.amazon.awscdk.services.stepfunctions.IStateMachine = (wrapped as

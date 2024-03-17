@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import kotlin.String
@@ -216,7 +217,8 @@ public interface LambdaAuthorizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.LambdaAuthorizerProps):
-        LambdaAuthorizerProps = Wrapper(cdkObject)
+        LambdaAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaAuthorizerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaAuthorizerProps):
         software.amazon.awscdk.services.apigateway.LambdaAuthorizerProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -106,7 +107,8 @@ public interface NoneDataSourceProps : BaseDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.NoneDataSourceProps):
-        NoneDataSourceProps = Wrapper(cdkObject)
+        NoneDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? NoneDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NoneDataSourceProps):
         software.amazon.awscdk.services.appsync.NoneDataSourceProps = (wrapped as

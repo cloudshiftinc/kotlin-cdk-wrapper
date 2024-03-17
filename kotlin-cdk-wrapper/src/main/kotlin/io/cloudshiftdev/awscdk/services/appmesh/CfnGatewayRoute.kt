@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -983,7 +984,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteMatchProperty):
-          HttpGatewayRouteMatchProperty = Wrapper(cdkObject)
+          HttpGatewayRouteMatchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpGatewayRouteMatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpGatewayRouteMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteMatchProperty =
@@ -1096,7 +1098,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty):
-          HttpGatewayRoutePrefixRewriteProperty = Wrapper(cdkObject)
+          HttpGatewayRoutePrefixRewriteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpGatewayRoutePrefixRewriteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpGatewayRoutePrefixRewriteProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty
@@ -1321,7 +1324,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteRewriteProperty):
-          HttpGatewayRouteRewriteProperty = Wrapper(cdkObject)
+          HttpGatewayRouteRewriteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpGatewayRouteRewriteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpGatewayRouteRewriteProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteRewriteProperty =
@@ -1459,7 +1463,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.QueryParameterProperty):
-          QueryParameterProperty = Wrapper(cdkObject)
+          QueryParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? QueryParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryParameterProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.QueryParameterProperty = (wrapped
@@ -1600,7 +1605,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteTargetProperty):
-          GatewayRouteTargetProperty = Wrapper(cdkObject)
+          GatewayRouteTargetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayRouteTargetProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayRouteTargetProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteTargetProperty =
@@ -1713,7 +1719,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteRangeMatchProperty):
-          GatewayRouteRangeMatchProperty = Wrapper(cdkObject)
+          GatewayRouteRangeMatchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayRouteRangeMatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayRouteRangeMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteRangeMatchProperty =
@@ -1796,7 +1803,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpQueryParameterMatchProperty):
-          HttpQueryParameterMatchProperty = Wrapper(cdkObject)
+          HttpQueryParameterMatchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpQueryParameterMatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpQueryParameterMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpQueryParameterMatchProperty =
@@ -1986,7 +1994,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteActionProperty):
-          HttpGatewayRouteActionProperty = Wrapper(cdkObject)
+          HttpGatewayRouteActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpGatewayRouteActionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpGatewayRouteActionProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteActionProperty =
@@ -2070,7 +2079,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteHostnameRewriteProperty):
-          GatewayRouteHostnameRewriteProperty = Wrapper(cdkObject)
+          GatewayRouteHostnameRewriteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayRouteHostnameRewriteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayRouteHostnameRewriteProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteHostnameRewriteProperty
@@ -2182,7 +2192,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteRewriteProperty):
-          GrpcGatewayRouteRewriteProperty = Wrapper(cdkObject)
+          GrpcGatewayRouteRewriteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GrpcGatewayRouteRewriteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcGatewayRouteRewriteProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteRewriteProperty =
@@ -2414,7 +2425,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteMatchProperty):
-          GrpcGatewayRouteMatchProperty = Wrapper(cdkObject)
+          GrpcGatewayRouteMatchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GrpcGatewayRouteMatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcGatewayRouteMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteMatchProperty =
@@ -2498,7 +2510,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty):
-          HttpGatewayRoutePathRewriteProperty = Wrapper(cdkObject)
+          HttpGatewayRoutePathRewriteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpGatewayRoutePathRewriteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpGatewayRoutePathRewriteProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty
@@ -2609,7 +2622,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteHostnameMatchProperty):
-          GatewayRouteHostnameMatchProperty = Wrapper(cdkObject)
+          GatewayRouteHostnameMatchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayRouteHostnameMatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayRouteHostnameMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteHostnameMatchProperty
@@ -2831,7 +2845,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteMetadataMatchProperty):
-          GatewayRouteMetadataMatchProperty = Wrapper(cdkObject)
+          GatewayRouteMetadataMatchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayRouteMetadataMatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayRouteMetadataMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteMetadataMatchProperty
@@ -3048,7 +3063,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteProperty):
-          HttpGatewayRouteProperty = Wrapper(cdkObject)
+          HttpGatewayRouteProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpGatewayRouteProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpGatewayRouteProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteProperty =
@@ -3156,7 +3172,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpPathMatchProperty):
-          HttpPathMatchProperty = Wrapper(cdkObject)
+          HttpPathMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpPathMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpPathMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpPathMatchProperty = (wrapped
@@ -3556,7 +3573,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteSpecProperty):
-          GatewayRouteSpecProperty = Wrapper(cdkObject)
+          GatewayRouteSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? GatewayRouteSpecProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayRouteSpecProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteSpecProperty =
@@ -3768,7 +3786,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteHeaderProperty):
-          HttpGatewayRouteHeaderProperty = Wrapper(cdkObject)
+          HttpGatewayRouteHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpGatewayRouteHeaderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpGatewayRouteHeaderProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteHeaderProperty =
@@ -3951,7 +3970,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteActionProperty):
-          GrpcGatewayRouteActionProperty = Wrapper(cdkObject)
+          GrpcGatewayRouteActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GrpcGatewayRouteActionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcGatewayRouteActionProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteActionProperty =
@@ -4035,7 +4055,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteVirtualServiceProperty):
-          GatewayRouteVirtualServiceProperty = Wrapper(cdkObject)
+          GatewayRouteVirtualServiceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayRouteVirtualServiceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayRouteVirtualServiceProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GatewayRouteVirtualServiceProperty
@@ -4233,7 +4254,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteProperty):
-          GrpcGatewayRouteProperty = Wrapper(cdkObject)
+          GrpcGatewayRouteProperty = CdkObjectWrappers.wrap(cdkObject) as? GrpcGatewayRouteProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcGatewayRouteProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteProperty =
@@ -4427,7 +4449,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteMetadataProperty):
-          GrpcGatewayRouteMetadataProperty = Wrapper(cdkObject)
+          GrpcGatewayRouteMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GrpcGatewayRouteMetadataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcGatewayRouteMetadataProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.GrpcGatewayRouteMetadataProperty =
@@ -4652,7 +4675,8 @@ public open class CfnGatewayRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteHeaderMatchProperty):
-          HttpGatewayRouteHeaderMatchProperty = Wrapper(cdkObject)
+          HttpGatewayRouteHeaderMatchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpGatewayRouteHeaderMatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpGatewayRouteHeaderMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteHeaderMatchProperty

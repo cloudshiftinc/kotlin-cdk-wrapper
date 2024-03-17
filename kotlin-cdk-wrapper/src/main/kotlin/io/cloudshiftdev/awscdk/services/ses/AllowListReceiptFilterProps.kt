@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -77,7 +78,8 @@ public interface AllowListReceiptFilterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.AllowListReceiptFilterProps):
-        AllowListReceiptFilterProps = Wrapper(cdkObject)
+        AllowListReceiptFilterProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AllowListReceiptFilterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AllowListReceiptFilterProps):
         software.amazon.awscdk.services.ses.AllowListReceiptFilterProps = (wrapped as

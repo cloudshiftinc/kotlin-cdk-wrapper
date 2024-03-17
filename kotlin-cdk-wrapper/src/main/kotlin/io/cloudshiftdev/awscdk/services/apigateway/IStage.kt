@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 import kotlin.Unit
@@ -132,7 +133,7 @@ public interface IStage : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.IStage): IStage =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IStage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IStage): software.amazon.awscdk.services.apigateway.IStage =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.IStage

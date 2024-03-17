@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1251,7 +1252,8 @@ public open class CfnHostedZone internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty):
-          QueryLoggingConfigProperty = Wrapper(cdkObject)
+          QueryLoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryLoggingConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryLoggingConfigProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty =
@@ -1389,7 +1391,7 @@ public open class CfnHostedZone internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty):
-          VPCProperty = Wrapper(cdkObject)
+          VPCProperty = CdkObjectWrappers.wrap(cdkObject) as? VPCProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VPCProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty = (wrapped as
@@ -1541,7 +1543,8 @@ public open class CfnHostedZone internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty):
-          HostedZoneTagProperty = Wrapper(cdkObject)
+          HostedZoneTagProperty = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HostedZoneTagProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty = (wrapped as
@@ -1625,7 +1628,8 @@ public open class CfnHostedZone internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty):
-          HostedZoneConfigProperty = Wrapper(cdkObject)
+          HostedZoneConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HostedZoneConfigProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty = (wrapped

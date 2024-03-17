@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -487,7 +488,8 @@ public open class CfnBackupPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty):
-          CopyActionResourceTypeProperty = Wrapper(cdkObject)
+          CopyActionResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CopyActionResourceTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CopyActionResourceTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty =
@@ -665,7 +667,8 @@ public open class CfnBackupPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.AdvancedBackupSettingResourceTypeProperty):
-          AdvancedBackupSettingResourceTypeProperty = Wrapper(cdkObject)
+          AdvancedBackupSettingResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedBackupSettingResourceTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedBackupSettingResourceTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupPlan.AdvancedBackupSettingResourceTypeProperty
@@ -886,7 +889,8 @@ public open class CfnBackupPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.BackupPlanResourceTypeProperty):
-          BackupPlanResourceTypeProperty = Wrapper(cdkObject)
+          BackupPlanResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BackupPlanResourceTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BackupPlanResourceTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupPlanResourceTypeProperty =
@@ -1381,7 +1385,8 @@ public open class CfnBackupPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty):
-          BackupRuleResourceTypeProperty = Wrapper(cdkObject)
+          BackupRuleResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BackupRuleResourceTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BackupRuleResourceTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty =
@@ -1543,7 +1548,8 @@ public open class CfnBackupPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan.LifecycleResourceTypeProperty):
-          LifecycleResourceTypeProperty = Wrapper(cdkObject)
+          LifecycleResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LifecycleResourceTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LifecycleResourceTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupPlan.LifecycleResourceTypeProperty =

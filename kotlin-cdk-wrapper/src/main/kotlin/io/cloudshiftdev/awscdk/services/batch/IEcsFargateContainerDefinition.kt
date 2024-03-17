@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import io.cloudshiftdev.awscdk.services.ecs.CpuArchitecture
 import io.cloudshiftdev.awscdk.services.ecs.FargatePlatformVersion
@@ -237,7 +238,8 @@ public interface IEcsFargateContainerDefinition : IEcsContainerDefinition {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.IEcsFargateContainerDefinition):
-        IEcsFargateContainerDefinition = Wrapper(cdkObject)
+        IEcsFargateContainerDefinition = CdkObjectWrappers.wrap(cdkObject) as?
+        IEcsFargateContainerDefinition ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEcsFargateContainerDefinition):
         software.amazon.awscdk.services.batch.IEcsFargateContainerDefinition = (wrapped as

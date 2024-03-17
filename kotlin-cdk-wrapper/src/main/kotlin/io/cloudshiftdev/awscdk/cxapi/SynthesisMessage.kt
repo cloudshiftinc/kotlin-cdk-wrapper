@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.cxapi
 import io.cloudshiftdev.awscdk.cloudassembly.schema.MetadataEntry
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -134,7 +135,7 @@ public interface SynthesisMessage {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.SynthesisMessage): SynthesisMessage =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? SynthesisMessage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SynthesisMessage): software.amazon.awscdk.cxapi.SynthesisMessage =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.cxapi.SynthesisMessage

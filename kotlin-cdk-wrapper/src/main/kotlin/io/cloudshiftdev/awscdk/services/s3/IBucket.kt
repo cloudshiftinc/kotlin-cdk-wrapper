@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -1682,7 +1683,7 @@ public interface IBucket : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.IBucket): IBucket =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IBucket ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IBucket): software.amazon.awscdk.services.s3.IBucket = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.s3.IBucket

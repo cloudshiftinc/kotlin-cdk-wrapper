@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
@@ -899,7 +900,7 @@ public interface IQueue : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.IQueue): IQueue =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IQueue ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IQueue): software.amazon.awscdk.services.sqs.IQueue = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.sqs.IQueue

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -416,7 +417,8 @@ public interface CodeStarConnectionsSourceActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceActionProps):
-        CodeStarConnectionsSourceActionProps = Wrapper(cdkObject)
+        CodeStarConnectionsSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CodeStarConnectionsSourceActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeStarConnectionsSourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceActionProps =

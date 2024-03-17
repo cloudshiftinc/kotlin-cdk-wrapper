@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.config
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -471,7 +472,8 @@ public interface CfnRemediationConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfigurationProps):
-        CfnRemediationConfigurationProps = Wrapper(cdkObject)
+        CfnRemediationConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRemediationConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRemediationConfigurationProps):
         software.amazon.awscdk.services.config.CfnRemediationConfigurationProps = (wrapped as

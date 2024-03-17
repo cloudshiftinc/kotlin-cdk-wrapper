@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2221,7 +2222,8 @@ public open class CfnRecordSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.GeoLocationProperty):
-          GeoLocationProperty = Wrapper(cdkObject)
+          GeoLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? GeoLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GeoLocationProperty):
           software.amazon.awscdk.services.route53.CfnRecordSet.GeoLocationProperty = (wrapped as
@@ -2336,7 +2338,8 @@ public open class CfnRecordSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.CoordinatesProperty):
-          CoordinatesProperty = Wrapper(cdkObject)
+          CoordinatesProperty = CdkObjectWrappers.wrap(cdkObject) as? CoordinatesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoordinatesProperty):
           software.amazon.awscdk.services.route53.CfnRecordSet.CoordinatesProperty = (wrapped as
@@ -2448,7 +2451,8 @@ public open class CfnRecordSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.CidrRoutingConfigProperty):
-          CidrRoutingConfigProperty = Wrapper(cdkObject)
+          CidrRoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CidrRoutingConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CidrRoutingConfigProperty):
           software.amazon.awscdk.services.route53.CfnRecordSet.CidrRoutingConfigProperty = (wrapped
@@ -2726,7 +2730,8 @@ public open class CfnRecordSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.GeoProximityLocationProperty):
-          GeoProximityLocationProperty = Wrapper(cdkObject)
+          GeoProximityLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GeoProximityLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GeoProximityLocationProperty):
           software.amazon.awscdk.services.route53.CfnRecordSet.GeoProximityLocationProperty =
@@ -3975,7 +3980,8 @@ public open class CfnRecordSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet.AliasTargetProperty):
-          AliasTargetProperty = Wrapper(cdkObject)
+          AliasTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? AliasTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AliasTargetProperty):
           software.amazon.awscdk.services.route53.CfnRecordSet.AliasTargetProperty = (wrapped as

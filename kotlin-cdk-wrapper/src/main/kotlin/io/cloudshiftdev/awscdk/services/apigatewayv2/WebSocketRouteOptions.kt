@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -137,7 +138,8 @@ public interface WebSocketRouteOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions):
-        WebSocketRouteOptions = Wrapper(cdkObject)
+        WebSocketRouteOptions = CdkObjectWrappers.wrap(cdkObject) as? WebSocketRouteOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketRouteOptions):
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions = (wrapped as

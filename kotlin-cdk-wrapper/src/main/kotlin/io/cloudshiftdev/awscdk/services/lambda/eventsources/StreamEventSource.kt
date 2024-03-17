@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda.eventsources
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IEventSource
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 
@@ -29,7 +30,8 @@ public abstract class StreamEventSource internal constructor(
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.StreamEventSource):
-        StreamEventSource = Wrapper(cdkObject)
+        StreamEventSource = CdkObjectWrappers.wrap(cdkObject) as? StreamEventSource ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamEventSource):
         software.amazon.awscdk.services.lambda.eventsources.StreamEventSource = (wrapped as

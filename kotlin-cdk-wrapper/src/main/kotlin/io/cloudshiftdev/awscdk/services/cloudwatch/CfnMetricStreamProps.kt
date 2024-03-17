@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -706,7 +707,8 @@ public interface CfnMetricStreamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStreamProps):
-        CfnMetricStreamProps = Wrapper(cdkObject)
+        CfnMetricStreamProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMetricStreamProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMetricStreamProps):
         software.amazon.awscdk.services.cloudwatch.CfnMetricStreamProps = (wrapped as

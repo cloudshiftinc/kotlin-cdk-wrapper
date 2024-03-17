@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -200,7 +201,8 @@ public interface JournaldLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.JournaldLogDriverProps):
-        JournaldLogDriverProps = Wrapper(cdkObject)
+        JournaldLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? JournaldLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JournaldLogDriverProps):
         software.amazon.awscdk.services.ecs.JournaldLogDriverProps = (wrapped as

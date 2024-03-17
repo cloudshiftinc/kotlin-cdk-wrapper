@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -249,7 +250,8 @@ public interface CliCredentialsStackSynthesizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CliCredentialsStackSynthesizerProps):
-        CliCredentialsStackSynthesizerProps = Wrapper(cdkObject)
+        CliCredentialsStackSynthesizerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CliCredentialsStackSynthesizerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CliCredentialsStackSynthesizerProps):
         software.amazon.awscdk.CliCredentialsStackSynthesizerProps = (wrapped as

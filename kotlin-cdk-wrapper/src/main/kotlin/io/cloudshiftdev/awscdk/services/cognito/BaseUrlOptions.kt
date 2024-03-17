@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -72,7 +73,7 @@ public interface BaseUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.BaseUrlOptions):
-        BaseUrlOptions = Wrapper(cdkObject)
+        BaseUrlOptions = CdkObjectWrappers.wrap(cdkObject) as? BaseUrlOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseUrlOptions):
         software.amazon.awscdk.services.cognito.BaseUrlOptions = (wrapped as CdkObject).cdkObject as

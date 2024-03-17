@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 
 /**
@@ -30,7 +31,7 @@ public interface IAnyProducer {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IAnyProducer): IAnyProducer =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IAnyProducer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAnyProducer): software.amazon.awscdk.IAnyProducer = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.IAnyProducer

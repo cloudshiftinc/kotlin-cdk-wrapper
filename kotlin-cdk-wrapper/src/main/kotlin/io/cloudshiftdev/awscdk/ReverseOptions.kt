@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -78,7 +79,7 @@ public interface ReverseOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ReverseOptions): ReverseOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ReverseOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReverseOptions): software.amazon.awscdk.ReverseOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.ReverseOptions

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -571,7 +572,8 @@ public open class CfnFaq internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty):
-          S3PathProperty = Wrapper(cdkObject)
+          S3PathProperty = CdkObjectWrappers.wrap(cdkObject) as? S3PathProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3PathProperty):
           software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty = (wrapped as

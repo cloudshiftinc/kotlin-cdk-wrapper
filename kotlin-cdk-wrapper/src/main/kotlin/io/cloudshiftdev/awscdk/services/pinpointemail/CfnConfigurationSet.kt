@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -688,7 +689,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty):
-          DeliveryOptionsProperty = Wrapper(cdkObject)
+          DeliveryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeliveryOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeliveryOptionsProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty
@@ -791,7 +793,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty):
-          SendingOptionsProperty = Wrapper(cdkObject)
+          SendingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SendingOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SendingOptionsProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty =
@@ -882,7 +885,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty):
-          TrackingOptionsProperty = Wrapper(cdkObject)
+          TrackingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? TrackingOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrackingOptionsProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty
@@ -989,7 +993,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty):
-          ReputationOptionsProperty = Wrapper(cdkObject)
+          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReputationOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReputationOptionsProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty

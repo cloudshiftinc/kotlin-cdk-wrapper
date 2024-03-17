@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ses
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -182,7 +183,8 @@ public interface CfnVdmAttributesProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributesProps):
-        CfnVdmAttributesProps = Wrapper(cdkObject)
+        CfnVdmAttributesProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVdmAttributesProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVdmAttributesProps):
         software.amazon.awscdk.services.ses.CfnVdmAttributesProps = (wrapped as CdkObject).cdkObject

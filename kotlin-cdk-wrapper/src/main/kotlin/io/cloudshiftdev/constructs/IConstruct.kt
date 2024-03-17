@@ -3,6 +3,7 @@
 package io.cloudshiftdev.constructs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 public interface IConstruct : IDependable {
   public fun node(): Node
@@ -14,7 +15,8 @@ public interface IConstruct : IDependable {
   }
 
   public companion object {
-    internal fun wrap(cdkObject: software.constructs.IConstruct): IConstruct = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.constructs.IConstruct): IConstruct =
+        CdkObjectWrappers.wrap(cdkObject) as? IConstruct ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IConstruct): software.constructs.IConstruct = (wrapped as
         CdkObject).cdkObject as software.constructs.IConstruct

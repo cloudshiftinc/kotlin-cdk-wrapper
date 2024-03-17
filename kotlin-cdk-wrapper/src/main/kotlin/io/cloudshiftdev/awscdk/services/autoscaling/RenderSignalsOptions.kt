@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -100,7 +101,8 @@ public interface RenderSignalsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.RenderSignalsOptions):
-        RenderSignalsOptions = Wrapper(cdkObject)
+        RenderSignalsOptions = CdkObjectWrappers.wrap(cdkObject) as? RenderSignalsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RenderSignalsOptions):
         software.amazon.awscdk.services.autoscaling.RenderSignalsOptions = (wrapped as

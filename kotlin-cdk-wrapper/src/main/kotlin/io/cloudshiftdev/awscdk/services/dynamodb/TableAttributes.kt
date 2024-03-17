@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.String
@@ -340,7 +341,8 @@ public interface TableAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TableAttributes):
-        TableAttributes = Wrapper(cdkObject)
+        TableAttributes = CdkObjectWrappers.wrap(cdkObject) as? TableAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableAttributes):
         software.amazon.awscdk.services.dynamodb.TableAttributes = (wrapped as CdkObject).cdkObject

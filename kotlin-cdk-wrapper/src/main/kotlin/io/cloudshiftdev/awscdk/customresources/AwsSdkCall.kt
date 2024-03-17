@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.customresources
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -450,7 +451,7 @@ public interface AwsSdkCall {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.customresources.AwsSdkCall): AwsSdkCall =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? AwsSdkCall ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsSdkCall): software.amazon.awscdk.customresources.AwsSdkCall =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.customresources.AwsSdkCall

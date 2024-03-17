@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import kotlin.String
@@ -208,7 +209,8 @@ public interface INetworkTargetGroupMetrics {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroupMetrics):
-        INetworkTargetGroupMetrics = Wrapper(cdkObject)
+        INetworkTargetGroupMetrics = CdkObjectWrappers.wrap(cdkObject) as?
+        INetworkTargetGroupMetrics ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INetworkTargetGroupMetrics):
         software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroupMetrics = (wrapped

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -81,7 +82,7 @@ public abstract class S3Location internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.S3Location.fromJsonExpression(expression).let(S3Location::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3Location):
-        S3Location = Wrapper(cdkObject)
+        S3Location = CdkObjectWrappers.wrap(cdkObject) as? S3Location ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3Location):
         software.amazon.awscdk.services.stepfunctions.tasks.S3Location = (wrapped as

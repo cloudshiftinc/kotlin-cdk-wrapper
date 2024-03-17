@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -994,7 +995,8 @@ public open class CfnImagePipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty):
-          WorkflowParameterProperty = Wrapper(cdkObject)
+          WorkflowParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkflowParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkflowParameterProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty =
@@ -1211,7 +1213,8 @@ public open class CfnImagePipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowConfigurationProperty):
-          WorkflowConfigurationProperty = Wrapper(cdkObject)
+          WorkflowConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkflowConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkflowConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowConfigurationProperty
@@ -1358,7 +1361,8 @@ public open class CfnImagePipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty):
-          ImageTestsConfigurationProperty = Wrapper(cdkObject)
+          ImageTestsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageTestsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageTestsConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty
@@ -1513,7 +1517,8 @@ public open class CfnImagePipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty):
-          EcrConfigurationProperty = Wrapper(cdkObject)
+          EcrConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EcrConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcrConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty =
@@ -1677,7 +1682,8 @@ public open class CfnImagePipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty):
-          ScheduleProperty = Wrapper(cdkObject)
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty = (wrapped
@@ -1840,7 +1846,8 @@ public open class CfnImagePipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty):
-          ImageScanningConfigurationProperty = Wrapper(cdkObject)
+          ImageScanningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageScanningConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageScanningConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudformation
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -230,7 +231,8 @@ public interface CfnWaitConditionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitConditionProps):
-        CfnWaitConditionProps = Wrapper(cdkObject)
+        CfnWaitConditionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWaitConditionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWaitConditionProps):
         software.amazon.awscdk.services.cloudformation.CfnWaitConditionProps = (wrapped as

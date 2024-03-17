@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Any object that has an associated principal that a permission can be granted to.
@@ -25,7 +26,7 @@ public interface IGrantable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IGrantable): IGrantable =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IGrantable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IGrantable): software.amazon.awscdk.services.iam.IGrantable =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.IGrantable

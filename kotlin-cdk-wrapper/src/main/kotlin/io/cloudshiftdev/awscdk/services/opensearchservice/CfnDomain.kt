@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2161,7 +2162,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty):
-          MasterUserOptionsProperty = Wrapper(cdkObject)
+          MasterUserOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MasterUserOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MasterUserOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty =
@@ -2561,7 +2563,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty):
-          AdvancedSecurityOptionsInputProperty = Wrapper(cdkObject)
+          AdvancedSecurityOptionsInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedSecurityOptionsInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedSecurityOptionsInputProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty
@@ -2710,7 +2713,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty):
-          LogPublishingOptionProperty = Wrapper(cdkObject)
+          LogPublishingOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogPublishingOptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogPublishingOptionProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty =
@@ -2817,7 +2821,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty):
-          IdpProperty = Wrapper(cdkObject)
+          IdpProperty = CdkObjectWrappers.wrap(cdkObject) as? IdpProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdpProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty = (wrapped as
@@ -2916,7 +2920,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty):
-          SoftwareUpdateOptionsProperty = Wrapper(cdkObject)
+          SoftwareUpdateOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SoftwareUpdateOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SoftwareUpdateOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty
@@ -3033,7 +3038,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty):
-          OffPeakWindowProperty = Wrapper(cdkObject)
+          OffPeakWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? OffPeakWindowProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OffPeakWindowProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty =
@@ -3339,7 +3345,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty):
-          SAMLOptionsProperty = Wrapper(cdkObject)
+          SAMLOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SAMLOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SAMLOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty = (wrapped
@@ -3536,7 +3543,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty):
-          EncryptionAtRestOptionsProperty = Wrapper(cdkObject)
+          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
@@ -3690,7 +3698,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty):
-          OffPeakWindowOptionsProperty = Wrapper(cdkObject)
+          OffPeakWindowOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OffPeakWindowOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OffPeakWindowOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty =
@@ -4371,7 +4380,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ClusterConfigProperty):
-          ClusterConfigProperty = Wrapper(cdkObject)
+          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClusterConfigProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ClusterConfigProperty =
@@ -4487,7 +4497,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty):
-          NodeToNodeEncryptionOptionsProperty = Wrapper(cdkObject)
+          NodeToNodeEncryptionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NodeToNodeEncryptionOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NodeToNodeEncryptionOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty
@@ -4589,7 +4600,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty):
-          SnapshotOptionsProperty = Wrapper(cdkObject)
+          SnapshotOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SnapshotOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnapshotOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty =
@@ -4683,7 +4695,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty):
-          ZoneAwarenessConfigProperty = Wrapper(cdkObject)
+          ZoneAwarenessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZoneAwarenessConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZoneAwarenessConfigProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty =
@@ -4963,7 +4976,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty):
-          DomainEndpointOptionsProperty = Wrapper(cdkObject)
+          DomainEndpointOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DomainEndpointOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DomainEndpointOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty
@@ -5308,7 +5322,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ServiceSoftwareOptionsProperty):
-          ServiceSoftwareOptionsProperty = Wrapper(cdkObject)
+          ServiceSoftwareOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceSoftwareOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceSoftwareOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ServiceSoftwareOptionsProperty
@@ -5437,7 +5452,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty):
-          WindowStartTimeProperty = Wrapper(cdkObject)
+          WindowStartTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? WindowStartTimeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WindowStartTimeProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty =
@@ -5542,7 +5558,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty):
-          ColdStorageOptionsProperty = Wrapper(cdkObject)
+          ColdStorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColdStorageOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColdStorageOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty =
@@ -5761,7 +5778,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.VPCOptionsProperty):
-          VPCOptionsProperty = Wrapper(cdkObject)
+          VPCOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? VPCOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VPCOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.VPCOptionsProperty = (wrapped
@@ -6021,7 +6039,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty):
-          EBSOptionsProperty = Wrapper(cdkObject)
+          EBSOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? EBSOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EBSOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty = (wrapped
@@ -6250,7 +6269,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty):
-          CognitoOptionsProperty = Wrapper(cdkObject)
+          CognitoOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CognitoOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CognitoOptionsProperty):
           software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty =

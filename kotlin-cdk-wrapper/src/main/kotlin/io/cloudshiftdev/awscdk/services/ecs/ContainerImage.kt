@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecr.IRepository
 import io.cloudshiftdev.awscdk.services.ecr.assets.DockerImageAsset
 import io.cloudshiftdev.constructs.Construct
@@ -84,7 +85,7 @@ public abstract class ContainerImage internal constructor(
         software.amazon.awscdk.services.ecs.ContainerImage.fromTarball(tarballFile).let(ContainerImage::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ContainerImage): ContainerImage
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? ContainerImage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerImage): software.amazon.awscdk.services.ecs.ContainerImage
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.ContainerImage

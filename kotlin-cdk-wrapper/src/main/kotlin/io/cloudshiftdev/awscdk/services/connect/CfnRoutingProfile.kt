@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -590,7 +591,8 @@ public open class CfnRoutingProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.CrossChannelBehaviorProperty):
-          CrossChannelBehaviorProperty = Wrapper(cdkObject)
+          CrossChannelBehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CrossChannelBehaviorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CrossChannelBehaviorProperty):
           software.amazon.awscdk.services.connect.CfnRoutingProfile.CrossChannelBehaviorProperty =
@@ -807,7 +809,8 @@ public open class CfnRoutingProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.MediaConcurrencyProperty):
-          MediaConcurrencyProperty = Wrapper(cdkObject)
+          MediaConcurrencyProperty = CdkObjectWrappers.wrap(cdkObject) as? MediaConcurrencyProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MediaConcurrencyProperty):
           software.amazon.awscdk.services.connect.CfnRoutingProfile.MediaConcurrencyProperty =
@@ -1009,7 +1012,8 @@ public open class CfnRoutingProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueConfigProperty):
-          RoutingProfileQueueConfigProperty = Wrapper(cdkObject)
+          RoutingProfileQueueConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RoutingProfileQueueConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoutingProfileQueueConfigProperty):
           software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueConfigProperty
@@ -1122,7 +1126,8 @@ public open class CfnRoutingProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueReferenceProperty):
-          RoutingProfileQueueReferenceProperty = Wrapper(cdkObject)
+          RoutingProfileQueueReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RoutingProfileQueueReferenceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoutingProfileQueueReferenceProperty):
           software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueReferenceProperty

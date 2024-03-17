@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.secretsmanager
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * A secret attachment target.
@@ -26,7 +27,8 @@ public interface ISecretAttachmentTarget {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget):
-        ISecretAttachmentTarget = Wrapper(cdkObject)
+        ISecretAttachmentTarget = CdkObjectWrappers.wrap(cdkObject) as? ISecretAttachmentTarget ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISecretAttachmentTarget):
         software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget = (wrapped as

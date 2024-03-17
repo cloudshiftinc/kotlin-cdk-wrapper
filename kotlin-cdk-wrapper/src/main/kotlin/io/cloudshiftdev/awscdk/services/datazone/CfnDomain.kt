@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -505,7 +506,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty):
-          SingleSignOnProperty = Wrapper(cdkObject)
+          SingleSignOnProperty = CdkObjectWrappers.wrap(cdkObject) as? SingleSignOnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleSignOnProperty):
           software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53resolver
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -116,7 +117,8 @@ public interface CfnResolverConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverConfigProps):
-        CfnResolverConfigProps = Wrapper(cdkObject)
+        CfnResolverConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResolverConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverConfigProps):
         software.amazon.awscdk.services.route53resolver.CfnResolverConfigProps = (wrapped as

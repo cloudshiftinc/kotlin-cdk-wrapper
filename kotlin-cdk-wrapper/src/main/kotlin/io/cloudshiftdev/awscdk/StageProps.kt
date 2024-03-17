@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -353,7 +354,8 @@ public interface StageProps {
       return Wrapper(builderImpl.apply(block).build())
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.StageProps): StageProps = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.StageProps): StageProps =
+        CdkObjectWrappers.wrap(cdkObject) as? StageProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StageProps): software.amazon.awscdk.StageProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.StageProps

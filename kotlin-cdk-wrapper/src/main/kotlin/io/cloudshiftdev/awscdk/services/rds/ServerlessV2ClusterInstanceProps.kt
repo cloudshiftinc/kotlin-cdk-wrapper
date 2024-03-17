@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.String
@@ -422,7 +423,8 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps):
-        ServerlessV2ClusterInstanceProps = Wrapper(cdkObject)
+        ServerlessV2ClusterInstanceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerlessV2ClusterInstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessV2ClusterInstanceProps):
         software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps = (wrapped as

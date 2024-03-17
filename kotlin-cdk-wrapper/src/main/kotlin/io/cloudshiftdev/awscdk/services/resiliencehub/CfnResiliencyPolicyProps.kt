@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.resiliencehub
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -247,7 +248,8 @@ public interface CfnResiliencyPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicyProps):
-        CfnResiliencyPolicyProps = Wrapper(cdkObject)
+        CfnResiliencyPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResiliencyPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResiliencyPolicyProps):
         software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicyProps = (wrapped as

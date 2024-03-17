@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Topic subscription.
@@ -29,7 +30,8 @@ public interface ITopicSubscription {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.ITopicSubscription):
-        ITopicSubscription = Wrapper(cdkObject)
+        ITopicSubscription = CdkObjectWrappers.wrap(cdkObject) as? ITopicSubscription ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITopicSubscription):
         software.amazon.awscdk.services.sns.ITopicSubscription = (wrapped as CdkObject).cdkObject as

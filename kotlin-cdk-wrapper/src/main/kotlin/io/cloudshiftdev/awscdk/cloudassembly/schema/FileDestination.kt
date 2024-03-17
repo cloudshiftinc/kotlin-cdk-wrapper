@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -155,7 +156,8 @@ public interface FileDestination : AwsDestination {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.FileDestination):
-        FileDestination = Wrapper(cdkObject)
+        FileDestination = CdkObjectWrappers.wrap(cdkObject) as? FileDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileDestination):
         software.amazon.awscdk.cloudassembly.schema.FileDestination = (wrapped as

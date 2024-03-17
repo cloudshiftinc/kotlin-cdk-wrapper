@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticache
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -406,7 +407,8 @@ public interface CfnGlobalReplicationGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroupProps):
-        CfnGlobalReplicationGroupProps = Wrapper(cdkObject)
+        CfnGlobalReplicationGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnGlobalReplicationGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalReplicationGroupProps):
         software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroupProps = (wrapped as

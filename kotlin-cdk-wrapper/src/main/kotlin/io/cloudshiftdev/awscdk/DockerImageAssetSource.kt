@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -630,7 +631,8 @@ public interface DockerImageAssetSource {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.DockerImageAssetSource):
-        DockerImageAssetSource = Wrapper(cdkObject)
+        DockerImageAssetSource = CdkObjectWrappers.wrap(cdkObject) as? DockerImageAssetSource ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageAssetSource):
         software.amazon.awscdk.DockerImageAssetSource = (wrapped as CdkObject).cdkObject as

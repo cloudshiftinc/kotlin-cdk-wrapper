@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Pipeline
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.s3.IBucket
@@ -1022,7 +1023,8 @@ public interface CodePipelineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodePipelineProps):
-        CodePipelineProps = Wrapper(cdkObject)
+        CodePipelineProps = CdkObjectWrappers.wrap(cdkObject) as? CodePipelineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodePipelineProps):
         software.amazon.awscdk.pipelines.CodePipelineProps = (wrapped as CdkObject).cdkObject as

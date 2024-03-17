@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -93,7 +94,7 @@ public interface Tag {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.Tag): Tag =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Tag ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Tag): software.amazon.awscdk.services.events.targets.Tag = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.events.targets.Tag

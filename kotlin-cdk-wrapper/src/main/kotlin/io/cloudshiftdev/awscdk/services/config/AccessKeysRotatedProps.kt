@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.config
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -185,7 +186,8 @@ public interface AccessKeysRotatedProps : RuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.AccessKeysRotatedProps):
-        AccessKeysRotatedProps = Wrapper(cdkObject)
+        AccessKeysRotatedProps = CdkObjectWrappers.wrap(cdkObject) as? AccessKeysRotatedProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AccessKeysRotatedProps):
         software.amazon.awscdk.services.config.AccessKeysRotatedProps = (wrapped as

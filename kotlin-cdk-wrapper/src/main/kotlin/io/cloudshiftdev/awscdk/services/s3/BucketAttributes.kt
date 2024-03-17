@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
@@ -424,7 +425,8 @@ public interface BucketAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.BucketAttributes):
-        BucketAttributes = Wrapper(cdkObject)
+        BucketAttributes = CdkObjectWrappers.wrap(cdkObject) as? BucketAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketAttributes):
         software.amazon.awscdk.services.s3.BucketAttributes = (wrapped as CdkObject).cdkObject as

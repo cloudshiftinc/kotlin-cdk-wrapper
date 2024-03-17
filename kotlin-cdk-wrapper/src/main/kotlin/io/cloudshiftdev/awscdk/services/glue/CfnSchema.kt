@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -636,7 +637,8 @@ public open class CfnSchema internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty):
-          SchemaVersionProperty = Wrapper(cdkObject)
+          SchemaVersionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaVersionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaVersionProperty):
           software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty = (wrapped as
@@ -741,7 +743,8 @@ public open class CfnSchema internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty):
-          RegistryProperty = Wrapper(cdkObject)
+          RegistryProperty = CdkObjectWrappers.wrap(cdkObject) as? RegistryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegistryProperty):
           software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty = (wrapped as

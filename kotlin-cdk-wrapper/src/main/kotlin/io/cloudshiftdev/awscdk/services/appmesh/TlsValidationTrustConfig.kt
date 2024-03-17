@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -104,7 +105,8 @@ public interface TlsValidationTrustConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig):
-        TlsValidationTrustConfig = Wrapper(cdkObject)
+        TlsValidationTrustConfig = CdkObjectWrappers.wrap(cdkObject) as? TlsValidationTrustConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TlsValidationTrustConfig):
         software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig = (wrapped as

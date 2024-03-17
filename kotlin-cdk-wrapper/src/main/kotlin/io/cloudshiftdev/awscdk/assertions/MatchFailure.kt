@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.assertions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -175,7 +176,7 @@ public interface MatchFailure {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.MatchFailure): MatchFailure =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? MatchFailure ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MatchFailure): software.amazon.awscdk.assertions.MatchFailure =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.assertions.MatchFailure

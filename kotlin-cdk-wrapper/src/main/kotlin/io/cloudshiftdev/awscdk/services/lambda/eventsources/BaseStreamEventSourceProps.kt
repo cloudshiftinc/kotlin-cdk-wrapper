@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import kotlin.Boolean
 import kotlin.Number
@@ -225,7 +226,8 @@ public interface BaseStreamEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.BaseStreamEventSourceProps):
-        BaseStreamEventSourceProps = Wrapper(cdkObject)
+        BaseStreamEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        BaseStreamEventSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseStreamEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.BaseStreamEventSourceProps = (wrapped as

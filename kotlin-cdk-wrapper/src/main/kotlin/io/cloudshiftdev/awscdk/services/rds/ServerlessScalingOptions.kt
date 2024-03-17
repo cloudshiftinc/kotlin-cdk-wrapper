@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -249,7 +250,8 @@ public interface ServerlessScalingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessScalingOptions):
-        ServerlessScalingOptions = Wrapper(cdkObject)
+        ServerlessScalingOptions = CdkObjectWrappers.wrap(cdkObject) as? ServerlessScalingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessScalingOptions):
         software.amazon.awscdk.services.rds.ServerlessScalingOptions = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.route53
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Classes that are valid alias record targets, like CloudFront distributions and load balancers,
@@ -50,7 +51,8 @@ public interface IAliasRecordTarget {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.IAliasRecordTarget):
-        IAliasRecordTarget = Wrapper(cdkObject)
+        IAliasRecordTarget = CdkObjectWrappers.wrap(cdkObject) as? IAliasRecordTarget ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAliasRecordTarget):
         software.amazon.awscdk.services.route53.IAliasRecordTarget = (wrapped as

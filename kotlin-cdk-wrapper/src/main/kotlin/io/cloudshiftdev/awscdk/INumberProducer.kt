@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 
 /**
@@ -30,7 +31,7 @@ public interface INumberProducer {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.INumberProducer): INumberProducer =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? INumberProducer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INumberProducer): software.amazon.awscdk.INumberProducer = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.INumberProducer

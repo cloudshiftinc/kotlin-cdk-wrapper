@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.IAutoScalingGroup
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
@@ -569,7 +570,8 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AsgCapacityProviderProps):
-        AsgCapacityProviderProps = Wrapper(cdkObject)
+        AsgCapacityProviderProps = CdkObjectWrappers.wrap(cdkObject) as? AsgCapacityProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AsgCapacityProviderProps):
         software.amazon.awscdk.services.ecs.AsgCapacityProviderProps = (wrapped as

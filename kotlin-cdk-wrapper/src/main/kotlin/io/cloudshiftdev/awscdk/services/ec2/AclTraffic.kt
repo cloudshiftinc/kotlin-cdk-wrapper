@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -65,7 +66,7 @@ public abstract class AclTraffic internal constructor(
         endPort).let(AclTraffic::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclTraffic): AclTraffic =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? AclTraffic ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AclTraffic): software.amazon.awscdk.services.ec2.AclTraffic =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.AclTraffic

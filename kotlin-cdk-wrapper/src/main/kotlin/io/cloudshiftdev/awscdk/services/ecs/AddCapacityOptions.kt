@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.BlockDevice
 import io.cloudshiftdev.awscdk.services.autoscaling.CommonAutoScalingGroupProps
 import io.cloudshiftdev.awscdk.services.autoscaling.GroupMetrics
@@ -1264,7 +1265,8 @@ public interface AddCapacityOptions : AddAutoScalingGroupCapacityOptions,
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AddCapacityOptions):
-        AddCapacityOptions = Wrapper(cdkObject)
+        AddCapacityOptions = CdkObjectWrappers.wrap(cdkObject) as? AddCapacityOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddCapacityOptions):
         software.amazon.awscdk.services.ecs.AddCapacityOptions = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -70,7 +71,8 @@ public interface ParameterGroupInstanceConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig):
-        ParameterGroupInstanceConfig = Wrapper(cdkObject)
+        ParameterGroupInstanceConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        ParameterGroupInstanceConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParameterGroupInstanceConfig):
         software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig = (wrapped as

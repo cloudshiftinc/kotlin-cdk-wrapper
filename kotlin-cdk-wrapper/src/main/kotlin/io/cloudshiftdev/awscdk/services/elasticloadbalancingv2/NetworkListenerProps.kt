@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.collections.List
@@ -306,7 +307,8 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerProps):
-        NetworkListenerProps = Wrapper(cdkObject)
+        NetworkListenerProps = CdkObjectWrappers.wrap(cdkObject) as? NetworkListenerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkListenerProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerProps = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -58,7 +59,7 @@ public interface IOrigin {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.IOrigin): IOrigin =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IOrigin ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IOrigin): software.amazon.awscdk.services.cloudfront.IOrigin =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.IOrigin

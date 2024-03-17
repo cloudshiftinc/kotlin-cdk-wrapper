@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling.common
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -90,7 +91,7 @@ public interface Alarms {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.common.Alarms): Alarms
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? Alarms ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Alarms): software.amazon.awscdk.services.autoscaling.common.Alarms
         = (wrapped as CdkObject).cdkObject as

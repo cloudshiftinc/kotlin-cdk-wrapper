@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.config
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import kotlin.Any
 import kotlin.Boolean
@@ -230,7 +231,8 @@ public interface CustomRuleProps : RuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.CustomRuleProps):
-        CustomRuleProps = Wrapper(cdkObject)
+        CustomRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CustomRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomRuleProps):
         software.amazon.awscdk.services.config.CustomRuleProps = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -289,7 +290,8 @@ public interface SubnetConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SubnetConfiguration):
-        SubnetConfiguration = Wrapper(cdkObject)
+        SubnetConfiguration = CdkObjectWrappers.wrap(cdkObject) as? SubnetConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubnetConfiguration):
         software.amazon.awscdk.services.ec2.SubnetConfiguration = (wrapped as CdkObject).cdkObject

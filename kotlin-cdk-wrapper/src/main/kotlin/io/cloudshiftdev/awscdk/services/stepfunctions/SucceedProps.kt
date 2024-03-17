@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -178,7 +179,7 @@ public interface SucceedProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.SucceedProps):
-        SucceedProps = Wrapper(cdkObject)
+        SucceedProps = CdkObjectWrappers.wrap(cdkObject) as? SucceedProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SucceedProps):
         software.amazon.awscdk.services.stepfunctions.SucceedProps = (wrapped as

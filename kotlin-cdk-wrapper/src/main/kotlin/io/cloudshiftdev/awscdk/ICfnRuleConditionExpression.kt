@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -64,7 +65,8 @@ public interface ICfnRuleConditionExpression : ICfnConditionExpression {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ICfnRuleConditionExpression):
-        ICfnRuleConditionExpression = Wrapper(cdkObject)
+        ICfnRuleConditionExpression = CdkObjectWrappers.wrap(cdkObject) as?
+        ICfnRuleConditionExpression ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ICfnRuleConditionExpression):
         software.amazon.awscdk.ICfnRuleConditionExpression = (wrapped as CdkObject).cdkObject as

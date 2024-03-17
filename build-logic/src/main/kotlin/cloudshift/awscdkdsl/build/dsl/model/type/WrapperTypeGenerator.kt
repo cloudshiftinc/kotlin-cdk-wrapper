@@ -37,9 +37,8 @@ internal object WrapperTypeGenerator {
             generateWrapperTypeFile(it, ctx)
         }
 
-        return specs + generateCdkObject()
+        return specs + generateCdkObject() + CdkWrappersGenerator.generateCdkWrappersObject(model)
     }
-
 
     private fun generateWrapperTypeFile(
         cdkClass: CdkClass,
@@ -73,7 +72,6 @@ internal object WrapperTypeGenerator {
             else -> {
                 val superClass = when {
                     cdkClass.superClass.isJssiClass || cdkClass.superClass == ANY -> {
-                        // TODO - pass in ctr param
                         CdkObject
                     }
 
@@ -202,7 +200,7 @@ internal object WrapperTypeGenerator {
                 usableConstructors,
                 cdkClass,
                 ctx,
-                isConstructor = true
+                isConstructor = true,
             ).map { it.specFor(cdkClass) }
 
             typeBuilder.addFunctions(constructors)
@@ -267,17 +265,21 @@ internal object WrapperTypeGenerator {
         }
 
         if (cdkClass.isInterface || cdkClass.isAbstract) {
-            val wrapperClass = cdkClass.className.mappedClassName().nestedClass("Wrapper")
-            val wrapper = generateInterfaceWrapper(wrapperClass, cdkClass, ctx)
-            typeBuilder.addType(wrapper)
-            companionBuilder.addFunction(
-                FunSpec.builder("wrap")
-                    .addModifiers(KModifier.INTERNAL)
-                    .returns(cdkClass.className.mappedClassName())
-                    .addParameter(CdkObjectName, cdkClass.className)
-                    .addStatement("return %T(%N)", wrapperClass, CdkObjectName)
-                    .build(),
-            )
+            typeBuilder.addType(generateInterfaceWrapper(cdkClass, ctx))
+            val wrapperCallBuilder = FunSpec.builder("wrap")
+                .addModifiers(KModifier.INTERNAL)
+                .returns(cdkClass.className.mappedClassName())
+                .addParameter(CdkObjectName, cdkClass.className)
+                .addStatement(
+                    "return %T.wrap(%N) as? %T ?: %T(%N)",
+                    CdkWrappersGenerator.ClassName,
+                    CdkObjectName,
+                    cdkClass.className.mappedClassName(),
+                    cdkClass.className.mappedClassName().nestedClass("Wrapper"),
+                    CdkObjectName,
+                )
+
+            companionBuilder.addFunction(wrapperCallBuilder.build())
             companionBuilder.addFunction(
                 FunSpec.builder("unwrap")
                     .addModifiers(KModifier.INTERNAL)
@@ -348,11 +350,10 @@ internal object WrapperTypeGenerator {
     }
 
     private fun generateInterfaceWrapper(
-        wrapperClass: ClassName,
         cdkClass: CdkClass,
         ctx: TypeGeneratorContext,
     ): TypeSpec {
-
+        val wrapperClass = cdkClass.className.mappedClassName().nestedClass("Wrapper")
         val wrapperBuilder = TypeSpec.classBuilder(wrapperClass)
             .addModifiers(KModifier.PRIVATE)
 

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 import kotlin.Boolean
 import kotlin.String
@@ -267,7 +268,8 @@ public interface ReplicaTableProps : TableOptionsV2 {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.ReplicaTableProps):
-        ReplicaTableProps = Wrapper(cdkObject)
+        ReplicaTableProps = CdkObjectWrappers.wrap(cdkObject) as? ReplicaTableProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReplicaTableProps):
         software.amazon.awscdk.services.dynamodb.ReplicaTableProps = (wrapped as

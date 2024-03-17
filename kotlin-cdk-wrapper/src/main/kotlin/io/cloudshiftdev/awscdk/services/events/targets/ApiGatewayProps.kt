@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
@@ -411,7 +412,8 @@ public interface ApiGatewayProps : TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.ApiGatewayProps):
-        ApiGatewayProps = Wrapper(cdkObject)
+        ApiGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? ApiGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiGatewayProps):
         software.amazon.awscdk.services.events.targets.ApiGatewayProps = (wrapped as

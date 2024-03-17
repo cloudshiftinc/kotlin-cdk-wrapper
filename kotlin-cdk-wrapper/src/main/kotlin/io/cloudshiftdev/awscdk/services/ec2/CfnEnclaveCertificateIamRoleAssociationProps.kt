@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -114,7 +115,8 @@ public interface CfnEnclaveCertificateIamRoleAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociationProps):
-        CfnEnclaveCertificateIamRoleAssociationProps = Wrapper(cdkObject)
+        CfnEnclaveCertificateIamRoleAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEnclaveCertificateIamRoleAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnclaveCertificateIamRoleAssociationProps):
         software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociationProps = (wrapped

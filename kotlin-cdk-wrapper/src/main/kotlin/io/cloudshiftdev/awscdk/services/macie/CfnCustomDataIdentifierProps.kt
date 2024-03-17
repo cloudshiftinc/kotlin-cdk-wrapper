@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.macie
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -415,7 +416,8 @@ public interface CfnCustomDataIdentifierProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnCustomDataIdentifierProps):
-        CfnCustomDataIdentifierProps = Wrapper(cdkObject)
+        CfnCustomDataIdentifierProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCustomDataIdentifierProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomDataIdentifierProps):
         software.amazon.awscdk.services.macie.CfnCustomDataIdentifierProps = (wrapped as

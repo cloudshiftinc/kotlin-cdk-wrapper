@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.collections.List
 
@@ -46,7 +47,7 @@ public interface IChainable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.IChainable):
-        IChainable = Wrapper(cdkObject)
+        IChainable = CdkObjectWrappers.wrap(cdkObject) as? IChainable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IChainable):
         software.amazon.awscdk.services.stepfunctions.IChainable = (wrapped as CdkObject).cdkObject

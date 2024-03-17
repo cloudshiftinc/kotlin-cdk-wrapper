@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -95,7 +96,7 @@ public interface Dimension {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.Dimension): Dimension =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Dimension ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Dimension): software.amazon.awscdk.services.cloudwatch.Dimension =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.Dimension

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
@@ -71,7 +72,8 @@ public abstract class CloudFormationTemplate internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate):
-        CloudFormationTemplate = Wrapper(cdkObject)
+        CloudFormationTemplate = CdkObjectWrappers.wrap(cdkObject) as? CloudFormationTemplate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationTemplate):
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate = (wrapped as

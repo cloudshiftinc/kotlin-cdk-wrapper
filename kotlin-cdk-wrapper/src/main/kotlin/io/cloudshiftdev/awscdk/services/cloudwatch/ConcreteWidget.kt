@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -58,7 +59,7 @@ public abstract class ConcreteWidget internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.ConcreteWidget):
-        ConcreteWidget = Wrapper(cdkObject)
+        ConcreteWidget = CdkObjectWrappers.wrap(cdkObject) as? ConcreteWidget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConcreteWidget):
         software.amazon.awscdk.services.cloudwatch.ConcreteWidget = (wrapped as CdkObject).cdkObject

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.ScalingInterval
 import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.ecs.LogDriver
@@ -75,7 +76,8 @@ public abstract class QueueProcessingServiceBase internal constructor(
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase):
-        QueueProcessingServiceBase = Wrapper(cdkObject)
+        QueueProcessingServiceBase = CdkObjectWrappers.wrap(cdkObject) as?
+        QueueProcessingServiceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueueProcessingServiceBase):
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase = (wrapped as

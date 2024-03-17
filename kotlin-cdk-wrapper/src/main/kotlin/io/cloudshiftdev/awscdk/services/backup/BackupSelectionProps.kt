@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.backup
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.String
@@ -224,7 +225,8 @@ public interface BackupSelectionProps : BackupSelectionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.BackupSelectionProps):
-        BackupSelectionProps = Wrapper(cdkObject)
+        BackupSelectionProps = CdkObjectWrappers.wrap(cdkObject) as? BackupSelectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BackupSelectionProps):
         software.amazon.awscdk.services.backup.BackupSelectionProps = (wrapped as

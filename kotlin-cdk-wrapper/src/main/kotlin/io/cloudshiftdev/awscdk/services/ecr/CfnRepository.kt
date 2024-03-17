@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -804,7 +805,8 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty):
-          ImageScanningConfigurationProperty = Wrapper(cdkObject)
+          ImageScanningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageScanningConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageScanningConfigurationProperty):
           software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty =
@@ -923,7 +925,8 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty):
-          LifecyclePolicyProperty = Wrapper(cdkObject)
+          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? LifecyclePolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LifecyclePolicyProperty):
           software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty = (wrapped as
@@ -1122,7 +1125,8 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = Wrapper(cdkObject)
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionConfigurationProperty):
           software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty =

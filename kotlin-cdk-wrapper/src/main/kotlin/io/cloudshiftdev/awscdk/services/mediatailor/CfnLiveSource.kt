@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -460,7 +461,8 @@ public open class CfnLiveSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty):
-          HttpPackageConfigurationProperty = Wrapper(cdkObject)
+          HttpPackageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpPackageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpPackageConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty

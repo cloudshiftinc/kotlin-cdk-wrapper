@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -714,7 +715,8 @@ public open class CfnFeature internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnFeature.EntityOverrideProperty):
-          EntityOverrideProperty = Wrapper(cdkObject)
+          EntityOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as? EntityOverrideProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EntityOverrideProperty):
           software.amazon.awscdk.services.evidently.CfnFeature.EntityOverrideProperty = (wrapped as
@@ -925,7 +927,8 @@ public open class CfnFeature internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnFeature.VariationObjectProperty):
-          VariationObjectProperty = Wrapper(cdkObject)
+          VariationObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? VariationObjectProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VariationObjectProperty):
           software.amazon.awscdk.services.evidently.CfnFeature.VariationObjectProperty = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.IMetric
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
@@ -435,7 +436,7 @@ public interface ITableV2 : ITable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.ITableV2): ITableV2 =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ITableV2 ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITableV2): software.amazon.awscdk.services.dynamodb.ITableV2 =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.ITableV2

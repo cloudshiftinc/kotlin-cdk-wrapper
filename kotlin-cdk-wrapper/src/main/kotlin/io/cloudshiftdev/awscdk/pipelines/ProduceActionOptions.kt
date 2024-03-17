@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
@@ -450,7 +451,8 @@ public interface ProduceActionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ProduceActionOptions):
-        ProduceActionOptions = Wrapper(cdkObject)
+        ProduceActionOptions = CdkObjectWrappers.wrap(cdkObject) as? ProduceActionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProduceActionOptions):
         software.amazon.awscdk.pipelines.ProduceActionOptions = (wrapped as CdkObject).cdkObject as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -130,7 +131,8 @@ public interface CfnOriginRequestPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicyProps):
-        CfnOriginRequestPolicyProps = Wrapper(cdkObject)
+        CfnOriginRequestPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnOriginRequestPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginRequestPolicyProps):
         software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicyProps = (wrapped as

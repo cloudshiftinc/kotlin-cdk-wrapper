@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.greengrass
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -184,7 +185,8 @@ public interface CfnResourceDefinitionVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersionProps):
-        CfnResourceDefinitionVersionProps = Wrapper(cdkObject)
+        CfnResourceDefinitionVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResourceDefinitionVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceDefinitionVersionProps):
         software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersionProps = (wrapped as

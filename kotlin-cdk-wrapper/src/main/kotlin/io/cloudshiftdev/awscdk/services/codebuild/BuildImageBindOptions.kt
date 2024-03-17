@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -44,7 +45,8 @@ public interface BuildImageBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BuildImageBindOptions):
-        BuildImageBindOptions = Wrapper(cdkObject)
+        BuildImageBindOptions = CdkObjectWrappers.wrap(cdkObject) as? BuildImageBindOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BuildImageBindOptions):
         software.amazon.awscdk.services.codebuild.BuildImageBindOptions = (wrapped as

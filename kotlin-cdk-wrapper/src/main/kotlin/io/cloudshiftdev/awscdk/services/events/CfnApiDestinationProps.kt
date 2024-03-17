@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -222,7 +223,8 @@ public interface CfnApiDestinationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnApiDestinationProps):
-        CfnApiDestinationProps = Wrapper(cdkObject)
+        CfnApiDestinationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnApiDestinationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiDestinationProps):
         software.amazon.awscdk.services.events.CfnApiDestinationProps = (wrapped as

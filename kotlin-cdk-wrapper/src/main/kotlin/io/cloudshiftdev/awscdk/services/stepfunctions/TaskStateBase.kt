@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import kotlin.String
@@ -440,7 +441,7 @@ public abstract class TaskStateBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBase):
-        TaskStateBase = Wrapper(cdkObject)
+        TaskStateBase = CdkObjectWrappers.wrap(cdkObject) as? TaskStateBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TaskStateBase):
         software.amazon.awscdk.services.stepfunctions.TaskStateBase = (wrapped as

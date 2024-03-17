@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -100,7 +101,8 @@ public interface BuildEnvironmentCertificate {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate):
-        BuildEnvironmentCertificate = Wrapper(cdkObject)
+        BuildEnvironmentCertificate = CdkObjectWrappers.wrap(cdkObject) as?
+        BuildEnvironmentCertificate ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BuildEnvironmentCertificate):
         software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate = (wrapped as

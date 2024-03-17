@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appstream
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -212,7 +213,8 @@ public interface CfnEntitlementProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlementProps):
-        CfnEntitlementProps = Wrapper(cdkObject)
+        CfnEntitlementProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEntitlementProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEntitlementProps):
         software.amazon.awscdk.services.appstream.CfnEntitlementProps = (wrapped as

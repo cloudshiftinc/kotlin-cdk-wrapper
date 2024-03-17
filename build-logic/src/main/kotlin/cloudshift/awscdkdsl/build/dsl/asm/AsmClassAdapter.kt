@@ -55,6 +55,8 @@ internal class AsmClassAdapter(
     }
     override val isOuterClass: Boolean
         get() = className.isOuterClass()
+    override val hasJsiiProxy: Boolean
+        get() = delegate.innerClasses.any { it.name.endsWith("Jsii\$Proxy") }
 
     override val publicMemberFunctions: List<CdkClass.Method> by
     lazy(LazyThreadSafetyMode.NONE) {

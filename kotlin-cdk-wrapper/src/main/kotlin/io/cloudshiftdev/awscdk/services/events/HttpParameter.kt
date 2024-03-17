@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -35,7 +36,7 @@ public abstract class HttpParameter internal constructor(
         software.amazon.awscdk.services.events.HttpParameter.fromString(`value`).let(HttpParameter::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.HttpParameter):
-        HttpParameter = Wrapper(cdkObject)
+        HttpParameter = CdkObjectWrappers.wrap(cdkObject) as? HttpParameter ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpParameter):
         software.amazon.awscdk.services.events.HttpParameter = (wrapped as CdkObject).cdkObject as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.cxapi.CloudAssemblyBuilder
 import kotlin.Boolean
 import kotlin.String
@@ -96,7 +97,7 @@ public interface ISynthesisSession {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ISynthesisSession): ISynthesisSession =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ISynthesisSession ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISynthesisSession): software.amazon.awscdk.ISynthesisSession =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.ISynthesisSession

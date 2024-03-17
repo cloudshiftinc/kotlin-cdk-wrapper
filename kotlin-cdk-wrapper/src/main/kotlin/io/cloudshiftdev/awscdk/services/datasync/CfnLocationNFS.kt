@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -547,7 +548,8 @@ public open class CfnLocationNFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty):
-          OnPremConfigProperty = Wrapper(cdkObject)
+          OnPremConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? OnPremConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnPremConfigProperty):
           software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty = (wrapped as
@@ -686,7 +688,8 @@ public open class CfnLocationNFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty):
-          MountOptionsProperty = Wrapper(cdkObject)
+          MountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MountOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MountOptionsProperty):
           software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty = (wrapped as

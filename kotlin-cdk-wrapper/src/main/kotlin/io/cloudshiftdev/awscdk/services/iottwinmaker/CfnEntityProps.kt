@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iottwinmaker
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -399,7 +400,7 @@ public interface CfnEntityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntityProps):
-        CfnEntityProps = Wrapper(cdkObject)
+        CfnEntityProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEntityProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEntityProps):
         software.amazon.awscdk.services.iottwinmaker.CfnEntityProps = (wrapped as

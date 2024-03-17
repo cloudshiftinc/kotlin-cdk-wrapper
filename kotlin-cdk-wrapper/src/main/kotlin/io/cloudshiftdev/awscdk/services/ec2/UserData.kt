@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -130,7 +131,7 @@ public abstract class UserData internal constructor(
         forWindows(WindowsUserDataOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.UserData): UserData =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? UserData ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserData): software.amazon.awscdk.services.ec2.UserData = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.UserData

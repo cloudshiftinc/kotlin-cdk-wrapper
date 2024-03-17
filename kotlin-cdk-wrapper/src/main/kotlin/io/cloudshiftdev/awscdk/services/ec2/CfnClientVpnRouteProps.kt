@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -195,7 +196,8 @@ public interface CfnClientVpnRouteProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnRouteProps):
-        CfnClientVpnRouteProps = Wrapper(cdkObject)
+        CfnClientVpnRouteProps = CdkObjectWrappers.wrap(cdkObject) as? CfnClientVpnRouteProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClientVpnRouteProps):
         software.amazon.awscdk.services.ec2.CfnClientVpnRouteProps = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.assets.Asset
 import kotlin.String
@@ -157,7 +158,7 @@ public abstract class InitSource internal constructor(
     ): InitSource = fromUrl(targetDirectory, url, InitSourceOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitSource): InitSource =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? InitSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InitSource): software.amazon.awscdk.services.ec2.InitSource =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.InitSource

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -412,7 +413,8 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty):
-          PeeringAttachmentStatusProperty = Wrapper(cdkObject)
+          PeeringAttachmentStatusProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PeeringAttachmentStatusProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PeeringAttachmentStatusProperty):
           software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty

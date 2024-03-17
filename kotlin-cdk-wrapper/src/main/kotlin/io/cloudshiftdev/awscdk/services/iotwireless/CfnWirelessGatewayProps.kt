@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -308,7 +309,8 @@ public interface CfnWirelessGatewayProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps):
-        CfnWirelessGatewayProps = Wrapper(cdkObject)
+        CfnWirelessGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWirelessGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWirelessGatewayProps):
         software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps = (wrapped as

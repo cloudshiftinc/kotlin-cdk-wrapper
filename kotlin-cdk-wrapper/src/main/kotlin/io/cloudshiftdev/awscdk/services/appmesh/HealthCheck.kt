@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -116,7 +117,7 @@ public abstract class HealthCheck internal constructor(
         tcp(TcpHealthCheckOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck): HealthCheck =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? HealthCheck ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HealthCheck): software.amazon.awscdk.services.appmesh.HealthCheck =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.HealthCheck

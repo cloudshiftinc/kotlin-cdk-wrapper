@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
@@ -83,7 +84,7 @@ public interface ITokenResolver {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ITokenResolver): ITokenResolver =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ITokenResolver ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITokenResolver): software.amazon.awscdk.ITokenResolver = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.ITokenResolver

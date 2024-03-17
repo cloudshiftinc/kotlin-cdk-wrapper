@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -129,7 +130,7 @@ public interface TriggerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.TriggerProps):
-        TriggerProps = Wrapper(cdkObject)
+        TriggerProps = CdkObjectWrappers.wrap(cdkObject) as? TriggerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TriggerProps):
         software.amazon.awscdk.services.codepipeline.TriggerProps = (wrapped as CdkObject).cdkObject

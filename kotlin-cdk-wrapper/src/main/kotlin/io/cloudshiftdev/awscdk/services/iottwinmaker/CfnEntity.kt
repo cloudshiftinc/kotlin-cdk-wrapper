@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -633,7 +634,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipValueProperty):
-          RelationshipValueProperty = Wrapper(cdkObject)
+          RelationshipValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RelationshipValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RelationshipValueProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipValueProperty =
@@ -739,7 +741,7 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.ErrorProperty):
-          ErrorProperty = Wrapper(cdkObject)
+          ErrorProperty = CdkObjectWrappers.wrap(cdkObject) as? ErrorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ErrorProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.ErrorProperty = (wrapped as
@@ -887,7 +889,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyProperty):
-          PropertyProperty = Wrapper(cdkObject)
+          PropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PropertyProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyProperty = (wrapped as
@@ -1169,7 +1172,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataTypeProperty):
-          DataTypeProperty = Wrapper(cdkObject)
+          DataTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? DataTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataTypeProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataTypeProperty = (wrapped as
@@ -1282,7 +1286,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.StatusProperty):
-          StatusProperty = Wrapper(cdkObject)
+          StatusProperty = CdkObjectWrappers.wrap(cdkObject) as? StatusProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StatusProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.StatusProperty = (wrapped as
@@ -1625,7 +1630,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.ComponentProperty):
-          ComponentProperty = Wrapper(cdkObject)
+          ComponentProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.ComponentProperty = (wrapped as
@@ -1733,7 +1739,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipProperty):
-          RelationshipProperty = Wrapper(cdkObject)
+          RelationshipProperty = CdkObjectWrappers.wrap(cdkObject) as? RelationshipProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RelationshipProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.RelationshipProperty = (wrapped as
@@ -2241,7 +2248,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DefinitionProperty):
-          DefinitionProperty = Wrapper(cdkObject)
+          DefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? DefinitionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefinitionProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.DefinitionProperty = (wrapped as
@@ -2586,7 +2594,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataValueProperty):
-          DataValueProperty = Wrapper(cdkObject)
+          DataValueProperty = CdkObjectWrappers.wrap(cdkObject) as? DataValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataValueProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.DataValueProperty = (wrapped as
@@ -2917,7 +2926,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.CompositeComponentProperty):
-          CompositeComponentProperty = Wrapper(cdkObject)
+          CompositeComponentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CompositeComponentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CompositeComponentProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.CompositeComponentProperty =
@@ -3036,7 +3046,8 @@ public open class CfnEntity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyGroupProperty):
-          PropertyGroupProperty = Wrapper(cdkObject)
+          PropertyGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertyGroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PropertyGroupProperty):
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyGroupProperty = (wrapped as

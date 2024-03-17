@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -62,7 +63,7 @@ public interface IPeer : IConnectable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IPeer): IPeer =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IPeer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPeer): software.amazon.awscdk.services.ec2.IPeer = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ec2.IPeer

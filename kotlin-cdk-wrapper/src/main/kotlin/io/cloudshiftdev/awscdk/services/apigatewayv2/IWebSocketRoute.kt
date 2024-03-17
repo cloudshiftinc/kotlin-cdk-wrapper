@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -81,7 +82,8 @@ public interface IWebSocketRoute : IRoute {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketRoute):
-        IWebSocketRoute = Wrapper(cdkObject)
+        IWebSocketRoute = CdkObjectWrappers.wrap(cdkObject) as? IWebSocketRoute ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IWebSocketRoute):
         software.amazon.awscdk.services.apigatewayv2.IWebSocketRoute = (wrapped as

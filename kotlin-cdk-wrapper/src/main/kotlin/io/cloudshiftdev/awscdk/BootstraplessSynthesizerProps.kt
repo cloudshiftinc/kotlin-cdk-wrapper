@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -102,7 +103,8 @@ public interface BootstraplessSynthesizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.BootstraplessSynthesizerProps):
-        BootstraplessSynthesizerProps = Wrapper(cdkObject)
+        BootstraplessSynthesizerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        BootstraplessSynthesizerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BootstraplessSynthesizerProps):
         software.amazon.awscdk.BootstraplessSynthesizerProps = (wrapped as CdkObject).cdkObject as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.applicationautoscaling
 import io.cloudshiftdev.awscdk.TimeZone
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import java.time.Instant
 import kotlin.Number
 import kotlin.Unit
@@ -261,7 +262,8 @@ public interface ScalingSchedule {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.ScalingSchedule):
-        ScalingSchedule = Wrapper(cdkObject)
+        ScalingSchedule = CdkObjectWrappers.wrap(cdkObject) as? ScalingSchedule ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScalingSchedule):
         software.amazon.awscdk.services.applicationautoscaling.ScalingSchedule = (wrapped as

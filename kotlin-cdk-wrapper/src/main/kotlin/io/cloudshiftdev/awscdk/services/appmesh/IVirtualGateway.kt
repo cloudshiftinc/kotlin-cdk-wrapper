@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Node
@@ -145,7 +146,8 @@ public interface IVirtualGateway : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.IVirtualGateway):
-        IVirtualGateway = Wrapper(cdkObject)
+        IVirtualGateway = CdkObjectWrappers.wrap(cdkObject) as? IVirtualGateway ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IVirtualGateway):
         software.amazon.awscdk.services.appmesh.IVirtualGateway = (wrapped as CdkObject).cdkObject

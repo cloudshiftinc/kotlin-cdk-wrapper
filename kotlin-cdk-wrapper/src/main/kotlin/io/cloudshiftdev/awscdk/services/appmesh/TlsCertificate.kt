@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
@@ -80,7 +81,7 @@ public abstract class TlsCertificate internal constructor(
         software.amazon.awscdk.services.appmesh.TlsCertificate.sds(secretName).let(MutualTlsCertificate::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificate):
-        TlsCertificate = Wrapper(cdkObject)
+        TlsCertificate = CdkObjectWrappers.wrap(cdkObject) as? TlsCertificate ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TlsCertificate):
         software.amazon.awscdk.services.appmesh.TlsCertificate = (wrapped as CdkObject).cdkObject as

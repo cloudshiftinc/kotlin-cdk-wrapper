@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2219,7 +2220,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty):
-          WindowsConfigurationProperty = Wrapper(cdkObject)
+          WindowsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WindowsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WindowsConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty = (wrapped
@@ -3212,7 +3214,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty):
-          LustreConfigurationProperty = Wrapper(cdkObject)
+          LustreConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LustreConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LustreConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty = (wrapped
@@ -3439,7 +3442,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty):
-          AuditLogConfigurationProperty = Wrapper(cdkObject)
+          AuditLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuditLogConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuditLogConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty = (wrapped
@@ -3635,7 +3639,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty):
-          ClientConfigurationsProperty = Wrapper(cdkObject)
+          ClientConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientConfigurationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClientConfigurationsProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty = (wrapped
@@ -4438,7 +4443,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty):
-          OntapConfigurationProperty = Wrapper(cdkObject)
+          OntapConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OntapConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OntapConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty = (wrapped as
@@ -4551,7 +4557,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty):
-          NfsExportsProperty = Wrapper(cdkObject)
+          NfsExportsProperty = CdkObjectWrappers.wrap(cdkObject) as? NfsExportsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NfsExportsProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty = (wrapped as
@@ -5459,7 +5466,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty):
-          OpenZFSConfigurationProperty = Wrapper(cdkObject)
+          OpenZFSConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenZFSConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OpenZFSConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty = (wrapped
@@ -5865,7 +5873,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.RootVolumeConfigurationProperty):
-          RootVolumeConfigurationProperty = Wrapper(cdkObject)
+          RootVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RootVolumeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RootVolumeConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.RootVolumeConfigurationProperty =
@@ -6010,7 +6019,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty):
-          DiskIopsConfigurationProperty = Wrapper(cdkObject)
+          DiskIopsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DiskIopsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DiskIopsConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty = (wrapped
@@ -6150,7 +6160,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty):
-          UserAndGroupQuotasProperty = Wrapper(cdkObject)
+          UserAndGroupQuotasProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserAndGroupQuotasProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserAndGroupQuotasProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty = (wrapped as
@@ -6484,7 +6495,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty):
-          SelfManagedActiveDirectoryConfigurationProperty = Wrapper(cdkObject)
+          SelfManagedActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedActiveDirectoryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelfManagedActiveDirectoryConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty

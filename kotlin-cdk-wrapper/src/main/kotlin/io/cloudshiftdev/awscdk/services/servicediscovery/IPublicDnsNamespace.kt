@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -76,7 +77,8 @@ public interface IPublicDnsNamespace : INamespace {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.IPublicDnsNamespace):
-        IPublicDnsNamespace = Wrapper(cdkObject)
+        IPublicDnsNamespace = CdkObjectWrappers.wrap(cdkObject) as? IPublicDnsNamespace ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPublicDnsNamespace):
         software.amazon.awscdk.services.servicediscovery.IPublicDnsNamespace = (wrapped as

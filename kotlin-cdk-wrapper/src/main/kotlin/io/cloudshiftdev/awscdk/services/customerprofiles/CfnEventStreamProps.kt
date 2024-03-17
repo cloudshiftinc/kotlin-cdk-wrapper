@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.customerprofiles
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -180,7 +181,8 @@ public interface CfnEventStreamProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStreamProps):
-        CfnEventStreamProps = Wrapper(cdkObject)
+        CfnEventStreamProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventStreamProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventStreamProps):
         software.amazon.awscdk.services.customerprofiles.CfnEventStreamProps = (wrapped as

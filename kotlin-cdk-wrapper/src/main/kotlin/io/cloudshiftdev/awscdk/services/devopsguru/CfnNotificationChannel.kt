@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -376,7 +377,8 @@ public open class CfnNotificationChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty):
-          NotificationFilterConfigProperty = Wrapper(cdkObject)
+          NotificationFilterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationFilterConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationFilterConfigProperty):
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty
@@ -670,7 +672,8 @@ public open class CfnNotificationChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty):
-          NotificationChannelConfigProperty = Wrapper(cdkObject)
+          NotificationChannelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationChannelConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationChannelConfigProperty):
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty
@@ -765,7 +768,8 @@ public open class CfnNotificationChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty):
-          SnsChannelConfigProperty = Wrapper(cdkObject)
+          SnsChannelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsChannelConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnsChannelConfigProperty):
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -256,7 +257,8 @@ public interface FireLensLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FireLensLogDriverProps):
-        FireLensLogDriverProps = Wrapper(cdkObject)
+        FireLensLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? FireLensLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FireLensLogDriverProps):
         software.amazon.awscdk.services.ecs.FireLensLogDriverProps = (wrapped as

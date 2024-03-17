@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -78,7 +79,7 @@ public interface TagManagerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.TagManagerOptions): TagManagerOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? TagManagerOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TagManagerOptions): software.amazon.awscdk.TagManagerOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.TagManagerOptions

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 import kotlin.Unit
@@ -140,7 +141,8 @@ public interface IReceiptRuleSet : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleSet):
-        IReceiptRuleSet = Wrapper(cdkObject)
+        IReceiptRuleSet = CdkObjectWrappers.wrap(cdkObject) as? IReceiptRuleSet ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IReceiptRuleSet):
         software.amazon.awscdk.services.ses.IReceiptRuleSet = (wrapped as CdkObject).cdkObject as

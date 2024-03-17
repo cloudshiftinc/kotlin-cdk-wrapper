@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.EnableScalingProps
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
@@ -559,7 +560,7 @@ public abstract class BaseService internal constructor(
         id, serviceArn).let(IBaseService::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.BaseService): BaseService =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? BaseService ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseService): software.amazon.awscdk.services.ecs.BaseService =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.BaseService

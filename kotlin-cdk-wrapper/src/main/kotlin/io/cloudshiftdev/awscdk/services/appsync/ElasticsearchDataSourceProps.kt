@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.elasticsearch.IDomain
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Deprecated
@@ -168,7 +169,8 @@ public interface ElasticsearchDataSourceProps : BackedDataSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appsync.ElasticsearchDataSourceProps):
-        ElasticsearchDataSourceProps = Wrapper(cdkObject)
+        ElasticsearchDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ElasticsearchDataSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ElasticsearchDataSourceProps):
         software.amazon.awscdk.services.appsync.ElasticsearchDataSourceProps = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.DockerBuildOptions
 import io.cloudshiftdev.awscdk.DockerCacheOption
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -302,7 +303,8 @@ public interface DockerBuildAssetOptions : DockerBuildOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.DockerBuildAssetOptions):
-        DockerBuildAssetOptions = Wrapper(cdkObject)
+        DockerBuildAssetOptions = CdkObjectWrappers.wrap(cdkObject) as? DockerBuildAssetOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerBuildAssetOptions):
         software.amazon.awscdk.services.lambda.DockerBuildAssetOptions = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
 import kotlin.String
@@ -278,7 +279,8 @@ public interface S3ArtifactsProps : ArtifactsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.S3ArtifactsProps):
-        S3ArtifactsProps = Wrapper(cdkObject)
+        S3ArtifactsProps = CdkObjectWrappers.wrap(cdkObject) as? S3ArtifactsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3ArtifactsProps):
         software.amazon.awscdk.services.codebuild.S3ArtifactsProps = (wrapped as

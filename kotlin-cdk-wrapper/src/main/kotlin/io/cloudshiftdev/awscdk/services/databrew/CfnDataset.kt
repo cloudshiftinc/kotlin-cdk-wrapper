@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -770,7 +771,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DataCatalogInputDefinitionProperty):
-          DataCatalogInputDefinitionProperty = Wrapper(cdkObject)
+          DataCatalogInputDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCatalogInputDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataCatalogInputDefinitionProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.DataCatalogInputDefinitionProperty =
@@ -980,7 +982,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatabaseInputDefinitionProperty):
-          DatabaseInputDefinitionProperty = Wrapper(cdkObject)
+          DatabaseInputDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabaseInputDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatabaseInputDefinitionProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.DatabaseInputDefinitionProperty =
@@ -1288,7 +1291,7 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty):
-          InputProperty = Wrapper(cdkObject)
+          InputProperty = CdkObjectWrappers.wrap(cdkObject) as? InputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.InputProperty = (wrapped as
@@ -1454,7 +1457,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatetimeOptionsProperty):
-          DatetimeOptionsProperty = Wrapper(cdkObject)
+          DatetimeOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DatetimeOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatetimeOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.DatetimeOptionsProperty = (wrapped as
@@ -1656,7 +1660,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty):
-          ExcelOptionsProperty = Wrapper(cdkObject)
+          ExcelOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? ExcelOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExcelOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty = (wrapped as
@@ -1753,7 +1758,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty):
-          JsonOptionsProperty = Wrapper(cdkObject)
+          JsonOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty = (wrapped as
@@ -1862,7 +1868,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty):
-          S3LocationProperty = Wrapper(cdkObject)
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty = (wrapped as
@@ -2087,7 +2094,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty):
-          FormatOptionsProperty = Wrapper(cdkObject)
+          FormatOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? FormatOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormatOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty = (wrapped as
@@ -2172,7 +2180,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty):
-          MetadataProperty = Wrapper(cdkObject)
+          MetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetadataProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty = (wrapped as
@@ -2466,7 +2475,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty):
-          DatasetParameterProperty = Wrapper(cdkObject)
+          DatasetParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetParameterProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetParameterProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty = (wrapped as
@@ -2733,7 +2743,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty):
-          PathOptionsProperty = Wrapper(cdkObject)
+          PathOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? PathOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PathOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty = (wrapped as
@@ -2889,7 +2900,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty):
-          FilesLimitProperty = Wrapper(cdkObject)
+          FilesLimitProperty = CdkObjectWrappers.wrap(cdkObject) as? FilesLimitProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilesLimitProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty = (wrapped as
@@ -3043,7 +3055,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.PathParameterProperty):
-          PathParameterProperty = Wrapper(cdkObject)
+          PathParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? PathParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PathParameterProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.PathParameterProperty = (wrapped as
@@ -3196,7 +3209,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty):
-          FilterExpressionProperty = Wrapper(cdkObject)
+          FilterExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterExpressionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterExpressionProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty = (wrapped as
@@ -3330,7 +3344,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty):
-          CsvOptionsProperty = Wrapper(cdkObject)
+          CsvOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CsvOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty = (wrapped as
@@ -3439,7 +3454,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty):
-          FilterValueProperty = Wrapper(cdkObject)
+          FilterValueProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterValueProperty):
           software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty = (wrapped as

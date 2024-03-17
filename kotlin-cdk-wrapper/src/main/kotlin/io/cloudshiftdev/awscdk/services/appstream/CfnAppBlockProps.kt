@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -399,7 +400,8 @@ public interface CfnAppBlockProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockProps):
-        CfnAppBlockProps = Wrapper(cdkObject)
+        CfnAppBlockProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAppBlockProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAppBlockProps):
         software.amazon.awscdk.services.appstream.CfnAppBlockProps = (wrapped as

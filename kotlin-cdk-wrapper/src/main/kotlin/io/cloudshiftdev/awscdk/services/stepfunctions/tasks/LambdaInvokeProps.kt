@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -651,7 +652,8 @@ public interface LambdaInvokeProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvokeProps):
-        LambdaInvokeProps = Wrapper(cdkObject)
+        LambdaInvokeProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaInvokeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaInvokeProps):
         software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvokeProps = (wrapped as

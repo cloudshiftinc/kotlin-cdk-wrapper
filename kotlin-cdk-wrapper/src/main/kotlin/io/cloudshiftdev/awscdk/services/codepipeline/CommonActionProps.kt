@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -147,7 +148,8 @@ public interface CommonActionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CommonActionProps):
-        CommonActionProps = Wrapper(cdkObject)
+        CommonActionProps = CdkObjectWrappers.wrap(cdkObject) as? CommonActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonActionProps):
         software.amazon.awscdk.services.codepipeline.CommonActionProps = (wrapped as

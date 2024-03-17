@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -851,7 +852,8 @@ public open class CfnSecret internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty):
-          ReplicaRegionProperty = Wrapper(cdkObject)
+          ReplicaRegionProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicaRegionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicaRegionProperty):
           software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty = (wrapped
@@ -1351,7 +1353,8 @@ public open class CfnSecret internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty):
-          GenerateSecretStringProperty = Wrapper(cdkObject)
+          GenerateSecretStringProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GenerateSecretStringProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GenerateSecretStringProperty):
           software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty =

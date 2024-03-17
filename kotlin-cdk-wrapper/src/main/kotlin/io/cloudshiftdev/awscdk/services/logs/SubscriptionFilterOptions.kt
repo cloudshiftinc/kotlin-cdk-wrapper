@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -130,7 +131,8 @@ public interface SubscriptionFilterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.SubscriptionFilterOptions):
-        SubscriptionFilterOptions = Wrapper(cdkObject)
+        SubscriptionFilterOptions = CdkObjectWrappers.wrap(cdkObject) as? SubscriptionFilterOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubscriptionFilterOptions):
         software.amazon.awscdk.services.logs.SubscriptionFilterOptions = (wrapped as

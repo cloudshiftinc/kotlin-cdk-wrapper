@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -29,7 +30,8 @@ public abstract class BaseDeploymentConfig internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfig):
-        BaseDeploymentConfig = Wrapper(cdkObject)
+        BaseDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as? BaseDeploymentConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseDeploymentConfig):
         software.amazon.awscdk.services.codedeploy.BaseDeploymentConfig = (wrapped as

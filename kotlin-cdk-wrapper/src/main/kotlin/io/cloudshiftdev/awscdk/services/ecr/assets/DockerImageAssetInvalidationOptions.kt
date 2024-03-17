@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecr.assets
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -315,7 +316,8 @@ public interface DockerImageAssetInvalidationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions):
-        DockerImageAssetInvalidationOptions = Wrapper(cdkObject)
+        DockerImageAssetInvalidationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        DockerImageAssetInvalidationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageAssetInvalidationOptions):
         software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions = (wrapped as

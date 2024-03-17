@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.greengrass
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -309,7 +310,8 @@ public interface CfnSubscriptionDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionProps):
-        CfnSubscriptionDefinitionProps = Wrapper(cdkObject)
+        CfnSubscriptionDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSubscriptionDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubscriptionDefinitionProps):
         software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionProps = (wrapped as

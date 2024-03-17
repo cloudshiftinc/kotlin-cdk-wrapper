@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.config
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Any
 import kotlin.Boolean
@@ -231,7 +232,8 @@ public interface CloudFormationStackDriftDetectionCheckProps : RuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheckProps):
-        CloudFormationStackDriftDetectionCheckProps = Wrapper(cdkObject)
+        CloudFormationStackDriftDetectionCheckProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationStackDriftDetectionCheckProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationStackDriftDetectionCheckProps):
         software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheckProps =

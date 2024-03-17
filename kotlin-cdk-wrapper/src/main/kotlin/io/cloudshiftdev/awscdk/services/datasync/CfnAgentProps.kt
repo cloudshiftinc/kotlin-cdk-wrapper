@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.datasync
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -392,7 +393,7 @@ public interface CfnAgentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnAgentProps):
-        CfnAgentProps = Wrapper(cdkObject)
+        CfnAgentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAgentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAgentProps):
         software.amazon.awscdk.services.datasync.CfnAgentProps = (wrapped as CdkObject).cdkObject as

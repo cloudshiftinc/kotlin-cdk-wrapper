@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -57,7 +58,7 @@ public interface IRuleTarget {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.IRuleTarget): IRuleTarget =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IRuleTarget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRuleTarget): software.amazon.awscdk.services.events.IRuleTarget =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.events.IRuleTarget

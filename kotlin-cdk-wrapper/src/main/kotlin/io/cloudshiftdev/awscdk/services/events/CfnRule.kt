@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1333,7 +1334,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty):
-          PlacementStrategyProperty = Wrapper(cdkObject)
+          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementStrategyProperty):
           software.amazon.awscdk.services.events.CfnRule.PlacementStrategyProperty = (wrapped as
@@ -1450,7 +1452,7 @@ public open class CfnRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.TagProperty):
-          TagProperty = Wrapper(cdkObject)
+          TagProperty = CdkObjectWrappers.wrap(cdkObject) as? TagProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagProperty):
           software.amazon.awscdk.services.events.CfnRule.TagProperty = (wrapped as
@@ -1771,7 +1773,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty):
-          RedshiftDataParametersProperty = Wrapper(cdkObject)
+          RedshiftDataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftDataParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedshiftDataParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.RedshiftDataParametersProperty = (wrapped
@@ -1891,7 +1894,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty):
-          RetryPolicyProperty = Wrapper(cdkObject)
+          RetryPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RetryPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetryPolicyProperty):
           software.amazon.awscdk.services.events.CfnRule.RetryPolicyProperty = (wrapped as
@@ -1969,7 +1973,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty):
-          SqsParametersProperty = Wrapper(cdkObject)
+          SqsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? SqsParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SqsParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.SqsParametersProperty = (wrapped as
@@ -2321,7 +2326,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty):
-          InputTransformerProperty = Wrapper(cdkObject)
+          InputTransformerProperty = CdkObjectWrappers.wrap(cdkObject) as? InputTransformerProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputTransformerProperty):
           software.amazon.awscdk.services.events.CfnRule.InputTransformerProperty = (wrapped as
@@ -2463,7 +2469,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty):
-          PlacementConstraintProperty = Wrapper(cdkObject)
+          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementConstraintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementConstraintProperty):
           software.amazon.awscdk.services.events.CfnRule.PlacementConstraintProperty = (wrapped as
@@ -2592,7 +2599,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty):
-          RunCommandTargetProperty = Wrapper(cdkObject)
+          RunCommandTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? RunCommandTargetProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RunCommandTargetProperty):
           software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty = (wrapped as
@@ -2692,7 +2700,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty):
-          KinesisParametersProperty = Wrapper(cdkObject)
+          KinesisParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.KinesisParametersProperty = (wrapped as
@@ -2886,7 +2895,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.AwsVpcConfigurationProperty):
-          AwsVpcConfigurationProperty = Wrapper(cdkObject)
+          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
           software.amazon.awscdk.services.events.CfnRule.AwsVpcConfigurationProperty = (wrapped as
@@ -3746,7 +3756,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.EcsParametersProperty):
-          EcsParametersProperty = Wrapper(cdkObject)
+          EcsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? EcsParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.EcsParametersProperty = (wrapped as
@@ -4033,7 +4044,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty):
-          BatchParametersProperty = Wrapper(cdkObject)
+          BatchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? BatchParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.BatchParametersProperty = (wrapped as
@@ -4122,7 +4134,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty):
-          BatchRetryStrategyProperty = Wrapper(cdkObject)
+          BatchRetryStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchRetryStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchRetryStrategyProperty):
           software.amazon.awscdk.services.events.CfnRule.BatchRetryStrategyProperty = (wrapped as
@@ -4202,7 +4215,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty):
-          DeadLetterConfigProperty = Wrapper(cdkObject)
+          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeadLetterConfigProperty):
           software.amazon.awscdk.services.events.CfnRule.DeadLetterConfigProperty = (wrapped as
@@ -4319,7 +4333,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParametersProperty):
-          SageMakerPipelineParametersProperty = Wrapper(cdkObject)
+          SageMakerPipelineParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerPipelineParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SageMakerPipelineParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParametersProperty =
@@ -4418,7 +4433,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty):
-          AppSyncParametersProperty = Wrapper(cdkObject)
+          AppSyncParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AppSyncParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AppSyncParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.AppSyncParametersProperty = (wrapped as
@@ -5683,7 +5699,8 @@ public open class CfnRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.TargetProperty):
-          TargetProperty = Wrapper(cdkObject)
+          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.events.CfnRule.TargetProperty = (wrapped as
@@ -5773,7 +5790,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty):
-          BatchArrayPropertiesProperty = Wrapper(cdkObject)
+          BatchArrayPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchArrayPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchArrayPropertiesProperty):
           software.amazon.awscdk.services.events.CfnRule.BatchArrayPropertiesProperty = (wrapped as
@@ -5890,7 +5908,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty):
-          RunCommandParametersProperty = Wrapper(cdkObject)
+          RunCommandParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RunCommandParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RunCommandParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty = (wrapped as
@@ -6084,7 +6103,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty):
-          HttpParametersProperty = Wrapper(cdkObject)
+          HttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpParametersProperty):
           software.amazon.awscdk.services.events.CfnRule.HttpParametersProperty = (wrapped as
@@ -6195,7 +6215,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty):
-          SageMakerPipelineParameterProperty = Wrapper(cdkObject)
+          SageMakerPipelineParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerPipelineParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SageMakerPipelineParameterProperty):
           software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParameterProperty =
@@ -6365,7 +6386,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = Wrapper(cdkObject)
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
           software.amazon.awscdk.services.events.CfnRule.CapacityProviderStrategyItemProperty =
@@ -6499,7 +6521,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = Wrapper(cdkObject)
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.events.CfnRule.NetworkConfigurationProperty = (wrapped as

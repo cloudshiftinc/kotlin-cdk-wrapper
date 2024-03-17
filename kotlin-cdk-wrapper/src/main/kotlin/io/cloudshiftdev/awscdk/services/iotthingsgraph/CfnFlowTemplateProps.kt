@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iotthingsgraph
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.Unit
@@ -132,7 +133,8 @@ public interface CfnFlowTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplateProps):
-        CfnFlowTemplateProps = Wrapper(cdkObject)
+        CfnFlowTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFlowTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowTemplateProps):
         software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplateProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1129,7 +1130,8 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty):
-          ApplicationSettingsProperty = Wrapper(cdkObject)
+          ApplicationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationSettingsProperty):
           software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty = (wrapped
@@ -1240,7 +1242,8 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty):
-          AccessEndpointProperty = Wrapper(cdkObject)
+          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessEndpointProperty):
           software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty = (wrapped as
@@ -1386,7 +1389,8 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty):
-          StorageConnectorProperty = Wrapper(cdkObject)
+          StorageConnectorProperty = CdkObjectWrappers.wrap(cdkObject) as? StorageConnectorProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageConnectorProperty):
           software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty = (wrapped as
@@ -1556,7 +1560,8 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty):
-          UserSettingProperty = Wrapper(cdkObject)
+          UserSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? UserSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserSettingProperty):
           software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty = (wrapped as
@@ -1644,7 +1649,8 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty):
-          StreamingExperienceSettingsProperty = Wrapper(cdkObject)
+          StreamingExperienceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamingExperienceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamingExperienceSettingsProperty):
           software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty =

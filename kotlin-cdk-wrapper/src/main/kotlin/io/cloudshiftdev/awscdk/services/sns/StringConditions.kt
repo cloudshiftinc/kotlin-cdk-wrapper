@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -211,7 +212,8 @@ public interface StringConditions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.StringConditions):
-        StringConditions = Wrapper(cdkObject)
+        StringConditions = CdkObjectWrappers.wrap(cdkObject) as? StringConditions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StringConditions):
         software.amazon.awscdk.services.sns.StringConditions = (wrapped as CdkObject).cdkObject as

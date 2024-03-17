@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import io.cloudshiftdev.awscdk.services.ecs.CpuArchitecture
 import io.cloudshiftdev.awscdk.services.ecs.FargatePlatformVersion
@@ -539,7 +540,8 @@ public interface EcsFargateContainerDefinitionProps : EcsContainerDefinitionProp
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.EcsFargateContainerDefinitionProps):
-        EcsFargateContainerDefinitionProps = Wrapper(cdkObject)
+        EcsFargateContainerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EcsFargateContainerDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsFargateContainerDefinitionProps):
         software.amazon.awscdk.services.batch.EcsFargateContainerDefinitionProps = (wrapped as

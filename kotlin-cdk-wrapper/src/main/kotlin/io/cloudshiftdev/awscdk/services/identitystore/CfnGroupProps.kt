@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.identitystore
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -136,7 +137,7 @@ public interface CfnGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupProps):
-        CfnGroupProps = Wrapper(cdkObject)
+        CfnGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroupProps):
         software.amazon.awscdk.services.identitystore.CfnGroupProps = (wrapped as

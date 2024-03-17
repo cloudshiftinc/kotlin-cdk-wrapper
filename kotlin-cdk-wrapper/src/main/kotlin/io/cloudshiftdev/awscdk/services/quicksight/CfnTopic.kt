@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -792,7 +793,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.SemanticTypeProperty):
-          SemanticTypeProperty = Wrapper(cdkObject)
+          SemanticTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? SemanticTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SemanticTypeProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.SemanticTypeProperty = (wrapped as
@@ -972,7 +974,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicRelativeDateFilterProperty):
-          TopicRelativeDateFilterProperty = Wrapper(cdkObject)
+          TopicRelativeDateFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicRelativeDateFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicRelativeDateFilterProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicRelativeDateFilterProperty =
@@ -1090,7 +1093,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.CellValueSynonymProperty):
-          CellValueSynonymProperty = Wrapper(cdkObject)
+          CellValueSynonymProperty = CdkObjectWrappers.wrap(cdkObject) as? CellValueSynonymProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CellValueSynonymProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.CellValueSynonymProperty = (wrapped as
@@ -1231,7 +1235,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionMetricProperty):
-          NamedEntityDefinitionMetricProperty = Wrapper(cdkObject)
+          NamedEntityDefinitionMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NamedEntityDefinitionMetricProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NamedEntityDefinitionMetricProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionMetricProperty =
@@ -1799,7 +1804,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicFilterProperty):
-          TopicFilterProperty = Wrapper(cdkObject)
+          TopicFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TopicFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicFilterProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicFilterProperty = (wrapped as
@@ -1917,7 +1923,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicSingularFilterConstantProperty):
-          TopicSingularFilterConstantProperty = Wrapper(cdkObject)
+          TopicSingularFilterConstantProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicSingularFilterConstantProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicSingularFilterConstantProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicSingularFilterConstantProperty =
@@ -2028,7 +2035,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DataAggregationProperty):
-          DataAggregationProperty = Wrapper(cdkObject)
+          DataAggregationProperty = CdkObjectWrappers.wrap(cdkObject) as? DataAggregationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataAggregationProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.DataAggregationProperty = (wrapped as
@@ -2192,7 +2200,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.ComparativeOrderProperty):
-          ComparativeOrderProperty = Wrapper(cdkObject)
+          ComparativeOrderProperty = CdkObjectWrappers.wrap(cdkObject) as? ComparativeOrderProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComparativeOrderProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.ComparativeOrderProperty = (wrapped as
@@ -2962,7 +2971,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicColumnProperty):
-          TopicColumnProperty = Wrapper(cdkObject)
+          TopicColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? TopicColumnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicColumnProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicColumnProperty = (wrapped as
@@ -3069,7 +3079,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NegativeFormatProperty):
-          NegativeFormatProperty = Wrapper(cdkObject)
+          NegativeFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? NegativeFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NegativeFormatProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.NegativeFormatProperty = (wrapped as
@@ -3264,7 +3275,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterConstantProperty):
-          TopicCategoryFilterConstantProperty = Wrapper(cdkObject)
+          TopicCategoryFilterConstantProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicCategoryFilterConstantProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicCategoryFilterConstantProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterConstantProperty =
@@ -3371,7 +3383,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.RangeConstantProperty):
-          RangeConstantProperty = Wrapper(cdkObject)
+          RangeConstantProperty = CdkObjectWrappers.wrap(cdkObject) as? RangeConstantProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RangeConstantProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.RangeConstantProperty = (wrapped as
@@ -3826,7 +3839,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DisplayFormatOptionsProperty):
-          DisplayFormatOptionsProperty = Wrapper(cdkObject)
+          DisplayFormatOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DisplayFormatOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DisplayFormatOptionsProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.DisplayFormatOptionsProperty =
@@ -4004,7 +4018,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicDateRangeFilterProperty):
-          TopicDateRangeFilterProperty = Wrapper(cdkObject)
+          TopicDateRangeFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicDateRangeFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicDateRangeFilterProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicDateRangeFilterProperty =
@@ -4156,7 +4171,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicRangeFilterConstantProperty):
-          TopicRangeFilterConstantProperty = Wrapper(cdkObject)
+          TopicRangeFilterConstantProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicRangeFilterConstantProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicRangeFilterConstantProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicRangeFilterConstantProperty =
@@ -4731,7 +4747,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DatasetMetadataProperty):
-          DatasetMetadataProperty = Wrapper(cdkObject)
+          DatasetMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetMetadataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetMetadataProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.DatasetMetadataProperty = (wrapped as
@@ -4888,7 +4905,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericEqualityFilterProperty):
-          TopicNumericEqualityFilterProperty = Wrapper(cdkObject)
+          TopicNumericEqualityFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicNumericEqualityFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicNumericEqualityFilterProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericEqualityFilterProperty =
@@ -5115,7 +5133,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterProperty):
-          TopicCategoryFilterProperty = Wrapper(cdkObject)
+          TopicCategoryFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicCategoryFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicCategoryFilterProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicCategoryFilterProperty = (wrapped
@@ -5901,7 +5920,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicCalculatedFieldProperty):
-          TopicCalculatedFieldProperty = Wrapper(cdkObject)
+          TopicCalculatedFieldProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicCalculatedFieldProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicCalculatedFieldProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicCalculatedFieldProperty =
@@ -6135,7 +6155,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionProperty):
-          NamedEntityDefinitionProperty = Wrapper(cdkObject)
+          NamedEntityDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NamedEntityDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NamedEntityDefinitionProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.NamedEntityDefinitionProperty =
@@ -6402,7 +6423,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNamedEntityProperty):
-          TopicNamedEntityProperty = Wrapper(cdkObject)
+          TopicNamedEntityProperty = CdkObjectWrappers.wrap(cdkObject) as? TopicNamedEntityProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicNamedEntityProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicNamedEntityProperty = (wrapped as
@@ -6565,7 +6587,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.DefaultFormattingProperty):
-          DefaultFormattingProperty = Wrapper(cdkObject)
+          DefaultFormattingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultFormattingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultFormattingProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.DefaultFormattingProperty = (wrapped
@@ -6789,7 +6812,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericRangeFilterProperty):
-          TopicNumericRangeFilterProperty = Wrapper(cdkObject)
+          TopicNumericRangeFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicNumericRangeFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicNumericRangeFilterProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.TopicNumericRangeFilterProperty =
@@ -6937,7 +6961,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.SemanticEntityTypeProperty):
-          SemanticEntityTypeProperty = Wrapper(cdkObject)
+          SemanticEntityTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SemanticEntityTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SemanticEntityTypeProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.SemanticEntityTypeProperty = (wrapped
@@ -7028,7 +7053,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic.CollectiveConstantProperty):
-          CollectiveConstantProperty = Wrapper(cdkObject)
+          CollectiveConstantProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CollectiveConstantProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CollectiveConstantProperty):
           software.amazon.awscdk.services.quicksight.CfnTopic.CollectiveConstantProperty = (wrapped

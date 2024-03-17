@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -536,7 +537,8 @@ public open class CfnLocationFSxOpenZFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty):
-          MountOptionsProperty = Wrapper(cdkObject)
+          MountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MountOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MountOptionsProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty =
@@ -656,7 +658,8 @@ public open class CfnLocationFSxOpenZFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty):
-          ProtocolProperty = Wrapper(cdkObject)
+          ProtocolProperty = CdkObjectWrappers.wrap(cdkObject) as? ProtocolProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProtocolProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty = (wrapped
@@ -772,7 +775,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty):
-          NFSProperty = Wrapper(cdkObject)
+          NFSProperty = CdkObjectWrappers.wrap(cdkObject) as? NFSProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NFSProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty = (wrapped as

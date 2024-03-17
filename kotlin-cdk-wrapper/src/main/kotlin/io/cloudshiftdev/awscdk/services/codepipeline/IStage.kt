@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.events.RuleProps
@@ -142,7 +143,7 @@ public interface IStage {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.IStage): IStage =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IStage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IStage): software.amazon.awscdk.services.codepipeline.IStage =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codepipeline.IStage

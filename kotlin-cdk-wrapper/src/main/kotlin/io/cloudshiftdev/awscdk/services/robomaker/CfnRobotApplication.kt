@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -525,7 +526,8 @@ public open class CfnRobotApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty):
-          SourceConfigProperty = Wrapper(cdkObject)
+          SourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConfigProperty):
           software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty =
@@ -647,7 +649,8 @@ public open class CfnRobotApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty):
-          RobotSoftwareSuiteProperty = Wrapper(cdkObject)
+          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RobotSoftwareSuiteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RobotSoftwareSuiteProperty):
           software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty =

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -207,7 +208,8 @@ public interface CfnNetworkInsightsAnalysisProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysisProps):
-        CfnNetworkInsightsAnalysisProps = Wrapper(cdkObject)
+        CfnNetworkInsightsAnalysisProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNetworkInsightsAnalysisProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInsightsAnalysisProps):
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysisProps = (wrapped as

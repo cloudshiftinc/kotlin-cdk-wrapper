@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53resolver
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -202,7 +203,8 @@ public interface CfnFirewallDomainListProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallDomainListProps):
-        CfnFirewallDomainListProps = Wrapper(cdkObject)
+        CfnFirewallDomainListProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnFirewallDomainListProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallDomainListProps):
         software.amazon.awscdk.services.route53resolver.CfnFirewallDomainListProps = (wrapped as

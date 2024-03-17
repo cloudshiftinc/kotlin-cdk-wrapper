@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
@@ -844,7 +845,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty):
-          FederationParametersProperty = Wrapper(cdkObject)
+          FederationParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FederationParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FederationParametersProperty):
           software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty =
@@ -979,7 +981,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty):
-          AttributeMapItemsProperty = Wrapper(cdkObject)
+          AttributeMapItemsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AttributeMapItemsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeMapItemsProperty):
           software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty =
@@ -1115,7 +1118,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty):
-          SuperuserParametersProperty = Wrapper(cdkObject)
+          SuperuserParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuperuserParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SuperuserParametersProperty):
           software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty =

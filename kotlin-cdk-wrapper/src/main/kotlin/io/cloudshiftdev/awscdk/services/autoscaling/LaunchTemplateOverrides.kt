@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ILaunchTemplate
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
 import kotlin.Number
@@ -395,7 +396,8 @@ public interface LaunchTemplateOverrides {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides):
-        LaunchTemplateOverrides = Wrapper(cdkObject)
+        LaunchTemplateOverrides = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateOverrides ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateOverrides):
         software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides = (wrapped as

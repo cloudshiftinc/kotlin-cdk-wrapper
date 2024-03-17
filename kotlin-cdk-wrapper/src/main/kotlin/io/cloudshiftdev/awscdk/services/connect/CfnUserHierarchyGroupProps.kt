@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.connect
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -174,7 +175,8 @@ public interface CfnUserHierarchyGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUserHierarchyGroupProps):
-        CfnUserHierarchyGroupProps = Wrapper(cdkObject)
+        CfnUserHierarchyGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserHierarchyGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserHierarchyGroupProps):
         software.amazon.awscdk.services.connect.CfnUserHierarchyGroupProps = (wrapped as

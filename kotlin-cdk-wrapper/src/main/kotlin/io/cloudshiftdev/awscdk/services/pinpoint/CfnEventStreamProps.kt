@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.pinpoint
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -161,7 +162,8 @@ public interface CfnEventStreamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnEventStreamProps):
-        CfnEventStreamProps = Wrapper(cdkObject)
+        CfnEventStreamProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventStreamProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventStreamProps):
         software.amazon.awscdk.services.pinpoint.CfnEventStreamProps = (wrapped as

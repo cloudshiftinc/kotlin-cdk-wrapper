@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -721,7 +722,8 @@ public interface CfnModelQualityJobDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinitionProps):
-        CfnModelQualityJobDefinitionProps = Wrapper(cdkObject)
+        CfnModelQualityJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnModelQualityJobDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelQualityJobDefinitionProps):
         software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinitionProps = (wrapped as

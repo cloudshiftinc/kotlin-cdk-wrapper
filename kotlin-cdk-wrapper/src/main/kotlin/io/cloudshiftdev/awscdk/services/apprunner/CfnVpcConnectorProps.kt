@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apprunner
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -267,7 +268,8 @@ public interface CfnVpcConnectorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps):
-        CfnVpcConnectorProps = Wrapper(cdkObject)
+        CfnVpcConnectorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVpcConnectorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcConnectorProps):
         software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps = (wrapped as

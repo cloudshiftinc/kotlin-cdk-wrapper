@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -404,7 +405,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty):
-          PlacementTemplateProperty = Wrapper(cdkObject)
+          PlacementTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementTemplateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementTemplateProperty):
           software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty = (wrapped
@@ -503,7 +505,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty):
-          DeviceTemplateProperty = Wrapper(cdkObject)
+          DeviceTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceTemplateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceTemplateProperty):
           software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty = (wrapped as

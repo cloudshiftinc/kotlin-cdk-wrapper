@@ -94,12 +94,8 @@ kotlin {
         languageVersion = JavaLanguageVersion.of(17)
         vendor = JvmVendorSpec.AMAZON
     }
-    when {
-        System.getenv("CI") != null -> {
-            kotlinDaemonJvmArgs =  listOf("-Xms20g", "-Xmx20g")
-        }
-        else -> {
-            kotlinDaemonJvmArgs =  listOf("-Xms10g", "-Xmx10g")
-        }
+    kotlinDaemonJvmArgs = when {
+        System.getenv("CI") != null -> listOf("-Xms20g", "-Xmx20g")
+        else -> listOf("-Xms10g", "-Xmx10g")
     }
 }

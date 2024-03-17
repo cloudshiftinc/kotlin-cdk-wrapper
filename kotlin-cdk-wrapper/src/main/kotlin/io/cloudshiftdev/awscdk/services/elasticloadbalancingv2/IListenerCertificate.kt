@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -27,7 +28,8 @@ public interface IListenerCertificate {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate):
-        IListenerCertificate = Wrapper(cdkObject)
+        IListenerCertificate = CdkObjectWrappers.wrap(cdkObject) as? IListenerCertificate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IListenerCertificate):
         software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate = (wrapped as

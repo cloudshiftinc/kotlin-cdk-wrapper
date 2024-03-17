@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRule
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRuleSource
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRuleTarget
@@ -1369,7 +1370,7 @@ public interface IRepository : IResource, INotificationRuleSource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.IRepository):
-        IRepository = Wrapper(cdkObject)
+        IRepository = CdkObjectWrappers.wrap(cdkObject) as? IRepository ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRepository):
         software.amazon.awscdk.services.codecommit.IRepository = (wrapped as CdkObject).cdkObject as

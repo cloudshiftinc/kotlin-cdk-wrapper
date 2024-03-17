@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.medialive
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -490,7 +491,7 @@ public interface CfnInputProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInputProps):
-        CfnInputProps = Wrapper(cdkObject)
+        CfnInputProps = CdkObjectWrappers.wrap(cdkObject) as? CfnInputProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInputProps):
         software.amazon.awscdk.services.medialive.CfnInputProps = (wrapped as CdkObject).cdkObject

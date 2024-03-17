@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.Number
@@ -94,7 +95,7 @@ public interface IWidget {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.IWidget): IWidget =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IWidget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IWidget): software.amazon.awscdk.services.cloudwatch.IWidget =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.IWidget

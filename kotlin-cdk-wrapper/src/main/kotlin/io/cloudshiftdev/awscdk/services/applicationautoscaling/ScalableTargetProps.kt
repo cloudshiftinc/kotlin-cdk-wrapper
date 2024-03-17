@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.applicationautoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Number
 import kotlin.String
@@ -261,7 +262,8 @@ public interface ScalableTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.ScalableTargetProps):
-        ScalableTargetProps = Wrapper(cdkObject)
+        ScalableTargetProps = CdkObjectWrappers.wrap(cdkObject) as? ScalableTargetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScalableTargetProps):
         software.amazon.awscdk.services.applicationautoscaling.ScalableTargetProps = (wrapped as

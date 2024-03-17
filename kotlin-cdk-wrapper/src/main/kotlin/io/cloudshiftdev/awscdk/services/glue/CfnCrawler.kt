@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1135,7 +1136,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty):
-          S3TargetProperty = Wrapper(cdkObject)
+          S3TargetProperty = CdkObjectWrappers.wrap(cdkObject) as? S3TargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3TargetProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty = (wrapped as
@@ -1252,7 +1254,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty):
-          RecrawlPolicyProperty = Wrapper(cdkObject)
+          RecrawlPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RecrawlPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecrawlPolicyProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty = (wrapped as
@@ -1467,7 +1470,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty):
-          CatalogTargetProperty = Wrapper(cdkObject)
+          CatalogTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? CatalogTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CatalogTargetProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty = (wrapped as
@@ -1645,7 +1649,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty):
-          SchemaChangePolicyProperty = Wrapper(cdkObject)
+          SchemaChangePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SchemaChangePolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaChangePolicyProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty = (wrapped as
@@ -1851,7 +1856,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty):
-          DeltaTargetProperty = Wrapper(cdkObject)
+          DeltaTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? DeltaTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeltaTargetProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty = (wrapped as
@@ -1944,7 +1950,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty):
-          ScheduleProperty = Wrapper(cdkObject)
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty = (wrapped as
@@ -2374,7 +2381,8 @@ public open class CfnCrawler internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty):
-          TargetsProperty = Wrapper(cdkObject)
+          TargetsProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetsProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty = (wrapped as
@@ -2453,7 +2461,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty):
-          DynamoDBTargetProperty = Wrapper(cdkObject)
+          DynamoDBTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? DynamoDBTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynamoDBTargetProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty = (wrapped as
@@ -2561,7 +2570,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty):
-          MongoDBTargetProperty = Wrapper(cdkObject)
+          MongoDBTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? MongoDBTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MongoDBTargetProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty = (wrapped as
@@ -2755,7 +2765,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty):
-          IcebergTargetProperty = Wrapper(cdkObject)
+          IcebergTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? IcebergTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IcebergTargetProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty = (wrapped as
@@ -2912,7 +2923,8 @@ public open class CfnCrawler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty):
-          JdbcTargetProperty = Wrapper(cdkObject)
+          JdbcTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? JdbcTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JdbcTargetProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty = (wrapped as

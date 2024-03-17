@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.collections.List
 
@@ -31,7 +32,7 @@ public interface IListProducer {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IListProducer): IListProducer =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IListProducer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IListProducer): software.amazon.awscdk.IListProducer = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.IListProducer

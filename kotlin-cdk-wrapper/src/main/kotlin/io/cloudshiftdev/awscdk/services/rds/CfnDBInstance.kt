@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -6348,7 +6349,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty):
-          DBInstanceRoleProperty = Wrapper(cdkObject)
+          DBInstanceRoleProperty = CdkObjectWrappers.wrap(cdkObject) as? DBInstanceRoleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DBInstanceRoleProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty = (wrapped as
@@ -6492,7 +6494,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty):
-          EndpointProperty = Wrapper(cdkObject)
+          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty = (wrapped as
@@ -6607,7 +6610,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty):
-          CertificateDetailsProperty = Wrapper(cdkObject)
+          CertificateDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateDetailsProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty = (wrapped as
@@ -6721,7 +6725,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty):
-          ProcessorFeatureProperty = Wrapper(cdkObject)
+          ProcessorFeatureProperty = CdkObjectWrappers.wrap(cdkObject) as? ProcessorFeatureProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProcessorFeatureProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty = (wrapped as
@@ -6835,7 +6840,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty):
-          MasterUserSecretProperty = Wrapper(cdkObject)
+          MasterUserSecretProperty = CdkObjectWrappers.wrap(cdkObject) as? MasterUserSecretProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MasterUserSecretProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty = (wrapped as

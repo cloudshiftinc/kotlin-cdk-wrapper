@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1126,7 +1127,8 @@ public interface CfnStreamProcessorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessorProps):
-        CfnStreamProcessorProps = Wrapper(cdkObject)
+        CfnStreamProcessorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStreamProcessorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamProcessorProps):
         software.amazon.awscdk.services.rekognition.CfnStreamProcessorProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rekognition
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -75,7 +76,8 @@ public interface CfnProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnProjectProps):
-        CfnProjectProps = Wrapper(cdkObject)
+        CfnProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnProjectProps):
         software.amazon.awscdk.services.rekognition.CfnProjectProps = (wrapped as

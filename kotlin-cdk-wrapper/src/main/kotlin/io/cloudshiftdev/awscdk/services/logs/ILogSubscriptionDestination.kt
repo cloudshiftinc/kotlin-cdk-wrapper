@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -47,7 +48,8 @@ public interface ILogSubscriptionDestination {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.ILogSubscriptionDestination):
-        ILogSubscriptionDestination = Wrapper(cdkObject)
+        ILogSubscriptionDestination = CdkObjectWrappers.wrap(cdkObject) as?
+        ILogSubscriptionDestination ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILogSubscriptionDestination):
         software.amazon.awscdk.services.logs.ILogSubscriptionDestination = (wrapped as

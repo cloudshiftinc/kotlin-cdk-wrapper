@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.opensearchserverless
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -209,7 +210,8 @@ public interface CfnSecurityConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfigProps):
-        CfnSecurityConfigProps = Wrapper(cdkObject)
+        CfnSecurityConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSecurityConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityConfigProps):
         software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfigProps = (wrapped as

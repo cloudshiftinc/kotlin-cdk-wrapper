@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -180,7 +181,7 @@ public interface ExtensionProps : ExtensionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ExtensionProps):
-        ExtensionProps = Wrapper(cdkObject)
+        ExtensionProps = CdkObjectWrappers.wrap(cdkObject) as? ExtensionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExtensionProps):
         software.amazon.awscdk.services.appconfig.ExtensionProps = (wrapped as CdkObject).cdkObject

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1614,7 +1615,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnGroupProperty):
-          ColumnGroupProperty = Wrapper(cdkObject)
+          ColumnGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnGroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnGroupProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnGroupProperty = (wrapped as
@@ -1755,7 +1757,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.InputColumnProperty):
-          InputColumnProperty = Wrapper(cdkObject)
+          InputColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? InputColumnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputColumnProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.InputColumnProperty = (wrapped as
@@ -1836,7 +1839,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnDescriptionProperty):
-          ColumnDescriptionProperty = Wrapper(cdkObject)
+          ColumnDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColumnDescriptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnDescriptionProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnDescriptionProperty = (wrapped
@@ -1981,7 +1985,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.CalculatedColumnProperty):
-          CalculatedColumnProperty = Wrapper(cdkObject)
+          CalculatedColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? CalculatedColumnProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CalculatedColumnProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.CalculatedColumnProperty = (wrapped
@@ -2197,7 +2202,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.S3SourceProperty):
-          S3SourceProperty = Wrapper(cdkObject)
+          S3SourceProperty = CdkObjectWrappers.wrap(cdkObject) as? S3SourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3SourceProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.S3SourceProperty = (wrapped as
@@ -2346,7 +2352,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ResourcePermissionProperty):
-          ResourcePermissionProperty = Wrapper(cdkObject)
+          ResourcePermissionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourcePermissionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourcePermissionProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.ResourcePermissionProperty =
@@ -2486,7 +2493,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnTagProperty):
-          ColumnTagProperty = Wrapper(cdkObject)
+          ColumnTagProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnTagProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnTagProperty = (wrapped as
@@ -2591,7 +2599,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty):
-          DateTimeDatasetParameterDefaultValuesProperty = Wrapper(cdkObject)
+          DateTimeDatasetParameterDefaultValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DateTimeDatasetParameterDefaultValuesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DateTimeDatasetParameterDefaultValuesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty
@@ -2775,7 +2784,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagRuleProperty):
-          RowLevelPermissionTagRuleProperty = Wrapper(cdkObject)
+          RowLevelPermissionTagRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RowLevelPermissionTagRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RowLevelPermissionTagRuleProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagRuleProperty =
@@ -3298,7 +3308,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty):
-          TransformOperationProperty = Wrapper(cdkObject)
+          TransformOperationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransformOperationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformOperationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty =
@@ -3385,7 +3396,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.FilterOperationProperty):
-          FilterOperationProperty = Wrapper(cdkObject)
+          FilterOperationProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterOperationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterOperationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.FilterOperationProperty = (wrapped
@@ -3492,7 +3504,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.JoinKeyPropertiesProperty):
-          JoinKeyPropertiesProperty = Wrapper(cdkObject)
+          JoinKeyPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JoinKeyPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JoinKeyPropertiesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.JoinKeyPropertiesProperty = (wrapped
@@ -3704,7 +3717,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterProperty):
-          DecimalDatasetParameterProperty = Wrapper(cdkObject)
+          DecimalDatasetParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DecimalDatasetParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DecimalDatasetParameterProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterProperty =
@@ -3852,7 +3866,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.GeoSpatialColumnGroupProperty):
-          GeoSpatialColumnGroupProperty = Wrapper(cdkObject)
+          GeoSpatialColumnGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GeoSpatialColumnGroupProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GeoSpatialColumnGroupProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.GeoSpatialColumnGroupProperty =
@@ -4024,7 +4039,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.OverrideDatasetParameterOperationProperty):
-          OverrideDatasetParameterOperationProperty = Wrapper(cdkObject)
+          OverrideDatasetParameterOperationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OverrideDatasetParameterOperationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OverrideDatasetParameterOperationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.OverrideDatasetParameterOperationProperty
@@ -4259,7 +4275,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionDataSetProperty):
-          RowLevelPermissionDataSetProperty = Wrapper(cdkObject)
+          RowLevelPermissionDataSetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RowLevelPermissionDataSetProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RowLevelPermissionDataSetProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionDataSetProperty =
@@ -4483,7 +4500,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RelationalTableProperty):
-          RelationalTableProperty = Wrapper(cdkObject)
+          RelationalTableProperty = CdkObjectWrappers.wrap(cdkObject) as? RelationalTableProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RelationalTableProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.RelationalTableProperty = (wrapped
@@ -4743,7 +4761,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableProperty):
-          LogicalTableProperty = Wrapper(cdkObject)
+          LogicalTableProperty = CdkObjectWrappers.wrap(cdkObject) as? LogicalTableProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogicalTableProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableProperty = (wrapped as
@@ -4948,7 +4967,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.UploadSettingsProperty):
-          UploadSettingsProperty = Wrapper(cdkObject)
+          UploadSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? UploadSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UploadSettingsProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.UploadSettingsProperty = (wrapped as
@@ -5264,7 +5284,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DatasetParameterProperty):
-          DatasetParameterProperty = Wrapper(cdkObject)
+          DatasetParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetParameterProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetParameterProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.DatasetParameterProperty = (wrapped
@@ -5510,7 +5531,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.NewDefaultValuesProperty):
-          NewDefaultValuesProperty = Wrapper(cdkObject)
+          NewDefaultValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? NewDefaultValuesProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NewDefaultValuesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.NewDefaultValuesProperty = (wrapped
@@ -5694,7 +5716,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagConfigurationProperty):
-          RowLevelPermissionTagConfigurationProperty = Wrapper(cdkObject)
+          RowLevelPermissionTagConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RowLevelPermissionTagConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RowLevelPermissionTagConfigurationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagConfigurationProperty
@@ -5833,7 +5856,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnLevelPermissionRuleProperty):
-          ColumnLevelPermissionRuleProperty = Wrapper(cdkObject)
+          ColumnLevelPermissionRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColumnLevelPermissionRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnLevelPermissionRuleProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnLevelPermissionRuleProperty =
@@ -5945,7 +5969,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.IncrementalRefreshProperty):
-          IncrementalRefreshProperty = Wrapper(cdkObject)
+          IncrementalRefreshProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IncrementalRefreshProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IncrementalRefreshProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.IncrementalRefreshProperty =
@@ -6120,7 +6145,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.CastColumnTypeOperationProperty):
-          CastColumnTypeOperationProperty = Wrapper(cdkObject)
+          CastColumnTypeOperationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CastColumnTypeOperationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CastColumnTypeOperationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.CastColumnTypeOperationProperty =
@@ -6240,7 +6266,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetRefreshPropertiesProperty):
-          DataSetRefreshPropertiesProperty = Wrapper(cdkObject)
+          DataSetRefreshPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSetRefreshPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSetRefreshPropertiesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetRefreshPropertiesProperty =
@@ -6452,7 +6479,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterProperty):
-          IntegerDatasetParameterProperty = Wrapper(cdkObject)
+          IntegerDatasetParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntegerDatasetParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntegerDatasetParameterProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterProperty =
@@ -6601,7 +6629,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetUsageConfigurationProperty):
-          DataSetUsageConfigurationProperty = Wrapper(cdkObject)
+          DataSetUsageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSetUsageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSetUsageConfigurationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetUsageConfigurationProperty =
@@ -6698,7 +6727,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterDefaultValuesProperty):
-          StringDatasetParameterDefaultValuesProperty = Wrapper(cdkObject)
+          StringDatasetParameterDefaultValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StringDatasetParameterDefaultValuesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StringDatasetParameterDefaultValuesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterDefaultValuesProperty
@@ -6823,7 +6853,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.FieldFolderProperty):
-          FieldFolderProperty = Wrapper(cdkObject)
+          FieldFolderProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldFolderProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldFolderProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.FieldFolderProperty = (wrapped as
@@ -6978,7 +7009,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.IngestionWaitPolicyProperty):
-          IngestionWaitPolicyProperty = Wrapper(cdkObject)
+          IngestionWaitPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IngestionWaitPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IngestionWaitPolicyProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.IngestionWaitPolicyProperty =
@@ -7236,7 +7268,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.PhysicalTableProperty):
-          PhysicalTableProperty = Wrapper(cdkObject)
+          PhysicalTableProperty = CdkObjectWrappers.wrap(cdkObject) as? PhysicalTableProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PhysicalTableProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.PhysicalTableProperty = (wrapped as
@@ -7376,7 +7409,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.TagColumnOperationProperty):
-          TagColumnOperationProperty = Wrapper(cdkObject)
+          TagColumnOperationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TagColumnOperationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagColumnOperationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.TagColumnOperationProperty =
@@ -7486,7 +7520,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RenameColumnOperationProperty):
-          RenameColumnOperationProperty = Wrapper(cdkObject)
+          RenameColumnOperationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RenameColumnOperationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RenameColumnOperationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.RenameColumnOperationProperty =
@@ -7647,7 +7682,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.OutputColumnProperty):
-          OutputColumnProperty = Wrapper(cdkObject)
+          OutputColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputColumnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputColumnProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.OutputColumnProperty = (wrapped as
@@ -7926,7 +7962,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.JoinInstructionProperty):
-          JoinInstructionProperty = Wrapper(cdkObject)
+          JoinInstructionProperty = CdkObjectWrappers.wrap(cdkObject) as? JoinInstructionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JoinInstructionProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.JoinInstructionProperty = (wrapped
@@ -8020,7 +8057,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty):
-          ProjectOperationProperty = Wrapper(cdkObject)
+          ProjectOperationProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectOperationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProjectOperationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty = (wrapped
@@ -8129,7 +8167,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty):
-          DecimalDatasetParameterDefaultValuesProperty = Wrapper(cdkObject)
+          DecimalDatasetParameterDefaultValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DecimalDatasetParameterDefaultValuesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DecimalDatasetParameterDefaultValuesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty
@@ -8240,7 +8279,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.CreateColumnsOperationProperty):
-          CreateColumnsOperationProperty = Wrapper(cdkObject)
+          CreateColumnsOperationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CreateColumnsOperationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CreateColumnsOperationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.CreateColumnsOperationProperty =
@@ -8428,7 +8468,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.CustomSqlProperty):
-          CustomSqlProperty = Wrapper(cdkObject)
+          CustomSqlProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomSqlProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomSqlProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.CustomSqlProperty = (wrapped as
@@ -8569,7 +8610,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.LookbackWindowProperty):
-          LookbackWindowProperty = Wrapper(cdkObject)
+          LookbackWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? LookbackWindowProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LookbackWindowProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.LookbackWindowProperty = (wrapped as
@@ -8781,7 +8823,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterProperty):
-          StringDatasetParameterProperty = Wrapper(cdkObject)
+          StringDatasetParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StringDatasetParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StringDatasetParameterProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterProperty =
@@ -8958,7 +9001,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableSourceProperty):
-          LogicalTableSourceProperty = Wrapper(cdkObject)
+          LogicalTableSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogicalTableSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogicalTableSourceProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableSourceProperty =
@@ -9197,7 +9241,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterProperty):
-          DateTimeDatasetParameterProperty = Wrapper(cdkObject)
+          DateTimeDatasetParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DateTimeDatasetParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DateTimeDatasetParameterProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterProperty =
@@ -9306,7 +9351,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty):
-          IntegerDatasetParameterDefaultValuesProperty = Wrapper(cdkObject)
+          IntegerDatasetParameterDefaultValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntegerDatasetParameterDefaultValuesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntegerDatasetParameterDefaultValuesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty
@@ -9424,7 +9470,8 @@ public open class CfnDataSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshConfigurationProperty):
-          RefreshConfigurationProperty = Wrapper(cdkObject)
+          RefreshConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RefreshConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RefreshConfigurationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshConfigurationProperty =

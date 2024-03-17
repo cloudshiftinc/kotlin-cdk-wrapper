@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -642,7 +643,8 @@ public open class CfnMicrosoftAD internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.VpcSettingsProperty):
-          VpcSettingsProperty = Wrapper(cdkObject)
+          VpcSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcSettingsProperty):
           software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.VpcSettingsProperty =

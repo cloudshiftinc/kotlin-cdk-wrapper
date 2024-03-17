@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 
 /**
@@ -33,7 +34,8 @@ public interface IFragmentConcatenator {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IFragmentConcatenator):
-        IFragmentConcatenator = Wrapper(cdkObject)
+        IFragmentConcatenator = CdkObjectWrappers.wrap(cdkObject) as? IFragmentConcatenator ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFragmentConcatenator):
         software.amazon.awscdk.IFragmentConcatenator = (wrapped as CdkObject).cdkObject as

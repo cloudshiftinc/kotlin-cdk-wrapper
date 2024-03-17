@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -444,7 +445,8 @@ public interface CfnTrackerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnTrackerProps):
-        CfnTrackerProps = Wrapper(cdkObject)
+        CfnTrackerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTrackerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrackerProps):
         software.amazon.awscdk.services.location.CfnTrackerProps = (wrapped as CdkObject).cdkObject

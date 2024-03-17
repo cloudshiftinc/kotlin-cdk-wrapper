@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Interface for examining a construct and exposing metadata.
@@ -30,7 +31,7 @@ public interface IInspectable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IInspectable): IInspectable =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IInspectable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IInspectable): software.amazon.awscdk.IInspectable = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.IInspectable

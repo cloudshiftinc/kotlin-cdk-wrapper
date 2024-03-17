@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Node
@@ -103,7 +104,8 @@ public interface IStringParameter : IParameter {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.IStringParameter):
-        IStringParameter = Wrapper(cdkObject)
+        IStringParameter = CdkObjectWrappers.wrap(cdkObject) as? IStringParameter ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IStringParameter):
         software.amazon.awscdk.services.ssm.IStringParameter = (wrapped as CdkObject).cdkObject as

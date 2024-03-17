@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.inspectorv2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -274,7 +275,8 @@ public interface CfnCisScanConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps):
-        CfnCisScanConfigurationProps = Wrapper(cdkObject)
+        CfnCisScanConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCisScanConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCisScanConfigurationProps):
         software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps = (wrapped as

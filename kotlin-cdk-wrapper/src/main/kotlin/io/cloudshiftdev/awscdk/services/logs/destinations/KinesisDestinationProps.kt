@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.logs.destinations
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 
@@ -78,7 +79,8 @@ public interface KinesisDestinationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.logs.destinations.KinesisDestinationProps):
-        KinesisDestinationProps = Wrapper(cdkObject)
+        KinesisDestinationProps = CdkObjectWrappers.wrap(cdkObject) as? KinesisDestinationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KinesisDestinationProps):
         software.amazon.awscdk.services.logs.destinations.KinesisDestinationProps = (wrapped as

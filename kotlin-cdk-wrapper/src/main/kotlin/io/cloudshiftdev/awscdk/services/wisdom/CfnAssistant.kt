@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -513,7 +514,8 @@ public open class CfnAssistant internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty):
-          ServerSideEncryptionConfigurationProperty = Wrapper(cdkObject)
+          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
           software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty

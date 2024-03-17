@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 
@@ -26,7 +27,8 @@ public abstract class BackedDataSource internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.BackedDataSource):
-        BackedDataSource = Wrapper(cdkObject)
+        BackedDataSource = CdkObjectWrappers.wrap(cdkObject) as? BackedDataSource ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BackedDataSource):
         software.amazon.awscdk.services.appsync.BackedDataSource = (wrapped as CdkObject).cdkObject

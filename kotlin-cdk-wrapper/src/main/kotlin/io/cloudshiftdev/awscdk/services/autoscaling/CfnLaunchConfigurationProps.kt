@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1270,7 +1271,8 @@ public interface CfnLaunchConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfigurationProps):
-        CfnLaunchConfigurationProps = Wrapper(cdkObject)
+        CfnLaunchConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLaunchConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchConfigurationProps):
         software.amazon.awscdk.services.autoscaling.CfnLaunchConfigurationProps = (wrapped as

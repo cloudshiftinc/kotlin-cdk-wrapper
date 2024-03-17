@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ce
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -230,7 +231,8 @@ public interface CfnAnomalyMonitorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitorProps):
-        CfnAnomalyMonitorProps = Wrapper(cdkObject)
+        CfnAnomalyMonitorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAnomalyMonitorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnomalyMonitorProps):
         software.amazon.awscdk.services.ce.CfnAnomalyMonitorProps = (wrapped as CdkObject).cdkObject

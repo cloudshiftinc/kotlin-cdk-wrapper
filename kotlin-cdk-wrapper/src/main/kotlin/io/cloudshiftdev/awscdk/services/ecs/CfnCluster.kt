@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1112,7 +1113,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty):
-          ExecuteCommandLogConfigurationProperty = Wrapper(cdkObject)
+          ExecuteCommandLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExecuteCommandLogConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExecuteCommandLogConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandLogConfigurationProperty =
@@ -1343,7 +1345,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty):
-          ExecuteCommandConfigurationProperty = Wrapper(cdkObject)
+          ExecuteCommandConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExecuteCommandConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExecuteCommandConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnCluster.ExecuteCommandConfigurationProperty =
@@ -1565,7 +1568,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = Wrapper(cdkObject)
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
           software.amazon.awscdk.services.ecs.CfnCluster.CapacityProviderStrategyItemProperty =
@@ -1717,7 +1721,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty):
-          ClusterSettingsProperty = Wrapper(cdkObject)
+          ClusterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClusterSettingsProperty):
           software.amazon.awscdk.services.ecs.CfnCluster.ClusterSettingsProperty = (wrapped as
@@ -1842,7 +1847,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty):
-          ClusterConfigurationProperty = Wrapper(cdkObject)
+          ClusterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClusterConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClusterConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnCluster.ClusterConfigurationProperty = (wrapped as
@@ -2018,7 +2024,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCluster.ServiceConnectDefaultsProperty):
-          ServiceConnectDefaultsProperty = Wrapper(cdkObject)
+          ServiceConnectDefaultsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectDefaultsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceConnectDefaultsProperty):
           software.amazon.awscdk.services.ecs.CfnCluster.ServiceConnectDefaultsProperty = (wrapped

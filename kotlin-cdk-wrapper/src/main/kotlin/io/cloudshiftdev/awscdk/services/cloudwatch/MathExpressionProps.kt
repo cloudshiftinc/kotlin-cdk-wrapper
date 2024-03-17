@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -300,7 +301,8 @@ public interface MathExpressionProps : MathExpressionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.MathExpressionProps):
-        MathExpressionProps = Wrapper(cdkObject)
+        MathExpressionProps = CdkObjectWrappers.wrap(cdkObject) as? MathExpressionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MathExpressionProps):
         software.amazon.awscdk.services.cloudwatch.MathExpressionProps = (wrapped as

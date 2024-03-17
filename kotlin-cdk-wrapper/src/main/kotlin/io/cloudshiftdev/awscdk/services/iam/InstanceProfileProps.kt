@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -149,7 +150,8 @@ public interface InstanceProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.InstanceProfileProps):
-        InstanceProfileProps = Wrapper(cdkObject)
+        InstanceProfileProps = CdkObjectWrappers.wrap(cdkObject) as? InstanceProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceProfileProps):
         software.amazon.awscdk.services.iam.InstanceProfileProps = (wrapped as CdkObject).cdkObject

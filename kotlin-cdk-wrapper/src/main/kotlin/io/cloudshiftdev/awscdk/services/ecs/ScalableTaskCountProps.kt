@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.BaseScalableAttributeProps
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.ServiceNamespace
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -165,7 +166,8 @@ public interface ScalableTaskCountProps : BaseScalableAttributeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ScalableTaskCountProps):
-        ScalableTaskCountProps = Wrapper(cdkObject)
+        ScalableTaskCountProps = CdkObjectWrappers.wrap(cdkObject) as? ScalableTaskCountProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScalableTaskCountProps):
         software.amazon.awscdk.services.ecs.ScalableTaskCountProps = (wrapped as

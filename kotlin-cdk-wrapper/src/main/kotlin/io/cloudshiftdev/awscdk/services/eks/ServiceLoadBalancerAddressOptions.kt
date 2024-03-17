@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -105,7 +106,8 @@ public interface ServiceLoadBalancerAddressOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions):
-        ServiceLoadBalancerAddressOptions = Wrapper(cdkObject)
+        ServiceLoadBalancerAddressOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ServiceLoadBalancerAddressOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceLoadBalancerAddressOptions):
         software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions = (wrapped as

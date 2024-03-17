@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -348,7 +349,8 @@ public open class CfnGeoMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty):
-          GeoMatchConstraintProperty = Wrapper(cdkObject)
+          GeoMatchConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GeoMatchConstraintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GeoMatchConstraintProperty):
           software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty =

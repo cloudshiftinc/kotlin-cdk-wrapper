@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.pinpoint
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -176,7 +177,8 @@ public interface CfnADMChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnADMChannelProps):
-        CfnADMChannelProps = Wrapper(cdkObject)
+        CfnADMChannelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnADMChannelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnADMChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnADMChannelProps = (wrapped as

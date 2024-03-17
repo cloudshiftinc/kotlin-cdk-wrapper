@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.glue
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -663,7 +664,8 @@ public interface CfnCrawlerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawlerProps):
-        CfnCrawlerProps = Wrapper(cdkObject)
+        CfnCrawlerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCrawlerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCrawlerProps):
         software.amazon.awscdk.services.glue.CfnCrawlerProps = (wrapped as CdkObject).cdkObject as

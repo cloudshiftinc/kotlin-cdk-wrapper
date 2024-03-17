@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -101,7 +102,8 @@ public interface StoppingCondition {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition):
-        StoppingCondition = Wrapper(cdkObject)
+        StoppingCondition = CdkObjectWrappers.wrap(cdkObject) as? StoppingCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StoppingCondition):
         software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition = (wrapped as

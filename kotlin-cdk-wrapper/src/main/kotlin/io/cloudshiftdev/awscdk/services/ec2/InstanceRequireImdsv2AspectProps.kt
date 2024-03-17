@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -128,7 +129,8 @@ public interface InstanceRequireImdsv2AspectProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InstanceRequireImdsv2AspectProps):
-        InstanceRequireImdsv2AspectProps = Wrapper(cdkObject)
+        InstanceRequireImdsv2AspectProps = CdkObjectWrappers.wrap(cdkObject) as?
+        InstanceRequireImdsv2AspectProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceRequireImdsv2AspectProps):
         software.amazon.awscdk.services.ec2.InstanceRequireImdsv2AspectProps = (wrapped as

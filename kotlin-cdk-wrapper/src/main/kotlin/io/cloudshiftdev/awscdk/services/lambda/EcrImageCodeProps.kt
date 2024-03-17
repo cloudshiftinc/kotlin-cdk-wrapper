@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -263,7 +264,8 @@ public interface EcrImageCodeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.EcrImageCodeProps):
-        EcrImageCodeProps = Wrapper(cdkObject)
+        EcrImageCodeProps = CdkObjectWrappers.wrap(cdkObject) as? EcrImageCodeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcrImageCodeProps):
         software.amazon.awscdk.services.lambda.EcrImageCodeProps = (wrapped as CdkObject).cdkObject

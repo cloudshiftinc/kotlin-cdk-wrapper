@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -203,7 +204,7 @@ public interface EbsDeviceProps : EbsDeviceSnapshotOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.EbsDeviceProps):
-        EbsDeviceProps = Wrapper(cdkObject)
+        EbsDeviceProps = CdkObjectWrappers.wrap(cdkObject) as? EbsDeviceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EbsDeviceProps):
         software.amazon.awscdk.services.autoscaling.EbsDeviceProps = (wrapped as

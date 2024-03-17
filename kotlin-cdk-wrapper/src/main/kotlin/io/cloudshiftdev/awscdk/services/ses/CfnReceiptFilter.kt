@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -315,7 +316,8 @@ public open class CfnReceiptFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty):
-          IpFilterProperty = Wrapper(cdkObject)
+          IpFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? IpFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IpFilterProperty):
           software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty = (wrapped as
@@ -476,7 +478,8 @@ public open class CfnReceiptFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty):
-          FilterProperty = Wrapper(cdkObject)
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty = (wrapped as

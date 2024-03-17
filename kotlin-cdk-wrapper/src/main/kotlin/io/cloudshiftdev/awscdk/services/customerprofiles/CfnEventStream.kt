@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -378,7 +379,8 @@ public open class CfnEventStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty):
-          DestinationDetailsProperty = Wrapper(cdkObject)
+          DestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationDetailsProperty):
           software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -122,7 +123,8 @@ public interface AfterwardsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.AfterwardsOptions):
-        AfterwardsOptions = Wrapper(cdkObject)
+        AfterwardsOptions = CdkObjectWrappers.wrap(cdkObject) as? AfterwardsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AfterwardsOptions):
         software.amazon.awscdk.services.stepfunctions.AfterwardsOptions = (wrapped as

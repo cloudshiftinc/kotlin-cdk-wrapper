@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -107,7 +108,7 @@ public interface DataSource {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DataSource):
-        DataSource = Wrapper(cdkObject)
+        DataSource = CdkObjectWrappers.wrap(cdkObject) as? DataSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DataSource):
         software.amazon.awscdk.services.stepfunctions.tasks.DataSource = (wrapped as

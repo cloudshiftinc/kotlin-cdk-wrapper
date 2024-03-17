@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -199,7 +200,8 @@ public interface CfnLaunchTemplateConstraintProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps):
-        CfnLaunchTemplateConstraintProps = Wrapper(cdkObject)
+        CfnLaunchTemplateConstraintProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLaunchTemplateConstraintProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchTemplateConstraintProps):
         software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps = (wrapped

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -238,7 +239,8 @@ public interface CfnStorageLensProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensProps):
-        CfnStorageLensProps = Wrapper(cdkObject)
+        CfnStorageLensProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStorageLensProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageLensProps):
         software.amazon.awscdk.services.s3.CfnStorageLensProps = (wrapped as CdkObject).cdkObject as

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.constructs.Node
@@ -147,7 +148,7 @@ public interface IApi : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IApi): IApi =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IApi ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IApi): software.amazon.awscdk.services.apigatewayv2.IApi = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.apigatewayv2.IApi

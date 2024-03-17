@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -165,7 +166,8 @@ public interface AutoRollbackConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.AutoRollbackConfig):
-        AutoRollbackConfig = Wrapper(cdkObject)
+        AutoRollbackConfig = CdkObjectWrappers.wrap(cdkObject) as? AutoRollbackConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoRollbackConfig):
         software.amazon.awscdk.services.codedeploy.AutoRollbackConfig = (wrapped as

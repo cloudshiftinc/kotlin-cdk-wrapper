@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -423,7 +424,7 @@ public interface ICfnResourceOptions {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ICfnResourceOptions): ICfnResourceOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ICfnResourceOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ICfnResourceOptions): software.amazon.awscdk.ICfnResourceOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.ICfnResourceOptions

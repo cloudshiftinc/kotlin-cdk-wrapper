@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -92,7 +93,8 @@ public interface KeyPairAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.KeyPairAttributes):
-        KeyPairAttributes = Wrapper(cdkObject)
+        KeyPairAttributes = CdkObjectWrappers.wrap(cdkObject) as? KeyPairAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyPairAttributes):
         software.amazon.awscdk.services.ec2.KeyPairAttributes = (wrapped as CdkObject).cdkObject as

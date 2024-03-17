@@ -3,6 +3,7 @@
 package io.cloudshiftdev.constructs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.collections.List
 
@@ -16,7 +17,8 @@ public interface IValidation {
   }
 
   public companion object {
-    internal fun wrap(cdkObject: software.constructs.IValidation): IValidation = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.constructs.IValidation): IValidation =
+        CdkObjectWrappers.wrap(cdkObject) as? IValidation ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IValidation): software.constructs.IValidation = (wrapped as
         CdkObject).cdkObject as software.constructs.IValidation

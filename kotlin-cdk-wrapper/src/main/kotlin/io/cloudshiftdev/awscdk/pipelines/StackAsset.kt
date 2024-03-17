@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -203,7 +204,7 @@ public interface StackAsset {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.StackAsset): StackAsset =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? StackAsset ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackAsset): software.amazon.awscdk.pipelines.StackAsset = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.pipelines.StackAsset

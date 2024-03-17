@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.String
@@ -105,7 +106,7 @@ public abstract class State internal constructor(
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.State): State =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? State ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: State): software.amazon.awscdk.services.stepfunctions.State =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.stepfunctions.State

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.Number
@@ -781,7 +782,7 @@ public interface TableOptions : SchemaOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TableOptions):
-        TableOptions = Wrapper(cdkObject)
+        TableOptions = CdkObjectWrappers.wrap(cdkObject) as? TableOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableOptions):
         software.amazon.awscdk.services.dynamodb.TableOptions = (wrapped as CdkObject).cdkObject as

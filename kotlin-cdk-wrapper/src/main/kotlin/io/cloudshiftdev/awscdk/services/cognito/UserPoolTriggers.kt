@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import kotlin.Unit
 
@@ -441,7 +442,8 @@ public interface UserPoolTriggers {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolTriggers):
-        UserPoolTriggers = Wrapper(cdkObject)
+        UserPoolTriggers = CdkObjectWrappers.wrap(cdkObject) as? UserPoolTriggers ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolTriggers):
         software.amazon.awscdk.services.cognito.UserPoolTriggers = (wrapped as CdkObject).cdkObject

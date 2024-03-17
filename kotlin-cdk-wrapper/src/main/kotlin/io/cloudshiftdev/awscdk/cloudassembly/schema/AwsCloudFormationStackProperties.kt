@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -480,7 +481,8 @@ public interface AwsCloudFormationStackProperties {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties):
-        AwsCloudFormationStackProperties = Wrapper(cdkObject)
+        AwsCloudFormationStackProperties = CdkObjectWrappers.wrap(cdkObject) as?
+        AwsCloudFormationStackProperties ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsCloudFormationStackProperties):
         software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties = (wrapped as

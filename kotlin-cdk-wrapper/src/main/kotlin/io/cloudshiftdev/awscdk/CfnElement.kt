@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Any
 import kotlin.Boolean
@@ -58,7 +59,8 @@ public abstract class CfnElement internal constructor(
   public companion object {
     public fun isCfnElement(x: Any): Boolean = software.amazon.awscdk.CfnElement.isCfnElement(x)
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.CfnElement): CfnElement = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.CfnElement): CfnElement =
+        CdkObjectWrappers.wrap(cdkObject) as? CfnElement ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnElement): software.amazon.awscdk.CfnElement = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.CfnElement

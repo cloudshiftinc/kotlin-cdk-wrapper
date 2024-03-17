@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.OnEventOptions
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.constructs.Node
@@ -252,7 +253,7 @@ public interface IRule : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.IRule): IRule =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IRule ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRule): software.amazon.awscdk.services.config.IRule = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.config.IRule

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -773,7 +774,8 @@ public open class CfnStorageVirtualMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty):
-          SelfManagedActiveDirectoryConfigurationProperty = Wrapper(cdkObject)
+          SelfManagedActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedActiveDirectoryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelfManagedActiveDirectoryConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty
@@ -946,7 +948,8 @@ public open class CfnStorageVirtualMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty):
-          ActiveDirectoryConfigurationProperty = Wrapper(cdkObject)
+          ActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ActiveDirectoryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActiveDirectoryConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty

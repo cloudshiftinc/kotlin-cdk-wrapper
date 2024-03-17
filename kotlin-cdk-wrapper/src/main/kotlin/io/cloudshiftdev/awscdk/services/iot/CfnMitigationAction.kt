@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -423,7 +424,8 @@ public open class CfnMitigationAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty):
-          ReplaceDefaultPolicyVersionParamsProperty = Wrapper(cdkObject)
+          ReplaceDefaultPolicyVersionParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplaceDefaultPolicyVersionParamsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplaceDefaultPolicyVersionParamsProperty):
           software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty
@@ -509,7 +511,8 @@ public open class CfnMitigationAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty):
-          PublishFindingToSnsParamsProperty = Wrapper(cdkObject)
+          PublishFindingToSnsParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublishFindingToSnsParamsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublishFindingToSnsParamsProperty):
           software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty
@@ -600,7 +603,8 @@ public open class CfnMitigationAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty):
-          UpdateDeviceCertificateParamsProperty = Wrapper(cdkObject)
+          UpdateDeviceCertificateParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UpdateDeviceCertificateParamsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UpdateDeviceCertificateParamsProperty):
           software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty
@@ -1090,7 +1094,8 @@ public open class CfnMitigationAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty):
-          ActionParamsProperty = Wrapper(cdkObject)
+          ActionParamsProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionParamsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionParamsProperty):
           software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty = (wrapped as
@@ -1181,7 +1186,8 @@ public open class CfnMitigationAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty):
-          UpdateCACertificateParamsProperty = Wrapper(cdkObject)
+          UpdateCACertificateParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UpdateCACertificateParamsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UpdateCACertificateParamsProperty):
           software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty
@@ -1341,7 +1347,8 @@ public open class CfnMitigationAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.AddThingsToThingGroupParamsProperty):
-          AddThingsToThingGroupParamsProperty = Wrapper(cdkObject)
+          AddThingsToThingGroupParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AddThingsToThingGroupParamsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AddThingsToThingGroupParamsProperty):
           software.amazon.awscdk.services.iot.CfnMitigationAction.AddThingsToThingGroupParamsProperty
@@ -1451,7 +1458,8 @@ public open class CfnMitigationAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty):
-          EnableIoTLoggingParamsProperty = Wrapper(cdkObject)
+          EnableIoTLoggingParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnableIoTLoggingParamsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnableIoTLoggingParamsProperty):
           software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty =

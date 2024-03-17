@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -433,7 +434,8 @@ public open class CfnQuickConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty):
-          PhoneNumberQuickConnectConfigProperty = Wrapper(cdkObject)
+          PhoneNumberQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PhoneNumberQuickConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PhoneNumberQuickConnectConfigProperty):
           software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty
@@ -727,7 +729,8 @@ public open class CfnQuickConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty):
-          QuickConnectConfigProperty = Wrapper(cdkObject)
+          QuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QuickConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QuickConnectConfigProperty):
           software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty =
@@ -839,7 +842,8 @@ public open class CfnQuickConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty):
-          UserQuickConnectConfigProperty = Wrapper(cdkObject)
+          UserQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserQuickConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserQuickConnectConfigProperty):
           software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty =
@@ -951,7 +955,8 @@ public open class CfnQuickConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty):
-          QueueQuickConnectConfigProperty = Wrapper(cdkObject)
+          QueueQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueueQuickConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueueQuickConnectConfigProperty):
           software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty =

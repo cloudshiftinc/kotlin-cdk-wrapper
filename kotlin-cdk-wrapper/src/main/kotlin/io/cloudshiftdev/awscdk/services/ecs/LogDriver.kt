@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -53,7 +54,7 @@ public abstract class LogDriver internal constructor(
         awsLogs(AwsLogDriverProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.LogDriver): LogDriver =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? LogDriver ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogDriver): software.amazon.awscdk.services.ecs.LogDriver =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.LogDriver

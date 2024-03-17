@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 
@@ -107,7 +108,8 @@ public abstract class MappingTemplate internal constructor(
         software.amazon.awscdk.services.appsync.MappingTemplate.lambdaResult().let(MappingTemplate::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate):
-        MappingTemplate = Wrapper(cdkObject)
+        MappingTemplate = CdkObjectWrappers.wrap(cdkObject) as? MappingTemplate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MappingTemplate):
         software.amazon.awscdk.services.appsync.MappingTemplate = (wrapped as CdkObject).cdkObject

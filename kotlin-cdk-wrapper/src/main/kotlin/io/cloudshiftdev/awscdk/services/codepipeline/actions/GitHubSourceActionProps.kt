@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonActionProps
 import kotlin.Number
@@ -352,7 +353,8 @@ public interface GitHubSourceActionProps : CommonActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.GitHubSourceActionProps):
-        GitHubSourceActionProps = Wrapper(cdkObject)
+        GitHubSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as? GitHubSourceActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitHubSourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.GitHubSourceActionProps = (wrapped as

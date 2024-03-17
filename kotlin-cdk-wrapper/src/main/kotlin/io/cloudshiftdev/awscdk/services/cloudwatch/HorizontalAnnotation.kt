@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -184,7 +185,8 @@ public interface HorizontalAnnotation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation):
-        HorizontalAnnotation = Wrapper(cdkObject)
+        HorizontalAnnotation = CdkObjectWrappers.wrap(cdkObject) as? HorizontalAnnotation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HorizontalAnnotation):
         software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation = (wrapped as

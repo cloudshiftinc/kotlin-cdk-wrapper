@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -99,7 +100,8 @@ public interface VdmAttributesProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.VdmAttributesProps):
-        VdmAttributesProps = Wrapper(cdkObject)
+        VdmAttributesProps = CdkObjectWrappers.wrap(cdkObject) as? VdmAttributesProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VdmAttributesProps):
         software.amazon.awscdk.services.ses.VdmAttributesProps = (wrapped as CdkObject).cdkObject as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -686,7 +687,8 @@ public open class CfnIdentity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty):
-          MailFromAttributesProperty = Wrapper(cdkObject)
+          MailFromAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MailFromAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MailFromAttributesProperty):
           software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty =

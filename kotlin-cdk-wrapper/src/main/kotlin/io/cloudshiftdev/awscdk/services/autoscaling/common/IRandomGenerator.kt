@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.autoscaling.common
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 
@@ -39,7 +40,8 @@ public interface IRandomGenerator {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.common.IRandomGenerator):
-        IRandomGenerator = Wrapper(cdkObject)
+        IRandomGenerator = CdkObjectWrappers.wrap(cdkObject) as? IRandomGenerator ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRandomGenerator):
         software.amazon.awscdk.services.autoscaling.common.IRandomGenerator = (wrapped as

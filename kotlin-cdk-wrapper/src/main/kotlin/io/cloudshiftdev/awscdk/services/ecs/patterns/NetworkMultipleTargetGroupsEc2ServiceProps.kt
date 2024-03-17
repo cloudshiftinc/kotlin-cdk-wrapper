@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ecs.CloudMapOptions
 import io.cloudshiftdev.awscdk.services.ecs.Ec2TaskDefinition
@@ -734,7 +735,8 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2ServiceProps):
-        NetworkMultipleTargetGroupsEc2ServiceProps = Wrapper(cdkObject)
+        NetworkMultipleTargetGroupsEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkMultipleTargetGroupsEc2ServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkMultipleTargetGroupsEc2ServiceProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2ServiceProps =

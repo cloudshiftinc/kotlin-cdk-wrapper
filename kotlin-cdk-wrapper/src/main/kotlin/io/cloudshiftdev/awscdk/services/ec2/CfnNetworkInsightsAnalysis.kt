@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -546,7 +547,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerTargetProperty):
-          AnalysisLoadBalancerTargetProperty = Wrapper(cdkObject)
+          AnalysisLoadBalancerTargetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisLoadBalancerTargetProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisLoadBalancerTargetProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerTargetProperty
@@ -3136,7 +3138,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.ExplanationProperty):
-          ExplanationProperty = Wrapper(cdkObject)
+          ExplanationProperty = CdkObjectWrappers.wrap(cdkObject) as? ExplanationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExplanationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.ExplanationProperty =
@@ -3407,7 +3410,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty):
-          AnalysisPacketHeaderProperty = Wrapper(cdkObject)
+          AnalysisPacketHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisPacketHeaderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisPacketHeaderProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty
@@ -3516,7 +3520,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty):
-          AnalysisComponentProperty = Wrapper(cdkObject)
+          AnalysisComponentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisComponentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisComponentProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisComponentProperty =
@@ -3624,7 +3629,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty):
-          PortRangeProperty = Wrapper(cdkObject)
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortRangeProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PortRangeProperty =
@@ -3733,7 +3739,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty):
-          AlternatePathHintProperty = Wrapper(cdkObject)
+          AlternatePathHintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AlternatePathHintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AlternatePathHintProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AlternatePathHintProperty =
@@ -3844,7 +3851,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty):
-          AnalysisLoadBalancerListenerProperty = Wrapper(cdkObject)
+          AnalysisLoadBalancerListenerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisLoadBalancerListenerProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisLoadBalancerListenerProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty
@@ -4103,7 +4111,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty):
-          AnalysisAclRuleProperty = Wrapper(cdkObject)
+          AnalysisAclRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisAclRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisAclRuleProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty =
@@ -5315,7 +5324,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PathComponentProperty):
-          PathComponentProperty = Wrapper(cdkObject)
+          PathComponentProperty = CdkObjectWrappers.wrap(cdkObject) as? PathComponentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PathComponentProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.PathComponentProperty =
@@ -5571,7 +5581,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty):
-          TransitGatewayRouteTableRouteProperty = Wrapper(cdkObject)
+          TransitGatewayRouteTableRouteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransitGatewayRouteTableRouteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransitGatewayRouteTableRouteProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty
@@ -5830,7 +5841,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty):
-          AnalysisSecurityGroupRuleProperty = Wrapper(cdkObject)
+          AnalysisSecurityGroupRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisSecurityGroupRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisSecurityGroupRuleProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty
@@ -6052,7 +6064,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty):
-          AdditionalDetailProperty = Wrapper(cdkObject)
+          AdditionalDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? AdditionalDetailProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdditionalDetailProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AdditionalDetailProperty =
@@ -6433,7 +6446,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty):
-          AnalysisRouteTableRouteProperty = Wrapper(cdkObject)
+          AnalysisRouteTableRouteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisRouteTableRouteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisRouteTableRouteProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty

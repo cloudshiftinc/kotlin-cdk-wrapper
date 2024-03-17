@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -67,7 +68,8 @@ public interface IScalableTarget : IResource {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.IScalableTarget):
-        IScalableTarget = Wrapper(cdkObject)
+        IScalableTarget = CdkObjectWrappers.wrap(cdkObject) as? IScalableTarget ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IScalableTarget):
         software.amazon.awscdk.services.applicationautoscaling.IScalableTarget = (wrapped as

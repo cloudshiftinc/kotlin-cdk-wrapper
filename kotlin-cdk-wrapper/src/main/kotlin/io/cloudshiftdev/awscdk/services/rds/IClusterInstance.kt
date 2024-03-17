@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -76,7 +77,8 @@ public interface IClusterInstance {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.IClusterInstance):
-        IClusterInstance = Wrapper(cdkObject)
+        IClusterInstance = CdkObjectWrappers.wrap(cdkObject) as? IClusterInstance ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IClusterInstance):
         software.amazon.awscdk.services.rds.IClusterInstance = (wrapped as CdkObject).cdkObject as

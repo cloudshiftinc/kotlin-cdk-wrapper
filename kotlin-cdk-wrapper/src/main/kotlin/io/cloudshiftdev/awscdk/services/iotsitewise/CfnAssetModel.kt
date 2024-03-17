@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1087,7 +1088,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty):
-          TumblingWindowProperty = Wrapper(cdkObject)
+          TumblingWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? TumblingWindowProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TumblingWindowProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty =
@@ -1465,7 +1467,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty):
-          AssetModelPropertyProperty = Wrapper(cdkObject)
+          AssetModelPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetModelPropertyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetModelPropertyProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty =
@@ -1915,7 +1918,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelCompositeModelProperty):
-          AssetModelCompositeModelProperty = Wrapper(cdkObject)
+          AssetModelCompositeModelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetModelCompositeModelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetModelCompositeModelProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelCompositeModelProperty
@@ -2067,7 +2071,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.ExpressionVariableProperty):
-          ExpressionVariableProperty = Wrapper(cdkObject)
+          ExpressionVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExpressionVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExpressionVariableProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.ExpressionVariableProperty =
@@ -2328,7 +2333,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty):
-          MetricProperty = Wrapper(cdkObject)
+          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty = (wrapped as
@@ -2411,7 +2417,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyPathDefinitionProperty):
-          PropertyPathDefinitionProperty = Wrapper(cdkObject)
+          PropertyPathDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PropertyPathDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PropertyPathDefinitionProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyPathDefinitionProperty =
@@ -2827,7 +2834,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyTypeProperty):
-          PropertyTypeProperty = Wrapper(cdkObject)
+          PropertyTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertyTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PropertyTypeProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyTypeProperty = (wrapped
@@ -2940,7 +2948,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty):
-          MetricWindowProperty = Wrapper(cdkObject)
+          MetricWindowProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricWindowProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricWindowProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty = (wrapped
@@ -3119,7 +3128,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TransformProperty):
-          TransformProperty = Wrapper(cdkObject)
+          TransformProperty = CdkObjectWrappers.wrap(cdkObject) as? TransformProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TransformProperty = (wrapped as
@@ -3225,7 +3235,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty):
-          AttributeProperty = Wrapper(cdkObject)
+          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty = (wrapped as
@@ -3431,7 +3442,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty):
-          AssetModelHierarchyProperty = Wrapper(cdkObject)
+          AssetModelHierarchyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetModelHierarchyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetModelHierarchyProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty =
@@ -3729,7 +3741,8 @@ public open class CfnAssetModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.VariableValueProperty):
-          VariableValueProperty = Wrapper(cdkObject)
+          VariableValueProperty = CdkObjectWrappers.wrap(cdkObject) as? VariableValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VariableValueProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.VariableValueProperty = (wrapped

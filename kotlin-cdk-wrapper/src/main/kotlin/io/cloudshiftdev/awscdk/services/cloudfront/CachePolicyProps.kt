@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -372,7 +373,8 @@ public interface CachePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicyProps):
-        CachePolicyProps = Wrapper(cdkObject)
+        CachePolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CachePolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CachePolicyProps):
         software.amazon.awscdk.services.cloudfront.CachePolicyProps = (wrapped as

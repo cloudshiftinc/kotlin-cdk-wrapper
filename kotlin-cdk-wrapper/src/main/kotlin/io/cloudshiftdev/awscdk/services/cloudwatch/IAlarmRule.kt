@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -26,7 +27,7 @@ public interface IAlarmRule {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmRule): IAlarmRule
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IAlarmRule ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAlarmRule): software.amazon.awscdk.services.cloudwatch.IAlarmRule
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.IAlarmRule

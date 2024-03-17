@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -94,7 +95,8 @@ public interface ILaunchTemplate : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ILaunchTemplate):
-        ILaunchTemplate = Wrapper(cdkObject)
+        ILaunchTemplate = CdkObjectWrappers.wrap(cdkObject) as? ILaunchTemplate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILaunchTemplate):
         software.amazon.awscdk.services.ec2.ILaunchTemplate = (wrapped as CdkObject).cdkObject as

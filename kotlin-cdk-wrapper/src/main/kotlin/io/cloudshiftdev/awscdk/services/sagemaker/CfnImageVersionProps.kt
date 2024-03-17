@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.sagemaker
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -386,7 +387,8 @@ public interface CfnImageVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageVersionProps):
-        CfnImageVersionProps = Wrapper(cdkObject)
+        CfnImageVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnImageVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageVersionProps):
         software.amazon.awscdk.services.sagemaker.CfnImageVersionProps = (wrapped as

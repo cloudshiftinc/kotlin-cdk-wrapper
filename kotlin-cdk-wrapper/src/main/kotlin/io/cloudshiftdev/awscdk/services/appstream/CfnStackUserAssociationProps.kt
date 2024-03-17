@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appstream
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -200,7 +201,8 @@ public interface CfnStackUserAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStackUserAssociationProps):
-        CfnStackUserAssociationProps = Wrapper(cdkObject)
+        CfnStackUserAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnStackUserAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStackUserAssociationProps):
         software.amazon.awscdk.services.appstream.CfnStackUserAssociationProps = (wrapped as

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -76,7 +77,8 @@ public interface IRealtimeLogConfig : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.IRealtimeLogConfig):
-        IRealtimeLogConfig = Wrapper(cdkObject)
+        IRealtimeLogConfig = CdkObjectWrappers.wrap(cdkObject) as? IRealtimeLogConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRealtimeLogConfig):
         software.amazon.awscdk.services.cloudfront.IRealtimeLogConfig = (wrapped as

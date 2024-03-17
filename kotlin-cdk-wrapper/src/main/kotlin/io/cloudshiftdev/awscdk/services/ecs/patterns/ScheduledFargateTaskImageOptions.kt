@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import io.cloudshiftdev.awscdk.services.ecs.FargatePlatformVersion
 import io.cloudshiftdev.awscdk.services.ecs.FargateTaskDefinition
@@ -480,7 +481,8 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskImageOptions):
-        ScheduledFargateTaskImageOptions = Wrapper(cdkObject)
+        ScheduledFargateTaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ScheduledFargateTaskImageOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledFargateTaskImageOptions):
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskImageOptions = (wrapped as

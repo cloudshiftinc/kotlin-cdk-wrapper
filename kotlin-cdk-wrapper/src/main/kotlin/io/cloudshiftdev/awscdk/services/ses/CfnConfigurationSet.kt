@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -858,7 +859,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty):
-          DeliveryOptionsProperty = Wrapper(cdkObject)
+          DeliveryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeliveryOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeliveryOptionsProperty):
           software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty = (wrapped
@@ -951,7 +953,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty):
-          GuardianOptionsProperty = Wrapper(cdkObject)
+          GuardianOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? GuardianOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GuardianOptionsProperty):
           software.amazon.awscdk.services.ses.CfnConfigurationSet.GuardianOptionsProperty = (wrapped
@@ -1116,7 +1119,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty):
-          VdmOptionsProperty = Wrapper(cdkObject)
+          VdmOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? VdmOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VdmOptionsProperty):
           software.amazon.awscdk.services.ses.CfnConfigurationSet.VdmOptionsProperty = (wrapped as
@@ -1210,7 +1214,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty):
-          DashboardOptionsProperty = Wrapper(cdkObject)
+          DashboardOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DashboardOptionsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DashboardOptionsProperty):
           software.amazon.awscdk.services.ses.CfnConfigurationSet.DashboardOptionsProperty =
@@ -1312,7 +1317,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty):
-          SendingOptionsProperty = Wrapper(cdkObject)
+          SendingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SendingOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SendingOptionsProperty):
           software.amazon.awscdk.services.ses.CfnConfigurationSet.SendingOptionsProperty = (wrapped
@@ -1451,7 +1457,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty):
-          SuppressionOptionsProperty = Wrapper(cdkObject)
+          SuppressionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuppressionOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SuppressionOptionsProperty):
           software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty =
@@ -1542,7 +1549,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty):
-          TrackingOptionsProperty = Wrapper(cdkObject)
+          TrackingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? TrackingOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrackingOptionsProperty):
           software.amazon.awscdk.services.ses.CfnConfigurationSet.TrackingOptionsProperty = (wrapped
@@ -1656,7 +1664,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty):
-          ReputationOptionsProperty = Wrapper(cdkObject)
+          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReputationOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReputationOptionsProperty):
           software.amazon.awscdk.services.ses.CfnConfigurationSet.ReputationOptionsProperty =

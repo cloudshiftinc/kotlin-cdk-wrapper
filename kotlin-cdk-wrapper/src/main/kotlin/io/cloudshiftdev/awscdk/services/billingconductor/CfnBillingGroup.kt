@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -625,7 +626,8 @@ public open class CfnBillingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup.AccountGroupingProperty):
-          AccountGroupingProperty = Wrapper(cdkObject)
+          AccountGroupingProperty = CdkObjectWrappers.wrap(cdkObject) as? AccountGroupingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountGroupingProperty):
           software.amazon.awscdk.services.billingconductor.CfnBillingGroup.AccountGroupingProperty =
@@ -712,7 +714,8 @@ public open class CfnBillingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroup.ComputationPreferenceProperty):
-          ComputationPreferenceProperty = Wrapper(cdkObject)
+          ComputationPreferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComputationPreferenceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputationPreferenceProperty):
           software.amazon.awscdk.services.billingconductor.CfnBillingGroup.ComputationPreferenceProperty

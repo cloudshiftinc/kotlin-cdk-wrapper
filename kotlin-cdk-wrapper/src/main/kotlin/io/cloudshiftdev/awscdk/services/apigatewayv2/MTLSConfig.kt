@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -131,7 +132,7 @@ public interface MTLSConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.MTLSConfig):
-        MTLSConfig = Wrapper(cdkObject)
+        MTLSConfig = CdkObjectWrappers.wrap(cdkObject) as? MTLSConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MTLSConfig):
         software.amazon.awscdk.services.apigatewayv2.MTLSConfig = (wrapped as CdkObject).cdkObject

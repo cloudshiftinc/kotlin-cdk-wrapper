@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
@@ -66,7 +67,7 @@ public abstract class Product internal constructor(
         id, productArn).let(IProduct::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.Product): Product =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Product ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Product): software.amazon.awscdk.services.servicecatalog.Product =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.servicecatalog.Product

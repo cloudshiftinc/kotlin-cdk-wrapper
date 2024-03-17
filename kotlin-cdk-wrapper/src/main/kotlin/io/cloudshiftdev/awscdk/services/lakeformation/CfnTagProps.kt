@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lakeformation
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -245,7 +246,7 @@ public interface CfnTagProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagProps):
-        CfnTagProps = Wrapper(cdkObject)
+        CfnTagProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTagProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTagProps):
         software.amazon.awscdk.services.lakeformation.CfnTagProps = (wrapped as CdkObject).cdkObject

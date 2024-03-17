@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -95,7 +96,7 @@ public interface IDestination {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.IDestination): IDestination
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IDestination ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IDestination): software.amazon.awscdk.services.lambda.IDestination
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.IDestination

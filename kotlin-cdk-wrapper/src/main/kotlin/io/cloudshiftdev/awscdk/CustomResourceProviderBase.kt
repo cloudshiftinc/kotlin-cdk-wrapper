@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Any
 import kotlin.String
@@ -60,7 +61,8 @@ public abstract class CustomResourceProviderBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.CustomResourceProviderBase):
-        CustomResourceProviderBase = Wrapper(cdkObject)
+        CustomResourceProviderBase = CdkObjectWrappers.wrap(cdkObject) as?
+        CustomResourceProviderBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomResourceProviderBase):
         software.amazon.awscdk.CustomResourceProviderBase = (wrapped as CdkObject).cdkObject as

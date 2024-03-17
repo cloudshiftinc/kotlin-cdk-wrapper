@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -889,7 +890,8 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty):
-          RouteSettingsProperty = Wrapper(cdkObject)
+          RouteSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RouteSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RouteSettingsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty = (wrapped as
@@ -1016,7 +1018,8 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty):
-          AccessLogSettingsProperty = Wrapper(cdkObject)
+          AccessLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessLogSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessLogSettingsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty = (wrapped

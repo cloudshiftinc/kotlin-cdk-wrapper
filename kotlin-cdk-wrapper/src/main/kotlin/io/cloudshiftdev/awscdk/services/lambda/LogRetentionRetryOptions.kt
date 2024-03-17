@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.Number
 import kotlin.Unit
@@ -97,7 +98,8 @@ public interface LogRetentionRetryOptions :
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.LogRetentionRetryOptions):
-        LogRetentionRetryOptions = Wrapper(cdkObject)
+        LogRetentionRetryOptions = CdkObjectWrappers.wrap(cdkObject) as? LogRetentionRetryOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogRetentionRetryOptions):
         software.amazon.awscdk.services.lambda.LogRetentionRetryOptions = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.pcaconnectorad
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -124,7 +125,8 @@ public interface CfnServicePrincipalNameProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalNameProps):
-        CfnServicePrincipalNameProps = Wrapper(cdkObject)
+        CfnServicePrincipalNameProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnServicePrincipalNameProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServicePrincipalNameProps):
         software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalNameProps = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.sagemaker
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -216,7 +217,8 @@ public interface CfnNotebookInstanceLifecycleConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfigProps):
-        CfnNotebookInstanceLifecycleConfigProps = Wrapper(cdkObject)
+        CfnNotebookInstanceLifecycleConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNotebookInstanceLifecycleConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotebookInstanceLifecycleConfigProps):
         software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfigProps = (wrapped

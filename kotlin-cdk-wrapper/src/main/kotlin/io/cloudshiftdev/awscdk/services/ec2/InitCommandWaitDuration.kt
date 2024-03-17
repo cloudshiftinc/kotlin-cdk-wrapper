@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Represents a duration to wait after a command has finished, in case of a reboot (Windows only).
@@ -35,7 +36,8 @@ public abstract class InitCommandWaitDuration internal constructor(
         software.amazon.awscdk.services.ec2.InitCommandWaitDuration.of(duration.let(Duration::unwrap)).let(InitCommandWaitDuration::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitCommandWaitDuration):
-        InitCommandWaitDuration = Wrapper(cdkObject)
+        InitCommandWaitDuration = CdkObjectWrappers.wrap(cdkObject) as? InitCommandWaitDuration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InitCommandWaitDuration):
         software.amazon.awscdk.services.ec2.InitCommandWaitDuration = (wrapped as

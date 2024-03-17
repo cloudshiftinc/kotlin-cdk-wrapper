@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Unit
@@ -200,7 +201,8 @@ public interface CfnReplicationSetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSetProps):
-        CfnReplicationSetProps = Wrapper(cdkObject)
+        CfnReplicationSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReplicationSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationSetProps):
         software.amazon.awscdk.services.ssmincidents.CfnReplicationSetProps = (wrapped as

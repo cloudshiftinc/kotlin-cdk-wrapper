@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -330,7 +331,8 @@ public interface CfnDistributionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistributionProps):
-        CfnDistributionProps = Wrapper(cdkObject)
+        CfnDistributionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDistributionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDistributionProps):
         software.amazon.awscdk.services.cloudfront.CfnDistributionProps = (wrapped as

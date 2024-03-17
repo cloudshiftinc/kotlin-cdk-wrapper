@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -791,7 +792,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty):
-          MetricPolicyRuleProperty = Wrapper(cdkObject)
+          MetricPolicyRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricPolicyRuleProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricPolicyRuleProperty):
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty =
@@ -976,7 +978,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty):
-          MetricPolicyProperty = Wrapper(cdkObject)
+          MetricPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricPolicyProperty):
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty = (wrapped as
@@ -1307,7 +1310,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty):
-          CorsRuleProperty = Wrapper(cdkObject)
+          CorsRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? CorsRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CorsRuleProperty):
           software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty = (wrapped as

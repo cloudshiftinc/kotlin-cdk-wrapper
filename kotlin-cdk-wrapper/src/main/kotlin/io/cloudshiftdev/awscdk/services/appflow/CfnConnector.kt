@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -391,7 +392,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty):
-          ConnectorProvisioningConfigProperty = Wrapper(cdkObject)
+          ConnectorProvisioningConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorProvisioningConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorProvisioningConfigProperty):
           software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty =
@@ -476,7 +478,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty):
-          LambdaConnectorProvisioningConfigProperty = Wrapper(cdkObject)
+          LambdaConnectorProvisioningConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaConnectorProvisioningConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaConnectorProvisioningConfigProperty):
           software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty

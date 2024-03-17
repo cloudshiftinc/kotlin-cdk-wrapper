@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRule
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRuleSource
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRuleTarget
@@ -659,7 +660,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.IPipeline): IPipeline
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IPipeline ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPipeline): software.amazon.awscdk.services.codepipeline.IPipeline
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codepipeline.IPipeline

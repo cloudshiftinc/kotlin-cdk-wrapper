@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda.destinations
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -113,7 +114,8 @@ public interface LambdaDestinationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOptions):
-        LambdaDestinationOptions = Wrapper(cdkObject)
+        LambdaDestinationOptions = CdkObjectWrappers.wrap(cdkObject) as? LambdaDestinationOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDestinationOptions):
         software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOptions = (wrapped as

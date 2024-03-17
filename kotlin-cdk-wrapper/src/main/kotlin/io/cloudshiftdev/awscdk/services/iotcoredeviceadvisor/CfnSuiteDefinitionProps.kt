@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iotcoredeviceadvisor
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -261,7 +262,8 @@ public interface CfnSuiteDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinitionProps):
-        CfnSuiteDefinitionProps = Wrapper(cdkObject)
+        CfnSuiteDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSuiteDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSuiteDefinitionProps):
         software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinitionProps = (wrapped as

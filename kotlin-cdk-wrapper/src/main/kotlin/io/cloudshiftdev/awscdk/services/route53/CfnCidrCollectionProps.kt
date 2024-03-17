@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -131,7 +132,8 @@ public interface CfnCidrCollectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollectionProps):
-        CfnCidrCollectionProps = Wrapper(cdkObject)
+        CfnCidrCollectionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCidrCollectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCidrCollectionProps):
         software.amazon.awscdk.services.route53.CfnCidrCollectionProps = (wrapped as

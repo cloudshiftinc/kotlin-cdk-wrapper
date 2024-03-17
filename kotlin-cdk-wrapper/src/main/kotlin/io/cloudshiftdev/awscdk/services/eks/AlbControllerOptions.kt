@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -159,7 +160,8 @@ public interface AlbControllerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.AlbControllerOptions):
-        AlbControllerOptions = Wrapper(cdkObject)
+        AlbControllerOptions = CdkObjectWrappers.wrap(cdkObject) as? AlbControllerOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AlbControllerOptions):
         software.amazon.awscdk.services.eks.AlbControllerOptions = (wrapped as CdkObject).cdkObject

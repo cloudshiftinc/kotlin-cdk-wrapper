@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -134,7 +135,7 @@ public interface AddHeaderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.AddHeaderProps):
-        AddHeaderProps = Wrapper(cdkObject)
+        AddHeaderProps = CdkObjectWrappers.wrap(cdkObject) as? AddHeaderProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddHeaderProps):
         software.amazon.awscdk.services.ses.actions.AddHeaderProps = (wrapped as

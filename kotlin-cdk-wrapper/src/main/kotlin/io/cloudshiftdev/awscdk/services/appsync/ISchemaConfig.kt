@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -61,7 +62,7 @@ public interface ISchemaConfig {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.ISchemaConfig):
-        ISchemaConfig = Wrapper(cdkObject)
+        ISchemaConfig = CdkObjectWrappers.wrap(cdkObject) as? ISchemaConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISchemaConfig):
         software.amazon.awscdk.services.appsync.ISchemaConfig = (wrapped as CdkObject).cdkObject as

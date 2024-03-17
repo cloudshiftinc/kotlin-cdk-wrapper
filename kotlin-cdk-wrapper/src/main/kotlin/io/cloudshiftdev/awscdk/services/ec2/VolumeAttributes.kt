@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
@@ -124,7 +125,8 @@ public interface VolumeAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VolumeAttributes):
-        VolumeAttributes = Wrapper(cdkObject)
+        VolumeAttributes = CdkObjectWrappers.wrap(cdkObject) as? VolumeAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VolumeAttributes):
         software.amazon.awscdk.services.ec2.VolumeAttributes = (wrapped as CdkObject).cdkObject as

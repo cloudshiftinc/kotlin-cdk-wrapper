@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1041,7 +1042,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty):
-          FormStyleProperty = Wrapper(cdkObject)
+          FormStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? FormStyleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormStyleProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty = (wrapped as
@@ -1247,7 +1249,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty):
-          FormInputValuePropertyProperty = Wrapper(cdkObject)
+          FormInputValuePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormInputValuePropertyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormInputValuePropertyProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty =
@@ -1451,7 +1454,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty):
-          FieldValidationConfigurationProperty = Wrapper(cdkObject)
+          FieldValidationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FieldValidationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldValidationConfigurationProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty
@@ -1787,7 +1791,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty):
-          FileUploaderFieldConfigProperty = Wrapper(cdkObject)
+          FileUploaderFieldConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FileUploaderFieldConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FileUploaderFieldConfigProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty =
@@ -1934,7 +1939,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty):
-          FormInputBindingPropertiesValueProperty = Wrapper(cdkObject)
+          FormInputBindingPropertiesValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormInputBindingPropertiesValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormInputBindingPropertiesValueProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty
@@ -2200,7 +2206,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty):
-          FormCTAProperty = Wrapper(cdkObject)
+          FormCTAProperty = CdkObjectWrappers.wrap(cdkObject) as? FormCTAProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormCTAProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty = (wrapped as
@@ -2315,7 +2322,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty):
-          FormInputValuePropertyBindingPropertiesProperty = Wrapper(cdkObject)
+          FormInputValuePropertyBindingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormInputValuePropertyBindingPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormInputValuePropertyBindingPropertiesProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty
@@ -2494,7 +2502,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty):
-          FormButtonProperty = Wrapper(cdkObject)
+          FormButtonProperty = CdkObjectWrappers.wrap(cdkObject) as? FormButtonProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormButtonProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty = (wrapped as
@@ -2607,7 +2616,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty):
-          FormStyleConfigProperty = Wrapper(cdkObject)
+          FormStyleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FormStyleConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormStyleConfigProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty =
@@ -3253,7 +3263,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldInputConfigProperty):
-          FieldInputConfigProperty = Wrapper(cdkObject)
+          FieldInputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldInputConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldInputConfigProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldInputConfigProperty =
@@ -3546,7 +3557,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.SectionalElementProperty):
-          SectionalElementProperty = Wrapper(cdkObject)
+          SectionalElementProperty = CdkObjectWrappers.wrap(cdkObject) as? SectionalElementProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SectionalElementProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.SectionalElementProperty =
@@ -3634,7 +3646,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty):
-          FormInputBindingPropertiesValuePropertiesProperty = Wrapper(cdkObject)
+          FormInputBindingPropertiesValuePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormInputBindingPropertiesValuePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormInputBindingPropertiesValuePropertiesProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty
@@ -3748,7 +3761,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty):
-          FormDataTypeConfigProperty = Wrapper(cdkObject)
+          FormDataTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormDataTypeConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormDataTypeConfigProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty =
@@ -3883,7 +3897,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty):
-          FieldPositionProperty = Wrapper(cdkObject)
+          FieldPositionProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldPositionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldPositionProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty = (wrapped
@@ -4053,7 +4068,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty):
-          ValueMappingsProperty = Wrapper(cdkObject)
+          ValueMappingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ValueMappingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValueMappingsProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty = (wrapped
@@ -4403,7 +4419,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty):
-          FieldConfigProperty = Wrapper(cdkObject)
+          FieldConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldConfigProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty = (wrapped as
@@ -4586,7 +4603,8 @@ public open class CfnForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty):
-          ValueMappingProperty = Wrapper(cdkObject)
+          ValueMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? ValueMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValueMappingProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty = (wrapped

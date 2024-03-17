@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.mediaconvert
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -245,7 +246,7 @@ public interface CfnQueueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnQueueProps):
-        CfnQueueProps = Wrapper(cdkObject)
+        CfnQueueProps = CdkObjectWrappers.wrap(cdkObject) as? CfnQueueProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnQueueProps):
         software.amazon.awscdk.services.mediaconvert.CfnQueueProps = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.opensearchservice
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -256,7 +257,8 @@ public interface AdvancedSecurityOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions):
-        AdvancedSecurityOptions = Wrapper(cdkObject)
+        AdvancedSecurityOptions = CdkObjectWrappers.wrap(cdkObject) as? AdvancedSecurityOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AdvancedSecurityOptions):
         software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions = (wrapped as

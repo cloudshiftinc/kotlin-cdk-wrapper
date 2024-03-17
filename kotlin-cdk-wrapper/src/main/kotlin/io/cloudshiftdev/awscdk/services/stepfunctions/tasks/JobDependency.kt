@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -101,7 +102,7 @@ public interface JobDependency {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.JobDependency):
-        JobDependency = Wrapper(cdkObject)
+        JobDependency = CdkObjectWrappers.wrap(cdkObject) as? JobDependency ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JobDependency):
         software.amazon.awscdk.services.stepfunctions.tasks.JobDependency = (wrapped as

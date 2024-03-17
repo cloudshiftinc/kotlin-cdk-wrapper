@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.billingconductor
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -185,7 +186,8 @@ public interface CfnPricingPlanProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingPlanProps):
-        CfnPricingPlanProps = Wrapper(cdkObject)
+        CfnPricingPlanProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPricingPlanProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPricingPlanProps):
         software.amazon.awscdk.services.billingconductor.CfnPricingPlanProps = (wrapped as

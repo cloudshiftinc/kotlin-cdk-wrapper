@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1291,7 +1292,8 @@ public open class CfnComputeEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty):
-          EksConfigurationProperty = Wrapper(cdkObject)
+          EksConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EksConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EksConfigurationProperty):
           software.amazon.awscdk.services.batch.CfnComputeEnvironment.EksConfigurationProperty =
@@ -1652,7 +1654,8 @@ public open class CfnComputeEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty):
-          Ec2ConfigurationObjectProperty = Wrapper(cdkObject)
+          Ec2ConfigurationObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Ec2ConfigurationObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Ec2ConfigurationObjectProperty):
           software.amazon.awscdk.services.batch.CfnComputeEnvironment.Ec2ConfigurationObjectProperty
@@ -1871,7 +1874,8 @@ public open class CfnComputeEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty):
-          LaunchTemplateSpecificationProperty = Wrapper(cdkObject)
+          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
           software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationProperty
@@ -2028,7 +2032,8 @@ public open class CfnComputeEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty):
-          UpdatePolicyProperty = Wrapper(cdkObject)
+          UpdatePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? UpdatePolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UpdatePolicyProperty):
           software.amazon.awscdk.services.batch.CfnComputeEnvironment.UpdatePolicyProperty =
@@ -4169,7 +4174,8 @@ public open class CfnComputeEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.ComputeResourcesProperty):
-          ComputeResourcesProperty = Wrapper(cdkObject)
+          ComputeResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as? ComputeResourcesProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputeResourcesProperty):
           software.amazon.awscdk.services.batch.CfnComputeEnvironment.ComputeResourcesProperty =

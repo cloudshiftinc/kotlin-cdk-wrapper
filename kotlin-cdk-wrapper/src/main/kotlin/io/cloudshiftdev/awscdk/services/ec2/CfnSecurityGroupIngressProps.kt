@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -604,7 +605,8 @@ public interface CfnSecurityGroupIngressProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupIngressProps):
-        CfnSecurityGroupIngressProps = Wrapper(cdkObject)
+        CfnSecurityGroupIngressProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSecurityGroupIngressProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityGroupIngressProps):
         software.amazon.awscdk.services.ec2.CfnSecurityGroupIngressProps = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 import kotlin.Unit
@@ -162,7 +163,8 @@ public abstract class StateMachineFragment internal constructor(
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineFragment):
-        StateMachineFragment = Wrapper(cdkObject)
+        StateMachineFragment = CdkObjectWrappers.wrap(cdkObject) as? StateMachineFragment ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StateMachineFragment):
         software.amazon.awscdk.services.stepfunctions.StateMachineFragment = (wrapped as

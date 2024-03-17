@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -135,7 +136,7 @@ public interface CatchProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CatchProps):
-        CatchProps = Wrapper(cdkObject)
+        CatchProps = CdkObjectWrappers.wrap(cdkObject) as? CatchProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CatchProps):
         software.amazon.awscdk.services.stepfunctions.CatchProps = (wrapped as CdkObject).cdkObject

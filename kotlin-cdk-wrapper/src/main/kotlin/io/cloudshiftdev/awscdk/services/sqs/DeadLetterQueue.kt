@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sqs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -100,7 +101,8 @@ public interface DeadLetterQueue {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.DeadLetterQueue):
-        DeadLetterQueue = Wrapper(cdkObject)
+        DeadLetterQueue = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterQueue ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeadLetterQueue):
         software.amazon.awscdk.services.sqs.DeadLetterQueue = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -100,7 +101,8 @@ public interface CanaryTrafficRoutingConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig):
-        CanaryTrafficRoutingConfig = Wrapper(cdkObject)
+        CanaryTrafficRoutingConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        CanaryTrafficRoutingConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CanaryTrafficRoutingConfig):
         software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
@@ -181,7 +182,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.IFileSystem): IFileSystem =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IFileSystem ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFileSystem): software.amazon.awscdk.services.efs.IFileSystem =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.efs.IFileSystem

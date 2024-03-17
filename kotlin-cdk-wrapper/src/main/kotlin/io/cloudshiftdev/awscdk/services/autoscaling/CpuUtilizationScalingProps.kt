@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -144,7 +145,8 @@ public interface CpuUtilizationScalingProps : BaseTargetTrackingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CpuUtilizationScalingProps):
-        CpuUtilizationScalingProps = Wrapper(cdkObject)
+        CpuUtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CpuUtilizationScalingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CpuUtilizationScalingProps):
         software.amazon.awscdk.services.autoscaling.CpuUtilizationScalingProps = (wrapped as

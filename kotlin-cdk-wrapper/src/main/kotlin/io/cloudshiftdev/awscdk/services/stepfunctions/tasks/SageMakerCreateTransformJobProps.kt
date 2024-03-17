@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -806,7 +807,8 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJobProps):
-        SageMakerCreateTransformJobProps = Wrapper(cdkObject)
+        SageMakerCreateTransformJobProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SageMakerCreateTransformJobProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SageMakerCreateTransformJobProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJobProps =

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicediscovery
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import kotlin.String
 import kotlin.Unit
@@ -120,7 +121,8 @@ public interface PrivateDnsNamespaceProps : BaseNamespaceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceProps):
-        PrivateDnsNamespaceProps = Wrapper(cdkObject)
+        PrivateDnsNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as? PrivateDnsNamespaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PrivateDnsNamespaceProps):
         software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceProps = (wrapped as

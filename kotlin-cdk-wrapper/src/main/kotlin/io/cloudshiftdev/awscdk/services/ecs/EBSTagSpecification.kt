@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -111,7 +112,8 @@ public interface EBSTagSpecification {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EBSTagSpecification):
-        EBSTagSpecification = Wrapper(cdkObject)
+        EBSTagSpecification = CdkObjectWrappers.wrap(cdkObject) as? EBSTagSpecification ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EBSTagSpecification):
         software.amazon.awscdk.services.ecs.EBSTagSpecification = (wrapped as CdkObject).cdkObject

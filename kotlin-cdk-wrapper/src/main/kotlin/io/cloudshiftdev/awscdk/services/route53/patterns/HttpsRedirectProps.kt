@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.String
@@ -219,7 +220,8 @@ public interface HttpsRedirectProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps):
-        HttpsRedirectProps = Wrapper(cdkObject)
+        HttpsRedirectProps = CdkObjectWrappers.wrap(cdkObject) as? HttpsRedirectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpsRedirectProps):
         software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -236,7 +237,8 @@ public interface CfnKeySigningKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnKeySigningKeyProps):
-        CfnKeySigningKeyProps = Wrapper(cdkObject)
+        CfnKeySigningKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnKeySigningKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeySigningKeyProps):
         software.amazon.awscdk.services.route53.CfnKeySigningKeyProps = (wrapped as

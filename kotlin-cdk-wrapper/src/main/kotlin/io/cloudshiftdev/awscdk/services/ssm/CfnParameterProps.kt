@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ssm
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -405,7 +406,8 @@ public interface CfnParameterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnParameterProps):
-        CfnParameterProps = Wrapper(cdkObject)
+        CfnParameterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnParameterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnParameterProps):
         software.amazon.awscdk.services.ssm.CfnParameterProps = (wrapped as CdkObject).cdkObject as

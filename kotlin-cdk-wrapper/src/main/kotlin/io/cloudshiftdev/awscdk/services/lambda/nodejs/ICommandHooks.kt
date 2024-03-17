@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda.nodejs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.collections.List
 
@@ -97,7 +98,7 @@ public interface ICommandHooks {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks):
-        ICommandHooks = Wrapper(cdkObject)
+        ICommandHooks = CdkObjectWrappers.wrap(cdkObject) as? ICommandHooks ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ICommandHooks):
         software.amazon.awscdk.services.lambda.nodejs.ICommandHooks = (wrapped as

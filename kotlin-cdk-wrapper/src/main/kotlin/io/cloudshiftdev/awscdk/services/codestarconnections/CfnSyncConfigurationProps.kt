@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codestarconnections
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -228,7 +229,8 @@ public interface CfnSyncConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarconnections.CfnSyncConfigurationProps):
-        CfnSyncConfigurationProps = Wrapper(cdkObject)
+        CfnSyncConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSyncConfigurationProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSyncConfigurationProps):
         software.amazon.awscdk.services.codestarconnections.CfnSyncConfigurationProps = (wrapped as

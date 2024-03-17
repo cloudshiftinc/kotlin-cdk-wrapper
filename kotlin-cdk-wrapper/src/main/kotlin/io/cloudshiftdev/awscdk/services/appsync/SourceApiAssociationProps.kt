@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -182,7 +183,8 @@ public interface SourceApiAssociationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociationProps):
-        SourceApiAssociationProps = Wrapper(cdkObject)
+        SourceApiAssociationProps = CdkObjectWrappers.wrap(cdkObject) as? SourceApiAssociationProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceApiAssociationProps):
         software.amazon.awscdk.services.appsync.SourceApiAssociationProps = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * An abstract class which represents an AWS Lambda event source.
@@ -30,7 +31,7 @@ public interface IEventSource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.IEventSource): IEventSource
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IEventSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEventSource): software.amazon.awscdk.services.lambda.IEventSource
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.IEventSource

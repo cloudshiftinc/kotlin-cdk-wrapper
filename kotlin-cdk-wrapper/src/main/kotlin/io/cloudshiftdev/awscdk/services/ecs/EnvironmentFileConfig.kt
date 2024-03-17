@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.Location
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -114,7 +115,8 @@ public interface EnvironmentFileConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFileConfig):
-        EnvironmentFileConfig = Wrapper(cdkObject)
+        EnvironmentFileConfig = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentFileConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentFileConfig):
         software.amazon.awscdk.services.ecs.EnvironmentFileConfig = (wrapped as CdkObject).cdkObject

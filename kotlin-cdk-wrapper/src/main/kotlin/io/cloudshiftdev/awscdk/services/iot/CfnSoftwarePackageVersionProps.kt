@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -202,7 +203,8 @@ public interface CfnSoftwarePackageVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackageVersionProps):
-        CfnSoftwarePackageVersionProps = Wrapper(cdkObject)
+        CfnSoftwarePackageVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSoftwarePackageVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSoftwarePackageVersionProps):
         software.amazon.awscdk.services.iot.CfnSoftwarePackageVersionProps = (wrapped as

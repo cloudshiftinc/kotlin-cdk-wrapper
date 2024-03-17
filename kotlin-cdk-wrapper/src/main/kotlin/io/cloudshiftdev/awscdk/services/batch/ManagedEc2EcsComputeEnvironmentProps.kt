@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ILaunchTemplate
 import io.cloudshiftdev.awscdk.services.ec2.IPlacementGroup
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
@@ -950,7 +951,8 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironmentProps):
-        ManagedEc2EcsComputeEnvironmentProps = Wrapper(cdkObject)
+        ManagedEc2EcsComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ManagedEc2EcsComputeEnvironmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ManagedEc2EcsComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironmentProps = (wrapped as

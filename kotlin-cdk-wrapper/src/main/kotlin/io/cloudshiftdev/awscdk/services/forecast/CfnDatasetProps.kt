@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.forecast
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -368,7 +369,8 @@ public interface CfnDatasetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.forecast.CfnDatasetProps):
-        CfnDatasetProps = Wrapper(cdkObject)
+        CfnDatasetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDatasetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatasetProps):
         software.amazon.awscdk.services.forecast.CfnDatasetProps = (wrapped as CdkObject).cdkObject

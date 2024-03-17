@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -297,7 +298,8 @@ public interface HttpGatewayRouteMatch {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRouteMatch):
-        HttpGatewayRouteMatch = Wrapper(cdkObject)
+        HttpGatewayRouteMatch = CdkObjectWrappers.wrap(cdkObject) as? HttpGatewayRouteMatch ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpGatewayRouteMatch):
         software.amazon.awscdk.services.appmesh.HttpGatewayRouteMatch = (wrapped as

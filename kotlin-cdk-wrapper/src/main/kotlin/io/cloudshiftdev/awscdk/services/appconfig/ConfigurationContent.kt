@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -65,7 +66,8 @@ public abstract class ConfigurationContent internal constructor(
         software.amazon.awscdk.services.appconfig.ConfigurationContent.fromInlineYaml(content).let(ConfigurationContent::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationContent):
-        ConfigurationContent = Wrapper(cdkObject)
+        ConfigurationContent = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationContent ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConfigurationContent):
         software.amazon.awscdk.services.appconfig.ConfigurationContent = (wrapped as

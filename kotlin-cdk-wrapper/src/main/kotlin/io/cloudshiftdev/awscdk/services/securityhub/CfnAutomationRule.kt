@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1017,7 +1018,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty):
-          SeverityUpdateProperty = Wrapper(cdkObject)
+          SeverityUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as? SeverityUpdateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SeverityUpdateProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.SeverityUpdateProperty =
@@ -1353,7 +1355,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty):
-          MapFilterProperty = Wrapper(cdkObject)
+          MapFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? MapFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MapFilterProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.MapFilterProperty = (wrapped
@@ -1461,7 +1464,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty):
-          DateRangeProperty = Wrapper(cdkObject)
+          DateRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? DateRangeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DateRangeProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateRangeProperty = (wrapped
@@ -1625,7 +1629,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty):
-          WorkflowUpdateProperty = Wrapper(cdkObject)
+          WorkflowUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkflowUpdateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkflowUpdateProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.WorkflowUpdateProperty =
@@ -4437,7 +4442,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFiltersProperty):
-          AutomationRulesFindingFiltersProperty = Wrapper(cdkObject)
+          AutomationRulesFindingFiltersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutomationRulesFindingFiltersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutomationRulesFindingFiltersProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFiltersProperty
@@ -4555,7 +4561,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty):
-          RelatedFindingProperty = Wrapper(cdkObject)
+          RelatedFindingProperty = CdkObjectWrappers.wrap(cdkObject) as? RelatedFindingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RelatedFindingProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.RelatedFindingProperty =
@@ -4756,7 +4763,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateFilterProperty):
-          DateFilterProperty = Wrapper(cdkObject)
+          DateFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? DateFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DateFilterProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.DateFilterProperty =
@@ -4865,7 +4873,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.NoteUpdateProperty):
-          NoteUpdateProperty = Wrapper(cdkObject)
+          NoteUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as? NoteUpdateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NoteUpdateProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.NoteUpdateProperty =
@@ -5319,7 +5328,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty):
-          AutomationRulesFindingFieldsUpdateProperty = Wrapper(cdkObject)
+          AutomationRulesFindingFieldsUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutomationRulesFindingFieldsUpdateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutomationRulesFindingFieldsUpdateProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFieldsUpdateProperty
@@ -5462,7 +5472,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.NumberFilterProperty):
-          NumberFilterProperty = Wrapper(cdkObject)
+          NumberFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? NumberFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NumberFilterProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.NumberFilterProperty =
@@ -5654,7 +5665,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty):
-          AutomationRulesActionProperty = Wrapper(cdkObject)
+          AutomationRulesActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutomationRulesActionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutomationRulesActionProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesActionProperty
@@ -6021,7 +6033,8 @@ public open class CfnAutomationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule.StringFilterProperty):
-          StringFilterProperty = Wrapper(cdkObject)
+          StringFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? StringFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StringFilterProperty):
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.StringFilterProperty =

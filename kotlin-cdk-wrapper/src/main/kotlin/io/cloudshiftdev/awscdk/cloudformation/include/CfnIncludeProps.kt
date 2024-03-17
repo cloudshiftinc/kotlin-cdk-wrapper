@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudformation.include
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -303,7 +304,8 @@ public interface CfnIncludeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudformation.include.CfnIncludeProps):
-        CfnIncludeProps = Wrapper(cdkObject)
+        CfnIncludeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIncludeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIncludeProps):
         software.amazon.awscdk.cloudformation.include.CfnIncludeProps = (wrapped as

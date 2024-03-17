@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.AutoScalingGroup
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
@@ -702,7 +703,7 @@ public interface ICluster : IResource, IConnectable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.ICluster): ICluster =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ICluster ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ICluster): software.amazon.awscdk.services.eks.ICluster = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.eks.ICluster

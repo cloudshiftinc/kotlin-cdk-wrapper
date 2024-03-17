@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import io.cloudshiftdev.awscdk.services.ecs.LogDriver
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -509,7 +510,8 @@ public interface EcsContainerDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EcsContainerDefinitionProps):
-        EcsContainerDefinitionProps = Wrapper(cdkObject)
+        EcsContainerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EcsContainerDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsContainerDefinitionProps):
         software.amazon.awscdk.services.batch.EcsContainerDefinitionProps = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -205,7 +206,8 @@ public interface CfnIPAMResourceDiscoveryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryProps):
-        CfnIPAMResourceDiscoveryProps = Wrapper(cdkObject)
+        CfnIPAMResourceDiscoveryProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnIPAMResourceDiscoveryProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMResourceDiscoveryProps):
         software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryProps = (wrapped as

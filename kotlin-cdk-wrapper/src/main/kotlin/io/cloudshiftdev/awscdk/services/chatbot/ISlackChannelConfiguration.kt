@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRuleTarget
@@ -210,7 +211,8 @@ public interface ISlackChannelConfiguration : IResource, IGrantable, INotificati
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.chatbot.ISlackChannelConfiguration):
-        ISlackChannelConfiguration = Wrapper(cdkObject)
+        ISlackChannelConfiguration = CdkObjectWrappers.wrap(cdkObject) as?
+        ISlackChannelConfiguration ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISlackChannelConfiguration):
         software.amazon.awscdk.services.chatbot.ISlackChannelConfiguration = (wrapped as

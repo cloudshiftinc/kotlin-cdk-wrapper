@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -361,7 +362,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty):
-          VpcConfigurationProperty = Wrapper(cdkObject)
+          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigurationProperty):
           software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty =

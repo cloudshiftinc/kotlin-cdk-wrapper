@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1638,7 +1639,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty):
-          TargetTrackingScalingPolicyConfigurationProperty = Wrapper(cdkObject)
+          TargetTrackingScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingScalingPolicyConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetTrackingScalingPolicyConfigurationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TargetTrackingScalingPolicyConfigurationProperty
@@ -1787,7 +1789,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty):
-          TimeToLiveSpecificationProperty = Wrapper(cdkObject)
+          TimeToLiveSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeToLiveSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeToLiveSpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.TimeToLiveSpecificationProperty =
@@ -1959,7 +1962,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty):
-          ProjectionProperty = Wrapper(cdkObject)
+          ProjectionProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProjectionProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ProjectionProperty = (wrapped as
@@ -2087,7 +2091,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty):
-          StreamSpecificationProperty = Wrapper(cdkObject)
+          StreamSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamSpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.StreamSpecificationProperty =
@@ -2377,7 +2382,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.CapacityAutoScalingSettingsProperty):
-          CapacityAutoScalingSettingsProperty = Wrapper(cdkObject)
+          CapacityAutoScalingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityAutoScalingSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityAutoScalingSettingsProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.CapacityAutoScalingSettingsProperty
@@ -3079,7 +3085,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSpecificationProperty):
-          ReplicaSpecificationProperty = Wrapper(cdkObject)
+          ReplicaSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicaSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicaSpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSpecificationProperty =
@@ -3181,7 +3188,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty):
-          ContributorInsightsSpecificationProperty = Wrapper(cdkObject)
+          ContributorInsightsSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContributorInsightsSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContributorInsightsSpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ContributorInsightsSpecificationProperty
@@ -3584,7 +3592,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty):
-          GlobalSecondaryIndexProperty = Wrapper(cdkObject)
+          GlobalSecondaryIndexProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlobalSecondaryIndexProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GlobalSecondaryIndexProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.GlobalSecondaryIndexProperty =
@@ -3872,7 +3881,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty):
-          ReplicaGlobalSecondaryIndexSpecificationProperty = Wrapper(cdkObject)
+          ReplicaGlobalSecondaryIndexSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicaGlobalSecondaryIndexSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicaGlobalSecondaryIndexSpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaGlobalSecondaryIndexSpecificationProperty
@@ -3995,7 +4005,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty):
-          AttributeDefinitionProperty = Wrapper(cdkObject)
+          AttributeDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AttributeDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeDefinitionProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.AttributeDefinitionProperty =
@@ -4095,7 +4106,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty):
-          ReplicaSSESpecificationProperty = Wrapper(cdkObject)
+          ReplicaSSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicaSSESpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicaSSESpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSSESpecificationProperty =
@@ -4264,7 +4276,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.SSESpecificationProperty):
-          SSESpecificationProperty = Wrapper(cdkObject)
+          SSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? SSESpecificationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SSESpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.SSESpecificationProperty =
@@ -4431,7 +4444,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty):
-          KeySchemaProperty = Wrapper(cdkObject)
+          KeySchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? KeySchemaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeySchemaProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KeySchemaProperty = (wrapped as
@@ -4570,7 +4584,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteProvisionedThroughputSettingsProperty):
-          WriteProvisionedThroughputSettingsProperty = Wrapper(cdkObject)
+          WriteProvisionedThroughputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WriteProvisionedThroughputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WriteProvisionedThroughputSettingsProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WriteProvisionedThroughputSettingsProperty
@@ -4871,7 +4886,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty):
-          LocalSecondaryIndexProperty = Wrapper(cdkObject)
+          LocalSecondaryIndexProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LocalSecondaryIndexProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LocalSecondaryIndexProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.LocalSecondaryIndexProperty =
@@ -4972,7 +4988,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty):
-          PointInTimeRecoverySpecificationProperty = Wrapper(cdkObject)
+          PointInTimeRecoverySpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PointInTimeRecoverySpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PointInTimeRecoverySpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.PointInTimeRecoverySpecificationProperty
@@ -5141,7 +5158,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty):
-          ReadProvisionedThroughputSettingsProperty = Wrapper(cdkObject)
+          ReadProvisionedThroughputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReadProvisionedThroughputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReadProvisionedThroughputSettingsProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReadProvisionedThroughputSettingsProperty
@@ -5258,7 +5276,8 @@ public open class CfnGlobalTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty):
-          KinesisStreamSpecificationProperty = Wrapper(cdkObject)
+          KinesisStreamSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisStreamSpecificationProperty):
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.KinesisStreamSpecificationProperty

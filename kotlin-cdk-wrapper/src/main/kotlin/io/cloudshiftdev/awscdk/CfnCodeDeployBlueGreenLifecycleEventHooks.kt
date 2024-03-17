@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -203,7 +204,8 @@ public interface CfnCodeDeployBlueGreenLifecycleEventHooks {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenLifecycleEventHooks):
-        CfnCodeDeployBlueGreenLifecycleEventHooks = Wrapper(cdkObject)
+        CfnCodeDeployBlueGreenLifecycleEventHooks = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCodeDeployBlueGreenLifecycleEventHooks ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeDeployBlueGreenLifecycleEventHooks):
         software.amazon.awscdk.CfnCodeDeployBlueGreenLifecycleEventHooks = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -91,7 +92,8 @@ public interface WithoutPolicyUpdatesOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions):
-        WithoutPolicyUpdatesOptions = Wrapper(cdkObject)
+        WithoutPolicyUpdatesOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        WithoutPolicyUpdatesOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WithoutPolicyUpdatesOptions):
         software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions = (wrapped as

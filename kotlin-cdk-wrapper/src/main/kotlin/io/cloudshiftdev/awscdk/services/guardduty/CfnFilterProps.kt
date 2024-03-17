@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -400,7 +401,7 @@ public interface CfnFilterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnFilterProps):
-        CfnFilterProps = Wrapper(cdkObject)
+        CfnFilterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFilterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFilterProps):
         software.amazon.awscdk.services.guardduty.CfnFilterProps = (wrapped as CdkObject).cdkObject

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.IAutoScalingGroup
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.constructs.Node
@@ -123,7 +124,8 @@ public interface IServerDeploymentGroup : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.IServerDeploymentGroup):
-        IServerDeploymentGroup = Wrapper(cdkObject)
+        IServerDeploymentGroup = CdkObjectWrappers.wrap(cdkObject) as? IServerDeploymentGroup ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IServerDeploymentGroup):
         software.amazon.awscdk.services.codedeploy.IServerDeploymentGroup = (wrapped as

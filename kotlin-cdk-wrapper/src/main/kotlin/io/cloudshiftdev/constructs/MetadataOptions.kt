@@ -4,6 +4,7 @@ package io.cloudshiftdev.constructs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Unit
@@ -50,7 +51,7 @@ public interface MetadataOptions {
     }
 
     internal fun wrap(cdkObject: software.constructs.MetadataOptions): MetadataOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? MetadataOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetadataOptions): software.constructs.MetadataOptions = (wrapped as
         CdkObject).cdkObject as software.constructs.MetadataOptions

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1128,7 +1129,8 @@ public open class CfnIPAMPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPool.ProvisionedCidrProperty):
-          ProvisionedCidrProperty = Wrapper(cdkObject)
+          ProvisionedCidrProperty = CdkObjectWrappers.wrap(cdkObject) as? ProvisionedCidrProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisionedCidrProperty):
           software.amazon.awscdk.services.ec2.CfnIPAMPool.ProvisionedCidrProperty = (wrapped as
@@ -1289,7 +1291,8 @@ public open class CfnIPAMPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPool.SourceResourceProperty):
-          SourceResourceProperty = Wrapper(cdkObject)
+          SourceResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceResourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceResourceProperty):
           software.amazon.awscdk.services.ec2.CfnIPAMPool.SourceResourceProperty = (wrapped as

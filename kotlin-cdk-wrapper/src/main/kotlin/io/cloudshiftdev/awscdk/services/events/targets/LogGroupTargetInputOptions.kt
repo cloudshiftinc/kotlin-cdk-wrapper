@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 
@@ -127,7 +128,8 @@ public interface LogGroupTargetInputOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions):
-        LogGroupTargetInputOptions = Wrapper(cdkObject)
+        LogGroupTargetInputOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        LogGroupTargetInputOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogGroupTargetInputOptions):
         software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions = (wrapped as

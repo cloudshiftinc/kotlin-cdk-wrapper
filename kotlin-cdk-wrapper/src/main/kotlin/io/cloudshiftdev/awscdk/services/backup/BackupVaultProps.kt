@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.backup
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.sns.ITopic
@@ -356,7 +357,8 @@ public interface BackupVaultProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.BackupVaultProps):
-        BackupVaultProps = Wrapper(cdkObject)
+        BackupVaultProps = CdkObjectWrappers.wrap(cdkObject) as? BackupVaultProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BackupVaultProps):
         software.amazon.awscdk.services.backup.BackupVaultProps = (wrapped as CdkObject).cdkObject

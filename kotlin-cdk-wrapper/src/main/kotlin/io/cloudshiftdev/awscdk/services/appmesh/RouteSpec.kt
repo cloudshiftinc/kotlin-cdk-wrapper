@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -84,7 +85,7 @@ public abstract class RouteSpec internal constructor(
         tcp(TcpRouteSpecOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec): RouteSpec =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? RouteSpec ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RouteSpec): software.amazon.awscdk.services.appmesh.RouteSpec =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.RouteSpec

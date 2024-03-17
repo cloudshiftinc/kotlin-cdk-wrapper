@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ecs.CloudMapOptions
 import io.cloudshiftdev.awscdk.services.ecs.FargatePlatformVersion
@@ -782,7 +783,8 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateServiceProps):
-        ApplicationMultipleTargetGroupsFargateServiceProps = Wrapper(cdkObject)
+        ApplicationMultipleTargetGroupsFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationMultipleTargetGroupsFargateServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationMultipleTargetGroupsFargateServiceProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateServiceProps

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -547,7 +548,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironment.EnvironmentParameterProperty):
-          EnvironmentParameterProperty = Wrapper(cdkObject)
+          EnvironmentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentParameterProperty):
           software.amazon.awscdk.services.datazone.CfnEnvironment.EnvironmentParameterProperty =

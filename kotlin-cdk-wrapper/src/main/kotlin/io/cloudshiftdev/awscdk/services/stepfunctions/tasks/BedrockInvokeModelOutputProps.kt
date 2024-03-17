@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.Location
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -115,7 +116,8 @@ public interface BedrockInvokeModelOutputProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps):
-        BedrockInvokeModelOutputProps = Wrapper(cdkObject)
+        BedrockInvokeModelOutputProps = CdkObjectWrappers.wrap(cdkObject) as?
+        BedrockInvokeModelOutputProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BedrockInvokeModelOutputProps):
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps = (wrapped

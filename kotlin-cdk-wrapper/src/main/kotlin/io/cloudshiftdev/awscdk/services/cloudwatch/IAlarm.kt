@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -82,7 +83,7 @@ public interface IAlarm : IAlarmRule, IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarm): IAlarm =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IAlarm ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAlarm): software.amazon.awscdk.services.cloudwatch.IAlarm =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.IAlarm

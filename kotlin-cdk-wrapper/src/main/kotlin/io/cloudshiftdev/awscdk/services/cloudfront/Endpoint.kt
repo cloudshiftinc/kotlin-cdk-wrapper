@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 
@@ -45,7 +46,7 @@ public abstract class Endpoint internal constructor(
         role.let(IRole::unwrap)).let(Endpoint::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.Endpoint): Endpoint =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Endpoint ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Endpoint): software.amazon.awscdk.services.cloudfront.Endpoint =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.Endpoint

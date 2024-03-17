@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.Any
 import kotlin.Boolean
@@ -207,7 +208,8 @@ public interface IEksJobDefinition : IJobDefinition {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.IEksJobDefinition):
-        IEksJobDefinition = Wrapper(cdkObject)
+        IEksJobDefinition = CdkObjectWrappers.wrap(cdkObject) as? IEksJobDefinition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEksJobDefinition):
         software.amazon.awscdk.services.batch.IEksJobDefinition = (wrapped as CdkObject).cdkObject

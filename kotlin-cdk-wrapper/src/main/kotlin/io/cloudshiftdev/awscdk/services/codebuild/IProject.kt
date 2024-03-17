@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRule
@@ -1259,7 +1260,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.IProject): IProject =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IProject ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IProject): software.amazon.awscdk.services.codebuild.IProject =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.IProject

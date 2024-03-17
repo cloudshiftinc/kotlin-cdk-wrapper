@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -458,7 +459,8 @@ public interface CfnDataRepositoryAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociationProps):
-        CfnDataRepositoryAssociationProps = Wrapper(cdkObject)
+        CfnDataRepositoryAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDataRepositoryAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataRepositoryAssociationProps):
         software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociationProps = (wrapped as

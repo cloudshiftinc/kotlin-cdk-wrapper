@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -374,7 +375,8 @@ public open class CfnNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNode.NodeConfigurationProperty):
-          NodeConfigurationProperty = Wrapper(cdkObject)
+          NodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NodeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NodeConfigurationProperty):
           software.amazon.awscdk.services.managedblockchain.CfnNode.NodeConfigurationProperty =

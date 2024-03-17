@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -103,7 +104,8 @@ public interface DeploymentCircuitBreaker {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker):
-        DeploymentCircuitBreaker = Wrapper(cdkObject)
+        DeploymentCircuitBreaker = CdkObjectWrappers.wrap(cdkObject) as? DeploymentCircuitBreaker ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentCircuitBreaker):
         software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1145,7 +1146,8 @@ public open class CfnMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty):
-          InternetMeasurementsLogDeliveryProperty = Wrapper(cdkObject)
+          InternetMeasurementsLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InternetMeasurementsLogDeliveryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InternetMeasurementsLogDeliveryProperty):
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty
@@ -1447,7 +1449,8 @@ public open class CfnMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty):
-          HealthEventsConfigProperty = Wrapper(cdkObject)
+          HealthEventsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthEventsConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthEventsConfigProperty):
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty =
@@ -1624,7 +1627,8 @@ public open class CfnMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty):
-          LocalHealthEventsConfigProperty = Wrapper(cdkObject)
+          LocalHealthEventsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LocalHealthEventsConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LocalHealthEventsConfigProperty):
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty
@@ -1780,7 +1784,8 @@ public open class CfnMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty):
-          S3ConfigProperty = Wrapper(cdkObject)
+          S3ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3ConfigProperty):
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty = (wrapped as

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -66,7 +67,8 @@ public interface IClusterParameterGroup : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.IClusterParameterGroup):
-        IClusterParameterGroup = Wrapper(cdkObject)
+        IClusterParameterGroup = CdkObjectWrappers.wrap(cdkObject) as? IClusterParameterGroup ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IClusterParameterGroup):
         software.amazon.awscdk.services.docdb.IClusterParameterGroup = (wrapped as

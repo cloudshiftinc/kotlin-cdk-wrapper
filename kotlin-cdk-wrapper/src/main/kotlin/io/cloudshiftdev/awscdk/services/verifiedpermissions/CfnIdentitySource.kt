@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -523,7 +524,8 @@ public open class CfnIdentitySource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty):
-          IdentitySourceConfigurationProperty = Wrapper(cdkObject)
+          IdentitySourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentitySourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdentitySourceConfigurationProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty
@@ -747,7 +749,8 @@ public open class CfnIdentitySource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty):
-          IdentitySourceDetailsProperty = Wrapper(cdkObject)
+          IdentitySourceDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentitySourceDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdentitySourceDetailsProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty
@@ -893,7 +896,8 @@ public open class CfnIdentitySource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty):
-          CognitoUserPoolConfigurationProperty = Wrapper(cdkObject)
+          CognitoUserPoolConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CognitoUserPoolConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CognitoUserPoolConfigurationProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty

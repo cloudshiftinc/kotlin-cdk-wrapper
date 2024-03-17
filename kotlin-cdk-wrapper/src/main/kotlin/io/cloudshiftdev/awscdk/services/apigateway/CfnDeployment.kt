@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1339,7 +1340,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty):
-          StageDescriptionProperty = Wrapper(cdkObject)
+          StageDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as? StageDescriptionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StageDescriptionProperty):
           software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty =
@@ -1532,7 +1534,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty):
-          DeploymentCanarySettingsProperty = Wrapper(cdkObject)
+          DeploymentCanarySettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentCanarySettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentCanarySettingsProperty):
           software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty
@@ -1668,7 +1671,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty):
-          AccessLogSettingProperty = Wrapper(cdkObject)
+          AccessLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessLogSettingProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessLogSettingProperty):
           software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty =
@@ -2120,7 +2124,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty):
-          MethodSettingProperty = Wrapper(cdkObject)
+          MethodSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? MethodSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MethodSettingProperty):
           software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty = (wrapped
@@ -2308,7 +2313,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty):
-          CanarySettingProperty = Wrapper(cdkObject)
+          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? CanarySettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CanarySettingProperty):
           software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty = (wrapped

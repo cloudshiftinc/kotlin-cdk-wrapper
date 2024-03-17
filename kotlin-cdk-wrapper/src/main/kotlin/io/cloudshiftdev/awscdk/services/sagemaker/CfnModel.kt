@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -956,7 +957,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty):
-          MultiModelConfigProperty = Wrapper(cdkObject)
+          MultiModelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? MultiModelConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiModelConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.MultiModelConfigProperty = (wrapped as
@@ -1073,7 +1075,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty):
-          ModelDataSourceProperty = Wrapper(cdkObject)
+          ModelDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelDataSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelDataSourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.ModelDataSourceProperty = (wrapped as
@@ -1237,7 +1240,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty = (wrapped as
@@ -1623,7 +1627,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty):
-          S3DataSourceProperty = Wrapper(cdkObject)
+          S3DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DataSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DataSourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.S3DataSourceProperty = (wrapped as
@@ -2359,7 +2364,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty):
-          ContainerDefinitionProperty = Wrapper(cdkObject)
+          ContainerDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContainerDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.ContainerDefinitionProperty = (wrapped
@@ -2543,7 +2549,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ImageConfigProperty):
-          ImageConfigProperty = Wrapper(cdkObject)
+          ImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ImageConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.ImageConfigProperty = (wrapped as
@@ -2636,7 +2643,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty):
-          InferenceExecutionConfigProperty = Wrapper(cdkObject)
+          InferenceExecutionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceExecutionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceExecutionConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.InferenceExecutionConfigProperty =
@@ -2749,7 +2757,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty):
-          RepositoryAuthConfigProperty = Wrapper(cdkObject)
+          RepositoryAuthConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RepositoryAuthConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RepositoryAuthConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.RepositoryAuthConfigProperty = (wrapped
@@ -2879,7 +2888,8 @@ public open class CfnModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty):
-          ModelAccessConfigProperty = Wrapper(cdkObject)
+          ModelAccessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelAccessConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelAccessConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModel.ModelAccessConfigProperty = (wrapped as

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -554,7 +555,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty):
-          LogDestinationConfigProperty = Wrapper(cdkObject)
+          LogDestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogDestinationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogDestinationConfigProperty):
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty
@@ -675,7 +677,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty):
-          LoggingConfigurationProperty = Wrapper(cdkObject)
+          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigurationProperty):
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty

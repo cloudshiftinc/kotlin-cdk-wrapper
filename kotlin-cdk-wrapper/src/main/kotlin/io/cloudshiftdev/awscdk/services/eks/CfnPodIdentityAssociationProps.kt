@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -300,7 +301,8 @@ public interface CfnPodIdentityAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps):
-        CfnPodIdentityAssociationProps = Wrapper(cdkObject)
+        CfnPodIdentityAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPodIdentityAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPodIdentityAssociationProps):
         software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps = (wrapped as

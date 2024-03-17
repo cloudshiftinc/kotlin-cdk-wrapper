@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -511,7 +512,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty):
-          NumberFilterProperty = Wrapper(cdkObject)
+          NumberFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? NumberFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NumberFilterProperty):
           software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty = (wrapped as
@@ -2278,7 +2280,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty):
-          FilterCriteriaProperty = Wrapper(cdkObject)
+          FilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterCriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterCriteriaProperty):
           software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty = (wrapped as
@@ -2385,7 +2388,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty):
-          DateFilterProperty = Wrapper(cdkObject)
+          DateFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? DateFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DateFilterProperty):
           software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty = (wrapped as
@@ -2793,7 +2797,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty):
-          PackageFilterProperty = Wrapper(cdkObject)
+          PackageFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? PackageFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PackageFilterProperty):
           software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty = (wrapped as
@@ -2901,7 +2906,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty):
-          PortRangeFilterProperty = Wrapper(cdkObject)
+          PortRangeFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortRangeFilterProperty):
           software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty = (wrapped
@@ -3008,7 +3014,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty):
-          StringFilterProperty = Wrapper(cdkObject)
+          StringFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? StringFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StringFilterProperty):
           software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty = (wrapped as
@@ -3143,7 +3150,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty):
-          MapFilterProperty = Wrapper(cdkObject)
+          MapFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? MapFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MapFilterProperty):
           software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty = (wrapped as

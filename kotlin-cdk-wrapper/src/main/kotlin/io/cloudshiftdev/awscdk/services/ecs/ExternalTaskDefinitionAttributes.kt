@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -141,7 +142,8 @@ public interface ExternalTaskDefinitionAttributes : CommonTaskDefinitionAttribut
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionAttributes):
-        ExternalTaskDefinitionAttributes = Wrapper(cdkObject)
+        ExternalTaskDefinitionAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        ExternalTaskDefinitionAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExternalTaskDefinitionAttributes):
         software.amazon.awscdk.services.ecs.ExternalTaskDefinitionAttributes = (wrapped as

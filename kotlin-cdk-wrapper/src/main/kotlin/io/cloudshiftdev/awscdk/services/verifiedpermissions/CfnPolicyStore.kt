@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -542,7 +543,8 @@ public open class CfnPolicyStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty):
-          ValidationSettingsProperty = Wrapper(cdkObject)
+          ValidationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValidationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValidationSettingsProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty
@@ -647,7 +649,8 @@ public open class CfnPolicyStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty):
-          SchemaDefinitionProperty = Wrapper(cdkObject)
+          SchemaDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaDefinitionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaDefinitionProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty

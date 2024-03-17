@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Unit
 
@@ -79,7 +80,8 @@ public interface RepositoryImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.RepositoryImageProps):
-        RepositoryImageProps = Wrapper(cdkObject)
+        RepositoryImageProps = CdkObjectWrappers.wrap(cdkObject) as? RepositoryImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryImageProps):
         software.amazon.awscdk.services.ecs.RepositoryImageProps = (wrapped as CdkObject).cdkObject

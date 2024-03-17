@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 
@@ -68,7 +69,7 @@ public interface ActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.ActionConfig):
-        ActionConfig = Wrapper(cdkObject)
+        ActionConfig = CdkObjectWrappers.wrap(cdkObject) as? ActionConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ActionConfig):
         software.amazon.awscdk.services.codepipeline.ActionConfig = (wrapped as CdkObject).cdkObject

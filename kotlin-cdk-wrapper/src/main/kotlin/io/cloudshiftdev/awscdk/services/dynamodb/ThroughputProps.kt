@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -101,7 +102,8 @@ public interface ThroughputProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.ThroughputProps):
-        ThroughputProps = Wrapper(cdkObject)
+        ThroughputProps = CdkObjectWrappers.wrap(cdkObject) as? ThroughputProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ThroughputProps):
         software.amazon.awscdk.services.dynamodb.ThroughputProps = (wrapped as CdkObject).cdkObject

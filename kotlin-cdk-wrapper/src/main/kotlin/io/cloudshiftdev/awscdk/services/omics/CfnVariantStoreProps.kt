@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.omics
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -249,7 +250,8 @@ public interface CfnVariantStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnVariantStoreProps):
-        CfnVariantStoreProps = Wrapper(cdkObject)
+        CfnVariantStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVariantStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVariantStoreProps):
         software.amazon.awscdk.services.omics.CfnVariantStoreProps = (wrapped as

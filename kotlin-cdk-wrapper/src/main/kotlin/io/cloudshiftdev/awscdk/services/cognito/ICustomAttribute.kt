@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Represents a custom attribute type.
@@ -25,7 +26,8 @@ public interface ICustomAttribute {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.ICustomAttribute):
-        ICustomAttribute = Wrapper(cdkObject)
+        ICustomAttribute = CdkObjectWrappers.wrap(cdkObject) as? ICustomAttribute ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ICustomAttribute):
         software.amazon.awscdk.services.cognito.ICustomAttribute = (wrapped as CdkObject).cdkObject

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.gamelift
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -177,7 +178,7 @@ public interface CfnAliasProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnAliasProps):
-        CfnAliasProps = Wrapper(cdkObject)
+        CfnAliasProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAliasProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAliasProps):
         software.amazon.awscdk.services.gamelift.CfnAliasProps = (wrapped as CdkObject).cdkObject as

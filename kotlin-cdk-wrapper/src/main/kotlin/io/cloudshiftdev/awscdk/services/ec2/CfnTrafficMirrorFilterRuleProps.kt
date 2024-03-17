@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -420,7 +421,8 @@ public interface CfnTrafficMirrorFilterRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRuleProps):
-        CfnTrafficMirrorFilterRuleProps = Wrapper(cdkObject)
+        CfnTrafficMirrorFilterRuleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrafficMirrorFilterRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficMirrorFilterRuleProps):
         software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRuleProps = (wrapped as

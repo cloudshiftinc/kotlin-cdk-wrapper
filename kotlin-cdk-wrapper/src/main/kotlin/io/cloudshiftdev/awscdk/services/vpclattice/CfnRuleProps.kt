@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -375,7 +376,7 @@ public interface CfnRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRuleProps):
-        CfnRuleProps = Wrapper(cdkObject)
+        CfnRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleProps):
         software.amazon.awscdk.services.vpclattice.CfnRuleProps = (wrapped as CdkObject).cdkObject

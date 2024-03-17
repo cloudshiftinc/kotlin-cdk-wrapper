@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.codestarnotifications.INotificationRuleTarget
@@ -836,7 +837,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.ITopic): ITopic =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ITopic ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITopic): software.amazon.awscdk.services.sns.ITopic = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.sns.ITopic

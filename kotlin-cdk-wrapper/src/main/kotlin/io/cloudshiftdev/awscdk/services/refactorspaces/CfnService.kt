@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -664,7 +665,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty):
-          UrlEndpointInputProperty = Wrapper(cdkObject)
+          UrlEndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? UrlEndpointInputProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UrlEndpointInputProperty):
           software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty =
@@ -746,7 +748,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty):
-          LambdaEndpointInputProperty = Wrapper(cdkObject)
+          LambdaEndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaEndpointInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaEndpointInputProperty):
           software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty =

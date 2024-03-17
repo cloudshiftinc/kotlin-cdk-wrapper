@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.organizations
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -215,7 +216,8 @@ public interface CfnOrganizationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.organizations.CfnOrganizationProps):
-        CfnOrganizationProps = Wrapper(cdkObject)
+        CfnOrganizationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnOrganizationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOrganizationProps):
         software.amazon.awscdk.services.organizations.CfnOrganizationProps = (wrapped as

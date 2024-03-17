@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -925,7 +926,8 @@ public open class CfnLocationHDFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS.NameNodeProperty):
-          NameNodeProperty = Wrapper(cdkObject)
+          NameNodeProperty = CdkObjectWrappers.wrap(cdkObject) as? NameNodeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NameNodeProperty):
           software.amazon.awscdk.services.datasync.CfnLocationHDFS.NameNodeProperty = (wrapped as
@@ -1067,7 +1069,8 @@ public open class CfnLocationHDFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS.QopConfigurationProperty):
-          QopConfigurationProperty = Wrapper(cdkObject)
+          QopConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? QopConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QopConfigurationProperty):
           software.amazon.awscdk.services.datasync.CfnLocationHDFS.QopConfigurationProperty =

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -46,7 +47,8 @@ public interface CfnWaitConditionHandleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnWaitConditionHandleProps):
-        CfnWaitConditionHandleProps = Wrapper(cdkObject)
+        CfnWaitConditionHandleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnWaitConditionHandleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWaitConditionHandleProps):
         software.amazon.awscdk.CfnWaitConditionHandleProps = (wrapped as CdkObject).cdkObject as

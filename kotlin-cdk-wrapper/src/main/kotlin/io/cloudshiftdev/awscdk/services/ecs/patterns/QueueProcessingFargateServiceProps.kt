@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.ScalingInterval
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -1374,7 +1375,8 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateServiceProps):
-        QueueProcessingFargateServiceProps = Wrapper(cdkObject)
+        QueueProcessingFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        QueueProcessingFargateServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueueProcessingFargateServiceProps):
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateServiceProps = (wrapped

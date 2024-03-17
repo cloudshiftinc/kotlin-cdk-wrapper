@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.collections.List
 
@@ -52,7 +53,8 @@ public abstract class EventDestination internal constructor(
         software.amazon.awscdk.services.ses.EventDestination.snsTopic(topic.let(ITopic::unwrap)).let(EventDestination::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.EventDestination):
-        EventDestination = Wrapper(cdkObject)
+        EventDestination = CdkObjectWrappers.wrap(cdkObject) as? EventDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventDestination):
         software.amazon.awscdk.services.ses.EventDestination = (wrapped as CdkObject).cdkObject as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -916,7 +917,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty):
-          CacheBehaviorProperty = Wrapper(cdkObject)
+          CacheBehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as? CacheBehaviorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CacheBehaviorProperty):
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty = (wrapped
@@ -1070,7 +1072,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty):
-          CookieObjectProperty = Wrapper(cdkObject)
+          CookieObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? CookieObjectProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookieObjectProperty):
           software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty = (wrapped
@@ -1234,7 +1237,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty):
-          HeaderObjectProperty = Wrapper(cdkObject)
+          HeaderObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderObjectProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeaderObjectProperty):
           software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty = (wrapped
@@ -1779,7 +1783,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty):
-          CacheSettingsProperty = Wrapper(cdkObject)
+          CacheSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? CacheSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CacheSettingsProperty):
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty = (wrapped
@@ -1924,7 +1929,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty):
-          InputOriginProperty = Wrapper(cdkObject)
+          InputOriginProperty = CdkObjectWrappers.wrap(cdkObject) as? InputOriginProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputOriginProperty):
           software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty = (wrapped
@@ -2098,7 +2104,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty):
-          QueryStringObjectProperty = Wrapper(cdkObject)
+          QueryStringObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryStringObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryStringObjectProperty):
           software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty =
@@ -2369,7 +2376,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty):
-          CacheBehaviorPerPathProperty = Wrapper(cdkObject)
+          CacheBehaviorPerPathProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CacheBehaviorPerPathProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CacheBehaviorPerPathProperty):
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty =

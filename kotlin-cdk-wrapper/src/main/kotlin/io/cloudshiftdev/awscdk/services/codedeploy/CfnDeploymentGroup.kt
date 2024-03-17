@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2280,7 +2281,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty):
-          RevisionLocationProperty = Wrapper(cdkObject)
+          RevisionLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? RevisionLocationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RevisionLocationProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty =
@@ -2440,7 +2442,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty):
-          AutoRollbackConfigurationProperty = Wrapper(cdkObject)
+          AutoRollbackConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoRollbackConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoRollbackConfigurationProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty
@@ -2568,7 +2571,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty):
-          DeploymentStyleProperty = Wrapper(cdkObject)
+          DeploymentStyleProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentStyleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentStyleProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty =
@@ -2926,7 +2930,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty):
-          LoadBalancerInfoProperty = Wrapper(cdkObject)
+          LoadBalancerInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerInfoProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoadBalancerInfoProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty =
@@ -3257,7 +3262,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty):
-          DeploymentProperty = Wrapper(cdkObject)
+          DeploymentProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty =
@@ -3412,7 +3418,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty):
-          DeploymentReadyOptionProperty = Wrapper(cdkObject)
+          DeploymentReadyOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentReadyOptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentReadyOptionProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty
@@ -3680,7 +3687,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty):
-          BlueGreenDeploymentConfigurationProperty = Wrapper(cdkObject)
+          BlueGreenDeploymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlueGreenDeploymentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlueGreenDeploymentConfigurationProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty
@@ -3923,7 +3931,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty):
-          AlarmConfigurationProperty = Wrapper(cdkObject)
+          AlarmConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AlarmConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AlarmConfigurationProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty =
@@ -4022,7 +4031,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty):
-          GreenFleetProvisioningOptionProperty = Wrapper(cdkObject)
+          GreenFleetProvisioningOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GreenFleetProvisioningOptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GreenFleetProvisioningOptionProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty
@@ -4175,7 +4185,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty):
-          TargetGroupInfoProperty = Wrapper(cdkObject)
+          TargetGroupInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetGroupInfoProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty =
@@ -4283,7 +4294,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty):
-          ECSServiceProperty = Wrapper(cdkObject)
+          ECSServiceProperty = CdkObjectWrappers.wrap(cdkObject) as? ECSServiceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ECSServiceProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty =
@@ -4447,7 +4459,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty):
-          OnPremisesTagSetProperty = Wrapper(cdkObject)
+          OnPremisesTagSetProperty = CdkObjectWrappers.wrap(cdkObject) as? OnPremisesTagSetProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnPremisesTagSetProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty =
@@ -4557,7 +4570,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty):
-          TrafficRouteProperty = Wrapper(cdkObject)
+          TrafficRouteProperty = CdkObjectWrappers.wrap(cdkObject) as? TrafficRouteProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrafficRouteProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty =
@@ -4682,7 +4696,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty):
-          GitHubLocationProperty = Wrapper(cdkObject)
+          GitHubLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? GitHubLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GitHubLocationProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty =
@@ -4833,7 +4848,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty):
-          TriggerConfigProperty = Wrapper(cdkObject)
+          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TriggerConfigProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty =
@@ -5098,7 +5114,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty):
-          TargetGroupPairInfoProperty = Wrapper(cdkObject)
+          TargetGroupPairInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetGroupPairInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetGroupPairInfoProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty
@@ -5260,7 +5277,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty):
-          BlueInstanceTerminationOptionProperty = Wrapper(cdkObject)
+          BlueInstanceTerminationOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlueInstanceTerminationOptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlueInstanceTerminationOptionProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty
@@ -5355,7 +5373,7 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty):
-          AlarmProperty = Wrapper(cdkObject)
+          AlarmProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AlarmProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty = (wrapped as
@@ -5597,7 +5615,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty):
-          S3LocationProperty = Wrapper(cdkObject)
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty =
@@ -5757,7 +5776,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty):
-          EC2TagSetProperty = Wrapper(cdkObject)
+          EC2TagSetProperty = CdkObjectWrappers.wrap(cdkObject) as? EC2TagSetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EC2TagSetProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty = (wrapped
@@ -5912,7 +5932,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty):
-          EC2TagFilterProperty = Wrapper(cdkObject)
+          EC2TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? EC2TagFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EC2TagFilterProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty =
@@ -6072,7 +6093,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty):
-          TagFilterProperty = Wrapper(cdkObject)
+          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagFilterProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty = (wrapped
@@ -6194,7 +6216,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty):
-          ELBInfoProperty = Wrapper(cdkObject)
+          ELBInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ELBInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ELBInfoProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty = (wrapped
@@ -6313,7 +6336,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty):
-          OnPremisesTagSetListObjectProperty = Wrapper(cdkObject)
+          OnPremisesTagSetListObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnPremisesTagSetListObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnPremisesTagSetListObjectProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty
@@ -6452,7 +6476,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty):
-          EC2TagSetListObjectProperty = Wrapper(cdkObject)
+          EC2TagSetListObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EC2TagSetListObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EC2TagSetListObjectProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty

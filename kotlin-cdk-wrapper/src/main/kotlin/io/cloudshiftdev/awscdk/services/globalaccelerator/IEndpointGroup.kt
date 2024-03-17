@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -66,7 +67,7 @@ public interface IEndpointGroup : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpointGroup):
-        IEndpointGroup = Wrapper(cdkObject)
+        IEndpointGroup = CdkObjectWrappers.wrap(cdkObject) as? IEndpointGroup ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEndpointGroup):
         software.amazon.awscdk.services.globalaccelerator.IEndpointGroup = (wrapped as

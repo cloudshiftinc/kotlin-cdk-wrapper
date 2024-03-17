@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -140,7 +141,8 @@ public interface ResponseHeadersReferrerPolicy {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy):
-        ResponseHeadersReferrerPolicy = Wrapper(cdkObject)
+        ResponseHeadersReferrerPolicy = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersReferrerPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersReferrerPolicy):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy = (wrapped as

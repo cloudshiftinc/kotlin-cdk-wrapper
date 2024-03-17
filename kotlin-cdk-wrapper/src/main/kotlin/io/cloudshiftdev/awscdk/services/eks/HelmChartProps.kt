@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.assets.Asset
 import kotlin.Any
 import kotlin.Boolean
@@ -332,7 +333,7 @@ public interface HelmChartProps : HelmChartOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.HelmChartProps): HelmChartProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? HelmChartProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HelmChartProps): software.amazon.awscdk.services.eks.HelmChartProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.HelmChartProps

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.constructs.Node
 
@@ -72,7 +73,7 @@ public interface ILifecycleHook : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.ILifecycleHook):
-        ILifecycleHook = Wrapper(cdkObject)
+        ILifecycleHook = CdkObjectWrappers.wrap(cdkObject) as? ILifecycleHook ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILifecycleHook):
         software.amazon.awscdk.services.autoscaling.ILifecycleHook = (wrapped as

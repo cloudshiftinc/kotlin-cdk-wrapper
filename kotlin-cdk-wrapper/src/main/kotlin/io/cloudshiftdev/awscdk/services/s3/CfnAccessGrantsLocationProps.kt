@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.s3
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -187,7 +188,8 @@ public interface CfnAccessGrantsLocationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsLocationProps):
-        CfnAccessGrantsLocationProps = Wrapper(cdkObject)
+        CfnAccessGrantsLocationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAccessGrantsLocationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessGrantsLocationProps):
         software.amazon.awscdk.services.s3.CfnAccessGrantsLocationProps = (wrapped as

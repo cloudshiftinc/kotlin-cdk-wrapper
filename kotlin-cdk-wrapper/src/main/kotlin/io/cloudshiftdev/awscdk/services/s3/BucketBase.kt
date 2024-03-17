@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -879,7 +880,7 @@ public abstract class BucketBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.BucketBase): BucketBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? BucketBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketBase): software.amazon.awscdk.services.s3.BucketBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.BucketBase

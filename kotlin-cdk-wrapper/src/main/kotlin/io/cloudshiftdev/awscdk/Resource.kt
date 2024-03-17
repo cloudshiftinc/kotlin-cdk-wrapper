@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.Boolean
@@ -76,7 +77,8 @@ public abstract class Resource internal constructor(
     public fun isResource(construct: IConstruct): Boolean =
         software.amazon.awscdk.Resource.isResource(construct.let(IConstruct::unwrap))
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.Resource): Resource = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.Resource): Resource =
+        CdkObjectWrappers.wrap(cdkObject) as? Resource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Resource): software.amazon.awscdk.Resource = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.Resource

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -481,7 +482,8 @@ public open class CfnReportPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty):
-          ReportDeliveryChannelProperty = Wrapper(cdkObject)
+          ReportDeliveryChannelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReportDeliveryChannelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReportDeliveryChannelProperty):
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty =
@@ -728,7 +730,8 @@ public open class CfnReportPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty):
-          ReportSettingProperty = Wrapper(cdkObject)
+          ReportSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? ReportSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReportSettingProperty):
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty = (wrapped as

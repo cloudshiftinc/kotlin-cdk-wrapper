@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -583,7 +584,8 @@ public open class CfnDeviceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty):
-          DeviceProperty = Wrapper(cdkObject)
+          DeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceProperty):
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty = (wrapped
@@ -708,7 +710,8 @@ public open class CfnDeviceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty):
-          DeviceDefinitionVersionProperty = Wrapper(cdkObject)
+          DeviceDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeviceDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty

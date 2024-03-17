@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -256,7 +257,8 @@ public interface CfnRealtimeLogConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfigProps):
-        CfnRealtimeLogConfigProps = Wrapper(cdkObject)
+        CfnRealtimeLogConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRealtimeLogConfigProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRealtimeLogConfigProps):
         software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfigProps = (wrapped as

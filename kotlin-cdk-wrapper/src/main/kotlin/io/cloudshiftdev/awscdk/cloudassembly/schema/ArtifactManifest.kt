@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -353,7 +354,8 @@ public interface ArtifactManifest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.ArtifactManifest):
-        ArtifactManifest = Wrapper(cdkObject)
+        ArtifactManifest = CdkObjectWrappers.wrap(cdkObject) as? ArtifactManifest ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ArtifactManifest):
         software.amazon.awscdk.cloudassembly.schema.ArtifactManifest = (wrapped as

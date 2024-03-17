@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -282,7 +283,8 @@ public interface CfnVirtualServiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualServiceProps):
-        CfnVirtualServiceProps = Wrapper(cdkObject)
+        CfnVirtualServiceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVirtualServiceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualServiceProps):
         software.amazon.awscdk.services.appmesh.CfnVirtualServiceProps = (wrapped as

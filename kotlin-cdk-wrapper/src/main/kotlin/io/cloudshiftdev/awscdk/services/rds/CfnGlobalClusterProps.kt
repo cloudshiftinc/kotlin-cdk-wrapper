@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -361,7 +362,8 @@ public interface CfnGlobalClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnGlobalClusterProps):
-        CfnGlobalClusterProps = Wrapper(cdkObject)
+        CfnGlobalClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGlobalClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalClusterProps):
         software.amazon.awscdk.services.rds.CfnGlobalClusterProps = (wrapped as CdkObject).cdkObject

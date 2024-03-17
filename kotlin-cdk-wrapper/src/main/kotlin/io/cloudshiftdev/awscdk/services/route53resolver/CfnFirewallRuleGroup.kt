@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -779,7 +780,8 @@ public open class CfnFirewallRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty):
-          FirewallRuleProperty = Wrapper(cdkObject)
+          FirewallRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? FirewallRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FirewallRuleProperty):
           software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty

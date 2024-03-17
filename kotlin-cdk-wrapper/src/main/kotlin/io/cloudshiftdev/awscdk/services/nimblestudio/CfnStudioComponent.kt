@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -905,7 +906,8 @@ public open class CfnStudioComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty):
-          SharedFileSystemConfigurationProperty = Wrapper(cdkObject)
+          SharedFileSystemConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SharedFileSystemConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SharedFileSystemConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty
@@ -1015,7 +1017,8 @@ public open class CfnStudioComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty):
-          ScriptParameterKeyValueProperty = Wrapper(cdkObject)
+          ScriptParameterKeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScriptParameterKeyValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScriptParameterKeyValueProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty
@@ -1129,7 +1132,8 @@ public open class CfnStudioComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty):
-          ComputeFarmConfigurationProperty = Wrapper(cdkObject)
+          ComputeFarmConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComputeFarmConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputeFarmConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty
@@ -1304,7 +1308,8 @@ public open class CfnStudioComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty):
-          StudioComponentInitializationScriptProperty = Wrapper(cdkObject)
+          StudioComponentInitializationScriptProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StudioComponentInitializationScriptProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StudioComponentInitializationScriptProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty
@@ -1483,7 +1488,8 @@ public open class CfnStudioComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty):
-          ActiveDirectoryConfigurationProperty = Wrapper(cdkObject)
+          ActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ActiveDirectoryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActiveDirectoryConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty
@@ -1569,7 +1575,8 @@ public open class CfnStudioComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty):
-          LicenseServiceConfigurationProperty = Wrapper(cdkObject)
+          LicenseServiceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LicenseServiceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LicenseServiceConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty
@@ -1910,7 +1917,8 @@ public open class CfnStudioComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty):
-          StudioComponentConfigurationProperty = Wrapper(cdkObject)
+          StudioComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StudioComponentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StudioComponentConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty
@@ -2021,7 +2029,8 @@ public open class CfnStudioComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty):
-          ActiveDirectoryComputerAttributeProperty = Wrapper(cdkObject)
+          ActiveDirectoryComputerAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ActiveDirectoryComputerAttributeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActiveDirectoryComputerAttributeProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty

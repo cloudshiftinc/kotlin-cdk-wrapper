@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 
@@ -108,7 +109,7 @@ public abstract class Stats internal constructor(
         software.amazon.awscdk.services.cloudwatch.Stats.wm(p1, p2)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.Stats): Stats =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Stats ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Stats): software.amazon.awscdk.services.cloudwatch.Stats = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.Stats

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -113,7 +114,8 @@ public interface ContainerDependency {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ContainerDependency):
-        ContainerDependency = Wrapper(cdkObject)
+        ContainerDependency = CdkObjectWrappers.wrap(cdkObject) as? ContainerDependency ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerDependency):
         software.amazon.awscdk.services.ecs.ContainerDependency = (wrapped as CdkObject).cdkObject

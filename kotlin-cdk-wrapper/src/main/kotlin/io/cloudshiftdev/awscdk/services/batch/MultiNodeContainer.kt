@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -144,7 +145,8 @@ public interface MultiNodeContainer {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.MultiNodeContainer):
-        MultiNodeContainer = Wrapper(cdkObject)
+        MultiNodeContainer = CdkObjectWrappers.wrap(cdkObject) as? MultiNodeContainer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MultiNodeContainer):
         software.amazon.awscdk.services.batch.MultiNodeContainer = (wrapped as CdkObject).cdkObject

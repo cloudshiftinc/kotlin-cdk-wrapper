@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
@@ -71,7 +72,7 @@ public interface IResolvable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IResolvable): IResolvable =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IResolvable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IResolvable): software.amazon.awscdk.IResolvable = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.IResolvable

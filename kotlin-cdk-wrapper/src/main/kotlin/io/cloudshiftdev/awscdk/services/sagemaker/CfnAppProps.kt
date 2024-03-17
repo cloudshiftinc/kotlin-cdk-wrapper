@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -287,7 +288,7 @@ public interface CfnAppProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppProps): CfnAppProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnAppProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAppProps): software.amazon.awscdk.services.sagemaker.CfnAppProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sagemaker.CfnAppProps

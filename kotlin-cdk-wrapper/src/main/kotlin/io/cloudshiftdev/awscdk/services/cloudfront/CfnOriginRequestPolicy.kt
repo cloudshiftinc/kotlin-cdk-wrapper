@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -534,7 +535,8 @@ public open class CfnOriginRequestPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty):
-          OriginRequestPolicyConfigProperty = Wrapper(cdkObject)
+          OriginRequestPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OriginRequestPolicyConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OriginRequestPolicyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty
@@ -712,7 +714,8 @@ public open class CfnOriginRequestPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty):
-          HeadersConfigProperty = Wrapper(cdkObject)
+          HeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HeadersConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeadersConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty =
@@ -878,7 +881,8 @@ public open class CfnOriginRequestPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty):
-          CookiesConfigProperty = Wrapper(cdkObject)
+          CookiesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CookiesConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookiesConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty =
@@ -1054,7 +1058,8 @@ public open class CfnOriginRequestPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty):
-          QueryStringsConfigProperty = Wrapper(cdkObject)
+          QueryStringsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryStringsConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryStringsConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty

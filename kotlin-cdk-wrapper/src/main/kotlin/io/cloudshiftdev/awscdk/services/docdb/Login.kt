@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.docdb
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
@@ -186,7 +187,7 @@ public interface Login {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.Login): Login =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Login ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Login): software.amazon.awscdk.services.docdb.Login = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.docdb.Login

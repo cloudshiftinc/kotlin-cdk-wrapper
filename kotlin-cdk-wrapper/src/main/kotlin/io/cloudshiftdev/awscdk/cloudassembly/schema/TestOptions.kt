@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -419,7 +420,7 @@ public interface TestOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.TestOptions):
-        TestOptions = Wrapper(cdkObject)
+        TestOptions = CdkObjectWrappers.wrap(cdkObject) as? TestOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TestOptions):
         software.amazon.awscdk.cloudassembly.schema.TestOptions = (wrapped as CdkObject).cdkObject

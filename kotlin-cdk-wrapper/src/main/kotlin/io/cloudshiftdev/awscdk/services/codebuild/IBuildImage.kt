@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecr.IRepository
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.String
@@ -155,7 +156,7 @@ public interface IBuildImage {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.IBuildImage): IBuildImage
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IBuildImage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IBuildImage): software.amazon.awscdk.services.codebuild.IBuildImage
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.IBuildImage

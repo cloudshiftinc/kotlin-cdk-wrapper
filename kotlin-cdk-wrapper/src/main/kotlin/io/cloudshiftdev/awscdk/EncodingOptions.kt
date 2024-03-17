@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -68,7 +69,7 @@ public interface EncodingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.EncodingOptions): EncodingOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? EncodingOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EncodingOptions): software.amazon.awscdk.EncodingOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.EncodingOptions

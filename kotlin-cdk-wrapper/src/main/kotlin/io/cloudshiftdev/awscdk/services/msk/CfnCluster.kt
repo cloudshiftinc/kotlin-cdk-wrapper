@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1128,7 +1129,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EncryptionInTransitProperty):
-          EncryptionInTransitProperty = Wrapper(cdkObject)
+          EncryptionInTransitProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionInTransitProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionInTransitProperty):
           software.amazon.awscdk.services.msk.CfnCluster.EncryptionInTransitProperty = (wrapped as
@@ -1213,7 +1215,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.PublicAccessProperty):
-          PublicAccessProperty = Wrapper(cdkObject)
+          PublicAccessProperty = CdkObjectWrappers.wrap(cdkObject) as? PublicAccessProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicAccessProperty):
           software.amazon.awscdk.services.msk.CfnCluster.PublicAccessProperty = (wrapped as
@@ -1354,7 +1357,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.LoggingInfoProperty):
-          LoggingInfoProperty = Wrapper(cdkObject)
+          LoggingInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingInfoProperty):
           software.amazon.awscdk.services.msk.CfnCluster.LoggingInfoProperty = (wrapped as
@@ -1477,7 +1481,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityProperty):
-          VpcConnectivityProperty = Wrapper(cdkObject)
+          VpcConnectivityProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConnectivityProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConnectivityProperty):
           software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityProperty = (wrapped as
@@ -1651,7 +1656,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityClientAuthenticationProperty):
-          VpcConnectivityClientAuthenticationProperty = Wrapper(cdkObject)
+          VpcConnectivityClientAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcConnectivityClientAuthenticationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConnectivityClientAuthenticationProperty):
           software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityClientAuthenticationProperty
@@ -1740,7 +1746,7 @@ public open class CfnCluster internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.IamProperty):
-          IamProperty = Wrapper(cdkObject)
+          IamProperty = CdkObjectWrappers.wrap(cdkObject) as? IamProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IamProperty):
           software.amazon.awscdk.services.msk.CfnCluster.IamProperty = (wrapped as
@@ -1903,7 +1909,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.PrometheusProperty):
-          PrometheusProperty = Wrapper(cdkObject)
+          PrometheusProperty = CdkObjectWrappers.wrap(cdkObject) as? PrometheusProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrometheusProperty):
           software.amazon.awscdk.services.msk.CfnCluster.PrometheusProperty = (wrapped as
@@ -2079,7 +2086,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ConnectivityInfoProperty):
-          ConnectivityInfoProperty = Wrapper(cdkObject)
+          ConnectivityInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ConnectivityInfoProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectivityInfoProperty):
           software.amazon.awscdk.services.msk.CfnCluster.ConnectivityInfoProperty = (wrapped as
@@ -2169,7 +2177,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EncryptionAtRestProperty):
-          EncryptionAtRestProperty = Wrapper(cdkObject)
+          EncryptionAtRestProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionAtRestProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionAtRestProperty):
           software.amazon.awscdk.services.msk.CfnCluster.EncryptionAtRestProperty = (wrapped as
@@ -2337,7 +2346,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EncryptionInfoProperty):
-          EncryptionInfoProperty = Wrapper(cdkObject)
+          EncryptionInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionInfoProperty):
           software.amazon.awscdk.services.msk.CfnCluster.EncryptionInfoProperty = (wrapped as
@@ -2450,7 +2460,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.OpenMonitoringProperty):
-          OpenMonitoringProperty = Wrapper(cdkObject)
+          OpenMonitoringProperty = CdkObjectWrappers.wrap(cdkObject) as? OpenMonitoringProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OpenMonitoringProperty):
           software.amazon.awscdk.services.msk.CfnCluster.OpenMonitoringProperty = (wrapped as
@@ -2576,7 +2587,8 @@ public open class CfnCluster internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.FirehoseProperty):
-          FirehoseProperty = Wrapper(cdkObject)
+          FirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as? FirehoseProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FirehoseProperty):
           software.amazon.awscdk.services.msk.CfnCluster.FirehoseProperty = (wrapped as
@@ -2740,7 +2752,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivitySaslProperty):
-          VpcConnectivitySaslProperty = Wrapper(cdkObject)
+          VpcConnectivitySaslProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcConnectivitySaslProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConnectivitySaslProperty):
           software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivitySaslProperty = (wrapped as
@@ -2863,7 +2876,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.CloudWatchLogsProperty):
-          CloudWatchLogsProperty = Wrapper(cdkObject)
+          CloudWatchLogsProperty = CdkObjectWrappers.wrap(cdkObject) as? CloudWatchLogsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogsProperty):
           software.amazon.awscdk.services.msk.CfnCluster.CloudWatchLogsProperty = (wrapped as
@@ -2989,7 +3003,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ProvisionedThroughputProperty):
-          ProvisionedThroughputProperty = Wrapper(cdkObject)
+          ProvisionedThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisionedThroughputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisionedThroughputProperty):
           software.amazon.awscdk.services.msk.CfnCluster.ProvisionedThroughputProperty = (wrapped as
@@ -3260,7 +3275,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ClientAuthenticationProperty):
-          ClientAuthenticationProperty = Wrapper(cdkObject)
+          ClientAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientAuthenticationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClientAuthenticationProperty):
           software.amazon.awscdk.services.msk.CfnCluster.ClientAuthenticationProperty = (wrapped as
@@ -3351,7 +3367,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.NodeExporterProperty):
-          NodeExporterProperty = Wrapper(cdkObject)
+          NodeExporterProperty = CdkObjectWrappers.wrap(cdkObject) as? NodeExporterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NodeExporterProperty):
           software.amazon.awscdk.services.msk.CfnCluster.NodeExporterProperty = (wrapped as
@@ -3458,7 +3475,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ConfigurationInfoProperty):
-          ConfigurationInfoProperty = Wrapper(cdkObject)
+          ConfigurationInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationInfoProperty):
           software.amazon.awscdk.services.msk.CfnCluster.ConfigurationInfoProperty = (wrapped as
@@ -3587,7 +3605,7 @@ public open class CfnCluster internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.TlsProperty):
-          TlsProperty = Wrapper(cdkObject)
+          TlsProperty = CdkObjectWrappers.wrap(cdkObject) as? TlsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TlsProperty):
           software.amazon.awscdk.services.msk.CfnCluster.TlsProperty = (wrapped as
@@ -3724,7 +3742,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.EBSStorageInfoProperty):
-          EBSStorageInfoProperty = Wrapper(cdkObject)
+          EBSStorageInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? EBSStorageInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EBSStorageInfoProperty):
           software.amazon.awscdk.services.msk.CfnCluster.EBSStorageInfoProperty = (wrapped as
@@ -3889,7 +3908,7 @@ public open class CfnCluster internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.SaslProperty):
-          SaslProperty = Wrapper(cdkObject)
+          SaslProperty = CdkObjectWrappers.wrap(cdkObject) as? SaslProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SaslProperty):
           software.amazon.awscdk.services.msk.CfnCluster.SaslProperty = (wrapped as
@@ -3980,7 +3999,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityIamProperty):
-          VpcConnectivityIamProperty = Wrapper(cdkObject)
+          VpcConnectivityIamProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcConnectivityIamProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConnectivityIamProperty):
           software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityIamProperty = (wrapped as
@@ -4072,7 +4092,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.UnauthenticatedProperty):
-          UnauthenticatedProperty = Wrapper(cdkObject)
+          UnauthenticatedProperty = CdkObjectWrappers.wrap(cdkObject) as? UnauthenticatedProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UnauthenticatedProperty):
           software.amazon.awscdk.services.msk.CfnCluster.UnauthenticatedProperty = (wrapped as
@@ -4164,7 +4185,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityTlsProperty):
-          VpcConnectivityTlsProperty = Wrapper(cdkObject)
+          VpcConnectivityTlsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcConnectivityTlsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConnectivityTlsProperty):
           software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityTlsProperty = (wrapped as
@@ -4312,7 +4334,7 @@ public open class CfnCluster internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.S3Property):
-          S3Property = Wrapper(cdkObject)
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.msk.CfnCluster.S3Property = (wrapped as
@@ -4741,7 +4763,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.BrokerNodeGroupInfoProperty):
-          BrokerNodeGroupInfoProperty = Wrapper(cdkObject)
+          BrokerNodeGroupInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BrokerNodeGroupInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BrokerNodeGroupInfoProperty):
           software.amazon.awscdk.services.msk.CfnCluster.BrokerNodeGroupInfoProperty = (wrapped as
@@ -4832,7 +4855,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.JmxExporterProperty):
-          JmxExporterProperty = Wrapper(cdkObject)
+          JmxExporterProperty = CdkObjectWrappers.wrap(cdkObject) as? JmxExporterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JmxExporterProperty):
           software.amazon.awscdk.services.msk.CfnCluster.JmxExporterProperty = (wrapped as
@@ -5064,7 +5088,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.BrokerLogsProperty):
-          BrokerLogsProperty = Wrapper(cdkObject)
+          BrokerLogsProperty = CdkObjectWrappers.wrap(cdkObject) as? BrokerLogsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BrokerLogsProperty):
           software.amazon.awscdk.services.msk.CfnCluster.BrokerLogsProperty = (wrapped as
@@ -5175,7 +5200,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.StorageInfoProperty):
-          StorageInfoProperty = Wrapper(cdkObject)
+          StorageInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? StorageInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageInfoProperty):
           software.amazon.awscdk.services.msk.CfnCluster.StorageInfoProperty = (wrapped as
@@ -5263,7 +5289,7 @@ public open class CfnCluster internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.ScramProperty):
-          ScramProperty = Wrapper(cdkObject)
+          ScramProperty = CdkObjectWrappers.wrap(cdkObject) as? ScramProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScramProperty):
           software.amazon.awscdk.services.msk.CfnCluster.ScramProperty = (wrapped as
@@ -5356,7 +5382,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityScramProperty):
-          VpcConnectivityScramProperty = Wrapper(cdkObject)
+          VpcConnectivityScramProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcConnectivityScramProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConnectivityScramProperty):
           software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityScramProperty = (wrapped as

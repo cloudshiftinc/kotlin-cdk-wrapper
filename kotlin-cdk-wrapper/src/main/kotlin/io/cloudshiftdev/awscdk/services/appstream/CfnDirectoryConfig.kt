@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -565,7 +566,8 @@ public open class CfnDirectoryConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty):
-          ServiceAccountCredentialsProperty = Wrapper(cdkObject)
+          ServiceAccountCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceAccountCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceAccountCredentialsProperty):
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty
@@ -703,7 +705,8 @@ public open class CfnDirectoryConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty):
-          CertificateBasedAuthPropertiesProperty = Wrapper(cdkObject)
+          CertificateBasedAuthPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateBasedAuthPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateBasedAuthPropertiesProperty):
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty

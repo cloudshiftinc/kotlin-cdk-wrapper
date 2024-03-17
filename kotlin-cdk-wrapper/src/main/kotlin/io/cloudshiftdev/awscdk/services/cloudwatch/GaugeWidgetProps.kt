@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -514,7 +515,8 @@ public interface GaugeWidgetProps : MetricWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps):
-        GaugeWidgetProps = Wrapper(cdkObject)
+        GaugeWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? GaugeWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GaugeWidgetProps):
         software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps = (wrapped as

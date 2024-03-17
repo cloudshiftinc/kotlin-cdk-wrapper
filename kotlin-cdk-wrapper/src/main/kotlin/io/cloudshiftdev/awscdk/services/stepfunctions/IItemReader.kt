@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Any
@@ -75,7 +76,7 @@ public interface IItemReader {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.IItemReader):
-        IItemReader = Wrapper(cdkObject)
+        IItemReader = CdkObjectWrappers.wrap(cdkObject) as? IItemReader ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IItemReader):
         software.amazon.awscdk.services.stepfunctions.IItemReader = (wrapped as CdkObject).cdkObject

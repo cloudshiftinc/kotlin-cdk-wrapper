@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.vpclattice
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -105,7 +106,8 @@ public interface CfnResourcePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnResourcePolicyProps):
-        CfnResourcePolicyProps = Wrapper(cdkObject)
+        CfnResourcePolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourcePolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourcePolicyProps):
         software.amazon.awscdk.services.vpclattice.CfnResourcePolicyProps = (wrapped as

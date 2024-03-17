@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -3474,7 +3475,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty):
-          MySqlSettingsProperty = Wrapper(cdkObject)
+          MySqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? MySqlSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MySqlSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty = (wrapped as
@@ -3569,7 +3571,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty):
-          DynamoDbSettingsProperty = Wrapper(cdkObject)
+          DynamoDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DynamoDbSettingsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynamoDbSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty = (wrapped as
@@ -4428,7 +4431,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty):
-          KafkaSettingsProperty = Wrapper(cdkObject)
+          KafkaSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? KafkaSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KafkaSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty = (wrapped as
@@ -6567,7 +6571,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty):
-          OracleSettingsProperty = Wrapper(cdkObject)
+          OracleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? OracleSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OracleSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty = (wrapped as
@@ -9412,7 +9417,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty):
-          S3SettingsProperty = Wrapper(cdkObject)
+          S3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? S3SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3SettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty = (wrapped as
@@ -9594,7 +9600,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty):
-          SybaseSettingsProperty = Wrapper(cdkObject)
+          SybaseSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SybaseSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SybaseSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty = (wrapped as
@@ -10433,7 +10440,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty):
-          MicrosoftSqlServerSettingsProperty = Wrapper(cdkObject)
+          MicrosoftSqlServerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MicrosoftSqlServerSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MicrosoftSqlServerSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty =
@@ -10877,7 +10885,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty):
-          IbmDb2SettingsProperty = Wrapper(cdkObject)
+          IbmDb2SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? IbmDb2SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IbmDb2SettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty = (wrapped as
@@ -11190,7 +11199,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty):
-          DocDbSettingsProperty = Wrapper(cdkObject)
+          DocDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DocDbSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocDbSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty = (wrapped as
@@ -12547,7 +12557,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty):
-          RedshiftSettingsProperty = Wrapper(cdkObject)
+          RedshiftSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RedshiftSettingsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedshiftSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty = (wrapped as
@@ -13091,7 +13102,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty):
-          MongoDbSettingsProperty = Wrapper(cdkObject)
+          MongoDbSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? MongoDbSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MongoDbSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty = (wrapped as
@@ -13911,7 +13923,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty):
-          PostgreSqlSettingsProperty = Wrapper(cdkObject)
+          PostgreSqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PostgreSqlSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PostgreSqlSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty = (wrapped as
@@ -14259,7 +14272,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty):
-          NeptuneSettingsProperty = Wrapper(cdkObject)
+          NeptuneSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? NeptuneSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NeptuneSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty = (wrapped as
@@ -14834,7 +14848,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty):
-          KinesisSettingsProperty = Wrapper(cdkObject)
+          KinesisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? KinesisSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty = (wrapped as
@@ -15042,7 +15057,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty):
-          ElasticsearchSettingsProperty = Wrapper(cdkObject)
+          ElasticsearchSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticsearchSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ElasticsearchSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty = (wrapped
@@ -15347,7 +15363,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty):
-          RedisSettingsProperty = Wrapper(cdkObject)
+          RedisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RedisSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedisSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty = (wrapped as
@@ -15967,7 +15984,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty):
-          GcpMySQLSettingsProperty = Wrapper(cdkObject)
+          GcpMySQLSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? GcpMySQLSettingsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GcpMySQLSettingsProperty):
           software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty = (wrapped as

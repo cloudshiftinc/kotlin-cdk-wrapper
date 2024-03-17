@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import io.cloudshiftdev.awscdk.services.ecs.LogDriverConfig
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -224,7 +225,8 @@ public interface IEcsEc2ContainerDefinition : IEcsContainerDefinition {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.IEcsEc2ContainerDefinition):
-        IEcsEc2ContainerDefinition = Wrapper(cdkObject)
+        IEcsEc2ContainerDefinition = CdkObjectWrappers.wrap(cdkObject) as?
+        IEcsEc2ContainerDefinition ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEcsEc2ContainerDefinition):
         software.amazon.awscdk.services.batch.IEcsEc2ContainerDefinition = (wrapped as

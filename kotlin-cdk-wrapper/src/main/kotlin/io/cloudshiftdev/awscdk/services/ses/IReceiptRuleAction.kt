@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * An abstract action for a receipt rule.
@@ -29,7 +30,8 @@ public interface IReceiptRuleAction {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleAction):
-        IReceiptRuleAction = Wrapper(cdkObject)
+        IReceiptRuleAction = CdkObjectWrappers.wrap(cdkObject) as? IReceiptRuleAction ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IReceiptRuleAction):
         software.amazon.awscdk.services.ses.IReceiptRuleAction = (wrapped as CdkObject).cdkObject as

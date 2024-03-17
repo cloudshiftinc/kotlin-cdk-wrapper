@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -981,7 +982,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty):
-          GlueConfigurationProperty = Wrapper(cdkObject)
+          GlueConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlueConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GlueConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty =
@@ -1128,7 +1130,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty):
-          DeltaTimeProperty = Wrapper(cdkObject)
+          DeltaTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? DeltaTimeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeltaTimeProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty = (wrapped as
@@ -1405,7 +1408,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty):
-          S3DestinationConfigurationProperty = Wrapper(cdkObject)
+          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3DestinationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty
@@ -1491,7 +1495,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty):
-          OutputFileUriValueProperty = Wrapper(cdkObject)
+          OutputFileUriValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputFileUriValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputFileUriValueProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty =
@@ -1775,7 +1780,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty):
-          ContainerActionProperty = Wrapper(cdkObject)
+          ContainerActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ContainerActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerActionProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty = (wrapped
@@ -1863,7 +1869,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty):
-          DatasetContentVersionValueProperty = Wrapper(cdkObject)
+          DatasetContentVersionValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatasetContentVersionValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetContentVersionValueProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty
@@ -1980,7 +1987,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty):
-          FilterProperty = Wrapper(cdkObject)
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty = (wrapped as
@@ -2105,7 +2113,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty):
-          DeltaTimeSessionWindowConfigurationProperty = Wrapper(cdkObject)
+          DeltaTimeSessionWindowConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeltaTimeSessionWindowConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeltaTimeSessionWindowConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty
@@ -2307,7 +2316,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleDestinationProperty):
-          DatasetContentDeliveryRuleDestinationProperty = Wrapper(cdkObject)
+          DatasetContentDeliveryRuleDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatasetContentDeliveryRuleDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetContentDeliveryRuleDestinationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleDestinationProperty
@@ -2429,7 +2439,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty):
-          ResourceConfigurationProperty = Wrapper(cdkObject)
+          ResourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty =
@@ -2571,7 +2582,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty):
-          LateDataRuleProperty = Wrapper(cdkObject)
+          LateDataRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? LateDataRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LateDataRuleProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty = (wrapped as
@@ -2745,7 +2757,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggerProperty):
-          TriggerProperty = Wrapper(cdkObject)
+          TriggerProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TriggerProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggerProperty = (wrapped as
@@ -2901,7 +2914,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty):
-          DatasetContentDeliveryRuleProperty = Wrapper(cdkObject)
+          DatasetContentDeliveryRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatasetContentDeliveryRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetContentDeliveryRuleProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty
@@ -3147,7 +3161,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty = (wrapped as
@@ -3288,7 +3303,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty):
-          QueryActionProperty = Wrapper(cdkObject)
+          QueryActionProperty = CdkObjectWrappers.wrap(cdkObject) as? QueryActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryActionProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty = (wrapped as
@@ -3382,7 +3398,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty):
-          ScheduleProperty = Wrapper(cdkObject)
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty = (wrapped as
@@ -3651,7 +3668,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.VariableProperty):
-          VariableProperty = Wrapper(cdkObject)
+          VariableProperty = CdkObjectWrappers.wrap(cdkObject) as? VariableProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VariableProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VariableProperty = (wrapped as
@@ -3779,7 +3797,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty):
-          LateDataRuleConfigurationProperty = Wrapper(cdkObject)
+          LateDataRuleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LateDataRuleConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LateDataRuleConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty
@@ -3905,7 +3924,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty):
-          RetentionPeriodProperty = Wrapper(cdkObject)
+          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetentionPeriodProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty = (wrapped
@@ -4033,7 +4053,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.VersioningConfigurationProperty):
-          VersioningConfigurationProperty = Wrapper(cdkObject)
+          VersioningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VersioningConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VersioningConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VersioningConfigurationProperty =
@@ -4150,7 +4171,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty):
-          IotEventsDestinationConfigurationProperty = Wrapper(cdkObject)
+          IotEventsDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IotEventsDestinationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IotEventsDestinationConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty
@@ -4237,7 +4259,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty):
-          TriggeringDatasetProperty = Wrapper(cdkObject)
+          TriggeringDatasetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TriggeringDatasetProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TriggeringDatasetProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty =

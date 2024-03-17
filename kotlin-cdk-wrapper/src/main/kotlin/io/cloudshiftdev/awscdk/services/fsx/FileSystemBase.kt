@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.fsx
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import kotlin.String
 
@@ -35,7 +36,7 @@ public abstract class FileSystemBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.FileSystemBase): FileSystemBase
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? FileSystemBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSystemBase): software.amazon.awscdk.services.fsx.FileSystemBase
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.fsx.FileSystemBase

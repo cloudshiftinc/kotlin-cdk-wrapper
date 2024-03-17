@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.alexa.ask
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -264,7 +265,7 @@ public interface CfnSkillProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkillProps): CfnSkillProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? CfnSkillProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSkillProps): software.amazon.awscdk.alexa.ask.CfnSkillProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.alexa.ask.CfnSkillProps

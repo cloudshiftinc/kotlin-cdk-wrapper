@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -86,7 +87,8 @@ public interface ILoadBalancerV2 : IResource {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2):
-        ILoadBalancerV2 = Wrapper(cdkObject)
+        ILoadBalancerV2 = CdkObjectWrappers.wrap(cdkObject) as? ILoadBalancerV2 ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILoadBalancerV2):
         software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2 = (wrapped as

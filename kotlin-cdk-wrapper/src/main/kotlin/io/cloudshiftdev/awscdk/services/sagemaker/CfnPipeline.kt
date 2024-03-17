@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -505,7 +506,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty):
-          S3LocationProperty = Wrapper(cdkObject)
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty = (wrapped as
@@ -676,7 +678,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty):
-          PipelineDefinitionProperty = Wrapper(cdkObject)
+          PipelineDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipelineDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipelineDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty =
@@ -762,7 +765,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty):
-          ParallelismConfigurationProperty = Wrapper(cdkObject)
+          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParallelismConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParallelismConfigurationProperty):
           software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =

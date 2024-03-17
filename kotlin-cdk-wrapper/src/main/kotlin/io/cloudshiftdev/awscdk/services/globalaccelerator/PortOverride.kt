@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.globalaccelerator
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -108,7 +109,7 @@ public interface PortOverride {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.PortOverride):
-        PortOverride = Wrapper(cdkObject)
+        PortOverride = CdkObjectWrappers.wrap(cdkObject) as? PortOverride ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PortOverride):
         software.amazon.awscdk.services.globalaccelerator.PortOverride = (wrapped as

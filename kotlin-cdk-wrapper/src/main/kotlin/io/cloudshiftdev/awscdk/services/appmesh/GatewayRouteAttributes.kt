@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -94,7 +95,8 @@ public interface GatewayRouteAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteAttributes):
-        GatewayRouteAttributes = Wrapper(cdkObject)
+        GatewayRouteAttributes = CdkObjectWrappers.wrap(cdkObject) as? GatewayRouteAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayRouteAttributes):
         software.amazon.awscdk.services.appmesh.GatewayRouteAttributes = (wrapped as

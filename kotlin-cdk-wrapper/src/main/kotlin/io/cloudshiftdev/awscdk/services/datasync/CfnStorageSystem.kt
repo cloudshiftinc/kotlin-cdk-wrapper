@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -684,7 +685,8 @@ public open class CfnStorageSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty):
-          ServerCredentialsProperty = Wrapper(cdkObject)
+          ServerCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerCredentialsProperty):
           software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty =
@@ -797,7 +799,8 @@ public open class CfnStorageSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty):
-          ServerConfigurationProperty = Wrapper(cdkObject)
+          ServerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerConfigurationProperty):
           software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty =

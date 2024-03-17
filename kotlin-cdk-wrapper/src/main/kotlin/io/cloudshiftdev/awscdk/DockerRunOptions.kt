@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -388,7 +389,7 @@ public interface DockerRunOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.DockerRunOptions): DockerRunOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? DockerRunOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerRunOptions): software.amazon.awscdk.DockerRunOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.DockerRunOptions

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import kotlin.Boolean
@@ -532,7 +533,7 @@ public interface KeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.KeyProps): KeyProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? KeyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyProps): software.amazon.awscdk.services.kms.KeyProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.kms.KeyProps

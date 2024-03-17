@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iam
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -238,7 +239,8 @@ public interface CfnSAMLProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnSAMLProviderProps):
-        CfnSAMLProviderProps = Wrapper(cdkObject)
+        CfnSAMLProviderProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSAMLProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSAMLProviderProps):
         software.amazon.awscdk.services.iam.CfnSAMLProviderProps = (wrapped as CdkObject).cdkObject

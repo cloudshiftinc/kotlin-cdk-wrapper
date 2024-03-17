@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -324,7 +325,8 @@ public interface CfnLayerVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionProps):
-        CfnLayerVersionProps = Wrapper(cdkObject)
+        CfnLayerVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLayerVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayerVersionProps):
         software.amazon.awscdk.services.lambda.CfnLayerVersionProps = (wrapped as

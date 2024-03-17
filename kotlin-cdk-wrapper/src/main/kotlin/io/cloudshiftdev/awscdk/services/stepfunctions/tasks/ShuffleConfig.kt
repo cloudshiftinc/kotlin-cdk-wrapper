@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -70,7 +71,7 @@ public interface ShuffleConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig):
-        ShuffleConfig = Wrapper(cdkObject)
+        ShuffleConfig = CdkObjectWrappers.wrap(cdkObject) as? ShuffleConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ShuffleConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig = (wrapped as

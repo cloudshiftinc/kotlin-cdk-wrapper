@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import kotlin.String
 
@@ -48,7 +49,8 @@ public interface IEventDestination {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.IEventDestination):
-        IEventDestination = Wrapper(cdkObject)
+        IEventDestination = CdkObjectWrappers.wrap(cdkObject) as? IEventDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEventDestination):
         software.amazon.awscdk.services.appconfig.IEventDestination = (wrapped as

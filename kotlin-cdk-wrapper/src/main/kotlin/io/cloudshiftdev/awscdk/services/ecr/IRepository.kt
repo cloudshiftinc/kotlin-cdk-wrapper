@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.OnEventOptions
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
@@ -635,7 +636,7 @@ public interface IRepository : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.IRepository): IRepository =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IRepository ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRepository): software.amazon.awscdk.services.ecr.IRepository =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecr.IRepository

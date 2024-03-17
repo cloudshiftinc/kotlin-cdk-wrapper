@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -132,7 +133,8 @@ public interface HostVolumeOptions : EcsVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.HostVolumeOptions):
-        HostVolumeOptions = Wrapper(cdkObject)
+        HostVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as? HostVolumeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HostVolumeOptions):
         software.amazon.awscdk.services.batch.HostVolumeOptions = (wrapped as CdkObject).cdkObject

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.IStage
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -66,7 +67,8 @@ public interface ICodePipelineActionFactory {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ICodePipelineActionFactory):
-        ICodePipelineActionFactory = Wrapper(cdkObject)
+        ICodePipelineActionFactory = CdkObjectWrappers.wrap(cdkObject) as?
+        ICodePipelineActionFactory ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ICodePipelineActionFactory):
         software.amazon.awscdk.pipelines.ICodePipelineActionFactory = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -146,7 +147,8 @@ public interface BasePathMappingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.BasePathMappingOptions):
-        BasePathMappingOptions = Wrapper(cdkObject)
+        BasePathMappingOptions = CdkObjectWrappers.wrap(cdkObject) as? BasePathMappingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BasePathMappingOptions):
         software.amazon.awscdk.services.apigateway.BasePathMappingOptions = (wrapped as

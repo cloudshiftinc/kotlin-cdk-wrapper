@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -132,7 +133,8 @@ public interface LambdaDeploymentGroupAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttributes):
-        LambdaDeploymentGroupAttributes = Wrapper(cdkObject)
+        LambdaDeploymentGroupAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        LambdaDeploymentGroupAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDeploymentGroupAttributes):
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttributes = (wrapped as

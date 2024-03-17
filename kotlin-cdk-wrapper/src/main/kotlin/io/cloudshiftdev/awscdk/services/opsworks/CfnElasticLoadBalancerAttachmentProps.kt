@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opsworks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -110,7 +111,8 @@ public interface CfnElasticLoadBalancerAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachmentProps):
-        CfnElasticLoadBalancerAttachmentProps = Wrapper(cdkObject)
+        CfnElasticLoadBalancerAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnElasticLoadBalancerAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnElasticLoadBalancerAttachmentProps):
         software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachmentProps = (wrapped as

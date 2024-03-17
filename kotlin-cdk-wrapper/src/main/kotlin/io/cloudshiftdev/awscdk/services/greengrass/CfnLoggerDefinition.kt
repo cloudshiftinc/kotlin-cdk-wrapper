@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -500,7 +501,8 @@ public open class CfnLoggerDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty):
-          LoggerDefinitionVersionProperty = Wrapper(cdkObject)
+          LoggerDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggerDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggerDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty
@@ -756,7 +758,8 @@ public open class CfnLoggerDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty):
-          LoggerProperty = Wrapper(cdkObject)
+          LoggerProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggerProperty):
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty = (wrapped

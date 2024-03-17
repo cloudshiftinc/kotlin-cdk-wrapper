@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IMachineImage
 import kotlin.Unit
 
@@ -103,7 +104,8 @@ public interface EcsMachineImage {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EcsMachineImage):
-        EcsMachineImage = Wrapper(cdkObject)
+        EcsMachineImage = CdkObjectWrappers.wrap(cdkObject) as? EcsMachineImage ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsMachineImage):
         software.amazon.awscdk.services.batch.EcsMachineImage = (wrapped as CdkObject).cdkObject as

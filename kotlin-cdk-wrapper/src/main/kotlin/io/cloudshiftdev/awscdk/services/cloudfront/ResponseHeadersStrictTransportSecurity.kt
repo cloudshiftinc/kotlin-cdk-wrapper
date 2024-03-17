@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -207,7 +208,8 @@ public interface ResponseHeadersStrictTransportSecurity {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity):
-        ResponseHeadersStrictTransportSecurity = Wrapper(cdkObject)
+        ResponseHeadersStrictTransportSecurity = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersStrictTransportSecurity ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersStrictTransportSecurity):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity = (wrapped

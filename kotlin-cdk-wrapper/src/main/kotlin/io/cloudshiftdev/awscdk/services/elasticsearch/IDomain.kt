@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -1475,7 +1476,7 @@ public interface IDomain : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.IDomain): IDomain =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IDomain ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IDomain): software.amazon.awscdk.services.elasticsearch.IDomain =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.elasticsearch.IDomain

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.EbsDeviceVolumeType
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kms.IKey
@@ -492,7 +493,8 @@ public interface ServiceManagedEBSVolumeConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedEBSVolumeConfiguration):
-        ServiceManagedEBSVolumeConfiguration = Wrapper(cdkObject)
+        ServiceManagedEBSVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as?
+        ServiceManagedEBSVolumeConfiguration ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceManagedEBSVolumeConfiguration):
         software.amazon.awscdk.services.ecs.ServiceManagedEBSVolumeConfiguration = (wrapped as

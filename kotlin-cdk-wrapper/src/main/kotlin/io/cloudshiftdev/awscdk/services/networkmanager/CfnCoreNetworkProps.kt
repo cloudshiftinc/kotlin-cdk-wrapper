@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.networkmanager
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -196,7 +197,8 @@ public interface CfnCoreNetworkProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetworkProps):
-        CfnCoreNetworkProps = Wrapper(cdkObject)
+        CfnCoreNetworkProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCoreNetworkProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCoreNetworkProps):
         software.amazon.awscdk.services.networkmanager.CfnCoreNetworkProps = (wrapped as

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 import kotlin.Unit
@@ -302,7 +303,7 @@ public interface IMesh : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.IMesh): IMesh =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IMesh ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IMesh): software.amazon.awscdk.services.appmesh.IMesh = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.IMesh

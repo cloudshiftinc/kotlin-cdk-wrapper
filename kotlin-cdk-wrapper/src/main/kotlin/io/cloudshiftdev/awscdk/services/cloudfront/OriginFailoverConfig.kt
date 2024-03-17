@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.collections.List
@@ -113,7 +114,8 @@ public interface OriginFailoverConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginFailoverConfig):
-        OriginFailoverConfig = Wrapper(cdkObject)
+        OriginFailoverConfig = CdkObjectWrappers.wrap(cdkObject) as? OriginFailoverConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginFailoverConfig):
         software.amazon.awscdk.services.cloudfront.OriginFailoverConfig = (wrapped as

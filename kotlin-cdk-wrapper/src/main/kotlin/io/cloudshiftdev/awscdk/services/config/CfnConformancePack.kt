@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -546,7 +547,8 @@ public open class CfnConformancePack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty):
-          TemplateSSMDocumentDetailsProperty = Wrapper(cdkObject)
+          TemplateSSMDocumentDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemplateSSMDocumentDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TemplateSSMDocumentDetailsProperty):
           software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty
@@ -661,7 +663,8 @@ public open class CfnConformancePack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty):
-          ConformancePackInputParameterProperty = Wrapper(cdkObject)
+          ConformancePackInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConformancePackInputParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConformancePackInputParameterProperty):
           software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty

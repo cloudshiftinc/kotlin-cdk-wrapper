@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -275,7 +276,8 @@ public interface FunctionUrlCorsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions):
-        FunctionUrlCorsOptions = Wrapper(cdkObject)
+        FunctionUrlCorsOptions = CdkObjectWrappers.wrap(cdkObject) as? FunctionUrlCorsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionUrlCorsOptions):
         software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.collections.Map
@@ -69,7 +70,8 @@ public abstract class TableEncryptionV2 internal constructor(
         software.amazon.awscdk.services.dynamodb.TableEncryptionV2.dynamoOwnedKey().let(TableEncryptionV2::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TableEncryptionV2):
-        TableEncryptionV2 = Wrapper(cdkObject)
+        TableEncryptionV2 = CdkObjectWrappers.wrap(cdkObject) as? TableEncryptionV2 ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableEncryptionV2):
         software.amazon.awscdk.services.dynamodb.TableEncryptionV2 = (wrapped as

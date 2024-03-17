@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.constructs.IConstruct
 import io.cloudshiftdev.constructs.Node
@@ -127,7 +128,7 @@ public interface IConfiguration : IConstruct {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.IConfiguration):
-        IConfiguration = Wrapper(cdkObject)
+        IConfiguration = CdkObjectWrappers.wrap(cdkObject) as? IConfiguration ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IConfiguration):
         software.amazon.awscdk.services.appconfig.IConfiguration = (wrapped as CdkObject).cdkObject

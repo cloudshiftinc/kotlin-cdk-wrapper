@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 import kotlin.Unit
@@ -152,7 +153,7 @@ public interface ILayerVersion : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.ILayerVersion):
-        ILayerVersion = Wrapper(cdkObject)
+        ILayerVersion = CdkObjectWrappers.wrap(cdkObject) as? ILayerVersion ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILayerVersion):
         software.amazon.awscdk.services.lambda.ILayerVersion = (wrapped as CdkObject).cdkObject as

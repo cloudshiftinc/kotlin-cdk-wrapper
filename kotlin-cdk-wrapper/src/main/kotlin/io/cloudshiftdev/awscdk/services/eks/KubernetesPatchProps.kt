@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -204,7 +205,8 @@ public interface KubernetesPatchProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubernetesPatchProps):
-        KubernetesPatchProps = Wrapper(cdkObject)
+        KubernetesPatchProps = CdkObjectWrappers.wrap(cdkObject) as? KubernetesPatchProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesPatchProps):
         software.amazon.awscdk.services.eks.KubernetesPatchProps = (wrapped as CdkObject).cdkObject

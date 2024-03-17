@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.events.RuleProps
@@ -198,7 +199,7 @@ public interface IAction {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.IAction): IAction =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IAction ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAction): software.amazon.awscdk.services.codepipeline.IAction =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codepipeline.IAction

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.config
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.Any
 import kotlin.String
@@ -202,7 +203,8 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CloudFormationStackNotificationCheckProps):
-        CloudFormationStackNotificationCheckProps = Wrapper(cdkObject)
+        CloudFormationStackNotificationCheckProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationStackNotificationCheckProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationStackNotificationCheckProps):
         software.amazon.awscdk.services.config.CloudFormationStackNotificationCheckProps = (wrapped

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
@@ -517,7 +518,7 @@ public interface InstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.InstanceProps): InstanceProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? InstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceProps): software.amazon.awscdk.services.rds.InstanceProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.rds.InstanceProps

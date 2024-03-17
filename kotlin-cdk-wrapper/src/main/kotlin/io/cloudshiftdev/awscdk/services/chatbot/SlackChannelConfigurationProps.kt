@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.chatbot
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IManagedPolicy
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.logs.LogRetentionRetryOptions
@@ -439,7 +440,8 @@ public interface SlackChannelConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.chatbot.SlackChannelConfigurationProps):
-        SlackChannelConfigurationProps = Wrapper(cdkObject)
+        SlackChannelConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SlackChannelConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SlackChannelConfigurationProps):
         software.amazon.awscdk.services.chatbot.SlackChannelConfigurationProps = (wrapped as

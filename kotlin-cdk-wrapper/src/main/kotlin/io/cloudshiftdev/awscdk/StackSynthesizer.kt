@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -121,7 +122,7 @@ public abstract class StackSynthesizer internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.StackSynthesizer): StackSynthesizer =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? StackSynthesizer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSynthesizer): software.amazon.awscdk.StackSynthesizer =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.StackSynthesizer

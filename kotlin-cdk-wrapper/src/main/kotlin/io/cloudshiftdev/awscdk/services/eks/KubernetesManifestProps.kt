@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -363,7 +364,8 @@ public interface KubernetesManifestProps : KubernetesManifestOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestProps):
-        KubernetesManifestProps = Wrapper(cdkObject)
+        KubernetesManifestProps = CdkObjectWrappers.wrap(cdkObject) as? KubernetesManifestProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesManifestProps):
         software.amazon.awscdk.services.eks.KubernetesManifestProps = (wrapped as

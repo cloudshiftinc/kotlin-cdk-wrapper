@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 
 /**
@@ -31,7 +32,7 @@ public interface ITokenMapper {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ITokenMapper): ITokenMapper =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ITokenMapper ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITokenMapper): software.amazon.awscdk.ITokenMapper = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.ITokenMapper

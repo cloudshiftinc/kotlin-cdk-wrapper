@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -166,7 +167,7 @@ public interface AdjustmentTier {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.AdjustmentTier):
-        AdjustmentTier = Wrapper(cdkObject)
+        AdjustmentTier = CdkObjectWrappers.wrap(cdkObject) as? AdjustmentTier ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AdjustmentTier):
         software.amazon.awscdk.services.autoscaling.AdjustmentTier = (wrapped as

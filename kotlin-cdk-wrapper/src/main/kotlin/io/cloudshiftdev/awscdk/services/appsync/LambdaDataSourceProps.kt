@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import kotlin.String
@@ -157,7 +158,8 @@ public interface LambdaDataSourceProps : BackedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.LambdaDataSourceProps):
-        LambdaDataSourceProps = Wrapper(cdkObject)
+        LambdaDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDataSourceProps):
         software.amazon.awscdk.services.appsync.LambdaDataSourceProps = (wrapped as

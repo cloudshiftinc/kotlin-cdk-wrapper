@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
@@ -133,7 +134,8 @@ public abstract class BaseLoadBalancer internal constructor(
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancer):
-        BaseLoadBalancer = Wrapper(cdkObject)
+        BaseLoadBalancer = CdkObjectWrappers.wrap(cdkObject) as? BaseLoadBalancer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseLoadBalancer):
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancer = (wrapped as

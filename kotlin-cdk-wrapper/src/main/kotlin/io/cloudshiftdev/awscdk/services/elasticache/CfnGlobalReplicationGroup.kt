@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -684,7 +685,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty):
-          GlobalReplicationGroupMemberProperty = Wrapper(cdkObject)
+          GlobalReplicationGroupMemberProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlobalReplicationGroupMemberProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GlobalReplicationGroupMemberProperty):
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty
@@ -816,7 +818,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty):
-          ReshardingConfigurationProperty = Wrapper(cdkObject)
+          ReshardingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReshardingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReshardingConfigurationProperty):
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
@@ -987,7 +990,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty):
-          RegionalConfigurationProperty = Wrapper(cdkObject)
+          RegionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegionalConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegionalConfigurationProperty):
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty

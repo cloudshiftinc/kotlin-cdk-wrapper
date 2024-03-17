@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53resolver
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -280,7 +281,8 @@ public interface CfnFirewallRuleGroupAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociationProps):
-        CfnFirewallRuleGroupAssociationProps = Wrapper(cdkObject)
+        CfnFirewallRuleGroupAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnFirewallRuleGroupAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallRuleGroupAssociationProps):
         software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociationProps =

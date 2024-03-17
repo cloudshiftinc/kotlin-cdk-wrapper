@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.CloudFormationInit
 import io.cloudshiftdev.awscdk.services.ec2.ILaunchTemplate
 import io.cloudshiftdev.awscdk.services.ec2.IMachineImage
@@ -1633,7 +1634,8 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.AutoScalingGroupProps):
-        AutoScalingGroupProps = Wrapper(cdkObject)
+        AutoScalingGroupProps = CdkObjectWrappers.wrap(cdkObject) as? AutoScalingGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoScalingGroupProps):
         software.amazon.awscdk.services.autoscaling.AutoScalingGroupProps = (wrapped as

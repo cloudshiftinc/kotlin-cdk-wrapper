@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iotsitewise
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -243,7 +244,8 @@ public interface CfnAccessPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicyProps):
-        CfnAccessPolicyProps = Wrapper(cdkObject)
+        CfnAccessPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAccessPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPolicyProps):
         software.amazon.awscdk.services.iotsitewise.CfnAccessPolicyProps = (wrapped as

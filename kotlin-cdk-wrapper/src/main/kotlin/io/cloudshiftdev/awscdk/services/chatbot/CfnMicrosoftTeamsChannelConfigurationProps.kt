@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.chatbot
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -421,7 +422,8 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps):
-        CfnMicrosoftTeamsChannelConfigurationProps = Wrapper(cdkObject)
+        CfnMicrosoftTeamsChannelConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMicrosoftTeamsChannelConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMicrosoftTeamsChannelConfigurationProps):
         software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps =

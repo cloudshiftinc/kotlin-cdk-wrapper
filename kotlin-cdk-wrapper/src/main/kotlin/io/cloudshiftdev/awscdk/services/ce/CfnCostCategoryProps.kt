@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ce
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -203,7 +204,8 @@ public interface CfnCostCategoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnCostCategoryProps):
-        CfnCostCategoryProps = Wrapper(cdkObject)
+        CfnCostCategoryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCostCategoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCostCategoryProps):
         software.amazon.awscdk.services.ce.CfnCostCategoryProps = (wrapped as CdkObject).cdkObject

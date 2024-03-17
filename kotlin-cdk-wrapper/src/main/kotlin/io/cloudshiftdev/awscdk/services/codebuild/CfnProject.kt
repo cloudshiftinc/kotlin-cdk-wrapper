@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2382,7 +2383,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty):
-          ProjectCacheProperty = Wrapper(cdkObject)
+          ProjectCacheProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectCacheProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProjectCacheProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty = (wrapped as
@@ -2562,7 +2564,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty):
-          CloudWatchLogsConfigProperty = Wrapper(cdkObject)
+          CloudWatchLogsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogsConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty =
@@ -3215,7 +3218,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ArtifactsProperty):
-          ArtifactsProperty = Wrapper(cdkObject)
+          ArtifactsProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArtifactsProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.ArtifactsProperty = (wrapped as
@@ -3412,7 +3416,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.BuildStatusConfigProperty):
-          BuildStatusConfigProperty = Wrapper(cdkObject)
+          BuildStatusConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BuildStatusConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BuildStatusConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.BuildStatusConfigProperty = (wrapped
@@ -3557,7 +3562,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty):
-          BatchRestrictionsProperty = Wrapper(cdkObject)
+          BatchRestrictionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchRestrictionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchRestrictionsProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty = (wrapped
@@ -3837,7 +3843,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty):
-          ProjectBuildBatchConfigProperty = Wrapper(cdkObject)
+          ProjectBuildBatchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProjectBuildBatchConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProjectBuildBatchConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty =
@@ -4665,7 +4672,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentProperty):
-          EnvironmentProperty = Wrapper(cdkObject)
+          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentProperty = (wrapped as
@@ -4748,7 +4756,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty):
-          ProjectFleetProperty = Wrapper(cdkObject)
+          ProjectFleetProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectFleetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProjectFleetProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty = (wrapped as
@@ -4973,7 +4982,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentVariableProperty):
-          EnvironmentVariableProperty = Wrapper(cdkObject)
+          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentVariableProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentVariableProperty =
@@ -5167,7 +5177,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty):
-          LogsConfigProperty = Wrapper(cdkObject)
+          LogsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LogsConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogsConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty = (wrapped as
@@ -5310,7 +5321,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty):
-          RegistryCredentialProperty = Wrapper(cdkObject)
+          RegistryCredentialProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegistryCredentialProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegistryCredentialProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty = (wrapped
@@ -5528,7 +5540,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty):
-          ProjectTriggersProperty = Wrapper(cdkObject)
+          ProjectTriggersProperty = CdkObjectWrappers.wrap(cdkObject) as? ProjectTriggersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProjectTriggersProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty = (wrapped as
@@ -5628,7 +5641,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty):
-          GitSubmodulesConfigProperty = Wrapper(cdkObject)
+          GitSubmodulesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GitSubmodulesConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GitSubmodulesConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty =
@@ -5810,7 +5824,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty):
-          S3LogsConfigProperty = Wrapper(cdkObject)
+          S3LogsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogsConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LogsConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty = (wrapped as
@@ -6095,7 +6110,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectFileSystemLocationProperty):
-          ProjectFileSystemLocationProperty = Wrapper(cdkObject)
+          ProjectFileSystemLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProjectFileSystemLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProjectFileSystemLocationProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectFileSystemLocationProperty =
@@ -6236,7 +6252,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty):
-          SourceAuthProperty = Wrapper(cdkObject)
+          SourceAuthProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceAuthProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceAuthProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty = (wrapped as
@@ -6420,7 +6437,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.ProjectSourceVersionProperty):
-          ProjectSourceVersionProperty = Wrapper(cdkObject)
+          ProjectSourceVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProjectSourceVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProjectSourceVersionProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectSourceVersionProperty =
@@ -6801,7 +6819,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty):
-          WebhookFilterProperty = Wrapper(cdkObject)
+          WebhookFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? WebhookFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebhookFilterProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty = (wrapped as
@@ -6978,7 +6997,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty = (wrapped as
@@ -7749,7 +7769,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty):
-          SourceProperty = Wrapper(cdkObject)
+          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceProperty):
           software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty = (wrapped as

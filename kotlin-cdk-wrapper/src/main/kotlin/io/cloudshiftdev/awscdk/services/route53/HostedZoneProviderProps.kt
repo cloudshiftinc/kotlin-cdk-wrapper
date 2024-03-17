@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -142,7 +143,8 @@ public interface HostedZoneProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.HostedZoneProviderProps):
-        HostedZoneProviderProps = Wrapper(cdkObject)
+        HostedZoneProviderProps = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HostedZoneProviderProps):
         software.amazon.awscdk.services.route53.HostedZoneProviderProps = (wrapped as

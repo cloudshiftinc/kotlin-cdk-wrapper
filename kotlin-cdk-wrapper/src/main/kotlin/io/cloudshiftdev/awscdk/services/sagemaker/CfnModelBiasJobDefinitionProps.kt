@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -707,7 +708,8 @@ public interface CfnModelBiasJobDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinitionProps):
-        CfnModelBiasJobDefinitionProps = Wrapper(cdkObject)
+        CfnModelBiasJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnModelBiasJobDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelBiasJobDefinitionProps):
         software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinitionProps = (wrapped as

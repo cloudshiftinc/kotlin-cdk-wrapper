@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
@@ -411,7 +412,7 @@ public interface Permission {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.Permission): Permission =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Permission ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Permission): software.amazon.awscdk.services.lambda.Permission =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.Permission

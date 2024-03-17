@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -72,7 +73,7 @@ public interface ILocalBundling {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ILocalBundling): ILocalBundling =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ILocalBundling ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILocalBundling): software.amazon.awscdk.ILocalBundling = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.ILocalBundling

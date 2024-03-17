@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -470,7 +471,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty):
-          DataflowEndpointConfigProperty = Wrapper(cdkObject)
+          DataflowEndpointConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataflowEndpointConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataflowEndpointConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty =
@@ -634,7 +636,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty):
-          UplinkSpectrumConfigProperty = Wrapper(cdkObject)
+          UplinkSpectrumConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UplinkSpectrumConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UplinkSpectrumConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty =
@@ -734,7 +737,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty):
-          TrackingConfigProperty = Wrapper(cdkObject)
+          TrackingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TrackingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrackingConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty = (wrapped
@@ -851,7 +855,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty):
-          FrequencyProperty = Wrapper(cdkObject)
+          FrequencyProperty = CdkObjectWrappers.wrap(cdkObject) as? FrequencyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrequencyProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty = (wrapped as
@@ -1492,7 +1497,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty):
-          ConfigDataProperty = Wrapper(cdkObject)
+          ConfigDataProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigDataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigDataProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty = (wrapped as
@@ -1619,7 +1625,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty):
-          FrequencyBandwidthProperty = Wrapper(cdkObject)
+          FrequencyBandwidthProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FrequencyBandwidthProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrequencyBandwidthProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty =
@@ -1696,7 +1703,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty):
-          DecodeConfigProperty = Wrapper(cdkObject)
+          DecodeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DecodeConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DecodeConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty = (wrapped as
@@ -1808,7 +1816,7 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty):
-          EirpProperty = Wrapper(cdkObject)
+          EirpProperty = CdkObjectWrappers.wrap(cdkObject) as? EirpProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EirpProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty = (wrapped as
@@ -2047,7 +2055,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty):
-          AntennaDownlinkDemodDecodeConfigProperty = Wrapper(cdkObject)
+          AntennaDownlinkDemodDecodeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AntennaDownlinkDemodDecodeConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AntennaDownlinkDemodDecodeConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty
@@ -2125,7 +2134,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty):
-          DemodulationConfigProperty = Wrapper(cdkObject)
+          DemodulationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DemodulationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DemodulationConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty =
@@ -2249,7 +2259,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty):
-          AntennaDownlinkConfigProperty = Wrapper(cdkObject)
+          AntennaDownlinkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AntennaDownlinkConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AntennaDownlinkConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty =
@@ -2417,7 +2428,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty):
-          S3RecordingConfigProperty = Wrapper(cdkObject)
+          S3RecordingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3RecordingConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3RecordingConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty =
@@ -2540,7 +2552,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty):
-          UplinkEchoConfigProperty = Wrapper(cdkObject)
+          UplinkEchoConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? UplinkEchoConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UplinkEchoConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty =
@@ -2797,7 +2810,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty):
-          SpectrumConfigProperty = Wrapper(cdkObject)
+          SpectrumConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SpectrumConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpectrumConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty = (wrapped
@@ -3025,7 +3039,8 @@ public open class CfnConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty):
-          AntennaUplinkConfigProperty = Wrapper(cdkObject)
+          AntennaUplinkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AntennaUplinkConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AntennaUplinkConfigProperty):
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty =

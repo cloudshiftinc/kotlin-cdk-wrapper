@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.verifiedpermissions
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -170,7 +171,7 @@ public interface CfnPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyProps):
-        CfnPolicyProps = Wrapper(cdkObject)
+        CfnPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyProps):
         software.amazon.awscdk.services.verifiedpermissions.CfnPolicyProps = (wrapped as

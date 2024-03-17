@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import io.cloudshiftdev.awscdk.services.ecs.LogDriver
 import io.cloudshiftdev.awscdk.services.ecs.Secret
@@ -301,7 +302,8 @@ public interface ScheduledEc2TaskImageOptions : ScheduledTaskImageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskImageOptions):
-        ScheduledEc2TaskImageOptions = Wrapper(cdkObject)
+        ScheduledEc2TaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ScheduledEc2TaskImageOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledEc2TaskImageOptions):
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskImageOptions = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -541,7 +542,8 @@ public open class CfnRotation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty):
-          MonthlySettingProperty = Wrapper(cdkObject)
+          MonthlySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? MonthlySettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonthlySettingProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty = (wrapped
@@ -649,7 +651,8 @@ public open class CfnRotation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.CoverageTimeProperty):
-          CoverageTimeProperty = Wrapper(cdkObject)
+          CoverageTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? CoverageTimeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoverageTimeProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.CoverageTimeProperty = (wrapped as
@@ -757,7 +760,8 @@ public open class CfnRotation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty):
-          WeeklySettingProperty = Wrapper(cdkObject)
+          WeeklySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? WeeklySettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WeeklySettingProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty = (wrapped
@@ -1087,7 +1091,8 @@ public open class CfnRotation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.RecurrenceSettingsProperty):
-          RecurrenceSettingsProperty = Wrapper(cdkObject)
+          RecurrenceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RecurrenceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecurrenceSettingsProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.RecurrenceSettingsProperty =
@@ -1221,7 +1226,8 @@ public open class CfnRotation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation.ShiftCoverageProperty):
-          ShiftCoverageProperty = Wrapper(cdkObject)
+          ShiftCoverageProperty = CdkObjectWrappers.wrap(cdkObject) as? ShiftCoverageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ShiftCoverageProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.ShiftCoverageProperty = (wrapped

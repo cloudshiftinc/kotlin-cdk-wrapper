@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -93,7 +94,7 @@ public interface CfnRuleAssertion {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnRuleAssertion): CfnRuleAssertion =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? CfnRuleAssertion ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleAssertion): software.amazon.awscdk.CfnRuleAssertion =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.CfnRuleAssertion

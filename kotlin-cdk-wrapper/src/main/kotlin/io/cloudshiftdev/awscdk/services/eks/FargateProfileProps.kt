@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -270,7 +271,8 @@ public interface FargateProfileProps : FargateProfileOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.FargateProfileProps):
-        FargateProfileProps = Wrapper(cdkObject)
+        FargateProfileProps = CdkObjectWrappers.wrap(cdkObject) as? FargateProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateProfileProps):
         software.amazon.awscdk.services.eks.FargateProfileProps = (wrapped as CdkObject).cdkObject

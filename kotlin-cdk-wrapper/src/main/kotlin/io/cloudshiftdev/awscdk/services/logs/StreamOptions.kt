@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -78,7 +79,7 @@ public interface StreamOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.StreamOptions): StreamOptions
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? StreamOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamOptions): software.amazon.awscdk.services.logs.StreamOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.logs.StreamOptions

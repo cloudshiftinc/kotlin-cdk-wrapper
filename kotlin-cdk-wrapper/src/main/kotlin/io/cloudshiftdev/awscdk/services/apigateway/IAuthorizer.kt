@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -37,7 +38,7 @@ public interface IAuthorizer {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.IAuthorizer):
-        IAuthorizer = Wrapper(cdkObject)
+        IAuthorizer = CdkObjectWrappers.wrap(cdkObject) as? IAuthorizer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAuthorizer):
         software.amazon.awscdk.services.apigateway.IAuthorizer = (wrapped as CdkObject).cdkObject as

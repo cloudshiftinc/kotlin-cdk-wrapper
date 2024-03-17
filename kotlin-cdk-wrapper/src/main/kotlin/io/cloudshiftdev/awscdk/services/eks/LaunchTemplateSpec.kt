@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -105,7 +106,8 @@ public interface LaunchTemplateSpec {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.LaunchTemplateSpec):
-        LaunchTemplateSpec = Wrapper(cdkObject)
+        LaunchTemplateSpec = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateSpec ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateSpec):
         software.amazon.awscdk.services.eks.LaunchTemplateSpec = (wrapped as CdkObject).cdkObject as

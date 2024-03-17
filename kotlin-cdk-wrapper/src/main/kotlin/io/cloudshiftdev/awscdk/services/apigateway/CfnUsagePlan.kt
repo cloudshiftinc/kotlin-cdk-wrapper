@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -609,7 +610,8 @@ public open class CfnUsagePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty):
-          ThrottleSettingsProperty = Wrapper(cdkObject)
+          ThrottleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ThrottleSettingsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThrottleSettingsProperty):
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
@@ -762,7 +764,8 @@ public open class CfnUsagePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty):
-          QuotaSettingsProperty = Wrapper(cdkObject)
+          QuotaSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? QuotaSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QuotaSettingsProperty):
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty = (wrapped
@@ -916,7 +919,8 @@ public open class CfnUsagePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty):
-          ApiStageProperty = Wrapper(cdkObject)
+          ApiStageProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiStageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApiStageProperty):
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty = (wrapped as

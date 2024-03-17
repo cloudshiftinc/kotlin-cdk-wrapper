@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -218,7 +219,8 @@ public interface ProductStackHistoryProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStackHistoryProps):
-        ProductStackHistoryProps = Wrapper(cdkObject)
+        ProductStackHistoryProps = CdkObjectWrappers.wrap(cdkObject) as? ProductStackHistoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProductStackHistoryProps):
         software.amazon.awscdk.services.servicecatalog.ProductStackHistoryProps = (wrapped as

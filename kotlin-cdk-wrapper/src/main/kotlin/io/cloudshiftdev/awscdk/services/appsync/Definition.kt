@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -68,7 +69,7 @@ public abstract class Definition internal constructor(
         fromSourceApis(SourceApiOptions(sourceApiOptions))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.Definition): Definition =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Definition ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Definition): software.amazon.awscdk.services.appsync.Definition =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.Definition

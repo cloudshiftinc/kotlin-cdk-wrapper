@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGroup
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.iam.IUser
@@ -774,7 +775,7 @@ public interface IPortfolio : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.IPortfolio):
-        IPortfolio = Wrapper(cdkObject)
+        IPortfolio = CdkObjectWrappers.wrap(cdkObject) as? IPortfolio ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPortfolio):
         software.amazon.awscdk.services.servicecatalog.IPortfolio = (wrapped as CdkObject).cdkObject

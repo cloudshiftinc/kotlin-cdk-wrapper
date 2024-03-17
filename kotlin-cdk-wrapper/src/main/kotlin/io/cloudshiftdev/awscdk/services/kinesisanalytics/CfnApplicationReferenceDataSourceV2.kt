@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -500,7 +501,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty):
-          ReferenceSchemaProperty = Wrapper(cdkObject)
+          ReferenceSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceSchemaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReferenceSchemaProperty):
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceSchemaProperty
@@ -630,7 +632,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty):
-          CSVMappingParametersProperty = Wrapper(cdkObject)
+          CSVMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CSVMappingParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CSVMappingParametersProperty):
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.CSVMappingParametersProperty
@@ -714,7 +717,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty):
-          JSONMappingParametersProperty = Wrapper(cdkObject)
+          JSONMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JSONMappingParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JSONMappingParametersProperty):
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.JSONMappingParametersProperty
@@ -830,7 +834,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty):
-          S3ReferenceDataSourceProperty = Wrapper(cdkObject)
+          S3ReferenceDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3ReferenceDataSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3ReferenceDataSourceProperty):
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.S3ReferenceDataSourceProperty
@@ -993,7 +998,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty):
-          RecordFormatProperty = Wrapper(cdkObject)
+          RecordFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordFormatProperty):
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordFormatProperty
@@ -1184,7 +1190,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.MappingParametersProperty):
-          MappingParametersProperty = Wrapper(cdkObject)
+          MappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MappingParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MappingParametersProperty):
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.MappingParametersProperty
@@ -1331,7 +1338,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordColumnProperty):
-          RecordColumnProperty = Wrapper(cdkObject)
+          RecordColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordColumnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordColumnProperty):
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.RecordColumnProperty
@@ -1600,7 +1608,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty):
-          ReferenceDataSourceProperty = Wrapper(cdkObject)
+          ReferenceDataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReferenceDataSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReferenceDataSourceProperty):
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty

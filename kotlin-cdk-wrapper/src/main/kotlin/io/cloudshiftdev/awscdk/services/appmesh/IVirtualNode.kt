@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Node
@@ -111,7 +112,7 @@ public interface IVirtualNode : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.IVirtualNode): IVirtualNode
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IVirtualNode ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IVirtualNode): software.amazon.awscdk.services.appmesh.IVirtualNode
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.IVirtualNode

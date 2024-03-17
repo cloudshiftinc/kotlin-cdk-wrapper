@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.location
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -150,7 +151,8 @@ public interface CfnTrackerConsumerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnTrackerConsumerProps):
-        CfnTrackerConsumerProps = Wrapper(cdkObject)
+        CfnTrackerConsumerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTrackerConsumerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrackerConsumerProps):
         software.amazon.awscdk.services.location.CfnTrackerConsumerProps = (wrapped as

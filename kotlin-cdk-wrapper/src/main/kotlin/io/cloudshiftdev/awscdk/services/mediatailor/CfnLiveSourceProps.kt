@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -226,7 +227,8 @@ public interface CfnLiveSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSourceProps):
-        CfnLiveSourceProps = Wrapper(cdkObject)
+        CfnLiveSourceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLiveSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLiveSourceProps):
         software.amazon.awscdk.services.mediatailor.CfnLiveSourceProps = (wrapped as

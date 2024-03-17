@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.cloudassembly.schema.MetadataEntry
 import io.cloudshiftdev.awscdk.cloudassembly.schema.Tag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -218,7 +219,8 @@ public interface MetadataEntryResult : MetadataEntry {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.MetadataEntryResult):
-        MetadataEntryResult = Wrapper(cdkObject)
+        MetadataEntryResult = CdkObjectWrappers.wrap(cdkObject) as? MetadataEntryResult ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetadataEntryResult):
         software.amazon.awscdk.cxapi.MetadataEntryResult = (wrapped as CdkObject).cdkObject as

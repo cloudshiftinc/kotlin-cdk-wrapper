@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -391,7 +392,8 @@ public interface ApplyCloudFormationInitOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ApplyCloudFormationInitOptions):
-        ApplyCloudFormationInitOptions = Wrapper(cdkObject)
+        ApplyCloudFormationInitOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplyCloudFormationInitOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplyCloudFormationInitOptions):
         software.amazon.awscdk.services.ec2.ApplyCloudFormationInitOptions = (wrapped as

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -874,7 +875,8 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputSourceRequestProperty):
-          InputSourceRequestProperty = Wrapper(cdkObject)
+          InputSourceRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputSourceRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputSourceRequestProperty):
           software.amazon.awscdk.services.medialive.CfnInput.InputSourceRequestProperty = (wrapped
@@ -1032,7 +1034,8 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty):
-          InputVpcRequestProperty = Wrapper(cdkObject)
+          InputVpcRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? InputVpcRequestProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputVpcRequestProperty):
           software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty = (wrapped as
@@ -1115,7 +1118,8 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty):
-          InputDeviceSettingsProperty = Wrapper(cdkObject)
+          InputDeviceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputDeviceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputDeviceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty = (wrapped
@@ -1190,7 +1194,8 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty):
-          InputDeviceRequestProperty = Wrapper(cdkObject)
+          InputDeviceRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputDeviceRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputDeviceRequestProperty):
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty = (wrapped
@@ -1279,7 +1284,8 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty):
-          InputDestinationRequestProperty = Wrapper(cdkObject)
+          InputDestinationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputDestinationRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputDestinationRequestProperty):
           software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty =
@@ -1366,7 +1372,8 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty):
-          MediaConnectFlowRequestProperty = Wrapper(cdkObject)
+          MediaConnectFlowRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MediaConnectFlowRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MediaConnectFlowRequestProperty):
           software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty =

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.inspector
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -135,7 +136,8 @@ public interface CfnResourceGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.inspector.CfnResourceGroupProps):
-        CfnResourceGroupProps = Wrapper(cdkObject)
+        CfnResourceGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceGroupProps):
         software.amazon.awscdk.services.inspector.CfnResourceGroupProps = (wrapped as

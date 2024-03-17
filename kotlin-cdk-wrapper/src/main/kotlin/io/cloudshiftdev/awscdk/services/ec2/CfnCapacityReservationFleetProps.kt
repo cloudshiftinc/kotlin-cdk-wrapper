@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -578,7 +579,8 @@ public interface CfnCapacityReservationFleetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleetProps):
-        CfnCapacityReservationFleetProps = Wrapper(cdkObject)
+        CfnCapacityReservationFleetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCapacityReservationFleetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapacityReservationFleetProps):
         software.amazon.awscdk.services.ec2.CfnCapacityReservationFleetProps = (wrapped as

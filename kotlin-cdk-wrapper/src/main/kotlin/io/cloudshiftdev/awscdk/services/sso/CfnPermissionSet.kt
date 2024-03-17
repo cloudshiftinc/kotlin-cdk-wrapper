@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -895,7 +896,8 @@ public open class CfnPermissionSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty):
-          PermissionsBoundaryProperty = Wrapper(cdkObject)
+          PermissionsBoundaryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PermissionsBoundaryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PermissionsBoundaryProperty):
           software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty =
@@ -1032,7 +1034,8 @@ public open class CfnPermissionSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty):
-          CustomerManagedPolicyReferenceProperty = Wrapper(cdkObject)
+          CustomerManagedPolicyReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerManagedPolicyReferenceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomerManagedPolicyReferenceProperty):
           software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty

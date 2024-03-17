@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -522,7 +523,8 @@ public open class CfnStep internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty):
-          HadoopJarStepConfigProperty = Wrapper(cdkObject)
+          HadoopJarStepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HadoopJarStepConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HadoopJarStepConfigProperty):
           software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty = (wrapped as
@@ -628,7 +630,8 @@ public open class CfnStep internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty):
-          KeyValueProperty = Wrapper(cdkObject)
+          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyValueProperty):
           software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty = (wrapped as

@@ -9,6 +9,7 @@ plugins {
 
 dependencies {
     implementation(libs.awscdk)
+    implementation(kotlin("reflect"))
     api(project(":kotlin-cdk-wrapper-common"))
 }
 

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lightsail
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -485,7 +486,7 @@ public interface CfnAlarmProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnAlarmProps):
-        CfnAlarmProps = Wrapper(cdkObject)
+        CfnAlarmProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAlarmProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlarmProps):
         software.amazon.awscdk.services.lightsail.CfnAlarmProps = (wrapped as CdkObject).cdkObject

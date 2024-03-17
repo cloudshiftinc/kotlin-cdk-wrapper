@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -192,7 +193,8 @@ public interface IApplicationLoadBalancer : ILoadBalancerV2, IConnectable {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer):
-        IApplicationLoadBalancer = Wrapper(cdkObject)
+        IApplicationLoadBalancer = CdkObjectWrappers.wrap(cdkObject) as? IApplicationLoadBalancer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IApplicationLoadBalancer):
         software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer = (wrapped

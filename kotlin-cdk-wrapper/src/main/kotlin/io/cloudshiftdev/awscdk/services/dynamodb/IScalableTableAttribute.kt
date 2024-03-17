@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.ScalingSchedule
 import kotlin.String
 import kotlin.Unit
@@ -92,7 +93,8 @@ public interface IScalableTableAttribute {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute):
-        IScalableTableAttribute = Wrapper(cdkObject)
+        IScalableTableAttribute = CdkObjectWrappers.wrap(cdkObject) as? IScalableTableAttribute ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IScalableTableAttribute):
         software.amazon.awscdk.services.dynamodb.IScalableTableAttribute = (wrapped as

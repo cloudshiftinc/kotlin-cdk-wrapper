@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -113,7 +114,7 @@ public interface IPrincipal : IGrantable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IPrincipal): IPrincipal =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IPrincipal ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPrincipal): software.amazon.awscdk.services.iam.IPrincipal =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.IPrincipal

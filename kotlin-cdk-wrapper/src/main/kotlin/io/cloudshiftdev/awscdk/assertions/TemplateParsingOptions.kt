@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.assertions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -87,7 +88,8 @@ public interface TemplateParsingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.TemplateParsingOptions):
-        TemplateParsingOptions = Wrapper(cdkObject)
+        TemplateParsingOptions = CdkObjectWrappers.wrap(cdkObject) as? TemplateParsingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TemplateParsingOptions):
         software.amazon.awscdk.assertions.TemplateParsingOptions = (wrapped as CdkObject).cdkObject

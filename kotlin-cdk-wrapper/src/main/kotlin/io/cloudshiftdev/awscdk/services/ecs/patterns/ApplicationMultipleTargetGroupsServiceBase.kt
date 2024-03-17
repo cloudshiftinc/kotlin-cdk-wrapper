@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationListener
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer
@@ -77,7 +78,8 @@ public abstract class ApplicationMultipleTargetGroupsServiceBase internal constr
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBase):
-        ApplicationMultipleTargetGroupsServiceBase = Wrapper(cdkObject)
+        ApplicationMultipleTargetGroupsServiceBase = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationMultipleTargetGroupsServiceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationMultipleTargetGroupsServiceBase):
         software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBase =

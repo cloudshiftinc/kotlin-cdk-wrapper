@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -167,7 +168,8 @@ public interface OriginBindConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginBindConfig):
-        OriginBindConfig = Wrapper(cdkObject)
+        OriginBindConfig = CdkObjectWrappers.wrap(cdkObject) as? OriginBindConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginBindConfig):
         software.amazon.awscdk.services.cloudfront.OriginBindConfig = (wrapped as

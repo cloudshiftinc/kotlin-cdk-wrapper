@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import kotlin.Boolean
 import kotlin.Number
@@ -1080,7 +1081,8 @@ public interface EksContainerDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EksContainerDefinitionProps):
-        EksContainerDefinitionProps = Wrapper(cdkObject)
+        EksContainerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EksContainerDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksContainerDefinitionProps):
         software.amazon.awscdk.services.batch.EksContainerDefinitionProps = (wrapped as

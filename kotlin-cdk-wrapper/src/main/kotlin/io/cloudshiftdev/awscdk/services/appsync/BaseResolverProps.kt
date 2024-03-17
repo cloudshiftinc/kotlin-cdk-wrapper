@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -343,7 +344,8 @@ public interface BaseResolverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.BaseResolverProps):
-        BaseResolverProps = Wrapper(cdkObject)
+        BaseResolverProps = CdkObjectWrappers.wrap(cdkObject) as? BaseResolverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseResolverProps):
         software.amazon.awscdk.services.appsync.BaseResolverProps = (wrapped as CdkObject).cdkObject

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -88,7 +89,7 @@ public interface IDomainName : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IDomainName):
-        IDomainName = Wrapper(cdkObject)
+        IDomainName = CdkObjectWrappers.wrap(cdkObject) as? IDomainName ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IDomainName):
         software.amazon.awscdk.services.apigatewayv2.IDomainName = (wrapped as CdkObject).cdkObject

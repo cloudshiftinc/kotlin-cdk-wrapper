@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -111,7 +112,8 @@ public interface CustomStateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CustomStateProps):
-        CustomStateProps = Wrapper(cdkObject)
+        CustomStateProps = CdkObjectWrappers.wrap(cdkObject) as? CustomStateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomStateProps):
         software.amazon.awscdk.services.stepfunctions.CustomStateProps = (wrapped as

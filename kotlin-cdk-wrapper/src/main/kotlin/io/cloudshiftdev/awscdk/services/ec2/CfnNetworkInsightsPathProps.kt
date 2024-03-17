@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -451,7 +452,8 @@ public interface CfnNetworkInsightsPathProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPathProps):
-        CfnNetworkInsightsPathProps = Wrapper(cdkObject)
+        CfnNetworkInsightsPathProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNetworkInsightsPathProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInsightsPathProps):
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsPathProps = (wrapped as

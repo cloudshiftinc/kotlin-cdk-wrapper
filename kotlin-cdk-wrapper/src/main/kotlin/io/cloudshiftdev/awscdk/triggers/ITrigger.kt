@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.triggers
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import io.cloudshiftdev.constructs.IConstruct
 import io.cloudshiftdev.constructs.Node
@@ -63,7 +64,7 @@ public interface ITrigger : IConstruct {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.triggers.ITrigger): ITrigger =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ITrigger ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITrigger): software.amazon.awscdk.triggers.ITrigger = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.triggers.ITrigger

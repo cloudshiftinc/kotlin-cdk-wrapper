@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * The key format for the log object.
@@ -38,7 +39,8 @@ public abstract class TargetObjectKeyFormat internal constructor(
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat.simplePrefix().let(TargetObjectKeyFormat::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat):
-        TargetObjectKeyFormat = Wrapper(cdkObject)
+        TargetObjectKeyFormat = CdkObjectWrappers.wrap(cdkObject) as? TargetObjectKeyFormat ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TargetObjectKeyFormat):
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat = (wrapped as CdkObject).cdkObject

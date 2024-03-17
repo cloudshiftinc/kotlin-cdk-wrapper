@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.collections.List
@@ -71,7 +72,7 @@ public interface IMetric {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.IMetric): IMetric =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IMetric ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IMetric): software.amazon.awscdk.services.cloudwatch.IMetric =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.IMetric

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -390,7 +391,8 @@ public interface HttpIntegrationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpIntegrationProps):
-        HttpIntegrationProps = Wrapper(cdkObject)
+        HttpIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? HttpIntegrationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpIntegrationProps):
         software.amazon.awscdk.services.apigatewayv2.HttpIntegrationProps = (wrapped as

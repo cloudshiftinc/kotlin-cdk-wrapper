@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
@@ -555,7 +556,8 @@ public interface CfnMigrationProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProjectProps):
-        CfnMigrationProjectProps = Wrapper(cdkObject)
+        CfnMigrationProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMigrationProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMigrationProjectProps):
         software.amazon.awscdk.services.dms.CfnMigrationProjectProps = (wrapped as

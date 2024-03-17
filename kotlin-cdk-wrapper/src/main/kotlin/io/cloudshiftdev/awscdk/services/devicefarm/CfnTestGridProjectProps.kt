@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -228,7 +229,8 @@ public interface CfnTestGridProjectProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProjectProps):
-        CfnTestGridProjectProps = Wrapper(cdkObject)
+        CfnTestGridProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTestGridProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTestGridProjectProps):
         software.amazon.awscdk.services.devicefarm.CfnTestGridProjectProps = (wrapped as

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -530,7 +531,8 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty):
-          ThemeValuesProperty = Wrapper(cdkObject)
+          ThemeValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? ThemeValuesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThemeValuesProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty = (wrapped
@@ -664,7 +666,8 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty):
-          ThemeValueProperty = Wrapper(cdkObject)
+          ThemeValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ThemeValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThemeValueProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty = (wrapped as

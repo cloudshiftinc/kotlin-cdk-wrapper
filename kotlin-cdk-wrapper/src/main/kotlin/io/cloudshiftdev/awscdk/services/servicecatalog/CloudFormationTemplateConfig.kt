@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -104,7 +105,8 @@ public interface CloudFormationTemplateConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig):
-        CloudFormationTemplateConfig = Wrapper(cdkObject)
+        CloudFormationTemplateConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationTemplateConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationTemplateConfig):
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig = (wrapped as

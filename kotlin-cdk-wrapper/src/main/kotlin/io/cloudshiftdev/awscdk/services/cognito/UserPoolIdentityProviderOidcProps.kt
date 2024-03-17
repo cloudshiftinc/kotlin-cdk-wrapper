@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -394,7 +395,8 @@ public interface UserPoolIdentityProviderOidcProps : UserPoolIdentityProviderPro
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidcProps):
-        UserPoolIdentityProviderOidcProps = Wrapper(cdkObject)
+        UserPoolIdentityProviderOidcProps = CdkObjectWrappers.wrap(cdkObject) as?
+        UserPoolIdentityProviderOidcProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolIdentityProviderOidcProps):
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidcProps = (wrapped as

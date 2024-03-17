@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -850,7 +851,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property):
-          S3Property = Wrapper(cdkObject)
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property = (wrapped as
@@ -999,7 +1000,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty):
-          AutoImportPolicyProperty = Wrapper(cdkObject)
+          AutoImportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoImportPolicyProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoImportPolicyProperty):
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
@@ -1149,7 +1151,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty):
-          AutoExportPolicyProperty = Wrapper(cdkObject)
+          AutoExportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoExportPolicyProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoExportPolicyProperty):
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty

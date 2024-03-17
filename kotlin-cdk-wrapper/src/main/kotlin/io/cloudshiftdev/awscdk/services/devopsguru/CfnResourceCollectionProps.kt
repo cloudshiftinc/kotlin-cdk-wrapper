@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.devopsguru
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -127,7 +128,8 @@ public interface CfnResourceCollectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps):
-        CfnResourceCollectionProps = Wrapper(cdkObject)
+        CfnResourceCollectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResourceCollectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceCollectionProps):
         software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps = (wrapped as

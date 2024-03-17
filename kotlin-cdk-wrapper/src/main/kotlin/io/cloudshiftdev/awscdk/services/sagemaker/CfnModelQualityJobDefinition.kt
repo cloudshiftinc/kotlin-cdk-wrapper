@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1372,7 +1373,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty):
-          EndpointInputProperty = Wrapper(cdkObject)
+          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty
@@ -1699,7 +1701,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty):
-          ModelQualityAppSpecificationProperty = Wrapper(cdkObject)
+          ModelQualityAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelQualityAppSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelQualityAppSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty
@@ -1885,7 +1888,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty):
-          ClusterConfigProperty = Wrapper(cdkObject)
+          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClusterConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty
@@ -2032,7 +2036,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty):
-          ModelQualityBaselineConfigProperty = Wrapper(cdkObject)
+          ModelQualityBaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelQualityBaselineConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelQualityBaselineConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty
@@ -2116,7 +2121,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty):
-          MonitoringGroundTruthS3InputProperty = Wrapper(cdkObject)
+          MonitoringGroundTruthS3InputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringGroundTruthS3InputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringGroundTruthS3InputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty
@@ -2548,7 +2554,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.BatchTransformInputProperty):
-          BatchTransformInputProperty = Wrapper(cdkObject)
+          BatchTransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchTransformInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchTransformInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.BatchTransformInputProperty
@@ -2642,7 +2649,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.JsonProperty):
-          JsonProperty = Wrapper(cdkObject)
+          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.JsonProperty =
@@ -2763,7 +2770,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty):
-          MonitoringResourcesProperty = Wrapper(cdkObject)
+          MonitoringResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringResourcesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringResourcesProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty
@@ -2917,7 +2925,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.S3OutputProperty):
-          S3OutputProperty = Wrapper(cdkObject)
+          S3OutputProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3OutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.S3OutputProperty =
@@ -3069,7 +3078,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.StoppingConditionProperty):
-          StoppingConditionProperty = Wrapper(cdkObject)
+          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StoppingConditionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StoppingConditionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.StoppingConditionProperty
@@ -3224,7 +3234,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty):
-          MonitoringOutputConfigProperty = Wrapper(cdkObject)
+          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty
@@ -3456,7 +3467,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty):
-          NetworkConfigProperty = Wrapper(cdkObject)
+          NetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty
@@ -3550,7 +3562,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty):
-          CsvProperty = Wrapper(cdkObject)
+          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CsvProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty =
@@ -3717,7 +3729,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.VpcConfigProperty =
@@ -3921,7 +3934,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty):
-          DatasetFormatProperty = Wrapper(cdkObject)
+          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetFormatProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty
@@ -4003,7 +4017,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty):
-          ConstraintsResourceProperty = Wrapper(cdkObject)
+          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConstraintsResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConstraintsResourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty
@@ -4123,7 +4138,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty):
-          MonitoringOutputProperty = Wrapper(cdkObject)
+          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringOutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty
@@ -4381,7 +4397,8 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty):
-          ModelQualityJobInputProperty = Wrapper(cdkObject)
+          ModelQualityJobInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelQualityJobInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelQualityJobInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty

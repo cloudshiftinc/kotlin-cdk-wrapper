@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -663,7 +664,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CsvFormatDescriptorProperty):
-          CsvFormatDescriptorProperty = Wrapper(cdkObject)
+          CsvFormatDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CsvFormatDescriptorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CsvFormatDescriptorProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CsvFormatDescriptorProperty
@@ -774,7 +776,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty):
-          AppFlowConfigProperty = Wrapper(cdkObject)
+          AppFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AppFlowConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AppFlowConfigProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AppFlowConfigProperty =
@@ -1161,7 +1164,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSourceProperty):
-          MetricSourceProperty = Wrapper(cdkObject)
+          MetricSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricSourceProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSourceProperty =
@@ -1351,7 +1355,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty):
-          FileFormatDescriptorProperty = Wrapper(cdkObject)
+          FileFormatDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FileFormatDescriptorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FileFormatDescriptorProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.FileFormatDescriptorProperty
@@ -1585,7 +1590,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty):
-          S3SourceConfigProperty = Wrapper(cdkObject)
+          S3SourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3SourceConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3SourceConfigProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty =
@@ -1893,7 +1899,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.RDSSourceConfigProperty):
-          RDSSourceConfigProperty = Wrapper(cdkObject)
+          RDSSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RDSSourceConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RDSSourceConfigProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.RDSSourceConfigProperty
@@ -2203,7 +2210,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.RedshiftSourceConfigProperty):
-          RedshiftSourceConfigProperty = Wrapper(cdkObject)
+          RedshiftSourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftSourceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedshiftSourceConfigProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.RedshiftSourceConfigProperty
@@ -2312,7 +2320,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.TimestampColumnProperty):
-          TimestampColumnProperty = Wrapper(cdkObject)
+          TimestampColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? TimestampColumnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimestampColumnProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.TimestampColumnProperty
@@ -2397,7 +2406,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty):
-          AnomalyDetectorConfigProperty = Wrapper(cdkObject)
+          AnomalyDetectorConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnomalyDetectorConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnomalyDetectorConfigProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.AnomalyDetectorConfigProperty
@@ -2507,7 +2517,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty):
-          JsonFormatDescriptorProperty = Wrapper(cdkObject)
+          JsonFormatDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JsonFormatDescriptorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonFormatDescriptorProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.JsonFormatDescriptorProperty
@@ -2593,7 +2604,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty):
-          CloudwatchConfigProperty = Wrapper(cdkObject)
+          CloudwatchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CloudwatchConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudwatchConfigProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.CloudwatchConfigProperty
@@ -2729,7 +2741,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty):
-          MetricProperty = Wrapper(cdkObject)
+          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricProperty =
@@ -3194,7 +3207,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty):
-          MetricSetProperty = Wrapper(cdkObject)
+          MetricSetProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricSetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricSetProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.MetricSetProperty =
@@ -3330,7 +3344,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.VpcConfigurationProperty):
-          VpcConfigurationProperty = Wrapper(cdkObject)
+          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigurationProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.VpcConfigurationProperty

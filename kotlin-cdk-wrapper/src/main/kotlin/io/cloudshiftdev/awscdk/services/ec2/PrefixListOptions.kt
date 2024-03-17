@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -72,7 +73,8 @@ public interface PrefixListOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PrefixListOptions):
-        PrefixListOptions = Wrapper(cdkObject)
+        PrefixListOptions = CdkObjectWrappers.wrap(cdkObject) as? PrefixListOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PrefixListOptions):
         software.amazon.awscdk.services.ec2.PrefixListOptions = (wrapped as CdkObject).cdkObject as

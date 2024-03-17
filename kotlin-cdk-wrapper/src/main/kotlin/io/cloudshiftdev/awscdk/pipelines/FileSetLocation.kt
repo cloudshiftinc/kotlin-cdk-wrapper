@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -92,7 +93,7 @@ public interface FileSetLocation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.FileSetLocation): FileSetLocation
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? FileSetLocation ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSetLocation): software.amazon.awscdk.pipelines.FileSetLocation
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.pipelines.FileSetLocation

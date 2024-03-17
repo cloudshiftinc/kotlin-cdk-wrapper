@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -139,7 +140,7 @@ public interface S3SourceProps : SourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.S3SourceProps):
-        S3SourceProps = Wrapper(cdkObject)
+        S3SourceProps = CdkObjectWrappers.wrap(cdkObject) as? S3SourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3SourceProps):
         software.amazon.awscdk.services.codebuild.S3SourceProps = (wrapped as CdkObject).cdkObject

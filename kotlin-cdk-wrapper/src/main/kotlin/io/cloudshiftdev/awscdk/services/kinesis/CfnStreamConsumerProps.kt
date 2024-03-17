@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.kinesis
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -104,7 +105,8 @@ public interface CfnStreamConsumerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps):
-        CfnStreamConsumerProps = Wrapper(cdkObject)
+        CfnStreamConsumerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStreamConsumerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamConsumerProps):
         software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps = (wrapped as

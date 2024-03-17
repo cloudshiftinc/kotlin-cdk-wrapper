@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -417,7 +418,8 @@ public open class CfnSequenceStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty):
-          SseConfigProperty = Wrapper(cdkObject)
+          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseConfigProperty):
           software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty = (wrapped as

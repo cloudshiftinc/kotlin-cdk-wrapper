@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -41,7 +42,7 @@ public abstract class UpdatePolicy internal constructor(
         rollingUpdate(RollingUpdateOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy):
-        UpdatePolicy = Wrapper(cdkObject)
+        UpdatePolicy = CdkObjectWrappers.wrap(cdkObject) as? UpdatePolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UpdatePolicy):
         software.amazon.awscdk.services.autoscaling.UpdatePolicy = (wrapped as CdkObject).cdkObject

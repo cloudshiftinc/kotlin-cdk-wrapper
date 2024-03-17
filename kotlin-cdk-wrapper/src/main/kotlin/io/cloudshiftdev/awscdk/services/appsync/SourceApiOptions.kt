@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Role
 import kotlin.Unit
 import kotlin.collections.List
@@ -130,7 +131,8 @@ public interface SourceApiOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.SourceApiOptions):
-        SourceApiOptions = Wrapper(cdkObject)
+        SourceApiOptions = CdkObjectWrappers.wrap(cdkObject) as? SourceApiOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceApiOptions):
         software.amazon.awscdk.services.appsync.SourceApiOptions = (wrapped as CdkObject).cdkObject

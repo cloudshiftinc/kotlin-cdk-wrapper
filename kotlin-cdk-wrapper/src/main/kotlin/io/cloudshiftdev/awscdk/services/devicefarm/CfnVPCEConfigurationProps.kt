@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.devicefarm
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -239,7 +240,8 @@ public interface CfnVPCEConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnVPCEConfigurationProps):
-        CfnVPCEConfigurationProps = Wrapper(cdkObject)
+        CfnVPCEConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVPCEConfigurationProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCEConfigurationProps):
         software.amazon.awscdk.services.devicefarm.CfnVPCEConfigurationProps = (wrapped as

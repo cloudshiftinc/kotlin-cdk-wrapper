@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -2605,7 +2606,7 @@ public open class CfnPolicy internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty):
-          IEMapProperty = Wrapper(cdkObject)
+          IEMapProperty = CdkObjectWrappers.wrap(cdkObject) as? IEMapProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IEMapProperty):
           software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty = (wrapped as
@@ -2718,7 +2719,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty):
-          ResourceTagProperty = Wrapper(cdkObject)
+          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceTagProperty):
           software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty = (wrapped as
@@ -2846,7 +2848,8 @@ public open class CfnPolicy internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty):
-          PolicyTagProperty = Wrapper(cdkObject)
+          PolicyTagProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyTagProperty):
           software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty = (wrapped as
@@ -2929,7 +2932,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty):
-          ThirdPartyFirewallPolicyProperty = Wrapper(cdkObject)
+          ThirdPartyFirewallPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ThirdPartyFirewallPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThirdPartyFirewallPolicyProperty):
           software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty = (wrapped
@@ -3107,7 +3111,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty):
-          PolicyOptionProperty = Wrapper(cdkObject)
+          PolicyOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyOptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyOptionProperty):
           software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty = (wrapped as
@@ -3923,7 +3928,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty):
-          SecurityServicePolicyDataProperty = Wrapper(cdkObject)
+          SecurityServicePolicyDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SecurityServicePolicyDataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SecurityServicePolicyDataProperty):
           software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty = (wrapped
@@ -4026,7 +4032,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty):
-          NetworkFirewallPolicyProperty = Wrapper(cdkObject)
+          NetworkFirewallPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkFirewallPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkFirewallPolicyProperty):
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty = (wrapped as

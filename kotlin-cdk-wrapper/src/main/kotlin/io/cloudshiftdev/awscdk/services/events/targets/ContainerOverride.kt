@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -227,7 +228,8 @@ public interface ContainerOverride {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.ContainerOverride):
-        ContainerOverride = Wrapper(cdkObject)
+        ContainerOverride = CdkObjectWrappers.wrap(cdkObject) as? ContainerOverride ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerOverride):
         software.amazon.awscdk.services.events.targets.ContainerOverride = (wrapped as

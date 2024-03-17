@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -336,7 +337,8 @@ public interface CfnVPNConnectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnectionProps):
-        CfnVPNConnectionProps = Wrapper(cdkObject)
+        CfnVPNConnectionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVPNConnectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPNConnectionProps):
         software.amazon.awscdk.services.ec2.CfnVPNConnectionProps = (wrapped as CdkObject).cdkObject

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -586,7 +587,7 @@ public interface IExtensible {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.IExtensible): IExtensible
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IExtensible ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IExtensible): software.amazon.awscdk.services.appconfig.IExtensible
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appconfig.IExtensible

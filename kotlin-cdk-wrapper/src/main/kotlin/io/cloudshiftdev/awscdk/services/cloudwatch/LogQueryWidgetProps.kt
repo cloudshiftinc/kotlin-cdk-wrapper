@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -295,7 +296,8 @@ public interface LogQueryWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.LogQueryWidgetProps):
-        LogQueryWidgetProps = Wrapper(cdkObject)
+        LogQueryWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? LogQueryWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogQueryWidgetProps):
         software.amazon.awscdk.services.cloudwatch.LogQueryWidgetProps = (wrapped as

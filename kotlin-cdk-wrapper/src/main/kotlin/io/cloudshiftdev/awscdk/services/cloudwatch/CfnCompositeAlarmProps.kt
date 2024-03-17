@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -643,7 +644,8 @@ public interface CfnCompositeAlarmProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarmProps):
-        CfnCompositeAlarmProps = Wrapper(cdkObject)
+        CfnCompositeAlarmProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCompositeAlarmProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCompositeAlarmProps):
         software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarmProps = (wrapped as

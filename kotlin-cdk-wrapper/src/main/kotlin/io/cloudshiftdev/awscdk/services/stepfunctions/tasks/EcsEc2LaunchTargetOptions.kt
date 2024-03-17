@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.PlacementConstraint
 import io.cloudshiftdev.awscdk.services.ecs.PlacementStrategy
 import kotlin.Unit
@@ -151,7 +152,8 @@ public interface EcsEc2LaunchTargetOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTargetOptions):
-        EcsEc2LaunchTargetOptions = Wrapper(cdkObject)
+        EcsEc2LaunchTargetOptions = CdkObjectWrappers.wrap(cdkObject) as? EcsEc2LaunchTargetOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsEc2LaunchTargetOptions):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTargetOptions = (wrapped as

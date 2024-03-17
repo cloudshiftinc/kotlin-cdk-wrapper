@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Modernized version of ITaggable.
@@ -31,7 +32,7 @@ public interface ITaggableV2 {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ITaggableV2): ITaggableV2 =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ITaggableV2 ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITaggableV2): software.amazon.awscdk.ITaggableV2 = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.ITaggableV2

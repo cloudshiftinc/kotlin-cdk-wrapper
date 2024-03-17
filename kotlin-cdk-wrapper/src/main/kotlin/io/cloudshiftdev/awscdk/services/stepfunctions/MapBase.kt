@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.collections.List
 
 /**
@@ -45,7 +46,7 @@ public abstract class MapBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase): MapBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? MapBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MapBase): software.amazon.awscdk.services.stepfunctions.MapBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.stepfunctions.MapBase

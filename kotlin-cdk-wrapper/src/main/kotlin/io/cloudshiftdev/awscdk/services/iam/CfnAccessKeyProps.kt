@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -164,7 +165,8 @@ public interface CfnAccessKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnAccessKeyProps):
-        CfnAccessKeyProps = Wrapper(cdkObject)
+        CfnAccessKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAccessKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessKeyProps):
         software.amazon.awscdk.services.iam.CfnAccessKeyProps = (wrapped as CdkObject).cdkObject as

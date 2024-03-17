@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -60,7 +61,8 @@ public interface IWebSocketAuthorizer : IAuthorizer {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketAuthorizer):
-        IWebSocketAuthorizer = Wrapper(cdkObject)
+        IWebSocketAuthorizer = CdkObjectWrappers.wrap(cdkObject) as? IWebSocketAuthorizer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IWebSocketAuthorizer):
         software.amazon.awscdk.services.apigatewayv2.IWebSocketAuthorizer = (wrapped as

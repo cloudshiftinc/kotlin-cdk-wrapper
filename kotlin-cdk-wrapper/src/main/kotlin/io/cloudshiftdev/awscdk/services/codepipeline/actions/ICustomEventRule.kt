@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.EventPattern
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import kotlin.String
@@ -65,7 +66,8 @@ public interface ICustomEventRule {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.ICustomEventRule):
-        ICustomEventRule = Wrapper(cdkObject)
+        ICustomEventRule = CdkObjectWrappers.wrap(cdkObject) as? ICustomEventRule ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ICustomEventRule):
         software.amazon.awscdk.services.codepipeline.actions.ICustomEventRule = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -639,7 +640,8 @@ public open class CfnMissionProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty):
-          StreamsKmsKeyProperty = Wrapper(cdkObject)
+          StreamsKmsKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? StreamsKmsKeyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamsKmsKeyProperty):
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty =
@@ -768,7 +770,8 @@ public open class CfnMissionProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty):
-          DataflowEdgeProperty = Wrapper(cdkObject)
+          DataflowEdgeProperty = CdkObjectWrappers.wrap(cdkObject) as? DataflowEdgeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataflowEdgeProperty):
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty =

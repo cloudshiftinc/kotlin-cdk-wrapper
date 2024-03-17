@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import java.time.Instant
 import kotlin.Any
 import kotlin.Boolean
@@ -2284,7 +2285,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NotificationFilterProperty):
-          NotificationFilterProperty = Wrapper(cdkObject)
+          NotificationFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationFilterProperty):
           software.amazon.awscdk.services.s3.CfnBucket.NotificationFilterProperty = (wrapped as
@@ -3029,7 +3031,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleProperty):
-          ReplicationRuleProperty = Wrapper(cdkObject)
+          ReplicationRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicationRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationRuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleProperty = (wrapped as
@@ -3130,7 +3133,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AccessControlTranslationProperty):
-          AccessControlTranslationProperty = Wrapper(cdkObject)
+          AccessControlTranslationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessControlTranslationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessControlTranslationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.AccessControlTranslationProperty = (wrapped
@@ -3285,7 +3289,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LifecycleConfigurationProperty):
-          LifecycleConfigurationProperty = Wrapper(cdkObject)
+          LifecycleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LifecycleConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LifecycleConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.LifecycleConfigurationProperty = (wrapped as
@@ -3430,7 +3435,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleAndOperatorProperty):
-          ReplicationRuleAndOperatorProperty = Wrapper(cdkObject)
+          ReplicationRuleAndOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationRuleAndOperatorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationRuleAndOperatorProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleAndOperatorProperty = (wrapped
@@ -3573,7 +3579,8 @@ public open class CfnBucket internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetricsProperty):
-          MetricsProperty = Wrapper(cdkObject)
+          MetricsProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricsProperty):
           software.amazon.awscdk.services.s3.CfnBucket.MetricsProperty = (wrapped as
@@ -3744,7 +3751,8 @@ public open class CfnBucket internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TransitionProperty):
-          TransitionProperty = Wrapper(cdkObject)
+          TransitionProperty = CdkObjectWrappers.wrap(cdkObject) as? TransitionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransitionProperty):
           software.amazon.awscdk.services.s3.CfnBucket.TransitionProperty = (wrapped as
@@ -3829,7 +3837,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AccelerateConfigurationProperty):
-          AccelerateConfigurationProperty = Wrapper(cdkObject)
+          AccelerateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccelerateConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccelerateConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.AccelerateConfigurationProperty = (wrapped as
@@ -4017,7 +4026,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.SourceSelectionCriteriaProperty):
-          SourceSelectionCriteriaProperty = Wrapper(cdkObject)
+          SourceSelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceSelectionCriteriaProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceSelectionCriteriaProperty):
           software.amazon.awscdk.services.s3.CfnBucket.SourceSelectionCriteriaProperty = (wrapped as
@@ -4354,7 +4364,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.InventoryConfigurationProperty):
-          InventoryConfigurationProperty = Wrapper(cdkObject)
+          InventoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InventoryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InventoryConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.InventoryConfigurationProperty = (wrapped as
@@ -4661,7 +4672,8 @@ public open class CfnBucket internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.CorsRuleProperty):
-          CorsRuleProperty = Wrapper(cdkObject)
+          CorsRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? CorsRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CorsRuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.CorsRuleProperty = (wrapped as
@@ -4762,7 +4774,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.EventBridgeConfigurationProperty):
-          EventBridgeConfigurationProperty = Wrapper(cdkObject)
+          EventBridgeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventBridgeConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.EventBridgeConfigurationProperty = (wrapped
@@ -4852,7 +4865,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.VersioningConfigurationProperty):
-          VersioningConfigurationProperty = Wrapper(cdkObject)
+          VersioningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VersioningConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VersioningConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.VersioningConfigurationProperty = (wrapped as
@@ -5168,7 +5182,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.IntelligentTieringConfigurationProperty):
-          IntelligentTieringConfigurationProperty = Wrapper(cdkObject)
+          IntelligentTieringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntelligentTieringConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntelligentTieringConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.IntelligentTieringConfigurationProperty =
@@ -5366,7 +5381,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DestinationProperty):
-          DestinationProperty = Wrapper(cdkObject)
+          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? DestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.DestinationProperty = (wrapped as
@@ -5476,7 +5492,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsProperty):
-          OwnershipControlsProperty = Wrapper(cdkObject)
+          OwnershipControlsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OwnershipControlsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OwnershipControlsProperty):
           software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsProperty = (wrapped as
@@ -5821,7 +5838,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NotificationConfigurationProperty):
-          NotificationConfigurationProperty = Wrapper(cdkObject)
+          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.NotificationConfigurationProperty = (wrapped
@@ -6078,7 +6096,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.WebsiteConfigurationProperty):
-          WebsiteConfigurationProperty = Wrapper(cdkObject)
+          WebsiteConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebsiteConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebsiteConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.WebsiteConfigurationProperty = (wrapped as
@@ -6182,7 +6201,8 @@ public open class CfnBucket internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TagFilterProperty):
-          TagFilterProperty = Wrapper(cdkObject)
+          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagFilterProperty):
           software.amazon.awscdk.services.s3.CfnBucket.TagFilterProperty = (wrapped as
@@ -6422,7 +6442,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.QueueConfigurationProperty):
-          QueueConfigurationProperty = Wrapper(cdkObject)
+          QueueConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueueConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueueConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.QueueConfigurationProperty = (wrapped as
@@ -6651,7 +6672,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationConfigurationProperty):
-          ReplicationConfigurationProperty = Wrapper(cdkObject)
+          ReplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationConfigurationProperty = (wrapped
@@ -6937,7 +6959,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleFilterProperty):
-          ReplicationRuleFilterProperty = Wrapper(cdkObject)
+          ReplicationRuleFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationRuleFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationRuleFilterProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleFilterProperty = (wrapped as
@@ -7084,7 +7107,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TargetObjectKeyFormatProperty):
-          TargetObjectKeyFormatProperty = Wrapper(cdkObject)
+          TargetObjectKeyFormatProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetObjectKeyFormatProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetObjectKeyFormatProperty):
           software.amazon.awscdk.services.s3.CfnBucket.TargetObjectKeyFormatProperty = (wrapped as
@@ -7305,7 +7329,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.MetricsConfigurationProperty):
-          MetricsConfigurationProperty = Wrapper(cdkObject)
+          MetricsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricsConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.MetricsConfigurationProperty = (wrapped as
@@ -7465,7 +7490,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionExpirationProperty):
-          NoncurrentVersionExpirationProperty = Wrapper(cdkObject)
+          NoncurrentVersionExpirationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NoncurrentVersionExpirationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NoncurrentVersionExpirationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionExpirationProperty =
@@ -7610,7 +7636,8 @@ public open class CfnBucket internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DataExportProperty):
-          DataExportProperty = Wrapper(cdkObject)
+          DataExportProperty = CdkObjectWrappers.wrap(cdkObject) as? DataExportProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataExportProperty):
           software.amazon.awscdk.services.s3.CfnBucket.DataExportProperty = (wrapped as
@@ -7820,7 +7847,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LambdaConfigurationProperty):
-          LambdaConfigurationProperty = Wrapper(cdkObject)
+          LambdaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.LambdaConfigurationProperty = (wrapped as
@@ -7940,7 +7968,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.S3KeyFilterProperty):
-          S3KeyFilterProperty = Wrapper(cdkObject)
+          S3KeyFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? S3KeyFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3KeyFilterProperty):
           software.amazon.awscdk.services.s3.CfnBucket.S3KeyFilterProperty = (wrapped as
@@ -8127,7 +8156,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionTransitionProperty):
-          NoncurrentVersionTransitionProperty = Wrapper(cdkObject)
+          NoncurrentVersionTransitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NoncurrentVersionTransitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NoncurrentVersionTransitionProperty):
           software.amazon.awscdk.services.s3.CfnBucket.NoncurrentVersionTransitionProperty =
@@ -9195,7 +9225,7 @@ public open class CfnBucket internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RuleProperty):
-          RuleProperty = Wrapper(cdkObject)
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.RuleProperty = (wrapped as
@@ -9284,7 +9314,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.PartitionedPrefixProperty):
-          PartitionedPrefixProperty = Wrapper(cdkObject)
+          PartitionedPrefixProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PartitionedPrefixProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PartitionedPrefixProperty):
           software.amazon.awscdk.services.s3.CfnBucket.PartitionedPrefixProperty = (wrapped as
@@ -9375,7 +9406,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AbortIncompleteMultipartUploadProperty):
-          AbortIncompleteMultipartUploadProperty = Wrapper(cdkObject)
+          AbortIncompleteMultipartUploadProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AbortIncompleteMultipartUploadProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AbortIncompleteMultipartUploadProperty):
           software.amazon.awscdk.services.s3.CfnBucket.AbortIncompleteMultipartUploadProperty =
@@ -9537,7 +9569,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ObjectLockRuleProperty):
-          ObjectLockRuleProperty = Wrapper(cdkObject)
+          ObjectLockRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ObjectLockRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ObjectLockRuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ObjectLockRuleProperty = (wrapped as
@@ -9642,7 +9675,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DeleteMarkerReplicationProperty):
-          DeleteMarkerReplicationProperty = Wrapper(cdkObject)
+          DeleteMarkerReplicationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeleteMarkerReplicationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeleteMarkerReplicationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.DeleteMarkerReplicationProperty = (wrapped as
@@ -9854,7 +9888,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.LoggingConfigurationProperty):
-          LoggingConfigurationProperty = Wrapper(cdkObject)
+          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.LoggingConfigurationProperty = (wrapped as
@@ -9940,7 +9975,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.SseKmsEncryptedObjectsProperty):
-          SseKmsEncryptedObjectsProperty = Wrapper(cdkObject)
+          SseKmsEncryptedObjectsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SseKmsEncryptedObjectsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseKmsEncryptedObjectsProperty):
           software.amazon.awscdk.services.s3.CfnBucket.SseKmsEncryptedObjectsProperty = (wrapped as
@@ -10077,7 +10113,8 @@ public open class CfnBucket internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TieringProperty):
-          TieringProperty = Wrapper(cdkObject)
+          TieringProperty = CdkObjectWrappers.wrap(cdkObject) as? TieringProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TieringProperty):
           software.amazon.awscdk.services.s3.CfnBucket.TieringProperty = (wrapped as
@@ -10584,7 +10621,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationDestinationProperty):
-          ReplicationDestinationProperty = Wrapper(cdkObject)
+          ReplicationDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationDestinationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationDestinationProperty = (wrapped as
@@ -10672,7 +10710,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeValueProperty):
-          ReplicationTimeValueProperty = Wrapper(cdkObject)
+          ReplicationTimeValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationTimeValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationTimeValueProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeValueProperty = (wrapped as
@@ -10884,7 +10923,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ObjectLockConfigurationProperty):
-          ObjectLockConfigurationProperty = Wrapper(cdkObject)
+          ObjectLockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ObjectLockConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ObjectLockConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ObjectLockConfigurationProperty = (wrapped as
@@ -10999,7 +11039,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RedirectAllRequestsToProperty):
-          RedirectAllRequestsToProperty = Wrapper(cdkObject)
+          RedirectAllRequestsToProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedirectAllRequestsToProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedirectAllRequestsToProperty):
           software.amazon.awscdk.services.s3.CfnBucket.RedirectAllRequestsToProperty = (wrapped as
@@ -11165,7 +11206,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleConditionProperty):
-          RoutingRuleConditionProperty = Wrapper(cdkObject)
+          RoutingRuleConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RoutingRuleConditionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoutingRuleConditionProperty):
           software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleConditionProperty = (wrapped as
@@ -11252,7 +11294,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicaModificationsProperty):
-          ReplicaModificationsProperty = Wrapper(cdkObject)
+          ReplicaModificationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicaModificationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicaModificationsProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ReplicaModificationsProperty = (wrapped as
@@ -11375,7 +11418,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.BucketEncryptionProperty):
-          BucketEncryptionProperty = Wrapper(cdkObject)
+          BucketEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? BucketEncryptionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BucketEncryptionProperty):
           software.amazon.awscdk.services.s3.CfnBucket.BucketEncryptionProperty = (wrapped as
@@ -11602,7 +11646,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleProperty):
-          RoutingRuleProperty = Wrapper(cdkObject)
+          RoutingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RoutingRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoutingRuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.RoutingRuleProperty = (wrapped as
@@ -11807,7 +11852,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.TopicConfigurationProperty):
-          TopicConfigurationProperty = Wrapper(cdkObject)
+          TopicConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TopicConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.TopicConfigurationProperty = (wrapped as
@@ -11912,7 +11958,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = Wrapper(cdkObject)
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.EncryptionConfigurationProperty = (wrapped as
@@ -12193,7 +12240,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.RedirectRuleProperty):
-          RedirectRuleProperty = Wrapper(cdkObject)
+          RedirectRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RedirectRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedirectRuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.RedirectRuleProperty = (wrapped as
@@ -12447,7 +12495,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.AnalyticsConfigurationProperty):
-          AnalyticsConfigurationProperty = Wrapper(cdkObject)
+          AnalyticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalyticsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalyticsConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.AnalyticsConfigurationProperty = (wrapped as
@@ -12573,7 +12622,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.StorageClassAnalysisProperty):
-          StorageClassAnalysisProperty = Wrapper(cdkObject)
+          StorageClassAnalysisProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageClassAnalysisProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageClassAnalysisProperty):
           software.amazon.awscdk.services.s3.CfnBucket.StorageClassAnalysisProperty = (wrapped as
@@ -12720,7 +12770,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeProperty):
-          ReplicationTimeProperty = Wrapper(cdkObject)
+          ReplicationTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicationTimeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationTimeProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationTimeProperty = (wrapped as
@@ -12855,7 +12906,8 @@ public open class CfnBucket internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.FilterRuleProperty):
-          FilterRuleProperty = Wrapper(cdkObject)
+          FilterRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterRuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.FilterRuleProperty = (wrapped as
@@ -12984,7 +13036,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.CorsConfigurationProperty):
-          CorsConfigurationProperty = Wrapper(cdkObject)
+          CorsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CorsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CorsConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.CorsConfigurationProperty = (wrapped as
@@ -13146,7 +13199,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.DefaultRetentionProperty):
-          DefaultRetentionProperty = Wrapper(cdkObject)
+          DefaultRetentionProperty = CdkObjectWrappers.wrap(cdkObject) as? DefaultRetentionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultRetentionProperty):
           software.amazon.awscdk.services.s3.CfnBucket.DefaultRetentionProperty = (wrapped as
@@ -13524,7 +13578,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.PublicAccessBlockConfigurationProperty):
-          PublicAccessBlockConfigurationProperty = Wrapper(cdkObject)
+          PublicAccessBlockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublicAccessBlockConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicAccessBlockConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnBucket.PublicAccessBlockConfigurationProperty =
@@ -13751,7 +13806,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionRuleProperty):
-          ServerSideEncryptionRuleProperty = Wrapper(cdkObject)
+          ServerSideEncryptionRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerSideEncryptionRuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionRuleProperty = (wrapped
@@ -13839,7 +13895,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsRuleProperty):
-          OwnershipControlsRuleProperty = Wrapper(cdkObject)
+          OwnershipControlsRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OwnershipControlsRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OwnershipControlsRuleProperty):
           software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsRuleProperty = (wrapped as
@@ -14053,7 +14110,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionByDefaultProperty):
-          ServerSideEncryptionByDefaultProperty = Wrapper(cdkObject)
+          ServerSideEncryptionByDefaultProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionByDefaultProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerSideEncryptionByDefaultProperty):
           software.amazon.awscdk.services.s3.CfnBucket.ServerSideEncryptionByDefaultProperty =

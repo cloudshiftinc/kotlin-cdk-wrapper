@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -66,7 +67,7 @@ public interface IPublicKey : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.IPublicKey): IPublicKey
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IPublicKey ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPublicKey): software.amazon.awscdk.services.cloudfront.IPublicKey
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.IPublicKey

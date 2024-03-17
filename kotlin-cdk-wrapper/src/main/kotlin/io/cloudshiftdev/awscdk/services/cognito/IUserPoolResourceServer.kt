@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -66,7 +67,8 @@ public interface IUserPoolResourceServer : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.IUserPoolResourceServer):
-        IUserPoolResourceServer = Wrapper(cdkObject)
+        IUserPoolResourceServer = CdkObjectWrappers.wrap(cdkObject) as? IUserPoolResourceServer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IUserPoolResourceServer):
         software.amazon.awscdk.services.cognito.IUserPoolResourceServer = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.collections.Map
 
@@ -65,7 +66,7 @@ public abstract class LoggingFormat internal constructor(
         software.amazon.awscdk.services.appmesh.LoggingFormat.fromText(text).let(LoggingFormat::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.LoggingFormat):
-        LoggingFormat = Wrapper(cdkObject)
+        LoggingFormat = CdkObjectWrappers.wrap(cdkObject) as? LoggingFormat ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoggingFormat):
         software.amazon.awscdk.services.appmesh.LoggingFormat = (wrapped as CdkObject).cdkObject as

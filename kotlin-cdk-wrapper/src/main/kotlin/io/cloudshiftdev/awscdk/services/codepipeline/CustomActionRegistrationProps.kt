@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -278,7 +279,8 @@ public interface CustomActionRegistrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CustomActionRegistrationProps):
-        CustomActionRegistrationProps = Wrapper(cdkObject)
+        CustomActionRegistrationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CustomActionRegistrationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomActionRegistrationProps):
         software.amazon.awscdk.services.codepipeline.CustomActionRegistrationProps = (wrapped as

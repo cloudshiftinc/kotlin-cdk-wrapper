@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1115,7 +1116,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty):
-          LoggingConfigProperty = Wrapper(cdkObject)
+          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigProperty):
           software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty = (wrapped as
@@ -1260,7 +1262,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty):
-          SubscriptionProperty = Wrapper(cdkObject)
+          SubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriptionProperty):
           software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty = (wrapped as

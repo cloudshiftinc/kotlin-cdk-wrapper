@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -859,7 +860,8 @@ public interface CfnMonitorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitorProps):
-        CfnMonitorProps = Wrapper(cdkObject)
+        CfnMonitorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMonitorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMonitorProps):
         software.amazon.awscdk.services.internetmonitor.CfnMonitorProps = (wrapped as

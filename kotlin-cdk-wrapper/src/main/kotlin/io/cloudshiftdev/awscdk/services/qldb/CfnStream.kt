@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -668,7 +669,8 @@ public open class CfnStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty):
-          KinesisConfigurationProperty = Wrapper(cdkObject)
+          KinesisConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisConfigurationProperty):
           software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -126,7 +127,8 @@ public interface ColumnRestriction {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.ColumnRestriction):
-        ColumnRestriction = Wrapper(cdkObject)
+        ColumnRestriction = CdkObjectWrappers.wrap(cdkObject) as? ColumnRestriction ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ColumnRestriction):
         software.amazon.awscdk.services.logs.ColumnRestriction = (wrapped as CdkObject).cdkObject as

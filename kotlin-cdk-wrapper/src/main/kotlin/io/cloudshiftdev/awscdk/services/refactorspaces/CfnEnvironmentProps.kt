@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.refactorspaces
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -174,7 +175,8 @@ public interface CfnEnvironmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnEnvironmentProps):
-        CfnEnvironmentProps = Wrapper(cdkObject)
+        CfnEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEnvironmentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironmentProps):
         software.amazon.awscdk.services.refactorspaces.CfnEnvironmentProps = (wrapped as

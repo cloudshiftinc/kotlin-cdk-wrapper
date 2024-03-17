@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.String
@@ -414,7 +415,8 @@ public interface AttachInitOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AttachInitOptions):
-        AttachInitOptions = Wrapper(cdkObject)
+        AttachInitOptions = CdkObjectWrappers.wrap(cdkObject) as? AttachInitOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AttachInitOptions):
         software.amazon.awscdk.services.ec2.AttachInitOptions = (wrapped as CdkObject).cdkObject as

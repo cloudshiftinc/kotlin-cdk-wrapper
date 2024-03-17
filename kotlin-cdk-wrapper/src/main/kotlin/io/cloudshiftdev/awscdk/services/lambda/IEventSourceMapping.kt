@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -80,7 +81,8 @@ public interface IEventSourceMapping : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.IEventSourceMapping):
-        IEventSourceMapping = Wrapper(cdkObject)
+        IEventSourceMapping = CdkObjectWrappers.wrap(cdkObject) as? IEventSourceMapping ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEventSourceMapping):
         software.amazon.awscdk.services.lambda.IEventSourceMapping = (wrapped as

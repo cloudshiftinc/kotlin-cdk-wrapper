@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.constructs.Node
 import kotlin.Boolean
@@ -99,7 +100,8 @@ public interface IEc2TaskDefinition : ITaskDefinition {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.IEc2TaskDefinition):
-        IEc2TaskDefinition = Wrapper(cdkObject)
+        IEc2TaskDefinition = CdkObjectWrappers.wrap(cdkObject) as? IEc2TaskDefinition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEc2TaskDefinition):
         software.amazon.awscdk.services.ecs.IEc2TaskDefinition = (wrapped as CdkObject).cdkObject as

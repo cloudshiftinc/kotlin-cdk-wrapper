@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -373,7 +374,8 @@ public open class CfnBackupSelection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty):
-          ConditionParameterProperty = Wrapper(cdkObject)
+          ConditionParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConditionParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionParameterProperty):
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty =
@@ -809,7 +811,8 @@ public open class CfnBackupSelection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty):
-          BackupSelectionResourceTypeProperty = Wrapper(cdkObject)
+          BackupSelectionResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BackupSelectionResourceTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BackupSelectionResourceTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty
@@ -965,7 +968,8 @@ public open class CfnBackupSelection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionResourceTypeProperty):
-          ConditionResourceTypeProperty = Wrapper(cdkObject)
+          ConditionResourceTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConditionResourceTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionResourceTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionResourceTypeProperty =
@@ -1295,7 +1299,8 @@ public open class CfnBackupSelection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty):
-          ConditionsProperty = Wrapper(cdkObject)
+          ConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionsProperty):
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty = (wrapped as

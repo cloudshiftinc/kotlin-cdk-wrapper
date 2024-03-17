@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.constructs.IConstruct
 import io.cloudshiftdev.constructs.Node
@@ -50,7 +51,8 @@ public interface IKubectlProvider : IConstruct {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.IKubectlProvider):
-        IKubectlProvider = Wrapper(cdkObject)
+        IKubectlProvider = CdkObjectWrappers.wrap(cdkObject) as? IKubectlProvider ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IKubectlProvider):
         software.amazon.awscdk.services.eks.IKubectlProvider = (wrapped as CdkObject).cdkObject as

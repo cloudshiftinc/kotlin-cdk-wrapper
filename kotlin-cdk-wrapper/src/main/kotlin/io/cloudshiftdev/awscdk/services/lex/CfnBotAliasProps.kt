@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lex
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -462,7 +463,8 @@ public interface CfnBotAliasProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAliasProps):
-        CfnBotAliasProps = Wrapper(cdkObject)
+        CfnBotAliasProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBotAliasProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBotAliasProps):
         software.amazon.awscdk.services.lex.CfnBotAliasProps = (wrapped as CdkObject).cdkObject as

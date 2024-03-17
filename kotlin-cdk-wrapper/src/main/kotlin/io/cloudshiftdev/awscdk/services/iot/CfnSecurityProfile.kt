@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -841,7 +842,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty):
-          MetricToRetainProperty = Wrapper(cdkObject)
+          MetricToRetainProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricToRetainProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricToRetainProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty = (wrapped
@@ -956,7 +958,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty):
-          MetricsExportConfigProperty = Wrapper(cdkObject)
+          MetricsExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricsExportConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricsExportConfigProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty =
@@ -1059,7 +1062,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty):
-          MachineLearningDetectionConfigProperty = Wrapper(cdkObject)
+          MachineLearningDetectionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MachineLearningDetectionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MachineLearningDetectionConfigProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty
@@ -1172,7 +1176,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty):
-          StatisticalThresholdProperty = Wrapper(cdkObject)
+          StatisticalThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatisticalThresholdProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StatisticalThresholdProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty =
@@ -1535,7 +1540,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty):
-          BehaviorProperty = Wrapper(cdkObject)
+          BehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as? BehaviorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BehaviorProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty = (wrapped as
@@ -1650,7 +1656,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty):
-          MetricDimensionProperty = Wrapper(cdkObject)
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricDimensionProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty = (wrapped
@@ -1947,7 +1954,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty):
-          MetricValueProperty = Wrapper(cdkObject)
+          MetricValueProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricValueProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty = (wrapped as
@@ -2372,7 +2380,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorCriteriaProperty):
-          BehaviorCriteriaProperty = Wrapper(cdkObject)
+          BehaviorCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? BehaviorCriteriaProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BehaviorCriteriaProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorCriteriaProperty = (wrapped
@@ -2483,7 +2492,8 @@ public open class CfnSecurityProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty):
-          AlertTargetProperty = Wrapper(cdkObject)
+          AlertTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? AlertTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AlertTargetProperty):
           software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty = (wrapped as

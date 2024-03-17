@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -143,7 +144,8 @@ public interface CfnVPCGatewayAttachmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachmentProps):
-        CfnVPCGatewayAttachmentProps = Wrapper(cdkObject)
+        CfnVPCGatewayAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPCGatewayAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCGatewayAttachmentProps):
         software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachmentProps = (wrapped as

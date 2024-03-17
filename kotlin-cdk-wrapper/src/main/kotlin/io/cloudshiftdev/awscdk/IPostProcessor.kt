@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 
 /**
@@ -32,7 +33,7 @@ public interface IPostProcessor {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IPostProcessor): IPostProcessor =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IPostProcessor ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPostProcessor): software.amazon.awscdk.IPostProcessor = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.IPostProcessor

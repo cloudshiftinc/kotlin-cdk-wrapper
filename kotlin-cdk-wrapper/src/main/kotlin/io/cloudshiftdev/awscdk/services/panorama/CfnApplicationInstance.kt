@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -602,7 +603,8 @@ public open class CfnApplicationInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty):
-          ManifestOverridesPayloadProperty = Wrapper(cdkObject)
+          ManifestOverridesPayloadProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManifestOverridesPayloadProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManifestOverridesPayloadProperty):
           software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty
@@ -688,7 +690,8 @@ public open class CfnApplicationInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty):
-          ManifestPayloadProperty = Wrapper(cdkObject)
+          ManifestPayloadProperty = CdkObjectWrappers.wrap(cdkObject) as? ManifestPayloadProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManifestPayloadProperty):
           software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty =

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
@@ -440,7 +441,8 @@ public interface GraphqlApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiProps):
-        GraphqlApiProps = Wrapper(cdkObject)
+        GraphqlApiProps = CdkObjectWrappers.wrap(cdkObject) as? GraphqlApiProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GraphqlApiProps):
         software.amazon.awscdk.services.appsync.GraphqlApiProps = (wrapped as CdkObject).cdkObject

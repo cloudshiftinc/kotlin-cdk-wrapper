@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -77,7 +78,8 @@ public interface IOpenIdConnectProvider : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IOpenIdConnectProvider):
-        IOpenIdConnectProvider = Wrapper(cdkObject)
+        IOpenIdConnectProvider = CdkObjectWrappers.wrap(cdkObject) as? IOpenIdConnectProvider ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IOpenIdConnectProvider):
         software.amazon.awscdk.services.iam.IOpenIdConnectProvider = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.kms
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -158,7 +159,7 @@ public interface AliasProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.AliasProps): AliasProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? AliasProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AliasProps): software.amazon.awscdk.services.kms.AliasProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.kms.AliasProps

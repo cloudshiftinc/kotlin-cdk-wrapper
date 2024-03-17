@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -157,7 +158,7 @@ public abstract class PrincipalBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.PrincipalBase): PrincipalBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? PrincipalBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PrincipalBase): software.amazon.awscdk.services.iam.PrincipalBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.PrincipalBase

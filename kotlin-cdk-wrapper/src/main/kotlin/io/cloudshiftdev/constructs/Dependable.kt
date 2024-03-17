@@ -3,6 +3,7 @@
 package io.cloudshiftdev.constructs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.collections.List
 
@@ -29,7 +30,8 @@ public abstract class Dependable internal constructor(
     public fun of(instance: IDependable): Dependable =
         software.constructs.Dependable.of(instance.let(IDependable::unwrap)).let(Dependable::wrap)
 
-    internal fun wrap(cdkObject: software.constructs.Dependable): Dependable = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.constructs.Dependable): Dependable =
+        CdkObjectWrappers.wrap(cdkObject) as? Dependable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Dependable): software.constructs.Dependable = (wrapped as
         CdkObject).cdkObject as software.constructs.Dependable

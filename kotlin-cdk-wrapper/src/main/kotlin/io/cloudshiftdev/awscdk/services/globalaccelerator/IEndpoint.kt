@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.globalaccelerator
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 
@@ -42,7 +43,7 @@ public interface IEndpoint {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint):
-        IEndpoint = Wrapper(cdkObject)
+        IEndpoint = CdkObjectWrappers.wrap(cdkObject) as? IEndpoint ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEndpoint):
         software.amazon.awscdk.services.globalaccelerator.IEndpoint = (wrapped as

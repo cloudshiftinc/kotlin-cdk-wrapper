@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Number
 import kotlin.Unit
@@ -225,7 +226,8 @@ public interface ClusterInstanceBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceBindOptions):
-        ClusterInstanceBindOptions = Wrapper(cdkObject)
+        ClusterInstanceBindOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ClusterInstanceBindOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClusterInstanceBindOptions):
         software.amazon.awscdk.services.rds.ClusterInstanceBindOptions = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 import kotlin.Unit
@@ -145,7 +146,7 @@ public interface IGroup : IIdentity {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IGroup): IGroup =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IGroup ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IGroup): software.amazon.awscdk.services.iam.IGroup = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.iam.IGroup

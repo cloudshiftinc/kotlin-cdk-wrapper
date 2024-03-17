@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -861,7 +862,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty):
-          RecordingModeProperty = Wrapper(cdkObject)
+          RecordingModeProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordingModeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordingModeProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty =
@@ -1213,7 +1215,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty):
-          RecordingStrategyProperty = Wrapper(cdkObject)
+          RecordingStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RecordingStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordingStrategyProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty
@@ -2778,7 +2781,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingGroupProperty):
-          RecordingGroupProperty = Wrapper(cdkObject)
+          RecordingGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordingGroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordingGroupProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingGroupProperty =
@@ -2916,7 +2920,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty):
-          ExclusionByResourceTypesProperty = Wrapper(cdkObject)
+          ExclusionByResourceTypesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExclusionByResourceTypesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExclusionByResourceTypesProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
@@ -3155,7 +3160,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty):
-          RecordingModeOverrideProperty = Wrapper(cdkObject)
+          RecordingModeOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RecordingModeOverrideProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordingModeOverrideProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -674,7 +675,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionTypeProperty):
-          AccountTakeoverActionTypeProperty = Wrapper(cdkObject)
+          AccountTakeoverActionTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountTakeoverActionTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountTakeoverActionTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionTypeProperty
@@ -811,7 +813,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty):
-          NotifyEmailTypeProperty = Wrapper(cdkObject)
+          NotifyEmailTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? NotifyEmailTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotifyEmailTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty
@@ -895,7 +898,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty):
-          CompromisedCredentialsActionsTypeProperty = Wrapper(cdkObject)
+          CompromisedCredentialsActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CompromisedCredentialsActionsTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CompromisedCredentialsActionsTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty
@@ -1100,7 +1104,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty):
-          AccountTakeoverRiskConfigurationTypeProperty = Wrapper(cdkObject)
+          AccountTakeoverRiskConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountTakeoverRiskConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountTakeoverRiskConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty
@@ -1447,7 +1452,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty):
-          NotifyConfigurationTypeProperty = Wrapper(cdkObject)
+          NotifyConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotifyConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotifyConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty
@@ -1675,7 +1681,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty):
-          AccountTakeoverActionsTypeProperty = Wrapper(cdkObject)
+          AccountTakeoverActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountTakeoverActionsTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountTakeoverActionsTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
@@ -1842,7 +1849,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty):
-          RiskExceptionConfigurationTypeProperty = Wrapper(cdkObject)
+          RiskExceptionConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RiskExceptionConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RiskExceptionConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty
@@ -2002,7 +2010,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty):
-          CompromisedCredentialsRiskConfigurationTypeProperty = Wrapper(cdkObject)
+          CompromisedCredentialsRiskConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? CompromisedCredentialsRiskConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CompromisedCredentialsRiskConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty

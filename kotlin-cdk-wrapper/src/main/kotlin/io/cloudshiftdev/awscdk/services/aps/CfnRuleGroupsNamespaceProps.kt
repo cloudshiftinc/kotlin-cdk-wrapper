@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.aps
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -196,7 +197,8 @@ public interface CfnRuleGroupsNamespaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.aps.CfnRuleGroupsNamespaceProps):
-        CfnRuleGroupsNamespaceProps = Wrapper(cdkObject)
+        CfnRuleGroupsNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRuleGroupsNamespaceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleGroupsNamespaceProps):
         software.amazon.awscdk.services.aps.CfnRuleGroupsNamespaceProps = (wrapped as

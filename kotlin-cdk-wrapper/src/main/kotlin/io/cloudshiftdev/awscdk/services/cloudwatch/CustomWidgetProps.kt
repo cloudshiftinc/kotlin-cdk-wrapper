@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -258,7 +259,8 @@ public interface CustomWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CustomWidgetProps):
-        CustomWidgetProps = Wrapper(cdkObject)
+        CustomWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? CustomWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomWidgetProps):
         software.amazon.awscdk.services.cloudwatch.CustomWidgetProps = (wrapped as

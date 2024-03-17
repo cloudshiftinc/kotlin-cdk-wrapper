@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -36,7 +37,7 @@ public abstract class InitElement internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitElement): InitElement =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? InitElement ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InitElement): software.amazon.awscdk.services.ec2.InitElement =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.InitElement

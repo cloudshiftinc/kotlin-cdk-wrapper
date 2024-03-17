@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -652,7 +653,8 @@ public open class CfnPricingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty):
-          FreeTierProperty = Wrapper(cdkObject)
+          FreeTierProperty = CdkObjectWrappers.wrap(cdkObject) as? FreeTierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FreeTierProperty):
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty =
@@ -762,7 +764,8 @@ public open class CfnPricingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty):
-          TieringProperty = Wrapper(cdkObject)
+          TieringProperty = CdkObjectWrappers.wrap(cdkObject) as? TieringProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TieringProperty):
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty = (wrapped

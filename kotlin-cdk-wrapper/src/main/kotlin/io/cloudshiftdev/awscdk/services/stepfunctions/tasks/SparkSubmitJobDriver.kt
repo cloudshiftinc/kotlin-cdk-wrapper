@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import kotlin.String
 import kotlin.Unit
@@ -157,7 +158,8 @@ public interface SparkSubmitJobDriver {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver):
-        SparkSubmitJobDriver = Wrapper(cdkObject)
+        SparkSubmitJobDriver = CdkObjectWrappers.wrap(cdkObject) as? SparkSubmitJobDriver ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SparkSubmitJobDriver):
         software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver = (wrapped as

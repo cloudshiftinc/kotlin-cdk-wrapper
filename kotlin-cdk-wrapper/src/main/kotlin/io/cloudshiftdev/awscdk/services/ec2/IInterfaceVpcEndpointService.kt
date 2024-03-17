@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -47,7 +48,8 @@ public interface IInterfaceVpcEndpointService {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IInterfaceVpcEndpointService):
-        IInterfaceVpcEndpointService = Wrapper(cdkObject)
+        IInterfaceVpcEndpointService = CdkObjectWrappers.wrap(cdkObject) as?
+        IInterfaceVpcEndpointService ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IInterfaceVpcEndpointService):
         software.amazon.awscdk.services.ec2.IInterfaceVpcEndpointService = (wrapped as

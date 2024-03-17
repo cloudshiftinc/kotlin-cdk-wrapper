@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -88,7 +89,8 @@ public interface HttpStageAttributes : StageAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes):
-        HttpStageAttributes = Wrapper(cdkObject)
+        HttpStageAttributes = CdkObjectWrappers.wrap(cdkObject) as? HttpStageAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpStageAttributes):
         software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes = (wrapped as

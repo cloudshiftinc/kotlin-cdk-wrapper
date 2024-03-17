@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -626,7 +627,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty):
-          FastLaunchConfigurationProperty = Wrapper(cdkObject)
+          FastLaunchConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FastLaunchConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FastLaunchConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchConfigurationProperty
@@ -993,7 +995,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.DistributionProperty):
-          DistributionProperty = Wrapper(cdkObject)
+          DistributionProperty = CdkObjectWrappers.wrap(cdkObject) as? DistributionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DistributionProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.DistributionProperty
@@ -1261,7 +1264,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchPermissionConfigurationProperty):
-          LaunchPermissionConfigurationProperty = Wrapper(cdkObject)
+          LaunchPermissionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchPermissionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LaunchPermissionConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchPermissionConfigurationProperty
@@ -1448,7 +1452,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty):
-          ContainerDistributionConfigurationProperty = Wrapper(cdkObject)
+          ContainerDistributionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContainerDistributionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerDistributionConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.ContainerDistributionConfigurationProperty
@@ -1537,7 +1542,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty):
-          FastLaunchSnapshotConfigurationProperty = Wrapper(cdkObject)
+          FastLaunchSnapshotConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FastLaunchSnapshotConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FastLaunchSnapshotConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchSnapshotConfigurationProperty
@@ -1834,7 +1840,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty):
-          AmiDistributionConfigurationProperty = Wrapper(cdkObject)
+          AmiDistributionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmiDistributionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AmiDistributionConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty
@@ -1990,7 +1997,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchTemplateConfigurationProperty):
-          LaunchTemplateConfigurationProperty = Wrapper(cdkObject)
+          LaunchTemplateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LaunchTemplateConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchTemplateConfigurationProperty
@@ -2139,7 +2147,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty):
-          FastLaunchLaunchTemplateSpecificationProperty = Wrapper(cdkObject)
+          FastLaunchLaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FastLaunchLaunchTemplateSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FastLaunchLaunchTemplateSpecificationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.FastLaunchLaunchTemplateSpecificationProperty
@@ -2258,7 +2267,8 @@ public open class CfnDistributionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.TargetContainerRepositoryProperty):
-          TargetContainerRepositoryProperty = Wrapper(cdkObject)
+          TargetContainerRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetContainerRepositoryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetContainerRepositoryProperty):
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.TargetContainerRepositoryProperty

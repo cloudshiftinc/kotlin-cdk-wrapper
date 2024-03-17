@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -70,7 +71,8 @@ public interface IHttpIntegration : IIntegration {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpIntegration):
-        IHttpIntegration = Wrapper(cdkObject)
+        IHttpIntegration = CdkObjectWrappers.wrap(cdkObject) as? IHttpIntegration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IHttpIntegration):
         software.amazon.awscdk.services.apigatewayv2.IHttpIntegration = (wrapped as

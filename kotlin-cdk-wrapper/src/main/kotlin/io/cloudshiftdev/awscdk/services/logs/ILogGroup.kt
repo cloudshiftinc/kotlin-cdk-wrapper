@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -333,7 +334,7 @@ public interface ILogGroup : IResourceWithPolicy {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.ILogGroup): ILogGroup =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ILogGroup ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILogGroup): software.amazon.awscdk.services.logs.ILogGroup =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.logs.ILogGroup

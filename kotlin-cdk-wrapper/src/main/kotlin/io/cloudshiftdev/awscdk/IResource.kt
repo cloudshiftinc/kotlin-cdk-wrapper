@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IConstruct
 import io.cloudshiftdev.constructs.Node
 
@@ -83,7 +84,8 @@ public interface IResource : IConstruct {
   }
 
   public companion object {
-    internal fun wrap(cdkObject: software.amazon.awscdk.IResource): IResource = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.IResource): IResource =
+        CdkObjectWrappers.wrap(cdkObject) as? IResource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IResource): software.amazon.awscdk.IResource = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.IResource

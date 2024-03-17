@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -170,7 +171,8 @@ public interface ProxyTargetConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ProxyTargetConfig):
-        ProxyTargetConfig = Wrapper(cdkObject)
+        ProxyTargetConfig = CdkObjectWrappers.wrap(cdkObject) as? ProxyTargetConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProxyTargetConfig):
         software.amazon.awscdk.services.rds.ProxyTargetConfig = (wrapped as CdkObject).cdkObject as

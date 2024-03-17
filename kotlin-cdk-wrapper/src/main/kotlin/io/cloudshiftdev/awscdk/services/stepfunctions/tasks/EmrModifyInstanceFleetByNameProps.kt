@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBaseProps
@@ -506,7 +507,8 @@ public interface EmrModifyInstanceFleetByNameProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByNameProps):
-        EmrModifyInstanceFleetByNameProps = Wrapper(cdkObject)
+        EmrModifyInstanceFleetByNameProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EmrModifyInstanceFleetByNameProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrModifyInstanceFleetByNameProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByNameProps =

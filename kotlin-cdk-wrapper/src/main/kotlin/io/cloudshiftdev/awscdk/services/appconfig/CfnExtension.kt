@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -591,7 +592,8 @@ public open class CfnExtension internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty = (wrapped as
@@ -717,7 +719,8 @@ public open class CfnExtension internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ParameterProperty):
-          ParameterProperty = Wrapper(cdkObject)
+          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterProperty):
           software.amazon.awscdk.services.appconfig.CfnExtension.ParameterProperty = (wrapped as

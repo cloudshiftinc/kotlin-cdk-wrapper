@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -926,7 +927,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty):
-          ConditionProperty = Wrapper(cdkObject)
+          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionProperty):
           software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty = (wrapped as
@@ -1509,7 +1511,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty):
-          FindingCriteriaProperty = Wrapper(cdkObject)
+          FindingCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? FindingCriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FindingCriteriaProperty):
           software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty = (wrapped as

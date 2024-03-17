@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -177,7 +178,8 @@ public interface ApplicationConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration):
-        ApplicationConfiguration = Wrapper(cdkObject)
+        ApplicationConfiguration = CdkObjectWrappers.wrap(cdkObject) as? ApplicationConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationConfiguration):
         software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration = (wrapped as

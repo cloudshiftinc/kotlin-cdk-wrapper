@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -86,7 +87,7 @@ public interface IAccessPoint : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.IAccessPoint): IAccessPoint =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IAccessPoint ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAccessPoint): software.amazon.awscdk.services.efs.IAccessPoint =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.efs.IAccessPoint

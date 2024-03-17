@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -173,7 +174,7 @@ public interface MethodResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.MethodResponse):
-        MethodResponse = Wrapper(cdkObject)
+        MethodResponse = CdkObjectWrappers.wrap(cdkObject) as? MethodResponse ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MethodResponse):
         software.amazon.awscdk.services.apigateway.MethodResponse = (wrapped as CdkObject).cdkObject

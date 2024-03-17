@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.servicediscovery.IService
 import kotlin.Number
 import kotlin.Unit
@@ -125,7 +126,8 @@ public interface AssociateCloudMapServiceOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions):
-        AssociateCloudMapServiceOptions = Wrapper(cdkObject)
+        AssociateCloudMapServiceOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        AssociateCloudMapServiceOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssociateCloudMapServiceOptions):
         software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions = (wrapped as

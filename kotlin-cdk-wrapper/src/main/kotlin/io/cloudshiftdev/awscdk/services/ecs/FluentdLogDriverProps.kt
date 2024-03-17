@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -390,7 +391,8 @@ public interface FluentdLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FluentdLogDriverProps):
-        FluentdLogDriverProps = Wrapper(cdkObject)
+        FluentdLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? FluentdLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FluentdLogDriverProps):
         software.amazon.awscdk.services.ecs.FluentdLogDriverProps = (wrapped as CdkObject).cdkObject

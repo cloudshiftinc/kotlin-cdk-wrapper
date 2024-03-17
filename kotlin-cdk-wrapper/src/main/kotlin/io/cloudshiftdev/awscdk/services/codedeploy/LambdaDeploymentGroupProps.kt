@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarm
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.lambda.Alias
@@ -428,7 +429,8 @@ public interface LambdaDeploymentGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupProps):
-        LambdaDeploymentGroupProps = Wrapper(cdkObject)
+        LambdaDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        LambdaDeploymentGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDeploymentGroupProps):
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupProps = (wrapped as

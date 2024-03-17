@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.inspector
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -122,7 +123,8 @@ public interface CfnAssessmentTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps):
-        CfnAssessmentTargetProps = Wrapper(cdkObject)
+        CfnAssessmentTargetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAssessmentTargetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssessmentTargetProps):
         software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps = (wrapped as

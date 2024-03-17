@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -92,7 +93,8 @@ public interface AliasRecordTargetConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.AliasRecordTargetConfig):
-        AliasRecordTargetConfig = Wrapper(cdkObject)
+        AliasRecordTargetConfig = CdkObjectWrappers.wrap(cdkObject) as? AliasRecordTargetConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AliasRecordTargetConfig):
         software.amazon.awscdk.services.route53.AliasRecordTargetConfig = (wrapped as

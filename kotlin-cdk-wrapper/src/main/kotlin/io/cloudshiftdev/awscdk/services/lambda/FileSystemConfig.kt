@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.constructs.IDependable
@@ -223,7 +224,8 @@ public interface FileSystemConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FileSystemConfig):
-        FileSystemConfig = Wrapper(cdkObject)
+        FileSystemConfig = CdkObjectWrappers.wrap(cdkObject) as? FileSystemConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSystemConfig):
         software.amazon.awscdk.services.lambda.FileSystemConfig = (wrapped as CdkObject).cdkObject

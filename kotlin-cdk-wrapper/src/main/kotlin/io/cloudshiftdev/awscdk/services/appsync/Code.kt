@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
@@ -67,7 +68,7 @@ public abstract class Code internal constructor(
         software.amazon.awscdk.services.appsync.Code.fromInline(code).let(InlineCode::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.Code): Code =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Code ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Code): software.amazon.awscdk.services.appsync.Code = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.appsync.Code

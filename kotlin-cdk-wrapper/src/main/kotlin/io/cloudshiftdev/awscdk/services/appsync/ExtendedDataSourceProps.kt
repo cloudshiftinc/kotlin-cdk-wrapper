@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
@@ -532,7 +533,8 @@ public interface ExtendedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.ExtendedDataSourceProps):
-        ExtendedDataSourceProps = Wrapper(cdkObject)
+        ExtendedDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? ExtendedDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExtendedDataSourceProps):
         software.amazon.awscdk.services.appsync.ExtendedDataSourceProps = (wrapped as

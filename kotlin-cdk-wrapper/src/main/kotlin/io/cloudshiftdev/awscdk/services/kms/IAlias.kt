@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
@@ -184,7 +185,7 @@ public interface IAlias : IKey {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.IAlias): IAlias =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IAlias ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAlias): software.amazon.awscdk.services.kms.IAlias = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.kms.IAlias

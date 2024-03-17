@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -160,7 +161,8 @@ public interface EbsDeviceSnapshotOptions : EbsDeviceOptionsBase {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.EbsDeviceSnapshotOptions):
-        EbsDeviceSnapshotOptions = Wrapper(cdkObject)
+        EbsDeviceSnapshotOptions = CdkObjectWrappers.wrap(cdkObject) as? EbsDeviceSnapshotOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EbsDeviceSnapshotOptions):
         software.amazon.awscdk.services.ec2.EbsDeviceSnapshotOptions = (wrapped as

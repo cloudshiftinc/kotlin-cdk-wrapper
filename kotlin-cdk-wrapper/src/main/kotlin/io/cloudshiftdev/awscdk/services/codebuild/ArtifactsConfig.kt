@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -97,7 +98,8 @@ public interface ArtifactsConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.ArtifactsConfig):
-        ArtifactsConfig = Wrapper(cdkObject)
+        ArtifactsConfig = CdkObjectWrappers.wrap(cdkObject) as? ArtifactsConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ArtifactsConfig):
         software.amazon.awscdk.services.codebuild.ArtifactsConfig = (wrapped as CdkObject).cdkObject

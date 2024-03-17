@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -891,7 +892,8 @@ public open class CfnUserPoolUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty):
-          AttributeTypeProperty = Wrapper(cdkObject)
+          AttributeTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty = (wrapped

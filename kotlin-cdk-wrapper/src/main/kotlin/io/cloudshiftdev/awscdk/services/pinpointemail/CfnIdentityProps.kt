@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -383,7 +384,8 @@ public interface CfnIdentityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentityProps):
-        CfnIdentityProps = Wrapper(cdkObject)
+        CfnIdentityProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIdentityProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityProps):
         software.amazon.awscdk.services.pinpointemail.CfnIdentityProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1203,7 +1204,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty):
-          TimeBasedCollectionSchemeProperty = Wrapper(cdkObject)
+          TimeBasedCollectionSchemeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeBasedCollectionSchemeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeBasedCollectionSchemeProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedCollectionSchemeProperty
@@ -1402,7 +1404,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.CollectionSchemeProperty):
-          CollectionSchemeProperty = Wrapper(cdkObject)
+          CollectionSchemeProperty = CdkObjectWrappers.wrap(cdkObject) as? CollectionSchemeProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CollectionSchemeProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.CollectionSchemeProperty =
@@ -1556,7 +1559,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty):
-          SignalInformationProperty = Wrapper(cdkObject)
+          SignalInformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SignalInformationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SignalInformationProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty =
@@ -1674,7 +1678,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty):
-          TimestreamConfigProperty = Wrapper(cdkObject)
+          TimestreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TimestreamConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimestreamConfigProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimestreamConfigProperty =
@@ -1861,7 +1866,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty):
-          DataDestinationConfigProperty = Wrapper(cdkObject)
+          DataDestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataDestinationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataDestinationConfigProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty =
@@ -2068,7 +2074,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedCollectionSchemeProperty):
-          ConditionBasedCollectionSchemeProperty = Wrapper(cdkObject)
+          ConditionBasedCollectionSchemeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConditionBasedCollectionSchemeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionBasedCollectionSchemeProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedCollectionSchemeProperty
@@ -2308,7 +2315,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty):
-          S3ConfigProperty = Wrapper(cdkObject)
+          S3ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3ConfigProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.S3ConfigProperty = (wrapped as

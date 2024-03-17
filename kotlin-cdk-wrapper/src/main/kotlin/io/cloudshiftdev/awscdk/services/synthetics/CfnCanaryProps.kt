@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -983,7 +984,7 @@ public interface CfnCanaryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanaryProps):
-        CfnCanaryProps = Wrapper(cdkObject)
+        CfnCanaryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCanaryProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCanaryProps):
         software.amazon.awscdk.services.synthetics.CfnCanaryProps = (wrapped as CdkObject).cdkObject

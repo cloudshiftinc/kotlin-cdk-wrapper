@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1110,7 +1111,8 @@ public open class CfnReplicationConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty):
-          ComputeConfigProperty = Wrapper(cdkObject)
+          ComputeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ComputeConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputeConfigProperty):
           software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty = (wrapped

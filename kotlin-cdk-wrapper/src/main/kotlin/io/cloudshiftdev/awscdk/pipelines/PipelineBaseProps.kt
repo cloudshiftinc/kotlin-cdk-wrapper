@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -90,7 +91,8 @@ public interface PipelineBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.PipelineBaseProps):
-        PipelineBaseProps = Wrapper(cdkObject)
+        PipelineBaseProps = CdkObjectWrappers.wrap(cdkObject) as? PipelineBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PipelineBaseProps):
         software.amazon.awscdk.pipelines.PipelineBaseProps = (wrapped as CdkObject).cdkObject as

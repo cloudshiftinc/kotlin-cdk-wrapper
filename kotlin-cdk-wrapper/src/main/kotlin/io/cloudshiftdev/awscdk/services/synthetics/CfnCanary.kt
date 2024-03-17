@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -1470,7 +1471,8 @@ public open class CfnCanary internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty):
-          ScheduleProperty = Wrapper(cdkObject)
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleProperty):
           software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty = (wrapped as
@@ -1605,7 +1607,8 @@ public open class CfnCanary internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty):
-          S3EncryptionProperty = Wrapper(cdkObject)
+          S3EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? S3EncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3EncryptionProperty):
           software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty = (wrapped as
@@ -1785,7 +1788,8 @@ public open class CfnCanary internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty):
-          VisualReferenceProperty = Wrapper(cdkObject)
+          VisualReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? VisualReferenceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VisualReferenceProperty):
           software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty = (wrapped as
@@ -1948,7 +1952,8 @@ public open class CfnCanary internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty):
-          BaseScreenshotProperty = Wrapper(cdkObject)
+          BaseScreenshotProperty = CdkObjectWrappers.wrap(cdkObject) as? BaseScreenshotProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BaseScreenshotProperty):
           software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty = (wrapped as
@@ -2281,7 +2286,8 @@ public open class CfnCanary internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.RunConfigProperty):
-          RunConfigProperty = Wrapper(cdkObject)
+          RunConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RunConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RunConfigProperty):
           software.amazon.awscdk.services.synthetics.CfnCanary.RunConfigProperty = (wrapped as
@@ -2442,7 +2448,8 @@ public open class CfnCanary internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty):
-          ArtifactConfigProperty = Wrapper(cdkObject)
+          ArtifactConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArtifactConfigProperty):
           software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty = (wrapped as
@@ -2603,7 +2610,8 @@ public open class CfnCanary internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty):
-          VPCConfigProperty = Wrapper(cdkObject)
+          VPCConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VPCConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VPCConfigProperty):
           software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty = (wrapped as
@@ -2873,7 +2881,7 @@ public open class CfnCanary internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty):
-          CodeProperty = Wrapper(cdkObject)
+          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeProperty):
           software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty = (wrapped as

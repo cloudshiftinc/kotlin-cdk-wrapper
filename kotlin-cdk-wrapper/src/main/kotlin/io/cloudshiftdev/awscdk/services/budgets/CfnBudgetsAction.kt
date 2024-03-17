@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -668,7 +669,8 @@ public open class CfnBudgetsAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty):
-          SsmActionDefinitionProperty = Wrapper(cdkObject)
+          SsmActionDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SsmActionDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SsmActionDefinitionProperty):
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty =
@@ -776,7 +778,8 @@ public open class CfnBudgetsAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.ActionThresholdProperty):
-          ActionThresholdProperty = Wrapper(cdkObject)
+          ActionThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionThresholdProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionThresholdProperty):
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ActionThresholdProperty =
@@ -1023,7 +1026,8 @@ public open class CfnBudgetsAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.DefinitionProperty):
-          DefinitionProperty = Wrapper(cdkObject)
+          DefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? DefinitionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefinitionProperty):
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.DefinitionProperty = (wrapped as
@@ -1147,7 +1151,8 @@ public open class CfnBudgetsAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty):
-          SubscriberProperty = Wrapper(cdkObject)
+          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriberProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriberProperty):
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty = (wrapped as
@@ -1365,7 +1370,8 @@ public open class CfnBudgetsAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty):
-          IamActionDefinitionProperty = Wrapper(cdkObject)
+          IamActionDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IamActionDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IamActionDefinitionProperty):
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty =
@@ -1484,7 +1490,8 @@ public open class CfnBudgetsAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty):
-          ScpActionDefinitionProperty = Wrapper(cdkObject)
+          ScpActionDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScpActionDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScpActionDefinitionProperty):
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty =

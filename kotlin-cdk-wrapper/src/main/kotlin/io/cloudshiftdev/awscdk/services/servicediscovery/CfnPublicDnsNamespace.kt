@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -466,7 +467,8 @@ public open class CfnPublicDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty):
-          PublicDnsPropertiesMutableProperty = Wrapper(cdkObject)
+          PublicDnsPropertiesMutableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublicDnsPropertiesMutableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicDnsPropertiesMutableProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty
@@ -548,7 +550,7 @@ public open class CfnPublicDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty):
-          SOAProperty = Wrapper(cdkObject)
+          SOAProperty = CdkObjectWrappers.wrap(cdkObject) as? SOAProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SOAProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty =
@@ -662,7 +664,8 @@ public open class CfnPublicDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty):
-          PropertiesProperty = Wrapper(cdkObject)
+          PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertiesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PropertiesProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.assertions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 
@@ -93,7 +94,7 @@ public interface MatchCapture {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.MatchCapture): MatchCapture =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? MatchCapture ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MatchCapture): software.amazon.awscdk.assertions.MatchCapture =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.assertions.MatchCapture

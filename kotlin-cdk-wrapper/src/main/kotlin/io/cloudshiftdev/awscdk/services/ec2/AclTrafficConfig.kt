@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -205,7 +206,8 @@ public interface AclTrafficConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclTrafficConfig):
-        AclTrafficConfig = Wrapper(cdkObject)
+        AclTrafficConfig = CdkObjectWrappers.wrap(cdkObject) as? AclTrafficConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AclTrafficConfig):
         software.amazon.awscdk.services.ec2.AclTrafficConfig = (wrapped as CdkObject).cdkObject as

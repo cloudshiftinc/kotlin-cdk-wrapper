@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -47,7 +48,8 @@ public interface SchemaBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.SchemaBindOptions):
-        SchemaBindOptions = Wrapper(cdkObject)
+        SchemaBindOptions = CdkObjectWrappers.wrap(cdkObject) as? SchemaBindOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SchemaBindOptions):
         software.amazon.awscdk.services.appsync.SchemaBindOptions = (wrapped as CdkObject).cdkObject

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -1067,7 +1068,8 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateClusterProps):
-        EmrCreateClusterProps = Wrapper(cdkObject)
+        EmrCreateClusterProps = CdkObjectWrappers.wrap(cdkObject) as? EmrCreateClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrCreateClusterProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateClusterProps = (wrapped as

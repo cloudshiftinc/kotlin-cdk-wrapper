@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
@@ -56,7 +57,8 @@ public abstract class HttpRoutePathMatch internal constructor(
         software.amazon.awscdk.services.appmesh.HttpRoutePathMatch.startsWith(prefix).let(HttpRoutePathMatch::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch):
-        HttpRoutePathMatch = Wrapper(cdkObject)
+        HttpRoutePathMatch = CdkObjectWrappers.wrap(cdkObject) as? HttpRoutePathMatch ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRoutePathMatch):
         software.amazon.awscdk.services.appmesh.HttpRoutePathMatch = (wrapped as

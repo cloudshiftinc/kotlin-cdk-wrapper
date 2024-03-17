@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -149,7 +150,8 @@ public interface StandardAttribute {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.StandardAttribute):
-        StandardAttribute = Wrapper(cdkObject)
+        StandardAttribute = CdkObjectWrappers.wrap(cdkObject) as? StandardAttribute ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StandardAttribute):
         software.amazon.awscdk.services.cognito.StandardAttribute = (wrapped as CdkObject).cdkObject

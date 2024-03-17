@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IDependable
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
@@ -92,7 +93,7 @@ public interface IPrivateSubnet : ISubnet {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IPrivateSubnet): IPrivateSubnet
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IPrivateSubnet ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IPrivateSubnet): software.amazon.awscdk.services.ec2.IPrivateSubnet
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.IPrivateSubnet

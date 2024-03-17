@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -608,7 +609,7 @@ public open class CfnGitHubRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty):
-          CodeProperty = Wrapper(cdkObject)
+          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeProperty):
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty = (wrapped as
@@ -752,7 +753,7 @@ public open class CfnGitHubRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property):
-          S3Property = Wrapper(cdkObject)
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property = (wrapped as

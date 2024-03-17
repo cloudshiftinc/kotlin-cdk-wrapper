@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -421,7 +422,8 @@ public interface CfnDeploymentStrategyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnDeploymentStrategyProps):
-        CfnDeploymentStrategyProps = Wrapper(cdkObject)
+        CfnDeploymentStrategyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDeploymentStrategyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeploymentStrategyProps):
         software.amazon.awscdk.services.appconfig.CfnDeploymentStrategyProps = (wrapped as

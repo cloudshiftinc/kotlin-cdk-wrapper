@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
@@ -1313,7 +1314,8 @@ public interface DatabaseInstanceReadReplicaProps : DatabaseInstanceNewProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceReadReplicaProps):
-        DatabaseInstanceReadReplicaProps = Wrapper(cdkObject)
+        DatabaseInstanceReadReplicaProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DatabaseInstanceReadReplicaProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseInstanceReadReplicaProps):
         software.amazon.awscdk.services.rds.DatabaseInstanceReadReplicaProps = (wrapped as

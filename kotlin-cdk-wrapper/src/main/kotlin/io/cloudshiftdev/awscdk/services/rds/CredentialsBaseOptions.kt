@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.secretsmanager.ReplicaRegion
 import kotlin.String
@@ -182,7 +183,8 @@ public interface CredentialsBaseOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CredentialsBaseOptions):
-        CredentialsBaseOptions = Wrapper(cdkObject)
+        CredentialsBaseOptions = CdkObjectWrappers.wrap(cdkObject) as? CredentialsBaseOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CredentialsBaseOptions):
         software.amazon.awscdk.services.rds.CredentialsBaseOptions = (wrapped as

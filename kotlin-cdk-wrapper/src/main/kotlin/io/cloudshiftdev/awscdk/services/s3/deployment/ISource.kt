@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.s3.deployment
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -74,7 +75,7 @@ public interface ISource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.ISource): ISource =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ISource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISource): software.amazon.awscdk.services.s3.deployment.ISource =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.deployment.ISource

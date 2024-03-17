@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.ec2.Connections
@@ -607,7 +608,8 @@ public abstract class DatabaseClusterBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase):
-        DatabaseClusterBase = Wrapper(cdkObject)
+        DatabaseClusterBase = CdkObjectWrappers.wrap(cdkObject) as? DatabaseClusterBase ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseClusterBase):
         software.amazon.awscdk.services.rds.DatabaseClusterBase = (wrapped as CdkObject).cdkObject

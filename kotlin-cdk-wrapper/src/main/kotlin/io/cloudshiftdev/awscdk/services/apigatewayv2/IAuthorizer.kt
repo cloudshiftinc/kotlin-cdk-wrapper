@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -66,7 +67,7 @@ public interface IAuthorizer : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IAuthorizer):
-        IAuthorizer = Wrapper(cdkObject)
+        IAuthorizer = CdkObjectWrappers.wrap(cdkObject) as? IAuthorizer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAuthorizer):
         software.amazon.awscdk.services.apigatewayv2.IAuthorizer = (wrapped as CdkObject).cdkObject

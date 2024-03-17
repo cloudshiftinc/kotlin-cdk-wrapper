@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 import io.cloudshiftdev.awscdk.CfnCapabilities
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
@@ -886,7 +887,8 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackActionProps):
-        CloudFormationCreateUpdateStackActionProps = Wrapper(cdkObject)
+        CloudFormationCreateUpdateStackActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationCreateUpdateStackActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationCreateUpdateStackActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackActionProps

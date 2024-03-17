@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.Number
@@ -186,7 +187,8 @@ public interface CodePipelineTargetOptions : TargetBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.CodePipelineTargetOptions):
-        CodePipelineTargetOptions = Wrapper(cdkObject)
+        CodePipelineTargetOptions = CdkObjectWrappers.wrap(cdkObject) as? CodePipelineTargetOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodePipelineTargetOptions):
         software.amazon.awscdk.services.events.targets.CodePipelineTargetOptions = (wrapped as

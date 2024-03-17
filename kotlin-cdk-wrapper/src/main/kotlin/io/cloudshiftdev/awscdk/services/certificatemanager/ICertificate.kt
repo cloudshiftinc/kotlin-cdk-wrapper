@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.constructs.Node
@@ -148,7 +149,7 @@ public interface ICertificate : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.ICertificate):
-        ICertificate = Wrapper(cdkObject)
+        ICertificate = CdkObjectWrappers.wrap(cdkObject) as? ICertificate ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ICertificate):
         software.amazon.awscdk.services.certificatemanager.ICertificate = (wrapped as

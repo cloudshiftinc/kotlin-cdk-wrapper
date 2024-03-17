@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBaseProps
@@ -653,7 +654,8 @@ public interface EmrAddStepProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrAddStepProps):
-        EmrAddStepProps = Wrapper(cdkObject)
+        EmrAddStepProps = CdkObjectWrappers.wrap(cdkObject) as? EmrAddStepProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrAddStepProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrAddStepProps = (wrapped as

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.Boolean
 import kotlin.String
@@ -115,7 +116,7 @@ public interface IOptionGroup : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.IOptionGroup): IOptionGroup =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IOptionGroup ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IOptionGroup): software.amazon.awscdk.services.rds.IOptionGroup =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.rds.IOptionGroup

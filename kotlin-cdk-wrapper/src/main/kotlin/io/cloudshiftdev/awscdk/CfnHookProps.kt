@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -100,7 +101,7 @@ public interface CfnHookProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnHookProps): CfnHookProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? CfnHookProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHookProps): software.amazon.awscdk.CfnHookProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.CfnHookProps

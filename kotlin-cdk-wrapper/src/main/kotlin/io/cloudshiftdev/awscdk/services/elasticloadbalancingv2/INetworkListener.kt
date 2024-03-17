@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -61,7 +62,8 @@ public interface INetworkListener : IListener {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener):
-        INetworkListener = Wrapper(cdkObject)
+        INetworkListener = CdkObjectWrappers.wrap(cdkObject) as? INetworkListener ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INetworkListener):
         software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener = (wrapped as

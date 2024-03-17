@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.collections.List
@@ -241,7 +242,8 @@ public interface GrpcRetryPolicy : HttpRetryPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcRetryPolicy):
-        GrpcRetryPolicy = Wrapper(cdkObject)
+        GrpcRetryPolicy = CdkObjectWrappers.wrap(cdkObject) as? GrpcRetryPolicy ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcRetryPolicy):
         software.amazon.awscdk.services.appmesh.GrpcRetryPolicy = (wrapped as CdkObject).cdkObject

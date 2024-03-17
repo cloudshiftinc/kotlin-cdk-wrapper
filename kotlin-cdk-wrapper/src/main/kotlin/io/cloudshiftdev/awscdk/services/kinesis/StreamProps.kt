@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.kinesis
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Number
 import kotlin.String
@@ -239,7 +240,7 @@ public interface StreamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.StreamProps): StreamProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? StreamProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamProps): software.amazon.awscdk.services.kinesis.StreamProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.kinesis.StreamProps

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -204,7 +205,7 @@ public interface FailProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.FailProps): FailProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? FailProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FailProps): software.amazon.awscdk.services.stepfunctions.FailProps
         = (wrapped as CdkObject).cdkObject as

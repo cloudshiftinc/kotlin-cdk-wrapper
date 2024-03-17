@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -466,7 +467,8 @@ public open class CfnProfilingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty):
-          AgentPermissionsProperty = Wrapper(cdkObject)
+          AgentPermissionsProperty = CdkObjectWrappers.wrap(cdkObject) as? AgentPermissionsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AgentPermissionsProperty):
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty
@@ -578,7 +580,8 @@ public open class CfnProfilingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty):
-          ChannelProperty = Wrapper(cdkObject)
+          ChannelProperty = CdkObjectWrappers.wrap(cdkObject) as? ChannelProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ChannelProperty):
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty =

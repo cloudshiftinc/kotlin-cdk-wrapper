@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -564,7 +565,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty):
-          MarketoSourcePropertiesProperty = Wrapper(cdkObject)
+          MarketoSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MarketoSourcePropertiesProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.MarketoSourcePropertiesProperty
@@ -754,7 +756,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ConnectorOperatorProperty):
-          ConnectorOperatorProperty = Wrapper(cdkObject)
+          ConnectorOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorOperatorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorOperatorProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ConnectorOperatorProperty
@@ -925,7 +928,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty):
-          TriggerConfigProperty = Wrapper(cdkObject)
+          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TriggerConfigProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerConfigProperty =
@@ -1305,7 +1309,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.FlowDefinitionProperty):
-          FlowDefinitionProperty = Wrapper(cdkObject)
+          FlowDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? FlowDefinitionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FlowDefinitionProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.FlowDefinitionProperty =
@@ -1392,7 +1397,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.IncrementalPullConfigProperty):
-          IncrementalPullConfigProperty = Wrapper(cdkObject)
+          IncrementalPullConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IncrementalPullConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IncrementalPullConfigProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.IncrementalPullConfigProperty
@@ -1504,7 +1510,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.S3SourcePropertiesProperty):
-          S3SourcePropertiesProperty = Wrapper(cdkObject)
+          S3SourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3SourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3SourcePropertiesProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.S3SourcePropertiesProperty
@@ -1614,7 +1621,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty):
-          ObjectTypeMappingProperty = Wrapper(cdkObject)
+          ObjectTypeMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ObjectTypeMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ObjectTypeMappingProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ObjectTypeMappingProperty
@@ -1882,7 +1890,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ScheduledTriggerPropertiesProperty):
-          ScheduledTriggerPropertiesProperty = Wrapper(cdkObject)
+          ScheduledTriggerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduledTriggerPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduledTriggerPropertiesProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ScheduledTriggerPropertiesProperty
@@ -1965,7 +1974,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty):
-          ZendeskSourcePropertiesProperty = Wrapper(cdkObject)
+          ZendeskSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZendeskSourcePropertiesProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ZendeskSourcePropertiesProperty
@@ -2138,7 +2148,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty):
-          SalesforceSourcePropertiesProperty = Wrapper(cdkObject)
+          SalesforceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceSourcePropertiesProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.SalesforceSourcePropertiesProperty
@@ -2415,7 +2426,7 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty):
-          TaskProperty = Wrapper(cdkObject)
+          TaskProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskProperty = (wrapped as
@@ -2541,7 +2552,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty):
-          TriggerPropertiesProperty = Wrapper(cdkObject)
+          TriggerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TriggerPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TriggerPropertiesProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.TriggerPropertiesProperty
@@ -2625,7 +2637,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.ServiceNowSourcePropertiesProperty):
-          ServiceNowSourcePropertiesProperty = Wrapper(cdkObject)
+          ServiceNowSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceNowSourcePropertiesProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.ServiceNowSourcePropertiesProperty
@@ -2909,7 +2922,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty):
-          SourceFlowConfigProperty = Wrapper(cdkObject)
+          SourceFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceFlowConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceFlowConfigProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceFlowConfigProperty =
@@ -3265,7 +3279,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceConnectorPropertiesProperty):
-          SourceConnectorPropertiesProperty = Wrapper(cdkObject)
+          SourceConnectorPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceConnectorPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConnectorPropertiesProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.SourceConnectorPropertiesProperty
@@ -3376,7 +3391,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskPropertiesMapProperty):
-          TaskPropertiesMapProperty = Wrapper(cdkObject)
+          TaskPropertiesMapProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TaskPropertiesMapProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskPropertiesMapProperty):
           software.amazon.awscdk.services.customerprofiles.CfnIntegration.TaskPropertiesMapProperty

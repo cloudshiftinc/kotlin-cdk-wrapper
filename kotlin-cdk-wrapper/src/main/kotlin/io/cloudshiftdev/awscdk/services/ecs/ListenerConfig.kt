@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationListener
@@ -89,7 +90,7 @@ public abstract class ListenerConfig internal constructor(
         networkListener(listener, AddNetworkTargetsProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ListenerConfig): ListenerConfig
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? ListenerConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ListenerConfig): software.amazon.awscdk.services.ecs.ListenerConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.ListenerConfig

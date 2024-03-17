@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -129,7 +130,8 @@ public interface UniqueResourceNameOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.UniqueResourceNameOptions):
-        UniqueResourceNameOptions = Wrapper(cdkObject)
+        UniqueResourceNameOptions = CdkObjectWrappers.wrap(cdkObject) as? UniqueResourceNameOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UniqueResourceNameOptions):
         software.amazon.awscdk.UniqueResourceNameOptions = (wrapped as CdkObject).cdkObject as

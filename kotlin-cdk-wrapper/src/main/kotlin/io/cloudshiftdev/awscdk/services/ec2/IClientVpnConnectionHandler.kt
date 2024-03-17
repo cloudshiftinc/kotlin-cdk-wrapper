@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -35,7 +36,8 @@ public interface IClientVpnConnectionHandler {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IClientVpnConnectionHandler):
-        IClientVpnConnectionHandler = Wrapper(cdkObject)
+        IClientVpnConnectionHandler = CdkObjectWrappers.wrap(cdkObject) as?
+        IClientVpnConnectionHandler ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IClientVpnConnectionHandler):
         software.amazon.awscdk.services.ec2.IClientVpnConnectionHandler = (wrapped as

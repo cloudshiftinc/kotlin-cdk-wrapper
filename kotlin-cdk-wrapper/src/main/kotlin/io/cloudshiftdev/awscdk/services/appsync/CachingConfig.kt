@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -129,7 +130,7 @@ public interface CachingConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CachingConfig):
-        CachingConfig = Wrapper(cdkObject)
+        CachingConfig = CdkObjectWrappers.wrap(cdkObject) as? CachingConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CachingConfig):
         software.amazon.awscdk.services.appsync.CachingConfig = (wrapped as CdkObject).cdkObject as

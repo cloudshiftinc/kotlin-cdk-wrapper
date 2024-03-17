@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticsearch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Deprecated
@@ -160,7 +161,8 @@ public interface CustomEndpointOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions):
-        CustomEndpointOptions = Wrapper(cdkObject)
+        CustomEndpointOptions = CdkObjectWrappers.wrap(cdkObject) as? CustomEndpointOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomEndpointOptions):
         software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions = (wrapped as

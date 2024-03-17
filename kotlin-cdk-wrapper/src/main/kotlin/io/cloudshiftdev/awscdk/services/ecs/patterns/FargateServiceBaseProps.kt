@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.FargatePlatformVersion
 import io.cloudshiftdev.awscdk.services.ecs.FargateTaskDefinition
 import io.cloudshiftdev.awscdk.services.ecs.RuntimePlatform
@@ -458,7 +459,8 @@ public interface FargateServiceBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps):
-        FargateServiceBaseProps = Wrapper(cdkObject)
+        FargateServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as? FargateServiceBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateServiceBaseProps):
         software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps = (wrapped as

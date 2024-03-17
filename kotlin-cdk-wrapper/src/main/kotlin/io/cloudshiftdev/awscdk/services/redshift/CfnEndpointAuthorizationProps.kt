@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.redshift
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -206,7 +207,8 @@ public interface CfnEndpointAuthorizationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAuthorizationProps):
-        CfnEndpointAuthorizationProps = Wrapper(cdkObject)
+        CfnEndpointAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEndpointAuthorizationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointAuthorizationProps):
         software.amazon.awscdk.services.redshift.CfnEndpointAuthorizationProps = (wrapped as

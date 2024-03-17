@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -493,7 +494,8 @@ public open class CfnRefreshSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty):
-          ScheduleFrequencyProperty = Wrapper(cdkObject)
+          ScheduleFrequencyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduleFrequencyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleFrequencyProperty):
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty =
@@ -614,7 +616,8 @@ public open class CfnRefreshSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshOnDayProperty):
-          RefreshOnDayProperty = Wrapper(cdkObject)
+          RefreshOnDayProperty = CdkObjectWrappers.wrap(cdkObject) as? RefreshOnDayProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RefreshOnDayProperty):
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshOnDayProperty =
@@ -849,7 +852,8 @@ public open class CfnRefreshSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty):
-          RefreshScheduleMapProperty = Wrapper(cdkObject)
+          RefreshScheduleMapProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RefreshScheduleMapProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RefreshScheduleMapProperty):
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty =

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -233,7 +234,7 @@ public interface OAuthSettings {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.OAuthSettings):
-        OAuthSettings = Wrapper(cdkObject)
+        OAuthSettings = CdkObjectWrappers.wrap(cdkObject) as? OAuthSettings ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OAuthSettings):
         software.amazon.awscdk.services.cognito.OAuthSettings = (wrapped as CdkObject).cdkObject as

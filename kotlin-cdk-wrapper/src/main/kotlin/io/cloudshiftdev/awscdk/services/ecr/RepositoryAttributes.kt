@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecr
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -90,7 +91,8 @@ public interface RepositoryAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.RepositoryAttributes):
-        RepositoryAttributes = Wrapper(cdkObject)
+        RepositoryAttributes = CdkObjectWrappers.wrap(cdkObject) as? RepositoryAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryAttributes):
         software.amazon.awscdk.services.ecr.RepositoryAttributes = (wrapped as CdkObject).cdkObject

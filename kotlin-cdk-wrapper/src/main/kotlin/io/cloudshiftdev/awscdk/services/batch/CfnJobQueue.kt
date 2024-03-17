@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -581,7 +582,8 @@ public open class CfnJobQueue internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty):
-          ComputeEnvironmentOrderProperty = Wrapper(cdkObject)
+          ComputeEnvironmentOrderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComputeEnvironmentOrderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputeEnvironmentOrderProperty):
           software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty =

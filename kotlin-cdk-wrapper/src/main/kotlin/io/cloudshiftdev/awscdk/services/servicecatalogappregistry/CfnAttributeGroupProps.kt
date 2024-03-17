@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalogappregistry
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -177,7 +178,8 @@ public interface CfnAttributeGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupProps):
-        CfnAttributeGroupProps = Wrapper(cdkObject)
+        CfnAttributeGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAttributeGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAttributeGroupProps):
         software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupProps = (wrapped

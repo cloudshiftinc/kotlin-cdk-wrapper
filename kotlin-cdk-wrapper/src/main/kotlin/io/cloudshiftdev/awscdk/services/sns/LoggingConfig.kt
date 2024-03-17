@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Number
 import kotlin.Unit
@@ -166,7 +167,7 @@ public interface LoggingConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.LoggingConfig): LoggingConfig =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? LoggingConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoggingConfig): software.amazon.awscdk.services.sns.LoggingConfig =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sns.LoggingConfig

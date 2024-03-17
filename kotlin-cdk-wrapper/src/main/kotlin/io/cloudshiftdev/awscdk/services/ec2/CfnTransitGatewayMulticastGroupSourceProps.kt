@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -139,7 +140,8 @@ public interface CfnTransitGatewayMulticastGroupSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSourceProps):
-        CfnTransitGatewayMulticastGroupSourceProps = Wrapper(cdkObject)
+        CfnTransitGatewayMulticastGroupSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTransitGatewayMulticastGroupSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransitGatewayMulticastGroupSourceProps):
         software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSourceProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1262,7 +1263,8 @@ public open class CfnDatabase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDatabase.RelationalDatabaseParameterProperty):
-          RelationalDatabaseParameterProperty = Wrapper(cdkObject)
+          RelationalDatabaseParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RelationalDatabaseParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RelationalDatabaseParameterProperty):
           software.amazon.awscdk.services.lightsail.CfnDatabase.RelationalDatabaseParameterProperty

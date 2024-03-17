@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -935,7 +936,8 @@ public interface CfnNotebookInstanceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceProps):
-        CfnNotebookInstanceProps = Wrapper(cdkObject)
+        CfnNotebookInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnNotebookInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotebookInstanceProps):
         software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceProps = (wrapped as

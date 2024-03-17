@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -183,7 +184,7 @@ public interface ArchiveProps : BaseArchiveProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.ArchiveProps): ArchiveProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? ArchiveProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ArchiveProps): software.amazon.awscdk.services.events.ArchiveProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.events.ArchiveProps

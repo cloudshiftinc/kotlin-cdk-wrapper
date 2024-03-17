@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.Any
 import kotlin.Boolean
@@ -121,7 +122,7 @@ public interface IResolveContext {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IResolveContext): IResolveContext =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IResolveContext ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IResolveContext): software.amazon.awscdk.IResolveContext = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.IResolveContext

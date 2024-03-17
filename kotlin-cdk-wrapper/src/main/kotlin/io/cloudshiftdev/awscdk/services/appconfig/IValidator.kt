@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -35,7 +36,7 @@ public interface IValidator {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.IValidator): IValidator =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IValidator ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IValidator): software.amazon.awscdk.services.appconfig.IValidator =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appconfig.IValidator

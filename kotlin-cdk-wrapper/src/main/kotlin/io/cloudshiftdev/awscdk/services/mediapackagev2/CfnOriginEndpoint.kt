@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -770,7 +771,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty):
-          EncryptionMethodProperty = Wrapper(cdkObject)
+          EncryptionMethodProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionMethodProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionMethodProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionMethodProperty
@@ -984,7 +986,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty):
-          FilterConfigurationProperty = Wrapper(cdkObject)
+          FilterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FilterConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterConfigurationProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty
@@ -1286,7 +1289,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty):
-          SpekeKeyProviderProperty = Wrapper(cdkObject)
+          SpekeKeyProviderProperty = CdkObjectWrappers.wrap(cdkObject) as? SpekeKeyProviderProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpekeKeyProviderProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
@@ -1367,7 +1371,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty):
-          ScteHlsProperty = Wrapper(cdkObject)
+          ScteHlsProperty = CdkObjectWrappers.wrap(cdkObject) as? ScteHlsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScteHlsProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteHlsProperty =
@@ -1527,7 +1532,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty):
-          EncryptionContractConfigurationProperty = Wrapper(cdkObject)
+          EncryptionContractConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionContractConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionContractConfigurationProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionContractConfigurationProperty
@@ -1878,7 +1884,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty):
-          HlsManifestConfigurationProperty = Wrapper(cdkObject)
+          HlsManifestConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HlsManifestConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsManifestConfigurationProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.HlsManifestConfigurationProperty
@@ -2231,7 +2238,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty):
-          SegmentProperty = Wrapper(cdkObject)
+          SegmentProperty = CdkObjectWrappers.wrap(cdkObject) as? SegmentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SegmentProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SegmentProperty =
@@ -2637,7 +2645,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.LowLatencyHlsManifestConfigurationProperty):
-          LowLatencyHlsManifestConfigurationProperty = Wrapper(cdkObject)
+          LowLatencyHlsManifestConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LowLatencyHlsManifestConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LowLatencyHlsManifestConfigurationProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.LowLatencyHlsManifestConfigurationProperty
@@ -2728,7 +2737,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteProperty):
-          ScteProperty = Wrapper(cdkObject)
+          ScteProperty = CdkObjectWrappers.wrap(cdkObject) as? ScteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScteProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteProperty = (wrapped
@@ -3001,7 +3010,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty):
-          EncryptionProperty = Wrapper(cdkObject)
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.EncryptionProperty =

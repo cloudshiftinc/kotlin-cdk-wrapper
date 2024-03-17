@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iot1click
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -121,7 +122,7 @@ public interface CfnDeviceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnDeviceProps):
-        CfnDeviceProps = Wrapper(cdkObject)
+        CfnDeviceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDeviceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceProps):
         software.amazon.awscdk.services.iot1click.CfnDeviceProps = (wrapped as CdkObject).cdkObject

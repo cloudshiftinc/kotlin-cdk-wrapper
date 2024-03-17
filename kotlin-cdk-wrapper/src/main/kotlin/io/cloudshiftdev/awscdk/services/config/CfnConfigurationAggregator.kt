@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -537,7 +538,8 @@ public open class CfnConfigurationAggregator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty):
-          OrganizationAggregationSourceProperty = Wrapper(cdkObject)
+          OrganizationAggregationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OrganizationAggregationSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OrganizationAggregationSourceProperty):
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty
@@ -707,7 +709,8 @@ public open class CfnConfigurationAggregator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty):
-          AccountAggregationSourceProperty = Wrapper(cdkObject)
+          AccountAggregationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountAggregationSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountAggregationSourceProperty):
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty

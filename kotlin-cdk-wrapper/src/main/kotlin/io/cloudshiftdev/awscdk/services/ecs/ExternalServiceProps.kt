@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import kotlin.Boolean
 import kotlin.Number
@@ -659,7 +660,8 @@ public interface ExternalServiceProps : BaseServiceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExternalServiceProps):
-        ExternalServiceProps = Wrapper(cdkObject)
+        ExternalServiceProps = CdkObjectWrappers.wrap(cdkObject) as? ExternalServiceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExternalServiceProps):
         software.amazon.awscdk.services.ecs.ExternalServiceProps = (wrapped as CdkObject).cdkObject

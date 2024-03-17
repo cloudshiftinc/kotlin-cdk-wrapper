@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -645,7 +646,8 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty):
-          TrafficMirrorPortRangeProperty = Wrapper(cdkObject)
+          TrafficMirrorPortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrafficMirrorPortRangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrafficMirrorPortRangeProperty):
           software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty

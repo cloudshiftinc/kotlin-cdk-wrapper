@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -102,7 +103,8 @@ public interface ZoneDelegationOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationOptions):
-        ZoneDelegationOptions = Wrapper(cdkObject)
+        ZoneDelegationOptions = CdkObjectWrappers.wrap(cdkObject) as? ZoneDelegationOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ZoneDelegationOptions):
         software.amazon.awscdk.services.route53.ZoneDelegationOptions = (wrapped as

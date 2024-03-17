@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import io.cloudshiftdev.awscdk.services.secretsmanager.ReplicaRegion
@@ -165,7 +166,7 @@ public abstract class Credentials internal constructor(
         fromUsername(username, CredentialsFromUsernameOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.Credentials): Credentials =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Credentials ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Credentials): software.amazon.awscdk.services.rds.Credentials =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.rds.Credentials

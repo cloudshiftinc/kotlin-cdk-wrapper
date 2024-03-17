@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -487,7 +488,8 @@ public open class CfnPrivateDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty):
-          PropertiesProperty = Wrapper(cdkObject)
+          PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertiesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PropertiesProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty
@@ -569,7 +571,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty):
-          SOAProperty = Wrapper(cdkObject)
+          SOAProperty = CdkObjectWrappers.wrap(cdkObject) as? SOAProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SOAProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty =
@@ -689,7 +691,8 @@ public open class CfnPrivateDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty):
-          PrivateDnsPropertiesMutableProperty = Wrapper(cdkObject)
+          PrivateDnsPropertiesMutableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateDnsPropertiesMutableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrivateDnsPropertiesMutableProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty

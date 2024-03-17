@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.ILaunchTemplate
 import io.cloudshiftdev.awscdk.services.ec2.IPlacementGroup
@@ -474,7 +475,8 @@ public interface IManagedEc2EcsComputeEnvironment : IManagedComputeEnvironment {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.IManagedEc2EcsComputeEnvironment):
-        IManagedEc2EcsComputeEnvironment = Wrapper(cdkObject)
+        IManagedEc2EcsComputeEnvironment = CdkObjectWrappers.wrap(cdkObject) as?
+        IManagedEc2EcsComputeEnvironment ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IManagedEc2EcsComputeEnvironment):
         software.amazon.awscdk.services.batch.IManagedEc2EcsComputeEnvironment = (wrapped as

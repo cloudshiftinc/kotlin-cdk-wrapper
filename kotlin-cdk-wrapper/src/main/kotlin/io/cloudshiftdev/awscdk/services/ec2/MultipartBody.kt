@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -58,7 +59,7 @@ public abstract class MultipartBody internal constructor(
         contentType).let(MultipartBody::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MultipartBody): MultipartBody =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? MultipartBody ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MultipartBody): software.amazon.awscdk.services.ec2.MultipartBody =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.MultipartBody

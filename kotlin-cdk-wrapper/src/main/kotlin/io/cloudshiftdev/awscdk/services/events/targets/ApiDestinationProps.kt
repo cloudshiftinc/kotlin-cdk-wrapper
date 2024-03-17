@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
@@ -364,7 +365,8 @@ public interface ApiDestinationProps : TargetBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.ApiDestinationProps):
-        ApiDestinationProps = Wrapper(cdkObject)
+        ApiDestinationProps = CdkObjectWrappers.wrap(cdkObject) as? ApiDestinationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiDestinationProps):
         software.amazon.awscdk.services.events.targets.ApiDestinationProps = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.arczonalshift
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -312,7 +313,8 @@ public interface CfnZonalAutoshiftConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfigurationProps):
-        CfnZonalAutoshiftConfigurationProps = Wrapper(cdkObject)
+        CfnZonalAutoshiftConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnZonalAutoshiftConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnZonalAutoshiftConfigurationProps):
         software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfigurationProps = (wrapped

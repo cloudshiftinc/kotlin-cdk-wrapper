@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -89,7 +90,8 @@ public interface DeploymentAlarmOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmOptions):
-        DeploymentAlarmOptions = Wrapper(cdkObject)
+        DeploymentAlarmOptions = CdkObjectWrappers.wrap(cdkObject) as? DeploymentAlarmOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentAlarmOptions):
         software.amazon.awscdk.services.ecs.DeploymentAlarmOptions = (wrapped as

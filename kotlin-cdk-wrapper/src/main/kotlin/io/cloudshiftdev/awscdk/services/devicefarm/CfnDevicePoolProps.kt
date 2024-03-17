@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -301,7 +302,8 @@ public interface CfnDevicePoolProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePoolProps):
-        CfnDevicePoolProps = Wrapper(cdkObject)
+        CfnDevicePoolProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDevicePoolProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDevicePoolProps):
         software.amazon.awscdk.services.devicefarm.CfnDevicePoolProps = (wrapped as

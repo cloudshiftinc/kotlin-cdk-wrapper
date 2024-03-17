@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.emr
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -148,7 +149,8 @@ public interface CfnWALWorkspaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspaceProps):
-        CfnWALWorkspaceProps = Wrapper(cdkObject)
+        CfnWALWorkspaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWALWorkspaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWALWorkspaceProps):
         software.amazon.awscdk.services.emr.CfnWALWorkspaceProps = (wrapped as CdkObject).cdkObject

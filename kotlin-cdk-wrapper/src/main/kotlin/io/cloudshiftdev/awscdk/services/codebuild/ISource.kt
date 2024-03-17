@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -63,7 +64,7 @@ public interface ISource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.ISource): ISource =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ISource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISource): software.amazon.awscdk.services.codebuild.ISource =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.ISource

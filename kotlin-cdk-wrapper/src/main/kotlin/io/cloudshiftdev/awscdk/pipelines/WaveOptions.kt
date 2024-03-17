@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -135,7 +136,7 @@ public interface WaveOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.WaveOptions): WaveOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? WaveOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WaveOptions): software.amazon.awscdk.pipelines.WaveOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.pipelines.WaveOptions

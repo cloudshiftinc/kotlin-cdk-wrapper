@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -160,7 +161,7 @@ public interface SignInAliases {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.SignInAliases):
-        SignInAliases = Wrapper(cdkObject)
+        SignInAliases = CdkObjectWrappers.wrap(cdkObject) as? SignInAliases ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SignInAliases):
         software.amazon.awscdk.services.cognito.SignInAliases = (wrapped as CdkObject).cdkObject as

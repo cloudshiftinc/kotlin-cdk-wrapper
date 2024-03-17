@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.docdbelastic
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -560,7 +561,8 @@ public interface CfnClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdbelastic.CfnClusterProps):
-        CfnClusterProps = Wrapper(cdkObject)
+        CfnClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterProps):
         software.amazon.awscdk.services.docdbelastic.CfnClusterProps = (wrapped as

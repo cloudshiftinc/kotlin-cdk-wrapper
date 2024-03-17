@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -90,7 +91,8 @@ public interface DeploymentController {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DeploymentController):
-        DeploymentController = Wrapper(cdkObject)
+        DeploymentController = CdkObjectWrappers.wrap(cdkObject) as? DeploymentController ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentController):
         software.amazon.awscdk.services.ecs.DeploymentController = (wrapped as CdkObject).cdkObject

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -233,7 +234,7 @@ public abstract class ResourceBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ResourceBase):
-        ResourceBase = Wrapper(cdkObject)
+        ResourceBase = CdkObjectWrappers.wrap(cdkObject) as? ResourceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourceBase):
         software.amazon.awscdk.services.apigateway.ResourceBase = (wrapped as CdkObject).cdkObject

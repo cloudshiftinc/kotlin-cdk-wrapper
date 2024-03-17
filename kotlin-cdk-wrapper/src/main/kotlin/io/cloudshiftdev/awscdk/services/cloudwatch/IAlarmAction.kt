@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -33,7 +34,7 @@ public interface IAlarmAction {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmAction):
-        IAlarmAction = Wrapper(cdkObject)
+        IAlarmAction = CdkObjectWrappers.wrap(cdkObject) as? IAlarmAction ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAlarmAction):
         software.amazon.awscdk.services.cloudwatch.IAlarmAction = (wrapped as CdkObject).cdkObject

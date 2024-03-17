@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -676,7 +677,8 @@ public open class CfnAsset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty):
-          AssetHierarchyProperty = Wrapper(cdkObject)
+          AssetHierarchyProperty = CdkObjectWrappers.wrap(cdkObject) as? AssetHierarchyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetHierarchyProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty = (wrapped as
@@ -969,7 +971,8 @@ public open class CfnAsset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty):
-          AssetPropertyProperty = Wrapper(cdkObject)
+          AssetPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? AssetPropertyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetPropertyProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty = (wrapped as

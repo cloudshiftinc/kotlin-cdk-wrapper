@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -771,7 +772,8 @@ public open class CfnCustomActionType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty):
-          ArtifactDetailsProperty = Wrapper(cdkObject)
+          ArtifactDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactDetailsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArtifactDetailsProperty):
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty =
@@ -974,7 +976,8 @@ public open class CfnCustomActionType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty):
-          SettingsProperty = Wrapper(cdkObject)
+          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SettingsProperty):
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty =
@@ -1354,7 +1357,8 @@ public open class CfnCustomActionType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty):
-          ConfigurationPropertiesProperty = Wrapper(cdkObject)
+          ConfigurationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationPropertiesProperty):
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty

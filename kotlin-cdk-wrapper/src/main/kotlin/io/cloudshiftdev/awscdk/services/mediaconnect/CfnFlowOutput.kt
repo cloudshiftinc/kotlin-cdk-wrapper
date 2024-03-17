@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -902,7 +903,8 @@ public open class CfnFlowOutput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty):
-          EncryptionProperty = Wrapper(cdkObject)
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty = (wrapped
@@ -985,7 +987,8 @@ public open class CfnFlowOutput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.VpcInterfaceAttachmentProperty):
-          VpcInterfaceAttachmentProperty = Wrapper(cdkObject)
+          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.VpcInterfaceAttachmentProperty

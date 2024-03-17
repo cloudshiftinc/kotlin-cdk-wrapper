@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iottwinmaker
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -188,7 +189,8 @@ public interface CfnWorkspaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnWorkspaceProps):
-        CfnWorkspaceProps = Wrapper(cdkObject)
+        CfnWorkspaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkspaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkspaceProps):
         software.amazon.awscdk.services.iottwinmaker.CfnWorkspaceProps = (wrapped as

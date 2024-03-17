@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -88,7 +89,8 @@ public interface CfnTag {
       return Wrapper(builderImpl.apply(block).build())
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.CfnTag): CfnTag = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.CfnTag): CfnTag =
+        CdkObjectWrappers.wrap(cdkObject) as? CfnTag ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTag): software.amazon.awscdk.CfnTag = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.CfnTag

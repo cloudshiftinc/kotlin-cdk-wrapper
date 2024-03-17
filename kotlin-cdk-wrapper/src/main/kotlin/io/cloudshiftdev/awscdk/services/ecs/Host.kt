@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -92,7 +93,7 @@ public interface Host {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Host): Host =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Host ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Host): software.amazon.awscdk.services.ecs.Host = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ecs.Host

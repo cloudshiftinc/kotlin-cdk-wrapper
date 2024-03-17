@@ -44,6 +44,10 @@ internal fun ClassName.mappedClassName(): ClassName {
 internal val ClassName.isJssiClass: Boolean
     get() = toString().lowercase().contains("jsii")
 
+internal val ClassName.isJsiiProxy: Boolean
+    get() = simpleNames.last() == "Jsii\$Proxy"
+
+
 internal val ClassName.isCdkClass: Boolean
     get() = packageName.startsWith("software")
 

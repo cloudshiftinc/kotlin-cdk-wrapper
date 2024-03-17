@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.s3
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -209,7 +210,8 @@ public interface IntelligentTieringConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.IntelligentTieringConfiguration):
-        IntelligentTieringConfiguration = Wrapper(cdkObject)
+        IntelligentTieringConfiguration = CdkObjectWrappers.wrap(cdkObject) as?
+        IntelligentTieringConfiguration ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IntelligentTieringConfiguration):
         software.amazon.awscdk.services.s3.IntelligentTieringConfiguration = (wrapped as

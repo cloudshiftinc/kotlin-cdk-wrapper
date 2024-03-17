@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -164,7 +165,8 @@ public interface TcpHealthCheckOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions):
-        TcpHealthCheckOptions = Wrapper(cdkObject)
+        TcpHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as? TcpHealthCheckOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TcpHealthCheckOptions):
         software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions = (wrapped as

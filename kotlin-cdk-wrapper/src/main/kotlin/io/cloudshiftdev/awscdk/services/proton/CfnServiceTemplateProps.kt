@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.proton
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -241,7 +242,8 @@ public interface CfnServiceTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.proton.CfnServiceTemplateProps):
-        CfnServiceTemplateProps = Wrapper(cdkObject)
+        CfnServiceTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServiceTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceTemplateProps):
         software.amazon.awscdk.services.proton.CfnServiceTemplateProps = (wrapped as

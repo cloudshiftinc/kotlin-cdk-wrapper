@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -581,7 +582,8 @@ public open class CfnAnalysisTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty):
-          AnalysisSourceProperty = Wrapper(cdkObject)
+          AnalysisSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisSourceProperty):
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty =
@@ -674,7 +676,8 @@ public open class CfnAnalysisTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty):
-          AnalysisSchemaProperty = Wrapper(cdkObject)
+          AnalysisSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisSchemaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisSchemaProperty):
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty =
@@ -834,7 +837,8 @@ public open class CfnAnalysisTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty):
-          AnalysisParameterProperty = Wrapper(cdkObject)
+          AnalysisParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisParameterProperty):
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty =

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -504,7 +505,8 @@ public open class CfnEventInvokeConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty):
-          OnFailureProperty = Wrapper(cdkObject)
+          OnFailureProperty = CdkObjectWrappers.wrap(cdkObject) as? OnFailureProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnFailureProperty):
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty = (wrapped
@@ -671,7 +673,8 @@ public open class CfnEventInvokeConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty):
-          DestinationConfigProperty = Wrapper(cdkObject)
+          DestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationConfigProperty):
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty =
@@ -752,7 +755,8 @@ public open class CfnEventInvokeConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty):
-          OnSuccessProperty = Wrapper(cdkObject)
+          OnSuccessProperty = CdkObjectWrappers.wrap(cdkObject) as? OnSuccessProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnSuccessProperty):
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty = (wrapped

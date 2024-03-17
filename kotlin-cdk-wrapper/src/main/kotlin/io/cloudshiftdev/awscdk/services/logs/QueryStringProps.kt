@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
@@ -408,7 +409,8 @@ public interface QueryStringProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.QueryStringProps):
-        QueryStringProps = Wrapper(cdkObject)
+        QueryStringProps = CdkObjectWrappers.wrap(cdkObject) as? QueryStringProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueryStringProps):
         software.amazon.awscdk.services.logs.QueryStringProps = (wrapped as CdkObject).cdkObject as

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2076,7 +2077,8 @@ public open class CfnBroker internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty):
-          LdapServerMetadataProperty = Wrapper(cdkObject)
+          LdapServerMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LdapServerMetadataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LdapServerMetadataProperty):
           software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty = (wrapped
@@ -2182,7 +2184,8 @@ public open class CfnBroker internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty):
-          TagsEntryProperty = Wrapper(cdkObject)
+          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? TagsEntryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagsEntryProperty):
           software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty = (wrapped as
@@ -2492,7 +2495,7 @@ public open class CfnBroker internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty):
-          UserProperty = Wrapper(cdkObject)
+          UserProperty = CdkObjectWrappers.wrap(cdkObject) as? UserProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserProperty):
           software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty = (wrapped as
@@ -2634,7 +2637,8 @@ public open class CfnBroker internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty):
-          EncryptionOptionsProperty = Wrapper(cdkObject)
+          EncryptionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionOptionsProperty):
           software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty = (wrapped as
@@ -2778,7 +2782,8 @@ public open class CfnBroker internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty):
-          LogListProperty = Wrapper(cdkObject)
+          LogListProperty = CdkObjectWrappers.wrap(cdkObject) as? LogListProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogListProperty):
           software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty = (wrapped as
@@ -2915,7 +2920,8 @@ public open class CfnBroker internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty):
-          MaintenanceWindowProperty = Wrapper(cdkObject)
+          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceWindowProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaintenanceWindowProperty):
           software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty = (wrapped as
@@ -3026,7 +3032,8 @@ public open class CfnBroker internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty):
-          ConfigurationIdProperty = Wrapper(cdkObject)
+          ConfigurationIdProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationIdProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationIdProperty):
           software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty = (wrapped as

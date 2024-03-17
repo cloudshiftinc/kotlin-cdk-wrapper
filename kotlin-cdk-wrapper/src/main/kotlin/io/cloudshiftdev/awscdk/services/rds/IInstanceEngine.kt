@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.secretsmanager.SecretRotationApplication
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
@@ -143,7 +144,8 @@ public interface IInstanceEngine : IEngine {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.IInstanceEngine):
-        IInstanceEngine = Wrapper(cdkObject)
+        IInstanceEngine = CdkObjectWrappers.wrap(cdkObject) as? IInstanceEngine ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IInstanceEngine):
         software.amazon.awscdk.services.rds.IInstanceEngine = (wrapped as CdkObject).cdkObject as

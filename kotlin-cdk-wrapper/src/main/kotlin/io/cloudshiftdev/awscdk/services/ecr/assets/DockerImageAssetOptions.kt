@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -678,7 +679,8 @@ public interface DockerImageAssetOptions : FileFingerprintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetOptions):
-        DockerImageAssetOptions = Wrapper(cdkObject)
+        DockerImageAssetOptions = CdkObjectWrappers.wrap(cdkObject) as? DockerImageAssetOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageAssetOptions):
         software.amazon.awscdk.services.ecr.assets.DockerImageAssetOptions = (wrapped as

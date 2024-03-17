@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -747,7 +748,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty):
-          EbsConfigurationProperty = Wrapper(cdkObject)
+          EbsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsConfigurationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty =
@@ -850,7 +852,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty):
-          OnDemandProvisioningSpecificationProperty = Wrapper(cdkObject)
+          OnDemandProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnDemandProvisioningSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnDemandProvisioningSpecificationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty
@@ -1050,7 +1053,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty):
-          ConfigurationProperty = Wrapper(cdkObject)
+          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty =
@@ -1217,7 +1221,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty):
-          EbsBlockDeviceConfigProperty = Wrapper(cdkObject)
+          EbsBlockDeviceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EbsBlockDeviceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsBlockDeviceConfigProperty):
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty =
@@ -1519,7 +1524,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty):
-          SpotProvisioningSpecificationProperty = Wrapper(cdkObject)
+          SpotProvisioningSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotProvisioningSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpotProvisioningSpecificationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty
@@ -1947,7 +1953,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty):
-          InstanceTypeConfigProperty = Wrapper(cdkObject)
+          InstanceTypeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceTypeConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceTypeConfigProperty):
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty =
@@ -2136,7 +2143,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty):
-          VolumeSpecificationProperty = Wrapper(cdkObject)
+          VolumeSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VolumeSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VolumeSpecificationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty =
@@ -2373,7 +2381,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty):
-          InstanceFleetProvisioningSpecificationsProperty = Wrapper(cdkObject)
+          InstanceFleetProvisioningSpecificationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceFleetProvisioningSpecificationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceFleetProvisioningSpecificationsProperty):
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Node
@@ -278,7 +279,7 @@ public interface IUserPool : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.IUserPool): IUserPool =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IUserPool ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IUserPool): software.amazon.awscdk.services.cognito.IUserPool =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cognito.IUserPool

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import kotlin.Boolean
 import kotlin.String
@@ -396,7 +397,7 @@ public interface AssetProps : AssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.assets.AssetProps): AssetProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? AssetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetProps): software.amazon.awscdk.services.s3.assets.AssetProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.assets.AssetProps

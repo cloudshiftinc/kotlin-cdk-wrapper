@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Unit
 
@@ -118,7 +119,8 @@ public interface EncryptionConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration):
-        EncryptionConfiguration = Wrapper(cdkObject)
+        EncryptionConfiguration = CdkObjectWrappers.wrap(cdkObject) as? EncryptionConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EncryptionConfiguration):
         software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration = (wrapped as

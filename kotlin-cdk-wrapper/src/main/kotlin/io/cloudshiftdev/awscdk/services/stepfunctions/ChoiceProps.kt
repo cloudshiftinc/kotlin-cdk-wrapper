@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -179,7 +180,7 @@ public interface ChoiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceProps):
-        ChoiceProps = Wrapper(cdkObject)
+        ChoiceProps = CdkObjectWrappers.wrap(cdkObject) as? ChoiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ChoiceProps):
         software.amazon.awscdk.services.stepfunctions.ChoiceProps = (wrapped as CdkObject).cdkObject

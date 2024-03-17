@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ecs.CapacityProviderStrategy
 import io.cloudshiftdev.awscdk.services.ecs.CloudMapOptions
@@ -1016,7 +1017,8 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2ServiceProps):
-        NetworkLoadBalancedEc2ServiceProps = Wrapper(cdkObject)
+        NetworkLoadBalancedEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancedEc2ServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancedEc2ServiceProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2ServiceProps = (wrapped

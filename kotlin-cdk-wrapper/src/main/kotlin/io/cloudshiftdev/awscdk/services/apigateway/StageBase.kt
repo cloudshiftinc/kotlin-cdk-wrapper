@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import kotlin.String
@@ -348,7 +349,7 @@ public abstract class StageBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.StageBase): StageBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? StageBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StageBase): software.amazon.awscdk.services.apigateway.StageBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.StageBase

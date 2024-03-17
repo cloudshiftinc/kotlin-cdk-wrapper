@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront.origins
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudfront.OriginProps
 import io.cloudshiftdev.awscdk.services.cloudfront.OriginProtocolPolicy
 import io.cloudshiftdev.awscdk.services.cloudfront.OriginSslPolicy
@@ -475,7 +476,8 @@ public interface HttpOriginProps : OriginProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.HttpOriginProps):
-        HttpOriginProps = Wrapper(cdkObject)
+        HttpOriginProps = CdkObjectWrappers.wrap(cdkObject) as? HttpOriginProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpOriginProps):
         software.amazon.awscdk.services.cloudfront.origins.HttpOriginProps = (wrapped as

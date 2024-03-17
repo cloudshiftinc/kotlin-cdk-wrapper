@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -520,7 +521,8 @@ public open class CfnResourceVersion internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.CfnResourceVersion.LoggingConfigProperty):
-          LoggingConfigProperty = Wrapper(cdkObject)
+          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigProperty):
           software.amazon.awscdk.CfnResourceVersion.LoggingConfigProperty = (wrapped as

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1606,7 +1607,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty):
-          TimeBasedAutoScalingProperty = Wrapper(cdkObject)
+          TimeBasedAutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeBasedAutoScalingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeBasedAutoScalingProperty):
           software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty =
@@ -1866,7 +1868,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty):
-          EbsBlockDeviceProperty = Wrapper(cdkObject)
+          EbsBlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsBlockDeviceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsBlockDeviceProperty):
           software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty = (wrapped as
@@ -2101,7 +2104,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = Wrapper(cdkObject)
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlockDeviceMappingProperty):
           software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty = (wrapped

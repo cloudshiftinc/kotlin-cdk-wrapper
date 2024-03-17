@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecr.assets.DockerCacheOption
 import io.cloudshiftdev.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions
 import io.cloudshiftdev.awscdk.services.ecr.assets.DockerImageAssetOptions
@@ -554,7 +555,8 @@ public interface AssetImageProps : DockerImageAssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AssetImageProps):
-        AssetImageProps = Wrapper(cdkObject)
+        AssetImageProps = CdkObjectWrappers.wrap(cdkObject) as? AssetImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetImageProps):
         software.amazon.awscdk.services.ecs.AssetImageProps = (wrapped as CdkObject).cdkObject as

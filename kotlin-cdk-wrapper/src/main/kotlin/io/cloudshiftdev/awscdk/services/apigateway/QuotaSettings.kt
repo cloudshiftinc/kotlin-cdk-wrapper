@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -132,7 +133,7 @@ public interface QuotaSettings {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.QuotaSettings):
-        QuotaSettings = Wrapper(cdkObject)
+        QuotaSettings = CdkObjectWrappers.wrap(cdkObject) as? QuotaSettings ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QuotaSettings):
         software.amazon.awscdk.services.apigateway.QuotaSettings = (wrapped as CdkObject).cdkObject

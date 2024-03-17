@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1637,7 +1638,8 @@ public open class CfnLayer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty):
-          AutoScalingThresholdsProperty = Wrapper(cdkObject)
+          AutoScalingThresholdsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoScalingThresholdsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoScalingThresholdsProperty):
           software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty = (wrapped
@@ -1754,7 +1756,8 @@ public open class CfnLayer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty):
-          LifecycleEventConfigurationProperty = Wrapper(cdkObject)
+          LifecycleEventConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LifecycleEventConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LifecycleEventConfigurationProperty):
           software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty =
@@ -1989,7 +1992,8 @@ public open class CfnLayer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty):
-          RecipesProperty = Wrapper(cdkObject)
+          RecipesProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecipesProperty):
           software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty = (wrapped as
@@ -2224,7 +2228,8 @@ public open class CfnLayer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty):
-          LoadBasedAutoScalingProperty = Wrapper(cdkObject)
+          LoadBasedAutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoadBasedAutoScalingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoadBasedAutoScalingProperty):
           software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty = (wrapped
@@ -2561,7 +2566,8 @@ public open class CfnLayer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty):
-          VolumeConfigurationProperty = Wrapper(cdkObject)
+          VolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VolumeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VolumeConfigurationProperty):
           software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty = (wrapped
@@ -2706,7 +2712,8 @@ public open class CfnLayer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty):
-          ShutdownEventConfigurationProperty = Wrapper(cdkObject)
+          ShutdownEventConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ShutdownEventConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ShutdownEventConfigurationProperty):
           software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty =

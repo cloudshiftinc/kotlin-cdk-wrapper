@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -67,7 +68,8 @@ public interface BucketCacheOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions):
-        BucketCacheOptions = Wrapper(cdkObject)
+        BucketCacheOptions = CdkObjectWrappers.wrap(cdkObject) as? BucketCacheOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketCacheOptions):
         software.amazon.awscdk.services.codebuild.BucketCacheOptions = (wrapped as

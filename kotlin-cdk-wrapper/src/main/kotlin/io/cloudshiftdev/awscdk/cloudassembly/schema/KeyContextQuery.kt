@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -143,7 +144,8 @@ public interface KeyContextQuery {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.KeyContextQuery):
-        KeyContextQuery = Wrapper(cdkObject)
+        KeyContextQuery = CdkObjectWrappers.wrap(cdkObject) as? KeyContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyContextQuery):
         software.amazon.awscdk.cloudassembly.schema.KeyContextQuery = (wrapped as

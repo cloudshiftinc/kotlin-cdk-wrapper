@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -558,7 +559,8 @@ public open class CfnConnectorDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty):
-          ConnectorProperty = Wrapper(cdkObject)
+          ConnectorProperty = CdkObjectWrappers.wrap(cdkObject) as? ConnectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorProperty):
           software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorProperty =
@@ -700,7 +702,8 @@ public open class CfnConnectorDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty):
-          ConnectorDefinitionVersionProperty = Wrapper(cdkObject)
+          ConnectorDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty

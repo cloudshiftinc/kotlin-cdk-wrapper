@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicediscovery
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -210,7 +211,8 @@ public interface IpInstanceBaseProps : BaseInstanceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.IpInstanceBaseProps):
-        IpInstanceBaseProps = Wrapper(cdkObject)
+        IpInstanceBaseProps = CdkObjectWrappers.wrap(cdkObject) as? IpInstanceBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IpInstanceBaseProps):
         software.amazon.awscdk.services.servicediscovery.IpInstanceBaseProps = (wrapped as

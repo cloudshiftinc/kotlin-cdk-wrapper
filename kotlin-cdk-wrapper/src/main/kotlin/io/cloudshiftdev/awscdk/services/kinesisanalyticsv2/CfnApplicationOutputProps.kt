@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.kinesisanalyticsv2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -176,7 +177,8 @@ public interface CfnApplicationOutputProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutputProps):
-        CfnApplicationOutputProps = Wrapper(cdkObject)
+        CfnApplicationOutputProps = CdkObjectWrappers.wrap(cdkObject) as? CfnApplicationOutputProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationOutputProps):
         software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutputProps = (wrapped as

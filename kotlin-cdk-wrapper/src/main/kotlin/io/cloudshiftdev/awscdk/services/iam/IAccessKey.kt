@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -80,7 +81,7 @@ public interface IAccessKey : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IAccessKey): IAccessKey =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IAccessKey ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAccessKey): software.amazon.awscdk.services.iam.IAccessKey =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.IAccessKey

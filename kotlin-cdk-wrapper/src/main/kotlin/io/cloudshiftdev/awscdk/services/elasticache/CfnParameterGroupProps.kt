@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -256,7 +257,8 @@ public interface CfnParameterGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnParameterGroupProps):
-        CfnParameterGroupProps = Wrapper(cdkObject)
+        CfnParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnParameterGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnParameterGroupProps):
         software.amazon.awscdk.services.elasticache.CfnParameterGroupProps = (wrapped as

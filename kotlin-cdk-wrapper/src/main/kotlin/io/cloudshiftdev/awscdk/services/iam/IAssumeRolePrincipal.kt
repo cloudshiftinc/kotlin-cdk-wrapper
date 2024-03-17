@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -116,7 +117,8 @@ public interface IAssumeRolePrincipal : IPrincipal {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IAssumeRolePrincipal):
-        IAssumeRolePrincipal = Wrapper(cdkObject)
+        IAssumeRolePrincipal = CdkObjectWrappers.wrap(cdkObject) as? IAssumeRolePrincipal ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAssumeRolePrincipal):
         software.amazon.awscdk.services.iam.IAssumeRolePrincipal = (wrapped as CdkObject).cdkObject

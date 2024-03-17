@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -156,7 +157,7 @@ public interface BootstrapRole {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.BootstrapRole):
-        BootstrapRole = Wrapper(cdkObject)
+        BootstrapRole = CdkObjectWrappers.wrap(cdkObject) as? BootstrapRole ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BootstrapRole):
         software.amazon.awscdk.cloudassembly.schema.BootstrapRole = (wrapped as CdkObject).cdkObject

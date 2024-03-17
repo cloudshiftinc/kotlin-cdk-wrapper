@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -175,7 +176,8 @@ public interface NetworkAclProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NetworkAclProps):
-        NetworkAclProps = Wrapper(cdkObject)
+        NetworkAclProps = CdkObjectWrappers.wrap(cdkObject) as? NetworkAclProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkAclProps):
         software.amazon.awscdk.services.ec2.NetworkAclProps = (wrapped as CdkObject).cdkObject as

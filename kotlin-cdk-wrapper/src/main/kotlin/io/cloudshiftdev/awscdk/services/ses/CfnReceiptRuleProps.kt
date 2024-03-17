@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ses
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -220,7 +221,8 @@ public interface CfnReceiptRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleProps):
-        CfnReceiptRuleProps = Wrapper(cdkObject)
+        CfnReceiptRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReceiptRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReceiptRuleProps):
         software.amazon.awscdk.services.ses.CfnReceiptRuleProps = (wrapped as CdkObject).cdkObject

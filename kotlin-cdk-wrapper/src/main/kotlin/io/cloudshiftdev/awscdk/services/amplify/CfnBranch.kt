@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1059,7 +1060,8 @@ public open class CfnBranch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty):
-          BasicAuthConfigProperty = Wrapper(cdkObject)
+          BasicAuthConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BasicAuthConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BasicAuthConfigProperty):
           software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty = (wrapped as
@@ -1169,7 +1171,8 @@ public open class CfnBranch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty):
-          EnvironmentVariableProperty = Wrapper(cdkObject)
+          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentVariableProperty):
           software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty = (wrapped
@@ -1248,7 +1251,8 @@ public open class CfnBranch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty):
-          BackendProperty = Wrapper(cdkObject)
+          BackendProperty = CdkObjectWrappers.wrap(cdkObject) as? BackendProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BackendProperty):
           software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty = (wrapped as

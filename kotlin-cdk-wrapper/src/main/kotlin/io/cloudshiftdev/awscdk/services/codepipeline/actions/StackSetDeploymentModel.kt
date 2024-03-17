@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -74,7 +75,8 @@ public abstract class StackSetDeploymentModel internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel):
-        StackSetDeploymentModel = Wrapper(cdkObject)
+        StackSetDeploymentModel = CdkObjectWrappers.wrap(cdkObject) as? StackSetDeploymentModel ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSetDeploymentModel):
         software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.ec2.Port
@@ -338,7 +339,8 @@ public interface IApplicationListener : IListener, IConnectable {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener):
-        IApplicationListener = Wrapper(cdkObject)
+        IApplicationListener = CdkObjectWrappers.wrap(cdkObject) as? IApplicationListener ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IApplicationListener):
         software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener = (wrapped as

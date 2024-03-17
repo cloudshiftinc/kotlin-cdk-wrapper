@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -576,7 +577,8 @@ public interface CfnFeatureGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps):
-        CfnFeatureGroupProps = Wrapper(cdkObject)
+        CfnFeatureGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFeatureGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFeatureGroupProps):
         software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps = (wrapped as

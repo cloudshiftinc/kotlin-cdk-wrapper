@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -86,7 +87,8 @@ public interface IVirtualService : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.IVirtualService):
-        IVirtualService = Wrapper(cdkObject)
+        IVirtualService = CdkObjectWrappers.wrap(cdkObject) as? IVirtualService ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IVirtualService):
         software.amazon.awscdk.services.appmesh.IVirtualService = (wrapped as CdkObject).cdkObject

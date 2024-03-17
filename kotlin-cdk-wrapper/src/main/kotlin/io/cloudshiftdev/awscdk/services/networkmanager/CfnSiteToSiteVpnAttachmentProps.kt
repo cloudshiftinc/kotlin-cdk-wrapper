@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -231,7 +232,8 @@ public interface CfnSiteToSiteVpnAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachmentProps):
-        CfnSiteToSiteVpnAttachmentProps = Wrapper(cdkObject)
+        CfnSiteToSiteVpnAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSiteToSiteVpnAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSiteToSiteVpnAttachmentProps):
         software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachmentProps = (wrapped as

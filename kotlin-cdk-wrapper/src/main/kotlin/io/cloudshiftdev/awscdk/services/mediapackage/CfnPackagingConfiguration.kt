@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -790,7 +791,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafEncryptionProperty):
-          CmafEncryptionProperty = Wrapper(cdkObject)
+          CmafEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? CmafEncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CmafEncryptionProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafEncryptionProperty
@@ -1282,7 +1284,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashPackageProperty):
-          DashPackageProperty = Wrapper(cdkObject)
+          DashPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? DashPackageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DashPackageProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashPackageProperty
@@ -1400,7 +1403,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashEncryptionProperty):
-          DashEncryptionProperty = Wrapper(cdkObject)
+          DashEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? DashEncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DashEncryptionProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashEncryptionProperty
@@ -1562,7 +1566,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.StreamSelectionProperty):
-          StreamSelectionProperty = Wrapper(cdkObject)
+          StreamSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as? StreamSelectionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamSelectionProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.StreamSelectionProperty
@@ -1779,7 +1784,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssPackageProperty):
-          MssPackageProperty = Wrapper(cdkObject)
+          MssPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? MssPackageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MssPackageProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssPackageProperty
@@ -1968,7 +1974,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsEncryptionProperty):
-          HlsEncryptionProperty = Wrapper(cdkObject)
+          HlsEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsEncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsEncryptionProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsEncryptionProperty
@@ -2342,7 +2349,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsManifestProperty):
-          HlsManifestProperty = Wrapper(cdkObject)
+          HlsManifestProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsManifestProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsManifestProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsManifestProperty
@@ -2656,7 +2664,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashManifestProperty):
-          DashManifestProperty = Wrapper(cdkObject)
+          DashManifestProperty = CdkObjectWrappers.wrap(cdkObject) as? DashManifestProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DashManifestProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashManifestProperty
@@ -2919,7 +2928,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.SpekeKeyProviderProperty):
-          SpekeKeyProviderProperty = Wrapper(cdkObject)
+          SpekeKeyProviderProperty = CdkObjectWrappers.wrap(cdkObject) as? SpekeKeyProviderProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpekeKeyProviderProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.SpekeKeyProviderProperty
@@ -3180,7 +3190,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.EncryptionContractConfigurationProperty):
-          EncryptionContractConfigurationProperty = Wrapper(cdkObject)
+          EncryptionContractConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionContractConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionContractConfigurationProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.EncryptionContractConfigurationProperty
@@ -3500,7 +3511,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsPackageProperty):
-          HlsPackageProperty = Wrapper(cdkObject)
+          HlsPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsPackageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsPackageProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsPackageProperty
@@ -3650,7 +3662,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssManifestProperty):
-          MssManifestProperty = Wrapper(cdkObject)
+          MssManifestProperty = CdkObjectWrappers.wrap(cdkObject) as? MssManifestProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MssManifestProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssManifestProperty
@@ -3768,7 +3781,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssEncryptionProperty):
-          MssEncryptionProperty = Wrapper(cdkObject)
+          MssEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? MssEncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MssEncryptionProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssEncryptionProperty
@@ -4059,7 +4073,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafPackageProperty):
-          CmafPackageProperty = Wrapper(cdkObject)
+          CmafPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? CmafPackageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CmafPackageProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafPackageProperty

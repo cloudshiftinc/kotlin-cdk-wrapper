@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.datasync
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -361,7 +362,8 @@ public interface CfnLocationFSxWindowsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps):
-        CfnLocationFSxWindowsProps = Wrapper(cdkObject)
+        CfnLocationFSxWindowsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLocationFSxWindowsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxWindowsProps):
         software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps = (wrapped as

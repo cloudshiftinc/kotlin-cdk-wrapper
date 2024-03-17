@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -25,7 +26,7 @@ public interface IFilterPattern {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.IFilterPattern):
-        IFilterPattern = Wrapper(cdkObject)
+        IFilterPattern = CdkObjectWrappers.wrap(cdkObject) as? IFilterPattern ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFilterPattern):
         software.amazon.awscdk.services.logs.IFilterPattern = (wrapped as CdkObject).cdkObject as

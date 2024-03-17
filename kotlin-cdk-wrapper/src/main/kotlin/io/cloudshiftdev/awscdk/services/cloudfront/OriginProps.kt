@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -238,7 +239,7 @@ public interface OriginProps : OriginOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginProps):
-        OriginProps = Wrapper(cdkObject)
+        OriginProps = CdkObjectWrappers.wrap(cdkObject) as? OriginProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginProps):
         software.amazon.awscdk.services.cloudfront.OriginProps = (wrapped as CdkObject).cdkObject as

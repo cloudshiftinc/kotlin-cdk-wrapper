@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticsearch
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -1270,7 +1271,7 @@ public interface DomainProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.DomainProps):
-        DomainProps = Wrapper(cdkObject)
+        DomainProps = CdkObjectWrappers.wrap(cdkObject) as? DomainProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DomainProps):
         software.amazon.awscdk.services.elasticsearch.DomainProps = (wrapped as CdkObject).cdkObject

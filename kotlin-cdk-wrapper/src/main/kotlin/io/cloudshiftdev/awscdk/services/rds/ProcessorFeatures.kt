@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -99,7 +100,8 @@ public interface ProcessorFeatures {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ProcessorFeatures):
-        ProcessorFeatures = Wrapper(cdkObject)
+        ProcessorFeatures = CdkObjectWrappers.wrap(cdkObject) as? ProcessorFeatures ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProcessorFeatures):
         software.amazon.awscdk.services.rds.ProcessorFeatures = (wrapped as CdkObject).cdkObject as

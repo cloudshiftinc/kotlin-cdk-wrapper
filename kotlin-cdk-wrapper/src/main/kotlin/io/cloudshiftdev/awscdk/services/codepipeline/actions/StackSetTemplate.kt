@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
 
 /**
@@ -53,7 +54,8 @@ public abstract class StackSetTemplate internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate):
-        StackSetTemplate = Wrapper(cdkObject)
+        StackSetTemplate = CdkObjectWrappers.wrap(cdkObject) as? StackSetTemplate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSetTemplate):
         software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate = (wrapped as

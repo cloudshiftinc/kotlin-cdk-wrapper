@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.memorydb
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -174,7 +175,7 @@ public interface CfnACLProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.memorydb.CfnACLProps): CfnACLProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnACLProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnACLProps): software.amazon.awscdk.services.memorydb.CfnACLProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.memorydb.CfnACLProps

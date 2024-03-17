@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -395,7 +396,8 @@ public open class CfnRouteResponse internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.ParameterConstraintsProperty):
-          ParameterConstraintsProperty = Wrapper(cdkObject)
+          ParameterConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParameterConstraintsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterConstraintsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.ParameterConstraintsProperty

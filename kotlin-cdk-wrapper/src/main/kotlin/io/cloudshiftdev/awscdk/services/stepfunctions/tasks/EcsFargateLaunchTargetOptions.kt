@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.FargatePlatformVersion
 import kotlin.Unit
 
@@ -88,7 +89,8 @@ public interface EcsFargateLaunchTargetOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTargetOptions):
-        EcsFargateLaunchTargetOptions = Wrapper(cdkObject)
+        EcsFargateLaunchTargetOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        EcsFargateLaunchTargetOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsFargateLaunchTargetOptions):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTargetOptions = (wrapped

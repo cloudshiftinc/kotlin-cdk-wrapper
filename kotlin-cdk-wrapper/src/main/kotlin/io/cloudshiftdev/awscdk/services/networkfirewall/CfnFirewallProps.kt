@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -493,7 +494,8 @@ public interface CfnFirewallProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallProps):
-        CfnFirewallProps = Wrapper(cdkObject)
+        CfnFirewallProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFirewallProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallProps):
         software.amazon.awscdk.services.networkfirewall.CfnFirewallProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.glue
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -752,7 +753,8 @@ public interface CfnDevEndpointProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDevEndpointProps):
-        CfnDevEndpointProps = Wrapper(cdkObject)
+        CfnDevEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDevEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDevEndpointProps):
         software.amazon.awscdk.services.glue.CfnDevEndpointProps = (wrapped as CdkObject).cdkObject

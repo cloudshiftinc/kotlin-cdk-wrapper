@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.efs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -186,7 +187,8 @@ public interface CfnMountTargetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnMountTargetProps):
-        CfnMountTargetProps = Wrapper(cdkObject)
+        CfnMountTargetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMountTargetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMountTargetProps):
         software.amazon.awscdk.services.efs.CfnMountTargetProps = (wrapped as CdkObject).cdkObject

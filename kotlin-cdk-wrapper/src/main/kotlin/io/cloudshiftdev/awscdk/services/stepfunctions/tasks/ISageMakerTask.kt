@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 
@@ -23,7 +24,7 @@ public interface ISageMakerTask : IGrantable {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ISageMakerTask):
-        ISageMakerTask = Wrapper(cdkObject)
+        ISageMakerTask = CdkObjectWrappers.wrap(cdkObject) as? ISageMakerTask ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISageMakerTask):
         software.amazon.awscdk.services.stepfunctions.tasks.ISageMakerTask = (wrapped as

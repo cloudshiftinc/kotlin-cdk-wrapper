@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.kinesis
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
@@ -102,7 +103,8 @@ public interface StreamAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.StreamAttributes):
-        StreamAttributes = Wrapper(cdkObject)
+        StreamAttributes = CdkObjectWrappers.wrap(cdkObject) as? StreamAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamAttributes):
         software.amazon.awscdk.services.kinesis.StreamAttributes = (wrapped as CdkObject).cdkObject

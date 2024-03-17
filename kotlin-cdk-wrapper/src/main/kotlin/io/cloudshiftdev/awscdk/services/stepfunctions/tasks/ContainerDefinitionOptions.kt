@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import kotlin.String
 import kotlin.Unit
@@ -252,7 +253,8 @@ public interface ContainerDefinitionOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionOptions):
-        ContainerDefinitionOptions = Wrapper(cdkObject)
+        ContainerDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ContainerDefinitionOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerDefinitionOptions):
         software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionOptions = (wrapped as

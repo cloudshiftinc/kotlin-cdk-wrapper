@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.backup
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.Schedule
 import kotlin.Boolean
 import kotlin.String
@@ -396,7 +397,8 @@ public interface BackupPlanRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.BackupPlanRuleProps):
-        BackupPlanRuleProps = Wrapper(cdkObject)
+        BackupPlanRuleProps = CdkObjectWrappers.wrap(cdkObject) as? BackupPlanRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BackupPlanRuleProps):
         software.amazon.awscdk.services.backup.BackupPlanRuleProps = (wrapped as

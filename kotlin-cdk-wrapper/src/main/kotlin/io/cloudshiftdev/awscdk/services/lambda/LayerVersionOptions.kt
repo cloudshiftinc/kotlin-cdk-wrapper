@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -162,7 +163,8 @@ public interface LayerVersionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.LayerVersionOptions):
-        LayerVersionOptions = Wrapper(cdkObject)
+        LayerVersionOptions = CdkObjectWrappers.wrap(cdkObject) as? LayerVersionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LayerVersionOptions):
         software.amazon.awscdk.services.lambda.LayerVersionOptions = (wrapped as

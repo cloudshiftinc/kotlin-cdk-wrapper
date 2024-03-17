@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
@@ -378,7 +379,8 @@ public interface CfnSamplingRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRuleProps):
-        CfnSamplingRuleProps = Wrapper(cdkObject)
+        CfnSamplingRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSamplingRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSamplingRuleProps):
         software.amazon.awscdk.services.xray.CfnSamplingRuleProps = (wrapped as CdkObject).cdkObject

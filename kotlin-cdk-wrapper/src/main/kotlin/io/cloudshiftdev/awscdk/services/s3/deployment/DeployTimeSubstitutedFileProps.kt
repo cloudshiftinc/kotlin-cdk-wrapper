@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3.deployment
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
@@ -201,7 +202,8 @@ public interface DeployTimeSubstitutedFileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFileProps):
-        DeployTimeSubstitutedFileProps = Wrapper(cdkObject)
+        DeployTimeSubstitutedFileProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DeployTimeSubstitutedFileProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeployTimeSubstitutedFileProps):
         software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFileProps = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cognito.IUserPool
 import kotlin.String
 import kotlin.Unit
@@ -204,7 +205,8 @@ public interface CognitoUserPoolsAuthorizerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizerProps):
-        CognitoUserPoolsAuthorizerProps = Wrapper(cdkObject)
+        CognitoUserPoolsAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CognitoUserPoolsAuthorizerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CognitoUserPoolsAuthorizerProps):
         software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizerProps = (wrapped as

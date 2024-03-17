@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Node
@@ -93,7 +94,7 @@ public interface IFunctionUrl : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.IFunctionUrl): IFunctionUrl
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IFunctionUrl ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFunctionUrl): software.amazon.awscdk.services.lambda.IFunctionUrl
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.IFunctionUrl

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -427,7 +428,8 @@ public open class CfnServerlessCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty = (wrapped as
@@ -538,7 +540,7 @@ public open class CfnServerlessCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty):
-          SaslProperty = Wrapper(cdkObject)
+          SaslProperty = CdkObjectWrappers.wrap(cdkObject) as? SaslProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SaslProperty):
           software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty = (wrapped as
@@ -629,7 +631,7 @@ public open class CfnServerlessCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty):
-          IamProperty = Wrapper(cdkObject)
+          IamProperty = CdkObjectWrappers.wrap(cdkObject) as? IamProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IamProperty):
           software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty = (wrapped as
@@ -768,7 +770,8 @@ public open class CfnServerlessCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty):
-          ClientAuthenticationProperty = Wrapper(cdkObject)
+          ClientAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientAuthenticationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClientAuthenticationProperty):
           software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty =

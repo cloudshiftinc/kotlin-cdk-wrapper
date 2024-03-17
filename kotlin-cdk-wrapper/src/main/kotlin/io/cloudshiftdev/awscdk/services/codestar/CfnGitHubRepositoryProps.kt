@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codestar
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -367,7 +368,8 @@ public interface CfnGitHubRepositoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepositoryProps):
-        CfnGitHubRepositoryProps = Wrapper(cdkObject)
+        CfnGitHubRepositoryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGitHubRepositoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGitHubRepositoryProps):
         software.amazon.awscdk.services.codestar.CfnGitHubRepositoryProps = (wrapped as

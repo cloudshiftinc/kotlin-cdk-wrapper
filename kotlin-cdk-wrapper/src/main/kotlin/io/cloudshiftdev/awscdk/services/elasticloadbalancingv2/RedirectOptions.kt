@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -271,7 +272,8 @@ public interface RedirectOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions):
-        RedirectOptions = Wrapper(cdkObject)
+        RedirectOptions = CdkObjectWrappers.wrap(cdkObject) as? RedirectOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RedirectOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions = (wrapped as

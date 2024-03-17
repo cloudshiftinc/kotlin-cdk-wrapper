@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -179,7 +180,8 @@ public interface AutoscaledCapacityOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.AutoscaledCapacityOptions):
-        AutoscaledCapacityOptions = Wrapper(cdkObject)
+        AutoscaledCapacityOptions = CdkObjectWrappers.wrap(cdkObject) as? AutoscaledCapacityOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoscaledCapacityOptions):
         software.amazon.awscdk.services.dynamodb.AutoscaledCapacityOptions = (wrapped as

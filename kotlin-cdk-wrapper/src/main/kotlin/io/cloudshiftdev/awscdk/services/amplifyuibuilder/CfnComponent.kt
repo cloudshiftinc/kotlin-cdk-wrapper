@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -981,7 +982,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty):
-          MutationActionSetStateParameterProperty = Wrapper(cdkObject)
+          MutationActionSetStateParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MutationActionSetStateParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MutationActionSetStateParameterProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty
@@ -1616,7 +1618,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty):
-          ComponentChildProperty = Wrapper(cdkObject)
+          ComponentChildProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentChildProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentChildProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty =
@@ -1725,7 +1728,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty):
-          FormBindingElementProperty = Wrapper(cdkObject)
+          FormBindingElementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FormBindingElementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FormBindingElementProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty =
@@ -2201,7 +2205,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty):
-          ComponentEventProperty = Wrapper(cdkObject)
+          ComponentEventProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentEventProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentEventProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty =
@@ -2865,7 +2870,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty):
-          ComponentPropertyProperty = Wrapper(cdkObject)
+          ComponentPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentPropertyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentPropertyProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty =
@@ -3173,7 +3179,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty):
-          ComponentBindingPropertiesValuePropertiesProperty = Wrapper(cdkObject)
+          ComponentBindingPropertiesValuePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentBindingPropertiesValuePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentBindingPropertiesValuePropertiesProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty
@@ -3282,7 +3289,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty):
-          SortPropertyProperty = Wrapper(cdkObject)
+          SortPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? SortPropertyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SortPropertyProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty =
@@ -3652,7 +3660,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty):
-          ComponentConditionPropertyProperty = Wrapper(cdkObject)
+          ComponentConditionPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentConditionPropertyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentConditionPropertyProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty
@@ -3843,7 +3852,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty):
-          ComponentBindingPropertiesValueProperty = Wrapper(cdkObject)
+          ComponentBindingPropertiesValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentBindingPropertiesValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentBindingPropertiesValueProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty
@@ -4106,7 +4116,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty):
-          PredicateProperty = Wrapper(cdkObject)
+          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as? PredicateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PredicateProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty = (wrapped
@@ -4222,7 +4233,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty):
-          ComponentPropertyBindingPropertiesProperty = Wrapper(cdkObject)
+          ComponentPropertyBindingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentPropertyBindingPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentPropertyBindingPropertiesProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty
@@ -4356,7 +4368,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty):
-          ComponentVariantProperty = Wrapper(cdkObject)
+          ComponentVariantProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentVariantProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentVariantProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty =
@@ -5212,7 +5225,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty):
-          ActionParametersProperty = Wrapper(cdkObject)
+          ActionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionParametersProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionParametersProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty =
@@ -5472,7 +5486,8 @@ public open class CfnComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty):
-          ComponentDataConfigurationProperty = Wrapper(cdkObject)
+          ComponentDataConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentDataConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentDataConfigurationProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty

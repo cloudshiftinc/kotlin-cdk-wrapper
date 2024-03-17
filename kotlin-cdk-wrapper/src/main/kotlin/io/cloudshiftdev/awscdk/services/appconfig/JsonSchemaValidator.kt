@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -46,7 +47,8 @@ public abstract class JsonSchemaValidator internal constructor(
         software.amazon.awscdk.services.appconfig.JsonSchemaValidator.fromInline(code).let(JsonSchemaValidator::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.JsonSchemaValidator):
-        JsonSchemaValidator = Wrapper(cdkObject)
+        JsonSchemaValidator = CdkObjectWrappers.wrap(cdkObject) as? JsonSchemaValidator ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JsonSchemaValidator):
         software.amazon.awscdk.services.appconfig.JsonSchemaValidator = (wrapped as

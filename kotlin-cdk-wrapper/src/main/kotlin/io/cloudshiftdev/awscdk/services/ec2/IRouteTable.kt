@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -25,7 +26,7 @@ public interface IRouteTable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IRouteTable): IRouteTable =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IRouteTable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRouteTable): software.amazon.awscdk.services.ec2.IRouteTable =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.IRouteTable

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
@@ -111,7 +112,7 @@ public interface IProduct : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.IProduct): IProduct
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IProduct ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IProduct): software.amazon.awscdk.services.servicecatalog.IProduct
         = (wrapped as CdkObject).cdkObject as

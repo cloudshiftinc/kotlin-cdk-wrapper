@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.redshift
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -454,7 +455,8 @@ public interface CfnScheduledActionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledActionProps):
-        CfnScheduledActionProps = Wrapper(cdkObject)
+        CfnScheduledActionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnScheduledActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduledActionProps):
         software.amazon.awscdk.services.redshift.CfnScheduledActionProps = (wrapped as

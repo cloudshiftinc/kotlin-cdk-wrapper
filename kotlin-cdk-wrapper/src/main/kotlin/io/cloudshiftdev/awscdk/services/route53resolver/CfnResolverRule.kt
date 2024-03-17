@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -691,7 +692,8 @@ public open class CfnResolverRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRule.TargetAddressProperty):
-          TargetAddressProperty = Wrapper(cdkObject)
+          TargetAddressProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetAddressProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetAddressProperty):
           software.amazon.awscdk.services.route53resolver.CfnResolverRule.TargetAddressProperty =

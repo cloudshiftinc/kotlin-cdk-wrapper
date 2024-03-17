@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -183,7 +184,8 @@ public interface AmiContextQuery {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AmiContextQuery):
-        AmiContextQuery = Wrapper(cdkObject)
+        AmiContextQuery = CdkObjectWrappers.wrap(cdkObject) as? AmiContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AmiContextQuery):
         software.amazon.awscdk.cloudassembly.schema.AmiContextQuery = (wrapped as

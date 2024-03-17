@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -139,7 +140,8 @@ public interface CfnTrustStoreRevocationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocationProps):
-        CfnTrustStoreRevocationProps = Wrapper(cdkObject)
+        CfnTrustStoreRevocationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrustStoreRevocationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrustStoreRevocationProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocationProps =

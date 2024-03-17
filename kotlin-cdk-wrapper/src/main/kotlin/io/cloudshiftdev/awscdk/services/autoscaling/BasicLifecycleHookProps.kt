@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -260,7 +261,8 @@ public interface BasicLifecycleHookProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps):
-        BasicLifecycleHookProps = Wrapper(cdkObject)
+        BasicLifecycleHookProps = CdkObjectWrappers.wrap(cdkObject) as? BasicLifecycleHookProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BasicLifecycleHookProps):
         software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps = (wrapped as

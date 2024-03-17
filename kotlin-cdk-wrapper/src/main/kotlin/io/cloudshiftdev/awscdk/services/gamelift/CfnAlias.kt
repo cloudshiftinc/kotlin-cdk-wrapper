@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -424,7 +425,8 @@ public open class CfnAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty):
-          RoutingStrategyProperty = Wrapper(cdkObject)
+          RoutingStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as? RoutingStrategyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoutingStrategyProperty):
           software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty = (wrapped as

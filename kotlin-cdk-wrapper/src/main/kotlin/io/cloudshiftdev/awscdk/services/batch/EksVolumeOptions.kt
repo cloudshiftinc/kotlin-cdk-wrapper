@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -140,7 +141,8 @@ public interface EksVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EksVolumeOptions):
-        EksVolumeOptions = Wrapper(cdkObject)
+        EksVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as? EksVolumeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksVolumeOptions):
         software.amazon.awscdk.services.batch.EksVolumeOptions = (wrapped as CdkObject).cdkObject as

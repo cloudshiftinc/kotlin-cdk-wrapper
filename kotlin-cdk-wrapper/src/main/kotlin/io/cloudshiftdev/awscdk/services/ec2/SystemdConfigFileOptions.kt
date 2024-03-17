@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -244,7 +245,8 @@ public interface SystemdConfigFileOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SystemdConfigFileOptions):
-        SystemdConfigFileOptions = Wrapper(cdkObject)
+        SystemdConfigFileOptions = CdkObjectWrappers.wrap(cdkObject) as? SystemdConfigFileOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SystemdConfigFileOptions):
         software.amazon.awscdk.services.ec2.SystemdConfigFileOptions = (wrapped as

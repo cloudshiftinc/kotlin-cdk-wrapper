@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3.deployment
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.Unit
 
@@ -51,7 +52,8 @@ public interface UserDefinedObjectMetadata {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata):
-        UserDefinedObjectMetadata = Wrapper(cdkObject)
+        UserDefinedObjectMetadata = CdkObjectWrappers.wrap(cdkObject) as? UserDefinedObjectMetadata
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserDefinedObjectMetadata):
         software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata = (wrapped as

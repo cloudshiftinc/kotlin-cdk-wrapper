@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 import kotlin.collections.List
@@ -119,7 +120,7 @@ public interface IAccelerator : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.IAccelerator):
-        IAccelerator = Wrapper(cdkObject)
+        IAccelerator = CdkObjectWrappers.wrap(cdkObject) as? IAccelerator ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAccelerator):
         software.amazon.awscdk.services.globalaccelerator.IAccelerator = (wrapped as

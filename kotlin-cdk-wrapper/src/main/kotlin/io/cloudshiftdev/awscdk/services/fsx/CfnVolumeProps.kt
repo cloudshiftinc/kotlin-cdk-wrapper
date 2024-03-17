@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -381,7 +382,7 @@ public interface CfnVolumeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolumeProps): CfnVolumeProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnVolumeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVolumeProps): software.amazon.awscdk.services.fsx.CfnVolumeProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.fsx.CfnVolumeProps

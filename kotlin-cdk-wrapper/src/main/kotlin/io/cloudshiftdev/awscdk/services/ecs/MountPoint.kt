@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -118,7 +119,7 @@ public interface MountPoint : BaseMountPoint {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.MountPoint): MountPoint =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? MountPoint ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MountPoint): software.amazon.awscdk.services.ecs.MountPoint =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.MountPoint

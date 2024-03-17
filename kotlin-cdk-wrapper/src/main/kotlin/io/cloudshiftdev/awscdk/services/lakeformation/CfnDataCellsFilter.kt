@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -629,7 +630,8 @@ public open class CfnDataCellsFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.ColumnWildcardProperty):
-          ColumnWildcardProperty = Wrapper(cdkObject)
+          ColumnWildcardProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnWildcardProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnWildcardProperty):
           software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.ColumnWildcardProperty =
@@ -739,7 +741,8 @@ public open class CfnDataCellsFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.RowFilterProperty):
-          RowFilterProperty = Wrapper(cdkObject)
+          RowFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? RowFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RowFilterProperty):
           software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.RowFilterProperty =

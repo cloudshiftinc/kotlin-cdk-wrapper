@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -545,7 +546,8 @@ public open class CfnListener internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty):
-          WeightedTargetGroupProperty = Wrapper(cdkObject)
+          WeightedTargetGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WeightedTargetGroupProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WeightedTargetGroupProperty):
           software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty =
@@ -626,7 +628,8 @@ public open class CfnListener internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.FixedResponseProperty):
-          FixedResponseProperty = Wrapper(cdkObject)
+          FixedResponseProperty = CdkObjectWrappers.wrap(cdkObject) as? FixedResponseProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FixedResponseProperty):
           software.amazon.awscdk.services.vpclattice.CfnListener.FixedResponseProperty = (wrapped as
@@ -801,7 +804,8 @@ public open class CfnListener internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty):
-          ForwardProperty = Wrapper(cdkObject)
+          ForwardProperty = CdkObjectWrappers.wrap(cdkObject) as? ForwardProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ForwardProperty):
           software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty = (wrapped as
@@ -983,7 +987,8 @@ public open class CfnListener internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty):
-          DefaultActionProperty = Wrapper(cdkObject)
+          DefaultActionProperty = CdkObjectWrappers.wrap(cdkObject) as? DefaultActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultActionProperty):
           software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty = (wrapped as

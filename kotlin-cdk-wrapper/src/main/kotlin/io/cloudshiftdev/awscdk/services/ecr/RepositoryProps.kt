@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecr
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -423,7 +424,8 @@ public interface RepositoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.RepositoryProps):
-        RepositoryProps = Wrapper(cdkObject)
+        RepositoryProps = CdkObjectWrappers.wrap(cdkObject) as? RepositoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryProps):
         software.amazon.awscdk.services.ecr.RepositoryProps = (wrapped as CdkObject).cdkObject as

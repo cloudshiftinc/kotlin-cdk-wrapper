@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -970,7 +971,8 @@ public interface CfnTargetGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroupProps):
-        CfnTargetGroupProps = Wrapper(cdkObject)
+        CfnTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTargetGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTargetGroupProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroupProps = (wrapped as

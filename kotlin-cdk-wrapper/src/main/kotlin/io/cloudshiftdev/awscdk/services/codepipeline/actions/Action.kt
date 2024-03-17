@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Low-level class for generic CodePipeline Actions.
@@ -19,7 +20,7 @@ public abstract class Action internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.Action):
-        Action = Wrapper(cdkObject)
+        Action = CdkObjectWrappers.wrap(cdkObject) as? Action ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Action):
         software.amazon.awscdk.services.codepipeline.actions.Action = (wrapped as

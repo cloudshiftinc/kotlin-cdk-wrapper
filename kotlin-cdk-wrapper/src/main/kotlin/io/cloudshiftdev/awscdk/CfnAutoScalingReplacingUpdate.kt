@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -88,7 +89,8 @@ public interface CfnAutoScalingReplacingUpdate {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnAutoScalingReplacingUpdate):
-        CfnAutoScalingReplacingUpdate = Wrapper(cdkObject)
+        CfnAutoScalingReplacingUpdate = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAutoScalingReplacingUpdate ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutoScalingReplacingUpdate):
         software.amazon.awscdk.CfnAutoScalingReplacingUpdate = (wrapped as CdkObject).cdkObject as

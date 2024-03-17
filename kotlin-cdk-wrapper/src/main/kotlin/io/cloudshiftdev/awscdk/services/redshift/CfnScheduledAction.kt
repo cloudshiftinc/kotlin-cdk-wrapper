@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -757,7 +758,8 @@ public open class CfnScheduledAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty):
-          ResizeClusterMessageProperty = Wrapper(cdkObject)
+          ResizeClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResizeClusterMessageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResizeClusterMessageProperty):
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty =
@@ -842,7 +844,8 @@ public open class CfnScheduledAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty):
-          ResumeClusterMessageProperty = Wrapper(cdkObject)
+          ResumeClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResumeClusterMessageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResumeClusterMessageProperty):
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty =
@@ -926,7 +929,8 @@ public open class CfnScheduledAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty):
-          PauseClusterMessageProperty = Wrapper(cdkObject)
+          PauseClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PauseClusterMessageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PauseClusterMessageProperty):
           software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty =
@@ -1155,7 +1159,8 @@ public open class CfnScheduledAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty):
-          ScheduledActionTypeProperty = Wrapper(cdkObject)
+          ScheduledActionTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduledActionTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduledActionTypeProperty):
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty =

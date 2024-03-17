@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -95,7 +96,8 @@ public interface FunctionAssociation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation):
-        FunctionAssociation = Wrapper(cdkObject)
+        FunctionAssociation = CdkObjectWrappers.wrap(cdkObject) as? FunctionAssociation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionAssociation):
         software.amazon.awscdk.services.cloudfront.FunctionAssociation = (wrapped as

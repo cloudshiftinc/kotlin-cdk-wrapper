@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import kotlin.String
@@ -1620,7 +1621,8 @@ public interface IApplicationLoadBalancerMetrics {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancerMetrics):
-        IApplicationLoadBalancerMetrics = Wrapper(cdkObject)
+        IApplicationLoadBalancerMetrics = CdkObjectWrappers.wrap(cdkObject) as?
+        IApplicationLoadBalancerMetrics ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IApplicationLoadBalancerMetrics):
         software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancerMetrics =

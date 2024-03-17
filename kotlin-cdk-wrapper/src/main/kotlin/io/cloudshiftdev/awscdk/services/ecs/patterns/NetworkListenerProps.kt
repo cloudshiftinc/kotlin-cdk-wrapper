@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -99,7 +100,8 @@ public interface NetworkListenerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps):
-        NetworkListenerProps = Wrapper(cdkObject)
+        NetworkListenerProps = CdkObjectWrappers.wrap(cdkObject) as? NetworkListenerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkListenerProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -247,7 +248,7 @@ public interface VersionProps : VersionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.VersionProps): VersionProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? VersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VersionProps): software.amazon.awscdk.services.lambda.VersionProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.VersionProps

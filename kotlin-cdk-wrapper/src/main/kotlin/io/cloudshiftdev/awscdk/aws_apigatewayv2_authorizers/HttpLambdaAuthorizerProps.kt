@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.aws_apigatewayv2_authorizers
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -219,7 +220,8 @@ public interface HttpLambdaAuthorizerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizerProps):
-        HttpLambdaAuthorizerProps = Wrapper(cdkObject)
+        HttpLambdaAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as? HttpLambdaAuthorizerProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpLambdaAuthorizerProps):
         software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizerProps = (wrapped as

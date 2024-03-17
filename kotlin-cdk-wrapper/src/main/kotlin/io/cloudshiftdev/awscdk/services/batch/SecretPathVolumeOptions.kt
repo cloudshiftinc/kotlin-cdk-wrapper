@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -183,7 +184,8 @@ public interface SecretPathVolumeOptions : EksVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.SecretPathVolumeOptions):
-        SecretPathVolumeOptions = Wrapper(cdkObject)
+        SecretPathVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as? SecretPathVolumeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretPathVolumeOptions):
         software.amazon.awscdk.services.batch.SecretPathVolumeOptions = (wrapped as

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.ec2.Connections
@@ -1149,7 +1150,8 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.IDatabaseCluster):
-        IDatabaseCluster = Wrapper(cdkObject)
+        IDatabaseCluster = CdkObjectWrappers.wrap(cdkObject) as? IDatabaseCluster ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IDatabaseCluster):
         software.amazon.awscdk.services.rds.IDatabaseCluster = (wrapped as CdkObject).cdkObject as

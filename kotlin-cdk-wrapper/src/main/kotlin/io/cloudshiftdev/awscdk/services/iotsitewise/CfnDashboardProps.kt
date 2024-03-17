@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iotsitewise
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -233,7 +234,8 @@ public interface CfnDashboardProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnDashboardProps):
-        CfnDashboardProps = Wrapper(cdkObject)
+        CfnDashboardProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDashboardProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDashboardProps):
         software.amazon.awscdk.services.iotsitewise.CfnDashboardProps = (wrapped as

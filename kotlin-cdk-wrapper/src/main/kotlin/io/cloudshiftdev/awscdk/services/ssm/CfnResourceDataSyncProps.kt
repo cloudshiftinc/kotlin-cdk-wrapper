@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ssm
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -396,7 +397,8 @@ public interface CfnResourceDataSyncProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps):
-        CfnResourceDataSyncProps = Wrapper(cdkObject)
+        CfnResourceDataSyncProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceDataSyncProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceDataSyncProps):
         software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps = (wrapped as

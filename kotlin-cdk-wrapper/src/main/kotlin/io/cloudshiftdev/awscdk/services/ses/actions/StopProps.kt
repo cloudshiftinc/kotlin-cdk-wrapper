@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.Unit
 
@@ -70,7 +71,7 @@ public interface StopProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.StopProps): StopProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? StopProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StopProps): software.amazon.awscdk.services.ses.actions.StopProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.actions.StopProps

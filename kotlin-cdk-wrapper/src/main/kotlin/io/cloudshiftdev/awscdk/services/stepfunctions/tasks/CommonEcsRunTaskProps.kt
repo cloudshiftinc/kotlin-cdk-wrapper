@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.ecs.TaskDefinition
 import io.cloudshiftdev.awscdk.services.stepfunctions.ServiceIntegrationPattern
@@ -225,7 +226,8 @@ public interface CommonEcsRunTaskProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CommonEcsRunTaskProps):
-        CommonEcsRunTaskProps = Wrapper(cdkObject)
+        CommonEcsRunTaskProps = CdkObjectWrappers.wrap(cdkObject) as? CommonEcsRunTaskProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonEcsRunTaskProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CommonEcsRunTaskProps = (wrapped as

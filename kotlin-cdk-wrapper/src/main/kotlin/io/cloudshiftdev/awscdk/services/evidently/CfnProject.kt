@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -692,7 +693,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty):
-          AppConfigResourceObjectProperty = Wrapper(cdkObject)
+          AppConfigResourceObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AppConfigResourceObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AppConfigResourceObjectProperty):
           software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty =
@@ -844,7 +846,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty):
-          DataDeliveryObjectProperty = Wrapper(cdkObject)
+          DataDeliveryObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataDeliveryObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataDeliveryObjectProperty):
           software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty = (wrapped
@@ -953,7 +956,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty):
-          S3DestinationProperty = Wrapper(cdkObject)
+          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DestinationProperty):
           software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -539,7 +540,8 @@ public interface CfnDBProxyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyProps):
-        CfnDBProxyProps = Wrapper(cdkObject)
+        CfnDBProxyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDBProxyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBProxyProps):
         software.amazon.awscdk.services.rds.CfnDBProxyProps = (wrapped as CdkObject).cdkObject as

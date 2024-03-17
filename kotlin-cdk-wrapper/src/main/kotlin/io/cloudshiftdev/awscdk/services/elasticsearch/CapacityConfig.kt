@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticsearch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
@@ -309,7 +310,7 @@ public interface CapacityConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CapacityConfig):
-        CapacityConfig = Wrapper(cdkObject)
+        CapacityConfig = CdkObjectWrappers.wrap(cdkObject) as? CapacityConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CapacityConfig):
         software.amazon.awscdk.services.elasticsearch.CapacityConfig = (wrapped as

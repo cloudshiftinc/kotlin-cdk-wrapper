@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -66,7 +67,8 @@ public interface IRequestValidator : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.IRequestValidator):
-        IRequestValidator = Wrapper(cdkObject)
+        IRequestValidator = CdkObjectWrappers.wrap(cdkObject) as? IRequestValidator ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IRequestValidator):
         software.amazon.awscdk.services.apigateway.IRequestValidator = (wrapped as

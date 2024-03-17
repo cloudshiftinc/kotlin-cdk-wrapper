@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -265,7 +266,8 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexPropsV2):
-        GlobalSecondaryIndexPropsV2 = Wrapper(cdkObject)
+        GlobalSecondaryIndexPropsV2 = CdkObjectWrappers.wrap(cdkObject) as?
+        GlobalSecondaryIndexPropsV2 ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GlobalSecondaryIndexPropsV2):
         software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexPropsV2 = (wrapped as

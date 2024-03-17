@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -154,7 +155,8 @@ public interface S3DownloadOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.S3DownloadOptions):
-        S3DownloadOptions = Wrapper(cdkObject)
+        S3DownloadOptions = CdkObjectWrappers.wrap(cdkObject) as? S3DownloadOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3DownloadOptions):
         software.amazon.awscdk.services.ec2.S3DownloadOptions = (wrapped as CdkObject).cdkObject as

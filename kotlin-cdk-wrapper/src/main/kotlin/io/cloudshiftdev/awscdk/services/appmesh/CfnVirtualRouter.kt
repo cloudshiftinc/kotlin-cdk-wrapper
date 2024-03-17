@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -525,7 +526,8 @@ public open class CfnVirtualRouter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty):
-          VirtualRouterSpecProperty = Wrapper(cdkObject)
+          VirtualRouterSpecProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualRouterSpecProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualRouterSpecProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
@@ -639,7 +641,8 @@ public open class CfnVirtualRouter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty):
-          PortMappingProperty = Wrapper(cdkObject)
+          PortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? PortMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortMappingProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty = (wrapped as
@@ -752,7 +755,8 @@ public open class CfnVirtualRouter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty):
-          VirtualRouterListenerProperty = Wrapper(cdkObject)
+          VirtualRouterListenerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualRouterListenerProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualRouterListenerProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty =

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -554,7 +555,8 @@ public open class CfnWorkteam internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty):
-          NotificationConfigurationProperty = Wrapper(cdkObject)
+          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationConfigurationProperty):
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty =
@@ -705,7 +707,8 @@ public open class CfnWorkteam internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty):
-          CognitoMemberDefinitionProperty = Wrapper(cdkObject)
+          CognitoMemberDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CognitoMemberDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CognitoMemberDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty =
@@ -799,7 +802,8 @@ public open class CfnWorkteam internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty):
-          OidcMemberDefinitionProperty = Wrapper(cdkObject)
+          OidcMemberDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OidcMemberDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OidcMemberDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty =
@@ -1012,7 +1016,8 @@ public open class CfnWorkteam internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty):
-          MemberDefinitionProperty = Wrapper(cdkObject)
+          MemberDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? MemberDefinitionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemberDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty = (wrapped

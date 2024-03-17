@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Node
@@ -120,7 +121,7 @@ public interface IParameter : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.IParameter): IParameter =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IParameter ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IParameter): software.amazon.awscdk.services.ssm.IParameter =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ssm.IParameter

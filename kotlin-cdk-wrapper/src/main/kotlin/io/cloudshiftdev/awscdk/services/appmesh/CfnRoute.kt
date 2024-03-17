@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -750,7 +751,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpPathMatchProperty):
-          HttpPathMatchProperty = Wrapper(cdkObject)
+          HttpPathMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpPathMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpPathMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HttpPathMatchProperty = (wrapped as
@@ -1247,7 +1249,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.RouteSpecProperty):
-          RouteSpecProperty = Wrapper(cdkObject)
+          RouteSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? RouteSpecProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RouteSpecProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.RouteSpecProperty = (wrapped as
@@ -1553,7 +1556,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRetryPolicyProperty):
-          GrpcRetryPolicyProperty = Wrapper(cdkObject)
+          GrpcRetryPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? GrpcRetryPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcRetryPolicyProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRetryPolicyProperty = (wrapped as
@@ -1669,7 +1673,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteActionProperty):
-          TcpRouteActionProperty = Wrapper(cdkObject)
+          TcpRouteActionProperty = CdkObjectWrappers.wrap(cdkObject) as? TcpRouteActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TcpRouteActionProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteActionProperty = (wrapped as
@@ -1751,7 +1756,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpQueryParameterMatchProperty):
-          HttpQueryParameterMatchProperty = Wrapper(cdkObject)
+          HttpQueryParameterMatchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpQueryParameterMatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpQueryParameterMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HttpQueryParameterMatchProperty =
@@ -1867,7 +1873,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteActionProperty):
-          GrpcRouteActionProperty = Wrapper(cdkObject)
+          GrpcRouteActionProperty = CdkObjectWrappers.wrap(cdkObject) as? GrpcRouteActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcRouteActionProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteActionProperty = (wrapped as
@@ -1947,7 +1954,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteMatchProperty):
-          TcpRouteMatchProperty = Wrapper(cdkObject)
+          TcpRouteMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? TcpRouteMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TcpRouteMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteMatchProperty = (wrapped as
@@ -2315,7 +2323,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteMatchProperty):
-          HttpRouteMatchProperty = Wrapper(cdkObject)
+          HttpRouteMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpRouteMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteMatchProperty = (wrapped as
@@ -2629,7 +2638,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteProperty):
-          GrpcRouteProperty = Wrapper(cdkObject)
+          GrpcRouteProperty = CdkObjectWrappers.wrap(cdkObject) as? GrpcRouteProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcRouteProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteProperty = (wrapped as
@@ -2744,7 +2754,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteActionProperty):
-          HttpRouteActionProperty = Wrapper(cdkObject)
+          HttpRouteActionProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpRouteActionProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteActionProperty = (wrapped as
@@ -2853,7 +2864,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.MatchRangeProperty):
-          MatchRangeProperty = Wrapper(cdkObject)
+          MatchRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? MatchRangeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MatchRangeProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.MatchRangeProperty = (wrapped as
@@ -3082,7 +3094,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteProperty):
-          TcpRouteProperty = Wrapper(cdkObject)
+          TcpRouteProperty = CdkObjectWrappers.wrap(cdkObject) as? TcpRouteProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TcpRouteProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteProperty = (wrapped as
@@ -3208,7 +3221,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.TcpTimeoutProperty):
-          TcpTimeoutProperty = Wrapper(cdkObject)
+          TcpTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as? TcpTimeoutProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TcpTimeoutProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.TcpTimeoutProperty = (wrapped as
@@ -3426,7 +3440,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcTimeoutProperty):
-          GrpcTimeoutProperty = Wrapper(cdkObject)
+          GrpcTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as? GrpcTimeoutProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcTimeoutProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.GrpcTimeoutProperty = (wrapped as
@@ -3617,7 +3632,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteHeaderProperty):
-          HttpRouteHeaderProperty = Wrapper(cdkObject)
+          HttpRouteHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteHeaderProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpRouteHeaderProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteHeaderProperty = (wrapped as
@@ -3838,7 +3854,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HeaderMatchMethodProperty):
-          HeaderMatchMethodProperty = Wrapper(cdkObject)
+          HeaderMatchMethodProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HeaderMatchMethodProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeaderMatchMethodProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HeaderMatchMethodProperty = (wrapped as
@@ -4106,7 +4123,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRetryPolicyProperty):
-          HttpRetryPolicyProperty = Wrapper(cdkObject)
+          HttpRetryPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpRetryPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpRetryPolicyProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HttpRetryPolicyProperty = (wrapped as
@@ -4330,7 +4348,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMetadataMatchMethodProperty):
-          GrpcRouteMetadataMatchMethodProperty = Wrapper(cdkObject)
+          GrpcRouteMetadataMatchMethodProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GrpcRouteMetadataMatchMethodProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcRouteMetadataMatchMethodProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMetadataMatchMethodProperty =
@@ -4470,7 +4489,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.WeightedTargetProperty):
-          WeightedTargetProperty = Wrapper(cdkObject)
+          WeightedTargetProperty = CdkObjectWrappers.wrap(cdkObject) as? WeightedTargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WeightedTargetProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.WeightedTargetProperty = (wrapped as
@@ -4607,7 +4627,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.QueryParameterProperty):
-          QueryParameterProperty = Wrapper(cdkObject)
+          QueryParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? QueryParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryParameterProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.QueryParameterProperty = (wrapped as
@@ -4932,7 +4953,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteProperty):
-          HttpRouteProperty = Wrapper(cdkObject)
+          HttpRouteProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpRouteProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteProperty = (wrapped as
@@ -5122,7 +5144,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMetadataProperty):
-          GrpcRouteMetadataProperty = Wrapper(cdkObject)
+          GrpcRouteMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GrpcRouteMetadataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcRouteMetadataProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMetadataProperty = (wrapped as
@@ -5327,7 +5350,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMatchProperty):
-          GrpcRouteMatchProperty = Wrapper(cdkObject)
+          GrpcRouteMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? GrpcRouteMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcRouteMatchProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteMatchProperty = (wrapped as
@@ -5433,7 +5457,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.DurationProperty):
-          DurationProperty = Wrapper(cdkObject)
+          DurationProperty = CdkObjectWrappers.wrap(cdkObject) as? DurationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DurationProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.DurationProperty = (wrapped as
@@ -5650,7 +5675,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute.HttpTimeoutProperty):
-          HttpTimeoutProperty = Wrapper(cdkObject)
+          HttpTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpTimeoutProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpTimeoutProperty):
           software.amazon.awscdk.services.appmesh.CfnRoute.HttpTimeoutProperty = (wrapped as

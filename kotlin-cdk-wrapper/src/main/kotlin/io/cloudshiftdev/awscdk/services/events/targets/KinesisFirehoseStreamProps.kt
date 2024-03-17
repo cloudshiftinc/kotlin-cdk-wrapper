@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import kotlin.Unit
 
@@ -84,7 +85,8 @@ public interface KinesisFirehoseStreamProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps):
-        KinesisFirehoseStreamProps = Wrapper(cdkObject)
+        KinesisFirehoseStreamProps = CdkObjectWrappers.wrap(cdkObject) as?
+        KinesisFirehoseStreamProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KinesisFirehoseStreamProps):
         software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -96,7 +97,8 @@ public interface SecretAttachmentTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps):
-        SecretAttachmentTargetProps = Wrapper(cdkObject)
+        SecretAttachmentTargetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SecretAttachmentTargetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretAttachmentTargetProps):
         software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps = (wrapped as

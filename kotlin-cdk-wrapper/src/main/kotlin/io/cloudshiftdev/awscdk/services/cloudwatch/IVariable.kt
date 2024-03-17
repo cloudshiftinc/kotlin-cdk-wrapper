@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 
 /**
@@ -25,7 +26,7 @@ public interface IVariable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.IVariable): IVariable =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IVariable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IVariable): software.amazon.awscdk.services.cloudwatch.IVariable =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.IVariable

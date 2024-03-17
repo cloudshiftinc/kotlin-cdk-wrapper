@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.dynamodb.ITable
 import io.cloudshiftdev.awscdk.services.events.IEventBus
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -932,7 +933,7 @@ public interface IGraphqlApi : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.IGraphqlApi): IGraphqlApi =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IGraphqlApi ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IGraphqlApi): software.amazon.awscdk.services.appsync.IGraphqlApi =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.IGraphqlApi

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.s3.IBucket
@@ -86,7 +87,8 @@ public abstract class FlowLogDestination internal constructor(
     ): FlowLogDestination = toS3(bucket, keyPrefix, S3DestinationOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination):
-        FlowLogDestination = Wrapper(cdkObject)
+        FlowLogDestination = CdkObjectWrappers.wrap(cdkObject) as? FlowLogDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FlowLogDestination):
         software.amazon.awscdk.services.ec2.FlowLogDestination = (wrapped as CdkObject).cdkObject as

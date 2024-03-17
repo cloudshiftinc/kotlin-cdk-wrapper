@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.Boolean
 import kotlin.Unit
@@ -157,7 +158,7 @@ public interface ResolveOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ResolveOptions): ResolveOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? ResolveOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResolveOptions): software.amazon.awscdk.ResolveOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.ResolveOptions

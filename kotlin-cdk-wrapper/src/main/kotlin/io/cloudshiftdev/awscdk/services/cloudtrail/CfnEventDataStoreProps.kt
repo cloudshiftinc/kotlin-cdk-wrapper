@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1092,7 +1093,8 @@ public interface CfnEventDataStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps):
-        CfnEventDataStoreProps = Wrapper(cdkObject)
+        CfnEventDataStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventDataStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventDataStoreProps):
         software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps = (wrapped as

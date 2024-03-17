@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -165,7 +166,8 @@ public interface CfnActivityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivityProps):
-        CfnActivityProps = Wrapper(cdkObject)
+        CfnActivityProps = CdkObjectWrappers.wrap(cdkObject) as? CfnActivityProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnActivityProps):
         software.amazon.awscdk.services.stepfunctions.CfnActivityProps = (wrapped as

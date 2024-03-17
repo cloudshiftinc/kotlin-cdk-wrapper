@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecr.IRepository
 import io.cloudshiftdev.awscdk.services.ecr.assets.DockerImageAssetProps
 import io.cloudshiftdev.constructs.Construct
@@ -77,7 +78,7 @@ public abstract class DockerImage internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromRegistry(imageUri).let(DockerImage::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage):
-        DockerImage = Wrapper(cdkObject)
+        DockerImage = CdkObjectWrappers.wrap(cdkObject) as? DockerImage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImage):
         software.amazon.awscdk.services.stepfunctions.tasks.DockerImage = (wrapped as

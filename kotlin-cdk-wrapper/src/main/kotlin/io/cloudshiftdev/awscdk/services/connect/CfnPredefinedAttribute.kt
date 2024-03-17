@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -312,7 +313,8 @@ public open class CfnPredefinedAttribute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty):
-          ValuesProperty = Wrapper(cdkObject)
+          ValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? ValuesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValuesProperty):
           software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty = (wrapped

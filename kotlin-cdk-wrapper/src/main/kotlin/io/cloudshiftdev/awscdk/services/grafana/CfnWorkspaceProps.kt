@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.grafana
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -962,7 +963,8 @@ public interface CfnWorkspaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspaceProps):
-        CfnWorkspaceProps = Wrapper(cdkObject)
+        CfnWorkspaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkspaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkspaceProps):
         software.amazon.awscdk.services.grafana.CfnWorkspaceProps = (wrapped as CdkObject).cdkObject

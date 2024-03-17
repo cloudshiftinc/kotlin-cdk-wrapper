@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -427,7 +428,8 @@ public interface ParamsAndSecretsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions):
-        ParamsAndSecretsOptions = Wrapper(cdkObject)
+        ParamsAndSecretsOptions = CdkObjectWrappers.wrap(cdkObject) as? ParamsAndSecretsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParamsAndSecretsOptions):
         software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -107,7 +108,7 @@ public interface IEngine {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.IEngine): IEngine =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IEngine ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEngine): software.amazon.awscdk.services.rds.IEngine = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.rds.IEngine

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -860,7 +861,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty):
-          BridgeNetworkOutputProperty = Wrapper(cdkObject)
+          BridgeNetworkOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BridgeNetworkOutputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BridgeNetworkOutputProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty =
@@ -1063,7 +1065,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty):
-          FailoverConfigProperty = Wrapper(cdkObject)
+          FailoverConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FailoverConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FailoverConfigProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty = (wrapped
@@ -1146,7 +1149,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty):
-          VpcInterfaceAttachmentProperty = Wrapper(cdkObject)
+          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty =
@@ -1344,7 +1348,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty):
-          BridgeNetworkSourceProperty = Wrapper(cdkObject)
+          BridgeNetworkSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BridgeNetworkSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BridgeNetworkSourceProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty =
@@ -1539,7 +1544,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty):
-          BridgeSourceProperty = Wrapper(cdkObject)
+          BridgeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BridgeSourceProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty = (wrapped as
@@ -1623,7 +1629,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty):
-          SourcePriorityProperty = Wrapper(cdkObject)
+          SourcePriorityProperty = CdkObjectWrappers.wrap(cdkObject) as? SourcePriorityProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourcePriorityProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty = (wrapped
@@ -1801,7 +1808,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty):
-          BridgeFlowSourceProperty = Wrapper(cdkObject)
+          BridgeFlowSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeFlowSourceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BridgeFlowSourceProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty = (wrapped
@@ -1886,7 +1894,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty):
-          EgressGatewayBridgeProperty = Wrapper(cdkObject)
+          EgressGatewayBridgeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EgressGatewayBridgeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EgressGatewayBridgeProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty =
@@ -2011,7 +2020,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty):
-          BridgeOutputProperty = Wrapper(cdkObject)
+          BridgeOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? BridgeOutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BridgeOutputProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty = (wrapped as
@@ -2124,7 +2134,8 @@ public open class CfnBridge internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty):
-          IngressGatewayBridgeProperty = Wrapper(cdkObject)
+          IngressGatewayBridgeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IngressGatewayBridgeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IngressGatewayBridgeProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty =

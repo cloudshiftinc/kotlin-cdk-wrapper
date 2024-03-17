@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -32,7 +33,8 @@ public interface IServerDeploymentConfig : IBaseDeploymentConfig {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.IServerDeploymentConfig):
-        IServerDeploymentConfig = Wrapper(cdkObject)
+        IServerDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as? IServerDeploymentConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IServerDeploymentConfig):
         software.amazon.awscdk.services.codedeploy.IServerDeploymentConfig = (wrapped as

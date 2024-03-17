@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -227,7 +228,7 @@ public interface PasswordPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.PasswordPolicy):
-        PasswordPolicy = Wrapper(cdkObject)
+        PasswordPolicy = CdkObjectWrappers.wrap(cdkObject) as? PasswordPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PasswordPolicy):
         software.amazon.awscdk.services.cognito.PasswordPolicy = (wrapped as CdkObject).cdkObject as

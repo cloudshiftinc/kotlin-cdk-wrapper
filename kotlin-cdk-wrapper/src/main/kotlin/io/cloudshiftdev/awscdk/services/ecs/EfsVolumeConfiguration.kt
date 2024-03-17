@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -241,7 +242,8 @@ public interface EfsVolumeConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EfsVolumeConfiguration):
-        EfsVolumeConfiguration = Wrapper(cdkObject)
+        EfsVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as? EfsVolumeConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EfsVolumeConfiguration):
         software.amazon.awscdk.services.ecs.EfsVolumeConfiguration = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.Any
 import kotlin.Deprecated
@@ -232,7 +233,7 @@ public interface AwsApiProps : AwsApiInput {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.AwsApiProps):
-        AwsApiProps = Wrapper(cdkObject)
+        AwsApiProps = CdkObjectWrappers.wrap(cdkObject) as? AwsApiProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsApiProps):
         software.amazon.awscdk.services.events.targets.AwsApiProps = (wrapped as

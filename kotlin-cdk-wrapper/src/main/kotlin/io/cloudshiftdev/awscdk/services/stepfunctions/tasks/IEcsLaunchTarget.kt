@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -62,7 +63,8 @@ public interface IEcsLaunchTarget {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.IEcsLaunchTarget):
-        IEcsLaunchTarget = Wrapper(cdkObject)
+        IEcsLaunchTarget = CdkObjectWrappers.wrap(cdkObject) as? IEcsLaunchTarget ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEcsLaunchTarget):
         software.amazon.awscdk.services.stepfunctions.tasks.IEcsLaunchTarget = (wrapped as

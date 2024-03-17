@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.glue
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -478,7 +479,8 @@ public interface CfnTriggerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTriggerProps):
-        CfnTriggerProps = Wrapper(cdkObject)
+        CfnTriggerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTriggerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTriggerProps):
         software.amazon.awscdk.services.glue.CfnTriggerProps = (wrapped as CdkObject).cdkObject as

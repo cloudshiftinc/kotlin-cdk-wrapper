@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.connect
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -122,7 +123,8 @@ public interface CfnApprovedOriginProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnApprovedOriginProps):
-        CfnApprovedOriginProps = Wrapper(cdkObject)
+        CfnApprovedOriginProps = CdkObjectWrappers.wrap(cdkObject) as? CfnApprovedOriginProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApprovedOriginProps):
         software.amazon.awscdk.services.connect.CfnApprovedOriginProps = (wrapped as

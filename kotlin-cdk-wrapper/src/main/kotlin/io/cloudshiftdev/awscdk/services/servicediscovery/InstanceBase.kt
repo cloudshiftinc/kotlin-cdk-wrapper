@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicediscovery
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -28,7 +29,7 @@ public abstract class InstanceBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.InstanceBase):
-        InstanceBase = Wrapper(cdkObject)
+        InstanceBase = CdkObjectWrappers.wrap(cdkObject) as? InstanceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceBase):
         software.amazon.awscdk.services.servicediscovery.InstanceBase = (wrapped as

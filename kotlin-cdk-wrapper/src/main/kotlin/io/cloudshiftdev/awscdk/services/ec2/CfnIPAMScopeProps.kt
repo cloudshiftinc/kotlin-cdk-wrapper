@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -164,7 +165,8 @@ public interface CfnIPAMScopeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMScopeProps):
-        CfnIPAMScopeProps = Wrapper(cdkObject)
+        CfnIPAMScopeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIPAMScopeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMScopeProps):
         software.amazon.awscdk.services.ec2.CfnIPAMScopeProps = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -63,7 +64,7 @@ public abstract class Schedule internal constructor(
         software.amazon.awscdk.services.events.Schedule.rate(duration.let(Duration::unwrap)).let(Schedule::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.Schedule): Schedule =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Schedule ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Schedule): software.amazon.awscdk.services.events.Schedule =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.events.Schedule

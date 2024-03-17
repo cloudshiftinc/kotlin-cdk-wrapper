@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -139,7 +140,8 @@ public interface ResponseHeadersFrameOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions):
-        ResponseHeadersFrameOptions = Wrapper(cdkObject)
+        ResponseHeadersFrameOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersFrameOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersFrameOptions):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions = (wrapped as

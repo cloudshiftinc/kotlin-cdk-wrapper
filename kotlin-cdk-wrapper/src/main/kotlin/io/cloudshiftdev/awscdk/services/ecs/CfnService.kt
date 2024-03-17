@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2344,7 +2345,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty):
-          TimeoutConfigurationProperty = Wrapper(cdkObject)
+          TimeoutConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeoutConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeoutConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty = (wrapped as
@@ -2637,7 +2639,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.LoadBalancerProperty):
-          LoadBalancerProperty = Wrapper(cdkObject)
+          LoadBalancerProperty = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoadBalancerProperty):
           software.amazon.awscdk.services.ecs.CfnService.LoadBalancerProperty = (wrapped as
@@ -2847,7 +2850,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectClientAliasProperty):
-          ServiceConnectClientAliasProperty = Wrapper(cdkObject)
+          ServiceConnectClientAliasProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectClientAliasProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceConnectClientAliasProperty):
           software.amazon.awscdk.services.ecs.CfnService.ServiceConnectClientAliasProperty =
@@ -2931,7 +2935,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty):
-          ServiceConnectTlsCertificateAuthorityProperty = Wrapper(cdkObject)
+          ServiceConnectTlsCertificateAuthorityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectTlsCertificateAuthorityProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceConnectTlsCertificateAuthorityProperty):
           software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsCertificateAuthorityProperty
@@ -3402,7 +3407,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectServiceProperty):
-          ServiceConnectServiceProperty = Wrapper(cdkObject)
+          ServiceConnectServiceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectServiceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceConnectServiceProperty):
           software.amazon.awscdk.services.ecs.CfnService.ServiceConnectServiceProperty = (wrapped as
@@ -3544,7 +3550,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = Wrapper(cdkObject)
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.NetworkConfigurationProperty = (wrapped as
@@ -3898,7 +3905,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty):
-          LogConfigurationProperty = Wrapper(cdkObject)
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty = (wrapped as
@@ -4673,7 +4681,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceManagedEBSVolumeConfigurationProperty):
-          ServiceManagedEBSVolumeConfigurationProperty = Wrapper(cdkObject)
+          ServiceManagedEBSVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceManagedEBSVolumeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceManagedEBSVolumeConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.ServiceManagedEBSVolumeConfigurationProperty
@@ -4816,7 +4825,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty):
-          DeploymentControllerProperty = Wrapper(cdkObject)
+          DeploymentControllerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentControllerProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentControllerProperty):
           software.amazon.awscdk.services.ecs.CfnService.DeploymentControllerProperty = (wrapped as
@@ -5513,7 +5523,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty):
-          ServiceConnectConfigurationProperty = Wrapper(cdkObject)
+          ServiceConnectConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceConnectConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty =
@@ -6025,7 +6036,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty):
-          DeploymentConfigurationProperty = Wrapper(cdkObject)
+          DeploymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.DeploymentConfigurationProperty = (wrapped
@@ -6193,7 +6205,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty):
-          EBSTagSpecificationProperty = Wrapper(cdkObject)
+          EBSTagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EBSTagSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EBSTagSpecificationProperty):
           software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty = (wrapped as
@@ -6349,7 +6362,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty):
-          PlacementStrategyProperty = Wrapper(cdkObject)
+          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementStrategyProperty):
           software.amazon.awscdk.services.ecs.CfnService.PlacementStrategyProperty = (wrapped as
@@ -6584,7 +6598,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceRegistryProperty):
-          ServiceRegistryProperty = Wrapper(cdkObject)
+          ServiceRegistryProperty = CdkObjectWrappers.wrap(cdkObject) as? ServiceRegistryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceRegistryProperty):
           software.amazon.awscdk.services.ecs.CfnService.ServiceRegistryProperty = (wrapped as
@@ -6763,7 +6778,8 @@ public open class CfnService internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.SecretProperty):
-          SecretProperty = Wrapper(cdkObject)
+          SecretProperty = CdkObjectWrappers.wrap(cdkObject) as? SecretProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SecretProperty):
           software.amazon.awscdk.services.ecs.CfnService.SecretProperty = (wrapped as
@@ -6995,7 +7011,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = Wrapper(cdkObject)
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
           software.amazon.awscdk.services.ecs.CfnService.CapacityProviderStrategyItemProperty =
@@ -7143,7 +7160,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty):
-          PlacementConstraintProperty = Wrapper(cdkObject)
+          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementConstraintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementConstraintProperty):
           software.amazon.awscdk.services.ecs.CfnService.PlacementConstraintProperty = (wrapped as
@@ -7370,7 +7388,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty):
-          AwsVpcConfigurationProperty = Wrapper(cdkObject)
+          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty = (wrapped as
@@ -7547,7 +7566,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty):
-          ServiceConnectTlsConfigurationProperty = Wrapper(cdkObject)
+          ServiceConnectTlsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceConnectTlsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceConnectTlsConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.ServiceConnectTlsConfigurationProperty =
@@ -7716,7 +7736,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty):
-          DeploymentCircuitBreakerProperty = Wrapper(cdkObject)
+          DeploymentCircuitBreakerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentCircuitBreakerProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentCircuitBreakerProperty):
           software.amazon.awscdk.services.ecs.CfnService.DeploymentCircuitBreakerProperty = (wrapped
@@ -7921,7 +7942,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.ServiceVolumeConfigurationProperty):
-          ServiceVolumeConfigurationProperty = Wrapper(cdkObject)
+          ServiceVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceVolumeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceVolumeConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnService.ServiceVolumeConfigurationProperty =
@@ -8133,7 +8155,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty):
-          DeploymentAlarmsProperty = Wrapper(cdkObject)
+          DeploymentAlarmsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeploymentAlarmsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentAlarmsProperty):
           software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty = (wrapped as

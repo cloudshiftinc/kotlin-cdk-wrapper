@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
@@ -95,7 +96,7 @@ public abstract class DefinitionBody internal constructor(
         software.amazon.awscdk.services.stepfunctions.DefinitionBody.fromString(definition).let(DefinitionBody::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody):
-        DefinitionBody = Wrapper(cdkObject)
+        DefinitionBody = CdkObjectWrappers.wrap(cdkObject) as? DefinitionBody ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DefinitionBody):
         software.amazon.awscdk.services.stepfunctions.DefinitionBody = (wrapped as

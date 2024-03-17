@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codecommit
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codestarnotifications.DetailType
 import io.cloudshiftdev.awscdk.services.codestarnotifications.NotificationRuleOptions
 import kotlin.Boolean
@@ -188,7 +189,8 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions):
-        RepositoryNotifyOnOptions = Wrapper(cdkObject)
+        RepositoryNotifyOnOptions = CdkObjectWrappers.wrap(cdkObject) as? RepositoryNotifyOnOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryNotifyOnOptions):
         software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions = (wrapped as

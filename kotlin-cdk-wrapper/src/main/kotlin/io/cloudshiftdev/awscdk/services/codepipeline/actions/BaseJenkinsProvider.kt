@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
@@ -36,7 +37,8 @@ public abstract class BaseJenkinsProvider internal constructor(
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider):
-        BaseJenkinsProvider = Wrapper(cdkObject)
+        BaseJenkinsProvider = CdkObjectWrappers.wrap(cdkObject) as? BaseJenkinsProvider ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseJenkinsProvider):
         software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider = (wrapped as

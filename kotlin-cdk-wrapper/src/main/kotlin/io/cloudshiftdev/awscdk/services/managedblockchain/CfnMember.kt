@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -545,7 +546,8 @@ public open class CfnMember internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.ApprovalThresholdPolicyProperty):
-          ApprovalThresholdPolicyProperty = Wrapper(cdkObject)
+          ApprovalThresholdPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApprovalThresholdPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApprovalThresholdPolicyProperty):
           software.amazon.awscdk.services.managedblockchain.CfnMember.ApprovalThresholdPolicyProperty
@@ -728,7 +730,8 @@ public open class CfnMember internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberConfigurationProperty):
-          MemberConfigurationProperty = Wrapper(cdkObject)
+          MemberConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemberConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemberConfigurationProperty):
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberConfigurationProperty =
@@ -1032,7 +1035,8 @@ public open class CfnMember internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = Wrapper(cdkObject)
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkConfigurationProperty =
@@ -1126,7 +1130,8 @@ public open class CfnMember internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFabricConfigurationProperty):
-          NetworkFabricConfigurationProperty = Wrapper(cdkObject)
+          NetworkFabricConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkFabricConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkFabricConfigurationProperty):
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFabricConfigurationProperty
@@ -1267,7 +1272,8 @@ public open class CfnMember internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty):
-          VotingPolicyProperty = Wrapper(cdkObject)
+          VotingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? VotingPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VotingPolicyProperty):
           software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty =
@@ -1387,7 +1393,8 @@ public open class CfnMember internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty):
-          MemberFrameworkConfigurationProperty = Wrapper(cdkObject)
+          MemberFrameworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemberFrameworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemberFrameworkConfigurationProperty):
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty
@@ -1517,7 +1524,8 @@ public open class CfnMember internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty):
-          MemberFabricConfigurationProperty = Wrapper(cdkObject)
+          MemberFabricConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemberFabricConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemberFabricConfigurationProperty):
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty
@@ -1644,7 +1652,8 @@ public open class CfnMember internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty):
-          NetworkFrameworkConfigurationProperty = Wrapper(cdkObject)
+          NetworkFrameworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkFrameworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkFrameworkConfigurationProperty):
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty

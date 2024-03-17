@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -32,7 +33,8 @@ public interface IAsset {
   }
 
   public companion object {
-    internal fun wrap(cdkObject: software.amazon.awscdk.IAsset): IAsset = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.IAsset): IAsset =
+        CdkObjectWrappers.wrap(cdkObject) as? IAsset ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAsset): software.amazon.awscdk.IAsset = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.IAsset

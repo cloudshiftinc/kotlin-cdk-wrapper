@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1210,7 +1211,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty):
-          NotificationPropertyProperty = Wrapper(cdkObject)
+          NotificationPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationPropertyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationPropertyProperty):
           software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty = (wrapped as
@@ -1410,7 +1412,8 @@ public open class CfnJob internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty):
-          JobCommandProperty = Wrapper(cdkObject)
+          JobCommandProperty = CdkObjectWrappers.wrap(cdkObject) as? JobCommandProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JobCommandProperty):
           software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty = (wrapped as
@@ -1498,7 +1501,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty):
-          ConnectionsListProperty = Wrapper(cdkObject)
+          ConnectionsListProperty = CdkObjectWrappers.wrap(cdkObject) as? ConnectionsListProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionsListProperty):
           software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty = (wrapped as
@@ -1587,7 +1591,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty):
-          ExecutionPropertyProperty = Wrapper(cdkObject)
+          ExecutionPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExecutionPropertyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExecutionPropertyProperty):
           software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty = (wrapped as

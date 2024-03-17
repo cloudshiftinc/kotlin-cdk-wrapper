@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lakeformation
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -271,7 +272,8 @@ public interface CfnPermissionsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissionsProps):
-        CfnPermissionsProps = Wrapper(cdkObject)
+        CfnPermissionsProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPermissionsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPermissionsProps):
         software.amazon.awscdk.services.lakeformation.CfnPermissionsProps = (wrapped as

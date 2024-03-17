@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -126,7 +127,8 @@ public interface InstanceEngineConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.InstanceEngineConfig):
-        InstanceEngineConfig = Wrapper(cdkObject)
+        InstanceEngineConfig = CdkObjectWrappers.wrap(cdkObject) as? InstanceEngineConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceEngineConfig):
         software.amazon.awscdk.services.rds.InstanceEngineConfig = (wrapped as CdkObject).cdkObject

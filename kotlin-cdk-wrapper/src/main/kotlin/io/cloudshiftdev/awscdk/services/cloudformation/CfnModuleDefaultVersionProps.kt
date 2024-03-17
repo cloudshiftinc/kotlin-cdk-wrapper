@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudformation
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -153,7 +154,8 @@ public interface CfnModuleDefaultVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersionProps):
-        CfnModuleDefaultVersionProps = Wrapper(cdkObject)
+        CfnModuleDefaultVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnModuleDefaultVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnModuleDefaultVersionProps):
         software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersionProps = (wrapped as

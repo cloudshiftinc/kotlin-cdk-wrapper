@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -115,7 +116,8 @@ public interface QueryExecutionContext {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext):
-        QueryExecutionContext = Wrapper(cdkObject)
+        QueryExecutionContext = CdkObjectWrappers.wrap(cdkObject) as? QueryExecutionContext ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueryExecutionContext):
         software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext = (wrapped as

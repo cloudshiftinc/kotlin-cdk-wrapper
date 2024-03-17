@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -96,7 +97,7 @@ public interface INamespace : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.INamespace):
-        INamespace = Wrapper(cdkObject)
+        INamespace = CdkObjectWrappers.wrap(cdkObject) as? INamespace ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INamespace):
         software.amazon.awscdk.services.servicediscovery.INamespace = (wrapped as

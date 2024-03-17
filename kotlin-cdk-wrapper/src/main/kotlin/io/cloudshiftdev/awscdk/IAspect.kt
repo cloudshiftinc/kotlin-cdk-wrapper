@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IConstruct
 
 /**
@@ -30,7 +31,8 @@ public interface IAspect {
   }
 
   public companion object {
-    internal fun wrap(cdkObject: software.amazon.awscdk.IAspect): IAspect = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.IAspect): IAspect =
+        CdkObjectWrappers.wrap(cdkObject) as? IAspect ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IAspect): software.amazon.awscdk.IAspect = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.IAspect

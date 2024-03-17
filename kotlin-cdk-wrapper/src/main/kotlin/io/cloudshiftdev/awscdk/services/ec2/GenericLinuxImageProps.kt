@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -73,7 +74,8 @@ public interface GenericLinuxImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.GenericLinuxImageProps):
-        GenericLinuxImageProps = Wrapper(cdkObject)
+        GenericLinuxImageProps = CdkObjectWrappers.wrap(cdkObject) as? GenericLinuxImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GenericLinuxImageProps):
         software.amazon.awscdk.services.ec2.GenericLinuxImageProps = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -54,7 +55,8 @@ public abstract class HttpRouteIntegration internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration):
-        HttpRouteIntegration = Wrapper(cdkObject)
+        HttpRouteIntegration = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteIntegration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteIntegration):
         software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration = (wrapped as

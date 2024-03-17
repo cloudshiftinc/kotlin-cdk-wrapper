@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sqs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -79,7 +80,8 @@ public interface QueuePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.QueuePolicyProps):
-        QueuePolicyProps = Wrapper(cdkObject)
+        QueuePolicyProps = CdkObjectWrappers.wrap(cdkObject) as? QueuePolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueuePolicyProps):
         software.amazon.awscdk.services.sqs.QueuePolicyProps = (wrapped as CdkObject).cdkObject as

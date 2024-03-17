@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.panorama
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -228,7 +229,8 @@ public interface CfnPackageVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.panorama.CfnPackageVersionProps):
-        CfnPackageVersionProps = Wrapper(cdkObject)
+        CfnPackageVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPackageVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPackageVersionProps):
         software.amazon.awscdk.services.panorama.CfnPackageVersionProps = (wrapped as

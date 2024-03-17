@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -101,7 +102,7 @@ public abstract class Source internal constructor(
     public fun s3(props: S3SourceProps.Builder.() -> Unit): ISource = s3(S3SourceProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.Source): Source =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Source ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Source): software.amazon.awscdk.services.codebuild.Source =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.Source

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.sns.ITopic
@@ -171,7 +172,7 @@ public interface S3Props {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.S3Props): S3Props =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? S3Props ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3Props): software.amazon.awscdk.services.ses.actions.S3Props =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.actions.S3Props

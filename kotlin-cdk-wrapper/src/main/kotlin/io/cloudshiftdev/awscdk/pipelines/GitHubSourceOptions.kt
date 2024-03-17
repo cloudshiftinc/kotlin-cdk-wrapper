@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.pipelines
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.actions.GitHubTrigger
 import kotlin.String
 import kotlin.Unit
@@ -198,7 +199,8 @@ public interface GitHubSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.GitHubSourceOptions):
-        GitHubSourceOptions = Wrapper(cdkObject)
+        GitHubSourceOptions = CdkObjectWrappers.wrap(cdkObject) as? GitHubSourceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitHubSourceOptions):
         software.amazon.awscdk.pipelines.GitHubSourceOptions = (wrapped as CdkObject).cdkObject as

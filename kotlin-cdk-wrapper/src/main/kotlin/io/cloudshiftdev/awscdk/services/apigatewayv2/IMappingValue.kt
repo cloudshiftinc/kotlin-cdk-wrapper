@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -25,7 +26,7 @@ public interface IMappingValue {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IMappingValue):
-        IMappingValue = Wrapper(cdkObject)
+        IMappingValue = CdkObjectWrappers.wrap(cdkObject) as? IMappingValue ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IMappingValue):
         software.amazon.awscdk.services.apigatewayv2.IMappingValue = (wrapped as

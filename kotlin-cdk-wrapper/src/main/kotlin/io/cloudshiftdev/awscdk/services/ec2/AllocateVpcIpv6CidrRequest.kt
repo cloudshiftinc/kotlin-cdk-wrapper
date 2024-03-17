@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 import kotlin.Unit
@@ -95,7 +96,8 @@ public interface AllocateVpcIpv6CidrRequest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest):
-        AllocateVpcIpv6CidrRequest = Wrapper(cdkObject)
+        AllocateVpcIpv6CidrRequest = CdkObjectWrappers.wrap(cdkObject) as?
+        AllocateVpcIpv6CidrRequest ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AllocateVpcIpv6CidrRequest):
         software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest = (wrapped as

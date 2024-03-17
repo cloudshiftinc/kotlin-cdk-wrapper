@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.neptunegraph
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -184,7 +185,8 @@ public interface CfnPrivateGraphEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpointProps):
-        CfnPrivateGraphEndpointProps = Wrapper(cdkObject)
+        CfnPrivateGraphEndpointProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPrivateGraphEndpointProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPrivateGraphEndpointProps):
         software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpointProps = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -887,7 +888,8 @@ public interface CfnDashboardProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDashboardProps):
-        CfnDashboardProps = Wrapper(cdkObject)
+        CfnDashboardProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDashboardProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDashboardProps):
         software.amazon.awscdk.services.quicksight.CfnDashboardProps = (wrapped as

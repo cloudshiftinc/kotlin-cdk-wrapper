@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -102,7 +103,7 @@ public interface JobDriver {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.JobDriver):
-        JobDriver = Wrapper(cdkObject)
+        JobDriver = CdkObjectWrappers.wrap(cdkObject) as? JobDriver ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JobDriver):
         software.amazon.awscdk.services.stepfunctions.tasks.JobDriver = (wrapped as

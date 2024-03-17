@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codecommit
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -199,7 +200,8 @@ public interface RepositoryTriggerOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.RepositoryTriggerOptions):
-        RepositoryTriggerOptions = Wrapper(cdkObject)
+        RepositoryTriggerOptions = CdkObjectWrappers.wrap(cdkObject) as? RepositoryTriggerOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryTriggerOptions):
         software.amazon.awscdk.services.codecommit.RepositoryTriggerOptions = (wrapped as

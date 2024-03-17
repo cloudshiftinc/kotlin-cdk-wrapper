@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -842,7 +843,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty):
-          SubDomainSettingProperty = Wrapper(cdkObject)
+          SubDomainSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubDomainSettingProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubDomainSettingProperty):
           software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty = (wrapped as
@@ -1028,7 +1030,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty):
-          CertificateProperty = Wrapper(cdkObject)
+          CertificateProperty = CdkObjectWrappers.wrap(cdkObject) as? CertificateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateProperty):
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty = (wrapped as
@@ -1182,7 +1185,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty):
-          CertificateSettingsProperty = Wrapper(cdkObject)
+          CertificateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateSettingsProperty):
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty = (wrapped

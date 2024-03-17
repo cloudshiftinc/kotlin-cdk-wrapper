@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -960,7 +961,8 @@ public interface CfnCampaignProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaignProps):
-        CfnCampaignProps = Wrapper(cdkObject)
+        CfnCampaignProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCampaignProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCampaignProps):
         software.amazon.awscdk.services.iotfleetwise.CfnCampaignProps = (wrapped as

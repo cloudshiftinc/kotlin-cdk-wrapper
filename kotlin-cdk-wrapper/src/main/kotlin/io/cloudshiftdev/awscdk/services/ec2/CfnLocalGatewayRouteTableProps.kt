@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -148,7 +149,8 @@ public interface CfnLocalGatewayRouteTableProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableProps):
-        CfnLocalGatewayRouteTableProps = Wrapper(cdkObject)
+        CfnLocalGatewayRouteTableProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLocalGatewayRouteTableProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocalGatewayRouteTableProps):
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableProps = (wrapped as

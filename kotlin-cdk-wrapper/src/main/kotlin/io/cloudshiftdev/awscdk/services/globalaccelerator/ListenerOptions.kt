@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.globalaccelerator
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -215,7 +216,8 @@ public interface ListenerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.ListenerOptions):
-        ListenerOptions = Wrapper(cdkObject)
+        ListenerOptions = CdkObjectWrappers.wrap(cdkObject) as? ListenerOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ListenerOptions):
         software.amazon.awscdk.services.globalaccelerator.ListenerOptions = (wrapped as

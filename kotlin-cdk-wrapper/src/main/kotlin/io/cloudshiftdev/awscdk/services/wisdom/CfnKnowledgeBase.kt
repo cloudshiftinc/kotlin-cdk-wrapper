@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -716,7 +717,8 @@ public open class CfnKnowledgeBase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty):
-          ServerSideEncryptionConfigurationProperty = Wrapper(cdkObject)
+          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty
@@ -837,7 +839,8 @@ public open class CfnKnowledgeBase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty):
-          SourceConfigurationProperty = Wrapper(cdkObject)
+          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConfigurationProperty):
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty =
@@ -972,7 +975,8 @@ public open class CfnKnowledgeBase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty):
-          RenderingConfigurationProperty = Wrapper(cdkObject)
+          RenderingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RenderingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RenderingConfigurationProperty):
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty =
@@ -1313,7 +1317,8 @@ public open class CfnKnowledgeBase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty):
-          AppIntegrationsConfigurationProperty = Wrapper(cdkObject)
+          AppIntegrationsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AppIntegrationsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AppIntegrationsConfigurationProperty):
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty

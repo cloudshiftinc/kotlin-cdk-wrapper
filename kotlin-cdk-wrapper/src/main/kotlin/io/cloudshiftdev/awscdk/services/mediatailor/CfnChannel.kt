@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -742,7 +743,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty):
-          LogConfigurationForChannelProperty = Wrapper(cdkObject)
+          LogConfigurationForChannelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogConfigurationForChannelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogConfigurationForChannelProperty):
           software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty
@@ -835,7 +837,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty):
-          TimeShiftConfigurationProperty = Wrapper(cdkObject)
+          TimeShiftConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeShiftConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeShiftConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty =
@@ -950,7 +953,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty):
-          SlateSourceProperty = Wrapper(cdkObject)
+          SlateSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SlateSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlateSourceProperty):
           software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty = (wrapped as
@@ -1090,7 +1094,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty):
-          HlsPlaylistSettingsProperty = Wrapper(cdkObject)
+          HlsPlaylistSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HlsPlaylistSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsPlaylistSettingsProperty):
           software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty =
@@ -1292,7 +1297,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty):
-          DashPlaylistSettingsProperty = Wrapper(cdkObject)
+          DashPlaylistSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashPlaylistSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DashPlaylistSettingsProperty):
           software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty =
@@ -1529,7 +1535,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty):
-          RequestOutputItemProperty = Wrapper(cdkObject)
+          RequestOutputItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RequestOutputItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RequestOutputItemProperty):
           software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty =

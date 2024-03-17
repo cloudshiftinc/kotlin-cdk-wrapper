@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2749,7 +2750,8 @@ public open class CfnReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.KinesisFirehoseDestinationDetailsProperty):
-          KinesisFirehoseDestinationDetailsProperty = Wrapper(cdkObject)
+          KinesisFirehoseDestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseDestinationDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisFirehoseDestinationDetailsProperty):
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.KinesisFirehoseDestinationDetailsProperty
@@ -2970,7 +2972,8 @@ public open class CfnReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.LogDeliveryConfigurationRequestProperty):
-          LogDeliveryConfigurationRequestProperty = Wrapper(cdkObject)
+          LogDeliveryConfigurationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogDeliveryConfigurationRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogDeliveryConfigurationRequestProperty):
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.LogDeliveryConfigurationRequestProperty
@@ -3257,7 +3260,8 @@ public open class CfnReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty):
-          NodeGroupConfigurationProperty = Wrapper(cdkObject)
+          NodeGroupConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NodeGroupConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NodeGroupConfigurationProperty):
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty
@@ -3344,7 +3348,8 @@ public open class CfnReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty):
-          CloudWatchLogsDestinationDetailsProperty = Wrapper(cdkObject)
+          CloudWatchLogsDestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsDestinationDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogsDestinationDetailsProperty):
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty
@@ -3564,7 +3569,8 @@ public open class CfnReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty):
-          DestinationDetailsProperty = Wrapper(cdkObject)
+          DestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationDetailsProperty):
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty

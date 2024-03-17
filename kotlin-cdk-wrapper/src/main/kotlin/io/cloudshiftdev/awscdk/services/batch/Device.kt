@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -145,7 +146,7 @@ public interface Device {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.Device): Device =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Device ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Device): software.amazon.awscdk.services.batch.Device = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.batch.Device

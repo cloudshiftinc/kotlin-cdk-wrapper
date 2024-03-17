@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dms
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -198,7 +199,8 @@ public interface CfnReplicationSubnetGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnReplicationSubnetGroupProps):
-        CfnReplicationSubnetGroupProps = Wrapper(cdkObject)
+        CfnReplicationSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnReplicationSubnetGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationSubnetGroupProps):
         software.amazon.awscdk.services.dms.CfnReplicationSubnetGroupProps = (wrapped as

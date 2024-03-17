@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.msk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -107,7 +108,8 @@ public interface CfnBatchScramSecretProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnBatchScramSecretProps):
-        CfnBatchScramSecretProps = Wrapper(cdkObject)
+        CfnBatchScramSecretProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBatchScramSecretProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBatchScramSecretProps):
         software.amazon.awscdk.services.msk.CfnBatchScramSecretProps = (wrapped as

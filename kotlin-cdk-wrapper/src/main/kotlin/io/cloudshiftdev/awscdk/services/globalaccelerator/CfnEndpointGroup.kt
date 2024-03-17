@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -755,7 +756,8 @@ public open class CfnEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty):
-          PortOverrideProperty = Wrapper(cdkObject)
+          PortOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as? PortOverrideProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortOverrideProperty):
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty =
@@ -1069,7 +1071,8 @@ public open class CfnEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = Wrapper(cdkObject)
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EndpointConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointConfigurationProperty):
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.servicediscovery
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -359,7 +360,7 @@ public interface ServiceProps : DnsServiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceProps):
-        ServiceProps = Wrapper(cdkObject)
+        ServiceProps = CdkObjectWrappers.wrap(cdkObject) as? ServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceProps):
         software.amazon.awscdk.services.servicediscovery.ServiceProps = (wrapped as

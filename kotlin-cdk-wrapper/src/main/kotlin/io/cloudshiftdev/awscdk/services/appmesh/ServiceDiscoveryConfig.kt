@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -150,7 +151,8 @@ public interface ServiceDiscoveryConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig):
-        ServiceDiscoveryConfig = Wrapper(cdkObject)
+        ServiceDiscoveryConfig = CdkObjectWrappers.wrap(cdkObject) as? ServiceDiscoveryConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceDiscoveryConfig):
         software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig = (wrapped as

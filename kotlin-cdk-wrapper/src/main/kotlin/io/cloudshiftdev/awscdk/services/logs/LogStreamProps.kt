@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.logs
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -158,7 +159,7 @@ public interface LogStreamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.LogStreamProps):
-        LogStreamProps = Wrapper(cdkObject)
+        LogStreamProps = CdkObjectWrappers.wrap(cdkObject) as? LogStreamProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogStreamProps):
         software.amazon.awscdk.services.logs.LogStreamProps = (wrapped as CdkObject).cdkObject as

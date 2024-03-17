@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -194,7 +195,7 @@ public interface S3OriginConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.S3OriginConfig):
-        S3OriginConfig = Wrapper(cdkObject)
+        S3OriginConfig = CdkObjectWrappers.wrap(cdkObject) as? S3OriginConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3OriginConfig):
         software.amazon.awscdk.services.cloudfront.S3OriginConfig = (wrapped as CdkObject).cdkObject

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -100,7 +101,8 @@ public interface CloudFrontWebDistributionAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionAttributes):
-        CloudFrontWebDistributionAttributes = Wrapper(cdkObject)
+        CloudFrontWebDistributionAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFrontWebDistributionAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFrontWebDistributionAttributes):
         software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionAttributes = (wrapped as

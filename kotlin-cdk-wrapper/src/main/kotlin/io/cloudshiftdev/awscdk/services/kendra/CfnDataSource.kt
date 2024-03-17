@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1196,7 +1197,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceVpcConfigurationProperty):
-          DataSourceVpcConfigurationProperty = Wrapper(cdkObject)
+          DataSourceVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceVpcConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceVpcConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceVpcConfigurationProperty =
@@ -1891,7 +1893,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SharePointConfigurationProperty):
-          SharePointConfigurationProperty = Wrapper(cdkObject)
+          SharePointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SharePointConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SharePointConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SharePointConfigurationProperty =
@@ -2681,7 +2684,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerConfigurationProperty):
-          WebCrawlerConfigurationProperty = Wrapper(cdkObject)
+          WebCrawlerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebCrawlerConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebCrawlerConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerConfigurationProperty =
@@ -2917,7 +2921,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeConditionProperty):
-          DocumentAttributeConditionProperty = Wrapper(cdkObject)
+          DocumentAttributeConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentAttributeConditionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentAttributeConditionProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeConditionProperty =
@@ -3093,7 +3098,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageConfigurationProperty):
-          ConfluencePageConfigurationProperty = Wrapper(cdkObject)
+          ConfluencePageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluencePageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluencePageConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageConfigurationProperty =
@@ -3489,7 +3495,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceConfigurationProperty):
-          ConfluenceSpaceConfigurationProperty = Wrapper(cdkObject)
+          ConfluenceSpaceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluenceSpaceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluenceSpaceConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceConfigurationProperty
@@ -3882,7 +3889,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowConfigurationProperty):
-          ServiceNowConfigurationProperty = Wrapper(cdkObject)
+          ServiceNowConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceNowConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowConfigurationProperty =
@@ -4011,7 +4019,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerAuthenticationConfigurationProperty):
-          WebCrawlerAuthenticationConfigurationProperty = Wrapper(cdkObject)
+          WebCrawlerAuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebCrawlerAuthenticationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebCrawlerAuthenticationConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerAuthenticationConfigurationProperty
@@ -4266,7 +4275,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeTargetProperty):
-          DocumentAttributeTargetProperty = Wrapper(cdkObject)
+          DocumentAttributeTargetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentAttributeTargetProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentAttributeTargetProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeTargetProperty =
@@ -4534,7 +4544,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceKnowledgeArticleConfigurationProperty):
-          SalesforceKnowledgeArticleConfigurationProperty = Wrapper(cdkObject)
+          SalesforceKnowledgeArticleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceKnowledgeArticleConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceKnowledgeArticleConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceKnowledgeArticleConfigurationProperty
@@ -4611,7 +4622,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.TemplateConfigurationProperty):
-          TemplateConfigurationProperty = Wrapper(cdkObject)
+          TemplateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemplateConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TemplateConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.TemplateConfigurationProperty =
@@ -4849,7 +4861,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.HookConfigurationProperty):
-          HookConfigurationProperty = Wrapper(cdkObject)
+          HookConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HookConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HookConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.HookConfigurationProperty = (wrapped
@@ -5092,7 +5105,9 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceCustomKnowledgeArticleTypeConfigurationProperty):
-          SalesforceCustomKnowledgeArticleTypeConfigurationProperty = Wrapper(cdkObject)
+          SalesforceCustomKnowledgeArticleTypeConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceCustomKnowledgeArticleTypeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceCustomKnowledgeArticleTypeConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceCustomKnowledgeArticleTypeConfigurationProperty
@@ -5748,7 +5763,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceConfigurationProperty):
-          ConfluenceConfigurationProperty = Wrapper(cdkObject)
+          ConfluenceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluenceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluenceConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceConfigurationProperty =
@@ -5958,7 +5974,9 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardKnowledgeArticleTypeConfigurationProperty):
-          SalesforceStandardKnowledgeArticleTypeConfigurationProperty = Wrapper(cdkObject)
+          SalesforceStandardKnowledgeArticleTypeConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceStandardKnowledgeArticleTypeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceStandardKnowledgeArticleTypeConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardKnowledgeArticleTypeConfigurationProperty
@@ -6122,7 +6140,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceToIndexFieldMappingProperty):
-          DataSourceToIndexFieldMappingProperty = Wrapper(cdkObject)
+          DataSourceToIndexFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceToIndexFieldMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceToIndexFieldMappingProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceToIndexFieldMappingProperty
@@ -6322,7 +6341,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeValueProperty):
-          DocumentAttributeValueProperty = Wrapper(cdkObject)
+          DocumentAttributeValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentAttributeValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentAttributeValueProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeValueProperty =
@@ -6795,7 +6815,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveConfigurationProperty):
-          OneDriveConfigurationProperty = Wrapper(cdkObject)
+          OneDriveConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OneDriveConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OneDriveConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveConfigurationProperty =
@@ -6972,7 +6993,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveUsersProperty):
-          OneDriveUsersProperty = Wrapper(cdkObject)
+          OneDriveUsersProperty = CdkObjectWrappers.wrap(cdkObject) as? OneDriveUsersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OneDriveUsersProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveUsersProperty = (wrapped as
@@ -7402,7 +7424,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.CustomDocumentEnrichmentConfigurationProperty):
-          CustomDocumentEnrichmentConfigurationProperty = Wrapper(cdkObject)
+          CustomDocumentEnrichmentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomDocumentEnrichmentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomDocumentEnrichmentConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.CustomDocumentEnrichmentConfigurationProperty
@@ -7655,7 +7678,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceChatterFeedConfigurationProperty):
-          SalesforceChatterFeedConfigurationProperty = Wrapper(cdkObject)
+          SalesforceChatterFeedConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceChatterFeedConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceChatterFeedConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceChatterFeedConfigurationProperty
@@ -8064,7 +8088,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowServiceCatalogConfigurationProperty):
-          ServiceNowServiceCatalogConfigurationProperty = Wrapper(cdkObject)
+          ServiceNowServiceCatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowServiceCatalogConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceNowServiceCatalogConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowServiceCatalogConfigurationProperty
@@ -8161,7 +8186,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DocumentsMetadataConfigurationProperty):
-          DocumentsMetadataConfigurationProperty = Wrapper(cdkObject)
+          DocumentsMetadataConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentsMetadataConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentsMetadataConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentsMetadataConfigurationProperty
@@ -9309,7 +9335,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceConfigurationProperty):
-          DataSourceConfigurationProperty = Wrapper(cdkObject)
+          DataSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceConfigurationProperty =
@@ -9547,7 +9574,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectConfigurationProperty):
-          SalesforceStandardObjectConfigurationProperty = Wrapper(cdkObject)
+          SalesforceStandardObjectConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceStandardObjectConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceStandardObjectConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectConfigurationProperty
@@ -9654,7 +9682,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSiteMapsConfigurationProperty):
-          WebCrawlerSiteMapsConfigurationProperty = Wrapper(cdkObject)
+          WebCrawlerSiteMapsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebCrawlerSiteMapsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebCrawlerSiteMapsConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSiteMapsConfigurationProperty
@@ -9875,7 +9904,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConnectionConfigurationProperty):
-          ConnectionConfigurationProperty = Wrapper(cdkObject)
+          ConnectionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConnectionConfigurationProperty =
@@ -10333,7 +10363,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WorkDocsConfigurationProperty):
-          WorkDocsConfigurationProperty = Wrapper(cdkObject)
+          WorkDocsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkDocsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkDocsConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.WorkDocsConfigurationProperty =
@@ -11011,7 +11042,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceConfigurationProperty):
-          SalesforceConfigurationProperty = Wrapper(cdkObject)
+          SalesforceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceConfigurationProperty =
@@ -11111,7 +11143,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.AclConfigurationProperty):
-          AclConfigurationProperty = Wrapper(cdkObject)
+          AclConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? AclConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AclConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.AclConfigurationProperty = (wrapped
@@ -11273,7 +11306,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageToIndexFieldMappingProperty):
-          ConfluencePageToIndexFieldMappingProperty = Wrapper(cdkObject)
+          ConfluencePageToIndexFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluencePageToIndexFieldMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluencePageToIndexFieldMappingProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageToIndexFieldMappingProperty
@@ -11442,7 +11476,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSeedUrlConfigurationProperty):
-          WebCrawlerSeedUrlConfigurationProperty = Wrapper(cdkObject)
+          WebCrawlerSeedUrlConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebCrawlerSeedUrlConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebCrawlerSeedUrlConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSeedUrlConfigurationProperty
@@ -11589,7 +11624,9 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty):
-          SalesforceStandardObjectAttachmentConfigurationProperty = Wrapper(cdkObject)
+          SalesforceStandardObjectAttachmentConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceStandardObjectAttachmentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceStandardObjectAttachmentConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty
@@ -12002,7 +12039,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.DatabaseConfigurationProperty):
-          DatabaseConfigurationProperty = Wrapper(cdkObject)
+          DatabaseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabaseConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatabaseConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.DatabaseConfigurationProperty =
@@ -12176,7 +12214,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerBasicAuthenticationProperty):
-          WebCrawlerBasicAuthenticationProperty = Wrapper(cdkObject)
+          WebCrawlerBasicAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebCrawlerBasicAuthenticationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebCrawlerBasicAuthenticationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerBasicAuthenticationProperty
@@ -12437,7 +12476,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerUrlsProperty):
-          WebCrawlerUrlsProperty = Wrapper(cdkObject)
+          WebCrawlerUrlsProperty = CdkObjectWrappers.wrap(cdkObject) as? WebCrawlerUrlsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebCrawlerUrlsProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerUrlsProperty = (wrapped as
@@ -12616,7 +12656,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogConfigurationProperty):
-          ConfluenceBlogConfigurationProperty = Wrapper(cdkObject)
+          ConfluenceBlogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluenceBlogConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluenceBlogConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogConfigurationProperty =
@@ -12752,7 +12793,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.SqlConfigurationProperty):
-          SqlConfigurationProperty = Wrapper(cdkObject)
+          SqlConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SqlConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SqlConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.SqlConfigurationProperty = (wrapped
@@ -12858,7 +12900,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.S3PathProperty):
-          S3PathProperty = Wrapper(cdkObject)
+          S3PathProperty = CdkObjectWrappers.wrap(cdkObject) as? S3PathProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3PathProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.S3PathProperty = (wrapped as
@@ -13020,7 +13063,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceToIndexFieldMappingProperty):
-          ConfluenceSpaceToIndexFieldMappingProperty = Wrapper(cdkObject)
+          ConfluenceSpaceToIndexFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluenceSpaceToIndexFieldMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluenceSpaceToIndexFieldMappingProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceToIndexFieldMappingProperty
@@ -13182,7 +13226,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogToIndexFieldMappingProperty):
-          ConfluenceBlogToIndexFieldMappingProperty = Wrapper(cdkObject)
+          ConfluenceBlogToIndexFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluenceBlogToIndexFieldMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluenceBlogToIndexFieldMappingProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogToIndexFieldMappingProperty
@@ -13354,7 +13399,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty):
-          ProxyConfigurationProperty = Wrapper(cdkObject)
+          ProxyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProxyConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProxyConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty = (wrapped
@@ -13438,7 +13484,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.AccessControlListConfigurationProperty):
-          AccessControlListConfigurationProperty = Wrapper(cdkObject)
+          AccessControlListConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessControlListConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessControlListConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.AccessControlListConfigurationProperty
@@ -13606,7 +13653,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentToIndexFieldMappingProperty):
-          ConfluenceAttachmentToIndexFieldMappingProperty = Wrapper(cdkObject)
+          ConfluenceAttachmentToIndexFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluenceAttachmentToIndexFieldMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluenceAttachmentToIndexFieldMappingProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentToIndexFieldMappingProperty
@@ -13825,7 +13873,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentConfigurationProperty):
-          ConfluenceAttachmentConfigurationProperty = Wrapper(cdkObject)
+          ConfluenceAttachmentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfluenceAttachmentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfluenceAttachmentConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentConfigurationProperty
@@ -14087,7 +14136,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.InlineCustomDocumentEnrichmentConfigurationProperty):
-          InlineCustomDocumentEnrichmentConfigurationProperty = Wrapper(cdkObject)
+          InlineCustomDocumentEnrichmentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? InlineCustomDocumentEnrichmentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InlineCustomDocumentEnrichmentConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.InlineCustomDocumentEnrichmentConfigurationProperty
@@ -14731,7 +14781,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.S3DataSourceConfigurationProperty):
-          S3DataSourceConfigurationProperty = Wrapper(cdkObject)
+          S3DataSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3DataSourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DataSourceConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.S3DataSourceConfigurationProperty =
@@ -14988,7 +15039,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty):
-          ColumnConfigurationProperty = Wrapper(cdkObject)
+          ColumnConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColumnConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty =
@@ -15423,7 +15475,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowKnowledgeArticleConfigurationProperty):
-          ServiceNowKnowledgeArticleConfigurationProperty = Wrapper(cdkObject)
+          ServiceNowKnowledgeArticleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowKnowledgeArticleConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceNowKnowledgeArticleConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowKnowledgeArticleConfigurationProperty
@@ -15913,7 +15966,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.GoogleDriveConfigurationProperty):
-          GoogleDriveConfigurationProperty = Wrapper(cdkObject)
+          GoogleDriveConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GoogleDriveConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GoogleDriveConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnDataSource.GoogleDriveConfigurationProperty =

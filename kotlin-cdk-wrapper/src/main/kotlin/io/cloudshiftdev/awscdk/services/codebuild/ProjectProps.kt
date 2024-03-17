@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -979,7 +980,7 @@ public interface ProjectProps : CommonProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.ProjectProps):
-        ProjectProps = Wrapper(cdkObject)
+        ProjectProps = CdkObjectWrappers.wrap(cdkObject) as? ProjectProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProjectProps):
         software.amazon.awscdk.services.codebuild.ProjectProps = (wrapped as CdkObject).cdkObject as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -719,7 +720,8 @@ public interface CfnDocumentClassifierProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifierProps):
-        CfnDocumentClassifierProps = Wrapper(cdkObject)
+        CfnDocumentClassifierProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDocumentClassifierProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDocumentClassifierProps):
         software.amazon.awscdk.services.comprehend.CfnDocumentClassifierProps = (wrapped as

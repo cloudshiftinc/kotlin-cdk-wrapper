@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2107,7 +2108,8 @@ public open class CfnUserPoolClient internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty):
-          TokenValidityUnitsProperty = Wrapper(cdkObject)
+          TokenValidityUnitsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TokenValidityUnitsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TokenValidityUnitsProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty =
@@ -2336,7 +2338,8 @@ public open class CfnUserPoolClient internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty):
-          AnalyticsConfigurationProperty = Wrapper(cdkObject)
+          AnalyticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalyticsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalyticsConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty =

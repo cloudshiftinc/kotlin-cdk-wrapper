@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.collections.List
 
 /**
@@ -38,7 +39,8 @@ public interface IListenerAction {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerAction):
-        IListenerAction = Wrapper(cdkObject)
+        IListenerAction = CdkObjectWrappers.wrap(cdkObject) as? IListenerAction ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IListenerAction):
         software.amazon.awscdk.services.elasticloadbalancingv2.IListenerAction = (wrapped as

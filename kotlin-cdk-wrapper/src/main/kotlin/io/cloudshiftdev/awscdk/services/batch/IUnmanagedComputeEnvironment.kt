@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.constructs.Node
 import kotlin.Boolean
@@ -115,7 +116,8 @@ public interface IUnmanagedComputeEnvironment : IComputeEnvironment {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.IUnmanagedComputeEnvironment):
-        IUnmanagedComputeEnvironment = Wrapper(cdkObject)
+        IUnmanagedComputeEnvironment = CdkObjectWrappers.wrap(cdkObject) as?
+        IUnmanagedComputeEnvironment ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IUnmanagedComputeEnvironment):
         software.amazon.awscdk.services.batch.IUnmanagedComputeEnvironment = (wrapped as

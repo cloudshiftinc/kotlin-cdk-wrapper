@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
@@ -876,7 +877,8 @@ public interface DistributionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.DistributionProps):
-        DistributionProps = Wrapper(cdkObject)
+        DistributionProps = CdkObjectWrappers.wrap(cdkObject) as? DistributionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DistributionProps):
         software.amazon.awscdk.services.cloudfront.DistributionProps = (wrapped as

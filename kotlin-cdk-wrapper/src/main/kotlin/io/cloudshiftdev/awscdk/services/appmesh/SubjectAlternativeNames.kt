@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
@@ -70,7 +71,8 @@ public abstract class SubjectAlternativeNames internal constructor(
         software.amazon.awscdk.services.appmesh.SubjectAlternativeNames.matchingExactly(names).let(SubjectAlternativeNames::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.SubjectAlternativeNames):
-        SubjectAlternativeNames = Wrapper(cdkObject)
+        SubjectAlternativeNames = CdkObjectWrappers.wrap(cdkObject) as? SubjectAlternativeNames ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubjectAlternativeNames):
         software.amazon.awscdk.services.appmesh.SubjectAlternativeNames = (wrapped as

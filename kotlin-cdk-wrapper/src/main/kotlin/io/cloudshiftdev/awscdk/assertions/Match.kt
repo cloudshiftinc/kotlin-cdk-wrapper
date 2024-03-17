@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.assertions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
@@ -54,7 +55,7 @@ public abstract class Match internal constructor(
         software.amazon.awscdk.assertions.Match.stringLikeRegexp(pattern).let(Matcher::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.Match): Match =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Match ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Match): software.amazon.awscdk.assertions.Match = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.assertions.Match

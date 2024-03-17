@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.Number
@@ -351,7 +352,7 @@ public interface MapProps : MapBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.MapProps): MapProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? MapProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MapProps): software.amazon.awscdk.services.stepfunctions.MapProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.stepfunctions.MapProps

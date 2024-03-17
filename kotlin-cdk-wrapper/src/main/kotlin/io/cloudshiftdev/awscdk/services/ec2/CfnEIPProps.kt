@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -348,7 +349,7 @@ public interface CfnEIPProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEIPProps): CfnEIPProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? CfnEIPProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEIPProps): software.amazon.awscdk.services.ec2.CfnEIPProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnEIPProps

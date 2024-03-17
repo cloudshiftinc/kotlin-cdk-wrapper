@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.config
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -150,7 +151,8 @@ public interface CfnAggregationAuthorizationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnAggregationAuthorizationProps):
-        CfnAggregationAuthorizationProps = Wrapper(cdkObject)
+        CfnAggregationAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAggregationAuthorizationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAggregationAuthorizationProps):
         software.amazon.awscdk.services.config.CfnAggregationAuthorizationProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -677,7 +678,8 @@ public interface VpcContextResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.VpcContextResponse):
-        VpcContextResponse = Wrapper(cdkObject)
+        VpcContextResponse = CdkObjectWrappers.wrap(cdkObject) as? VpcContextResponse ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcContextResponse):
         software.amazon.awscdk.cxapi.VpcContextResponse = (wrapped as CdkObject).cdkObject as

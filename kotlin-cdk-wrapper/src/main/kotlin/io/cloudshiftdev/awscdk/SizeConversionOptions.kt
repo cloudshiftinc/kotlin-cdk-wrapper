@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -69,7 +70,8 @@ public interface SizeConversionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.SizeConversionOptions):
-        SizeConversionOptions = Wrapper(cdkObject)
+        SizeConversionOptions = CdkObjectWrappers.wrap(cdkObject) as? SizeConversionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SizeConversionOptions):
         software.amazon.awscdk.SizeConversionOptions = (wrapped as CdkObject).cdkObject as

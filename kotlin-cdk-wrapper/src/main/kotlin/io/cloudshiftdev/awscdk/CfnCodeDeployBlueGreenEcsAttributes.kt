@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -177,7 +178,8 @@ public interface CfnCodeDeployBlueGreenEcsAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenEcsAttributes):
-        CfnCodeDeployBlueGreenEcsAttributes = Wrapper(cdkObject)
+        CfnCodeDeployBlueGreenEcsAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCodeDeployBlueGreenEcsAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeDeployBlueGreenEcsAttributes):
         software.amazon.awscdk.CfnCodeDeployBlueGreenEcsAttributes = (wrapped as

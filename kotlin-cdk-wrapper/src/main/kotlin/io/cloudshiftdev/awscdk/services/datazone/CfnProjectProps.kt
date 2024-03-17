@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.datazone
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -169,7 +170,8 @@ public interface CfnProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnProjectProps):
-        CfnProjectProps = Wrapper(cdkObject)
+        CfnProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnProjectProps):
         software.amazon.awscdk.services.datazone.CfnProjectProps = (wrapped as CdkObject).cdkObject

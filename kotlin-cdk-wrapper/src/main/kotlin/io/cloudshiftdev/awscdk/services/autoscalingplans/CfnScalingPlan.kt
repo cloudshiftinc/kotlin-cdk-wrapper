@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -465,7 +466,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty):
-          TagFilterProperty = Wrapper(cdkObject)
+          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagFilterProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty =
@@ -908,7 +910,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty):
-          TargetTrackingConfigurationProperty = Wrapper(cdkObject)
+          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty
@@ -1021,7 +1024,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty):
-          MetricDimensionProperty = Wrapper(cdkObject)
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricDimensionProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty =
@@ -1292,7 +1296,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty):
-          CustomizedLoadMetricSpecificationProperty = Wrapper(cdkObject)
+          CustomizedLoadMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomizedLoadMetricSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomizedLoadMetricSpecificationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty
@@ -1583,7 +1588,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty):
-          CustomizedScalingMetricSpecificationProperty = Wrapper(cdkObject)
+          CustomizedScalingMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomizedScalingMetricSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomizedScalingMetricSpecificationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty
@@ -1817,7 +1823,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty):
-          ApplicationSourceProperty = Wrapper(cdkObject)
+          ApplicationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationSourceProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
@@ -2033,7 +2040,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty):
-          PredefinedScalingMetricSpecificationProperty = Wrapper(cdkObject)
+          PredefinedScalingMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredefinedScalingMetricSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PredefinedScalingMetricSpecificationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty
@@ -3026,7 +3034,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty):
-          ScalingInstructionProperty = Wrapper(cdkObject)
+          ScalingInstructionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScalingInstructionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScalingInstructionProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty
@@ -3234,7 +3243,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty):
-          PredefinedLoadMetricSpecificationProperty = Wrapper(cdkObject)
+          PredefinedLoadMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredefinedLoadMetricSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PredefinedLoadMetricSpecificationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty

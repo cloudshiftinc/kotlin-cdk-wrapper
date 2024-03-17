@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -846,7 +847,8 @@ public interface CfnEC2FleetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2FleetProps):
-        CfnEC2FleetProps = Wrapper(cdkObject)
+        CfnEC2FleetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEC2FleetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEC2FleetProps):
         software.amazon.awscdk.services.ec2.CfnEC2FleetProps = (wrapped as CdkObject).cdkObject as

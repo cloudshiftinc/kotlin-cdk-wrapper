@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -512,7 +513,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty):
-          ThroughResourcesStatementRequestProperty = Wrapper(cdkObject)
+          ThroughResourcesStatementRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ThroughResourcesStatementRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThroughResourcesStatementRequestProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty
@@ -692,7 +694,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty):
-          PathStatementRequestProperty = Wrapper(cdkObject)
+          PathStatementRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PathStatementRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PathStatementRequestProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty
@@ -939,7 +942,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty):
-          AccessScopePathRequestProperty = Wrapper(cdkObject)
+          AccessScopePathRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessScopePathRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessScopePathRequestProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty
@@ -1268,7 +1272,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty):
-          PacketHeaderStatementRequestProperty = Wrapper(cdkObject)
+          PacketHeaderStatementRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PacketHeaderStatementRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PacketHeaderStatementRequestProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty
@@ -1399,7 +1404,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty):
-          ResourceStatementRequestProperty = Wrapper(cdkObject)
+          ResourceStatementRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceStatementRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceStatementRequestProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty

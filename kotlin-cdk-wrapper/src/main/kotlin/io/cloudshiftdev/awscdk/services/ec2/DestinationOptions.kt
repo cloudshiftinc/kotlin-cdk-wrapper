@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -111,7 +112,8 @@ public interface DestinationOptions : S3DestinationOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.DestinationOptions):
-        DestinationOptions = Wrapper(cdkObject)
+        DestinationOptions = CdkObjectWrappers.wrap(cdkObject) as? DestinationOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DestinationOptions):
         software.amazon.awscdk.services.ec2.DestinationOptions = (wrapped as CdkObject).cdkObject as

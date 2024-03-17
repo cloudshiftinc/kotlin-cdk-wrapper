@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -293,7 +294,8 @@ public interface StepFunctionsInvokeActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StepFunctionsInvokeActionProps):
-        StepFunctionsInvokeActionProps = Wrapper(cdkObject)
+        StepFunctionsInvokeActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        StepFunctionsInvokeActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StepFunctionsInvokeActionProps):
         software.amazon.awscdk.services.codepipeline.actions.StepFunctionsInvokeActionProps =

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -275,7 +276,8 @@ public interface IntegrationResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.IntegrationResponse):
-        IntegrationResponse = Wrapper(cdkObject)
+        IntegrationResponse = CdkObjectWrappers.wrap(cdkObject) as? IntegrationResponse ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IntegrationResponse):
         software.amazon.awscdk.services.apigateway.IntegrationResponse = (wrapped as

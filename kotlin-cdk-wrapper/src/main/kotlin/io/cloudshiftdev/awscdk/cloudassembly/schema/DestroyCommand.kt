@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -176,7 +177,7 @@ public interface DestroyCommand : CdkCommand {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DestroyCommand):
-        DestroyCommand = Wrapper(cdkObject)
+        DestroyCommand = CdkObjectWrappers.wrap(cdkObject) as? DestroyCommand ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DestroyCommand):
         software.amazon.awscdk.cloudassembly.schema.DestroyCommand = (wrapped as

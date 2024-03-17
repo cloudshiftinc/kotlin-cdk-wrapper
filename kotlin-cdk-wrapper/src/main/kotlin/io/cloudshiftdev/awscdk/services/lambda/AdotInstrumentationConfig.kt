@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -102,7 +103,8 @@ public interface AdotInstrumentationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AdotInstrumentationConfig):
-        AdotInstrumentationConfig = Wrapper(cdkObject)
+        AdotInstrumentationConfig = CdkObjectWrappers.wrap(cdkObject) as? AdotInstrumentationConfig
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AdotInstrumentationConfig):
         software.amazon.awscdk.services.lambda.AdotInstrumentationConfig = (wrapped as

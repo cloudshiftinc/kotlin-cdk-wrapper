@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IVersion
 import kotlin.Boolean
 import kotlin.Unit
@@ -141,7 +142,8 @@ public interface LambdaFunctionAssociation {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation):
-        LambdaFunctionAssociation = Wrapper(cdkObject)
+        LambdaFunctionAssociation = CdkObjectWrappers.wrap(cdkObject) as? LambdaFunctionAssociation
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaFunctionAssociation):
         software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation = (wrapped as

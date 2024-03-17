@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.BaseTargetTrackingProps
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup
 import kotlin.Boolean
@@ -207,7 +208,8 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.RequestCountScalingProps):
-        RequestCountScalingProps = Wrapper(cdkObject)
+        RequestCountScalingProps = CdkObjectWrappers.wrap(cdkObject) as? RequestCountScalingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RequestCountScalingProps):
         software.amazon.awscdk.services.ecs.RequestCountScalingProps = (wrapped as

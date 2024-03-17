@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -567,7 +568,8 @@ public interface AddApplicationTargetsProps : AddRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps):
-        AddApplicationTargetsProps = Wrapper(cdkObject)
+        AddApplicationTargetsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AddApplicationTargetsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddApplicationTargetsProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps = (wrapped

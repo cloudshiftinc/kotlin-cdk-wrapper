@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -377,7 +378,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachmentProps):
-        CfnUserPoolRiskConfigurationAttachmentProps = Wrapper(cdkObject)
+        CfnUserPoolRiskConfigurationAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserPoolRiskConfigurationAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolRiskConfigurationAttachmentProps):
         software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachmentProps =

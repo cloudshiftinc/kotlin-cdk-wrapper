@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.constructs.Node
@@ -95,7 +96,7 @@ public interface IBackupVault : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.IBackupVault): IBackupVault
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? IBackupVault ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IBackupVault): software.amazon.awscdk.services.backup.IBackupVault
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.backup.IBackupVault

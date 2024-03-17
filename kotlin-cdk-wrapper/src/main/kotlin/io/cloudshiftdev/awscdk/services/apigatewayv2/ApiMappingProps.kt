@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -160,7 +161,8 @@ public interface ApiMappingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingProps):
-        ApiMappingProps = Wrapper(cdkObject)
+        ApiMappingProps = CdkObjectWrappers.wrap(cdkObject) as? ApiMappingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiMappingProps):
         software.amazon.awscdk.services.apigatewayv2.ApiMappingProps = (wrapped as

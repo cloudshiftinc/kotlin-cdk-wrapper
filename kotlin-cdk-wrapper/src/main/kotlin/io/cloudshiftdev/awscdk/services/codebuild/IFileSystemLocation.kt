@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -37,7 +38,8 @@ public interface IFileSystemLocation {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.IFileSystemLocation):
-        IFileSystemLocation = Wrapper(cdkObject)
+        IFileSystemLocation = CdkObjectWrappers.wrap(cdkObject) as? IFileSystemLocation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFileSystemLocation):
         software.amazon.awscdk.services.codebuild.IFileSystemLocation = (wrapped as

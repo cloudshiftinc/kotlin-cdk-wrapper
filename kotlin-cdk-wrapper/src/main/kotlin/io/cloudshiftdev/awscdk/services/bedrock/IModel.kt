@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.bedrock
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -31,7 +32,7 @@ public interface IModel {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.IModel): IModel =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IModel ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IModel): software.amazon.awscdk.services.bedrock.IModel = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.bedrock.IModel

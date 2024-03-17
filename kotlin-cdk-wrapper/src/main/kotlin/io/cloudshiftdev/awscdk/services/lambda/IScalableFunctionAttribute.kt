@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.ScalingSchedule
 import io.cloudshiftdev.constructs.IConstruct
 import io.cloudshiftdev.constructs.Node
@@ -112,7 +113,8 @@ public interface IScalableFunctionAttribute : IConstruct {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.IScalableFunctionAttribute):
-        IScalableFunctionAttribute = Wrapper(cdkObject)
+        IScalableFunctionAttribute = CdkObjectWrappers.wrap(cdkObject) as?
+        IScalableFunctionAttribute ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IScalableFunctionAttribute):
         software.amazon.awscdk.services.lambda.IScalableFunctionAttribute = (wrapped as

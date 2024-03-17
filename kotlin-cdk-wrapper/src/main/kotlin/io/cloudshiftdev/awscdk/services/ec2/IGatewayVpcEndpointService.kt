@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -25,7 +26,8 @@ public interface IGatewayVpcEndpointService {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IGatewayVpcEndpointService):
-        IGatewayVpcEndpointService = Wrapper(cdkObject)
+        IGatewayVpcEndpointService = CdkObjectWrappers.wrap(cdkObject) as?
+        IGatewayVpcEndpointService ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IGatewayVpcEndpointService):
         software.amazon.awscdk.services.ec2.IGatewayVpcEndpointService = (wrapped as

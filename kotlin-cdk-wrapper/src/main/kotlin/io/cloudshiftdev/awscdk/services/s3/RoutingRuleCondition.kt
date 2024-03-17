@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -127,7 +128,8 @@ public interface RoutingRuleCondition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.RoutingRuleCondition):
-        RoutingRuleCondition = Wrapper(cdkObject)
+        RoutingRuleCondition = CdkObjectWrappers.wrap(cdkObject) as? RoutingRuleCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RoutingRuleCondition):
         software.amazon.awscdk.services.s3.RoutingRuleCondition = (wrapped as CdkObject).cdkObject

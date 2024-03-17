@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -742,7 +743,8 @@ public open class CfnAppBlockBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.AccessEndpointProperty):
-          AccessEndpointProperty = Wrapper(cdkObject)
+          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessEndpointProperty):
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.AccessEndpointProperty =
@@ -890,7 +892,8 @@ public open class CfnAppBlockBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty = (wrapped

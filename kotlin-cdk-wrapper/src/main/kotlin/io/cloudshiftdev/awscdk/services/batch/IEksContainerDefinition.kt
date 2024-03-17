@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import io.cloudshiftdev.constructs.IConstruct
 import io.cloudshiftdev.constructs.Node
@@ -555,7 +556,8 @@ public interface IEksContainerDefinition : IConstruct {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.IEksContainerDefinition):
-        IEksContainerDefinition = Wrapper(cdkObject)
+        IEksContainerDefinition = CdkObjectWrappers.wrap(cdkObject) as? IEksContainerDefinition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEksContainerDefinition):
         software.amazon.awscdk.services.batch.IEksContainerDefinition = (wrapped as

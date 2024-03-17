@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -71,7 +72,8 @@ public interface ServerApplicationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.ServerApplicationProps):
-        ServerApplicationProps = Wrapper(cdkObject)
+        ServerApplicationProps = CdkObjectWrappers.wrap(cdkObject) as? ServerApplicationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerApplicationProps):
         software.amazon.awscdk.services.codedeploy.ServerApplicationProps = (wrapped as

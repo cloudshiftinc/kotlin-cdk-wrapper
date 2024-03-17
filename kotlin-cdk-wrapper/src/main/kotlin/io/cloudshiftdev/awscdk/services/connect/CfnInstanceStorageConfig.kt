@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -627,7 +628,8 @@ public open class CfnInstanceStorageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty):
-          KinesisStreamConfigProperty = Wrapper(cdkObject)
+          KinesisStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisStreamConfigProperty):
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty
@@ -710,7 +712,8 @@ public open class CfnInstanceStorageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty):
-          KinesisFirehoseConfigProperty = Wrapper(cdkObject)
+          KinesisFirehoseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisFirehoseConfigProperty):
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty
@@ -877,7 +880,8 @@ public open class CfnInstanceStorageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty):
-          S3ConfigProperty = Wrapper(cdkObject)
+          S3ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3ConfigProperty):
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty =
@@ -1058,7 +1062,8 @@ public open class CfnInstanceStorageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty):
-          KinesisVideoStreamConfigProperty = Wrapper(cdkObject)
+          KinesisVideoStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisVideoStreamConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisVideoStreamConfigProperty):
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty
@@ -1195,7 +1200,8 @@ public open class CfnInstanceStorageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty):
-          EncryptionConfigProperty = Wrapper(cdkObject)
+          EncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionConfigProperty):
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty

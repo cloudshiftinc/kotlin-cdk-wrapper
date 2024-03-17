@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.rds.IServerlessCluster
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
@@ -211,7 +212,8 @@ public interface RdsDataSourceProps : BackedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.RdsDataSourceProps):
-        RdsDataSourceProps = Wrapper(cdkObject)
+        RdsDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? RdsDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RdsDataSourceProps):
         software.amazon.awscdk.services.appsync.RdsDataSourceProps = (wrapped as

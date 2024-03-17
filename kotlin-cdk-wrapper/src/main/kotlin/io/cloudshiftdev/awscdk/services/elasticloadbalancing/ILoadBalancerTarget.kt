@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancing
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 
@@ -41,7 +42,8 @@ public interface ILoadBalancerTarget : IConnectable {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget):
-        ILoadBalancerTarget = Wrapper(cdkObject)
+        ILoadBalancerTarget = CdkObjectWrappers.wrap(cdkObject) as? ILoadBalancerTarget ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILoadBalancerTarget):
         software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.Unit
 import kotlin.collections.List
@@ -106,7 +107,7 @@ public abstract class NatProvider internal constructor(
         instanceV2(NatInstanceProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NatProvider): NatProvider =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? NatProvider ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NatProvider): software.amazon.awscdk.services.ec2.NatProvider =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.NatProvider

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.vpclattice
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -161,7 +162,8 @@ public interface CfnAccessLogSubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps):
-        CfnAccessLogSubscriptionProps = Wrapper(cdkObject)
+        CfnAccessLogSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAccessLogSubscriptionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessLogSubscriptionProps):
         software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps = (wrapped as

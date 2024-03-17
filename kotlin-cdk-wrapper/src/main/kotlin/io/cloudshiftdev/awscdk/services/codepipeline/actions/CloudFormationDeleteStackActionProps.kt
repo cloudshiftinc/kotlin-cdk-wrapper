@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 import io.cloudshiftdev.awscdk.CfnCapabilities
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
@@ -820,7 +821,8 @@ public interface CloudFormationDeleteStackActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackActionProps):
-        CloudFormationDeleteStackActionProps = Wrapper(cdkObject)
+        CloudFormationDeleteStackActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationDeleteStackActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationDeleteStackActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackActionProps =

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.fsx
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import kotlin.String
@@ -32,7 +33,7 @@ public interface IFileSystem : IConnectable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.IFileSystem): IFileSystem =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IFileSystem ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFileSystem): software.amazon.awscdk.services.fsx.IFileSystem =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.fsx.IFileSystem

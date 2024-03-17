@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -58,7 +59,7 @@ public abstract class TrafficRouting internal constructor(
         TrafficRouting = timeBasedLinear(TimeBasedLinearTrafficRoutingProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting):
-        TrafficRouting = Wrapper(cdkObject)
+        TrafficRouting = CdkObjectWrappers.wrap(cdkObject) as? TrafficRouting ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TrafficRouting):
         software.amazon.awscdk.services.codedeploy.TrafficRouting = (wrapped as CdkObject).cdkObject

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -497,7 +498,8 @@ public open class CfnRuleset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty):
-          ThresholdProperty = Wrapper(cdkObject)
+          ThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as? ThresholdProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThresholdProperty):
           software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty = (wrapped as
@@ -605,7 +607,8 @@ public open class CfnRuleset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty):
-          SubstitutionValueProperty = Wrapper(cdkObject)
+          SubstitutionValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubstitutionValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubstitutionValueProperty):
           software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty = (wrapped
@@ -714,7 +717,8 @@ public open class CfnRuleset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ColumnSelectorProperty):
-          ColumnSelectorProperty = Wrapper(cdkObject)
+          ColumnSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnSelectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnSelectorProperty):
           software.amazon.awscdk.services.databrew.CfnRuleset.ColumnSelectorProperty = (wrapped as
@@ -1145,7 +1149,7 @@ public open class CfnRuleset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty):
-          RuleProperty = Wrapper(cdkObject)
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty = (wrapped as

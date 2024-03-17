@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Interface for states that can have 'next' states.
@@ -31,7 +32,7 @@ public interface INextable {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.INextable): INextable
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? INextable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INextable): software.amazon.awscdk.services.stepfunctions.INextable
         = (wrapped as CdkObject).cdkObject as

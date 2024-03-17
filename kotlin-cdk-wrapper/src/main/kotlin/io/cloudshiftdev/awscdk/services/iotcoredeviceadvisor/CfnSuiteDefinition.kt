@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -547,7 +548,8 @@ public open class CfnSuiteDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty):
-          SuiteDefinitionConfigurationProperty = Wrapper(cdkObject)
+          SuiteDefinitionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuiteDefinitionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SuiteDefinitionConfigurationProperty):
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty
@@ -658,7 +660,8 @@ public open class CfnSuiteDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty):
-          DeviceUnderTestProperty = Wrapper(cdkObject)
+          DeviceUnderTestProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceUnderTestProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceUnderTestProperty):
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty

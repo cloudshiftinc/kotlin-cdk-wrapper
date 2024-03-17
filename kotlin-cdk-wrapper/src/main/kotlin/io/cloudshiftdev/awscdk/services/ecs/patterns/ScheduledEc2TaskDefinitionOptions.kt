@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.Ec2TaskDefinition
 import kotlin.Unit
 
@@ -91,7 +92,8 @@ public interface ScheduledEc2TaskDefinitionOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions):
-        ScheduledEc2TaskDefinitionOptions = Wrapper(cdkObject)
+        ScheduledEc2TaskDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ScheduledEc2TaskDefinitionOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledEc2TaskDefinitionOptions):
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * An extension for Task Definitions.
@@ -36,7 +37,8 @@ public interface ITaskDefinitionExtension {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinitionExtension):
-        ITaskDefinitionExtension = Wrapper(cdkObject)
+        ITaskDefinitionExtension = CdkObjectWrappers.wrap(cdkObject) as? ITaskDefinitionExtension ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITaskDefinitionExtension):
         software.amazon.awscdk.services.ecs.ITaskDefinitionExtension = (wrapped as

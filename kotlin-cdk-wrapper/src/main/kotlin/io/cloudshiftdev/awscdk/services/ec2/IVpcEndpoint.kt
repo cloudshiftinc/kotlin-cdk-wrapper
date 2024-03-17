@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -66,7 +67,7 @@ public interface IVpcEndpoint : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IVpcEndpoint): IVpcEndpoint =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IVpcEndpoint ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IVpcEndpoint): software.amazon.awscdk.services.ec2.IVpcEndpoint =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.IVpcEndpoint

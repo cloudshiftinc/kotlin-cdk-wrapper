@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Map
@@ -57,7 +58,7 @@ public abstract class FilterOrPolicy internal constructor(
         software.amazon.awscdk.services.sns.FilterOrPolicy.policy(policy.mapValues{FilterOrPolicy.unwrap(it.value)}).let(Policy::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy): FilterOrPolicy
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? FilterOrPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FilterOrPolicy): software.amazon.awscdk.services.sns.FilterOrPolicy
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sns.FilterOrPolicy

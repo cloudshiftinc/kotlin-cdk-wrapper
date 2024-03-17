@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -152,7 +153,7 @@ public interface VariableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.VariableProps):
-        VariableProps = Wrapper(cdkObject)
+        VariableProps = CdkObjectWrappers.wrap(cdkObject) as? VariableProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VariableProps):
         software.amazon.awscdk.services.codepipeline.VariableProps = (wrapped as

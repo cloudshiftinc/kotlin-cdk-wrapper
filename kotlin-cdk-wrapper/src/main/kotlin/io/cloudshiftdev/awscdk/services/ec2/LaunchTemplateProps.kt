@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IInstanceProfile
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
@@ -964,7 +965,8 @@ public interface LaunchTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateProps):
-        LaunchTemplateProps = Wrapper(cdkObject)
+        LaunchTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateProps):
         software.amazon.awscdk.services.ec2.LaunchTemplateProps = (wrapped as CdkObject).cdkObject

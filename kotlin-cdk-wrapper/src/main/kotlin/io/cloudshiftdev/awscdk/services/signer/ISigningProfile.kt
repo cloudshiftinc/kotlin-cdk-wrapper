@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
@@ -96,7 +97,8 @@ public interface ISigningProfile : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.signer.ISigningProfile):
-        ISigningProfile = Wrapper(cdkObject)
+        ISigningProfile = CdkObjectWrappers.wrap(cdkObject) as? ISigningProfile ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISigningProfile):
         software.amazon.awscdk.services.signer.ISigningProfile = (wrapped as CdkObject).cdkObject as

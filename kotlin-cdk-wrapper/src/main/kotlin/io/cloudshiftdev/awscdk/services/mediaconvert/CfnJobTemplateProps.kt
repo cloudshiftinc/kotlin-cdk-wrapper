@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.mediaconvert
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -705,7 +706,8 @@ public interface CfnJobTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplateProps):
-        CfnJobTemplateProps = Wrapper(cdkObject)
+        CfnJobTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnJobTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnJobTemplateProps):
         software.amazon.awscdk.services.mediaconvert.CfnJobTemplateProps = (wrapped as

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.constructs.Node
 import kotlin.Boolean
@@ -141,7 +142,8 @@ public interface ITaskDefinition : IResource {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinition):
-        ITaskDefinition = Wrapper(cdkObject)
+        ITaskDefinition = CdkObjectWrappers.wrap(cdkObject) as? ITaskDefinition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ITaskDefinition):
         software.amazon.awscdk.services.ecs.ITaskDefinition = (wrapped as CdkObject).cdkObject as

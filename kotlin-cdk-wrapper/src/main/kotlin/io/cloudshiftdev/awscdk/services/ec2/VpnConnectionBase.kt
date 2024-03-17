@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import kotlin.Number
@@ -168,7 +169,8 @@ public abstract class VpnConnectionBase internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionBase):
-        VpnConnectionBase = Wrapper(cdkObject)
+        VpnConnectionBase = CdkObjectWrappers.wrap(cdkObject) as? VpnConnectionBase ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpnConnectionBase):
         software.amazon.awscdk.services.ec2.VpnConnectionBase = (wrapped as CdkObject).cdkObject as

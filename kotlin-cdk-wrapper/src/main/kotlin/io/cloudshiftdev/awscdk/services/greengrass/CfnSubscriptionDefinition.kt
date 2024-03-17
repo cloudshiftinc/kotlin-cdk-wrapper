@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -509,7 +510,8 @@ public open class CfnSubscriptionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty):
-          SubscriptionDefinitionVersionProperty = Wrapper(cdkObject)
+          SubscriptionDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubscriptionDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriptionDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty
@@ -712,7 +714,8 @@ public open class CfnSubscriptionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionProperty):
-          SubscriptionProperty = Wrapper(cdkObject)
+          SubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriptionProperty):
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionProperty

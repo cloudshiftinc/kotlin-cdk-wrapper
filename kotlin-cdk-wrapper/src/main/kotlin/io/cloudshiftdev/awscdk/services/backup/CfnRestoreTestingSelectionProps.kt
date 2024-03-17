@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.backup
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -434,7 +435,8 @@ public interface CfnRestoreTestingSelectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelectionProps):
-        CfnRestoreTestingSelectionProps = Wrapper(cdkObject)
+        CfnRestoreTestingSelectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRestoreTestingSelectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRestoreTestingSelectionProps):
         software.amazon.awscdk.services.backup.CfnRestoreTestingSelectionProps = (wrapped as

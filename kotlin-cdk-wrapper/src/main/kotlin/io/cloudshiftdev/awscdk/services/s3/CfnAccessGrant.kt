@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -714,7 +715,8 @@ public open class CfnAccessGrant internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty):
-          AccessGrantsLocationConfigurationProperty = Wrapper(cdkObject)
+          AccessGrantsLocationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessGrantsLocationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessGrantsLocationConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty
@@ -876,7 +878,8 @@ public open class CfnAccessGrant internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty):
-          GranteeProperty = Wrapper(cdkObject)
+          GranteeProperty = CdkObjectWrappers.wrap(cdkObject) as? GranteeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GranteeProperty):
           software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty = (wrapped as

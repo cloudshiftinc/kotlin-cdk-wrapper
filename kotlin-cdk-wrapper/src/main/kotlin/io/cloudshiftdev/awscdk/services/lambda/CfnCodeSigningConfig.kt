@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -413,7 +414,8 @@ public open class CfnCodeSigningConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty):
-          AllowedPublishersProperty = Wrapper(cdkObject)
+          AllowedPublishersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AllowedPublishersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AllowedPublishersProperty):
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty =
@@ -526,7 +528,8 @@ public open class CfnCodeSigningConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty):
-          CodeSigningPoliciesProperty = Wrapper(cdkObject)
+          CodeSigningPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeSigningPoliciesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeSigningPoliciesProperty):
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty =

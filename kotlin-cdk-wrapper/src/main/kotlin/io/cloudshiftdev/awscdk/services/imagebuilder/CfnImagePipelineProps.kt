@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.imagebuilder
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -639,7 +640,8 @@ public interface CfnImagePipelineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps):
-        CfnImagePipelineProps = Wrapper(cdkObject)
+        CfnImagePipelineProps = CdkObjectWrappers.wrap(cdkObject) as? CfnImagePipelineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnImagePipelineProps):
         software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps = (wrapped as

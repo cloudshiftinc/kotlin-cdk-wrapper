@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.regioninfo
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -49,7 +50,7 @@ public interface IFact {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.regioninfo.IFact): IFact =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? IFact ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFact): software.amazon.awscdk.regioninfo.IFact = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.regioninfo.IFact

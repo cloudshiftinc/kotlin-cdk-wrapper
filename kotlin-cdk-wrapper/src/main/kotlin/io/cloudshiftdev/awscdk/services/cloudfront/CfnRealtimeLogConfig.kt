@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -460,7 +461,8 @@ public open class CfnRealtimeLogConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty):
-          KinesisStreamConfigProperty = Wrapper(cdkObject)
+          KinesisStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisStreamConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty
@@ -615,7 +617,8 @@ public open class CfnRealtimeLogConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty):
-          EndPointProperty = Wrapper(cdkObject)
+          EndPointProperty = CdkObjectWrappers.wrap(cdkObject) as? EndPointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndPointProperty):
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty =

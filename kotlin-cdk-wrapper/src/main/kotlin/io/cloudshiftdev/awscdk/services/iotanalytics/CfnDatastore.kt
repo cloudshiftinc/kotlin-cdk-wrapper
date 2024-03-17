@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -758,7 +759,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty):
-          DatastorePartitionsProperty = Wrapper(cdkObject)
+          DatastorePartitionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatastorePartitionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatastorePartitionsProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty =
@@ -879,7 +881,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.ColumnProperty):
-          ColumnProperty = Wrapper(cdkObject)
+          ColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.ColumnProperty = (wrapped as
@@ -1007,7 +1010,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty):
-          IotSiteWiseMultiLayerStorageProperty = Wrapper(cdkObject)
+          IotSiteWiseMultiLayerStorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IotSiteWiseMultiLayerStorageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IotSiteWiseMultiLayerStorageProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.IotSiteWiseMultiLayerStorageProperty
@@ -1134,7 +1138,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty):
-          RetentionPeriodProperty = Wrapper(cdkObject)
+          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetentionPeriodProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.RetentionPeriodProperty =
@@ -1290,7 +1295,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3Property):
-          CustomerManagedS3Property = Wrapper(cdkObject)
+          CustomerManagedS3Property = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerManagedS3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomerManagedS3Property):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3Property =
@@ -1405,7 +1411,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty):
-          ParquetConfigurationProperty = Wrapper(cdkObject)
+          ParquetConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParquetConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParquetConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.ParquetConfigurationProperty =
@@ -1578,7 +1585,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionProperty):
-          DatastorePartitionProperty = Wrapper(cdkObject)
+          DatastorePartitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatastorePartitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatastorePartitionProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionProperty =
@@ -1695,7 +1703,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty):
-          SchemaDefinitionProperty = Wrapper(cdkObject)
+          SchemaDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaDefinitionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaDefinitionProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty =
@@ -1811,7 +1820,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty):
-          TimestampPartitionProperty = Wrapper(cdkObject)
+          TimestampPartitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimestampPartitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimestampPartitionProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.TimestampPartitionProperty =
@@ -2066,7 +2076,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastoreStorageProperty):
-          DatastoreStorageProperty = Wrapper(cdkObject)
+          DatastoreStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? DatastoreStorageProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatastoreStorageProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastoreStorageProperty =
@@ -2218,7 +2229,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.FileFormatConfigurationProperty):
-          FileFormatConfigurationProperty = Wrapper(cdkObject)
+          FileFormatConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FileFormatConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FileFormatConfigurationProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.FileFormatConfigurationProperty
@@ -2301,7 +2313,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.PartitionProperty):
-          PartitionProperty = Wrapper(cdkObject)
+          PartitionProperty = CdkObjectWrappers.wrap(cdkObject) as? PartitionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PartitionProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.PartitionProperty = (wrapped as
@@ -2427,7 +2440,8 @@ public open class CfnDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty):
-          CustomerManagedS3StorageProperty = Wrapper(cdkObject)
+          CustomerManagedS3StorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerManagedS3StorageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomerManagedS3StorageProperty):
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.CustomerManagedS3StorageProperty

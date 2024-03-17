@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
 import kotlin.String
@@ -221,7 +222,8 @@ public interface ReportGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.ReportGroupProps):
-        ReportGroupProps = Wrapper(cdkObject)
+        ReportGroupProps = CdkObjectWrappers.wrap(cdkObject) as? ReportGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReportGroupProps):
         software.amazon.awscdk.services.codebuild.ReportGroupProps = (wrapped as

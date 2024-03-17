@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lightsail
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -294,7 +295,8 @@ public interface CfnLoadBalancerTlsCertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificateProps):
-        CfnLoadBalancerTlsCertificateProps = Wrapper(cdkObject)
+        CfnLoadBalancerTlsCertificateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLoadBalancerTlsCertificateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoadBalancerTlsCertificateProps):
         software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificateProps = (wrapped as

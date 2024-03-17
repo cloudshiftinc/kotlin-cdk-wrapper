@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.waf.regional
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -146,7 +147,8 @@ public interface CfnGeoMatchSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSetProps):
-        CfnGeoMatchSetProps = Wrapper(cdkObject)
+        CfnGeoMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGeoMatchSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGeoMatchSetProps):
         software.amazon.awscdk.services.waf.regional.CfnGeoMatchSetProps = (wrapped as

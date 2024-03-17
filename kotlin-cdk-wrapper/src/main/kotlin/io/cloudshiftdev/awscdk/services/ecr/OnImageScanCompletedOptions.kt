@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecr
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.EventPattern
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.OnEventOptions
@@ -255,7 +256,8 @@ public interface OnImageScanCompletedOptions : OnEventOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions):
-        OnImageScanCompletedOptions = Wrapper(cdkObject)
+        OnImageScanCompletedOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        OnImageScanCompletedOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OnImageScanCompletedOptions):
         software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions = (wrapped as

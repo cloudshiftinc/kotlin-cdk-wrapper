@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.fis
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -160,7 +161,8 @@ public interface CfnTargetAccountConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnTargetAccountConfigurationProps):
-        CfnTargetAccountConfigurationProps = Wrapper(cdkObject)
+        CfnTargetAccountConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTargetAccountConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTargetAccountConfigurationProps):
         software.amazon.awscdk.services.fis.CfnTargetAccountConfigurationProps = (wrapped as

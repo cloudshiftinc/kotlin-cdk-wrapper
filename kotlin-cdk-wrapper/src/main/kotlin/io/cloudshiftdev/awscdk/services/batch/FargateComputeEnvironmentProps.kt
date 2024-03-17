@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -463,7 +464,8 @@ public interface FargateComputeEnvironmentProps : ManagedComputeEnvironmentProps
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironmentProps):
-        FargateComputeEnvironmentProps = Wrapper(cdkObject)
+        FargateComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        FargateComputeEnvironmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.FargateComputeEnvironmentProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -380,7 +381,8 @@ public open class CfnReplicationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty):
-          RegionConfigurationProperty = Wrapper(cdkObject)
+          RegionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegionConfigurationProperty):
           software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty
@@ -521,7 +523,8 @@ public open class CfnReplicationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty):
-          ReplicationRegionProperty = Wrapper(cdkObject)
+          ReplicationRegionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationRegionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationRegionProperty):
           software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty =

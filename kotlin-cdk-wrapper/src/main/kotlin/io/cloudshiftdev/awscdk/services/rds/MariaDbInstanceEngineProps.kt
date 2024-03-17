@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -72,7 +73,8 @@ public interface MariaDbInstanceEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps):
-        MariaDbInstanceEngineProps = Wrapper(cdkObject)
+        MariaDbInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        MariaDbInstanceEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MariaDbInstanceEngineProps):
         software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps = (wrapped as

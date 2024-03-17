@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.ScalingInterval
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ecs.CapacityProviderStrategy
@@ -1224,7 +1225,8 @@ public interface QueueProcessingEc2ServiceProps : QueueProcessingServiceBaseProp
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2ServiceProps):
-        QueueProcessingEc2ServiceProps = Wrapper(cdkObject)
+        QueueProcessingEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        QueueProcessingEc2ServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueueProcessingEc2ServiceProps):
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2ServiceProps = (wrapped as

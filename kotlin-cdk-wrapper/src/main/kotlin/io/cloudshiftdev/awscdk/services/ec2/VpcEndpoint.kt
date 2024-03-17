@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.String
 import kotlin.Unit
@@ -53,7 +54,7 @@ public abstract class VpcEndpoint internal constructor(
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpcEndpoint): VpcEndpoint =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? VpcEndpoint ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcEndpoint): software.amazon.awscdk.services.ec2.VpcEndpoint =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.VpcEndpoint

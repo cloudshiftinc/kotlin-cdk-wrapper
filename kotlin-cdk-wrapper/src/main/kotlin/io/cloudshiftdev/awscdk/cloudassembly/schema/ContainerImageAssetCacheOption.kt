@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -149,7 +150,8 @@ public interface ContainerImageAssetCacheOption {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption):
-        ContainerImageAssetCacheOption = Wrapper(cdkObject)
+        ContainerImageAssetCacheOption = CdkObjectWrappers.wrap(cdkObject) as?
+        ContainerImageAssetCacheOption ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerImageAssetCacheOption):
         software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -51,7 +52,8 @@ public interface IHttpRouteAuthorizer {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpRouteAuthorizer):
-        IHttpRouteAuthorizer = Wrapper(cdkObject)
+        IHttpRouteAuthorizer = CdkObjectWrappers.wrap(cdkObject) as? IHttpRouteAuthorizer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IHttpRouteAuthorizer):
         software.amazon.awscdk.services.apigatewayv2.IHttpRouteAuthorizer = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancing
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import kotlin.Number
 import kotlin.String
@@ -327,7 +328,8 @@ public interface LoadBalancerListener {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener):
-        LoadBalancerListener = Wrapper(cdkObject)
+        LoadBalancerListener = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerListener ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerListener):
         software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener = (wrapped as

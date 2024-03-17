@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Number
 
@@ -62,7 +63,8 @@ public abstract class VirtualRouterListener internal constructor(
         software.amazon.awscdk.services.appmesh.VirtualRouterListener.tcp(port).let(VirtualRouterListener::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener):
-        VirtualRouterListener = Wrapper(cdkObject)
+        VirtualRouterListener = CdkObjectWrappers.wrap(cdkObject) as? VirtualRouterListener ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualRouterListener):
         software.amazon.awscdk.services.appmesh.VirtualRouterListener = (wrapped as

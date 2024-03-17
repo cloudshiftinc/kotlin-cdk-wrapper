@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.acmpca.ICertificateAuthority
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
@@ -73,7 +74,8 @@ public abstract class TlsValidationTrust internal constructor(
         software.amazon.awscdk.services.appmesh.TlsValidationTrust.sds(secretName).let(MutualTlsValidationTrust::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust):
-        TlsValidationTrust = Wrapper(cdkObject)
+        TlsValidationTrust = CdkObjectWrappers.wrap(cdkObject) as? TlsValidationTrust ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TlsValidationTrust):
         software.amazon.awscdk.services.appmesh.TlsValidationTrust = (wrapped as

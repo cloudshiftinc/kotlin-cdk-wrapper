@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -181,7 +182,8 @@ public interface INetworkLoadBalancer : ILoadBalancerV2, IVpcEndpointServiceLoad
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer):
-        INetworkLoadBalancer = Wrapper(cdkObject)
+        INetworkLoadBalancer = CdkObjectWrappers.wrap(cdkObject) as? INetworkLoadBalancer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: INetworkLoadBalancer):
         software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -302,7 +303,8 @@ public interface CfnDHCPOptionsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptionsProps):
-        CfnDHCPOptionsProps = Wrapper(cdkObject)
+        CfnDHCPOptionsProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDHCPOptionsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDHCPOptionsProps):
         software.amazon.awscdk.services.ec2.CfnDHCPOptionsProps = (wrapped as CdkObject).cdkObject

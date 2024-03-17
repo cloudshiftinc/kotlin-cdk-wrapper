@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -436,7 +437,8 @@ public open class CfnResiliencyPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty):
-          FailurePolicyProperty = Wrapper(cdkObject)
+          FailurePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? FailurePolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FailurePolicyProperty):
           software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty =

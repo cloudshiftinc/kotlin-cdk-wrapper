@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Configuration of the container used to host the model.
@@ -33,7 +34,8 @@ public interface IContainerDefinition {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.IContainerDefinition):
-        IContainerDefinition = Wrapper(cdkObject)
+        IContainerDefinition = CdkObjectWrappers.wrap(cdkObject) as? IContainerDefinition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IContainerDefinition):
         software.amazon.awscdk.services.stepfunctions.tasks.IContainerDefinition = (wrapped as

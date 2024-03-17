@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.synthetics
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
@@ -80,7 +81,7 @@ public abstract class Code internal constructor(
         software.amazon.awscdk.services.synthetics.Code.fromInline(code).let(InlineCode::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.Code): Code =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as? Code ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Code): software.amazon.awscdk.services.synthetics.Code = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.synthetics.Code

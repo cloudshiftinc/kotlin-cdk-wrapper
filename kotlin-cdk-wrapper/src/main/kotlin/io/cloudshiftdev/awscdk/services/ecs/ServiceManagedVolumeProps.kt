@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -152,7 +153,8 @@ public interface ServiceManagedVolumeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedVolumeProps):
-        ServiceManagedVolumeProps = Wrapper(cdkObject)
+        ServiceManagedVolumeProps = CdkObjectWrappers.wrap(cdkObject) as? ServiceManagedVolumeProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceManagedVolumeProps):
         software.amazon.awscdk.services.ecs.ServiceManagedVolumeProps = (wrapped as

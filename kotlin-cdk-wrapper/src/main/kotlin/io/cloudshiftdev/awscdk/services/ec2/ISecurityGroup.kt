@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Node
 import kotlin.Any
 import kotlin.Boolean
@@ -422,7 +423,7 @@ public interface ISecurityGroup : IResource, IPeer {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ISecurityGroup): ISecurityGroup
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as? ISecurityGroup ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ISecurityGroup): software.amazon.awscdk.services.ec2.ISecurityGroup
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.ISecurityGroup

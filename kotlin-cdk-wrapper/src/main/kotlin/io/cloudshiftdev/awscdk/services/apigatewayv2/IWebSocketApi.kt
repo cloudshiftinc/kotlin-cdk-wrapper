@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.constructs.Node
@@ -104,7 +105,7 @@ public interface IWebSocketApi : IApi {
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IWebSocketApi):
-        IWebSocketApi = Wrapper(cdkObject)
+        IWebSocketApi = CdkObjectWrappers.wrap(cdkObject) as? IWebSocketApi ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IWebSocketApi):
         software.amazon.awscdk.services.apigatewayv2.IWebSocketApi = (wrapped as

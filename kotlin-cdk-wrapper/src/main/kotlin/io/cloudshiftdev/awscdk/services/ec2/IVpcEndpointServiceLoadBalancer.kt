@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -26,7 +27,8 @@ public interface IVpcEndpointServiceLoadBalancer {
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IVpcEndpointServiceLoadBalancer):
-        IVpcEndpointServiceLoadBalancer = Wrapper(cdkObject)
+        IVpcEndpointServiceLoadBalancer = CdkObjectWrappers.wrap(cdkObject) as?
+        IVpcEndpointServiceLoadBalancer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IVpcEndpointServiceLoadBalancer):
         software.amazon.awscdk.services.ec2.IVpcEndpointServiceLoadBalancer = (wrapped as
