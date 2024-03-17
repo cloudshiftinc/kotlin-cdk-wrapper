@@ -656,7 +656,8 @@ public open class CfnTagAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty):
-          ResourceProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceProperty
+          ResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty =
@@ -777,7 +778,8 @@ public open class CfnTagAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty):
-          DatabaseResourceProperty = CdkObjectWrappers.wrap(cdkObject) as DatabaseResourceProperty
+          DatabaseResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseResourceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatabaseResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty =
@@ -989,8 +991,8 @@ public open class CfnTagAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty):
-          TableWithColumnsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TableWithColumnsResourceProperty
+          TableWithColumnsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TableWithColumnsResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TableWithColumnsResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty
@@ -1201,7 +1203,8 @@ public open class CfnTagAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty):
-          LFTagPairProperty = CdkObjectWrappers.wrap(cdkObject) as LFTagPairProperty
+          LFTagPairProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagPairProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LFTagPairProperty):
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty =
@@ -1403,7 +1406,8 @@ public open class CfnTagAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty):
-          TableResourceProperty = CdkObjectWrappers.wrap(cdkObject) as TableResourceProperty
+          TableResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? TableResourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TableResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty =

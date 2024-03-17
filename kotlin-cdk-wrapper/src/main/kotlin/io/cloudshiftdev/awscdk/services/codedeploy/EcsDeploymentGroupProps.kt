@@ -412,7 +412,8 @@ public interface EcsDeploymentGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupProps):
-        EcsDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as EcsDeploymentGroupProps
+        EcsDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as? EcsDeploymentGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsDeploymentGroupProps):
         software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupProps = (wrapped as

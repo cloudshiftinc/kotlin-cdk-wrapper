@@ -129,7 +129,7 @@ public interface SignalsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.SignalsOptions):
-        SignalsOptions = CdkObjectWrappers.wrap(cdkObject) as SignalsOptions
+        SignalsOptions = CdkObjectWrappers.wrap(cdkObject) as? SignalsOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SignalsOptions):
         software.amazon.awscdk.services.autoscaling.SignalsOptions = (wrapped as

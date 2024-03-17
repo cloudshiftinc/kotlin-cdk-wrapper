@@ -420,8 +420,8 @@ public interface CfnVerifiedAccessTrustProviderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProviderProps):
-        CfnVerifiedAccessTrustProviderProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVerifiedAccessTrustProviderProps
+        CfnVerifiedAccessTrustProviderProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVerifiedAccessTrustProviderProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVerifiedAccessTrustProviderProps):
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProviderProps = (wrapped as

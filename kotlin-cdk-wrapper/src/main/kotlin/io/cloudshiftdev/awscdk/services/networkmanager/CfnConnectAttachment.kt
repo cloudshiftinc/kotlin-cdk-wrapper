@@ -572,8 +572,8 @@ public open class CfnConnectAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ConnectAttachmentOptionsProperty):
-          ConnectAttachmentOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectAttachmentOptionsProperty
+          ConnectAttachmentOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectAttachmentOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectAttachmentOptionsProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ConnectAttachmentOptionsProperty
@@ -728,8 +728,8 @@ public open class CfnConnectAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ProposedSegmentChangeProperty):
-          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProposedSegmentChangeProperty
+          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProposedSegmentChangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProposedSegmentChangeProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ProposedSegmentChangeProperty

@@ -548,7 +548,8 @@ public open class CfnLocationNFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty):
-          OnPremConfigProperty = CdkObjectWrappers.wrap(cdkObject) as OnPremConfigProperty
+          OnPremConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? OnPremConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnPremConfigProperty):
           software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty = (wrapped as
@@ -687,7 +688,8 @@ public open class CfnLocationNFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty):
-          MountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as MountOptionsProperty
+          MountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MountOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MountOptionsProperty):
           software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty = (wrapped as

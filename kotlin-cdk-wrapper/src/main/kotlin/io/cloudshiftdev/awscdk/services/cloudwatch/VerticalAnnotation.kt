@@ -188,7 +188,8 @@ public interface VerticalAnnotation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.VerticalAnnotation):
-        VerticalAnnotation = CdkObjectWrappers.wrap(cdkObject) as VerticalAnnotation
+        VerticalAnnotation = CdkObjectWrappers.wrap(cdkObject) as? VerticalAnnotation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VerticalAnnotation):
         software.amazon.awscdk.services.cloudwatch.VerticalAnnotation = (wrapped as

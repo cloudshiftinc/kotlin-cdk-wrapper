@@ -17,6 +17,9 @@ class ExtensionsKtTest :
             val app = App()
             val stack = Stack(scope = app, id = "TestStack")
             val bucket = Bucket(scope = stack, id = "TestBucket") { bucketName("test-bucket") }
+
+            bucket.addComment("abc")
+
             val policyStatements = policyStatements {
                 policyStatement {
                     sid("Something")
@@ -31,6 +34,8 @@ class ExtensionsKtTest :
                     )
                 }
             }
+
+            app.synth()
         }
     })
 

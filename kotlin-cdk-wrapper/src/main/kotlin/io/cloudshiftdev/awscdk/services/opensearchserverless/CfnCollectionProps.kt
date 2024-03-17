@@ -276,7 +276,8 @@ public interface CfnCollectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps):
-        CfnCollectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnCollectionProps
+        CfnCollectionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCollectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCollectionProps):
         software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps = (wrapped as

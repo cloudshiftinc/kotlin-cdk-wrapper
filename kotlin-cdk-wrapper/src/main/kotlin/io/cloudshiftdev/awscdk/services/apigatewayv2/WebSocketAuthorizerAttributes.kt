@@ -115,8 +115,8 @@ public interface WebSocketAuthorizerAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerAttributes):
-        WebSocketAuthorizerAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        WebSocketAuthorizerAttributes
+        WebSocketAuthorizerAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        WebSocketAuthorizerAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketAuthorizerAttributes):
         software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerAttributes = (wrapped as

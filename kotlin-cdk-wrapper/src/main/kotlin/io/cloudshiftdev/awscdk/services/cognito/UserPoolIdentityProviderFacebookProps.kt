@@ -261,8 +261,8 @@ public interface UserPoolIdentityProviderFacebookProps : UserPoolIdentityProvide
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderFacebookProps):
-        UserPoolIdentityProviderFacebookProps = CdkObjectWrappers.wrap(cdkObject) as
-        UserPoolIdentityProviderFacebookProps
+        UserPoolIdentityProviderFacebookProps = CdkObjectWrappers.wrap(cdkObject) as?
+        UserPoolIdentityProviderFacebookProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolIdentityProviderFacebookProps):
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderFacebookProps = (wrapped as

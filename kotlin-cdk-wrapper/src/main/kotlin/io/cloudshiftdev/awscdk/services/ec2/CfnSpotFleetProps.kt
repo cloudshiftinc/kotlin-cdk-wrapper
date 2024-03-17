@@ -343,7 +343,8 @@ public interface CfnSpotFleetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleetProps):
-        CfnSpotFleetProps = CdkObjectWrappers.wrap(cdkObject) as CfnSpotFleetProps
+        CfnSpotFleetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSpotFleetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSpotFleetProps):
         software.amazon.awscdk.services.ec2.CfnSpotFleetProps = (wrapped as CdkObject).cdkObject as

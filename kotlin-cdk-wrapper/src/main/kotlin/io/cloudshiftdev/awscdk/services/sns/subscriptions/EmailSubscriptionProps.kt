@@ -168,7 +168,8 @@ public interface EmailSubscriptionProps : SubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sns.subscriptions.EmailSubscriptionProps):
-        EmailSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as EmailSubscriptionProps
+        EmailSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as? EmailSubscriptionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmailSubscriptionProps):
         software.amazon.awscdk.services.sns.subscriptions.EmailSubscriptionProps = (wrapped as

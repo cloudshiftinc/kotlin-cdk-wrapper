@@ -112,7 +112,7 @@ public interface EmailSettings {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.EmailSettings):
-        EmailSettings = CdkObjectWrappers.wrap(cdkObject) as EmailSettings
+        EmailSettings = CdkObjectWrappers.wrap(cdkObject) as? EmailSettings ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmailSettings):
         software.amazon.awscdk.services.cognito.EmailSettings = (wrapped as CdkObject).cdkObject as

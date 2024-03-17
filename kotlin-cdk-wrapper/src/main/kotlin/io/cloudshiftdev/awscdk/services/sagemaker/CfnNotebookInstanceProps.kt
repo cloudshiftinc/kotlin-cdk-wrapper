@@ -936,7 +936,8 @@ public interface CfnNotebookInstanceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceProps):
-        CfnNotebookInstanceProps = CdkObjectWrappers.wrap(cdkObject) as CfnNotebookInstanceProps
+        CfnNotebookInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnNotebookInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotebookInstanceProps):
         software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceProps = (wrapped as

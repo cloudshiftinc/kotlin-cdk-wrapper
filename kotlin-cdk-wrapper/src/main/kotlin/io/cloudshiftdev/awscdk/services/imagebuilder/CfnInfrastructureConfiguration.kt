@@ -851,7 +851,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty):
-          S3LogsProperty = CdkObjectWrappers.wrap(cdkObject) as S3LogsProperty
+          S3LogsProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LogsProperty):
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty
@@ -963,7 +964,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty):
-          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingProperty
+          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingProperty):
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
@@ -1135,8 +1137,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty):
-          InstanceMetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceMetadataOptionsProperty
+          InstanceMetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceMetadataOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceMetadataOptionsProperty):
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty

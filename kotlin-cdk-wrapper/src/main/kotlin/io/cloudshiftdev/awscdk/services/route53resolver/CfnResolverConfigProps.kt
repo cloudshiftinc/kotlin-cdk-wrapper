@@ -117,7 +117,8 @@ public interface CfnResolverConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverConfigProps):
-        CfnResolverConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnResolverConfigProps
+        CfnResolverConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResolverConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverConfigProps):
         software.amazon.awscdk.services.route53resolver.CfnResolverConfigProps = (wrapped as

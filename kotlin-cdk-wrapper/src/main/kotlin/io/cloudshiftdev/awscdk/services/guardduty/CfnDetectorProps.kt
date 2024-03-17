@@ -341,7 +341,8 @@ public interface CfnDetectorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetectorProps):
-        CfnDetectorProps = CdkObjectWrappers.wrap(cdkObject) as CfnDetectorProps
+        CfnDetectorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDetectorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDetectorProps):
         software.amazon.awscdk.services.guardduty.CfnDetectorProps = (wrapped as

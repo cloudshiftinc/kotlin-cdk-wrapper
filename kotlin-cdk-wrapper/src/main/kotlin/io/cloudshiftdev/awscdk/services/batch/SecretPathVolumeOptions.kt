@@ -184,7 +184,8 @@ public interface SecretPathVolumeOptions : EksVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.SecretPathVolumeOptions):
-        SecretPathVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as SecretPathVolumeOptions
+        SecretPathVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as? SecretPathVolumeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretPathVolumeOptions):
         software.amazon.awscdk.services.batch.SecretPathVolumeOptions = (wrapped as

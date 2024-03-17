@@ -401,7 +401,7 @@ public interface CfnFilterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnFilterProps):
-        CfnFilterProps = CdkObjectWrappers.wrap(cdkObject) as CfnFilterProps
+        CfnFilterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFilterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFilterProps):
         software.amazon.awscdk.services.guardduty.CfnFilterProps = (wrapped as CdkObject).cdkObject

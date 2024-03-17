@@ -124,7 +124,8 @@ public interface PublicSubnetAttributes : SubnetAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PublicSubnetAttributes):
-        PublicSubnetAttributes = CdkObjectWrappers.wrap(cdkObject) as PublicSubnetAttributes
+        PublicSubnetAttributes = CdkObjectWrappers.wrap(cdkObject) as? PublicSubnetAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PublicSubnetAttributes):
         software.amazon.awscdk.services.ec2.PublicSubnetAttributes = (wrapped as

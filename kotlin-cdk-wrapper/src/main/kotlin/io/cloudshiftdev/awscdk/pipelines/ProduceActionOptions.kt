@@ -451,7 +451,8 @@ public interface ProduceActionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ProduceActionOptions):
-        ProduceActionOptions = CdkObjectWrappers.wrap(cdkObject) as ProduceActionOptions
+        ProduceActionOptions = CdkObjectWrappers.wrap(cdkObject) as? ProduceActionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProduceActionOptions):
         software.amazon.awscdk.pipelines.ProduceActionOptions = (wrapped as CdkObject).cdkObject as

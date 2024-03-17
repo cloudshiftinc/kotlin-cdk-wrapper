@@ -90,7 +90,8 @@ public interface TagOptionsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.TagOptionsProps):
-        TagOptionsProps = CdkObjectWrappers.wrap(cdkObject) as TagOptionsProps
+        TagOptionsProps = CdkObjectWrappers.wrap(cdkObject) as? TagOptionsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TagOptionsProps):
         software.amazon.awscdk.services.servicecatalog.TagOptionsProps = (wrapped as

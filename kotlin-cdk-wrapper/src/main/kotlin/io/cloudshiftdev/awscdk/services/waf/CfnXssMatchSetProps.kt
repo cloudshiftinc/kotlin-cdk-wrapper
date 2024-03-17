@@ -142,7 +142,8 @@ public interface CfnXssMatchSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnXssMatchSetProps):
-        CfnXssMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnXssMatchSetProps
+        CfnXssMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnXssMatchSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnXssMatchSetProps):
         software.amazon.awscdk.services.waf.CfnXssMatchSetProps = (wrapped as CdkObject).cdkObject

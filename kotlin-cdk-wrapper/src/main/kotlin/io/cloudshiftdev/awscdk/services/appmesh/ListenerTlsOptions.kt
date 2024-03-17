@@ -176,7 +176,8 @@ public interface ListenerTlsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.ListenerTlsOptions):
-        ListenerTlsOptions = CdkObjectWrappers.wrap(cdkObject) as ListenerTlsOptions
+        ListenerTlsOptions = CdkObjectWrappers.wrap(cdkObject) as? ListenerTlsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ListenerTlsOptions):
         software.amazon.awscdk.services.appmesh.ListenerTlsOptions = (wrapped as

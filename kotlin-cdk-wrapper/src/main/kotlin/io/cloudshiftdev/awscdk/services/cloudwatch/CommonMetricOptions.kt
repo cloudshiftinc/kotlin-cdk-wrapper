@@ -413,7 +413,8 @@ public interface CommonMetricOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CommonMetricOptions):
-        CommonMetricOptions = CdkObjectWrappers.wrap(cdkObject) as CommonMetricOptions
+        CommonMetricOptions = CdkObjectWrappers.wrap(cdkObject) as? CommonMetricOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonMetricOptions):
         software.amazon.awscdk.services.cloudwatch.CommonMetricOptions = (wrapped as

@@ -118,7 +118,8 @@ public interface CfnRouteTableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnRouteTableProps):
-        CfnRouteTableProps = CdkObjectWrappers.wrap(cdkObject) as CfnRouteTableProps
+        CfnRouteTableProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRouteTableProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRouteTableProps):
         software.amazon.awscdk.services.ec2.CfnRouteTableProps = (wrapped as CdkObject).cdkObject as

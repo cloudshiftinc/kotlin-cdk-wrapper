@@ -407,8 +407,8 @@ public open class CfnServiceAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty):
-          DefinitionParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DefinitionParameterProperty
+          DefinitionParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefinitionParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefinitionParameterProperty):
           software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty

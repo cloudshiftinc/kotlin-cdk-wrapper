@@ -579,7 +579,8 @@ public interface CodeBuildActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeBuildActionProps):
-        CodeBuildActionProps = CdkObjectWrappers.wrap(cdkObject) as CodeBuildActionProps
+        CodeBuildActionProps = CdkObjectWrappers.wrap(cdkObject) as? CodeBuildActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CodeBuildActionProps = (wrapped as

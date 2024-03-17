@@ -362,7 +362,8 @@ public interface CfnGlobalClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnGlobalClusterProps):
-        CfnGlobalClusterProps = CdkObjectWrappers.wrap(cdkObject) as CfnGlobalClusterProps
+        CfnGlobalClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGlobalClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalClusterProps):
         software.amazon.awscdk.services.rds.CfnGlobalClusterProps = (wrapped as CdkObject).cdkObject

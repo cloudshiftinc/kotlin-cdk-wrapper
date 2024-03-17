@@ -112,7 +112,8 @@ public interface CustomStateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CustomStateProps):
-        CustomStateProps = CdkObjectWrappers.wrap(cdkObject) as CustomStateProps
+        CustomStateProps = CdkObjectWrappers.wrap(cdkObject) as? CustomStateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomStateProps):
         software.amazon.awscdk.services.stepfunctions.CustomStateProps = (wrapped as

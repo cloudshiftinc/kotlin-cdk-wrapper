@@ -400,7 +400,7 @@ public interface PolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.PolicyProps): PolicyProps =
-        CdkObjectWrappers.wrap(cdkObject) as PolicyProps
+        CdkObjectWrappers.wrap(cdkObject) as? PolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PolicyProps): software.amazon.awscdk.services.iam.PolicyProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.PolicyProps

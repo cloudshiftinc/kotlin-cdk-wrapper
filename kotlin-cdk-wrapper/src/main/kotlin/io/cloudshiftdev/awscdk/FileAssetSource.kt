@@ -264,7 +264,7 @@ public interface FileAssetSource {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.FileAssetSource): FileAssetSource =
-        CdkObjectWrappers.wrap(cdkObject) as FileAssetSource
+        CdkObjectWrappers.wrap(cdkObject) as? FileAssetSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileAssetSource): software.amazon.awscdk.FileAssetSource = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.FileAssetSource

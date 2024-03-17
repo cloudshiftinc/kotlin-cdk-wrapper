@@ -172,7 +172,8 @@ public interface EcrSourceVariables {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcrSourceVariables):
-        EcrSourceVariables = CdkObjectWrappers.wrap(cdkObject) as EcrSourceVariables
+        EcrSourceVariables = CdkObjectWrappers.wrap(cdkObject) as? EcrSourceVariables ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcrSourceVariables):
         software.amazon.awscdk.services.codepipeline.actions.EcrSourceVariables = (wrapped as

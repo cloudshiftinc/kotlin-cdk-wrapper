@@ -151,8 +151,8 @@ public interface CfnAggregationAuthorizationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnAggregationAuthorizationProps):
-        CfnAggregationAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAggregationAuthorizationProps
+        CfnAggregationAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAggregationAuthorizationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAggregationAuthorizationProps):
         software.amazon.awscdk.services.config.CfnAggregationAuthorizationProps = (wrapped as

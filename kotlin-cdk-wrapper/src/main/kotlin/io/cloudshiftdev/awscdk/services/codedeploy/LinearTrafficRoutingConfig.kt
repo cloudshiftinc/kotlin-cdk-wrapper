@@ -102,7 +102,8 @@ public interface LinearTrafficRoutingConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig):
-        LinearTrafficRoutingConfig = CdkObjectWrappers.wrap(cdkObject) as LinearTrafficRoutingConfig
+        LinearTrafficRoutingConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        LinearTrafficRoutingConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LinearTrafficRoutingConfig):
         software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig = (wrapped as

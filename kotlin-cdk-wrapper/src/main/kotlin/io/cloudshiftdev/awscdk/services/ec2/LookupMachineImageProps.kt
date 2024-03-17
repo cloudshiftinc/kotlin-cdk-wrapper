@@ -217,7 +217,8 @@ public interface LookupMachineImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LookupMachineImageProps):
-        LookupMachineImageProps = CdkObjectWrappers.wrap(cdkObject) as LookupMachineImageProps
+        LookupMachineImageProps = CdkObjectWrappers.wrap(cdkObject) as? LookupMachineImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LookupMachineImageProps):
         software.amazon.awscdk.services.ec2.LookupMachineImageProps = (wrapped as

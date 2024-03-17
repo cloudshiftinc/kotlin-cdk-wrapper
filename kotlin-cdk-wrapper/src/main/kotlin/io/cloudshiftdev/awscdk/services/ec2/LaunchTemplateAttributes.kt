@@ -140,7 +140,8 @@ public interface LaunchTemplateAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateAttributes):
-        LaunchTemplateAttributes = CdkObjectWrappers.wrap(cdkObject) as LaunchTemplateAttributes
+        LaunchTemplateAttributes = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateAttributes):
         software.amazon.awscdk.services.ec2.LaunchTemplateAttributes = (wrapped as

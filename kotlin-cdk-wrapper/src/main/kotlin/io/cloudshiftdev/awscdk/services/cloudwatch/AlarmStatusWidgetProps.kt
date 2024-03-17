@@ -265,7 +265,8 @@ public interface AlarmStatusWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetProps):
-        AlarmStatusWidgetProps = CdkObjectWrappers.wrap(cdkObject) as AlarmStatusWidgetProps
+        AlarmStatusWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? AlarmStatusWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AlarmStatusWidgetProps):
         software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetProps = (wrapped as

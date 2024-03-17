@@ -570,7 +570,8 @@ public open class CfnClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty):
-          JsonClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as JsonClassifierProperty
+          JsonClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonClassifierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonClassifierProperty):
           software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty = (wrapped as
@@ -756,7 +757,8 @@ public open class CfnClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty):
-          GrokClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as GrokClassifierProperty
+          GrokClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as? GrokClassifierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrokClassifierProperty):
           software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty = (wrapped as
@@ -1157,7 +1159,8 @@ public open class CfnClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty):
-          CsvClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as CsvClassifierProperty
+          CsvClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvClassifierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CsvClassifierProperty):
           software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty = (wrapped as
@@ -1314,7 +1317,8 @@ public open class CfnClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty):
-          XMLClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as XMLClassifierProperty
+          XMLClassifierProperty = CdkObjectWrappers.wrap(cdkObject) as? XMLClassifierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: XMLClassifierProperty):
           software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty = (wrapped as

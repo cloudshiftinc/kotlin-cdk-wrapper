@@ -158,7 +158,8 @@ public interface PrefixListProps : PrefixListOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PrefixListProps):
-        PrefixListProps = CdkObjectWrappers.wrap(cdkObject) as PrefixListProps
+        PrefixListProps = CdkObjectWrappers.wrap(cdkObject) as? PrefixListProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PrefixListProps):
         software.amazon.awscdk.services.ec2.PrefixListProps = (wrapped as CdkObject).cdkObject as

@@ -404,8 +404,8 @@ public interface AuthenticateCognitoActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoActionProps):
-        AuthenticateCognitoActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        AuthenticateCognitoActionProps
+        AuthenticateCognitoActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AuthenticateCognitoActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuthenticateCognitoActionProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoActionProps

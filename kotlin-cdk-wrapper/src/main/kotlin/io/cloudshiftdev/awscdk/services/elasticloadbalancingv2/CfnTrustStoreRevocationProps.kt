@@ -140,8 +140,8 @@ public interface CfnTrustStoreRevocationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocationProps):
-        CfnTrustStoreRevocationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTrustStoreRevocationProps
+        CfnTrustStoreRevocationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrustStoreRevocationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrustStoreRevocationProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocationProps =

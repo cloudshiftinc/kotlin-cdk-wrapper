@@ -187,7 +187,8 @@ public interface ProjectNotifyOnOptions : NotificationRuleOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.ProjectNotifyOnOptions):
-        ProjectNotifyOnOptions = CdkObjectWrappers.wrap(cdkObject) as ProjectNotifyOnOptions
+        ProjectNotifyOnOptions = CdkObjectWrappers.wrap(cdkObject) as? ProjectNotifyOnOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProjectNotifyOnOptions):
         software.amazon.awscdk.services.codebuild.ProjectNotifyOnOptions = (wrapped as

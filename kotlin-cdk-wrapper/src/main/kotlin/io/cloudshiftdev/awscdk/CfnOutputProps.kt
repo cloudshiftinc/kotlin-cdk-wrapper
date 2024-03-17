@@ -216,7 +216,7 @@ public interface CfnOutputProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnOutputProps): CfnOutputProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnOutputProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnOutputProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOutputProps): software.amazon.awscdk.CfnOutputProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.CfnOutputProps

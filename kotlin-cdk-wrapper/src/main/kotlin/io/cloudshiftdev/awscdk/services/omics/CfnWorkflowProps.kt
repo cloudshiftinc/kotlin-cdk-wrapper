@@ -308,7 +308,8 @@ public interface CfnWorkflowProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnWorkflowProps):
-        CfnWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as CfnWorkflowProps
+        CfnWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkflowProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkflowProps):
         software.amazon.awscdk.services.omics.CfnWorkflowProps = (wrapped as CdkObject).cdkObject as

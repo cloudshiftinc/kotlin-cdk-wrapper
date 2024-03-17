@@ -360,7 +360,8 @@ public interface CfnLocationS3Props {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationS3Props):
-        CfnLocationS3Props = CdkObjectWrappers.wrap(cdkObject) as CfnLocationS3Props
+        CfnLocationS3Props = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationS3Props ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationS3Props):
         software.amazon.awscdk.services.datasync.CfnLocationS3Props = (wrapped as

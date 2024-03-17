@@ -393,7 +393,8 @@ public interface CfnRuleGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnRuleGroupProps):
-        CfnRuleGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnRuleGroupProps
+        CfnRuleGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRuleGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleGroupProps):
         software.amazon.awscdk.services.networkfirewall.CfnRuleGroupProps = (wrapped as

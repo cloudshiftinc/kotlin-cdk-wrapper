@@ -52,6 +52,10 @@ public abstract class Secret internal constructor(
    */
   public open fun hasField(): Boolean? = unwrap(this).getHasField()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.batch.Secret,
+  ) : Secret(cdkObject)
+
   public companion object {
     public fun fromSecretsManager(secret: ISecret): Secret =
         software.amazon.awscdk.services.batch.Secret.fromSecretsManager(secret.let(ISecret::unwrap)).let(Secret::wrap)
@@ -82,7 +86,7 @@ public abstract class Secret internal constructor(
         software.amazon.awscdk.services.batch.Secret.fromSsmParameter(parameter.let(IParameter::unwrap)).let(Secret::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.Secret): Secret =
-        CdkObjectWrappers.wrap(cdkObject) as Secret
+        CdkObjectWrappers.wrap(cdkObject) as? Secret ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Secret): software.amazon.awscdk.services.batch.Secret = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.batch.Secret

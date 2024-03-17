@@ -207,7 +207,8 @@ public interface CfnCustomEntityTypeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityTypeProps):
-        CfnCustomEntityTypeProps = CdkObjectWrappers.wrap(cdkObject) as CfnCustomEntityTypeProps
+        CfnCustomEntityTypeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCustomEntityTypeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomEntityTypeProps):
         software.amazon.awscdk.services.glue.CfnCustomEntityTypeProps = (wrapped as

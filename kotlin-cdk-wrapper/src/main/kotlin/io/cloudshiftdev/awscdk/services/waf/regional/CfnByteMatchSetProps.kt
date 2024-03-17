@@ -164,7 +164,8 @@ public interface CfnByteMatchSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps):
-        CfnByteMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnByteMatchSetProps
+        CfnByteMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnByteMatchSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnByteMatchSetProps):
         software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps = (wrapped as

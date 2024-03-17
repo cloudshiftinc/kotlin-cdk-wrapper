@@ -115,7 +115,8 @@ public interface EnvironmentFileConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFileConfig):
-        EnvironmentFileConfig = CdkObjectWrappers.wrap(cdkObject) as EnvironmentFileConfig
+        EnvironmentFileConfig = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentFileConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentFileConfig):
         software.amazon.awscdk.services.ecs.EnvironmentFileConfig = (wrapped as CdkObject).cdkObject

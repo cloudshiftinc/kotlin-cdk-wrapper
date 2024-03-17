@@ -256,7 +256,8 @@ public interface BootstrapOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.BootstrapOptions):
-        BootstrapOptions = CdkObjectWrappers.wrap(cdkObject) as BootstrapOptions
+        BootstrapOptions = CdkObjectWrappers.wrap(cdkObject) as? BootstrapOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BootstrapOptions):
         software.amazon.awscdk.services.eks.BootstrapOptions = (wrapped as CdkObject).cdkObject as

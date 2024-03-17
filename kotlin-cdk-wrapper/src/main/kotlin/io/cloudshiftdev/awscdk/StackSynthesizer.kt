@@ -116,9 +116,13 @@ public abstract class StackSynthesizer internal constructor(
     unwrap(this).synthesize(session.let(ISynthesisSession::unwrap))
   }
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.StackSynthesizer,
+  ) : StackSynthesizer(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.StackSynthesizer): StackSynthesizer =
-        CdkObjectWrappers.wrap(cdkObject) as StackSynthesizer
+        CdkObjectWrappers.wrap(cdkObject) as? StackSynthesizer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSynthesizer): software.amazon.awscdk.StackSynthesizer =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.StackSynthesizer

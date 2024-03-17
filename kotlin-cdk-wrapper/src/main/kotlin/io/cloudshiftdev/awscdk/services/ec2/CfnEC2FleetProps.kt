@@ -847,7 +847,8 @@ public interface CfnEC2FleetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2FleetProps):
-        CfnEC2FleetProps = CdkObjectWrappers.wrap(cdkObject) as CfnEC2FleetProps
+        CfnEC2FleetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEC2FleetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEC2FleetProps):
         software.amazon.awscdk.services.ec2.CfnEC2FleetProps = (wrapped as CdkObject).cdkObject as

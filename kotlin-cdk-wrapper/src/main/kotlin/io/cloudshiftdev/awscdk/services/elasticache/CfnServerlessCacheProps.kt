@@ -729,7 +729,8 @@ public interface CfnServerlessCacheProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCacheProps):
-        CfnServerlessCacheProps = CdkObjectWrappers.wrap(cdkObject) as CfnServerlessCacheProps
+        CfnServerlessCacheProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServerlessCacheProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServerlessCacheProps):
         software.amazon.awscdk.services.elasticache.CfnServerlessCacheProps = (wrapped as

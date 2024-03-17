@@ -281,8 +281,8 @@ public interface CfnFirewallRuleGroupAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociationProps):
-        CfnFirewallRuleGroupAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnFirewallRuleGroupAssociationProps
+        CfnFirewallRuleGroupAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnFirewallRuleGroupAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallRuleGroupAssociationProps):
         software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociationProps =

@@ -119,7 +119,8 @@ public interface ContainerImageConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ContainerImageConfig):
-        ContainerImageConfig = CdkObjectWrappers.wrap(cdkObject) as ContainerImageConfig
+        ContainerImageConfig = CdkObjectWrappers.wrap(cdkObject) as? ContainerImageConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerImageConfig):
         software.amazon.awscdk.services.ecs.ContainerImageConfig = (wrapped as CdkObject).cdkObject

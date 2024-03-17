@@ -385,7 +385,8 @@ public interface DynamoEventSourceProps : StreamEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.DynamoEventSourceProps):
-        DynamoEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as DynamoEventSourceProps
+        DynamoEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as? DynamoEventSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DynamoEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.DynamoEventSourceProps = (wrapped as

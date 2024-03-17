@@ -127,7 +127,8 @@ public interface OutputDataConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.OutputDataConfig):
-        OutputDataConfig = CdkObjectWrappers.wrap(cdkObject) as OutputDataConfig
+        OutputDataConfig = CdkObjectWrappers.wrap(cdkObject) as? OutputDataConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OutputDataConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.OutputDataConfig = (wrapped as

@@ -573,7 +573,8 @@ public open class CfnAllowList internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty):
-          S3WordsListProperty = CdkObjectWrappers.wrap(cdkObject) as S3WordsListProperty
+          S3WordsListProperty = CdkObjectWrappers.wrap(cdkObject) as? S3WordsListProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3WordsListProperty):
           software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty = (wrapped as
@@ -730,7 +731,8 @@ public open class CfnAllowList internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty):
-          CriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as CriteriaProperty
+          CriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? CriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CriteriaProperty):
           software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty = (wrapped as

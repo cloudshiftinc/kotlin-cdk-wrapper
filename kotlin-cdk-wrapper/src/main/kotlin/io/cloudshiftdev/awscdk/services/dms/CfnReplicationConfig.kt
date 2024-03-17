@@ -1111,7 +1111,8 @@ public open class CfnReplicationConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty):
-          ComputeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ComputeConfigProperty
+          ComputeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ComputeConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputeConfigProperty):
           software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty = (wrapped

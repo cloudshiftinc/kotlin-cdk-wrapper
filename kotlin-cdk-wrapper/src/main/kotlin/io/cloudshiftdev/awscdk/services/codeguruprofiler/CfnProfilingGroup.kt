@@ -467,7 +467,8 @@ public open class CfnProfilingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty):
-          AgentPermissionsProperty = CdkObjectWrappers.wrap(cdkObject) as AgentPermissionsProperty
+          AgentPermissionsProperty = CdkObjectWrappers.wrap(cdkObject) as? AgentPermissionsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AgentPermissionsProperty):
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty
@@ -579,7 +580,8 @@ public open class CfnProfilingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty):
-          ChannelProperty = CdkObjectWrappers.wrap(cdkObject) as ChannelProperty
+          ChannelProperty = CdkObjectWrappers.wrap(cdkObject) as? ChannelProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ChannelProperty):
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty =

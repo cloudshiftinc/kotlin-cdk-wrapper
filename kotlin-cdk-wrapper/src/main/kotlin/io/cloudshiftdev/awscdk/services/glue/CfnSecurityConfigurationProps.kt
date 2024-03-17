@@ -160,8 +160,8 @@ public interface CfnSecurityConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfigurationProps):
-        CfnSecurityConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSecurityConfigurationProps
+        CfnSecurityConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSecurityConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityConfigurationProps):
         software.amazon.awscdk.services.glue.CfnSecurityConfigurationProps = (wrapped as

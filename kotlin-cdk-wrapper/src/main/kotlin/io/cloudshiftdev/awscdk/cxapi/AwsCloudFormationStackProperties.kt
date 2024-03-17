@@ -157,8 +157,8 @@ public interface AwsCloudFormationStackProperties {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.AwsCloudFormationStackProperties):
-        AwsCloudFormationStackProperties = CdkObjectWrappers.wrap(cdkObject) as
-        AwsCloudFormationStackProperties
+        AwsCloudFormationStackProperties = CdkObjectWrappers.wrap(cdkObject) as?
+        AwsCloudFormationStackProperties ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsCloudFormationStackProperties):
         software.amazon.awscdk.cxapi.AwsCloudFormationStackProperties = (wrapped as

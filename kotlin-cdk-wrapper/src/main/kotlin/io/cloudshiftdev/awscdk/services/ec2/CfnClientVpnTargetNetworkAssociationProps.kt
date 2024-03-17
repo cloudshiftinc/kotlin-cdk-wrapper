@@ -109,8 +109,8 @@ public interface CfnClientVpnTargetNetworkAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociationProps):
-        CfnClientVpnTargetNetworkAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnClientVpnTargetNetworkAssociationProps
+        CfnClientVpnTargetNetworkAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnClientVpnTargetNetworkAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClientVpnTargetNetworkAssociationProps):
         software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociationProps = (wrapped as

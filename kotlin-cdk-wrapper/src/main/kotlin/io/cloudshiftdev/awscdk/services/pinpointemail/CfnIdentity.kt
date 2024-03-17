@@ -687,8 +687,8 @@ public open class CfnIdentity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty):
-          MailFromAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MailFromAttributesProperty
+          MailFromAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MailFromAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MailFromAttributesProperty):
           software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty =

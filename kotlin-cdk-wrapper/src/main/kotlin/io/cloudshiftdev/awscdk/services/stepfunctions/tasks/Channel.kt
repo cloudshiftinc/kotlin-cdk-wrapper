@@ -291,7 +291,7 @@ public interface Channel {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Channel):
-        Channel = CdkObjectWrappers.wrap(cdkObject) as Channel
+        Channel = CdkObjectWrappers.wrap(cdkObject) as? Channel ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Channel):
         software.amazon.awscdk.services.stepfunctions.tasks.Channel = (wrapped as

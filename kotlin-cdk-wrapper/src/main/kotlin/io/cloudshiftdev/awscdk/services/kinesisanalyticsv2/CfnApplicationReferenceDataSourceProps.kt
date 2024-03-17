@@ -199,8 +199,8 @@ public interface CfnApplicationReferenceDataSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSourceProps):
-        CfnApplicationReferenceDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnApplicationReferenceDataSourceProps
+        CfnApplicationReferenceDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnApplicationReferenceDataSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationReferenceDataSourceProps):
         software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSourceProps =

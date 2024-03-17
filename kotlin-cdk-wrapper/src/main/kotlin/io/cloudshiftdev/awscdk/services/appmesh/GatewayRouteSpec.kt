@@ -42,6 +42,10 @@ public abstract class GatewayRouteSpec internal constructor(
   public open fun bind(scope: Construct): GatewayRouteSpecConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(GatewayRouteSpecConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec,
+  ) : GatewayRouteSpec(cdkObject)
+
   public companion object {
     public fun grpc(options: GrpcGatewayRouteSpecOptions): GatewayRouteSpec =
         software.amazon.awscdk.services.appmesh.GatewayRouteSpec.grpc(options.let(GrpcGatewayRouteSpecOptions::unwrap)).let(GatewayRouteSpec::wrap)
@@ -68,7 +72,8 @@ public abstract class GatewayRouteSpec internal constructor(
         http2(HttpGatewayRouteSpecOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec):
-        GatewayRouteSpec = CdkObjectWrappers.wrap(cdkObject) as GatewayRouteSpec
+        GatewayRouteSpec = CdkObjectWrappers.wrap(cdkObject) as? GatewayRouteSpec ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayRouteSpec):
         software.amazon.awscdk.services.appmesh.GatewayRouteSpec = (wrapped as CdkObject).cdkObject

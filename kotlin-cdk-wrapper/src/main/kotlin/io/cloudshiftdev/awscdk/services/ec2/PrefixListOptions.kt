@@ -73,7 +73,8 @@ public interface PrefixListOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PrefixListOptions):
-        PrefixListOptions = CdkObjectWrappers.wrap(cdkObject) as PrefixListOptions
+        PrefixListOptions = CdkObjectWrappers.wrap(cdkObject) as? PrefixListOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PrefixListOptions):
         software.amazon.awscdk.services.ec2.PrefixListOptions = (wrapped as CdkObject).cdkObject as

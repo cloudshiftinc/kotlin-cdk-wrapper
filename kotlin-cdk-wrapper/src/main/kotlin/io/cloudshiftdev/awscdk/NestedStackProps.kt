@@ -410,7 +410,7 @@ public interface NestedStackProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.NestedStackProps): NestedStackProps =
-        CdkObjectWrappers.wrap(cdkObject) as NestedStackProps
+        CdkObjectWrappers.wrap(cdkObject) as? NestedStackProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NestedStackProps): software.amazon.awscdk.NestedStackProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.NestedStackProps

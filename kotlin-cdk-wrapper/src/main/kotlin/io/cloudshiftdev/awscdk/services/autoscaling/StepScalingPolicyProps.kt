@@ -346,7 +346,8 @@ public interface StepScalingPolicyProps : BasicStepScalingPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.StepScalingPolicyProps):
-        StepScalingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as StepScalingPolicyProps
+        StepScalingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? StepScalingPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StepScalingPolicyProps):
         software.amazon.awscdk.services.autoscaling.StepScalingPolicyProps = (wrapped as

@@ -123,10 +123,15 @@ public abstract class TargetGroupBase internal constructor(
    */
   public override fun targetGroupName(): String = unwrap(this).getTargetGroupName()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase,
+  ) : TargetGroupBase(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase):
-        TargetGroupBase = CdkObjectWrappers.wrap(cdkObject) as TargetGroupBase
+        TargetGroupBase = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupBase ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TargetGroupBase):
         software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase = (wrapped as

@@ -154,7 +154,7 @@ public interface Acl {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.Acl): Acl =
-        CdkObjectWrappers.wrap(cdkObject) as Acl
+        CdkObjectWrappers.wrap(cdkObject) as? Acl ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Acl): software.amazon.awscdk.services.efs.Acl = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.efs.Acl

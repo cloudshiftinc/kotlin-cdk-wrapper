@@ -307,7 +307,8 @@ public interface CfnEmailTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailTemplateProps):
-        CfnEmailTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnEmailTemplateProps
+        CfnEmailTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEmailTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEmailTemplateProps):
         software.amazon.awscdk.services.pinpoint.CfnEmailTemplateProps = (wrapped as

@@ -250,7 +250,8 @@ public interface ServerlessScalingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessScalingOptions):
-        ServerlessScalingOptions = CdkObjectWrappers.wrap(cdkObject) as ServerlessScalingOptions
+        ServerlessScalingOptions = CdkObjectWrappers.wrap(cdkObject) as? ServerlessScalingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessScalingOptions):
         software.amazon.awscdk.services.rds.ServerlessScalingOptions = (wrapped as

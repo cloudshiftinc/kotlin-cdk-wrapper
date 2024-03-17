@@ -106,7 +106,8 @@ public interface CustomDomainOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CustomDomainOptions):
-        CustomDomainOptions = CdkObjectWrappers.wrap(cdkObject) as CustomDomainOptions
+        CustomDomainOptions = CdkObjectWrappers.wrap(cdkObject) as? CustomDomainOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomDomainOptions):
         software.amazon.awscdk.services.cognito.CustomDomainOptions = (wrapped as

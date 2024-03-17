@@ -747,7 +747,8 @@ public open class CfnWebhook internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty):
-          WebhookFilterRuleProperty = CdkObjectWrappers.wrap(cdkObject) as WebhookFilterRuleProperty
+          WebhookFilterRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebhookFilterRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebhookFilterRuleProperty):
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty =
@@ -875,8 +876,8 @@ public open class CfnWebhook internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty):
-          WebhookAuthConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          WebhookAuthConfigurationProperty
+          WebhookAuthConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebhookAuthConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebhookAuthConfigurationProperty):
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty =

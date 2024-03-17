@@ -101,7 +101,8 @@ public interface HostedZoneAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.HostedZoneAttributes):
-        HostedZoneAttributes = CdkObjectWrappers.wrap(cdkObject) as HostedZoneAttributes
+        HostedZoneAttributes = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HostedZoneAttributes):
         software.amazon.awscdk.services.route53.HostedZoneAttributes = (wrapped as

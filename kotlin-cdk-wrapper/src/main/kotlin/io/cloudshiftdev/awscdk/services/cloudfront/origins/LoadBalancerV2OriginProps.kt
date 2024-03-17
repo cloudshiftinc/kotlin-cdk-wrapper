@@ -404,7 +404,8 @@ public interface LoadBalancerV2OriginProps : HttpOriginProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2OriginProps):
-        LoadBalancerV2OriginProps = CdkObjectWrappers.wrap(cdkObject) as LoadBalancerV2OriginProps
+        LoadBalancerV2OriginProps = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerV2OriginProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerV2OriginProps):
         software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2OriginProps = (wrapped as

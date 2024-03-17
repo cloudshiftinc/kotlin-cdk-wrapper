@@ -239,7 +239,8 @@ public interface CfnSAMLProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnSAMLProviderProps):
-        CfnSAMLProviderProps = CdkObjectWrappers.wrap(cdkObject) as CfnSAMLProviderProps
+        CfnSAMLProviderProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSAMLProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSAMLProviderProps):
         software.amazon.awscdk.services.iam.CfnSAMLProviderProps = (wrapped as CdkObject).cdkObject

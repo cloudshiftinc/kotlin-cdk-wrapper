@@ -250,7 +250,8 @@ public interface CfnVariantStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnVariantStoreProps):
-        CfnVariantStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnVariantStoreProps
+        CfnVariantStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVariantStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVariantStoreProps):
         software.amazon.awscdk.services.omics.CfnVariantStoreProps = (wrapped as

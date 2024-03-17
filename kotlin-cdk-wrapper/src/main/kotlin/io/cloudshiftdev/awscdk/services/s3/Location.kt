@@ -207,7 +207,7 @@ public interface Location {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.Location): Location =
-        CdkObjectWrappers.wrap(cdkObject) as Location
+        CdkObjectWrappers.wrap(cdkObject) as? Location ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Location): software.amazon.awscdk.services.s3.Location = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.s3.Location

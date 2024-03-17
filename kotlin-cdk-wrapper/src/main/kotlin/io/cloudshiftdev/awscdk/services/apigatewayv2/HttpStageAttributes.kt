@@ -89,7 +89,8 @@ public interface HttpStageAttributes : StageAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes):
-        HttpStageAttributes = CdkObjectWrappers.wrap(cdkObject) as HttpStageAttributes
+        HttpStageAttributes = CdkObjectWrappers.wrap(cdkObject) as? HttpStageAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpStageAttributes):
         software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes = (wrapped as

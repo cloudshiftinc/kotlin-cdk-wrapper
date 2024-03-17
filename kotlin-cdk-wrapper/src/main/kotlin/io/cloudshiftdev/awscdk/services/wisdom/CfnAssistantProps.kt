@@ -302,7 +302,8 @@ public interface CfnAssistantProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantProps):
-        CfnAssistantProps = CdkObjectWrappers.wrap(cdkObject) as CfnAssistantProps
+        CfnAssistantProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAssistantProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssistantProps):
         software.amazon.awscdk.services.wisdom.CfnAssistantProps = (wrapped as CdkObject).cdkObject

@@ -172,7 +172,8 @@ public interface AddEventSelectorOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions):
-        AddEventSelectorOptions = CdkObjectWrappers.wrap(cdkObject) as AddEventSelectorOptions
+        AddEventSelectorOptions = CdkObjectWrappers.wrap(cdkObject) as? AddEventSelectorOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddEventSelectorOptions):
         software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions = (wrapped as

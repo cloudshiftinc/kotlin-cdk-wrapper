@@ -379,7 +379,8 @@ public interface AaaaRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.AaaaRecordProps):
-        AaaaRecordProps = CdkObjectWrappers.wrap(cdkObject) as AaaaRecordProps
+        AaaaRecordProps = CdkObjectWrappers.wrap(cdkObject) as? AaaaRecordProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AaaaRecordProps):
         software.amazon.awscdk.services.route53.AaaaRecordProps = (wrapped as CdkObject).cdkObject

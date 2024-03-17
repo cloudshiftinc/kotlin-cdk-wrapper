@@ -299,7 +299,8 @@ public interface CfnDeviceDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionProps):
-        CfnDeviceDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnDeviceDefinitionProps
+        CfnDeviceDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDeviceDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceDefinitionProps):
         software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionProps = (wrapped as

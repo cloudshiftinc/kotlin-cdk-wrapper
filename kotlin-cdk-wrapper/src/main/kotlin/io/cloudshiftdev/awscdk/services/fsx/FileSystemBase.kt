@@ -30,9 +30,13 @@ public abstract class FileSystemBase internal constructor(
    */
   public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.fsx.FileSystemBase,
+  ) : FileSystemBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.FileSystemBase): FileSystemBase
-        = CdkObjectWrappers.wrap(cdkObject) as FileSystemBase
+        = CdkObjectWrappers.wrap(cdkObject) as? FileSystemBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSystemBase): software.amazon.awscdk.services.fsx.FileSystemBase
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.fsx.FileSystemBase

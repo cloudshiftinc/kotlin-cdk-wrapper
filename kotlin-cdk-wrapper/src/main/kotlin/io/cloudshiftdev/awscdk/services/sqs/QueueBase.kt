@@ -474,9 +474,13 @@ public abstract class QueueBase internal constructor(
    */
   public override fun queueUrl(): String = unwrap(this).getQueueUrl()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.sqs.QueueBase,
+  ) : QueueBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.QueueBase): QueueBase =
-        CdkObjectWrappers.wrap(cdkObject) as QueueBase
+        CdkObjectWrappers.wrap(cdkObject) as? QueueBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueueBase): software.amazon.awscdk.services.sqs.QueueBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sqs.QueueBase

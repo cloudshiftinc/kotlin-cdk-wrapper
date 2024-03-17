@@ -156,7 +156,8 @@ public interface FileDestination : AwsDestination {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.FileDestination):
-        FileDestination = CdkObjectWrappers.wrap(cdkObject) as FileDestination
+        FileDestination = CdkObjectWrappers.wrap(cdkObject) as? FileDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileDestination):
         software.amazon.awscdk.cloudassembly.schema.FileDestination = (wrapped as

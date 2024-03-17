@@ -399,7 +399,8 @@ public interface CfnMicrosoftADProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.directoryservice.CfnMicrosoftADProps):
-        CfnMicrosoftADProps = CdkObjectWrappers.wrap(cdkObject) as CfnMicrosoftADProps
+        CfnMicrosoftADProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMicrosoftADProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMicrosoftADProps):
         software.amazon.awscdk.services.directoryservice.CfnMicrosoftADProps = (wrapped as

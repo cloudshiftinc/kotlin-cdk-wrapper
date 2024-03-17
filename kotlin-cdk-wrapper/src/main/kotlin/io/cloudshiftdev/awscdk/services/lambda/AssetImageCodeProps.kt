@@ -703,7 +703,8 @@ public interface AssetImageCodeProps : DockerImageAssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AssetImageCodeProps):
-        AssetImageCodeProps = CdkObjectWrappers.wrap(cdkObject) as AssetImageCodeProps
+        AssetImageCodeProps = CdkObjectWrappers.wrap(cdkObject) as? AssetImageCodeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetImageCodeProps):
         software.amazon.awscdk.services.lambda.AssetImageCodeProps = (wrapped as

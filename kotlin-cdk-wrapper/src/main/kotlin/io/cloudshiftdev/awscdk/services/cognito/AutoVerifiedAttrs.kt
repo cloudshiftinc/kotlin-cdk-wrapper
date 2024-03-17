@@ -114,7 +114,8 @@ public interface AutoVerifiedAttrs {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.AutoVerifiedAttrs):
-        AutoVerifiedAttrs = CdkObjectWrappers.wrap(cdkObject) as AutoVerifiedAttrs
+        AutoVerifiedAttrs = CdkObjectWrappers.wrap(cdkObject) as? AutoVerifiedAttrs ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoVerifiedAttrs):
         software.amazon.awscdk.services.cognito.AutoVerifiedAttrs = (wrapped as CdkObject).cdkObject

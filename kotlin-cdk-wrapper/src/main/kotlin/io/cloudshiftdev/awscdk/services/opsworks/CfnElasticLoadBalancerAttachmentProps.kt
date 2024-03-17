@@ -111,8 +111,8 @@ public interface CfnElasticLoadBalancerAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachmentProps):
-        CfnElasticLoadBalancerAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnElasticLoadBalancerAttachmentProps
+        CfnElasticLoadBalancerAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnElasticLoadBalancerAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnElasticLoadBalancerAttachmentProps):
         software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachmentProps = (wrapped as

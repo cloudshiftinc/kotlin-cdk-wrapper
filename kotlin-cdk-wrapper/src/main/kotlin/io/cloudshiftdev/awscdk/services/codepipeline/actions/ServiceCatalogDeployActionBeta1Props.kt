@@ -269,8 +269,8 @@ public interface ServiceCatalogDeployActionBeta1Props : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1Props):
-        ServiceCatalogDeployActionBeta1Props = CdkObjectWrappers.wrap(cdkObject) as
-        ServiceCatalogDeployActionBeta1Props
+        ServiceCatalogDeployActionBeta1Props = CdkObjectWrappers.wrap(cdkObject) as?
+        ServiceCatalogDeployActionBeta1Props ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceCatalogDeployActionBeta1Props):
         software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1Props =

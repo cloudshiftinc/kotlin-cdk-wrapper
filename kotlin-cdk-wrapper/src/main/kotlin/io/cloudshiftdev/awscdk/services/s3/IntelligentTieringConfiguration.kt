@@ -210,8 +210,8 @@ public interface IntelligentTieringConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.IntelligentTieringConfiguration):
-        IntelligentTieringConfiguration = CdkObjectWrappers.wrap(cdkObject) as
-        IntelligentTieringConfiguration
+        IntelligentTieringConfiguration = CdkObjectWrappers.wrap(cdkObject) as?
+        IntelligentTieringConfiguration ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IntelligentTieringConfiguration):
         software.amazon.awscdk.services.s3.IntelligentTieringConfiguration = (wrapped as

@@ -573,7 +573,7 @@ public interface CfnLaunchProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunchProps):
-        CfnLaunchProps = CdkObjectWrappers.wrap(cdkObject) as CfnLaunchProps
+        CfnLaunchProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLaunchProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchProps):
         software.amazon.awscdk.services.evidently.CfnLaunchProps = (wrapped as CdkObject).cdkObject

@@ -95,7 +95,8 @@ public interface EnableScalingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.EnableScalingProps):
-        EnableScalingProps = CdkObjectWrappers.wrap(cdkObject) as EnableScalingProps
+        EnableScalingProps = CdkObjectWrappers.wrap(cdkObject) as? EnableScalingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnableScalingProps):
         software.amazon.awscdk.services.dynamodb.EnableScalingProps = (wrapped as

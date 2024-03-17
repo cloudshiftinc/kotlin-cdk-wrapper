@@ -383,7 +383,7 @@ public interface CfnFaqProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnFaqProps): CfnFaqProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnFaqProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnFaqProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFaqProps): software.amazon.awscdk.services.kendra.CfnFaqProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.kendra.CfnFaqProps

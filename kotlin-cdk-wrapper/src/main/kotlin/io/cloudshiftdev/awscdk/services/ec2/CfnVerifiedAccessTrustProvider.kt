@@ -836,7 +836,8 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty):
-          OidcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as OidcOptionsProperty
+          OidcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? OidcOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OidcOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty =
@@ -947,7 +948,8 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty):
-          DeviceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as DeviceOptionsProperty
+          DeviceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty =
@@ -1084,7 +1086,8 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty):
-          SseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as SseSpecificationProperty
+          SseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? SseSpecificationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty

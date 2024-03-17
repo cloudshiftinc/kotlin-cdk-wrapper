@@ -219,7 +219,8 @@ public interface GrpcGatewayListenerOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayListenerOptions):
-        GrpcGatewayListenerOptions = CdkObjectWrappers.wrap(cdkObject) as GrpcGatewayListenerOptions
+        GrpcGatewayListenerOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        GrpcGatewayListenerOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcGatewayListenerOptions):
         software.amazon.awscdk.services.appmesh.GrpcGatewayListenerOptions = (wrapped as

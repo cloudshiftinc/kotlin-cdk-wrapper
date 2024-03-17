@@ -101,8 +101,8 @@ public interface CloudFrontWebDistributionAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionAttributes):
-        CloudFrontWebDistributionAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFrontWebDistributionAttributes
+        CloudFrontWebDistributionAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFrontWebDistributionAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFrontWebDistributionAttributes):
         software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionAttributes = (wrapped as

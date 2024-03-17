@@ -102,7 +102,8 @@ public interface CustomTestOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CustomTestOptions):
-        CustomTestOptions = CdkObjectWrappers.wrap(cdkObject) as CustomTestOptions
+        CustomTestOptions = CdkObjectWrappers.wrap(cdkObject) as? CustomTestOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomTestOptions):
         software.amazon.awscdk.services.synthetics.CustomTestOptions = (wrapped as

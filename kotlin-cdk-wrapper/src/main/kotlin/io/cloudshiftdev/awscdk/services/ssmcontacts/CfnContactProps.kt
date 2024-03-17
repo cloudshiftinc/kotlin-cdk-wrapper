@@ -228,7 +228,8 @@ public interface CfnContactProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactProps):
-        CfnContactProps = CdkObjectWrappers.wrap(cdkObject) as CfnContactProps
+        CfnContactProps = CdkObjectWrappers.wrap(cdkObject) as? CfnContactProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnContactProps):
         software.amazon.awscdk.services.ssmcontacts.CfnContactProps = (wrapped as

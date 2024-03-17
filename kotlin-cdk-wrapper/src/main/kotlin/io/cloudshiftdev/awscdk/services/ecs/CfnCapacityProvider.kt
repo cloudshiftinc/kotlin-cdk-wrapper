@@ -610,7 +610,8 @@ public open class CfnCapacityProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider.ManagedScalingProperty):
-          ManagedScalingProperty = CdkObjectWrappers.wrap(cdkObject) as ManagedScalingProperty
+          ManagedScalingProperty = CdkObjectWrappers.wrap(cdkObject) as? ManagedScalingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManagedScalingProperty):
           software.amazon.awscdk.services.ecs.CfnCapacityProvider.ManagedScalingProperty = (wrapped
@@ -906,8 +907,8 @@ public open class CfnCapacityProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider.AutoScalingGroupProviderProperty):
-          AutoScalingGroupProviderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AutoScalingGroupProviderProperty
+          AutoScalingGroupProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoScalingGroupProviderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoScalingGroupProviderProperty):
           software.amazon.awscdk.services.ecs.CfnCapacityProvider.AutoScalingGroupProviderProperty =

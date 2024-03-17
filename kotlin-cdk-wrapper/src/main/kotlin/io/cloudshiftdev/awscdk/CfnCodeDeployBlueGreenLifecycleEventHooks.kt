@@ -204,8 +204,8 @@ public interface CfnCodeDeployBlueGreenLifecycleEventHooks {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenLifecycleEventHooks):
-        CfnCodeDeployBlueGreenLifecycleEventHooks = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCodeDeployBlueGreenLifecycleEventHooks
+        CfnCodeDeployBlueGreenLifecycleEventHooks = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCodeDeployBlueGreenLifecycleEventHooks ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeDeployBlueGreenLifecycleEventHooks):
         software.amazon.awscdk.CfnCodeDeployBlueGreenLifecycleEventHooks = (wrapped as

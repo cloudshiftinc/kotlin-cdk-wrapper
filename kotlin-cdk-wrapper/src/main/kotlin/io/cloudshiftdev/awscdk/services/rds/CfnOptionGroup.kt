@@ -691,8 +691,8 @@ public open class CfnOptionGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty):
-          OptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OptionConfigurationProperty
+          OptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OptionConfigurationProperty):
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty = (wrapped
@@ -800,7 +800,8 @@ public open class CfnOptionGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty):
-          OptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as OptionSettingProperty
+          OptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? OptionSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OptionSettingProperty):
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty = (wrapped as

@@ -72,6 +72,10 @@ public abstract class DefinitionBody internal constructor(
       sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
       graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody,
+  ) : DefinitionBody(cdkObject)
+
   public companion object {
     public fun fromChainable(chainable: IChainable): DefinitionBody =
         software.amazon.awscdk.services.stepfunctions.DefinitionBody.fromChainable(chainable.let(IChainable::unwrap)).let(DefinitionBody::wrap)
@@ -92,7 +96,7 @@ public abstract class DefinitionBody internal constructor(
         software.amazon.awscdk.services.stepfunctions.DefinitionBody.fromString(definition).let(DefinitionBody::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody):
-        DefinitionBody = CdkObjectWrappers.wrap(cdkObject) as DefinitionBody
+        DefinitionBody = CdkObjectWrappers.wrap(cdkObject) as? DefinitionBody ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DefinitionBody):
         software.amazon.awscdk.services.stepfunctions.DefinitionBody = (wrapped as

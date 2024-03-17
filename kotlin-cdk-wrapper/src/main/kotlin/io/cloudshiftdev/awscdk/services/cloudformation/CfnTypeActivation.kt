@@ -689,7 +689,8 @@ public open class CfnTypeActivation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnTypeActivation.LoggingConfigProperty):
-          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingConfigProperty
+          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigProperty):
           software.amazon.awscdk.services.cloudformation.CfnTypeActivation.LoggingConfigProperty =

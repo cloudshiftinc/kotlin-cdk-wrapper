@@ -404,7 +404,7 @@ public interface MapBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.MapBaseProps):
-        MapBaseProps = CdkObjectWrappers.wrap(cdkObject) as MapBaseProps
+        MapBaseProps = CdkObjectWrappers.wrap(cdkObject) as? MapBaseProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MapBaseProps):
         software.amazon.awscdk.services.stepfunctions.MapBaseProps = (wrapped as

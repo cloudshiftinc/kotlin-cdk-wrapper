@@ -797,8 +797,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty):
-          HighAvailabilityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HighAvailabilityConfigProperty
+          HighAvailabilityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HighAvailabilityConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HighAvailabilityConfigProperty):
           software.amazon.awscdk.services.m2.CfnEnvironment.HighAvailabilityConfigProperty =
@@ -908,8 +908,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty):
-          FsxStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FsxStorageConfigurationProperty
+          FsxStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FsxStorageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FsxStorageConfigurationProperty):
           software.amazon.awscdk.services.m2.CfnEnvironment.FsxStorageConfigurationProperty =
@@ -1078,8 +1078,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty):
-          StorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StorageConfigurationProperty
+          StorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageConfigurationProperty):
           software.amazon.awscdk.services.m2.CfnEnvironment.StorageConfigurationProperty = (wrapped
@@ -1189,8 +1189,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty):
-          EfsStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EfsStorageConfigurationProperty
+          EfsStorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EfsStorageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EfsStorageConfigurationProperty):
           software.amazon.awscdk.services.m2.CfnEnvironment.EfsStorageConfigurationProperty =

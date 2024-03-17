@@ -187,7 +187,7 @@ public interface EcsTarget {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EcsTarget): EcsTarget =
-        CdkObjectWrappers.wrap(cdkObject) as EcsTarget
+        CdkObjectWrappers.wrap(cdkObject) as? EcsTarget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsTarget): software.amazon.awscdk.services.ecs.EcsTarget =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.EcsTarget

@@ -964,7 +964,7 @@ public interface ClusterProps : ClusterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.ClusterProps): ClusterProps =
-        CdkObjectWrappers.wrap(cdkObject) as ClusterProps
+        CdkObjectWrappers.wrap(cdkObject) as? ClusterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClusterProps): software.amazon.awscdk.services.eks.ClusterProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.ClusterProps

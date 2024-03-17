@@ -795,7 +795,8 @@ public interface StandardAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.StandardAttributes):
-        StandardAttributes = CdkObjectWrappers.wrap(cdkObject) as StandardAttributes
+        StandardAttributes = CdkObjectWrappers.wrap(cdkObject) as? StandardAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StandardAttributes):
         software.amazon.awscdk.services.cognito.StandardAttributes = (wrapped as

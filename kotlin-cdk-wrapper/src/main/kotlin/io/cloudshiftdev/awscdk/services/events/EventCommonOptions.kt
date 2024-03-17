@@ -222,7 +222,8 @@ public interface EventCommonOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.EventCommonOptions):
-        EventCommonOptions = CdkObjectWrappers.wrap(cdkObject) as EventCommonOptions
+        EventCommonOptions = CdkObjectWrappers.wrap(cdkObject) as? EventCommonOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventCommonOptions):
         software.amazon.awscdk.services.events.EventCommonOptions = (wrapped as CdkObject).cdkObject

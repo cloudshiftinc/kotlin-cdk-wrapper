@@ -281,7 +281,8 @@ public interface ContainerOverrides {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerOverrides):
-        ContainerOverrides = CdkObjectWrappers.wrap(cdkObject) as ContainerOverrides
+        ContainerOverrides = CdkObjectWrappers.wrap(cdkObject) as? ContainerOverrides ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerOverrides):
         software.amazon.awscdk.services.stepfunctions.tasks.ContainerOverrides = (wrapped as

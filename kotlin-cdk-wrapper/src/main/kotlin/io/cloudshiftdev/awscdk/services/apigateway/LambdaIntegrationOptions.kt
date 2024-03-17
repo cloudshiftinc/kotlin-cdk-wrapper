@@ -504,7 +504,8 @@ public interface LambdaIntegrationOptions : IntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.LambdaIntegrationOptions):
-        LambdaIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as LambdaIntegrationOptions
+        LambdaIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as? LambdaIntegrationOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaIntegrationOptions):
         software.amazon.awscdk.services.apigateway.LambdaIntegrationOptions = (wrapped as

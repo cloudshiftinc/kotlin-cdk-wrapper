@@ -207,7 +207,8 @@ public interface ListParameterAttributes : CommonStringParameterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.ListParameterAttributes):
-        ListParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as ListParameterAttributes
+        ListParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as? ListParameterAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ListParameterAttributes):
         software.amazon.awscdk.services.ssm.ListParameterAttributes = (wrapped as

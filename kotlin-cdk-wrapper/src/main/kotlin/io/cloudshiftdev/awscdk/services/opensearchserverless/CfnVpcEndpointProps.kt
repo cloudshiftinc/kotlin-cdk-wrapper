@@ -190,7 +190,8 @@ public interface CfnVpcEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpointProps):
-        CfnVpcEndpointProps = CdkObjectWrappers.wrap(cdkObject) as CfnVpcEndpointProps
+        CfnVpcEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVpcEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcEndpointProps):
         software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpointProps = (wrapped as

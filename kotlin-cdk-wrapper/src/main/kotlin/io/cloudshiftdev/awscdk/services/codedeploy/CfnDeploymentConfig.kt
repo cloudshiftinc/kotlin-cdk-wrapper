@@ -1016,7 +1016,8 @@ public open class CfnDeploymentConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty):
-          ZonalConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ZonalConfigProperty
+          ZonalConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ZonalConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZonalConfigProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty =
@@ -1221,8 +1222,8 @@ public open class CfnDeploymentConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty):
-          MinimumHealthyHostsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MinimumHealthyHostsProperty
+          MinimumHealthyHostsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MinimumHealthyHostsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MinimumHealthyHostsProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty
@@ -1333,8 +1334,8 @@ public open class CfnDeploymentConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty):
-          MinimumHealthyHostsPerZoneProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MinimumHealthyHostsPerZoneProperty
+          MinimumHealthyHostsPerZoneProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MinimumHealthyHostsPerZoneProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MinimumHealthyHostsPerZoneProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty
@@ -1597,8 +1598,8 @@ public open class CfnDeploymentConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty):
-          TrafficRoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TrafficRoutingConfigProperty
+          TrafficRoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrafficRoutingConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrafficRoutingConfigProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty
@@ -1719,7 +1720,8 @@ public open class CfnDeploymentConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty):
-          TimeBasedLinearProperty = CdkObjectWrappers.wrap(cdkObject) as TimeBasedLinearProperty
+          TimeBasedLinearProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeBasedLinearProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeBasedLinearProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty =
@@ -1839,7 +1841,8 @@ public open class CfnDeploymentConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty):
-          TimeBasedCanaryProperty = CdkObjectWrappers.wrap(cdkObject) as TimeBasedCanaryProperty
+          TimeBasedCanaryProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeBasedCanaryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeBasedCanaryProperty):
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty =

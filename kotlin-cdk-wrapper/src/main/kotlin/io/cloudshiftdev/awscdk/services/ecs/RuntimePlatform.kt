@@ -110,7 +110,8 @@ public interface RuntimePlatform {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.RuntimePlatform):
-        RuntimePlatform = CdkObjectWrappers.wrap(cdkObject) as RuntimePlatform
+        RuntimePlatform = CdkObjectWrappers.wrap(cdkObject) as? RuntimePlatform ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuntimePlatform):
         software.amazon.awscdk.services.ecs.RuntimePlatform = (wrapped as CdkObject).cdkObject as

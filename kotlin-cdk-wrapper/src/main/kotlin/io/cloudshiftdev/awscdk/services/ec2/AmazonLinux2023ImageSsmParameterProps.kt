@@ -208,8 +208,8 @@ public interface AmazonLinux2023ImageSsmParameterProps : AmazonLinuxImageSsmPara
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameterProps):
-        AmazonLinux2023ImageSsmParameterProps = CdkObjectWrappers.wrap(cdkObject) as
-        AmazonLinux2023ImageSsmParameterProps
+        AmazonLinux2023ImageSsmParameterProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AmazonLinux2023ImageSsmParameterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinux2023ImageSsmParameterProps):
         software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameterProps = (wrapped as

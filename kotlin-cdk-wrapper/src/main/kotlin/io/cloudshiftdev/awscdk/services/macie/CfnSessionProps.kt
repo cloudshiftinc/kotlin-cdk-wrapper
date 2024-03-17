@@ -149,7 +149,8 @@ public interface CfnSessionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnSessionProps):
-        CfnSessionProps = CdkObjectWrappers.wrap(cdkObject) as CfnSessionProps
+        CfnSessionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSessionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSessionProps):
         software.amazon.awscdk.services.macie.CfnSessionProps = (wrapped as CdkObject).cdkObject as

@@ -70,7 +70,8 @@ public interface SizeConversionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.SizeConversionOptions):
-        SizeConversionOptions = CdkObjectWrappers.wrap(cdkObject) as SizeConversionOptions
+        SizeConversionOptions = CdkObjectWrappers.wrap(cdkObject) as? SizeConversionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SizeConversionOptions):
         software.amazon.awscdk.SizeConversionOptions = (wrapped as CdkObject).cdkObject as

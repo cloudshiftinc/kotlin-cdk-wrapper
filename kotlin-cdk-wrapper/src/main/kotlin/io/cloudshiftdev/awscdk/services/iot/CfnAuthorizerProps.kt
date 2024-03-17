@@ -407,7 +407,8 @@ public interface CfnAuthorizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAuthorizerProps):
-        CfnAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as CfnAuthorizerProps
+        CfnAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAuthorizerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAuthorizerProps):
         software.amazon.awscdk.services.iot.CfnAuthorizerProps = (wrapped as CdkObject).cdkObject as

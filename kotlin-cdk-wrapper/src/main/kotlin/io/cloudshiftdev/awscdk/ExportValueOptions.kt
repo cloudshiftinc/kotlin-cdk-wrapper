@@ -100,7 +100,7 @@ public interface ExportValueOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ExportValueOptions): ExportValueOptions =
-        CdkObjectWrappers.wrap(cdkObject) as ExportValueOptions
+        CdkObjectWrappers.wrap(cdkObject) as? ExportValueOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExportValueOptions): software.amazon.awscdk.ExportValueOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.ExportValueOptions

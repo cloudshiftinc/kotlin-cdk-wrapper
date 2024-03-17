@@ -334,7 +334,8 @@ public interface RestApiOriginProps : OriginProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.RestApiOriginProps):
-        RestApiOriginProps = CdkObjectWrappers.wrap(cdkObject) as RestApiOriginProps
+        RestApiOriginProps = CdkObjectWrappers.wrap(cdkObject) as? RestApiOriginProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RestApiOriginProps):
         software.amazon.awscdk.services.cloudfront.origins.RestApiOriginProps = (wrapped as

@@ -175,8 +175,8 @@ public interface CfnNetworkPerformanceMetricSubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscriptionProps):
-        CfnNetworkPerformanceMetricSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnNetworkPerformanceMetricSubscriptionProps
+        CfnNetworkPerformanceMetricSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNetworkPerformanceMetricSubscriptionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkPerformanceMetricSubscriptionProps):
         software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscriptionProps = (wrapped

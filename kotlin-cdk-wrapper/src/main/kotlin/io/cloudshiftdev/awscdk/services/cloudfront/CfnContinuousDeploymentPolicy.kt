@@ -449,7 +449,8 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty):
-          TrafficConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TrafficConfigProperty
+          TrafficConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TrafficConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrafficConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty
@@ -583,8 +584,8 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty):
-          SingleWeightPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SingleWeightPolicyConfigProperty
+          SingleWeightPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleWeightPolicyConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleWeightPolicyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty
@@ -1018,8 +1019,8 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty):
-          ContinuousDeploymentPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ContinuousDeploymentPolicyConfigProperty
+          ContinuousDeploymentPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContinuousDeploymentPolicyConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContinuousDeploymentPolicyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty
@@ -1136,8 +1137,8 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty):
-          SingleHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SingleHeaderConfigProperty
+          SingleHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleHeaderConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleHeaderConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty
@@ -1270,8 +1271,8 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty):
-          SessionStickinessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SessionStickinessConfigProperty
+          SessionStickinessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SessionStickinessConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SessionStickinessConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty
@@ -1371,8 +1372,8 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty):
-          SingleHeaderPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SingleHeaderPolicyConfigProperty
+          SingleHeaderPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleHeaderPolicyConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleHeaderPolicyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty
@@ -1554,8 +1555,8 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty):
-          SingleWeightConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SingleWeightConfigProperty
+          SingleWeightConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleWeightConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleWeightConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty

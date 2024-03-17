@@ -70,7 +70,8 @@ public interface KubectlProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubectlProviderProps):
-        KubectlProviderProps = CdkObjectWrappers.wrap(cdkObject) as KubectlProviderProps
+        KubectlProviderProps = CdkObjectWrappers.wrap(cdkObject) as? KubectlProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KubectlProviderProps):
         software.amazon.awscdk.services.eks.KubectlProviderProps = (wrapped as CdkObject).cdkObject

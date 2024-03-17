@@ -374,7 +374,8 @@ public interface CfnTransformerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformerProps):
-        CfnTransformerProps = CdkObjectWrappers.wrap(cdkObject) as CfnTransformerProps
+        CfnTransformerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTransformerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransformerProps):
         software.amazon.awscdk.services.b2bi.CfnTransformerProps = (wrapped as CdkObject).cdkObject

@@ -94,7 +94,8 @@ public interface WebSocketApiAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes):
-        WebSocketApiAttributes = CdkObjectWrappers.wrap(cdkObject) as WebSocketApiAttributes
+        WebSocketApiAttributes = CdkObjectWrappers.wrap(cdkObject) as? WebSocketApiAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketApiAttributes):
         software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes = (wrapped as

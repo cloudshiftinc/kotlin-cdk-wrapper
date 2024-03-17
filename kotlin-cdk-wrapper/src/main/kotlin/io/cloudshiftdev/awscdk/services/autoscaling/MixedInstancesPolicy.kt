@@ -198,7 +198,8 @@ public interface MixedInstancesPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy):
-        MixedInstancesPolicy = CdkObjectWrappers.wrap(cdkObject) as MixedInstancesPolicy
+        MixedInstancesPolicy = CdkObjectWrappers.wrap(cdkObject) as? MixedInstancesPolicy ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MixedInstancesPolicy):
         software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy = (wrapped as

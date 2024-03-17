@@ -238,7 +238,8 @@ public interface CfnFrameworkProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFrameworkProps):
-        CfnFrameworkProps = CdkObjectWrappers.wrap(cdkObject) as CfnFrameworkProps
+        CfnFrameworkProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFrameworkProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFrameworkProps):
         software.amazon.awscdk.services.backup.CfnFrameworkProps = (wrapped as CdkObject).cdkObject

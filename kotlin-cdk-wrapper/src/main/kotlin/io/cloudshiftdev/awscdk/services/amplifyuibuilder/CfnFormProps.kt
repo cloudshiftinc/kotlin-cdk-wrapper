@@ -627,7 +627,7 @@ public interface CfnFormProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnFormProps):
-        CfnFormProps = CdkObjectWrappers.wrap(cdkObject) as CfnFormProps
+        CfnFormProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFormProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFormProps):
         software.amazon.awscdk.services.amplifyuibuilder.CfnFormProps = (wrapped as

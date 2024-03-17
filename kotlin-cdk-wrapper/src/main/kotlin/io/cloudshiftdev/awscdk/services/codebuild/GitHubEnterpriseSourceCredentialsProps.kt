@@ -80,8 +80,8 @@ public interface GitHubEnterpriseSourceCredentialsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentialsProps):
-        GitHubEnterpriseSourceCredentialsProps = CdkObjectWrappers.wrap(cdkObject) as
-        GitHubEnterpriseSourceCredentialsProps
+        GitHubEnterpriseSourceCredentialsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        GitHubEnterpriseSourceCredentialsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitHubEnterpriseSourceCredentialsProps):
         software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentialsProps = (wrapped

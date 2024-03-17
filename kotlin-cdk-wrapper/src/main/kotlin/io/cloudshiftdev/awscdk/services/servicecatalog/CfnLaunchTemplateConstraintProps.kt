@@ -200,8 +200,8 @@ public interface CfnLaunchTemplateConstraintProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps):
-        CfnLaunchTemplateConstraintProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLaunchTemplateConstraintProps
+        CfnLaunchTemplateConstraintProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLaunchTemplateConstraintProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchTemplateConstraintProps):
         software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps = (wrapped

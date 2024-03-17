@@ -74,7 +74,8 @@ public interface LinuxUserDataOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LinuxUserDataOptions):
-        LinuxUserDataOptions = CdkObjectWrappers.wrap(cdkObject) as LinuxUserDataOptions
+        LinuxUserDataOptions = CdkObjectWrappers.wrap(cdkObject) as? LinuxUserDataOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LinuxUserDataOptions):
         software.amazon.awscdk.services.ec2.LinuxUserDataOptions = (wrapped as CdkObject).cdkObject

@@ -127,7 +127,8 @@ public interface ColumnRestriction {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.ColumnRestriction):
-        ColumnRestriction = CdkObjectWrappers.wrap(cdkObject) as ColumnRestriction
+        ColumnRestriction = CdkObjectWrappers.wrap(cdkObject) as? ColumnRestriction ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ColumnRestriction):
         software.amazon.awscdk.services.logs.ColumnRestriction = (wrapped as CdkObject).cdkObject as

@@ -257,8 +257,8 @@ public interface CfnConfigurationAggregatorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregatorProps):
-        CfnConfigurationAggregatorProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnConfigurationAggregatorProps
+        CfnConfigurationAggregatorProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnConfigurationAggregatorProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationAggregatorProps):
         software.amazon.awscdk.services.config.CfnConfigurationAggregatorProps = (wrapped as

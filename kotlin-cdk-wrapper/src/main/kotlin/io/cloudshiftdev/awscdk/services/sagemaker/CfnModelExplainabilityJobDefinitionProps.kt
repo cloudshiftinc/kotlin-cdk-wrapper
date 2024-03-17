@@ -718,8 +718,8 @@ public interface CfnModelExplainabilityJobDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinitionProps):
-        CfnModelExplainabilityJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnModelExplainabilityJobDefinitionProps
+        CfnModelExplainabilityJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnModelExplainabilityJobDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelExplainabilityJobDefinitionProps):
         software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinitionProps =

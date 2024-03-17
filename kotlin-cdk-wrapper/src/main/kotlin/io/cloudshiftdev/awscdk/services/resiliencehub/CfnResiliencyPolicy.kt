@@ -437,7 +437,8 @@ public open class CfnResiliencyPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty):
-          FailurePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as FailurePolicyProperty
+          FailurePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? FailurePolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FailurePolicyProperty):
           software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty =

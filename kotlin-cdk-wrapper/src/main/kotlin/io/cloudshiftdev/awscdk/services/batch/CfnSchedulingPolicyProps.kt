@@ -219,7 +219,8 @@ public interface CfnSchedulingPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicyProps):
-        CfnSchedulingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnSchedulingPolicyProps
+        CfnSchedulingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSchedulingPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchedulingPolicyProps):
         software.amazon.awscdk.services.batch.CfnSchedulingPolicyProps = (wrapped as

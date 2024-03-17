@@ -343,9 +343,13 @@ public abstract class StageBase internal constructor(
    */
   public open fun urlForPath(path: String): String = unwrap(this).urlForPath(path)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigateway.StageBase,
+  ) : StageBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.StageBase): StageBase =
-        CdkObjectWrappers.wrap(cdkObject) as StageBase
+        CdkObjectWrappers.wrap(cdkObject) as? StageBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StageBase): software.amazon.awscdk.services.apigateway.StageBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.StageBase

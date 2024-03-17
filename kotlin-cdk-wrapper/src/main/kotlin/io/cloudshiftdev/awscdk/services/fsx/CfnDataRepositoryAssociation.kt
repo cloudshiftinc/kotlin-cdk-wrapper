@@ -851,7 +851,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property):
-          S3Property = CdkObjectWrappers.wrap(cdkObject) as S3Property
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property = (wrapped as
@@ -1000,7 +1000,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty):
-          AutoImportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as AutoImportPolicyProperty
+          AutoImportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoImportPolicyProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoImportPolicyProperty):
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
@@ -1150,7 +1151,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty):
-          AutoExportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as AutoExportPolicyProperty
+          AutoExportPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoExportPolicyProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoExportPolicyProperty):
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty

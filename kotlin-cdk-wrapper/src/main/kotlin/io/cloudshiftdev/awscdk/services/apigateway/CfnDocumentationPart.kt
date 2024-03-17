@@ -552,7 +552,8 @@ public open class CfnDocumentationPart internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPart.LocationProperty):
-          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as LocationProperty
+          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LocationProperty):
           software.amazon.awscdk.services.apigateway.CfnDocumentationPart.LocationProperty =

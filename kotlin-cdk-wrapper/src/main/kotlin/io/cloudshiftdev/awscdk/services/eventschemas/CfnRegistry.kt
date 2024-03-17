@@ -314,7 +314,8 @@ public open class CfnRegistry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty):
-          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as TagsEntryProperty
+          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? TagsEntryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagsEntryProperty):
           software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty = (wrapped as

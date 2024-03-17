@@ -160,7 +160,8 @@ public interface EventBridgeDataSourceProps : BackedDataSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appsync.EventBridgeDataSourceProps):
-        EventBridgeDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as EventBridgeDataSourceProps
+        EventBridgeDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EventBridgeDataSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventBridgeDataSourceProps):
         software.amazon.awscdk.services.appsync.EventBridgeDataSourceProps = (wrapped as

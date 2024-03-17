@@ -69,7 +69,8 @@ public interface KeyContextResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.KeyContextResponse):
-        KeyContextResponse = CdkObjectWrappers.wrap(cdkObject) as KeyContextResponse
+        KeyContextResponse = CdkObjectWrappers.wrap(cdkObject) as? KeyContextResponse ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyContextResponse):
         software.amazon.awscdk.cxapi.KeyContextResponse = (wrapped as CdkObject).cdkObject as

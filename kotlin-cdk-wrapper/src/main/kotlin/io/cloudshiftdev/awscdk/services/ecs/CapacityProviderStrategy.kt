@@ -158,7 +158,8 @@ public interface CapacityProviderStrategy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CapacityProviderStrategy):
-        CapacityProviderStrategy = CdkObjectWrappers.wrap(cdkObject) as CapacityProviderStrategy
+        CapacityProviderStrategy = CdkObjectWrappers.wrap(cdkObject) as? CapacityProviderStrategy ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CapacityProviderStrategy):
         software.amazon.awscdk.services.ecs.CapacityProviderStrategy = (wrapped as

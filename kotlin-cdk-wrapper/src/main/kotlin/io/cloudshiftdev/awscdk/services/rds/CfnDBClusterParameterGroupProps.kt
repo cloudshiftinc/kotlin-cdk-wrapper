@@ -320,8 +320,8 @@ public interface CfnDBClusterParameterGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterParameterGroupProps):
-        CfnDBClusterParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDBClusterParameterGroupProps
+        CfnDBClusterParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDBClusterParameterGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBClusterParameterGroupProps):
         software.amazon.awscdk.services.rds.CfnDBClusterParameterGroupProps = (wrapped as

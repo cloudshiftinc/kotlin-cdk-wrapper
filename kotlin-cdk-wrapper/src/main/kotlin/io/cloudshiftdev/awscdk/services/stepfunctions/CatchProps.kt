@@ -136,7 +136,7 @@ public interface CatchProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CatchProps):
-        CatchProps = CdkObjectWrappers.wrap(cdkObject) as CatchProps
+        CatchProps = CdkObjectWrappers.wrap(cdkObject) as? CatchProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CatchProps):
         software.amazon.awscdk.services.stepfunctions.CatchProps = (wrapped as CdkObject).cdkObject

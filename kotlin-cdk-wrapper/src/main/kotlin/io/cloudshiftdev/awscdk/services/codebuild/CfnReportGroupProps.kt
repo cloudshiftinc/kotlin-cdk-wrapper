@@ -316,7 +316,8 @@ public interface CfnReportGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroupProps):
-        CfnReportGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnReportGroupProps
+        CfnReportGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReportGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReportGroupProps):
         software.amazon.awscdk.services.codebuild.CfnReportGroupProps = (wrapped as

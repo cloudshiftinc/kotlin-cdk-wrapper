@@ -160,7 +160,8 @@ public interface CustomizeRolesOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CustomizeRolesOptions):
-        CustomizeRolesOptions = CdkObjectWrappers.wrap(cdkObject) as CustomizeRolesOptions
+        CustomizeRolesOptions = CdkObjectWrappers.wrap(cdkObject) as? CustomizeRolesOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomizeRolesOptions):
         software.amazon.awscdk.services.iam.CustomizeRolesOptions = (wrapped as CdkObject).cdkObject

@@ -104,7 +104,7 @@ public interface AclPortRange {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclPortRange): AclPortRange =
-        CdkObjectWrappers.wrap(cdkObject) as AclPortRange
+        CdkObjectWrappers.wrap(cdkObject) as? AclPortRange ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AclPortRange): software.amazon.awscdk.services.ec2.AclPortRange =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.AclPortRange

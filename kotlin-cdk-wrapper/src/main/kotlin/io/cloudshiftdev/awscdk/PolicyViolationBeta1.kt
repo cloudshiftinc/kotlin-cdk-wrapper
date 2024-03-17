@@ -236,7 +236,7 @@ public interface PolicyViolationBeta1 {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.PolicyViolationBeta1): PolicyViolationBeta1
-        = CdkObjectWrappers.wrap(cdkObject) as PolicyViolationBeta1
+        = CdkObjectWrappers.wrap(cdkObject) as? PolicyViolationBeta1 ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PolicyViolationBeta1): software.amazon.awscdk.PolicyViolationBeta1
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.PolicyViolationBeta1

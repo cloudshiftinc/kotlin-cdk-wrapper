@@ -336,8 +336,8 @@ public interface CfnOrganizationConformancePackProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConformancePackProps):
-        CfnOrganizationConformancePackProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnOrganizationConformancePackProps
+        CfnOrganizationConformancePackProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnOrganizationConformancePackProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOrganizationConformancePackProps):
         software.amazon.awscdk.services.config.CfnOrganizationConformancePackProps = (wrapped as

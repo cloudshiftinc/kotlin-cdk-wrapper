@@ -857,7 +857,8 @@ public open class CfnRotationSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty):
-          RotationRulesProperty = CdkObjectWrappers.wrap(cdkObject) as RotationRulesProperty
+          RotationRulesProperty = CdkObjectWrappers.wrap(cdkObject) as? RotationRulesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RotationRulesProperty):
           software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty =
@@ -1724,8 +1725,8 @@ public open class CfnRotationSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty):
-          HostedRotationLambdaProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HostedRotationLambdaProperty
+          HostedRotationLambdaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HostedRotationLambdaProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HostedRotationLambdaProperty):
           software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty

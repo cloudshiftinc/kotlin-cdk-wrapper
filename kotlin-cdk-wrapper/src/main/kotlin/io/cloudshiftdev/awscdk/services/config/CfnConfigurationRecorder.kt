@@ -862,7 +862,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty):
-          RecordingModeProperty = CdkObjectWrappers.wrap(cdkObject) as RecordingModeProperty
+          RecordingModeProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordingModeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordingModeProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty =
@@ -1214,7 +1215,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty):
-          RecordingStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as RecordingStrategyProperty
+          RecordingStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RecordingStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordingStrategyProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingStrategyProperty
@@ -2779,7 +2781,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingGroupProperty):
-          RecordingGroupProperty = CdkObjectWrappers.wrap(cdkObject) as RecordingGroupProperty
+          RecordingGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordingGroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordingGroupProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingGroupProperty =
@@ -2917,8 +2920,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty):
-          ExclusionByResourceTypesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ExclusionByResourceTypesProperty
+          ExclusionByResourceTypesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExclusionByResourceTypesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExclusionByResourceTypesProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
@@ -3157,8 +3160,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty):
-          RecordingModeOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RecordingModeOverrideProperty
+          RecordingModeOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RecordingModeOverrideProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordingModeOverrideProperty):
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty

@@ -632,8 +632,8 @@ public open class CfnCACertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnCACertificate.RegistrationConfigProperty):
-          RegistrationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RegistrationConfigProperty
+          RegistrationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegistrationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegistrationConfigProperty):
           software.amazon.awscdk.services.iot.CfnCACertificate.RegistrationConfigProperty = (wrapped

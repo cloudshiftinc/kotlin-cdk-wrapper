@@ -140,7 +140,7 @@ public interface ApiKeyConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.ApiKeyConfig): ApiKeyConfig
-        = CdkObjectWrappers.wrap(cdkObject) as ApiKeyConfig
+        = CdkObjectWrappers.wrap(cdkObject) as? ApiKeyConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiKeyConfig): software.amazon.awscdk.services.appsync.ApiKeyConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.ApiKeyConfig

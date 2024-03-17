@@ -554,8 +554,8 @@ public interface StepFunctionsStartExecutionProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsStartExecutionProps):
-        StepFunctionsStartExecutionProps = CdkObjectWrappers.wrap(cdkObject) as
-        StepFunctionsStartExecutionProps
+        StepFunctionsStartExecutionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        StepFunctionsStartExecutionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StepFunctionsStartExecutionProps):
         software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsStartExecutionProps =

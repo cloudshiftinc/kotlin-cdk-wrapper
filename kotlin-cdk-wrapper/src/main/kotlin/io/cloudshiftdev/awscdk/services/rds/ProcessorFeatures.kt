@@ -100,7 +100,8 @@ public interface ProcessorFeatures {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ProcessorFeatures):
-        ProcessorFeatures = CdkObjectWrappers.wrap(cdkObject) as ProcessorFeatures
+        ProcessorFeatures = CdkObjectWrappers.wrap(cdkObject) as? ProcessorFeatures ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProcessorFeatures):
         software.amazon.awscdk.services.rds.ProcessorFeatures = (wrapped as CdkObject).cdkObject as

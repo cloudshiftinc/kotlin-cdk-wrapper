@@ -531,8 +531,8 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty):
-          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProposedSegmentChangeProperty
+          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProposedSegmentChangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProposedSegmentChangeProperty):
           software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty

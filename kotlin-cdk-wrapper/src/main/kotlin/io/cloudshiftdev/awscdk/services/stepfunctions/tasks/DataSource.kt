@@ -108,7 +108,7 @@ public interface DataSource {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DataSource):
-        DataSource = CdkObjectWrappers.wrap(cdkObject) as DataSource
+        DataSource = CdkObjectWrappers.wrap(cdkObject) as? DataSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DataSource):
         software.amazon.awscdk.services.stepfunctions.tasks.DataSource = (wrapped as

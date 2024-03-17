@@ -610,7 +610,8 @@ public open class CfnUsagePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty):
-          ThrottleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as ThrottleSettingsProperty
+          ThrottleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? ThrottleSettingsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThrottleSettingsProperty):
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty =
@@ -763,7 +764,8 @@ public open class CfnUsagePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty):
-          QuotaSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as QuotaSettingsProperty
+          QuotaSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? QuotaSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QuotaSettingsProperty):
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty = (wrapped
@@ -917,7 +919,8 @@ public open class CfnUsagePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty):
-          ApiStageProperty = CdkObjectWrappers.wrap(cdkObject) as ApiStageProperty
+          ApiStageProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiStageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApiStageProperty):
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty = (wrapped as

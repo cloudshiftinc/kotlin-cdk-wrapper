@@ -685,7 +685,8 @@ public open class CfnStorageSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty):
-          ServerCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as ServerCredentialsProperty
+          ServerCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerCredentialsProperty):
           software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerCredentialsProperty =
@@ -798,8 +799,8 @@ public open class CfnStorageSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty):
-          ServerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServerConfigurationProperty
+          ServerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerConfigurationProperty):
           software.amazon.awscdk.services.datasync.CfnStorageSystem.ServerConfigurationProperty =

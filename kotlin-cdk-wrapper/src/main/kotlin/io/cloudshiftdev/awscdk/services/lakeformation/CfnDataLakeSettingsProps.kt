@@ -917,7 +917,8 @@ public interface CfnDataLakeSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettingsProps):
-        CfnDataLakeSettingsProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataLakeSettingsProps
+        CfnDataLakeSettingsProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDataLakeSettingsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataLakeSettingsProps):
         software.amazon.awscdk.services.lakeformation.CfnDataLakeSettingsProps = (wrapped as

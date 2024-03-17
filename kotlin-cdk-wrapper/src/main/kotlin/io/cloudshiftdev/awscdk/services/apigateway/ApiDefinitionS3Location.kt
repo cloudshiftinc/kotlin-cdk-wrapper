@@ -123,7 +123,8 @@ public interface ApiDefinitionS3Location {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location):
-        ApiDefinitionS3Location = CdkObjectWrappers.wrap(cdkObject) as ApiDefinitionS3Location
+        ApiDefinitionS3Location = CdkObjectWrappers.wrap(cdkObject) as? ApiDefinitionS3Location ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiDefinitionS3Location):
         software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location = (wrapped as

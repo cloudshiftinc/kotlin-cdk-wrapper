@@ -1042,7 +1042,7 @@ public interface CfnLayerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnLayerProps):
-        CfnLayerProps = CdkObjectWrappers.wrap(cdkObject) as CfnLayerProps
+        CfnLayerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLayerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayerProps):
         software.amazon.awscdk.services.opsworks.CfnLayerProps = (wrapped as CdkObject).cdkObject as

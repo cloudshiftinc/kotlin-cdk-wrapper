@@ -107,7 +107,8 @@ public interface TaskEnvironmentVariable {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.TaskEnvironmentVariable):
-        TaskEnvironmentVariable = CdkObjectWrappers.wrap(cdkObject) as TaskEnvironmentVariable
+        TaskEnvironmentVariable = CdkObjectWrappers.wrap(cdkObject) as? TaskEnvironmentVariable ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TaskEnvironmentVariable):
         software.amazon.awscdk.services.events.targets.TaskEnvironmentVariable = (wrapped as

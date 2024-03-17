@@ -155,8 +155,8 @@ public interface CfnContinuousDeploymentPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicyProps):
-        CfnContinuousDeploymentPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnContinuousDeploymentPolicyProps
+        CfnContinuousDeploymentPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnContinuousDeploymentPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnContinuousDeploymentPolicyProps):
         software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicyProps = (wrapped as

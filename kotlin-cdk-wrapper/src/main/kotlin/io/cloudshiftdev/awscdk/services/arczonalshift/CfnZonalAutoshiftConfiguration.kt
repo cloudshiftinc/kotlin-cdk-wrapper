@@ -734,8 +734,8 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty):
-          PracticeRunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PracticeRunConfigurationProperty
+          PracticeRunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PracticeRunConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PracticeRunConfigurationProperty):
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty
@@ -870,7 +870,8 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty):
-          ControlConditionProperty = CdkObjectWrappers.wrap(cdkObject) as ControlConditionProperty
+          ControlConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ControlConditionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ControlConditionProperty):
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty

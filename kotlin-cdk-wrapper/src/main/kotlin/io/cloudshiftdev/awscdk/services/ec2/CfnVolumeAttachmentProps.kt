@@ -163,7 +163,8 @@ public interface CfnVolumeAttachmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVolumeAttachmentProps):
-        CfnVolumeAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as CfnVolumeAttachmentProps
+        CfnVolumeAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVolumeAttachmentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVolumeAttachmentProps):
         software.amazon.awscdk.services.ec2.CfnVolumeAttachmentProps = (wrapped as

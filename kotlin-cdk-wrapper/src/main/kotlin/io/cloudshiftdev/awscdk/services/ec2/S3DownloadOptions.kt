@@ -155,7 +155,8 @@ public interface S3DownloadOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.S3DownloadOptions):
-        S3DownloadOptions = CdkObjectWrappers.wrap(cdkObject) as S3DownloadOptions
+        S3DownloadOptions = CdkObjectWrappers.wrap(cdkObject) as? S3DownloadOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3DownloadOptions):
         software.amazon.awscdk.services.ec2.S3DownloadOptions = (wrapped as CdkObject).cdkObject as

@@ -205,8 +205,8 @@ public interface CognitoUserPoolsAuthorizerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizerProps):
-        CognitoUserPoolsAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as
-        CognitoUserPoolsAuthorizerProps
+        CognitoUserPoolsAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CognitoUserPoolsAuthorizerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CognitoUserPoolsAuthorizerProps):
         software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizerProps = (wrapped as

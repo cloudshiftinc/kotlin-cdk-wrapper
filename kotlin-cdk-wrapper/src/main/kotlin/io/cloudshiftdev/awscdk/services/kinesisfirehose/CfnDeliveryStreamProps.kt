@@ -1253,7 +1253,8 @@ public interface CfnDeliveryStreamProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStreamProps):
-        CfnDeliveryStreamProps = CdkObjectWrappers.wrap(cdkObject) as CfnDeliveryStreamProps
+        CfnDeliveryStreamProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDeliveryStreamProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeliveryStreamProps):
         software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStreamProps = (wrapped as

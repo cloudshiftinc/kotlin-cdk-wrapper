@@ -205,7 +205,8 @@ public interface EbsDeviceOptions : EbsDeviceOptionsBase {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.EbsDeviceOptions):
-        EbsDeviceOptions = CdkObjectWrappers.wrap(cdkObject) as EbsDeviceOptions
+        EbsDeviceOptions = CdkObjectWrappers.wrap(cdkObject) as? EbsDeviceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EbsDeviceOptions):
         software.amazon.awscdk.services.ec2.EbsDeviceOptions = (wrapped as CdkObject).cdkObject as

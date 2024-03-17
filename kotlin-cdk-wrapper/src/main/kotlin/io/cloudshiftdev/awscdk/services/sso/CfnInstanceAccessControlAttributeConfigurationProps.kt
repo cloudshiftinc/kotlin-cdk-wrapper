@@ -265,8 +265,8 @@ public interface CfnInstanceAccessControlAttributeConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfigurationProps):
-        CfnInstanceAccessControlAttributeConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnInstanceAccessControlAttributeConfigurationProps
+        CfnInstanceAccessControlAttributeConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInstanceAccessControlAttributeConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceAccessControlAttributeConfigurationProps):
         software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfigurationProps =

@@ -191,7 +191,8 @@ public interface SelfManagedDeploymentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.SelfManagedDeploymentProps):
-        SelfManagedDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as SelfManagedDeploymentProps
+        SelfManagedDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SelfManagedDeploymentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SelfManagedDeploymentProps):
         software.amazon.awscdk.services.codepipeline.actions.SelfManagedDeploymentProps = (wrapped

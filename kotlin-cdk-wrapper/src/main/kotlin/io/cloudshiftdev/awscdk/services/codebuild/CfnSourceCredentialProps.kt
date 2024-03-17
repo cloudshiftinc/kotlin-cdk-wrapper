@@ -184,7 +184,8 @@ public interface CfnSourceCredentialProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnSourceCredentialProps):
-        CfnSourceCredentialProps = CdkObjectWrappers.wrap(cdkObject) as CfnSourceCredentialProps
+        CfnSourceCredentialProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSourceCredentialProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSourceCredentialProps):
         software.amazon.awscdk.services.codebuild.CfnSourceCredentialProps = (wrapped as

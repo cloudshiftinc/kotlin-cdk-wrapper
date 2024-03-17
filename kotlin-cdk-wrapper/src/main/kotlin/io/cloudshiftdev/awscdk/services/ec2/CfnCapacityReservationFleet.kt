@@ -805,7 +805,8 @@ public open class CfnCapacityReservationFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty):
-          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as TagSpecificationProperty
+          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty =
@@ -1173,8 +1174,8 @@ public open class CfnCapacityReservationFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty):
-          InstanceTypeSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceTypeSpecificationProperty
+          InstanceTypeSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceTypeSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceTypeSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty

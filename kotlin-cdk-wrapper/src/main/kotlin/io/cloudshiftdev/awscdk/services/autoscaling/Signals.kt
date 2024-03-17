@@ -58,6 +58,10 @@ public abstract class Signals internal constructor(
   public open fun renderCreationPolicy(renderOptions: RenderSignalsOptions.Builder.() -> Unit):
       CfnCreationPolicy = renderCreationPolicy(RenderSignalsOptions(renderOptions))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.autoscaling.Signals,
+  ) : Signals(cdkObject)
+
   public companion object {
     public fun waitForAll(): Signals =
         software.amazon.awscdk.services.autoscaling.Signals.waitForAll().let(Signals::wrap)
@@ -94,7 +98,7 @@ public abstract class Signals internal constructor(
         waitForMinCapacity(SignalsOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.Signals): Signals =
-        CdkObjectWrappers.wrap(cdkObject) as Signals
+        CdkObjectWrappers.wrap(cdkObject) as? Signals ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Signals): software.amazon.awscdk.services.autoscaling.Signals =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.autoscaling.Signals

@@ -210,7 +210,8 @@ public interface CfnSignalingChannelProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps):
-        CfnSignalingChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnSignalingChannelProps
+        CfnSignalingChannelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSignalingChannelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSignalingChannelProps):
         software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps = (wrapped as

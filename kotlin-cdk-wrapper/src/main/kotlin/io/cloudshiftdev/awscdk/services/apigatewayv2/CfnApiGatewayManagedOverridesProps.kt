@@ -289,8 +289,8 @@ public interface CfnApiGatewayManagedOverridesProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverridesProps):
-        CfnApiGatewayManagedOverridesProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnApiGatewayManagedOverridesProps
+        CfnApiGatewayManagedOverridesProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnApiGatewayManagedOverridesProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiGatewayManagedOverridesProps):
         software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverridesProps = (wrapped

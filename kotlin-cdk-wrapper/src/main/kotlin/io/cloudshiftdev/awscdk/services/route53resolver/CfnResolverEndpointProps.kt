@@ -547,7 +547,8 @@ public interface CfnResolverEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverEndpointProps):
-        CfnResolverEndpointProps = CdkObjectWrappers.wrap(cdkObject) as CfnResolverEndpointProps
+        CfnResolverEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResolverEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverEndpointProps):
         software.amazon.awscdk.services.route53resolver.CfnResolverEndpointProps = (wrapped as

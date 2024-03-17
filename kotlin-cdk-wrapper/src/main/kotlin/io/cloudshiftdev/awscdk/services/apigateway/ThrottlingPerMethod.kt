@@ -127,7 +127,8 @@ public interface ThrottlingPerMethod {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ThrottlingPerMethod):
-        ThrottlingPerMethod = CdkObjectWrappers.wrap(cdkObject) as ThrottlingPerMethod
+        ThrottlingPerMethod = CdkObjectWrappers.wrap(cdkObject) as? ThrottlingPerMethod ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ThrottlingPerMethod):
         software.amazon.awscdk.services.apigateway.ThrottlingPerMethod = (wrapped as

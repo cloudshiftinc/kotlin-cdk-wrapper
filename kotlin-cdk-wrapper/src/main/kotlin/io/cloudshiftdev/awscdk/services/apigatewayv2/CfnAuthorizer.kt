@@ -866,7 +866,8 @@ public open class CfnAuthorizer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty):
-          JWTConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as JWTConfigurationProperty
+          JWTConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? JWTConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JWTConfigurationProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty =

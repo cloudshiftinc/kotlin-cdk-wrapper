@@ -139,7 +139,8 @@ public interface CnameInstanceProps : CnameInstanceBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CnameInstanceProps):
-        CnameInstanceProps = CdkObjectWrappers.wrap(cdkObject) as CnameInstanceProps
+        CnameInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? CnameInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CnameInstanceProps):
         software.amazon.awscdk.services.servicediscovery.CnameInstanceProps = (wrapped as

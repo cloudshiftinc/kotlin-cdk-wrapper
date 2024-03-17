@@ -1015,7 +1015,8 @@ public interface CfnAssociationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociationProps):
-        CfnAssociationProps = CdkObjectWrappers.wrap(cdkObject) as CfnAssociationProps
+        CfnAssociationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAssociationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssociationProps):
         software.amazon.awscdk.services.ssm.CfnAssociationProps = (wrapped as CdkObject).cdkObject

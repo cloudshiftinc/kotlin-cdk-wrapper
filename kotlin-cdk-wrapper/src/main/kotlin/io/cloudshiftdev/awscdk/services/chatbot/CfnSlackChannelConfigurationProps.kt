@@ -381,8 +381,8 @@ public interface CfnSlackChannelConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.chatbot.CfnSlackChannelConfigurationProps):
-        CfnSlackChannelConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSlackChannelConfigurationProps
+        CfnSlackChannelConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSlackChannelConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSlackChannelConfigurationProps):
         software.amazon.awscdk.services.chatbot.CfnSlackChannelConfigurationProps = (wrapped as

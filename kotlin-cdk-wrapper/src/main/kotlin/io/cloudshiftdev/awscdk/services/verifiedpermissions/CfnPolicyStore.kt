@@ -543,8 +543,8 @@ public open class CfnPolicyStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty):
-          ValidationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ValidationSettingsProperty
+          ValidationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValidationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValidationSettingsProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty
@@ -649,7 +649,8 @@ public open class CfnPolicyStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty):
-          SchemaDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaDefinitionProperty
+          SchemaDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaDefinitionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaDefinitionProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty

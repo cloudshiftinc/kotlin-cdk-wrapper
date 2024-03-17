@@ -298,7 +298,8 @@ public interface CfnRegexPatternSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRegexPatternSetProps):
-        CfnRegexPatternSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnRegexPatternSetProps
+        CfnRegexPatternSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRegexPatternSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRegexPatternSetProps):
         software.amazon.awscdk.services.wafv2.CfnRegexPatternSetProps = (wrapped as

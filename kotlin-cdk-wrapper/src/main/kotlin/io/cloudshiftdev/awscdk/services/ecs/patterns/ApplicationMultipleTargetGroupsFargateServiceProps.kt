@@ -783,8 +783,8 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateServiceProps):
-        ApplicationMultipleTargetGroupsFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationMultipleTargetGroupsFargateServiceProps
+        ApplicationMultipleTargetGroupsFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationMultipleTargetGroupsFargateServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationMultipleTargetGroupsFargateServiceProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateServiceProps

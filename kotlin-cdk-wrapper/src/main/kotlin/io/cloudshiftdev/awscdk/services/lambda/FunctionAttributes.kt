@@ -312,7 +312,8 @@ public interface FunctionAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionAttributes):
-        FunctionAttributes = CdkObjectWrappers.wrap(cdkObject) as FunctionAttributes
+        FunctionAttributes = CdkObjectWrappers.wrap(cdkObject) as? FunctionAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionAttributes):
         software.amazon.awscdk.services.lambda.FunctionAttributes = (wrapped as CdkObject).cdkObject

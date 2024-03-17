@@ -202,7 +202,7 @@ public interface CfnMacroProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnMacroProps): CfnMacroProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnMacroProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnMacroProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMacroProps): software.amazon.awscdk.CfnMacroProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.CfnMacroProps

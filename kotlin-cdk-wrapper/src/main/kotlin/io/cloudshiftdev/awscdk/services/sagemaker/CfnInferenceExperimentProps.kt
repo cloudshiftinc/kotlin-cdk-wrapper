@@ -680,8 +680,8 @@ public interface CfnInferenceExperimentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperimentProps):
-        CfnInferenceExperimentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnInferenceExperimentProps
+        CfnInferenceExperimentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInferenceExperimentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInferenceExperimentProps):
         software.amazon.awscdk.services.sagemaker.CfnInferenceExperimentProps = (wrapped as

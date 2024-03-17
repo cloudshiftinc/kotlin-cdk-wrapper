@@ -387,7 +387,8 @@ public interface CfnFuotaTaskProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTaskProps):
-        CfnFuotaTaskProps = CdkObjectWrappers.wrap(cdkObject) as CfnFuotaTaskProps
+        CfnFuotaTaskProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFuotaTaskProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFuotaTaskProps):
         software.amazon.awscdk.services.iotwireless.CfnFuotaTaskProps = (wrapped as

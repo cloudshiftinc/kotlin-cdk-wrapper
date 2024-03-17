@@ -15,9 +15,19 @@ public interface IStableNumberProducer {
    */
   public fun produce(): Number?
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.IStableNumberProducer,
+  ) : CdkObject(cdkObject), IStableNumberProducer {
+    /**
+     * Produce the number value.
+     */
+    override fun produce(): Number? = unwrap(this).produce()
+  }
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IStableNumberProducer):
-        IStableNumberProducer = CdkObjectWrappers.wrap(cdkObject) as IStableNumberProducer
+        IStableNumberProducer = CdkObjectWrappers.wrap(cdkObject) as? IStableNumberProducer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IStableNumberProducer):
         software.amazon.awscdk.IStableNumberProducer = (wrapped as CdkObject).cdkObject as

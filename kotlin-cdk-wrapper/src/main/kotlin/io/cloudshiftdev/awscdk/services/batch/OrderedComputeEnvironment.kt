@@ -97,7 +97,8 @@ public interface OrderedComputeEnvironment {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.OrderedComputeEnvironment):
-        OrderedComputeEnvironment = CdkObjectWrappers.wrap(cdkObject) as OrderedComputeEnvironment
+        OrderedComputeEnvironment = CdkObjectWrappers.wrap(cdkObject) as? OrderedComputeEnvironment
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OrderedComputeEnvironment):
         software.amazon.awscdk.services.batch.OrderedComputeEnvironment = (wrapped as

@@ -133,7 +133,8 @@ public interface TaskMetricsConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.TaskMetricsConfig):
-        TaskMetricsConfig = CdkObjectWrappers.wrap(cdkObject) as TaskMetricsConfig
+        TaskMetricsConfig = CdkObjectWrappers.wrap(cdkObject) as? TaskMetricsConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TaskMetricsConfig):
         software.amazon.awscdk.services.stepfunctions.TaskMetricsConfig = (wrapped as

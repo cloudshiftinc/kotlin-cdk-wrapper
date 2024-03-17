@@ -193,7 +193,8 @@ public interface CfnBackupPlanProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlanProps):
-        CfnBackupPlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnBackupPlanProps
+        CfnBackupPlanProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBackupPlanProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBackupPlanProps):
         software.amazon.awscdk.services.backup.CfnBackupPlanProps = (wrapped as CdkObject).cdkObject

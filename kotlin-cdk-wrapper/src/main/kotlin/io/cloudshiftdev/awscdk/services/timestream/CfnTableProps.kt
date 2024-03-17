@@ -545,7 +545,7 @@ public interface CfnTableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTableProps):
-        CfnTableProps = CdkObjectWrappers.wrap(cdkObject) as CfnTableProps
+        CfnTableProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTableProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTableProps):
         software.amazon.awscdk.services.timestream.CfnTableProps = (wrapped as CdkObject).cdkObject

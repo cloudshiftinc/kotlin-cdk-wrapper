@@ -879,8 +879,8 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJobProps):
-        SageMakerCreateTrainingJobProps = CdkObjectWrappers.wrap(cdkObject) as
-        SageMakerCreateTrainingJobProps
+        SageMakerCreateTrainingJobProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SageMakerCreateTrainingJobProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SageMakerCreateTrainingJobProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJobProps =

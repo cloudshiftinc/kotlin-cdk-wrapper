@@ -210,7 +210,8 @@ public interface CfnSecurityConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfigProps):
-        CfnSecurityConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnSecurityConfigProps
+        CfnSecurityConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSecurityConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityConfigProps):
         software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfigProps = (wrapped as

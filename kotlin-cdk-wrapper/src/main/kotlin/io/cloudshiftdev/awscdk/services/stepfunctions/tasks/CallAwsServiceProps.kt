@@ -642,7 +642,8 @@ public interface CallAwsServiceProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallAwsServiceProps):
-        CallAwsServiceProps = CdkObjectWrappers.wrap(cdkObject) as CallAwsServiceProps
+        CallAwsServiceProps = CdkObjectWrappers.wrap(cdkObject) as? CallAwsServiceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CallAwsServiceProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CallAwsServiceProps = (wrapped as

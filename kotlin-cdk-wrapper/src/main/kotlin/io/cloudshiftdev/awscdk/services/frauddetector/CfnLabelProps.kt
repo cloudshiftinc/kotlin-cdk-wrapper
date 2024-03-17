@@ -172,7 +172,7 @@ public interface CfnLabelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnLabelProps):
-        CfnLabelProps = CdkObjectWrappers.wrap(cdkObject) as CfnLabelProps
+        CfnLabelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLabelProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLabelProps):
         software.amazon.awscdk.services.frauddetector.CfnLabelProps = (wrapped as

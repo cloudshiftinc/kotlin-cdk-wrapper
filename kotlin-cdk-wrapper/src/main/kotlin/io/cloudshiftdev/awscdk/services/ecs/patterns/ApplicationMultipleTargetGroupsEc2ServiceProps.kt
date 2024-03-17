@@ -720,8 +720,8 @@ public interface ApplicationMultipleTargetGroupsEc2ServiceProps :
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsEc2ServiceProps):
-        ApplicationMultipleTargetGroupsEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationMultipleTargetGroupsEc2ServiceProps
+        ApplicationMultipleTargetGroupsEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationMultipleTargetGroupsEc2ServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationMultipleTargetGroupsEc2ServiceProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsEc2ServiceProps

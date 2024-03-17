@@ -93,7 +93,7 @@ public interface FileSetLocation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.FileSetLocation): FileSetLocation
-        = CdkObjectWrappers.wrap(cdkObject) as FileSetLocation
+        = CdkObjectWrappers.wrap(cdkObject) as? FileSetLocation ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSetLocation): software.amazon.awscdk.pipelines.FileSetLocation
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.pipelines.FileSetLocation

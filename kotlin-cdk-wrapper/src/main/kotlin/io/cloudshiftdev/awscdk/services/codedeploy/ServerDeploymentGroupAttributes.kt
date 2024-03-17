@@ -135,8 +135,8 @@ public interface ServerDeploymentGroupAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupAttributes):
-        ServerDeploymentGroupAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        ServerDeploymentGroupAttributes
+        ServerDeploymentGroupAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerDeploymentGroupAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerDeploymentGroupAttributes):
         software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupAttributes = (wrapped as

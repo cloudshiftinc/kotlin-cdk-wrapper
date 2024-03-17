@@ -720,7 +720,8 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnStack.OutputProperty):
-          OutputProperty = CdkObjectWrappers.wrap(cdkObject) as OutputProperty
+          OutputProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputProperty):
           software.amazon.awscdk.services.cloudformation.CfnStack.OutputProperty = (wrapped as

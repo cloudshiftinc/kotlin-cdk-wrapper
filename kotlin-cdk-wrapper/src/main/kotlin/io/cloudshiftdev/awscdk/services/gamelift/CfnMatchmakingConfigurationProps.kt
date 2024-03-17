@@ -890,8 +890,8 @@ public interface CfnMatchmakingConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingConfigurationProps):
-        CfnMatchmakingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnMatchmakingConfigurationProps
+        CfnMatchmakingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMatchmakingConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMatchmakingConfigurationProps):
         software.amazon.awscdk.services.gamelift.CfnMatchmakingConfigurationProps = (wrapped as

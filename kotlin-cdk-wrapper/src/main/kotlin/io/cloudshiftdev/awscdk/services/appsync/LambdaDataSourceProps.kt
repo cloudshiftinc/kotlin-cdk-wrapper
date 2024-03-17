@@ -158,7 +158,8 @@ public interface LambdaDataSourceProps : BackedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.LambdaDataSourceProps):
-        LambdaDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as LambdaDataSourceProps
+        LambdaDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDataSourceProps):
         software.amazon.awscdk.services.appsync.LambdaDataSourceProps = (wrapped as

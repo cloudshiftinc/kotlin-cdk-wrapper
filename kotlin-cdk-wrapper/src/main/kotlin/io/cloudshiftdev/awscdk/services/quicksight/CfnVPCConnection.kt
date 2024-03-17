@@ -684,7 +684,8 @@ public open class CfnVPCConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnection.NetworkInterfaceProperty):
-          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as NetworkInterfaceProperty
+          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkInterfaceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkInterfaceProperty):
           software.amazon.awscdk.services.quicksight.CfnVPCConnection.NetworkInterfaceProperty =

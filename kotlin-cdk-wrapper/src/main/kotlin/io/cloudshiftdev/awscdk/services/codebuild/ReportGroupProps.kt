@@ -222,7 +222,8 @@ public interface ReportGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.ReportGroupProps):
-        ReportGroupProps = CdkObjectWrappers.wrap(cdkObject) as ReportGroupProps
+        ReportGroupProps = CdkObjectWrappers.wrap(cdkObject) as? ReportGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReportGroupProps):
         software.amazon.awscdk.services.codebuild.ReportGroupProps = (wrapped as

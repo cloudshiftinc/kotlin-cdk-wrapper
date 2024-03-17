@@ -172,7 +172,7 @@ public interface SnsTopicProps : TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.SnsTopicProps):
-        SnsTopicProps = CdkObjectWrappers.wrap(cdkObject) as SnsTopicProps
+        SnsTopicProps = CdkObjectWrappers.wrap(cdkObject) as? SnsTopicProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SnsTopicProps):
         software.amazon.awscdk.services.events.targets.SnsTopicProps = (wrapped as

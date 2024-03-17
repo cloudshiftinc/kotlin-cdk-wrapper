@@ -93,7 +93,7 @@ public interface MxRecordValue {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.MxRecordValue):
-        MxRecordValue = CdkObjectWrappers.wrap(cdkObject) as MxRecordValue
+        MxRecordValue = CdkObjectWrappers.wrap(cdkObject) as? MxRecordValue ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MxRecordValue):
         software.amazon.awscdk.services.route53.MxRecordValue = (wrapped as CdkObject).cdkObject as

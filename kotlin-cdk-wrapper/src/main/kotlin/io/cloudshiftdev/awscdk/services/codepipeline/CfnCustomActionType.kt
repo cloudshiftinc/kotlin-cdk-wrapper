@@ -772,7 +772,8 @@ public open class CfnCustomActionType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty):
-          ArtifactDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as ArtifactDetailsProperty
+          ArtifactDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? ArtifactDetailsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArtifactDetailsProperty):
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty =
@@ -975,7 +976,8 @@ public open class CfnCustomActionType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty):
-          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as SettingsProperty
+          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SettingsProperty):
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty =
@@ -1355,8 +1357,8 @@ public open class CfnCustomActionType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty):
-          ConfigurationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConfigurationPropertiesProperty
+          ConfigurationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationPropertiesProperty):
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty

@@ -130,7 +130,7 @@ public interface AwsDestination {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AwsDestination):
-        AwsDestination = CdkObjectWrappers.wrap(cdkObject) as AwsDestination
+        AwsDestination = CdkObjectWrappers.wrap(cdkObject) as? AwsDestination ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsDestination):
         software.amazon.awscdk.cloudassembly.schema.AwsDestination = (wrapped as

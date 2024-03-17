@@ -99,7 +99,8 @@ public interface AliasAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.AliasAttributes):
-        AliasAttributes = CdkObjectWrappers.wrap(cdkObject) as AliasAttributes
+        AliasAttributes = CdkObjectWrappers.wrap(cdkObject) as? AliasAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AliasAttributes):
         software.amazon.awscdk.services.kms.AliasAttributes = (wrapped as CdkObject).cdkObject as

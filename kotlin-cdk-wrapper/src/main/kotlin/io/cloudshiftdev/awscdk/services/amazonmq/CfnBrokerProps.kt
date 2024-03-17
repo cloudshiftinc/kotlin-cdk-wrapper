@@ -1146,7 +1146,7 @@ public interface CfnBrokerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnBrokerProps):
-        CfnBrokerProps = CdkObjectWrappers.wrap(cdkObject) as CfnBrokerProps
+        CfnBrokerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBrokerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBrokerProps):
         software.amazon.awscdk.services.amazonmq.CfnBrokerProps = (wrapped as CdkObject).cdkObject

@@ -588,8 +588,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty):
-          ResourceDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResourceDefinitionVersionProperty
+          ResourceDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty
@@ -744,8 +744,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty):
-          SecretsManagerSecretResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SecretsManagerSecretResourceDataProperty
+          SecretsManagerSecretResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SecretsManagerSecretResourceDataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SecretsManagerSecretResourceDataProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty
@@ -957,8 +957,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty):
-          S3MachineLearningModelResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3MachineLearningModelResourceDataProperty
+          S3MachineLearningModelResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3MachineLearningModelResourceDataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3MachineLearningModelResourceDataProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty
@@ -1170,8 +1170,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty):
-          SageMakerMachineLearningModelResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SageMakerMachineLearningModelResourceDataProperty
+          SageMakerMachineLearningModelResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerMachineLearningModelResourceDataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SageMakerMachineLearningModelResourceDataProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty
@@ -1364,8 +1364,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalVolumeResourceDataProperty):
-          LocalVolumeResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LocalVolumeResourceDataProperty
+          LocalVolumeResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LocalVolumeResourceDataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LocalVolumeResourceDataProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalVolumeResourceDataProperty
@@ -1534,8 +1534,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty):
-          LocalDeviceResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LocalDeviceResourceDataProperty
+          LocalDeviceResourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LocalDeviceResourceDataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LocalDeviceResourceDataProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty
@@ -1837,7 +1837,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty):
-          ResourceInstanceProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceInstanceProperty
+          ResourceInstanceProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceInstanceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceInstanceProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty
@@ -2255,8 +2256,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDataContainerProperty):
-          ResourceDataContainerProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResourceDataContainerProperty
+          ResourceDataContainerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceDataContainerProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceDataContainerProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDataContainerProperty
@@ -2396,8 +2397,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDownloadOwnerSettingProperty):
-          ResourceDownloadOwnerSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResourceDownloadOwnerSettingProperty
+          ResourceDownloadOwnerSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceDownloadOwnerSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceDownloadOwnerSettingProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDownloadOwnerSettingProperty
@@ -2551,7 +2552,8 @@ public open class CfnResourceDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty):
-          GroupOwnerSettingProperty = CdkObjectWrappers.wrap(cdkObject) as GroupOwnerSettingProperty
+          GroupOwnerSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GroupOwnerSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GroupOwnerSettingProperty):
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty

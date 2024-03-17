@@ -145,7 +145,8 @@ public interface MutualTlsValidation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsValidation):
-        MutualTlsValidation = CdkObjectWrappers.wrap(cdkObject) as MutualTlsValidation
+        MutualTlsValidation = CdkObjectWrappers.wrap(cdkObject) as? MutualTlsValidation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MutualTlsValidation):
         software.amazon.awscdk.services.appmesh.MutualTlsValidation = (wrapped as

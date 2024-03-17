@@ -397,8 +397,8 @@ public interface CfnInstanceStorageConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfigProps):
-        CfnInstanceStorageConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnInstanceStorageConfigProps
+        CfnInstanceStorageConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInstanceStorageConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceStorageConfigProps):
         software.amazon.awscdk.services.connect.CfnInstanceStorageConfigProps = (wrapped as

@@ -513,7 +513,8 @@ public interface SourceConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.SourceConfiguration):
-        SourceConfiguration = CdkObjectWrappers.wrap(cdkObject) as SourceConfiguration
+        SourceConfiguration = CdkObjectWrappers.wrap(cdkObject) as? SourceConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceConfiguration):
         software.amazon.awscdk.services.cloudfront.SourceConfiguration = (wrapped as

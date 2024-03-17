@@ -98,7 +98,8 @@ public interface LifecycleHookTargetConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig):
-        LifecycleHookTargetConfig = CdkObjectWrappers.wrap(cdkObject) as LifecycleHookTargetConfig
+        LifecycleHookTargetConfig = CdkObjectWrappers.wrap(cdkObject) as? LifecycleHookTargetConfig
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LifecycleHookTargetConfig):
         software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig = (wrapped as

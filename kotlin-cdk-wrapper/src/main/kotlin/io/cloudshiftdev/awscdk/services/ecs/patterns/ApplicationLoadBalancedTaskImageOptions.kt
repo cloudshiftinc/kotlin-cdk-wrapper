@@ -617,8 +617,8 @@ public interface ApplicationLoadBalancedTaskImageOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions):
-        ApplicationLoadBalancedTaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancedTaskImageOptions
+        ApplicationLoadBalancedTaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancedTaskImageOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedTaskImageOptions):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions =

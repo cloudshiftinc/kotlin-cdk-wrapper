@@ -314,7 +314,8 @@ public interface CfnEventInvokeConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfigProps):
-        CfnEventInvokeConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnEventInvokeConfigProps
+        CfnEventInvokeConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventInvokeConfigProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventInvokeConfigProps):
         software.amazon.awscdk.services.lambda.CfnEventInvokeConfigProps = (wrapped as

@@ -925,7 +925,8 @@ public open class CfnGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty):
-          ResourceQueryProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceQueryProperty
+          ResourceQueryProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceQueryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceQueryProperty):
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty = (wrapped
@@ -1192,7 +1193,7 @@ public open class CfnGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty):
-          QueryProperty = CdkObjectWrappers.wrap(cdkObject) as QueryProperty
+          QueryProperty = CdkObjectWrappers.wrap(cdkObject) as? QueryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryProperty):
           software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty = (wrapped as
@@ -1361,7 +1362,8 @@ public open class CfnGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty):
-          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as TagFilterProperty
+          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagFilterProperty):
           software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty = (wrapped as
@@ -1552,7 +1554,8 @@ public open class CfnGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty):
-          ConfigurationItemProperty = CdkObjectWrappers.wrap(cdkObject) as ConfigurationItemProperty
+          ConfigurationItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationItemProperty):
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty =
@@ -1714,8 +1717,8 @@ public open class CfnGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty):
-          ConfigurationParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConfigurationParameterProperty
+          ConfigurationParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationParameterProperty):
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty =

@@ -724,7 +724,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty):
-          SftpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SftpConfigProperty
+          SftpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SftpConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SftpConfigProperty):
           software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty = (wrapped as
@@ -1192,7 +1193,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty):
-          As2ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as As2ConfigProperty
+          As2ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? As2ConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: As2ConfigProperty):
           software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty = (wrapped as

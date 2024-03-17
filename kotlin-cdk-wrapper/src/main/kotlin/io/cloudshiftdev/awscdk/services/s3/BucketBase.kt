@@ -874,9 +874,13 @@ public abstract class BucketBase internal constructor(
       options: VirtualHostedStyleUrlOptions.Builder.() -> Unit): String =
       virtualHostedUrlForObject(key, VirtualHostedStyleUrlOptions(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.s3.BucketBase,
+  ) : BucketBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.BucketBase): BucketBase =
-        CdkObjectWrappers.wrap(cdkObject) as BucketBase
+        CdkObjectWrappers.wrap(cdkObject) as? BucketBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketBase): software.amazon.awscdk.services.s3.BucketBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.BucketBase

@@ -511,9 +511,13 @@ public abstract class RestApiBase internal constructor(
    */
   public open fun urlForPath(path: String): String = unwrap(this).urlForPath(path)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase,
+  ) : RestApiBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase):
-        RestApiBase = CdkObjectWrappers.wrap(cdkObject) as RestApiBase
+        RestApiBase = CdkObjectWrappers.wrap(cdkObject) as? RestApiBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RestApiBase):
         software.amazon.awscdk.services.apigateway.RestApiBase = (wrapped as CdkObject).cdkObject as

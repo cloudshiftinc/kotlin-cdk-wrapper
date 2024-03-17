@@ -240,7 +240,8 @@ public interface CfnVPCEConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnVPCEConfigurationProps):
-        CfnVPCEConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as CfnVPCEConfigurationProps
+        CfnVPCEConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVPCEConfigurationProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCEConfigurationProps):
         software.amazon.awscdk.services.devicefarm.CfnVPCEConfigurationProps = (wrapped as

@@ -625,8 +625,8 @@ public open class CfnPartnerAccount internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty):
-          SidewalkUpdateAccountProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SidewalkUpdateAccountProperty
+          SidewalkUpdateAccountProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SidewalkUpdateAccountProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SidewalkUpdateAccountProperty):
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty
@@ -764,8 +764,8 @@ public open class CfnPartnerAccount internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty):
-          SidewalkAccountInfoWithFingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SidewalkAccountInfoWithFingerprintProperty
+          SidewalkAccountInfoWithFingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SidewalkAccountInfoWithFingerprintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SidewalkAccountInfoWithFingerprintProperty):
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty
@@ -869,8 +869,8 @@ public open class CfnPartnerAccount internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty):
-          SidewalkAccountInfoProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SidewalkAccountInfoProperty
+          SidewalkAccountInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SidewalkAccountInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SidewalkAccountInfoProperty):
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty

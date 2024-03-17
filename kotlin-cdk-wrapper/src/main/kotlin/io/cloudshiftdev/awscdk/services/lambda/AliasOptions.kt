@@ -317,7 +317,7 @@ public interface AliasOptions : EventInvokeConfigOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AliasOptions): AliasOptions
-        = CdkObjectWrappers.wrap(cdkObject) as AliasOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? AliasOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AliasOptions): software.amazon.awscdk.services.lambda.AliasOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.AliasOptions

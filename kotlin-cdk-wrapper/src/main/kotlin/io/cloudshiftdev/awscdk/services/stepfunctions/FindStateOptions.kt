@@ -74,7 +74,8 @@ public interface FindStateOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions):
-        FindStateOptions = CdkObjectWrappers.wrap(cdkObject) as FindStateOptions
+        FindStateOptions = CdkObjectWrappers.wrap(cdkObject) as? FindStateOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FindStateOptions):
         software.amazon.awscdk.services.stepfunctions.FindStateOptions = (wrapped as

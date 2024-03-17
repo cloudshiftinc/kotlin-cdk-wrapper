@@ -93,7 +93,8 @@ public interface CfnDynamicReferenceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnDynamicReferenceProps):
-        CfnDynamicReferenceProps = CdkObjectWrappers.wrap(cdkObject) as CfnDynamicReferenceProps
+        CfnDynamicReferenceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDynamicReferenceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDynamicReferenceProps):
         software.amazon.awscdk.CfnDynamicReferenceProps = (wrapped as CdkObject).cdkObject as

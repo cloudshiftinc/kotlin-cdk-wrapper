@@ -666,7 +666,8 @@ public interface CfnAssetModelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModelProps):
-        CfnAssetModelProps = CdkObjectWrappers.wrap(cdkObject) as CfnAssetModelProps
+        CfnAssetModelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAssetModelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssetModelProps):
         software.amazon.awscdk.services.iotsitewise.CfnAssetModelProps = (wrapped as

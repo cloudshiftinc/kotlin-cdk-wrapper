@@ -402,7 +402,8 @@ public interface CfnJobQueueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobQueueProps):
-        CfnJobQueueProps = CdkObjectWrappers.wrap(cdkObject) as CfnJobQueueProps
+        CfnJobQueueProps = CdkObjectWrappers.wrap(cdkObject) as? CfnJobQueueProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnJobQueueProps):
         software.amazon.awscdk.services.batch.CfnJobQueueProps = (wrapped as CdkObject).cdkObject as

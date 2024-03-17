@@ -350,7 +350,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty):
-          TemplateProperty = CdkObjectWrappers.wrap(cdkObject) as TemplateProperty
+          TemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? TemplateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TemplateProperty):
           software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty = (wrapped as

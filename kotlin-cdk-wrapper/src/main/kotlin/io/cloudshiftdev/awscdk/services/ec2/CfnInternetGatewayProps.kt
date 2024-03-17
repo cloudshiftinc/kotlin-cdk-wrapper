@@ -90,7 +90,8 @@ public interface CfnInternetGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInternetGatewayProps):
-        CfnInternetGatewayProps = CdkObjectWrappers.wrap(cdkObject) as CfnInternetGatewayProps
+        CfnInternetGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? CfnInternetGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInternetGatewayProps):
         software.amazon.awscdk.services.ec2.CfnInternetGatewayProps = (wrapped as

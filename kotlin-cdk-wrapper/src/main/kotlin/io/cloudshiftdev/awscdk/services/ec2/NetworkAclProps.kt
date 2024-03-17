@@ -176,7 +176,8 @@ public interface NetworkAclProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NetworkAclProps):
-        NetworkAclProps = CdkObjectWrappers.wrap(cdkObject) as NetworkAclProps
+        NetworkAclProps = CdkObjectWrappers.wrap(cdkObject) as? NetworkAclProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkAclProps):
         software.amazon.awscdk.services.ec2.NetworkAclProps = (wrapped as CdkObject).cdkObject as

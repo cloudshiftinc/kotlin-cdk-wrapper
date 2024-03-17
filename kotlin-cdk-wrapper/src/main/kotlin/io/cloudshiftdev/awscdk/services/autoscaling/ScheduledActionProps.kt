@@ -273,7 +273,8 @@ public interface ScheduledActionProps : BasicScheduledActionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.ScheduledActionProps):
-        ScheduledActionProps = CdkObjectWrappers.wrap(cdkObject) as ScheduledActionProps
+        ScheduledActionProps = CdkObjectWrappers.wrap(cdkObject) as? ScheduledActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledActionProps):
         software.amazon.awscdk.services.autoscaling.ScheduledActionProps = (wrapped as

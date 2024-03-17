@@ -1175,7 +1175,8 @@ public open class CfnExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.MetricGoalObjectProperty):
-          MetricGoalObjectProperty = CdkObjectWrappers.wrap(cdkObject) as MetricGoalObjectProperty
+          MetricGoalObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricGoalObjectProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricGoalObjectProperty):
           software.amazon.awscdk.services.evidently.CfnExperiment.MetricGoalObjectProperty =
@@ -1295,7 +1296,8 @@ public open class CfnExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty):
-          TreatmentToWeightProperty = CdkObjectWrappers.wrap(cdkObject) as TreatmentToWeightProperty
+          TreatmentToWeightProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TreatmentToWeightProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TreatmentToWeightProperty):
           software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty =
@@ -1487,8 +1489,8 @@ public open class CfnExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.RunningStatusObjectProperty):
-          RunningStatusObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RunningStatusObjectProperty
+          RunningStatusObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RunningStatusObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RunningStatusObjectProperty):
           software.amazon.awscdk.services.evidently.CfnExperiment.RunningStatusObjectProperty =
@@ -1659,7 +1661,8 @@ public open class CfnExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentObjectProperty):
-          TreatmentObjectProperty = CdkObjectWrappers.wrap(cdkObject) as TreatmentObjectProperty
+          TreatmentObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? TreatmentObjectProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TreatmentObjectProperty):
           software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentObjectProperty = (wrapped
@@ -1828,8 +1831,8 @@ public open class CfnExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty):
-          OnlineAbConfigObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OnlineAbConfigObjectProperty
+          OnlineAbConfigObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnlineAbConfigObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnlineAbConfigObjectProperty):
           software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty =

@@ -181,8 +181,8 @@ public interface CfnPortfolioPrincipalAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociationProps):
-        CfnPortfolioPrincipalAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnPortfolioPrincipalAssociationProps
+        CfnPortfolioPrincipalAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPortfolioPrincipalAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPortfolioPrincipalAssociationProps):
         software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociationProps =

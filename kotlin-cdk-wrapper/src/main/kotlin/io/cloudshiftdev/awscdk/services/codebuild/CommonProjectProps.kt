@@ -1107,7 +1107,8 @@ public interface CommonProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CommonProjectProps):
-        CommonProjectProps = CdkObjectWrappers.wrap(cdkObject) as CommonProjectProps
+        CommonProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CommonProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonProjectProps):
         software.amazon.awscdk.services.codebuild.CommonProjectProps = (wrapped as

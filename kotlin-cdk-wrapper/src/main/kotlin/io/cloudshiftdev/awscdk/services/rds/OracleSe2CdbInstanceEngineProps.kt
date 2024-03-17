@@ -76,8 +76,8 @@ public interface OracleSe2CdbInstanceEngineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.OracleSe2CdbInstanceEngineProps):
-        OracleSe2CdbInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as
-        OracleSe2CdbInstanceEngineProps
+        OracleSe2CdbInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        OracleSe2CdbInstanceEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OracleSe2CdbInstanceEngineProps):
         software.amazon.awscdk.services.rds.OracleSe2CdbInstanceEngineProps = (wrapped as

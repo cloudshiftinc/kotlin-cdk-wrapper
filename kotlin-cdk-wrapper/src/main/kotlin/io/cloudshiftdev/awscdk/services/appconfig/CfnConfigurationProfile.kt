@@ -673,7 +673,8 @@ public open class CfnConfigurationProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.ValidatorsProperty):
-          ValidatorsProperty = CdkObjectWrappers.wrap(cdkObject) as ValidatorsProperty
+          ValidatorsProperty = CdkObjectWrappers.wrap(cdkObject) as? ValidatorsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValidatorsProperty):
           software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.ValidatorsProperty =

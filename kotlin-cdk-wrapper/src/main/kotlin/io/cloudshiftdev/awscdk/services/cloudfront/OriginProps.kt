@@ -239,7 +239,7 @@ public interface OriginProps : OriginOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginProps):
-        OriginProps = CdkObjectWrappers.wrap(cdkObject) as OriginProps
+        OriginProps = CdkObjectWrappers.wrap(cdkObject) as? OriginProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginProps):
         software.amazon.awscdk.services.cloudfront.OriginProps = (wrapped as CdkObject).cdkObject as

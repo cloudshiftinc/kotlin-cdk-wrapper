@@ -827,8 +827,8 @@ public open class CfnFlowLog internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty):
-          DestinationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DestinationOptionsProperty
+          DestinationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty = (wrapped as

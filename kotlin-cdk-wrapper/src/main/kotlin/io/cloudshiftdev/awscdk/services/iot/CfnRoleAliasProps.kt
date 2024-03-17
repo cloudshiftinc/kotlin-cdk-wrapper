@@ -197,7 +197,8 @@ public interface CfnRoleAliasProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnRoleAliasProps):
-        CfnRoleAliasProps = CdkObjectWrappers.wrap(cdkObject) as CfnRoleAliasProps
+        CfnRoleAliasProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRoleAliasProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoleAliasProps):
         software.amazon.awscdk.services.iot.CfnRoleAliasProps = (wrapped as CdkObject).cdkObject as

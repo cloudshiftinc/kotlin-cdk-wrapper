@@ -267,8 +267,8 @@ public interface CfnAutoScalingConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnAutoScalingConfigurationProps):
-        CfnAutoScalingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAutoScalingConfigurationProps
+        CfnAutoScalingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAutoScalingConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutoScalingConfigurationProps):
         software.amazon.awscdk.services.apprunner.CfnAutoScalingConfigurationProps = (wrapped as

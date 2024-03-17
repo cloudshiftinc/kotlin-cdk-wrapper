@@ -24,9 +24,14 @@ public abstract class BaseDeploymentConfig internal constructor(
    */
   public override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfig,
+  ) : BaseDeploymentConfig(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfig):
-        BaseDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as BaseDeploymentConfig
+        BaseDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as? BaseDeploymentConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseDeploymentConfig):
         software.amazon.awscdk.services.codedeploy.BaseDeploymentConfig = (wrapped as

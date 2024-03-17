@@ -544,7 +544,8 @@ public open class CfnVerifiedAccessGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.SseSpecificationProperty):
-          SseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as SseSpecificationProperty
+          SseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? SseSpecificationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.SseSpecificationProperty =

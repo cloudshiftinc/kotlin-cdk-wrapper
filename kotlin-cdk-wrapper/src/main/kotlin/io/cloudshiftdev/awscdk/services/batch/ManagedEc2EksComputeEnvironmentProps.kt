@@ -1024,8 +1024,8 @@ public interface ManagedEc2EksComputeEnvironmentProps : ManagedComputeEnvironmen
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironmentProps):
-        ManagedEc2EksComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        ManagedEc2EksComputeEnvironmentProps
+        ManagedEc2EksComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ManagedEc2EksComputeEnvironmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ManagedEc2EksComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironmentProps = (wrapped as

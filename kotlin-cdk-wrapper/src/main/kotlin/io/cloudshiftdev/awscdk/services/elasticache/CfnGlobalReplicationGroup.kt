@@ -685,8 +685,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty):
-          GlobalReplicationGroupMemberProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GlobalReplicationGroupMemberProperty
+          GlobalReplicationGroupMemberProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlobalReplicationGroupMemberProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GlobalReplicationGroupMemberProperty):
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty
@@ -818,8 +818,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty):
-          ReshardingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ReshardingConfigurationProperty
+          ReshardingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReshardingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReshardingConfigurationProperty):
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
@@ -990,8 +990,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty):
-          RegionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RegionalConfigurationProperty
+          RegionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegionalConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegionalConfigurationProperty):
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty

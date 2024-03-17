@@ -764,7 +764,8 @@ public open class CfnFirewall internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewall.SubnetMappingProperty):
-          SubnetMappingProperty = CdkObjectWrappers.wrap(cdkObject) as SubnetMappingProperty
+          SubnetMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubnetMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubnetMappingProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewall.SubnetMappingProperty =

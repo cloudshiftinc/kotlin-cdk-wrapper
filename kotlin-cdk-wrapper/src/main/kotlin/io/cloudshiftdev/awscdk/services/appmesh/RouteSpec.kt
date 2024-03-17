@@ -47,6 +47,10 @@ public abstract class RouteSpec internal constructor(
   public open fun bind(scope: Construct): RouteSpecConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(RouteSpecConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec,
+  ) : RouteSpec(cdkObject)
+
   public companion object {
     public fun grpc(options: GrpcRouteSpecOptions): RouteSpec =
         software.amazon.awscdk.services.appmesh.RouteSpec.grpc(options.let(GrpcRouteSpecOptions::unwrap)).let(RouteSpec::wrap)
@@ -81,7 +85,7 @@ public abstract class RouteSpec internal constructor(
         tcp(TcpRouteSpecOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec): RouteSpec =
-        CdkObjectWrappers.wrap(cdkObject) as RouteSpec
+        CdkObjectWrappers.wrap(cdkObject) as? RouteSpec ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RouteSpec): software.amazon.awscdk.services.appmesh.RouteSpec =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.RouteSpec

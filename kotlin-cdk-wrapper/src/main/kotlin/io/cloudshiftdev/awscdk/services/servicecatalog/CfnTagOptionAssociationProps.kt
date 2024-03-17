@@ -107,8 +107,8 @@ public interface CfnTagOptionAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociationProps):
-        CfnTagOptionAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTagOptionAssociationProps
+        CfnTagOptionAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTagOptionAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTagOptionAssociationProps):
         software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociationProps = (wrapped as

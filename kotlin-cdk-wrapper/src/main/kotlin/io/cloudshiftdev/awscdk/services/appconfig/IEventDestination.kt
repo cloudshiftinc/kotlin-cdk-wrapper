@@ -27,9 +27,30 @@ public interface IEventDestination {
    */
   public fun type(): SourceType
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appconfig.IEventDestination,
+  ) : CdkObject(cdkObject), IEventDestination {
+    /**
+     * The URI of the extension event destination.
+     */
+    override fun extensionUri(): String = unwrap(this).getExtensionUri()
+
+    /**
+     * The IAM policy document to invoke the event destination.
+     */
+    override fun policyDocument(): PolicyDocument? =
+        unwrap(this).getPolicyDocument()?.let(PolicyDocument::wrap)
+
+    /**
+     * The type of the extension event destination.
+     */
+    override fun type(): SourceType = unwrap(this).getType().let(SourceType::wrap)
+  }
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.IEventDestination):
-        IEventDestination = CdkObjectWrappers.wrap(cdkObject) as IEventDestination
+        IEventDestination = CdkObjectWrappers.wrap(cdkObject) as? IEventDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEventDestination):
         software.amazon.awscdk.services.appconfig.IEventDestination = (wrapped as

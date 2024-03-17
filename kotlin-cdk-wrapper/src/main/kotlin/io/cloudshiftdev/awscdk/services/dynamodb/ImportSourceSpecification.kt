@@ -186,7 +186,8 @@ public interface ImportSourceSpecification {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.ImportSourceSpecification):
-        ImportSourceSpecification = CdkObjectWrappers.wrap(cdkObject) as ImportSourceSpecification
+        ImportSourceSpecification = CdkObjectWrappers.wrap(cdkObject) as? ImportSourceSpecification
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ImportSourceSpecification):
         software.amazon.awscdk.services.dynamodb.ImportSourceSpecification = (wrapped as

@@ -225,7 +225,8 @@ public interface BackupSelectionProps : BackupSelectionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.BackupSelectionProps):
-        BackupSelectionProps = CdkObjectWrappers.wrap(cdkObject) as BackupSelectionProps
+        BackupSelectionProps = CdkObjectWrappers.wrap(cdkObject) as? BackupSelectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BackupSelectionProps):
         software.amazon.awscdk.services.backup.BackupSelectionProps = (wrapped as

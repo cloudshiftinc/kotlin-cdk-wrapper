@@ -144,7 +144,7 @@ public interface OAuthFlows {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.OAuthFlows): OAuthFlows =
-        CdkObjectWrappers.wrap(cdkObject) as OAuthFlows
+        CdkObjectWrappers.wrap(cdkObject) as? OAuthFlows ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OAuthFlows): software.amazon.awscdk.services.cognito.OAuthFlows =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cognito.OAuthFlows

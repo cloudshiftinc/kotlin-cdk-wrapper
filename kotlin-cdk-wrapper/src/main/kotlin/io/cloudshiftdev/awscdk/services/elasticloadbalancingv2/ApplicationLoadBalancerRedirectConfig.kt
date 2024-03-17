@@ -220,8 +220,8 @@ public interface ApplicationLoadBalancerRedirectConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig):
-        ApplicationLoadBalancerRedirectConfig = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancerRedirectConfig
+        ApplicationLoadBalancerRedirectConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancerRedirectConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancerRedirectConfig):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig

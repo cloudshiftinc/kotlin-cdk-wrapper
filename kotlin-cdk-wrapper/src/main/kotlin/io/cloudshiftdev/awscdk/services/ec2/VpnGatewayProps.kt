@@ -98,7 +98,8 @@ public interface VpnGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpnGatewayProps):
-        VpnGatewayProps = CdkObjectWrappers.wrap(cdkObject) as VpnGatewayProps
+        VpnGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? VpnGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpnGatewayProps):
         software.amazon.awscdk.services.ec2.VpnGatewayProps = (wrapped as CdkObject).cdkObject as

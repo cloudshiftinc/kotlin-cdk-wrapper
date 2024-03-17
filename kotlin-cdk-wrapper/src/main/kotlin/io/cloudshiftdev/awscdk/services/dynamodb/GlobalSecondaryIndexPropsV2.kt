@@ -266,8 +266,8 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexPropsV2):
-        GlobalSecondaryIndexPropsV2 = CdkObjectWrappers.wrap(cdkObject) as
-        GlobalSecondaryIndexPropsV2
+        GlobalSecondaryIndexPropsV2 = CdkObjectWrappers.wrap(cdkObject) as?
+        GlobalSecondaryIndexPropsV2 ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GlobalSecondaryIndexPropsV2):
         software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexPropsV2 = (wrapped as

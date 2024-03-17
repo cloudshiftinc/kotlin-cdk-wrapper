@@ -76,7 +76,8 @@ public interface OriginAccessIdentityProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps):
-        OriginAccessIdentityProps = CdkObjectWrappers.wrap(cdkObject) as OriginAccessIdentityProps
+        OriginAccessIdentityProps = CdkObjectWrappers.wrap(cdkObject) as? OriginAccessIdentityProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginAccessIdentityProps):
         software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps = (wrapped as

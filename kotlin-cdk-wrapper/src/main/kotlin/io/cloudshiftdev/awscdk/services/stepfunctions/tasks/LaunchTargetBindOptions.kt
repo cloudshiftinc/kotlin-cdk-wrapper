@@ -109,7 +109,8 @@ public interface LaunchTargetBindOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptions):
-        LaunchTargetBindOptions = CdkObjectWrappers.wrap(cdkObject) as LaunchTargetBindOptions
+        LaunchTargetBindOptions = CdkObjectWrappers.wrap(cdkObject) as? LaunchTargetBindOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTargetBindOptions):
         software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptions = (wrapped as

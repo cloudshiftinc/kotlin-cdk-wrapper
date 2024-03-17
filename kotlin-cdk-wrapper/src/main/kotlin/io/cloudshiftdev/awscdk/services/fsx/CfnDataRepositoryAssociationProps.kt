@@ -459,8 +459,8 @@ public interface CfnDataRepositoryAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociationProps):
-        CfnDataRepositoryAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDataRepositoryAssociationProps
+        CfnDataRepositoryAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDataRepositoryAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataRepositoryAssociationProps):
         software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociationProps = (wrapped as

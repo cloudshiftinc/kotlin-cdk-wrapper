@@ -867,7 +867,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty):
-          GroupsProperty = CdkObjectWrappers.wrap(cdkObject) as GroupsProperty
+          GroupsProperty = CdkObjectWrappers.wrap(cdkObject) as? GroupsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GroupsProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty = (wrapped as
@@ -974,8 +975,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty):
-          AttributeDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AttributeDimensionProperty
+          AttributeDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AttributeDimensionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeDimensionProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty = (wrapped
@@ -1348,7 +1349,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty):
-          SegmentDimensionsProperty = CdkObjectWrappers.wrap(cdkObject) as SegmentDimensionsProperty
+          SegmentDimensionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SegmentDimensionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SegmentDimensionsProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty = (wrapped
@@ -1556,7 +1558,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty):
-          SegmentGroupsProperty = CdkObjectWrappers.wrap(cdkObject) as SegmentGroupsProperty
+          SegmentGroupsProperty = CdkObjectWrappers.wrap(cdkObject) as? SegmentGroupsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SegmentGroupsProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty = (wrapped as
@@ -1725,7 +1728,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty):
-          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as LocationProperty
+          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LocationProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty = (wrapped as
@@ -1861,7 +1865,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty):
-          GPSPointProperty = CdkObjectWrappers.wrap(cdkObject) as GPSPointProperty
+          GPSPointProperty = CdkObjectWrappers.wrap(cdkObject) as? GPSPointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GPSPointProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty = (wrapped as
@@ -1977,7 +1982,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty):
-          SourceSegmentsProperty = CdkObjectWrappers.wrap(cdkObject) as SourceSegmentsProperty
+          SourceSegmentsProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceSegmentsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceSegmentsProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty = (wrapped as
@@ -2372,7 +2378,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty):
-          DemographicProperty = CdkObjectWrappers.wrap(cdkObject) as DemographicProperty
+          DemographicProperty = CdkObjectWrappers.wrap(cdkObject) as? DemographicProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DemographicProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty = (wrapped as
@@ -2482,7 +2489,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty):
-          BehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as BehaviorProperty
+          BehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as? BehaviorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BehaviorProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty = (wrapped as
@@ -2623,7 +2631,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty):
-          SetDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as SetDimensionProperty
+          SetDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? SetDimensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SetDimensionProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty = (wrapped as
@@ -2730,7 +2739,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty):
-          CoordinatesProperty = CdkObjectWrappers.wrap(cdkObject) as CoordinatesProperty
+          CoordinatesProperty = CdkObjectWrappers.wrap(cdkObject) as? CoordinatesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoordinatesProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty = (wrapped as
@@ -2863,7 +2873,8 @@ public open class CfnSegment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty):
-          RecencyProperty = CdkObjectWrappers.wrap(cdkObject) as RecencyProperty
+          RecencyProperty = CdkObjectWrappers.wrap(cdkObject) as? RecencyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecencyProperty):
           software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty = (wrapped as

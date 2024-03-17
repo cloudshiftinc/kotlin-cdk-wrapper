@@ -1413,8 +1413,8 @@ public interface DatabaseInstanceFromSnapshotProps : DatabaseInstanceSourceProps
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshotProps):
-        DatabaseInstanceFromSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as
-        DatabaseInstanceFromSnapshotProps
+        DatabaseInstanceFromSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DatabaseInstanceFromSnapshotProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseInstanceFromSnapshotProps):
         software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshotProps = (wrapped as

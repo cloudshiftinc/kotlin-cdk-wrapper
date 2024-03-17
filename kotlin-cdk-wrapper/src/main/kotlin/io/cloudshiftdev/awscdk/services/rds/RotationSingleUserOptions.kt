@@ -209,7 +209,8 @@ public interface RotationSingleUserOptions : CommonRotationUserOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.RotationSingleUserOptions):
-        RotationSingleUserOptions = CdkObjectWrappers.wrap(cdkObject) as RotationSingleUserOptions
+        RotationSingleUserOptions = CdkObjectWrappers.wrap(cdkObject) as? RotationSingleUserOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RotationSingleUserOptions):
         software.amazon.awscdk.services.rds.RotationSingleUserOptions = (wrapped as

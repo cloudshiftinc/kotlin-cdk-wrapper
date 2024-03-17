@@ -110,7 +110,7 @@ public interface StagePlacement {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.StagePlacement):
-        StagePlacement = CdkObjectWrappers.wrap(cdkObject) as StagePlacement
+        StagePlacement = CdkObjectWrappers.wrap(cdkObject) as? StagePlacement ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StagePlacement):
         software.amazon.awscdk.services.codepipeline.StagePlacement = (wrapped as

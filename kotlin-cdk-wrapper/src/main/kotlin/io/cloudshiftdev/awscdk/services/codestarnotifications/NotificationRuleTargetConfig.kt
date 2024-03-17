@@ -106,8 +106,8 @@ public interface NotificationRuleTargetConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig):
-        NotificationRuleTargetConfig = CdkObjectWrappers.wrap(cdkObject) as
-        NotificationRuleTargetConfig
+        NotificationRuleTargetConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        NotificationRuleTargetConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NotificationRuleTargetConfig):
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig =

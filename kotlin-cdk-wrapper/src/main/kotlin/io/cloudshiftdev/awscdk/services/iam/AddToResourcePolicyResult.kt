@@ -103,7 +103,8 @@ public interface AddToResourcePolicyResult {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.AddToResourcePolicyResult):
-        AddToResourcePolicyResult = CdkObjectWrappers.wrap(cdkObject) as AddToResourcePolicyResult
+        AddToResourcePolicyResult = CdkObjectWrappers.wrap(cdkObject) as? AddToResourcePolicyResult
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddToResourcePolicyResult):
         software.amazon.awscdk.services.iam.AddToResourcePolicyResult = (wrapped as

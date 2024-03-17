@@ -241,7 +241,8 @@ public interface ItemBatcherProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcherProps):
-        ItemBatcherProps = CdkObjectWrappers.wrap(cdkObject) as ItemBatcherProps
+        ItemBatcherProps = CdkObjectWrappers.wrap(cdkObject) as? ItemBatcherProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ItemBatcherProps):
         software.amazon.awscdk.services.stepfunctions.ItemBatcherProps = (wrapped as

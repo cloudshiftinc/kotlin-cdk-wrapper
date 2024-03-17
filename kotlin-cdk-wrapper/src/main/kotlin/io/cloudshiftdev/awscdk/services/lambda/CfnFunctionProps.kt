@@ -1506,7 +1506,8 @@ public interface CfnFunctionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunctionProps):
-        CfnFunctionProps = CdkObjectWrappers.wrap(cdkObject) as CfnFunctionProps
+        CfnFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunctionProps):
         software.amazon.awscdk.services.lambda.CfnFunctionProps = (wrapped as CdkObject).cdkObject

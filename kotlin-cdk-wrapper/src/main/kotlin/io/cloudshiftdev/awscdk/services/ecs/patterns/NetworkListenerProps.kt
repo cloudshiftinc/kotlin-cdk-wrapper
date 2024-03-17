@@ -100,7 +100,8 @@ public interface NetworkListenerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps):
-        NetworkListenerProps = CdkObjectWrappers.wrap(cdkObject) as NetworkListenerProps
+        NetworkListenerProps = CdkObjectWrappers.wrap(cdkObject) as? NetworkListenerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkListenerProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps = (wrapped as

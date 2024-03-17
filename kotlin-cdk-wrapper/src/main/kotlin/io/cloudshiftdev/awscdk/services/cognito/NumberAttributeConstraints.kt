@@ -103,7 +103,8 @@ public interface NumberAttributeConstraints {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.NumberAttributeConstraints):
-        NumberAttributeConstraints = CdkObjectWrappers.wrap(cdkObject) as NumberAttributeConstraints
+        NumberAttributeConstraints = CdkObjectWrappers.wrap(cdkObject) as?
+        NumberAttributeConstraints ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NumberAttributeConstraints):
         software.amazon.awscdk.services.cognito.NumberAttributeConstraints = (wrapped as

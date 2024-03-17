@@ -141,8 +141,8 @@ public interface VpcEndpointServiceDomainNameProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53.VpcEndpointServiceDomainNameProps):
-        VpcEndpointServiceDomainNameProps = CdkObjectWrappers.wrap(cdkObject) as
-        VpcEndpointServiceDomainNameProps
+        VpcEndpointServiceDomainNameProps = CdkObjectWrappers.wrap(cdkObject) as?
+        VpcEndpointServiceDomainNameProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcEndpointServiceDomainNameProps):
         software.amazon.awscdk.services.route53.VpcEndpointServiceDomainNameProps = (wrapped as

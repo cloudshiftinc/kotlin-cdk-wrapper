@@ -198,7 +198,8 @@ public interface WebSocketAuthorizerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerProps):
-        WebSocketAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as WebSocketAuthorizerProps
+        WebSocketAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as? WebSocketAuthorizerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketAuthorizerProps):
         software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerProps = (wrapped as

@@ -288,7 +288,8 @@ public open class CfnListenerCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate.CertificateProperty):
-          CertificateProperty = CdkObjectWrappers.wrap(cdkObject) as CertificateProperty
+          CertificateProperty = CdkObjectWrappers.wrap(cdkObject) as? CertificateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate.CertificateProperty

@@ -232,7 +232,8 @@ public interface CfnDBParameterGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.neptune.CfnDBParameterGroupProps):
-        CfnDBParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBParameterGroupProps
+        CfnDBParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDBParameterGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBParameterGroupProps):
         software.amazon.awscdk.services.neptune.CfnDBParameterGroupProps = (wrapped as

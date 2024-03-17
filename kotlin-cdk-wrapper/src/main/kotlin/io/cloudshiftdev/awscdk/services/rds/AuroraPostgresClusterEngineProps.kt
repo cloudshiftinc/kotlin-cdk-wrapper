@@ -83,8 +83,8 @@ public interface AuroraPostgresClusterEngineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresClusterEngineProps):
-        AuroraPostgresClusterEngineProps = CdkObjectWrappers.wrap(cdkObject) as
-        AuroraPostgresClusterEngineProps
+        AuroraPostgresClusterEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AuroraPostgresClusterEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuroraPostgresClusterEngineProps):
         software.amazon.awscdk.services.rds.AuroraPostgresClusterEngineProps = (wrapped as

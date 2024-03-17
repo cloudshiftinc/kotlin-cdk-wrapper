@@ -330,7 +330,8 @@ public open class CfnGroupMembership internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty):
-          MemberIdProperty = CdkObjectWrappers.wrap(cdkObject) as MemberIdProperty
+          MemberIdProperty = CdkObjectWrappers.wrap(cdkObject) as? MemberIdProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemberIdProperty):
           software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty =

@@ -208,7 +208,8 @@ public interface CfnVirtualClusterProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualClusterProps):
-        CfnVirtualClusterProps = CdkObjectWrappers.wrap(cdkObject) as CfnVirtualClusterProps
+        CfnVirtualClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVirtualClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualClusterProps):
         software.amazon.awscdk.services.emrcontainers.CfnVirtualClusterProps = (wrapped as

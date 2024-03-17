@@ -117,7 +117,8 @@ public interface BindHookTargetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.BindHookTargetOptions):
-        BindHookTargetOptions = CdkObjectWrappers.wrap(cdkObject) as BindHookTargetOptions
+        BindHookTargetOptions = CdkObjectWrappers.wrap(cdkObject) as? BindHookTargetOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BindHookTargetOptions):
         software.amazon.awscdk.services.autoscaling.BindHookTargetOptions = (wrapped as

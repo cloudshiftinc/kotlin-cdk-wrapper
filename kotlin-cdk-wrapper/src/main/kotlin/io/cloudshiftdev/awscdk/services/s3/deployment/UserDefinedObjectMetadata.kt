@@ -52,7 +52,8 @@ public interface UserDefinedObjectMetadata {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata):
-        UserDefinedObjectMetadata = CdkObjectWrappers.wrap(cdkObject) as UserDefinedObjectMetadata
+        UserDefinedObjectMetadata = CdkObjectWrappers.wrap(cdkObject) as? UserDefinedObjectMetadata
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserDefinedObjectMetadata):
         software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata = (wrapped as

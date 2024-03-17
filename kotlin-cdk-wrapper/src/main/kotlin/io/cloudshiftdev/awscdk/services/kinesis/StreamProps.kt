@@ -240,7 +240,7 @@ public interface StreamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.StreamProps): StreamProps =
-        CdkObjectWrappers.wrap(cdkObject) as StreamProps
+        CdkObjectWrappers.wrap(cdkObject) as? StreamProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamProps): software.amazon.awscdk.services.kinesis.StreamProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.kinesis.StreamProps

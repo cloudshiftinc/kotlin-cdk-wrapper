@@ -120,7 +120,7 @@ public interface AclIcmp {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclIcmp): AclIcmp =
-        CdkObjectWrappers.wrap(cdkObject) as AclIcmp
+        CdkObjectWrappers.wrap(cdkObject) as? AclIcmp ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AclIcmp): software.amazon.awscdk.services.ec2.AclIcmp = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ec2.AclIcmp

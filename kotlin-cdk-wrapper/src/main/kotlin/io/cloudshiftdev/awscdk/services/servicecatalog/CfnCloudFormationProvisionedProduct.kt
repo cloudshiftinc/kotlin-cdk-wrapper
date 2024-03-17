@@ -922,8 +922,8 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty):
-          ProvisioningParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProvisioningParameterProperty
+          ProvisioningParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisioningParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisioningParameterProperty):
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty
@@ -1556,8 +1556,8 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty):
-          ProvisioningPreferencesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProvisioningPreferencesProperty
+          ProvisioningPreferencesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisioningPreferencesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisioningPreferencesProperty):
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty

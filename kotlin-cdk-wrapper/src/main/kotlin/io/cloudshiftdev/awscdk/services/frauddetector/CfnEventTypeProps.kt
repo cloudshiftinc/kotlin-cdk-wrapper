@@ -359,7 +359,8 @@ public interface CfnEventTypeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventTypeProps):
-        CfnEventTypeProps = CdkObjectWrappers.wrap(cdkObject) as CfnEventTypeProps
+        CfnEventTypeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventTypeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventTypeProps):
         software.amazon.awscdk.services.frauddetector.CfnEventTypeProps = (wrapped as

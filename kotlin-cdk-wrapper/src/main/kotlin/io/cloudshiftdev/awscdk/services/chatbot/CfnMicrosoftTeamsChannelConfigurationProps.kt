@@ -422,8 +422,8 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps):
-        CfnMicrosoftTeamsChannelConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnMicrosoftTeamsChannelConfigurationProps
+        CfnMicrosoftTeamsChannelConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMicrosoftTeamsChannelConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMicrosoftTeamsChannelConfigurationProps):
         software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps =

@@ -824,7 +824,8 @@ public interface CfnRestApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApiProps):
-        CfnRestApiProps = CdkObjectWrappers.wrap(cdkObject) as CfnRestApiProps
+        CfnRestApiProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRestApiProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRestApiProps):
         software.amazon.awscdk.services.apigateway.CfnRestApiProps = (wrapped as

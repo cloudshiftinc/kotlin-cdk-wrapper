@@ -592,8 +592,8 @@ public open class CfnAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.AliasRoutingConfigurationProperty):
-          AliasRoutingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AliasRoutingConfigurationProperty
+          AliasRoutingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AliasRoutingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AliasRoutingConfigurationProperty):
           software.amazon.awscdk.services.lambda.CfnAlias.AliasRoutingConfigurationProperty =
@@ -680,8 +680,8 @@ public open class CfnAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.ProvisionedConcurrencyConfigurationProperty):
-          ProvisionedConcurrencyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProvisionedConcurrencyConfigurationProperty
+          ProvisionedConcurrencyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisionedConcurrencyConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisionedConcurrencyConfigurationProperty):
           software.amazon.awscdk.services.lambda.CfnAlias.ProvisionedConcurrencyConfigurationProperty
@@ -791,7 +791,8 @@ public open class CfnAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.VersionWeightProperty):
-          VersionWeightProperty = CdkObjectWrappers.wrap(cdkObject) as VersionWeightProperty
+          VersionWeightProperty = CdkObjectWrappers.wrap(cdkObject) as? VersionWeightProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VersionWeightProperty):
           software.amazon.awscdk.services.lambda.CfnAlias.VersionWeightProperty = (wrapped as

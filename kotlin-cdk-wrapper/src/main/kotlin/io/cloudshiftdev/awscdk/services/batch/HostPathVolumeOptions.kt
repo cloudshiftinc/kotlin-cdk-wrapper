@@ -160,7 +160,8 @@ public interface HostPathVolumeOptions : EksVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.HostPathVolumeOptions):
-        HostPathVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as HostPathVolumeOptions
+        HostPathVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as? HostPathVolumeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HostPathVolumeOptions):
         software.amazon.awscdk.services.batch.HostPathVolumeOptions = (wrapped as

@@ -137,7 +137,8 @@ public interface BaseListenerLookupOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListenerLookupOptions):
-        BaseListenerLookupOptions = CdkObjectWrappers.wrap(cdkObject) as BaseListenerLookupOptions
+        BaseListenerLookupOptions = CdkObjectWrappers.wrap(cdkObject) as? BaseListenerLookupOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseListenerLookupOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseListenerLookupOptions = (wrapped

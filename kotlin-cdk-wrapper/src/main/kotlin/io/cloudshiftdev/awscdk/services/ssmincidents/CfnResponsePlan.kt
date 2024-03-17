@@ -775,7 +775,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty):
-          SsmParameterProperty = CdkObjectWrappers.wrap(cdkObject) as SsmParameterProperty
+          SsmParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SsmParameterProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty =
@@ -858,8 +859,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty):
-          NotificationTargetItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationTargetItemProperty
+          NotificationTargetItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationTargetItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationTargetItemProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty
@@ -981,7 +982,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty):
-          IntegrationProperty = CdkObjectWrappers.wrap(cdkObject) as IntegrationProperty
+          IntegrationProperty = CdkObjectWrappers.wrap(cdkObject) as? IntegrationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntegrationProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty =
@@ -1271,7 +1273,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty):
-          SsmAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as SsmAutomationProperty
+          SsmAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmAutomationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SsmAutomationProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty =
@@ -1359,8 +1362,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty):
-          PagerDutyIncidentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PagerDutyIncidentConfigurationProperty
+          PagerDutyIncidentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PagerDutyIncidentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PagerDutyIncidentConfigurationProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty
@@ -1492,7 +1495,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty = (wrapped as
@@ -1656,8 +1660,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty):
-          DynamicSsmParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DynamicSsmParameterProperty
+          DynamicSsmParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DynamicSsmParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynamicSsmParameterProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty =
@@ -1746,8 +1750,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty):
-          DynamicSsmParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DynamicSsmParameterValueProperty
+          DynamicSsmParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DynamicSsmParameterValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynamicSsmParameterValueProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty
@@ -2099,7 +2103,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty):
-          IncidentTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as IncidentTemplateProperty
+          IncidentTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? IncidentTemplateProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IncidentTemplateProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty =
@@ -2210,7 +2215,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty):
-          ChatChannelProperty = CdkObjectWrappers.wrap(cdkObject) as ChatChannelProperty
+          ChatChannelProperty = CdkObjectWrappers.wrap(cdkObject) as? ChatChannelProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ChatChannelProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty =
@@ -2392,8 +2398,8 @@ public open class CfnResponsePlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty):
-          PagerDutyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PagerDutyConfigurationProperty
+          PagerDutyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PagerDutyConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PagerDutyConfigurationProperty):
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty

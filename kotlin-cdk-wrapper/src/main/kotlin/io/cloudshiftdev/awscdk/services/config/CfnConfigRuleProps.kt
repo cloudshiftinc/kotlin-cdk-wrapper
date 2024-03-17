@@ -566,7 +566,8 @@ public interface CfnConfigRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigRuleProps):
-        CfnConfigRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnConfigRuleProps
+        CfnConfigRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConfigRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigRuleProps):
         software.amazon.awscdk.services.config.CfnConfigRuleProps = (wrapped as CdkObject).cdkObject

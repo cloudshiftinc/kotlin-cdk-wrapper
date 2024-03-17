@@ -319,7 +319,7 @@ public interface CfnUrlProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnUrlProps): CfnUrlProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnUrlProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnUrlProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUrlProps): software.amazon.awscdk.services.lambda.CfnUrlProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.CfnUrlProps

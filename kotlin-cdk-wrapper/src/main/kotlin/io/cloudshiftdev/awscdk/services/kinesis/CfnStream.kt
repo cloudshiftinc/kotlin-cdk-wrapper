@@ -609,7 +609,8 @@ public open class CfnStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty):
-          StreamModeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as StreamModeDetailsProperty
+          StreamModeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamModeDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamModeDetailsProperty):
           software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty = (wrapped as
@@ -783,7 +784,8 @@ public open class CfnStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty):
-          StreamEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as StreamEncryptionProperty
+          StreamEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? StreamEncryptionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamEncryptionProperty):
           software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty = (wrapped as

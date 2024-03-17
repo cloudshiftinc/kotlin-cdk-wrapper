@@ -277,7 +277,8 @@ public interface CfnIdentitySourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySourceProps):
-        CfnIdentitySourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnIdentitySourceProps
+        CfnIdentitySourceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIdentitySourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentitySourceProps):
         software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySourceProps = (wrapped as

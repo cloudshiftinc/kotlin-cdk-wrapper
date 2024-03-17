@@ -1668,7 +1668,8 @@ public interface TriggerFunctionProps : FunctionProps, TriggerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.triggers.TriggerFunctionProps):
-        TriggerFunctionProps = CdkObjectWrappers.wrap(cdkObject) as TriggerFunctionProps
+        TriggerFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? TriggerFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TriggerFunctionProps):
         software.amazon.awscdk.triggers.TriggerFunctionProps = (wrapped as CdkObject).cdkObject as

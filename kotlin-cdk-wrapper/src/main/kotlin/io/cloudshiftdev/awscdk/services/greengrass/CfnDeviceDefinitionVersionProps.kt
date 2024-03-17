@@ -144,8 +144,8 @@ public interface CfnDeviceDefinitionVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersionProps):
-        CfnDeviceDefinitionVersionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDeviceDefinitionVersionProps
+        CfnDeviceDefinitionVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDeviceDefinitionVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceDefinitionVersionProps):
         software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersionProps = (wrapped as

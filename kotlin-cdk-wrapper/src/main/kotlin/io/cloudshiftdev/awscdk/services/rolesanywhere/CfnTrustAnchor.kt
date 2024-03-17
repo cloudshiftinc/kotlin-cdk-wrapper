@@ -556,7 +556,8 @@ public open class CfnTrustAnchor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty):
-          SourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as SourceDataProperty
+          SourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceDataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceDataProperty):
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty = (wrapped
@@ -769,8 +770,8 @@ public open class CfnTrustAnchor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty):
-          NotificationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationSettingProperty
+          NotificationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationSettingProperty):
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty =
@@ -914,7 +915,8 @@ public open class CfnTrustAnchor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty):
-          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as SourceProperty
+          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceProperty):
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty = (wrapped as

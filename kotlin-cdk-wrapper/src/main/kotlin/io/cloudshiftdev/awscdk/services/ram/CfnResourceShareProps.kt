@@ -449,7 +449,8 @@ public interface CfnResourceShareProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ram.CfnResourceShareProps):
-        CfnResourceShareProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceShareProps
+        CfnResourceShareProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceShareProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceShareProps):
         software.amazon.awscdk.services.ram.CfnResourceShareProps = (wrapped as CdkObject).cdkObject

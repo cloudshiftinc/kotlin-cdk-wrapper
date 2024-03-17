@@ -1077,7 +1077,8 @@ public interface CfnComputeEnvironmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps):
-        CfnComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as CfnComputeEnvironmentProps
+        CfnComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnComputeEnvironmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps = (wrapped as

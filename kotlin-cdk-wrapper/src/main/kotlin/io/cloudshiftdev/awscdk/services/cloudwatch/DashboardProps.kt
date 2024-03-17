@@ -368,7 +368,7 @@ public interface DashboardProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardProps):
-        DashboardProps = CdkObjectWrappers.wrap(cdkObject) as DashboardProps
+        DashboardProps = CdkObjectWrappers.wrap(cdkObject) as? DashboardProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DashboardProps):
         software.amazon.awscdk.services.cloudwatch.DashboardProps = (wrapped as CdkObject).cdkObject

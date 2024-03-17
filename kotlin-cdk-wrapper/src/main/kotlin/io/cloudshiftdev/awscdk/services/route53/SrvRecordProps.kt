@@ -408,7 +408,7 @@ public interface SrvRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.SrvRecordProps):
-        SrvRecordProps = CdkObjectWrappers.wrap(cdkObject) as SrvRecordProps
+        SrvRecordProps = CdkObjectWrappers.wrap(cdkObject) as? SrvRecordProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SrvRecordProps):
         software.amazon.awscdk.services.route53.SrvRecordProps = (wrapped as CdkObject).cdkObject as

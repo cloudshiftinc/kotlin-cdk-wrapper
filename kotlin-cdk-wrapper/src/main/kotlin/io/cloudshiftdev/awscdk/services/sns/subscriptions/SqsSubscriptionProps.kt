@@ -169,7 +169,8 @@ public interface SqsSubscriptionProps : SubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sns.subscriptions.SqsSubscriptionProps):
-        SqsSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as SqsSubscriptionProps
+        SqsSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as? SqsSubscriptionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SqsSubscriptionProps):
         software.amazon.awscdk.services.sns.subscriptions.SqsSubscriptionProps = (wrapped as

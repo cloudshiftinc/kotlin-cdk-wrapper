@@ -406,7 +406,7 @@ public interface MxRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.MxRecordProps):
-        MxRecordProps = CdkObjectWrappers.wrap(cdkObject) as MxRecordProps
+        MxRecordProps = CdkObjectWrappers.wrap(cdkObject) as? MxRecordProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MxRecordProps):
         software.amazon.awscdk.services.route53.MxRecordProps = (wrapped as CdkObject).cdkObject as

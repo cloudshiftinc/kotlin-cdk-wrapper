@@ -565,7 +565,8 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessageProps):
-        SqsSendMessageProps = CdkObjectWrappers.wrap(cdkObject) as SqsSendMessageProps
+        SqsSendMessageProps = CdkObjectWrappers.wrap(cdkObject) as? SqsSendMessageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SqsSendMessageProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessageProps = (wrapped as

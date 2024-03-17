@@ -530,7 +530,7 @@ public interface BundlingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.BundlingOptions): BundlingOptions =
-        CdkObjectWrappers.wrap(cdkObject) as BundlingOptions
+        CdkObjectWrappers.wrap(cdkObject) as? BundlingOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BundlingOptions): software.amazon.awscdk.BundlingOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.BundlingOptions

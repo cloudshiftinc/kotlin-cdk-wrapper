@@ -926,7 +926,8 @@ public open class CfnLocationHDFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS.NameNodeProperty):
-          NameNodeProperty = CdkObjectWrappers.wrap(cdkObject) as NameNodeProperty
+          NameNodeProperty = CdkObjectWrappers.wrap(cdkObject) as? NameNodeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NameNodeProperty):
           software.amazon.awscdk.services.datasync.CfnLocationHDFS.NameNodeProperty = (wrapped as
@@ -1068,7 +1069,8 @@ public open class CfnLocationHDFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS.QopConfigurationProperty):
-          QopConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as QopConfigurationProperty
+          QopConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? QopConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QopConfigurationProperty):
           software.amazon.awscdk.services.datasync.CfnLocationHDFS.QopConfigurationProperty =

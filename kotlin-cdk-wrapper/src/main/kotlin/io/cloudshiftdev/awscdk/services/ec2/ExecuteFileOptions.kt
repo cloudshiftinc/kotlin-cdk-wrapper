@@ -104,7 +104,8 @@ public interface ExecuteFileOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ExecuteFileOptions):
-        ExecuteFileOptions = CdkObjectWrappers.wrap(cdkObject) as ExecuteFileOptions
+        ExecuteFileOptions = CdkObjectWrappers.wrap(cdkObject) as? ExecuteFileOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExecuteFileOptions):
         software.amazon.awscdk.services.ec2.ExecuteFileOptions = (wrapped as CdkObject).cdkObject as

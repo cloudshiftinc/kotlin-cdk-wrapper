@@ -1093,7 +1093,8 @@ public interface CfnEventDataStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps):
-        CfnEventDataStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnEventDataStoreProps
+        CfnEventDataStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventDataStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventDataStoreProps):
         software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps = (wrapped as

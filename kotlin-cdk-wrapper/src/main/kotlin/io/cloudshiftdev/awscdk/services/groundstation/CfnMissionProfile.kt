@@ -640,7 +640,8 @@ public open class CfnMissionProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty):
-          StreamsKmsKeyProperty = CdkObjectWrappers.wrap(cdkObject) as StreamsKmsKeyProperty
+          StreamsKmsKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? StreamsKmsKeyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamsKmsKeyProperty):
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty =
@@ -769,7 +770,8 @@ public open class CfnMissionProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty):
-          DataflowEdgeProperty = CdkObjectWrappers.wrap(cdkObject) as DataflowEdgeProperty
+          DataflowEdgeProperty = CdkObjectWrappers.wrap(cdkObject) as? DataflowEdgeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataflowEdgeProperty):
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty =

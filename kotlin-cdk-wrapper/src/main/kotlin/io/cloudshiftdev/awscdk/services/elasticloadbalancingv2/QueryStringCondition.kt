@@ -101,7 +101,8 @@ public interface QueryStringCondition {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.QueryStringCondition):
-        QueryStringCondition = CdkObjectWrappers.wrap(cdkObject) as QueryStringCondition
+        QueryStringCondition = CdkObjectWrappers.wrap(cdkObject) as? QueryStringCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueryStringCondition):
         software.amazon.awscdk.services.elasticloadbalancingv2.QueryStringCondition = (wrapped as

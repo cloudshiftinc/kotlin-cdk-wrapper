@@ -66,6 +66,10 @@ public abstract class Resource internal constructor(
    */
   public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.Resource,
+  ) : Resource(cdkObject)
+
   public companion object {
     public fun isOwnedResource(construct: IConstruct): Boolean =
         software.amazon.awscdk.Resource.isOwnedResource(construct.let(IConstruct::unwrap))
@@ -74,7 +78,7 @@ public abstract class Resource internal constructor(
         software.amazon.awscdk.Resource.isResource(construct.let(IConstruct::unwrap))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Resource): Resource =
-        CdkObjectWrappers.wrap(cdkObject) as Resource
+        CdkObjectWrappers.wrap(cdkObject) as? Resource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Resource): software.amazon.awscdk.Resource = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.Resource

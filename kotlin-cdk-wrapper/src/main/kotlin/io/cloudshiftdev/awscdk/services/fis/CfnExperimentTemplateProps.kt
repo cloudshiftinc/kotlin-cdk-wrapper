@@ -421,7 +421,8 @@ public interface CfnExperimentTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplateProps):
-        CfnExperimentTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnExperimentTemplateProps
+        CfnExperimentTemplateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnExperimentTemplateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnExperimentTemplateProps):
         software.amazon.awscdk.services.fis.CfnExperimentTemplateProps = (wrapped as

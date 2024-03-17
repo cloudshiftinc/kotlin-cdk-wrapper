@@ -128,7 +128,8 @@ public interface LambdaActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.LambdaActionConfig):
-        LambdaActionConfig = CdkObjectWrappers.wrap(cdkObject) as LambdaActionConfig
+        LambdaActionConfig = CdkObjectWrappers.wrap(cdkObject) as? LambdaActionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaActionConfig):
         software.amazon.awscdk.services.ses.LambdaActionConfig = (wrapped as CdkObject).cdkObject as

@@ -143,7 +143,8 @@ public interface DefinitionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionConfig):
-        DefinitionConfig = CdkObjectWrappers.wrap(cdkObject) as DefinitionConfig
+        DefinitionConfig = CdkObjectWrappers.wrap(cdkObject) as? DefinitionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DefinitionConfig):
         software.amazon.awscdk.services.stepfunctions.DefinitionConfig = (wrapped as

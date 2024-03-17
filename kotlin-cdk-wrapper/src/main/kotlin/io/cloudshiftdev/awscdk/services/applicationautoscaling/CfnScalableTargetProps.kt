@@ -875,7 +875,8 @@ public interface CfnScalableTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTargetProps):
-        CfnScalableTargetProps = CdkObjectWrappers.wrap(cdkObject) as CfnScalableTargetProps
+        CfnScalableTargetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnScalableTargetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnScalableTargetProps):
         software.amazon.awscdk.services.applicationautoscaling.CfnScalableTargetProps = (wrapped as

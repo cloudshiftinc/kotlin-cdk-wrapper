@@ -112,7 +112,8 @@ public interface VirtualRouterBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps):
-        VirtualRouterBaseProps = CdkObjectWrappers.wrap(cdkObject) as VirtualRouterBaseProps
+        VirtualRouterBaseProps = CdkObjectWrappers.wrap(cdkObject) as? VirtualRouterBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualRouterBaseProps):
         software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps = (wrapped as

@@ -538,8 +538,8 @@ public open class CfnConfigurationAggregator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty):
-          OrganizationAggregationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OrganizationAggregationSourceProperty
+          OrganizationAggregationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OrganizationAggregationSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OrganizationAggregationSourceProperty):
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty
@@ -709,8 +709,8 @@ public open class CfnConfigurationAggregator internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty):
-          AccountAggregationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccountAggregationSourceProperty
+          AccountAggregationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountAggregationSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountAggregationSourceProperty):
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty

@@ -158,8 +158,8 @@ public interface AmazonLinuxImageSsmParameterBaseProps : AmazonLinuxImageSsmPara
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseProps):
-        AmazonLinuxImageSsmParameterBaseProps = CdkObjectWrappers.wrap(cdkObject) as
-        AmazonLinuxImageSsmParameterBaseProps
+        AmazonLinuxImageSsmParameterBaseProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AmazonLinuxImageSsmParameterBaseProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinuxImageSsmParameterBaseProps):
         software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseProps = (wrapped as

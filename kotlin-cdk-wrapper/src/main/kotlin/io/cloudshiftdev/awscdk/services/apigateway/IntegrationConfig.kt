@@ -253,7 +253,8 @@ public interface IntegrationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.IntegrationConfig):
-        IntegrationConfig = CdkObjectWrappers.wrap(cdkObject) as IntegrationConfig
+        IntegrationConfig = CdkObjectWrappers.wrap(cdkObject) as? IntegrationConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IntegrationConfig):
         software.amazon.awscdk.services.apigateway.IntegrationConfig = (wrapped as

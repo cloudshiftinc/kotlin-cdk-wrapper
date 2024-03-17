@@ -96,7 +96,8 @@ public interface FunctionAssociation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation):
-        FunctionAssociation = CdkObjectWrappers.wrap(cdkObject) as FunctionAssociation
+        FunctionAssociation = CdkObjectWrappers.wrap(cdkObject) as? FunctionAssociation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionAssociation):
         software.amazon.awscdk.services.cloudfront.FunctionAssociation = (wrapped as

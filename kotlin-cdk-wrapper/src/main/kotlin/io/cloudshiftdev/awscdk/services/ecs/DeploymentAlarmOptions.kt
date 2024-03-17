@@ -90,7 +90,8 @@ public interface DeploymentAlarmOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmOptions):
-        DeploymentAlarmOptions = CdkObjectWrappers.wrap(cdkObject) as DeploymentAlarmOptions
+        DeploymentAlarmOptions = CdkObjectWrappers.wrap(cdkObject) as? DeploymentAlarmOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentAlarmOptions):
         software.amazon.awscdk.services.ecs.DeploymentAlarmOptions = (wrapped as

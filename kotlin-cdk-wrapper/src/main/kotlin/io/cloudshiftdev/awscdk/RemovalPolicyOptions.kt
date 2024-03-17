@@ -105,7 +105,7 @@ public interface RemovalPolicyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.RemovalPolicyOptions): RemovalPolicyOptions
-        = CdkObjectWrappers.wrap(cdkObject) as RemovalPolicyOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? RemovalPolicyOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RemovalPolicyOptions): software.amazon.awscdk.RemovalPolicyOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.RemovalPolicyOptions

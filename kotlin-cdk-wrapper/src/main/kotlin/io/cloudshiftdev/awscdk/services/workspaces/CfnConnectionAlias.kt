@@ -375,8 +375,8 @@ public open class CfnConnectionAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAlias.ConnectionAliasAssociationProperty):
-          ConnectionAliasAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectionAliasAssociationProperty
+          ConnectionAliasAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionAliasAssociationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionAliasAssociationProperty):
           software.amazon.awscdk.services.workspaces.CfnConnectionAlias.ConnectionAliasAssociationProperty

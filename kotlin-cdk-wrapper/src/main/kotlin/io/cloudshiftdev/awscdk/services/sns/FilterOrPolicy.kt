@@ -46,6 +46,10 @@ public abstract class FilterOrPolicy internal constructor(
    */
   public open fun type(): FilterOrPolicyType = unwrap(this).getType().let(FilterOrPolicyType::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
+  ) : FilterOrPolicy(cdkObject)
+
   public companion object {
     public fun filter(filter: SubscriptionFilter): Filter =
         software.amazon.awscdk.services.sns.FilterOrPolicy.filter(filter.let(SubscriptionFilter::unwrap)).let(Filter::wrap)
@@ -54,7 +58,7 @@ public abstract class FilterOrPolicy internal constructor(
         software.amazon.awscdk.services.sns.FilterOrPolicy.policy(policy.mapValues{FilterOrPolicy.unwrap(it.value)}).let(Policy::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy): FilterOrPolicy
-        = CdkObjectWrappers.wrap(cdkObject) as FilterOrPolicy
+        = CdkObjectWrappers.wrap(cdkObject) as? FilterOrPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FilterOrPolicy): software.amazon.awscdk.services.sns.FilterOrPolicy
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sns.FilterOrPolicy

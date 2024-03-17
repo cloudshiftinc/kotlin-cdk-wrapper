@@ -91,8 +91,8 @@ public interface CommonGatewayRouteSpecOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions):
-        CommonGatewayRouteSpecOptions = CdkObjectWrappers.wrap(cdkObject) as
-        CommonGatewayRouteSpecOptions
+        CommonGatewayRouteSpecOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        CommonGatewayRouteSpecOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonGatewayRouteSpecOptions):
         software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions = (wrapped as

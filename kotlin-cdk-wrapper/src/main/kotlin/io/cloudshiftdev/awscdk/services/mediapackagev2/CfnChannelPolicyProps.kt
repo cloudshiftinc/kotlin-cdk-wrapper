@@ -134,7 +134,8 @@ public interface CfnChannelPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelPolicyProps):
-        CfnChannelPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnChannelPolicyProps
+        CfnChannelPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnChannelPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannelPolicyProps):
         software.amazon.awscdk.services.mediapackagev2.CfnChannelPolicyProps = (wrapped as

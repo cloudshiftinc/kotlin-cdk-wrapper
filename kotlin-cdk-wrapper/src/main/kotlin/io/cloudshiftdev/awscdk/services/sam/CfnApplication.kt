@@ -427,8 +427,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty):
-          ApplicationLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApplicationLocationProperty
+          ApplicationLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationLocationProperty):
           software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty = (wrapped

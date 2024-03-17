@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.String
 
 /**
  * The Deployment Configuration of a Lambda Deployment Group.
@@ -20,10 +21,25 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
  * (`LambdaDeploymentConfig.AllAtOnce`, `LambdaDeploymentConfig.Canary10Percent30Minutes`, etc.).
  */
 public interface ILambdaDeploymentConfig : IBaseDeploymentConfig {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig,
+  ) : CdkObject(cdkObject), ILambdaDeploymentConfig {
+    /**
+     * The ARN of the Deployment Configuration.
+     */
+    override fun deploymentConfigArn(): String = unwrap(this).getDeploymentConfigArn()
+
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     */
+    override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
+  }
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig):
-        ILambdaDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as ILambdaDeploymentConfig
+        ILambdaDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as? ILambdaDeploymentConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ILambdaDeploymentConfig):
         software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig = (wrapped as

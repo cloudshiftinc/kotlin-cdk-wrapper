@@ -149,8 +149,8 @@ public interface CfnSnapshotBlockPublicAccessProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccessProps):
-        CfnSnapshotBlockPublicAccessProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSnapshotBlockPublicAccessProps
+        CfnSnapshotBlockPublicAccessProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSnapshotBlockPublicAccessProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSnapshotBlockPublicAccessProps):
         software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccessProps = (wrapped as

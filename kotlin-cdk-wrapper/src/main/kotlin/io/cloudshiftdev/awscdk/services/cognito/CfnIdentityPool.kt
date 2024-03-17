@@ -909,8 +909,8 @@ public open class CfnIdentityPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoIdentityProviderProperty):
-          CognitoIdentityProviderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CognitoIdentityProviderProperty
+          CognitoIdentityProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CognitoIdentityProviderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CognitoIdentityProviderProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoIdentityProviderProperty =
@@ -1073,7 +1073,8 @@ public open class CfnIdentityPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty):
-          CognitoStreamsProperty = CdkObjectWrappers.wrap(cdkObject) as CognitoStreamsProperty
+          CognitoStreamsProperty = CdkObjectWrappers.wrap(cdkObject) as? CognitoStreamsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CognitoStreamsProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty = (wrapped
@@ -1201,7 +1202,8 @@ public open class CfnIdentityPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty):
-          PushSyncProperty = CdkObjectWrappers.wrap(cdkObject) as PushSyncProperty
+          PushSyncProperty = CdkObjectWrappers.wrap(cdkObject) as? PushSyncProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PushSyncProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty = (wrapped as

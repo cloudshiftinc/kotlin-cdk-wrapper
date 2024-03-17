@@ -173,7 +173,8 @@ public interface ScalingInterval {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.ScalingInterval):
-        ScalingInterval = CdkObjectWrappers.wrap(cdkObject) as ScalingInterval
+        ScalingInterval = CdkObjectWrappers.wrap(cdkObject) as? ScalingInterval ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScalingInterval):
         software.amazon.awscdk.services.applicationautoscaling.ScalingInterval = (wrapped as

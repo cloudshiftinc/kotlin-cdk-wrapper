@@ -517,7 +517,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty):
-          ResetTimerProperty = CdkObjectWrappers.wrap(cdkObject) as ResetTimerProperty
+          ResetTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? ResetTimerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResetTimerProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.ResetTimerProperty = (wrapped
@@ -681,7 +682,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty):
-          SetTimerProperty = CdkObjectWrappers.wrap(cdkObject) as SetTimerProperty
+          SetTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? SetTimerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SetTimerProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetTimerProperty = (wrapped as
@@ -814,7 +816,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty):
-          PayloadProperty = CdkObjectWrappers.wrap(cdkObject) as PayloadProperty
+          PayloadProperty = CdkObjectWrappers.wrap(cdkObject) as? PayloadProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PayloadProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.PayloadProperty = (wrapped as
@@ -1124,7 +1127,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty):
-          TransitionEventProperty = CdkObjectWrappers.wrap(cdkObject) as TransitionEventProperty
+          TransitionEventProperty = CdkObjectWrappers.wrap(cdkObject) as? TransitionEventProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransitionEventProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.TransitionEventProperty =
@@ -1270,7 +1274,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty):
-          IotEventsProperty = CdkObjectWrappers.wrap(cdkObject) as IotEventsProperty
+          IotEventsProperty = CdkObjectWrappers.wrap(cdkObject) as? IotEventsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IotEventsProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotEventsProperty = (wrapped as
@@ -1667,7 +1672,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty):
-          OnInputProperty = CdkObjectWrappers.wrap(cdkObject) as OnInputProperty
+          OnInputProperty = CdkObjectWrappers.wrap(cdkObject) as? OnInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnInputProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty = (wrapped as
@@ -1951,7 +1957,7 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty):
-          EventProperty = CdkObjectWrappers.wrap(cdkObject) as EventProperty
+          EventProperty = CdkObjectWrappers.wrap(cdkObject) as? EventProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.EventProperty = (wrapped as
@@ -2097,7 +2103,7 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty):
-          SnsProperty = CdkObjectWrappers.wrap(cdkObject) as SnsProperty
+          SnsProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnsProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.SnsProperty = (wrapped as
@@ -2284,7 +2290,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty):
-          FirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as FirehoseProperty
+          FirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as? FirehoseProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FirehoseProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.FirehoseProperty = (wrapped as
@@ -2561,7 +2568,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty):
-          IotSiteWiseProperty = CdkObjectWrappers.wrap(cdkObject) as IotSiteWiseProperty
+          IotSiteWiseProperty = CdkObjectWrappers.wrap(cdkObject) as? IotSiteWiseProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IotSiteWiseProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotSiteWiseProperty = (wrapped
@@ -2669,7 +2677,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty):
-          SetVariableProperty = CdkObjectWrappers.wrap(cdkObject) as SetVariableProperty
+          SetVariableProperty = CdkObjectWrappers.wrap(cdkObject) as? SetVariableProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SetVariableProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.SetVariableProperty = (wrapped
@@ -2920,7 +2929,7 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty):
-          StateProperty = CdkObjectWrappers.wrap(cdkObject) as StateProperty
+          StateProperty = CdkObjectWrappers.wrap(cdkObject) as? StateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StateProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.StateProperty = (wrapped as
@@ -3001,7 +3010,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty):
-          ClearTimerProperty = CdkObjectWrappers.wrap(cdkObject) as ClearTimerProperty
+          ClearTimerProperty = CdkObjectWrappers.wrap(cdkObject) as? ClearTimerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClearTimerProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.ClearTimerProperty = (wrapped
@@ -3229,7 +3239,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty):
-          OnExitProperty = CdkObjectWrappers.wrap(cdkObject) as OnExitProperty
+          OnExitProperty = CdkObjectWrappers.wrap(cdkObject) as? OnExitProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnExitProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty = (wrapped as
@@ -3385,7 +3396,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty):
-          IotTopicPublishProperty = CdkObjectWrappers.wrap(cdkObject) as IotTopicPublishProperty
+          IotTopicPublishProperty = CdkObjectWrappers.wrap(cdkObject) as? IotTopicPublishProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IotTopicPublishProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.IotTopicPublishProperty =
@@ -3531,8 +3543,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty):
-          AssetPropertyTimestampProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AssetPropertyTimestampProperty
+          AssetPropertyTimestampProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetPropertyTimestampProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetPropertyTimestampProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyTimestampProperty
@@ -3741,7 +3753,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property):
-          DynamoDBv2Property = CdkObjectWrappers.wrap(cdkObject) as DynamoDBv2Property
+          DynamoDBv2Property = CdkObjectWrappers.wrap(cdkObject) as? DynamoDBv2Property ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynamoDBv2Property):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBv2Property = (wrapped
@@ -4747,7 +4760,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.ActionProperty = (wrapped as
@@ -5287,7 +5301,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBProperty):
-          DynamoDBProperty = CdkObjectWrappers.wrap(cdkObject) as DynamoDBProperty
+          DynamoDBProperty = CdkObjectWrappers.wrap(cdkObject) as? DynamoDBProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynamoDBProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.DynamoDBProperty = (wrapped as
@@ -5518,8 +5533,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty):
-          AssetPropertyValueProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AssetPropertyValueProperty
+          AssetPropertyValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetPropertyValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetPropertyValueProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyValueProperty =
@@ -5747,7 +5762,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnEnterProperty):
-          OnEnterProperty = CdkObjectWrappers.wrap(cdkObject) as OnEnterProperty
+          OnEnterProperty = CdkObjectWrappers.wrap(cdkObject) as? OnEnterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnEnterProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnEnterProperty = (wrapped as
@@ -5945,7 +5961,7 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.SqsProperty):
-          SqsProperty = CdkObjectWrappers.wrap(cdkObject) as SqsProperty
+          SqsProperty = CdkObjectWrappers.wrap(cdkObject) as? SqsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SqsProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.SqsProperty = (wrapped as
@@ -6090,7 +6106,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty):
-          LambdaProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaProperty
+          LambdaProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.LambdaProperty = (wrapped as
@@ -6216,8 +6233,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty):
-          DetectorModelDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DetectorModelDefinitionProperty
+          DetectorModelDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DetectorModelDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DetectorModelDefinitionProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty
@@ -6437,8 +6454,8 @@ public open class CfnDetectorModel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty):
-          AssetPropertyVariantProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AssetPropertyVariantProperty
+          AssetPropertyVariantProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssetPropertyVariantProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetPropertyVariantProperty):
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.AssetPropertyVariantProperty =

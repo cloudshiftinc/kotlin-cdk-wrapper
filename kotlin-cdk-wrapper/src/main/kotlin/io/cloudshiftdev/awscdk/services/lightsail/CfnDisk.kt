@@ -641,7 +641,8 @@ public open class CfnDisk internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty):
-          AutoSnapshotAddOnProperty = CdkObjectWrappers.wrap(cdkObject) as AutoSnapshotAddOnProperty
+          AutoSnapshotAddOnProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoSnapshotAddOnProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoSnapshotAddOnProperty):
           software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty = (wrapped as
@@ -833,7 +834,7 @@ public open class CfnDisk internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty):
-          AddOnProperty = CdkObjectWrappers.wrap(cdkObject) as AddOnProperty
+          AddOnProperty = CdkObjectWrappers.wrap(cdkObject) as? AddOnProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AddOnProperty):
           software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty = (wrapped as
@@ -938,7 +939,8 @@ public open class CfnDisk internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty):
-          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as LocationProperty
+          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LocationProperty):
           software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty = (wrapped as

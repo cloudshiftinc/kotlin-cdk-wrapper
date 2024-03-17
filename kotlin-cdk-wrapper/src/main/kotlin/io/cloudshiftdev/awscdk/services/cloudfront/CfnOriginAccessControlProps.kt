@@ -119,8 +119,8 @@ public interface CfnOriginAccessControlProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginAccessControlProps):
-        CfnOriginAccessControlProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnOriginAccessControlProps
+        CfnOriginAccessControlProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnOriginAccessControlProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginAccessControlProps):
         software.amazon.awscdk.services.cloudfront.CfnOriginAccessControlProps = (wrapped as

@@ -42,6 +42,10 @@ public abstract class HttpRoutePathMatch internal constructor(
   public open fun bind(scope: Construct): HttpRoutePathMatchConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(HttpRoutePathMatchConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch,
+  ) : HttpRoutePathMatch(cdkObject)
+
   public companion object {
     public fun exactly(path: String): HttpRoutePathMatch =
         software.amazon.awscdk.services.appmesh.HttpRoutePathMatch.exactly(path).let(HttpRoutePathMatch::wrap)
@@ -53,7 +57,8 @@ public abstract class HttpRoutePathMatch internal constructor(
         software.amazon.awscdk.services.appmesh.HttpRoutePathMatch.startsWith(prefix).let(HttpRoutePathMatch::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch):
-        HttpRoutePathMatch = CdkObjectWrappers.wrap(cdkObject) as HttpRoutePathMatch
+        HttpRoutePathMatch = CdkObjectWrappers.wrap(cdkObject) as? HttpRoutePathMatch ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRoutePathMatch):
         software.amazon.awscdk.services.appmesh.HttpRoutePathMatch = (wrapped as

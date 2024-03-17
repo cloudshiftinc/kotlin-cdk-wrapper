@@ -132,7 +132,8 @@ public interface KubectlProviderAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubectlProviderAttributes):
-        KubectlProviderAttributes = CdkObjectWrappers.wrap(cdkObject) as KubectlProviderAttributes
+        KubectlProviderAttributes = CdkObjectWrappers.wrap(cdkObject) as? KubectlProviderAttributes
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KubectlProviderAttributes):
         software.amazon.awscdk.services.eks.KubectlProviderAttributes = (wrapped as

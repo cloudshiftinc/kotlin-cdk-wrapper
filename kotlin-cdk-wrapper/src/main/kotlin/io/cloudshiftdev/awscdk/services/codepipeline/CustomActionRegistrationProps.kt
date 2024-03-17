@@ -279,8 +279,8 @@ public interface CustomActionRegistrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CustomActionRegistrationProps):
-        CustomActionRegistrationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CustomActionRegistrationProps
+        CustomActionRegistrationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CustomActionRegistrationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomActionRegistrationProps):
         software.amazon.awscdk.services.codepipeline.CustomActionRegistrationProps = (wrapped as

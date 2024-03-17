@@ -784,7 +784,8 @@ public open class CfnApplicationSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty):
-          LimitsProperty = CdkObjectWrappers.wrap(cdkObject) as LimitsProperty
+          LimitsProperty = CdkObjectWrappers.wrap(cdkObject) as? LimitsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LimitsProperty):
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty = (wrapped
@@ -951,7 +952,8 @@ public open class CfnApplicationSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty):
-          CampaignHookProperty = CdkObjectWrappers.wrap(cdkObject) as CampaignHookProperty
+          CampaignHookProperty = CdkObjectWrappers.wrap(cdkObject) as? CampaignHookProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CampaignHookProperty):
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty =
@@ -1089,7 +1091,8 @@ public open class CfnApplicationSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty):
-          QuietTimeProperty = CdkObjectWrappers.wrap(cdkObject) as QuietTimeProperty
+          QuietTimeProperty = CdkObjectWrappers.wrap(cdkObject) as? QuietTimeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QuietTimeProperty):
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty =

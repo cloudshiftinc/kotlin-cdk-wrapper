@@ -769,7 +769,8 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.TaskDefinitionProps):
-        TaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as TaskDefinitionProps
+        TaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? TaskDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TaskDefinitionProps):
         software.amazon.awscdk.services.ecs.TaskDefinitionProps = (wrapped as CdkObject).cdkObject

@@ -215,7 +215,7 @@ public interface Monitoring {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Monitoring):
-        Monitoring = CdkObjectWrappers.wrap(cdkObject) as Monitoring
+        Monitoring = CdkObjectWrappers.wrap(cdkObject) as? Monitoring ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Monitoring):
         software.amazon.awscdk.services.stepfunctions.tasks.Monitoring = (wrapped as

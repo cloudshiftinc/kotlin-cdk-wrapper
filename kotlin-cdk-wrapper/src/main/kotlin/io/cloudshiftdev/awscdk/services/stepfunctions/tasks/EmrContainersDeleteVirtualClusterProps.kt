@@ -424,8 +424,8 @@ public interface EmrContainersDeleteVirtualClusterProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualClusterProps):
-        EmrContainersDeleteVirtualClusterProps = CdkObjectWrappers.wrap(cdkObject) as
-        EmrContainersDeleteVirtualClusterProps
+        EmrContainersDeleteVirtualClusterProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EmrContainersDeleteVirtualClusterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrContainersDeleteVirtualClusterProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualClusterProps =

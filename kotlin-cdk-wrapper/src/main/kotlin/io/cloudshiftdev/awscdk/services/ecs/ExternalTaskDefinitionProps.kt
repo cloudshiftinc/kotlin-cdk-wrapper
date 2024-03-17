@@ -256,8 +256,8 @@ public interface ExternalTaskDefinitionProps : CommonTaskDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionProps):
-        ExternalTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as
-        ExternalTaskDefinitionProps
+        ExternalTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ExternalTaskDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExternalTaskDefinitionProps):
         software.amazon.awscdk.services.ecs.ExternalTaskDefinitionProps = (wrapped as

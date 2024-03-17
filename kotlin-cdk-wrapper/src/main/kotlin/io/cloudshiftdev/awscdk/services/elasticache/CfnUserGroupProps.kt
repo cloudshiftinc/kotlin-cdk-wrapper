@@ -191,7 +191,8 @@ public interface CfnUserGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroupProps):
-        CfnUserGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnUserGroupProps
+        CfnUserGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnUserGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserGroupProps):
         software.amazon.awscdk.services.elasticache.CfnUserGroupProps = (wrapped as

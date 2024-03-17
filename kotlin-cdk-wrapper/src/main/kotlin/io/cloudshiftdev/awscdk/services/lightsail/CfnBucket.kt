@@ -763,7 +763,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnBucket.AccessRulesProperty):
-          AccessRulesProperty = CdkObjectWrappers.wrap(cdkObject) as AccessRulesProperty
+          AccessRulesProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessRulesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessRulesProperty):
           software.amazon.awscdk.services.lightsail.CfnBucket.AccessRulesProperty = (wrapped as

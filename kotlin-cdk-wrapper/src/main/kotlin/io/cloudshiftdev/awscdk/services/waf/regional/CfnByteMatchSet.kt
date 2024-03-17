@@ -1024,7 +1024,8 @@ public open class CfnByteMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.ByteMatchTupleProperty):
-          ByteMatchTupleProperty = CdkObjectWrappers.wrap(cdkObject) as ByteMatchTupleProperty
+          ByteMatchTupleProperty = CdkObjectWrappers.wrap(cdkObject) as? ByteMatchTupleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ByteMatchTupleProperty):
           software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.ByteMatchTupleProperty =
@@ -1268,7 +1269,8 @@ public open class CfnByteMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.FieldToMatchProperty):
-          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldToMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.FieldToMatchProperty =

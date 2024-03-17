@@ -468,7 +468,8 @@ public open class CfnAlert internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty = (wrapped as
@@ -577,8 +578,8 @@ public open class CfnAlert internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty):
-          LambdaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaConfigurationProperty
+          LambdaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaConfigurationProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty =
@@ -687,7 +688,8 @@ public open class CfnAlert internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty):
-          SNSConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as SNSConfigurationProperty
+          SNSConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SNSConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SNSConfigurationProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty =

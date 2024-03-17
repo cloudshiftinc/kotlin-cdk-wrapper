@@ -101,8 +101,8 @@ public interface BuildEnvironmentCertificate {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate):
-        BuildEnvironmentCertificate = CdkObjectWrappers.wrap(cdkObject) as
-        BuildEnvironmentCertificate
+        BuildEnvironmentCertificate = CdkObjectWrappers.wrap(cdkObject) as?
+        BuildEnvironmentCertificate ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BuildEnvironmentCertificate):
         software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate = (wrapped as

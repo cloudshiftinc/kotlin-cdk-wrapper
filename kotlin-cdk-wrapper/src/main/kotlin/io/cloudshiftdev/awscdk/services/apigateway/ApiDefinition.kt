@@ -52,6 +52,10 @@ public abstract class ApiDefinition internal constructor(
     unwrap(this).bindAfterCreate(scope.let(Construct::unwrap), restApi.let(IRestApi::unwrap))
   }
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition,
+  ) : ApiDefinition(cdkObject)
+
   public companion object {
     public fun fromAsset(`file`: String): AssetApiDefinition =
         software.amazon.awscdk.services.apigateway.ApiDefinition.fromAsset(`file`).let(AssetApiDefinition::wrap)
@@ -81,7 +85,7 @@ public abstract class ApiDefinition internal constructor(
         software.amazon.awscdk.services.apigateway.ApiDefinition.fromInline(definition).let(InlineApiDefinition::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition):
-        ApiDefinition = CdkObjectWrappers.wrap(cdkObject) as ApiDefinition
+        ApiDefinition = CdkObjectWrappers.wrap(cdkObject) as? ApiDefinition ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiDefinition):
         software.amazon.awscdk.services.apigateway.ApiDefinition = (wrapped as CdkObject).cdkObject

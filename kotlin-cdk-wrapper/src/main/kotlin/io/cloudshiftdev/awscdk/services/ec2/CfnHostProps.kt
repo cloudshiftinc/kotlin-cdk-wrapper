@@ -339,7 +339,7 @@ public interface CfnHostProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnHostProps): CfnHostProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnHostProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnHostProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHostProps): software.amazon.awscdk.services.ec2.CfnHostProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnHostProps

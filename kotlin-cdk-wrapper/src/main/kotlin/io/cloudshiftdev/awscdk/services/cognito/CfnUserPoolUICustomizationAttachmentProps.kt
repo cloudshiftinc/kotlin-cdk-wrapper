@@ -147,8 +147,8 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachmentProps):
-        CfnUserPoolUICustomizationAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnUserPoolUICustomizationAttachmentProps
+        CfnUserPoolUICustomizationAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserPoolUICustomizationAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolUICustomizationAttachmentProps):
         software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachmentProps = (wrapped

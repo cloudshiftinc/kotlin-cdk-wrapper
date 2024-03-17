@@ -108,8 +108,8 @@ public interface CfnGatewayRouteTableAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociationProps):
-        CfnGatewayRouteTableAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnGatewayRouteTableAssociationProps
+        CfnGatewayRouteTableAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnGatewayRouteTableAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGatewayRouteTableAssociationProps):
         software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociationProps = (wrapped as

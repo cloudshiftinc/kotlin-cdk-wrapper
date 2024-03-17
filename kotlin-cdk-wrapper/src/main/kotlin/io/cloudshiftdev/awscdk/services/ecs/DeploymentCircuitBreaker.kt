@@ -104,7 +104,8 @@ public interface DeploymentCircuitBreaker {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker):
-        DeploymentCircuitBreaker = CdkObjectWrappers.wrap(cdkObject) as DeploymentCircuitBreaker
+        DeploymentCircuitBreaker = CdkObjectWrappers.wrap(cdkObject) as? DeploymentCircuitBreaker ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentCircuitBreaker):
         software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker = (wrapped as

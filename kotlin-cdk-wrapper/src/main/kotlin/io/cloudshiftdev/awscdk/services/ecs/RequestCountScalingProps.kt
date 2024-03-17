@@ -208,7 +208,8 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.RequestCountScalingProps):
-        RequestCountScalingProps = CdkObjectWrappers.wrap(cdkObject) as RequestCountScalingProps
+        RequestCountScalingProps = CdkObjectWrappers.wrap(cdkObject) as? RequestCountScalingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RequestCountScalingProps):
         software.amazon.awscdk.services.ecs.RequestCountScalingProps = (wrapped as

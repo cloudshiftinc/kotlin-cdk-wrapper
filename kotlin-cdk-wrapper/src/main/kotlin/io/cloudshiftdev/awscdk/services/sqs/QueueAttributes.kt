@@ -197,7 +197,8 @@ public interface QueueAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.QueueAttributes):
-        QueueAttributes = CdkObjectWrappers.wrap(cdkObject) as QueueAttributes
+        QueueAttributes = CdkObjectWrappers.wrap(cdkObject) as? QueueAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueueAttributes):
         software.amazon.awscdk.services.sqs.QueueAttributes = (wrapped as CdkObject).cdkObject as

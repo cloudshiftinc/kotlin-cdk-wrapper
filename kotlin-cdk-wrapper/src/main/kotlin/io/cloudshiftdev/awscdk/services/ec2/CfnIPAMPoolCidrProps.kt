@@ -160,7 +160,8 @@ public interface CfnIPAMPoolCidrProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPoolCidrProps):
-        CfnIPAMPoolCidrProps = CdkObjectWrappers.wrap(cdkObject) as CfnIPAMPoolCidrProps
+        CfnIPAMPoolCidrProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIPAMPoolCidrProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMPoolCidrProps):
         software.amazon.awscdk.services.ec2.CfnIPAMPoolCidrProps = (wrapped as CdkObject).cdkObject

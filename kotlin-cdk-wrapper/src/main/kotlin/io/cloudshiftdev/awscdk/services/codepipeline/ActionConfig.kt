@@ -69,7 +69,7 @@ public interface ActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.ActionConfig):
-        ActionConfig = CdkObjectWrappers.wrap(cdkObject) as ActionConfig
+        ActionConfig = CdkObjectWrappers.wrap(cdkObject) as? ActionConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ActionConfig):
         software.amazon.awscdk.services.codepipeline.ActionConfig = (wrapped as CdkObject).cdkObject

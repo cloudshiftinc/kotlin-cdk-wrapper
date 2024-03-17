@@ -202,8 +202,8 @@ public interface DeployTimeSubstitutedFileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFileProps):
-        DeployTimeSubstitutedFileProps = CdkObjectWrappers.wrap(cdkObject) as
-        DeployTimeSubstitutedFileProps
+        DeployTimeSubstitutedFileProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DeployTimeSubstitutedFileProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeployTimeSubstitutedFileProps):
         software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFileProps = (wrapped as

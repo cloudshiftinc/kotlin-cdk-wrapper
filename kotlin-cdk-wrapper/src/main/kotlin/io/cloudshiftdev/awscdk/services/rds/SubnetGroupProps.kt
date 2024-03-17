@@ -213,7 +213,8 @@ public interface SubnetGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.SubnetGroupProps):
-        SubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as SubnetGroupProps
+        SubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as? SubnetGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubnetGroupProps):
         software.amazon.awscdk.services.rds.SubnetGroupProps = (wrapped as CdkObject).cdkObject as

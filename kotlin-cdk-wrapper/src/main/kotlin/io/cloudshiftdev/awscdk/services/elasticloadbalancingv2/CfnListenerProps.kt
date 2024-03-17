@@ -550,7 +550,8 @@ public interface CfnListenerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerProps):
-        CfnListenerProps = CdkObjectWrappers.wrap(cdkObject) as CfnListenerProps
+        CfnListenerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnListenerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnListenerProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerProps = (wrapped as

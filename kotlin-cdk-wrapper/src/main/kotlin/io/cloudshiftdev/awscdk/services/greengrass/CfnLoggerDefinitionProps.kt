@@ -300,7 +300,8 @@ public interface CfnLoggerDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionProps):
-        CfnLoggerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnLoggerDefinitionProps
+        CfnLoggerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLoggerDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoggerDefinitionProps):
         software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionProps = (wrapped as

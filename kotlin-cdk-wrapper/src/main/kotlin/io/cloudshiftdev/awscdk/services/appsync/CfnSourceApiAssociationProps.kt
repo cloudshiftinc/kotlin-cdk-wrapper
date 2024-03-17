@@ -225,8 +225,8 @@ public interface CfnSourceApiAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociationProps):
-        CfnSourceApiAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSourceApiAssociationProps
+        CfnSourceApiAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSourceApiAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSourceApiAssociationProps):
         software.amazon.awscdk.services.appsync.CfnSourceApiAssociationProps = (wrapped as

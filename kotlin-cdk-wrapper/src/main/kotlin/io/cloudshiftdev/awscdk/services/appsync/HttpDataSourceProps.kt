@@ -182,7 +182,8 @@ public interface HttpDataSourceProps : BaseDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.HttpDataSourceProps):
-        HttpDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as HttpDataSourceProps
+        HttpDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? HttpDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpDataSourceProps):
         software.amazon.awscdk.services.appsync.HttpDataSourceProps = (wrapped as

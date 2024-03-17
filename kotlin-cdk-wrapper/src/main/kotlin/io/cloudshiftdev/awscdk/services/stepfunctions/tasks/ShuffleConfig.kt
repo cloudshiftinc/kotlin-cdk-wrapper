@@ -71,7 +71,7 @@ public interface ShuffleConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig):
-        ShuffleConfig = CdkObjectWrappers.wrap(cdkObject) as ShuffleConfig
+        ShuffleConfig = CdkObjectWrappers.wrap(cdkObject) as? ShuffleConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ShuffleConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig = (wrapped as

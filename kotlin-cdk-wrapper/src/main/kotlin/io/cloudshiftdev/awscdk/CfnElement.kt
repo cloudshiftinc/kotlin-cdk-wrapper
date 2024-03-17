@@ -52,11 +52,15 @@ public abstract class CfnElement internal constructor(
    */
   public open fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.CfnElement,
+  ) : CfnElement(cdkObject)
+
   public companion object {
     public fun isCfnElement(x: Any): Boolean = software.amazon.awscdk.CfnElement.isCfnElement(x)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnElement): CfnElement =
-        CdkObjectWrappers.wrap(cdkObject) as CfnElement
+        CdkObjectWrappers.wrap(cdkObject) as? CfnElement ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnElement): software.amazon.awscdk.CfnElement = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.CfnElement

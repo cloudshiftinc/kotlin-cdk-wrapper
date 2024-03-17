@@ -124,8 +124,8 @@ public interface ResponseCustomHeadersBehavior {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior):
-        ResponseCustomHeadersBehavior = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseCustomHeadersBehavior
+        ResponseCustomHeadersBehavior = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseCustomHeadersBehavior ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseCustomHeadersBehavior):
         software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior = (wrapped as

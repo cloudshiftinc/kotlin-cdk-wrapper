@@ -105,7 +105,7 @@ public interface VolumeFrom {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.VolumeFrom): VolumeFrom =
-        CdkObjectWrappers.wrap(cdkObject) as VolumeFrom
+        CdkObjectWrappers.wrap(cdkObject) as? VolumeFrom ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VolumeFrom): software.amazon.awscdk.services.ecs.VolumeFrom =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.VolumeFrom

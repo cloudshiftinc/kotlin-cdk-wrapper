@@ -1010,7 +1010,8 @@ public open class CfnMap internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty):
-          MapConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as MapConfigurationProperty
+          MapConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? MapConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MapConfigurationProperty):
           software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty = (wrapped as

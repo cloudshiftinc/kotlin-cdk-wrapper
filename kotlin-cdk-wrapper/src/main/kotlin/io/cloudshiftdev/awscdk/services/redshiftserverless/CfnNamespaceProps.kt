@@ -638,7 +638,8 @@ public interface CfnNamespaceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespaceProps):
-        CfnNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as CfnNamespaceProps
+        CfnNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnNamespaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNamespaceProps):
         software.amazon.awscdk.services.redshiftserverless.CfnNamespaceProps = (wrapped as

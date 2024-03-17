@@ -1179,7 +1179,8 @@ public open class CfnScalableTarget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty):
-          ScheduledActionProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduledActionProperty
+          ScheduledActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduledActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduledActionProperty):
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty
@@ -1409,7 +1410,8 @@ public open class CfnScalableTarget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty):
-          SuspendedStateProperty = CdkObjectWrappers.wrap(cdkObject) as SuspendedStateProperty
+          SuspendedStateProperty = CdkObjectWrappers.wrap(cdkObject) as? SuspendedStateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SuspendedStateProperty):
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty
@@ -1522,8 +1524,8 @@ public open class CfnScalableTarget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty):
-          ScalableTargetActionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ScalableTargetActionProperty
+          ScalableTargetActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScalableTargetActionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScalableTargetActionProperty):
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty

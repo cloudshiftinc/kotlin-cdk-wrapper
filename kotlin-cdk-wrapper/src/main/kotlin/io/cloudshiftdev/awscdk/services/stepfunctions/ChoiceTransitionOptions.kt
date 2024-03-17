@@ -80,7 +80,8 @@ public interface ChoiceTransitionOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions):
-        ChoiceTransitionOptions = CdkObjectWrappers.wrap(cdkObject) as ChoiceTransitionOptions
+        ChoiceTransitionOptions = CdkObjectWrappers.wrap(cdkObject) as? ChoiceTransitionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ChoiceTransitionOptions):
         software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions = (wrapped as

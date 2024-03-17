@@ -158,7 +158,8 @@ public interface ResultConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration):
-        ResultConfiguration = CdkObjectWrappers.wrap(cdkObject) as ResultConfiguration
+        ResultConfiguration = CdkObjectWrappers.wrap(cdkObject) as? ResultConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResultConfiguration):
         software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration = (wrapped as

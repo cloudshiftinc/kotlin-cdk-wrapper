@@ -1101,7 +1101,7 @@ public interface JsonSchema {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.JsonSchema): JsonSchema
-        = CdkObjectWrappers.wrap(cdkObject) as JsonSchema
+        = CdkObjectWrappers.wrap(cdkObject) as? JsonSchema ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JsonSchema): software.amazon.awscdk.services.apigateway.JsonSchema
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.JsonSchema

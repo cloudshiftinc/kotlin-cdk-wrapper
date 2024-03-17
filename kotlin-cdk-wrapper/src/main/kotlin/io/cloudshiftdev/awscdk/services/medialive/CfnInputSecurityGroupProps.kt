@@ -146,7 +146,8 @@ public interface CfnInputSecurityGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroupProps):
-        CfnInputSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnInputSecurityGroupProps
+        CfnInputSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInputSecurityGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInputSecurityGroupProps):
         software.amazon.awscdk.services.medialive.CfnInputSecurityGroupProps = (wrapped as

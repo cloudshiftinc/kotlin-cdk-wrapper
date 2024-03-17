@@ -385,7 +385,8 @@ public interface SecretStringGenerator {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretStringGenerator):
-        SecretStringGenerator = CdkObjectWrappers.wrap(cdkObject) as SecretStringGenerator
+        SecretStringGenerator = CdkObjectWrappers.wrap(cdkObject) as? SecretStringGenerator ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretStringGenerator):
         software.amazon.awscdk.services.secretsmanager.SecretStringGenerator = (wrapped as

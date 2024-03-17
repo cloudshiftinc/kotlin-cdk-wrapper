@@ -238,8 +238,8 @@ public interface CommonNetworkAclEntryOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CommonNetworkAclEntryOptions):
-        CommonNetworkAclEntryOptions = CdkObjectWrappers.wrap(cdkObject) as
-        CommonNetworkAclEntryOptions
+        CommonNetworkAclEntryOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        CommonNetworkAclEntryOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonNetworkAclEntryOptions):
         software.amazon.awscdk.services.ec2.CommonNetworkAclEntryOptions = (wrapped as

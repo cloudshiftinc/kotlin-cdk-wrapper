@@ -134,7 +134,8 @@ public interface KeyValueStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.KeyValueStoreProps):
-        KeyValueStoreProps = CdkObjectWrappers.wrap(cdkObject) as KeyValueStoreProps
+        KeyValueStoreProps = CdkObjectWrappers.wrap(cdkObject) as? KeyValueStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyValueStoreProps):
         software.amazon.awscdk.services.cloudfront.KeyValueStoreProps = (wrapped as

@@ -661,8 +661,8 @@ public open class CfnSourceLocation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty):
-          DefaultSegmentDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DefaultSegmentDeliveryConfigurationProperty
+          DefaultSegmentDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultSegmentDeliveryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultSegmentDeliveryConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty
@@ -795,8 +795,8 @@ public open class CfnSourceLocation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty):
-          SegmentDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SegmentDeliveryConfigurationProperty
+          SegmentDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SegmentDeliveryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SegmentDeliveryConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty
@@ -959,8 +959,8 @@ public open class CfnSourceLocation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty):
-          SecretsManagerAccessTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SecretsManagerAccessTokenConfigurationProperty
+          SecretsManagerAccessTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SecretsManagerAccessTokenConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SecretsManagerAccessTokenConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty
@@ -1048,7 +1048,8 @@ public open class CfnSourceLocation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty):
-          HttpConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as HttpConfigurationProperty
+          HttpConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty =
@@ -1277,8 +1278,8 @@ public open class CfnSourceLocation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty):
-          AccessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccessConfigurationProperty
+          AccessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty

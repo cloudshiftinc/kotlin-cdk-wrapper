@@ -561,7 +561,8 @@ public interface TableWidgetProps : MetricWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.TableWidgetProps):
-        TableWidgetProps = CdkObjectWrappers.wrap(cdkObject) as TableWidgetProps
+        TableWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? TableWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableWidgetProps):
         software.amazon.awscdk.services.cloudwatch.TableWidgetProps = (wrapped as

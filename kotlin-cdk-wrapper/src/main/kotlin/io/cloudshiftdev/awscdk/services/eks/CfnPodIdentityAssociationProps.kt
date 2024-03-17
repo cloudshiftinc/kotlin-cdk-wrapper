@@ -301,8 +301,8 @@ public interface CfnPodIdentityAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps):
-        CfnPodIdentityAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnPodIdentityAssociationProps
+        CfnPodIdentityAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPodIdentityAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPodIdentityAssociationProps):
         software.amazon.awscdk.services.eks.CfnPodIdentityAssociationProps = (wrapped as

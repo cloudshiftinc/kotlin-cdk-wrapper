@@ -195,7 +195,8 @@ public interface WebSocketStageProps : StageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps):
-        WebSocketStageProps = CdkObjectWrappers.wrap(cdkObject) as WebSocketStageProps
+        WebSocketStageProps = CdkObjectWrappers.wrap(cdkObject) as? WebSocketStageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketStageProps):
         software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps = (wrapped as

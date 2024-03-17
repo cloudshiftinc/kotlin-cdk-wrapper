@@ -160,8 +160,8 @@ public interface CfnResourceDefaultVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnResourceDefaultVersionProps):
-        CfnResourceDefaultVersionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnResourceDefaultVersionProps
+        CfnResourceDefaultVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResourceDefaultVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceDefaultVersionProps):
         software.amazon.awscdk.CfnResourceDefaultVersionProps = (wrapped as CdkObject).cdkObject as

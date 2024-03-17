@@ -1385,7 +1385,8 @@ public interface CfnEventSourceMappingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMappingProps):
-        CfnEventSourceMappingProps = CdkObjectWrappers.wrap(cdkObject) as CfnEventSourceMappingProps
+        CfnEventSourceMappingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEventSourceMappingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventSourceMappingProps):
         software.amazon.awscdk.services.lambda.CfnEventSourceMappingProps = (wrapped as

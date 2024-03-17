@@ -158,7 +158,8 @@ public interface CfnStandardProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnStandardProps):
-        CfnStandardProps = CdkObjectWrappers.wrap(cdkObject) as CfnStandardProps
+        CfnStandardProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStandardProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStandardProps):
         software.amazon.awscdk.services.securityhub.CfnStandardProps = (wrapped as

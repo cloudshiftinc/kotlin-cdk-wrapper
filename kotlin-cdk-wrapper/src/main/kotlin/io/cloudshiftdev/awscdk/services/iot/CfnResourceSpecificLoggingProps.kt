@@ -141,8 +141,8 @@ public interface CfnResourceSpecificLoggingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnResourceSpecificLoggingProps):
-        CfnResourceSpecificLoggingProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnResourceSpecificLoggingProps
+        CfnResourceSpecificLoggingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResourceSpecificLoggingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceSpecificLoggingProps):
         software.amazon.awscdk.services.iot.CfnResourceSpecificLoggingProps = (wrapped as

@@ -340,7 +340,8 @@ public interface CfnFindingsFilterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilterProps):
-        CfnFindingsFilterProps = CdkObjectWrappers.wrap(cdkObject) as CfnFindingsFilterProps
+        CfnFindingsFilterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFindingsFilterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFindingsFilterProps):
         software.amazon.awscdk.services.macie.CfnFindingsFilterProps = (wrapped as

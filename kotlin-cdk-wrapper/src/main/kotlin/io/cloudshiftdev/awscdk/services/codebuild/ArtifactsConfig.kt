@@ -98,7 +98,8 @@ public interface ArtifactsConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.ArtifactsConfig):
-        ArtifactsConfig = CdkObjectWrappers.wrap(cdkObject) as ArtifactsConfig
+        ArtifactsConfig = CdkObjectWrappers.wrap(cdkObject) as? ArtifactsConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ArtifactsConfig):
         software.amazon.awscdk.services.codebuild.ArtifactsConfig = (wrapped as CdkObject).cdkObject

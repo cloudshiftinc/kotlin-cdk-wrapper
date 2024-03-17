@@ -108,7 +108,8 @@ public interface DomainMappingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions):
-        DomainMappingOptions = CdkObjectWrappers.wrap(cdkObject) as DomainMappingOptions
+        DomainMappingOptions = CdkObjectWrappers.wrap(cdkObject) as? DomainMappingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DomainMappingOptions):
         software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions = (wrapped as

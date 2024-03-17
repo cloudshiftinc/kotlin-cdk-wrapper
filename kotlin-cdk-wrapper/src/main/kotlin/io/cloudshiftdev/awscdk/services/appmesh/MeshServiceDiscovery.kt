@@ -86,7 +86,8 @@ public interface MeshServiceDiscovery {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.MeshServiceDiscovery):
-        MeshServiceDiscovery = CdkObjectWrappers.wrap(cdkObject) as MeshServiceDiscovery
+        MeshServiceDiscovery = CdkObjectWrappers.wrap(cdkObject) as? MeshServiceDiscovery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MeshServiceDiscovery):
         software.amazon.awscdk.services.appmesh.MeshServiceDiscovery = (wrapped as

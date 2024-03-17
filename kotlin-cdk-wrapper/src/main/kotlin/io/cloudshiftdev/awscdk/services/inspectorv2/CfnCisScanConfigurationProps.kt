@@ -275,8 +275,8 @@ public interface CfnCisScanConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps):
-        CfnCisScanConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCisScanConfigurationProps
+        CfnCisScanConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCisScanConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCisScanConfigurationProps):
         software.amazon.awscdk.services.inspectorv2.CfnCisScanConfigurationProps = (wrapped as

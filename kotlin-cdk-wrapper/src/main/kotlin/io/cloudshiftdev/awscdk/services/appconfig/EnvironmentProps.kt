@@ -142,7 +142,8 @@ public interface EnvironmentProps : EnvironmentOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentProps):
-        EnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as EnvironmentProps
+        EnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentProps):
         software.amazon.awscdk.services.appconfig.EnvironmentProps = (wrapped as

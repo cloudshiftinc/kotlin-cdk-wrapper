@@ -244,7 +244,8 @@ public interface CfnAccessPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicyProps):
-        CfnAccessPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnAccessPolicyProps
+        CfnAccessPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAccessPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPolicyProps):
         software.amazon.awscdk.services.iotsitewise.CfnAccessPolicyProps = (wrapped as

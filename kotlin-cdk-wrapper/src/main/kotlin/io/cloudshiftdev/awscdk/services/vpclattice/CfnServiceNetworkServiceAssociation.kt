@@ -481,7 +481,8 @@ public open class CfnServiceNetworkServiceAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation.DnsEntryProperty):
-          DnsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as DnsEntryProperty
+          DnsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? DnsEntryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DnsEntryProperty):
           software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation.DnsEntryProperty

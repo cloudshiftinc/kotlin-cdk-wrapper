@@ -283,8 +283,8 @@ public interface CfnInstanceConnectEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpointProps):
-        CfnInstanceConnectEndpointProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnInstanceConnectEndpointProps
+        CfnInstanceConnectEndpointProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInstanceConnectEndpointProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceConnectEndpointProps):
         software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpointProps = (wrapped as

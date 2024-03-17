@@ -435,9 +435,13 @@ public abstract class TaskStateBase internal constructor(
    */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBase,
+  ) : TaskStateBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBase):
-        TaskStateBase = CdkObjectWrappers.wrap(cdkObject) as TaskStateBase
+        TaskStateBase = CdkObjectWrappers.wrap(cdkObject) as? TaskStateBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TaskStateBase):
         software.amazon.awscdk.services.stepfunctions.TaskStateBase = (wrapped as

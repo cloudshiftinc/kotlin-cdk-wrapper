@@ -175,7 +175,8 @@ public interface GitConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.GitConfiguration):
-        GitConfiguration = CdkObjectWrappers.wrap(cdkObject) as GitConfiguration
+        GitConfiguration = CdkObjectWrappers.wrap(cdkObject) as? GitConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitConfiguration):
         software.amazon.awscdk.services.codepipeline.GitConfiguration = (wrapped as

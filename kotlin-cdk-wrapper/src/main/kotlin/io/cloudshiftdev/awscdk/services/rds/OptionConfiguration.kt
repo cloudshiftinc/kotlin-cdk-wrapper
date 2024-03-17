@@ -259,7 +259,8 @@ public interface OptionConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.OptionConfiguration):
-        OptionConfiguration = CdkObjectWrappers.wrap(cdkObject) as OptionConfiguration
+        OptionConfiguration = CdkObjectWrappers.wrap(cdkObject) as? OptionConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OptionConfiguration):
         software.amazon.awscdk.services.rds.OptionConfiguration = (wrapped as CdkObject).cdkObject

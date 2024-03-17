@@ -213,7 +213,8 @@ public interface SfnStateMachineProps : TargetBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.SfnStateMachineProps):
-        SfnStateMachineProps = CdkObjectWrappers.wrap(cdkObject) as SfnStateMachineProps
+        SfnStateMachineProps = CdkObjectWrappers.wrap(cdkObject) as? SfnStateMachineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SfnStateMachineProps):
         software.amazon.awscdk.services.events.targets.SfnStateMachineProps = (wrapped as

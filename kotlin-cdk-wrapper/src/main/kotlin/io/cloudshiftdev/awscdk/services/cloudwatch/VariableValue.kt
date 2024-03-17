@@ -103,7 +103,7 @@ public interface VariableValue {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.VariableValue):
-        VariableValue = CdkObjectWrappers.wrap(cdkObject) as VariableValue
+        VariableValue = CdkObjectWrappers.wrap(cdkObject) as? VariableValue ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VariableValue):
         software.amazon.awscdk.services.cloudwatch.VariableValue = (wrapped as CdkObject).cdkObject

@@ -134,8 +134,8 @@ public interface CfnClusterSecurityGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupProps):
-        CfnClusterSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnClusterSecurityGroupProps
+        CfnClusterSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnClusterSecurityGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterSecurityGroupProps):
         software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupProps = (wrapped as

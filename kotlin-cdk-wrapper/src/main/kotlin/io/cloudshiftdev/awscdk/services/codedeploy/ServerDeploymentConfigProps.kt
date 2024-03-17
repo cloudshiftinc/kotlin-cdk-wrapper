@@ -94,8 +94,8 @@ public interface ServerDeploymentConfigProps : BaseDeploymentConfigOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps):
-        ServerDeploymentConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        ServerDeploymentConfigProps
+        ServerDeploymentConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerDeploymentConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerDeploymentConfigProps):
         software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps = (wrapped as

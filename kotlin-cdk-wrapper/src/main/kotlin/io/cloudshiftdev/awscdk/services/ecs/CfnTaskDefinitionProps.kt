@@ -1837,7 +1837,8 @@ public interface CfnTaskDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinitionProps):
-        CfnTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnTaskDefinitionProps
+        CfnTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTaskDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskDefinitionProps):
         software.amazon.awscdk.services.ecs.CfnTaskDefinitionProps = (wrapped as

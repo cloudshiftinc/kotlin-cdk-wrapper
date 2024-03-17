@@ -245,7 +245,8 @@ public interface BuildEnvironment {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironment):
-        BuildEnvironment = CdkObjectWrappers.wrap(cdkObject) as BuildEnvironment
+        BuildEnvironment = CdkObjectWrappers.wrap(cdkObject) as? BuildEnvironment ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BuildEnvironment):
         software.amazon.awscdk.services.codebuild.BuildEnvironment = (wrapped as

@@ -555,8 +555,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty):
-          LogDestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LogDestinationConfigProperty
+          LogDestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogDestinationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogDestinationConfigProperty):
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty
@@ -677,8 +677,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty):
-          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoggingConfigurationProperty
+          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigurationProperty):
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty

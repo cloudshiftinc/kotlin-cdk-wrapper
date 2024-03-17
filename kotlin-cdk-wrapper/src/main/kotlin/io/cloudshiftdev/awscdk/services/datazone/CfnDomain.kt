@@ -506,7 +506,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty):
-          SingleSignOnProperty = CdkObjectWrappers.wrap(cdkObject) as SingleSignOnProperty
+          SingleSignOnProperty = CdkObjectWrappers.wrap(cdkObject) as? SingleSignOnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleSignOnProperty):
           software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty = (wrapped as

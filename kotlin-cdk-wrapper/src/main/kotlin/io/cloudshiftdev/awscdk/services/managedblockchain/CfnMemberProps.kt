@@ -258,7 +258,7 @@ public interface CfnMemberProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMemberProps):
-        CfnMemberProps = CdkObjectWrappers.wrap(cdkObject) as CfnMemberProps
+        CfnMemberProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMemberProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMemberProps):
         software.amazon.awscdk.services.managedblockchain.CfnMemberProps = (wrapped as

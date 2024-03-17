@@ -830,7 +830,8 @@ public open class CfnNetworkInsightsPath internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty):
-          PathFilterProperty = CdkObjectWrappers.wrap(cdkObject) as PathFilterProperty
+          PathFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? PathFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PathFilterProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty = (wrapped
@@ -939,7 +940,8 @@ public open class CfnNetworkInsightsPath internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty):
-          FilterPortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as FilterPortRangeProperty
+          FilterPortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterPortRangeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterPortRangeProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty =

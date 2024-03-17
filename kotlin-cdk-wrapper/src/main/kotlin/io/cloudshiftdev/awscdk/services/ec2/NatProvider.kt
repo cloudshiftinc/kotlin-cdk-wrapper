@@ -72,6 +72,10 @@ public abstract class NatProvider internal constructor(
   public open fun configuredGateways(): List<GatewayConfig> =
       unwrap(this).getConfiguredGateways().map(GatewayConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.NatProvider,
+  ) : NatProvider(cdkObject)
+
   public companion object {
     public fun gateway(): NatProvider =
         software.amazon.awscdk.services.ec2.NatProvider.gateway().let(NatProvider::wrap)
@@ -103,7 +107,7 @@ public abstract class NatProvider internal constructor(
         instanceV2(NatInstanceProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NatProvider): NatProvider =
-        CdkObjectWrappers.wrap(cdkObject) as NatProvider
+        CdkObjectWrappers.wrap(cdkObject) as? NatProvider ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NatProvider): software.amazon.awscdk.services.ec2.NatProvider =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.NatProvider

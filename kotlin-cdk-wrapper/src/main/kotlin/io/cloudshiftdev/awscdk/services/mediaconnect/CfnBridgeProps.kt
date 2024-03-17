@@ -454,7 +454,7 @@ public interface CfnBridgeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeProps):
-        CfnBridgeProps = CdkObjectWrappers.wrap(cdkObject) as CfnBridgeProps
+        CfnBridgeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBridgeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBridgeProps):
         software.amazon.awscdk.services.mediaconnect.CfnBridgeProps = (wrapped as

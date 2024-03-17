@@ -458,7 +458,8 @@ public interface CfnUserSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettingsProps):
-        CfnUserSettingsProps = CdkObjectWrappers.wrap(cdkObject) as CfnUserSettingsProps
+        CfnUserSettingsProps = CdkObjectWrappers.wrap(cdkObject) as? CfnUserSettingsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserSettingsProps):
         software.amazon.awscdk.services.workspacesweb.CfnUserSettingsProps = (wrapped as

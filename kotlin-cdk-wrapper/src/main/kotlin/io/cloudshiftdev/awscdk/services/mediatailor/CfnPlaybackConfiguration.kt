@@ -1374,7 +1374,8 @@ public open class CfnPlaybackConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty):
-          CdnConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as CdnConfigurationProperty
+          CdnConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? CdnConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CdnConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty
@@ -1512,8 +1513,8 @@ public open class CfnPlaybackConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty):
-          LivePreRollConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LivePreRollConfigurationProperty
+          LivePreRollConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LivePreRollConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LivePreRollConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty
@@ -1702,7 +1703,8 @@ public open class CfnPlaybackConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.DashConfigurationProperty):
-          DashConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as DashConfigurationProperty
+          DashConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DashConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DashConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.DashConfigurationProperty
@@ -1792,7 +1794,8 @@ public open class CfnPlaybackConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.HlsConfigurationProperty):
-          HlsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as HlsConfigurationProperty
+          HlsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.HlsConfigurationProperty
@@ -1905,7 +1908,8 @@ public open class CfnPlaybackConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty):
-          BumperProperty = CdkObjectWrappers.wrap(cdkObject) as BumperProperty
+          BumperProperty = CdkObjectWrappers.wrap(cdkObject) as? BumperProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BumperProperty):
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty =
@@ -2065,7 +2069,8 @@ public open class CfnPlaybackConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty):
-          AvailSuppressionProperty = CdkObjectWrappers.wrap(cdkObject) as AvailSuppressionProperty
+          AvailSuppressionProperty = CdkObjectWrappers.wrap(cdkObject) as? AvailSuppressionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AvailSuppressionProperty):
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty
@@ -2216,8 +2221,8 @@ public open class CfnPlaybackConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty):
-          ManifestProcessingRulesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ManifestProcessingRulesProperty
+          ManifestProcessingRulesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManifestProcessingRulesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManifestProcessingRulesProperty):
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty
@@ -2316,8 +2321,8 @@ public open class CfnPlaybackConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty):
-          AdMarkerPassthroughProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdMarkerPassthroughProperty
+          AdMarkerPassthroughProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdMarkerPassthroughProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdMarkerPassthroughProperty):
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty

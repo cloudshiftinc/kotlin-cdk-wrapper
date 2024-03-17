@@ -102,8 +102,8 @@ public interface ResolveChangeContextOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ResolveChangeContextOptions):
-        ResolveChangeContextOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ResolveChangeContextOptions
+        ResolveChangeContextOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ResolveChangeContextOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResolveChangeContextOptions):
         software.amazon.awscdk.ResolveChangeContextOptions = (wrapped as CdkObject).cdkObject as

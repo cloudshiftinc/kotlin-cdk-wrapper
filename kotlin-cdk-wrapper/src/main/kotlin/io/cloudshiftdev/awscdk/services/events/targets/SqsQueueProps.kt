@@ -220,7 +220,7 @@ public interface SqsQueueProps : TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.SqsQueueProps):
-        SqsQueueProps = CdkObjectWrappers.wrap(cdkObject) as SqsQueueProps
+        SqsQueueProps = CdkObjectWrappers.wrap(cdkObject) as? SqsQueueProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SqsQueueProps):
         software.amazon.awscdk.services.events.targets.SqsQueueProps = (wrapped as

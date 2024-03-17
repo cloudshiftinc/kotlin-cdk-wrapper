@@ -609,7 +609,7 @@ public open class CfnGitHubRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty):
-          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as CodeProperty
+          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeProperty):
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty = (wrapped as
@@ -753,7 +753,7 @@ public open class CfnGitHubRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property):
-          S3Property = CdkObjectWrappers.wrap(cdkObject) as S3Property
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property = (wrapped as

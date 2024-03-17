@@ -107,7 +107,7 @@ public interface SchemaProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.SchemaProps): SchemaProps =
-        CdkObjectWrappers.wrap(cdkObject) as SchemaProps
+        CdkObjectWrappers.wrap(cdkObject) as? SchemaProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SchemaProps): software.amazon.awscdk.services.appsync.SchemaProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.SchemaProps

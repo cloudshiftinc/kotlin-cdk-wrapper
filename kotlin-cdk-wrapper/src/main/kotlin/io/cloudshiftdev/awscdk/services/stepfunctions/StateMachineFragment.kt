@@ -156,10 +156,15 @@ public abstract class StateMachineFragment internal constructor(
   public open fun toSingleState(options: SingleStateOptions.Builder.() -> Unit): Parallel =
       toSingleState(SingleStateOptions(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineFragment,
+  ) : StateMachineFragment(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineFragment):
-        StateMachineFragment = CdkObjectWrappers.wrap(cdkObject) as StateMachineFragment
+        StateMachineFragment = CdkObjectWrappers.wrap(cdkObject) as? StateMachineFragment ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StateMachineFragment):
         software.amazon.awscdk.services.stepfunctions.StateMachineFragment = (wrapped as

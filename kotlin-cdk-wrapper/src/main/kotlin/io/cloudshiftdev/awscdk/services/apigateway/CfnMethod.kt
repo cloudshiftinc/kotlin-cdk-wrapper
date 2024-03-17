@@ -1078,7 +1078,8 @@ public open class CfnMethod internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty):
-          MethodResponseProperty = CdkObjectWrappers.wrap(cdkObject) as MethodResponseProperty
+          MethodResponseProperty = CdkObjectWrappers.wrap(cdkObject) as? MethodResponseProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MethodResponseProperty):
           software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty = (wrapped as
@@ -1889,7 +1890,8 @@ public open class CfnMethod internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty):
-          IntegrationProperty = CdkObjectWrappers.wrap(cdkObject) as IntegrationProperty
+          IntegrationProperty = CdkObjectWrappers.wrap(cdkObject) as? IntegrationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntegrationProperty):
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty = (wrapped as
@@ -2228,8 +2230,8 @@ public open class CfnMethod internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty):
-          IntegrationResponseProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IntegrationResponseProperty
+          IntegrationResponseProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntegrationResponseProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntegrationResponseProperty):
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty =

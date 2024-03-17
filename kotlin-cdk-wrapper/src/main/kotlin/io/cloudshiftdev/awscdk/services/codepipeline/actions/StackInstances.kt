@@ -46,6 +46,10 @@ public abstract class StackInstances internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.StackInstances,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackInstances,
+  ) : StackInstances(cdkObject)
+
   public companion object {
     public fun fromArtifactPath(artifactPath: ArtifactPath, regions: List<String>): StackInstances =
         software.amazon.awscdk.services.codepipeline.actions.StackInstances.fromArtifactPath(artifactPath.let(ArtifactPath::unwrap),
@@ -61,7 +65,7 @@ public abstract class StackInstances internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackInstances):
-        StackInstances = CdkObjectWrappers.wrap(cdkObject) as StackInstances
+        StackInstances = CdkObjectWrappers.wrap(cdkObject) as? StackInstances ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackInstances):
         software.amazon.awscdk.services.codepipeline.actions.StackInstances = (wrapped as

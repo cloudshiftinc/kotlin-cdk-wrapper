@@ -491,7 +491,7 @@ public open class CfnCisScanConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty):
-          TimeProperty = CdkObjectWrappers.wrap(cdkObject) as TimeProperty
+          TimeProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeProperty):
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.TimeProperty =
@@ -630,7 +630,8 @@ public open class CfnCisScanConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty):
-          MonthlyScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as MonthlyScheduleProperty
+          MonthlyScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? MonthlyScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonthlyScheduleProperty):
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.MonthlyScheduleProperty
@@ -742,7 +743,8 @@ public open class CfnCisScanConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty):
-          DailyScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as DailyScheduleProperty
+          DailyScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? DailyScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DailyScheduleProperty):
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.DailyScheduleProperty
@@ -1006,7 +1008,8 @@ public open class CfnCisScanConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.ScheduleProperty):
-          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduleProperty
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleProperty):
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.ScheduleProperty =
@@ -1139,7 +1142,8 @@ public open class CfnCisScanConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty):
-          CisTargetsProperty = CdkObjectWrappers.wrap(cdkObject) as CisTargetsProperty
+          CisTargetsProperty = CdkObjectWrappers.wrap(cdkObject) as? CisTargetsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CisTargetsProperty):
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty =
@@ -1288,7 +1292,8 @@ public open class CfnCisScanConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.WeeklyScheduleProperty):
-          WeeklyScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as WeeklyScheduleProperty
+          WeeklyScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? WeeklyScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WeeklyScheduleProperty):
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.WeeklyScheduleProperty

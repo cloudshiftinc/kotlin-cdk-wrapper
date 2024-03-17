@@ -122,7 +122,7 @@ public interface DomainOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.DomainOptions):
-        DomainOptions = CdkObjectWrappers.wrap(cdkObject) as DomainOptions
+        DomainOptions = CdkObjectWrappers.wrap(cdkObject) as? DomainOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DomainOptions):
         software.amazon.awscdk.services.appsync.DomainOptions = (wrapped as CdkObject).cdkObject as

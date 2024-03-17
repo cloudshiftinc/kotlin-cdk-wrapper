@@ -145,7 +145,8 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegrationProps):
-        HttpAlbIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as HttpAlbIntegrationProps
+        HttpAlbIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? HttpAlbIntegrationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpAlbIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegrationProps = (wrapped as

@@ -384,7 +384,8 @@ public interface CfnIdentityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentityProps):
-        CfnIdentityProps = CdkObjectWrappers.wrap(cdkObject) as CfnIdentityProps
+        CfnIdentityProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIdentityProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityProps):
         software.amazon.awscdk.services.pinpointemail.CfnIdentityProps = (wrapped as

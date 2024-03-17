@@ -146,7 +146,8 @@ public interface SecretAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretAttributes):
-        SecretAttributes = CdkObjectWrappers.wrap(cdkObject) as SecretAttributes
+        SecretAttributes = CdkObjectWrappers.wrap(cdkObject) as? SecretAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretAttributes):
         software.amazon.awscdk.services.secretsmanager.SecretAttributes = (wrapped as

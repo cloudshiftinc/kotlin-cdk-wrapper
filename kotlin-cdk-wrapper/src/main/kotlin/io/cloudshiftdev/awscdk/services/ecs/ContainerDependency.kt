@@ -114,7 +114,8 @@ public interface ContainerDependency {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ContainerDependency):
-        ContainerDependency = CdkObjectWrappers.wrap(cdkObject) as ContainerDependency
+        ContainerDependency = CdkObjectWrappers.wrap(cdkObject) as? ContainerDependency ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerDependency):
         software.amazon.awscdk.services.ecs.ContainerDependency = (wrapped as CdkObject).cdkObject

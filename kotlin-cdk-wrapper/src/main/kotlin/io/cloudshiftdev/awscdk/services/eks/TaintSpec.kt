@@ -127,7 +127,7 @@ public interface TaintSpec {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.TaintSpec): TaintSpec =
-        CdkObjectWrappers.wrap(cdkObject) as TaintSpec
+        CdkObjectWrappers.wrap(cdkObject) as? TaintSpec ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TaintSpec): software.amazon.awscdk.services.eks.TaintSpec =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.TaintSpec

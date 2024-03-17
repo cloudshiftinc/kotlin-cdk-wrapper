@@ -103,7 +103,8 @@ public interface BatchJobDependency {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency):
-        BatchJobDependency = CdkObjectWrappers.wrap(cdkObject) as BatchJobDependency
+        BatchJobDependency = CdkObjectWrappers.wrap(cdkObject) as? BatchJobDependency ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BatchJobDependency):
         software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency = (wrapped as

@@ -114,7 +114,7 @@ public interface SnsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.SnsProps): SnsProps =
-        CdkObjectWrappers.wrap(cdkObject) as SnsProps
+        CdkObjectWrappers.wrap(cdkObject) as? SnsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SnsProps): software.amazon.awscdk.services.ses.actions.SnsProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.actions.SnsProps

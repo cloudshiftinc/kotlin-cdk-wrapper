@@ -74,7 +74,8 @@ public interface DeploymentSourceContext {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext):
-        DeploymentSourceContext = CdkObjectWrappers.wrap(cdkObject) as DeploymentSourceContext
+        DeploymentSourceContext = CdkObjectWrappers.wrap(cdkObject) as? DeploymentSourceContext ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentSourceContext):
         software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext = (wrapped as

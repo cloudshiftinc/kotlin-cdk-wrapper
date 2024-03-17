@@ -489,7 +489,8 @@ public interface BitBucketSourceProps : SourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceProps):
-        BitBucketSourceProps = CdkObjectWrappers.wrap(cdkObject) as BitBucketSourceProps
+        BitBucketSourceProps = CdkObjectWrappers.wrap(cdkObject) as? BitBucketSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BitBucketSourceProps):
         software.amazon.awscdk.services.codebuild.BitBucketSourceProps = (wrapped as

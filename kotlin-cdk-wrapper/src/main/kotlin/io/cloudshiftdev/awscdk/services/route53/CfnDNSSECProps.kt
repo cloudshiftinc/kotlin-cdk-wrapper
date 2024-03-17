@@ -81,7 +81,7 @@ public interface CfnDNSSECProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnDNSSECProps):
-        CfnDNSSECProps = CdkObjectWrappers.wrap(cdkObject) as CfnDNSSECProps
+        CfnDNSSECProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDNSSECProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDNSSECProps):
         software.amazon.awscdk.services.route53.CfnDNSSECProps = (wrapped as CdkObject).cdkObject as

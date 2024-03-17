@@ -137,8 +137,8 @@ public interface CfnApplicationEntitlementAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps):
-        CfnApplicationEntitlementAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnApplicationEntitlementAssociationProps
+        CfnApplicationEntitlementAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnApplicationEntitlementAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationEntitlementAssociationProps):
         software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps =

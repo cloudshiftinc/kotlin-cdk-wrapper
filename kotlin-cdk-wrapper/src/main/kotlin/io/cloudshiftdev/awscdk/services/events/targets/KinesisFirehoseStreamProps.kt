@@ -85,7 +85,8 @@ public interface KinesisFirehoseStreamProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps):
-        KinesisFirehoseStreamProps = CdkObjectWrappers.wrap(cdkObject) as KinesisFirehoseStreamProps
+        KinesisFirehoseStreamProps = CdkObjectWrappers.wrap(cdkObject) as?
+        KinesisFirehoseStreamProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KinesisFirehoseStreamProps):
         software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps = (wrapped as

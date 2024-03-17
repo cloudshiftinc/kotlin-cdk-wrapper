@@ -182,7 +182,8 @@ public interface WarmPoolOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.WarmPoolOptions):
-        WarmPoolOptions = CdkObjectWrappers.wrap(cdkObject) as WarmPoolOptions
+        WarmPoolOptions = CdkObjectWrappers.wrap(cdkObject) as? WarmPoolOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WarmPoolOptions):
         software.amazon.awscdk.services.autoscaling.WarmPoolOptions = (wrapped as

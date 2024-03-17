@@ -166,7 +166,8 @@ public interface ScalableTaskCountProps : BaseScalableAttributeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ScalableTaskCountProps):
-        ScalableTaskCountProps = CdkObjectWrappers.wrap(cdkObject) as ScalableTaskCountProps
+        ScalableTaskCountProps = CdkObjectWrappers.wrap(cdkObject) as? ScalableTaskCountProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScalableTaskCountProps):
         software.amazon.awscdk.services.ecs.ScalableTaskCountProps = (wrapped as

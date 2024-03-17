@@ -420,7 +420,7 @@ public interface TestOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.TestOptions):
-        TestOptions = CdkObjectWrappers.wrap(cdkObject) as TestOptions
+        TestOptions = CdkObjectWrappers.wrap(cdkObject) as? TestOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TestOptions):
         software.amazon.awscdk.cloudassembly.schema.TestOptions = (wrapped as CdkObject).cdkObject

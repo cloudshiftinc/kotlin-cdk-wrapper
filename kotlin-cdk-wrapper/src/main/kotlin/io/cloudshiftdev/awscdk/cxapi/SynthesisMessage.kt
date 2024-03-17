@@ -135,7 +135,7 @@ public interface SynthesisMessage {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.SynthesisMessage): SynthesisMessage =
-        CdkObjectWrappers.wrap(cdkObject) as SynthesisMessage
+        CdkObjectWrappers.wrap(cdkObject) as? SynthesisMessage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SynthesisMessage): software.amazon.awscdk.cxapi.SynthesisMessage =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.cxapi.SynthesisMessage

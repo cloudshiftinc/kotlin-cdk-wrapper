@@ -128,7 +128,7 @@ public interface VpcIpamOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpcIpamOptions): VpcIpamOptions
-        = CdkObjectWrappers.wrap(cdkObject) as VpcIpamOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? VpcIpamOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcIpamOptions): software.amazon.awscdk.services.ec2.VpcIpamOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.VpcIpamOptions

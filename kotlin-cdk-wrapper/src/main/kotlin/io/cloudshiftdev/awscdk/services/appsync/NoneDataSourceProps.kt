@@ -107,7 +107,8 @@ public interface NoneDataSourceProps : BaseDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.NoneDataSourceProps):
-        NoneDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as NoneDataSourceProps
+        NoneDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? NoneDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NoneDataSourceProps):
         software.amazon.awscdk.services.appsync.NoneDataSourceProps = (wrapped as

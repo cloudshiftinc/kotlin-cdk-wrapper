@@ -135,7 +135,8 @@ public interface CfnLoggingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnLoggingProps):
-        CfnLoggingProps = CdkObjectWrappers.wrap(cdkObject) as CfnLoggingProps
+        CfnLoggingProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLoggingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoggingProps):
         software.amazon.awscdk.services.iot.CfnLoggingProps = (wrapped as CdkObject).cdkObject as

@@ -280,7 +280,8 @@ public interface JsonWithStandardFieldProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps):
-        JsonWithStandardFieldProps = CdkObjectWrappers.wrap(cdkObject) as JsonWithStandardFieldProps
+        JsonWithStandardFieldProps = CdkObjectWrappers.wrap(cdkObject) as?
+        JsonWithStandardFieldProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JsonWithStandardFieldProps):
         software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps = (wrapped as

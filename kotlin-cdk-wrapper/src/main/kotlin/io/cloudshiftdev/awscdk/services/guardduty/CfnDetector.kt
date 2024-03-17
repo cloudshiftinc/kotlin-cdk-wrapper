@@ -550,8 +550,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty):
-          CFNS3LogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CFNS3LogsConfigurationProperty
+          CFNS3LogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNS3LogsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CFNS3LogsConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty =
@@ -789,8 +789,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty):
-          CFNDataSourceConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CFNDataSourceConfigurationsProperty
+          CFNDataSourceConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNDataSourceConfigurationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CFNDataSourceConfigurationsProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty
@@ -888,8 +888,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty):
-          CFNScanEc2InstanceWithFindingsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CFNScanEc2InstanceWithFindingsConfigurationProperty
+          CFNScanEc2InstanceWithFindingsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? CFNScanEc2InstanceWithFindingsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CFNScanEc2InstanceWithFindingsConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty
@@ -995,7 +995,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty):
-          TagItemProperty = CdkObjectWrappers.wrap(cdkObject) as TagItemProperty
+          TagItemProperty = CdkObjectWrappers.wrap(cdkObject) as? TagItemProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagItemProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty = (wrapped as
@@ -1165,8 +1166,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty):
-          CFNFeatureConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CFNFeatureConfigurationProperty
+          CFNFeatureConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNFeatureConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CFNFeatureConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty =
@@ -1287,8 +1288,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty):
-          CFNKubernetesConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CFNKubernetesConfigurationProperty
+          CFNKubernetesConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNKubernetesConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CFNKubernetesConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty =
@@ -1413,8 +1414,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty):
-          CFNMalwareProtectionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CFNMalwareProtectionConfigurationProperty
+          CFNMalwareProtectionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNMalwareProtectionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CFNMalwareProtectionConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty
@@ -1514,8 +1515,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty):
-          CFNKubernetesAuditLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CFNKubernetesAuditLogsConfigurationProperty
+          CFNKubernetesAuditLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNKubernetesAuditLogsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CFNKubernetesAuditLogsConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty
@@ -1626,8 +1627,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty):
-          CFNFeatureAdditionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CFNFeatureAdditionalConfigurationProperty
+          CFNFeatureAdditionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CFNFeatureAdditionalConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CFNFeatureAdditionalConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty

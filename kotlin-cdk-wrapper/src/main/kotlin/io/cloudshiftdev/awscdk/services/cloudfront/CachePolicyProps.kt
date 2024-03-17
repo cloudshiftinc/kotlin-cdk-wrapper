@@ -373,7 +373,8 @@ public interface CachePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicyProps):
-        CachePolicyProps = CdkObjectWrappers.wrap(cdkObject) as CachePolicyProps
+        CachePolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CachePolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CachePolicyProps):
         software.amazon.awscdk.services.cloudfront.CachePolicyProps = (wrapped as

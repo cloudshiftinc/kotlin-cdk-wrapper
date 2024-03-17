@@ -619,7 +619,8 @@ public interface CfnModelCardProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCardProps):
-        CfnModelCardProps = CdkObjectWrappers.wrap(cdkObject) as CfnModelCardProps
+        CfnModelCardProps = CdkObjectWrappers.wrap(cdkObject) as? CfnModelCardProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelCardProps):
         software.amazon.awscdk.services.sagemaker.CfnModelCardProps = (wrapped as

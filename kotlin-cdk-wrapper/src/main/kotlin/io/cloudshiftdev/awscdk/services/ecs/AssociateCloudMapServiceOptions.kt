@@ -126,8 +126,8 @@ public interface AssociateCloudMapServiceOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions):
-        AssociateCloudMapServiceOptions = CdkObjectWrappers.wrap(cdkObject) as
-        AssociateCloudMapServiceOptions
+        AssociateCloudMapServiceOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        AssociateCloudMapServiceOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssociateCloudMapServiceOptions):
         software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions = (wrapped as

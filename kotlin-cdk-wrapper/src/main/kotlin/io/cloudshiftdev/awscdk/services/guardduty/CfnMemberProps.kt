@@ -260,7 +260,7 @@ public interface CfnMemberProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnMemberProps):
-        CfnMemberProps = CdkObjectWrappers.wrap(cdkObject) as CfnMemberProps
+        CfnMemberProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMemberProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMemberProps):
         software.amazon.awscdk.services.guardduty.CfnMemberProps = (wrapped as CdkObject).cdkObject

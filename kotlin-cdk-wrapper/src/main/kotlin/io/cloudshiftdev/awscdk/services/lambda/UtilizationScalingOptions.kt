@@ -194,7 +194,8 @@ public interface UtilizationScalingOptions : BaseTargetTrackingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.UtilizationScalingOptions):
-        UtilizationScalingOptions = CdkObjectWrappers.wrap(cdkObject) as UtilizationScalingOptions
+        UtilizationScalingOptions = CdkObjectWrappers.wrap(cdkObject) as? UtilizationScalingOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UtilizationScalingOptions):
         software.amazon.awscdk.services.lambda.UtilizationScalingOptions = (wrapped as

@@ -341,7 +341,8 @@ public interface CfnAnnotationStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStoreProps):
-        CfnAnnotationStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnAnnotationStoreProps
+        CfnAnnotationStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAnnotationStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnnotationStoreProps):
         software.amazon.awscdk.services.omics.CfnAnnotationStoreProps = (wrapped as

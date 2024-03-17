@@ -117,7 +117,8 @@ public interface AllocateCidrRequest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AllocateCidrRequest):
-        AllocateCidrRequest = CdkObjectWrappers.wrap(cdkObject) as AllocateCidrRequest
+        AllocateCidrRequest = CdkObjectWrappers.wrap(cdkObject) as? AllocateCidrRequest ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AllocateCidrRequest):
         software.amazon.awscdk.services.ec2.AllocateCidrRequest = (wrapped as CdkObject).cdkObject

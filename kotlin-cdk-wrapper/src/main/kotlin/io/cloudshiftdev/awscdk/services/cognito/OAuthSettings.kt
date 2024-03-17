@@ -234,7 +234,7 @@ public interface OAuthSettings {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.OAuthSettings):
-        OAuthSettings = CdkObjectWrappers.wrap(cdkObject) as OAuthSettings
+        OAuthSettings = CdkObjectWrappers.wrap(cdkObject) as? OAuthSettings ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OAuthSettings):
         software.amazon.awscdk.services.cognito.OAuthSettings = (wrapped as CdkObject).cdkObject as

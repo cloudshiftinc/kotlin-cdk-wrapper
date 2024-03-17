@@ -151,7 +151,7 @@ public interface Tmpfs {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.Tmpfs): Tmpfs =
-        CdkObjectWrappers.wrap(cdkObject) as Tmpfs
+        CdkObjectWrappers.wrap(cdkObject) as? Tmpfs ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Tmpfs): software.amazon.awscdk.services.batch.Tmpfs = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.batch.Tmpfs

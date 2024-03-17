@@ -255,7 +255,8 @@ public interface CfnModelManifestProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnModelManifestProps):
-        CfnModelManifestProps = CdkObjectWrappers.wrap(cdkObject) as CfnModelManifestProps
+        CfnModelManifestProps = CdkObjectWrappers.wrap(cdkObject) as? CfnModelManifestProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelManifestProps):
         software.amazon.awscdk.services.iotfleetwise.CfnModelManifestProps = (wrapped as

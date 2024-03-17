@@ -1104,8 +1104,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty):
-          EgressConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EgressConfigurationProperty
+          EgressConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EgressConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EgressConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.EgressConfigurationProperty =
@@ -1212,7 +1212,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty):
-          KeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as KeyValuePairProperty
+          KeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValuePairProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyValuePairProperty):
           software.amazon.awscdk.services.apprunner.CfnService.KeyValuePairProperty = (wrapped as
@@ -1496,7 +1497,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeRepositoryProperty):
-          CodeRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as CodeRepositoryProperty
+          CodeRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeRepositoryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeRepositoryProperty):
           software.amazon.awscdk.services.apprunner.CfnService.CodeRepositoryProperty = (wrapped as
@@ -1694,7 +1696,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty):
-          CodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as CodeConfigurationProperty
+          CodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationProperty = (wrapped
@@ -1939,8 +1942,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkConfigurationProperty
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.NetworkConfigurationProperty =
@@ -2109,8 +2112,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ServiceObservabilityConfigurationProperty):
-          ServiceObservabilityConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServiceObservabilityConfigurationProperty
+          ServiceObservabilityConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceObservabilityConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceObservabilityConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.ServiceObservabilityConfigurationProperty
@@ -2194,8 +2197,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EncryptionConfigurationProperty
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.EncryptionConfigurationProperty =
@@ -2525,8 +2528,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty):
-          ImageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ImageConfigurationProperty
+          ImageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.ImageConfigurationProperty = (wrapped
@@ -2659,8 +2662,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty):
-          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AuthenticationConfigurationProperty
+          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthenticationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuthenticationConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.AuthenticationConfigurationProperty =
@@ -3047,8 +3050,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty):
-          CodeConfigurationValuesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CodeConfigurationValuesProperty
+          CodeConfigurationValuesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeConfigurationValuesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeConfigurationValuesProperty):
           software.amazon.awscdk.services.apprunner.CfnService.CodeConfigurationValuesProperty =
@@ -3335,8 +3338,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty):
-          HealthCheckConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HealthCheckConfigurationProperty
+          HealthCheckConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthCheckConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.HealthCheckConfigurationProperty =
@@ -3460,7 +3463,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.SourceCodeVersionProperty):
-          SourceCodeVersionProperty = CdkObjectWrappers.wrap(cdkObject) as SourceCodeVersionProperty
+          SourceCodeVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceCodeVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceCodeVersionProperty):
           software.amazon.awscdk.services.apprunner.CfnService.SourceCodeVersionProperty = (wrapped
@@ -3573,8 +3577,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty):
-          IngressConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IngressConfigurationProperty
+          IngressConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IngressConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IngressConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.IngressConfigurationProperty =
@@ -3774,7 +3778,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty):
-          ImageRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as ImageRepositoryProperty
+          ImageRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? ImageRepositoryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageRepositoryProperty):
           software.amazon.awscdk.services.apprunner.CfnService.ImageRepositoryProperty = (wrapped as
@@ -3935,8 +3940,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty):
-          InstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceConfigurationProperty
+          InstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.InstanceConfigurationProperty =
@@ -4321,8 +4326,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnService.SourceConfigurationProperty):
-          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SourceConfigurationProperty
+          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnService.SourceConfigurationProperty =

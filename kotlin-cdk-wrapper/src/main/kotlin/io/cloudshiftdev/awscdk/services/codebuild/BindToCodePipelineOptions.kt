@@ -76,7 +76,8 @@ public interface BindToCodePipelineOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions):
-        BindToCodePipelineOptions = CdkObjectWrappers.wrap(cdkObject) as BindToCodePipelineOptions
+        BindToCodePipelineOptions = CdkObjectWrappers.wrap(cdkObject) as? BindToCodePipelineOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BindToCodePipelineOptions):
         software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions = (wrapped as

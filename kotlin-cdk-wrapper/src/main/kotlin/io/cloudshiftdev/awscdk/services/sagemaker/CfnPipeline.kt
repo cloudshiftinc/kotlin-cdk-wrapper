@@ -506,7 +506,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty = (wrapped as
@@ -677,8 +678,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty):
-          PipelineDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipelineDefinitionProperty
+          PipelineDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipelineDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipelineDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty =
@@ -764,8 +765,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty):
-          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ParallelismConfigurationProperty
+          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParallelismConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParallelismConfigurationProperty):
           software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =

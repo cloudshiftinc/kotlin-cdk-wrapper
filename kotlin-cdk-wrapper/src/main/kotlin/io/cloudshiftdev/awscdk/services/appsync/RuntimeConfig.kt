@@ -92,7 +92,7 @@ public interface RuntimeConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.RuntimeConfig):
-        RuntimeConfig = CdkObjectWrappers.wrap(cdkObject) as RuntimeConfig
+        RuntimeConfig = CdkObjectWrappers.wrap(cdkObject) as? RuntimeConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuntimeConfig):
         software.amazon.awscdk.services.appsync.RuntimeConfig = (wrapped as CdkObject).cdkObject as

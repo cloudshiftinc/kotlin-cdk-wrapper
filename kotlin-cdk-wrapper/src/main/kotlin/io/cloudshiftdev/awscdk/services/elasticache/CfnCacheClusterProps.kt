@@ -1733,7 +1733,8 @@ public interface CfnCacheClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheClusterProps):
-        CfnCacheClusterProps = CdkObjectWrappers.wrap(cdkObject) as CfnCacheClusterProps
+        CfnCacheClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCacheClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCacheClusterProps):
         software.amazon.awscdk.services.elasticache.CfnCacheClusterProps = (wrapped as

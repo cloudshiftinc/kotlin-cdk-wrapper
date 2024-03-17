@@ -140,8 +140,8 @@ public interface CfnTransitGatewayMulticastDomainAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociationProps):
-        CfnTransitGatewayMulticastDomainAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTransitGatewayMulticastDomainAssociationProps
+        CfnTransitGatewayMulticastDomainAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTransitGatewayMulticastDomainAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransitGatewayMulticastDomainAssociationProps):
         software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociationProps =

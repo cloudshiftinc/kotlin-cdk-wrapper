@@ -353,8 +353,8 @@ public open class CfnBillingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty):
-          BillingGroupPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BillingGroupPropertiesProperty
+          BillingGroupPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BillingGroupPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BillingGroupPropertiesProperty):
           software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty =

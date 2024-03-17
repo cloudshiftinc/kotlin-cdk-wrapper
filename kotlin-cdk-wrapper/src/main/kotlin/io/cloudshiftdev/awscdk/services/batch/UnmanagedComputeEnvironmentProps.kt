@@ -196,8 +196,8 @@ public interface UnmanagedComputeEnvironmentProps : ComputeEnvironmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.UnmanagedComputeEnvironmentProps):
-        UnmanagedComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        UnmanagedComputeEnvironmentProps
+        UnmanagedComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        UnmanagedComputeEnvironmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UnmanagedComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.UnmanagedComputeEnvironmentProps = (wrapped as

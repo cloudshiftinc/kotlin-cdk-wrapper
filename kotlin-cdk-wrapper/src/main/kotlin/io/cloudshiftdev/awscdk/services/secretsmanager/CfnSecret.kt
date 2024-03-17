@@ -852,7 +852,8 @@ public open class CfnSecret internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty):
-          ReplicaRegionProperty = CdkObjectWrappers.wrap(cdkObject) as ReplicaRegionProperty
+          ReplicaRegionProperty = CdkObjectWrappers.wrap(cdkObject) as? ReplicaRegionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicaRegionProperty):
           software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty = (wrapped
@@ -1352,8 +1353,8 @@ public open class CfnSecret internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty):
-          GenerateSecretStringProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GenerateSecretStringProperty
+          GenerateSecretStringProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GenerateSecretStringProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GenerateSecretStringProperty):
           software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty =

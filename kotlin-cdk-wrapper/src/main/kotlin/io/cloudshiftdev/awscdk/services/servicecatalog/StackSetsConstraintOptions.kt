@@ -241,7 +241,8 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions):
-        StackSetsConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as StackSetsConstraintOptions
+        StackSetsConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        StackSetsConstraintOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSetsConstraintOptions):
         software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions = (wrapped as

@@ -158,7 +158,8 @@ public interface SparkSubmitJobDriver {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver):
-        SparkSubmitJobDriver = CdkObjectWrappers.wrap(cdkObject) as SparkSubmitJobDriver
+        SparkSubmitJobDriver = CdkObjectWrappers.wrap(cdkObject) as? SparkSubmitJobDriver ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SparkSubmitJobDriver):
         software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver = (wrapped as

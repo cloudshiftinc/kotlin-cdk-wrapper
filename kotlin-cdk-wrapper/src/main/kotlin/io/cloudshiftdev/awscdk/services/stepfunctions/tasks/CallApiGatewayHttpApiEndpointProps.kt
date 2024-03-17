@@ -588,8 +588,8 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointProps):
-        CallApiGatewayHttpApiEndpointProps = CdkObjectWrappers.wrap(cdkObject) as
-        CallApiGatewayHttpApiEndpointProps
+        CallApiGatewayHttpApiEndpointProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CallApiGatewayHttpApiEndpointProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CallApiGatewayHttpApiEndpointProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointProps =

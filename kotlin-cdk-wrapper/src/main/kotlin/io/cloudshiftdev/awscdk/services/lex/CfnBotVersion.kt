@@ -408,8 +408,8 @@ public open class CfnBotVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty):
-          BotVersionLocaleSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BotVersionLocaleSpecificationProperty
+          BotVersionLocaleSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BotVersionLocaleSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BotVersionLocaleSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty =
@@ -492,8 +492,8 @@ public open class CfnBotVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty):
-          BotVersionLocaleDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BotVersionLocaleDetailsProperty
+          BotVersionLocaleDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BotVersionLocaleDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BotVersionLocaleDetailsProperty):
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty =

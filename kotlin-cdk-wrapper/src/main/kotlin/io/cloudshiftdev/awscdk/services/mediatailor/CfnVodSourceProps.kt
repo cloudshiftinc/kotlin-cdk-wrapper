@@ -229,7 +229,8 @@ public interface CfnVodSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnVodSourceProps):
-        CfnVodSourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnVodSourceProps
+        CfnVodSourceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVodSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVodSourceProps):
         software.amazon.awscdk.services.mediatailor.CfnVodSourceProps = (wrapped as

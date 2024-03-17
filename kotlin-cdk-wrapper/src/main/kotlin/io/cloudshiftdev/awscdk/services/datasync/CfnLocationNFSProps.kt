@@ -329,7 +329,8 @@ public interface CfnLocationNFSProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFSProps):
-        CfnLocationNFSProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationNFSProps
+        CfnLocationNFSProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationNFSProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationNFSProps):
         software.amazon.awscdk.services.datasync.CfnLocationNFSProps = (wrapped as

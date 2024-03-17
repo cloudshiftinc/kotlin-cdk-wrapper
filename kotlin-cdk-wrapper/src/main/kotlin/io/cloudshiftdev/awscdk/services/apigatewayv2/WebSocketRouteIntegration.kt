@@ -49,10 +49,15 @@ public abstract class WebSocketRouteIntegration internal constructor(
   public open fun bind(options: WebSocketRouteIntegrationBindOptions.Builder.() -> Unit):
       WebSocketRouteIntegrationConfig = bind(WebSocketRouteIntegrationBindOptions(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegration,
+  ) : WebSocketRouteIntegration(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegration):
-        WebSocketRouteIntegration = CdkObjectWrappers.wrap(cdkObject) as WebSocketRouteIntegration
+        WebSocketRouteIntegration = CdkObjectWrappers.wrap(cdkObject) as? WebSocketRouteIntegration
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketRouteIntegration):
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegration = (wrapped as

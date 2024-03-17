@@ -81,8 +81,8 @@ public interface PostgresInstanceEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.PostgresInstanceEngineProps):
-        PostgresInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as
-        PostgresInstanceEngineProps
+        PostgresInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        PostgresInstanceEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PostgresInstanceEngineProps):
         software.amazon.awscdk.services.rds.PostgresInstanceEngineProps = (wrapped as

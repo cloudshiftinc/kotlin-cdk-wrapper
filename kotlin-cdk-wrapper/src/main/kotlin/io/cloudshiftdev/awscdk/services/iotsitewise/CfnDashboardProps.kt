@@ -234,7 +234,8 @@ public interface CfnDashboardProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnDashboardProps):
-        CfnDashboardProps = CdkObjectWrappers.wrap(cdkObject) as CfnDashboardProps
+        CfnDashboardProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDashboardProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDashboardProps):
         software.amazon.awscdk.services.iotsitewise.CfnDashboardProps = (wrapped as

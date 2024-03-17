@@ -204,7 +204,8 @@ public interface CfnHookTypeConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookTypeConfigProps):
-        CfnHookTypeConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnHookTypeConfigProps
+        CfnHookTypeConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHookTypeConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHookTypeConfigProps):
         software.amazon.awscdk.services.cloudformation.CfnHookTypeConfigProps = (wrapped as

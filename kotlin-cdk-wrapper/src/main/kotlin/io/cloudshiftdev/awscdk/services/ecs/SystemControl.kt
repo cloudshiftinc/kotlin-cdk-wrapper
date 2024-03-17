@@ -92,7 +92,7 @@ public interface SystemControl {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.SystemControl): SystemControl =
-        CdkObjectWrappers.wrap(cdkObject) as SystemControl
+        CdkObjectWrappers.wrap(cdkObject) as? SystemControl ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SystemControl): software.amazon.awscdk.services.ecs.SystemControl =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.SystemControl

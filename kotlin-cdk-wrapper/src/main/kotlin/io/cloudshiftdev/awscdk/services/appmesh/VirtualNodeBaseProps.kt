@@ -269,7 +269,8 @@ public interface VirtualNodeBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeBaseProps):
-        VirtualNodeBaseProps = CdkObjectWrappers.wrap(cdkObject) as VirtualNodeBaseProps
+        VirtualNodeBaseProps = CdkObjectWrappers.wrap(cdkObject) as? VirtualNodeBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualNodeBaseProps):
         software.amazon.awscdk.services.appmesh.VirtualNodeBaseProps = (wrapped as

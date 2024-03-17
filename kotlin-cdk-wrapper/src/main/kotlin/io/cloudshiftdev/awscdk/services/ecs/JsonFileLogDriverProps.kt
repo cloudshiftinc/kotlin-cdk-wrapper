@@ -308,7 +308,8 @@ public interface JsonFileLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.JsonFileLogDriverProps):
-        JsonFileLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as JsonFileLogDriverProps
+        JsonFileLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? JsonFileLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JsonFileLogDriverProps):
         software.amazon.awscdk.services.ecs.JsonFileLogDriverProps = (wrapped as

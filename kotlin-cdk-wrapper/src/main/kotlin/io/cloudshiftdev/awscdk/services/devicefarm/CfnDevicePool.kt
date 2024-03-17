@@ -772,7 +772,7 @@ public open class CfnDevicePool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool.RuleProperty):
-          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.devicefarm.CfnDevicePool.RuleProperty = (wrapped as

@@ -82,7 +82,8 @@ public interface DockerImageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.DockerImageOptions):
-        DockerImageOptions = CdkObjectWrappers.wrap(cdkObject) as DockerImageOptions
+        DockerImageOptions = CdkObjectWrappers.wrap(cdkObject) as? DockerImageOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageOptions):
         software.amazon.awscdk.services.codebuild.DockerImageOptions = (wrapped as

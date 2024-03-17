@@ -871,7 +871,8 @@ public interface CfnPipelineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipelineProps):
-        CfnPipelineProps = CdkObjectWrappers.wrap(cdkObject) as CfnPipelineProps
+        CfnPipelineProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPipelineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipelineProps):
         software.amazon.awscdk.services.codepipeline.CfnPipelineProps = (wrapped as

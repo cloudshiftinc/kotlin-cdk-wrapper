@@ -732,7 +732,7 @@ public open class CfnUrl internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty):
-          CorsProperty = CdkObjectWrappers.wrap(cdkObject) as CorsProperty
+          CorsProperty = CdkObjectWrappers.wrap(cdkObject) as? CorsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CorsProperty):
           software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty = (wrapped as

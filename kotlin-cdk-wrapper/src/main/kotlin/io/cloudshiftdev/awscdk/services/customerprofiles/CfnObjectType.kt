@@ -817,7 +817,8 @@ public open class CfnObjectType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty):
-          ObjectTypeKeyProperty = CdkObjectWrappers.wrap(cdkObject) as ObjectTypeKeyProperty
+          ObjectTypeKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? ObjectTypeKeyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ObjectTypeKeyProperty):
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty =
@@ -956,7 +957,8 @@ public open class CfnObjectType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty):
-          FieldMapProperty = CdkObjectWrappers.wrap(cdkObject) as FieldMapProperty
+          FieldMapProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldMapProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldMapProperty):
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty = (wrapped
@@ -1114,7 +1116,8 @@ public open class CfnObjectType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty):
-          ObjectTypeFieldProperty = CdkObjectWrappers.wrap(cdkObject) as ObjectTypeFieldProperty
+          ObjectTypeFieldProperty = CdkObjectWrappers.wrap(cdkObject) as? ObjectTypeFieldProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ObjectTypeFieldProperty):
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty =
@@ -1248,7 +1251,8 @@ public open class CfnObjectType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty):
-          KeyMapProperty = CdkObjectWrappers.wrap(cdkObject) as KeyMapProperty
+          KeyMapProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyMapProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyMapProperty):
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty = (wrapped

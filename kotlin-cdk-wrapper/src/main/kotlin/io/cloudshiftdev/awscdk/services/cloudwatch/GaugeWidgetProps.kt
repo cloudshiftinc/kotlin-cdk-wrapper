@@ -515,7 +515,8 @@ public interface GaugeWidgetProps : MetricWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps):
-        GaugeWidgetProps = CdkObjectWrappers.wrap(cdkObject) as GaugeWidgetProps
+        GaugeWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? GaugeWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GaugeWidgetProps):
         software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps = (wrapped as

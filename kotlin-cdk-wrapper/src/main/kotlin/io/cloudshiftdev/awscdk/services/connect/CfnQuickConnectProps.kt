@@ -255,7 +255,8 @@ public interface CfnQuickConnectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnectProps):
-        CfnQuickConnectProps = CdkObjectWrappers.wrap(cdkObject) as CfnQuickConnectProps
+        CfnQuickConnectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnQuickConnectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnQuickConnectProps):
         software.amazon.awscdk.services.connect.CfnQuickConnectProps = (wrapped as

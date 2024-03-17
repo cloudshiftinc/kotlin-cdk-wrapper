@@ -180,7 +180,7 @@ public interface PortfolioProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.PortfolioProps):
-        PortfolioProps = CdkObjectWrappers.wrap(cdkObject) as PortfolioProps
+        PortfolioProps = CdkObjectWrappers.wrap(cdkObject) as? PortfolioProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PortfolioProps):
         software.amazon.awscdk.services.servicecatalog.PortfolioProps = (wrapped as

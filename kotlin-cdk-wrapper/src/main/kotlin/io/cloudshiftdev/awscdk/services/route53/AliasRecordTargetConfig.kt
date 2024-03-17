@@ -93,7 +93,8 @@ public interface AliasRecordTargetConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.AliasRecordTargetConfig):
-        AliasRecordTargetConfig = CdkObjectWrappers.wrap(cdkObject) as AliasRecordTargetConfig
+        AliasRecordTargetConfig = CdkObjectWrappers.wrap(cdkObject) as? AliasRecordTargetConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AliasRecordTargetConfig):
         software.amazon.awscdk.services.route53.AliasRecordTargetConfig = (wrapped as

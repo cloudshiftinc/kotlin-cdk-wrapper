@@ -147,7 +147,8 @@ public interface BlockPublicAccessOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.BlockPublicAccessOptions):
-        BlockPublicAccessOptions = CdkObjectWrappers.wrap(cdkObject) as BlockPublicAccessOptions
+        BlockPublicAccessOptions = CdkObjectWrappers.wrap(cdkObject) as? BlockPublicAccessOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BlockPublicAccessOptions):
         software.amazon.awscdk.services.s3.BlockPublicAccessOptions = (wrapped as

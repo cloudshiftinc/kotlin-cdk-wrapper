@@ -664,7 +664,8 @@ public interface CfnCrawlerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawlerProps):
-        CfnCrawlerProps = CdkObjectWrappers.wrap(cdkObject) as CfnCrawlerProps
+        CfnCrawlerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCrawlerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCrawlerProps):
         software.amazon.awscdk.services.glue.CfnCrawlerProps = (wrapped as CdkObject).cdkObject as

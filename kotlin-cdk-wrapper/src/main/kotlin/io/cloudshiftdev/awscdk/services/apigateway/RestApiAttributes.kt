@@ -257,7 +257,8 @@ public interface RestApiAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RestApiAttributes):
-        RestApiAttributes = CdkObjectWrappers.wrap(cdkObject) as RestApiAttributes
+        RestApiAttributes = CdkObjectWrappers.wrap(cdkObject) as? RestApiAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RestApiAttributes):
         software.amazon.awscdk.services.apigateway.RestApiAttributes = (wrapped as

@@ -39,6 +39,10 @@ public abstract class LogGroupTargetInput internal constructor(
   public open fun bind(rule: IRule): RuleTargetInputProperties =
       unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInput,
+  ) : LogGroupTargetInput(cdkObject)
+
   public companion object {
     public fun fromObject(): RuleTargetInput =
         software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObject().let(RuleTargetInput::wrap)
@@ -53,7 +57,8 @@ public abstract class LogGroupTargetInput internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInput):
-        LogGroupTargetInput = CdkObjectWrappers.wrap(cdkObject) as LogGroupTargetInput
+        LogGroupTargetInput = CdkObjectWrappers.wrap(cdkObject) as? LogGroupTargetInput ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogGroupTargetInput):
         software.amazon.awscdk.services.events.targets.LogGroupTargetInput = (wrapped as

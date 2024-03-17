@@ -408,8 +408,8 @@ public interface CloudFormationExecuteChangeSetActionProps : CommonAwsActionProp
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetActionProps):
-        CloudFormationExecuteChangeSetActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationExecuteChangeSetActionProps
+        CloudFormationExecuteChangeSetActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationExecuteChangeSetActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationExecuteChangeSetActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetActionProps

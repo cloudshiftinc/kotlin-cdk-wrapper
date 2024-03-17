@@ -108,7 +108,8 @@ public interface CfnBatchScramSecretProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnBatchScramSecretProps):
-        CfnBatchScramSecretProps = CdkObjectWrappers.wrap(cdkObject) as CfnBatchScramSecretProps
+        CfnBatchScramSecretProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBatchScramSecretProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBatchScramSecretProps):
         software.amazon.awscdk.services.msk.CfnBatchScramSecretProps = (wrapped as

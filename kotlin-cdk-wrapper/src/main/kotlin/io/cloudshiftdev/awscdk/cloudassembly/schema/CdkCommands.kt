@@ -144,7 +144,7 @@ public interface CdkCommands {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.CdkCommands):
-        CdkCommands = CdkObjectWrappers.wrap(cdkObject) as CdkCommands
+        CdkCommands = CdkObjectWrappers.wrap(cdkObject) as? CdkCommands ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CdkCommands):
         software.amazon.awscdk.cloudassembly.schema.CdkCommands = (wrapped as CdkObject).cdkObject

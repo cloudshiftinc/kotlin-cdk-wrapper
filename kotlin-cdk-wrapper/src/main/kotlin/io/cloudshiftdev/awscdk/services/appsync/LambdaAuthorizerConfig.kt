@@ -147,7 +147,8 @@ public interface LambdaAuthorizerConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig):
-        LambdaAuthorizerConfig = CdkObjectWrappers.wrap(cdkObject) as LambdaAuthorizerConfig
+        LambdaAuthorizerConfig = CdkObjectWrappers.wrap(cdkObject) as? LambdaAuthorizerConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaAuthorizerConfig):
         software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig = (wrapped as

@@ -210,7 +210,8 @@ public interface OriginRequestPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestPolicyProps):
-        OriginRequestPolicyProps = CdkObjectWrappers.wrap(cdkObject) as OriginRequestPolicyProps
+        OriginRequestPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? OriginRequestPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginRequestPolicyProps):
         software.amazon.awscdk.services.cloudfront.OriginRequestPolicyProps = (wrapped as

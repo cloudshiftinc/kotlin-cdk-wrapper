@@ -305,7 +305,8 @@ public interface SecurityGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SecurityGroupProps):
-        SecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as SecurityGroupProps
+        SecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as? SecurityGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecurityGroupProps):
         software.amazon.awscdk.services.ec2.SecurityGroupProps = (wrapped as CdkObject).cdkObject as

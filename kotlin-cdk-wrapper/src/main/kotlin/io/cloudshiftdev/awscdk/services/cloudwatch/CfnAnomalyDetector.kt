@@ -1170,7 +1170,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricDataQueryProperty):
-          MetricDataQueryProperty = CdkObjectWrappers.wrap(cdkObject) as MetricDataQueryProperty
+          MetricDataQueryProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDataQueryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricDataQueryProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricDataQueryProperty =
@@ -1364,8 +1365,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty):
-          SingleMetricAnomalyDetectorProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SingleMetricAnomalyDetectorProperty
+          SingleMetricAnomalyDetectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleMetricAnomalyDetectorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleMetricAnomalyDetectorProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty
@@ -1645,7 +1646,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty):
-          MetricStatProperty = CdkObjectWrappers.wrap(cdkObject) as MetricStatProperty
+          MetricStatProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricStatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricStatProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty =
@@ -1774,7 +1776,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty):
-          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as DimensionProperty
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DimensionProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty = (wrapped
@@ -1957,8 +1960,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty):
-          MetricMathAnomalyDetectorProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MetricMathAnomalyDetectorProperty
+          MetricMathAnomalyDetectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricMathAnomalyDetectorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricMathAnomalyDetectorProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty
@@ -2148,7 +2151,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty):
-          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as ConfigurationProperty
+          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty =
@@ -2315,7 +2319,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty):
-          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as MetricProperty
+          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty = (wrapped as
@@ -2436,7 +2441,7 @@ public open class CfnAnomalyDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty):
-          RangeProperty = CdkObjectWrappers.wrap(cdkObject) as RangeProperty
+          RangeProperty = CdkObjectWrappers.wrap(cdkObject) as? RangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RangeProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty = (wrapped as

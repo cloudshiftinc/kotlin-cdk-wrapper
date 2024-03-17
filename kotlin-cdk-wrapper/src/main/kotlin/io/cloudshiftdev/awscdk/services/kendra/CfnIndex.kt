@@ -988,8 +988,8 @@ public open class CfnIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.CapacityUnitsConfigurationProperty):
-          CapacityUnitsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CapacityUnitsConfigurationProperty
+          CapacityUnitsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityUnitsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityUnitsConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.CapacityUnitsConfigurationProperty =
@@ -1368,7 +1368,8 @@ public open class CfnIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.RelevanceProperty):
-          RelevanceProperty = CdkObjectWrappers.wrap(cdkObject) as RelevanceProperty
+          RelevanceProperty = CdkObjectWrappers.wrap(cdkObject) as? RelevanceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RelevanceProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.RelevanceProperty = (wrapped as
@@ -1552,8 +1553,8 @@ public open class CfnIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty):
-          UserTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UserTokenConfigurationProperty
+          UserTokenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserTokenConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserTokenConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty = (wrapped
@@ -1800,8 +1801,8 @@ public open class CfnIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty):
-          JwtTokenTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          JwtTokenTypeConfigurationProperty
+          JwtTokenTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JwtTokenTypeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JwtTokenTypeConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty =
@@ -2041,8 +2042,8 @@ public open class CfnIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty):
-          DocumentMetadataConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DocumentMetadataConfigurationProperty
+          DocumentMetadataConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentMetadataConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentMetadataConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty =
@@ -2136,8 +2137,8 @@ public open class CfnIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty):
-          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServerSideEncryptionConfigurationProperty
+          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty
@@ -2248,8 +2249,8 @@ public open class CfnIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty):
-          JsonTokenTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          JsonTokenTypeConfigurationProperty
+          JsonTokenTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JsonTokenTypeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonTokenTypeConfigurationProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty =
@@ -2505,7 +2506,8 @@ public open class CfnIndex internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty):
-          SearchProperty = CdkObjectWrappers.wrap(cdkObject) as SearchProperty
+          SearchProperty = CdkObjectWrappers.wrap(cdkObject) as? SearchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SearchProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty = (wrapped as
@@ -2615,8 +2617,8 @@ public open class CfnIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.ValueImportanceItemProperty):
-          ValueImportanceItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ValueImportanceItemProperty
+          ValueImportanceItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValueImportanceItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValueImportanceItemProperty):
           software.amazon.awscdk.services.kendra.CfnIndex.ValueImportanceItemProperty = (wrapped as

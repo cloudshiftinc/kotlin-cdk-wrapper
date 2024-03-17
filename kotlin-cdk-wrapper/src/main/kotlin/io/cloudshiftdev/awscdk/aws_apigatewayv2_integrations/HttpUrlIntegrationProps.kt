@@ -115,7 +115,8 @@ public interface HttpUrlIntegrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps):
-        HttpUrlIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as HttpUrlIntegrationProps
+        HttpUrlIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? HttpUrlIntegrationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpUrlIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps = (wrapped as

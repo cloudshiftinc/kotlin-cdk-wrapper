@@ -93,8 +93,8 @@ public interface ScheduledFargateTaskDefinitionOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions):
-        ScheduledFargateTaskDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ScheduledFargateTaskDefinitionOptions
+        ScheduledFargateTaskDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ScheduledFargateTaskDefinitionOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledFargateTaskDefinitionOptions):
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions =

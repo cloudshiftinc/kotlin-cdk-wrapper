@@ -427,7 +427,8 @@ public interface CfnNetworkProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnNetworkProfileProps):
-        CfnNetworkProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnNetworkProfileProps
+        CfnNetworkProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnNetworkProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkProfileProps):
         software.amazon.awscdk.services.devicefarm.CfnNetworkProfileProps = (wrapped as

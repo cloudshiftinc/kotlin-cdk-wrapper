@@ -175,7 +175,7 @@ public interface CfnACLProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.memorydb.CfnACLProps): CfnACLProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnACLProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnACLProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnACLProps): software.amazon.awscdk.services.memorydb.CfnACLProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.memorydb.CfnACLProps

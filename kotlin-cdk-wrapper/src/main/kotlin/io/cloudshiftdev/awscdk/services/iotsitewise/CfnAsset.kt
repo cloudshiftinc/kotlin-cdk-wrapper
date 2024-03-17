@@ -677,7 +677,8 @@ public open class CfnAsset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty):
-          AssetHierarchyProperty = CdkObjectWrappers.wrap(cdkObject) as AssetHierarchyProperty
+          AssetHierarchyProperty = CdkObjectWrappers.wrap(cdkObject) as? AssetHierarchyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetHierarchyProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty = (wrapped as
@@ -970,7 +971,8 @@ public open class CfnAsset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty):
-          AssetPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as AssetPropertyProperty
+          AssetPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? AssetPropertyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssetPropertyProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty = (wrapped as

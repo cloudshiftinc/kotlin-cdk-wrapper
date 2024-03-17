@@ -138,7 +138,8 @@ public interface CfnStreamKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnStreamKeyProps):
-        CfnStreamKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnStreamKeyProps
+        CfnStreamKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStreamKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamKeyProps):
         software.amazon.awscdk.services.ivs.CfnStreamKeyProps = (wrapped as CdkObject).cdkObject as

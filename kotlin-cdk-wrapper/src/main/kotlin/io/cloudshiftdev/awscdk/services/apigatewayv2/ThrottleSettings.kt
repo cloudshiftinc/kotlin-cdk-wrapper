@@ -107,7 +107,8 @@ public interface ThrottleSettings {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.ThrottleSettings):
-        ThrottleSettings = CdkObjectWrappers.wrap(cdkObject) as ThrottleSettings
+        ThrottleSettings = CdkObjectWrappers.wrap(cdkObject) as? ThrottleSettings ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ThrottleSettings):
         software.amazon.awscdk.services.apigatewayv2.ThrottleSettings = (wrapped as

@@ -95,7 +95,8 @@ public interface S3SourceVariables {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3SourceVariables):
-        S3SourceVariables = CdkObjectWrappers.wrap(cdkObject) as S3SourceVariables
+        S3SourceVariables = CdkObjectWrappers.wrap(cdkObject) as? S3SourceVariables ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3SourceVariables):
         software.amazon.awscdk.services.codepipeline.actions.S3SourceVariables = (wrapped as

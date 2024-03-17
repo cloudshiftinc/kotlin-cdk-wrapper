@@ -471,7 +471,8 @@ public interface EvaluateExpressionProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpressionProps):
-        EvaluateExpressionProps = CdkObjectWrappers.wrap(cdkObject) as EvaluateExpressionProps
+        EvaluateExpressionProps = CdkObjectWrappers.wrap(cdkObject) as? EvaluateExpressionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EvaluateExpressionProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpressionProps = (wrapped as

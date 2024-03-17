@@ -356,7 +356,8 @@ public interface HttpRouteIntegrationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationConfig):
-        HttpRouteIntegrationConfig = CdkObjectWrappers.wrap(cdkObject) as HttpRouteIntegrationConfig
+        HttpRouteIntegrationConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpRouteIntegrationConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteIntegrationConfig):
         software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationConfig = (wrapped as

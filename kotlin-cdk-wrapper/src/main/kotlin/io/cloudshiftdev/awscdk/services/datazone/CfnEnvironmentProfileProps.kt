@@ -302,7 +302,8 @@ public interface CfnEnvironmentProfileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfileProps):
-        CfnEnvironmentProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnEnvironmentProfileProps
+        CfnEnvironmentProfileProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEnvironmentProfileProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironmentProfileProps):
         software.amazon.awscdk.services.datazone.CfnEnvironmentProfileProps = (wrapped as

@@ -126,7 +126,8 @@ public interface DedicatedIpPoolProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.DedicatedIpPoolProps):
-        DedicatedIpPoolProps = CdkObjectWrappers.wrap(cdkObject) as DedicatedIpPoolProps
+        DedicatedIpPoolProps = CdkObjectWrappers.wrap(cdkObject) as? DedicatedIpPoolProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DedicatedIpPoolProps):
         software.amazon.awscdk.services.ses.DedicatedIpPoolProps = (wrapped as CdkObject).cdkObject

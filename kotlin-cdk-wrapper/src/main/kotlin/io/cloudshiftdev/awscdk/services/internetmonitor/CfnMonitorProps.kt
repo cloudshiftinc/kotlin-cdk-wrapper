@@ -860,7 +860,8 @@ public interface CfnMonitorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitorProps):
-        CfnMonitorProps = CdkObjectWrappers.wrap(cdkObject) as CfnMonitorProps
+        CfnMonitorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMonitorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMonitorProps):
         software.amazon.awscdk.services.internetmonitor.CfnMonitorProps = (wrapped as

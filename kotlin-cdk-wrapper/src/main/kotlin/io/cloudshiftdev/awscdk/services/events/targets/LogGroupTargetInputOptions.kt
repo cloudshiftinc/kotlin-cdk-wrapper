@@ -128,7 +128,8 @@ public interface LogGroupTargetInputOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions):
-        LogGroupTargetInputOptions = CdkObjectWrappers.wrap(cdkObject) as LogGroupTargetInputOptions
+        LogGroupTargetInputOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        LogGroupTargetInputOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogGroupTargetInputOptions):
         software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions = (wrapped as

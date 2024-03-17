@@ -239,7 +239,8 @@ public interface CfnRouteResponseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponseProps):
-        CfnRouteResponseProps = CdkObjectWrappers.wrap(cdkObject) as CfnRouteResponseProps
+        CfnRouteResponseProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRouteResponseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRouteResponseProps):
         software.amazon.awscdk.services.apigatewayv2.CfnRouteResponseProps = (wrapped as

@@ -382,8 +382,8 @@ public interface CloudFormationDeployStackInstancesActionProps : CommonAwsAction
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesActionProps):
-        CloudFormationDeployStackInstancesActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationDeployStackInstancesActionProps
+        CloudFormationDeployStackInstancesActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationDeployStackInstancesActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationDeployStackInstancesActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesActionProps

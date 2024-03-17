@@ -667,7 +667,8 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps):
-        BedrockInvokeModelProps = CdkObjectWrappers.wrap(cdkObject) as BedrockInvokeModelProps
+        BedrockInvokeModelProps = CdkObjectWrappers.wrap(cdkObject) as? BedrockInvokeModelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BedrockInvokeModelProps):
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps = (wrapped as

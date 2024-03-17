@@ -233,7 +233,7 @@ public interface CfnPresetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnPresetProps):
-        CfnPresetProps = CdkObjectWrappers.wrap(cdkObject) as CfnPresetProps
+        CfnPresetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPresetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPresetProps):
         software.amazon.awscdk.services.mediaconvert.CfnPresetProps = (wrapped as

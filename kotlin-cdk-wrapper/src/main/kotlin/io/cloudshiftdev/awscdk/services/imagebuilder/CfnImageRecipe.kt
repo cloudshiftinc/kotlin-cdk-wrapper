@@ -749,8 +749,8 @@ public open class CfnImageRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty):
-          ComponentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ComponentParameterProperty
+          ComponentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentParameterProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty =
@@ -971,8 +971,8 @@ public open class CfnImageRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.AdditionalInstanceConfigurationProperty):
-          AdditionalInstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdditionalInstanceConfigurationProperty
+          AdditionalInstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdditionalInstanceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdditionalInstanceConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.AdditionalInstanceConfigurationProperty
@@ -1115,8 +1115,8 @@ public open class CfnImageRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentConfigurationProperty):
-          ComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ComponentConfigurationProperty
+          ComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentConfigurationProperty
@@ -1235,8 +1235,8 @@ public open class CfnImageRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty):
-          SystemsManagerAgentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SystemsManagerAgentProperty
+          SystemsManagerAgentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SystemsManagerAgentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SystemsManagerAgentProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty =
@@ -1451,8 +1451,8 @@ public open class CfnImageRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty):
-          InstanceBlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceBlockDeviceMappingProperty
+          InstanceBlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceBlockDeviceMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceBlockDeviceMappingProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty
@@ -1752,8 +1752,8 @@ public open class CfnImageRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty):
-          EbsInstanceBlockDeviceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EbsInstanceBlockDeviceSpecificationProperty
+          EbsInstanceBlockDeviceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EbsInstanceBlockDeviceSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsInstanceBlockDeviceSpecificationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty

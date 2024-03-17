@@ -296,7 +296,8 @@ public interface LogQueryWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.LogQueryWidgetProps):
-        LogQueryWidgetProps = CdkObjectWrappers.wrap(cdkObject) as LogQueryWidgetProps
+        LogQueryWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? LogQueryWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogQueryWidgetProps):
         software.amazon.awscdk.services.cloudwatch.LogQueryWidgetProps = (wrapped as

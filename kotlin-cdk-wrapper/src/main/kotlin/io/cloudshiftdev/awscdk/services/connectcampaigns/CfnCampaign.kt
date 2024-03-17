@@ -504,8 +504,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty):
-          AnswerMachineDetectionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AnswerMachineDetectionConfigProperty
+          AnswerMachineDetectionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnswerMachineDetectionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnswerMachineDetectionConfigProperty):
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty
@@ -590,8 +590,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty):
-          AgentlessDialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AgentlessDialerConfigProperty
+          AgentlessDialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AgentlessDialerConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AgentlessDialerConfigProperty):
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty
@@ -796,8 +796,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty):
-          OutboundCallConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OutboundCallConfigProperty
+          OutboundCallConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutboundCallConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutboundCallConfigProperty):
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty =
@@ -1031,7 +1031,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.DialerConfigProperty):
-          DialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DialerConfigProperty
+          DialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DialerConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DialerConfigProperty):
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.DialerConfigProperty =
@@ -1144,8 +1145,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.PredictiveDialerConfigProperty):
-          PredictiveDialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PredictiveDialerConfigProperty
+          PredictiveDialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredictiveDialerConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PredictiveDialerConfigProperty):
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.PredictiveDialerConfigProperty
@@ -1258,8 +1259,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.ProgressiveDialerConfigProperty):
-          ProgressiveDialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProgressiveDialerConfigProperty
+          ProgressiveDialerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProgressiveDialerConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProgressiveDialerConfigProperty):
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.ProgressiveDialerConfigProperty

@@ -387,7 +387,7 @@ public interface HttpApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApiProps):
-        HttpApiProps = CdkObjectWrappers.wrap(cdkObject) as HttpApiProps
+        HttpApiProps = CdkObjectWrappers.wrap(cdkObject) as? HttpApiProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpApiProps):
         software.amazon.awscdk.services.apigatewayv2.HttpApiProps = (wrapped as CdkObject).cdkObject

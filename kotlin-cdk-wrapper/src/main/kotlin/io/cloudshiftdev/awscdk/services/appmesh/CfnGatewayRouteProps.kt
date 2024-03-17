@@ -457,7 +457,8 @@ public interface CfnGatewayRouteProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnGatewayRouteProps):
-        CfnGatewayRouteProps = CdkObjectWrappers.wrap(cdkObject) as CfnGatewayRouteProps
+        CfnGatewayRouteProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGatewayRouteProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGatewayRouteProps):
         software.amazon.awscdk.services.appmesh.CfnGatewayRouteProps = (wrapped as

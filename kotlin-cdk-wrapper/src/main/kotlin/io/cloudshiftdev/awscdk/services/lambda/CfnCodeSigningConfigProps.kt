@@ -208,7 +208,8 @@ public interface CfnCodeSigningConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfigProps):
-        CfnCodeSigningConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnCodeSigningConfigProps
+        CfnCodeSigningConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCodeSigningConfigProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeSigningConfigProps):
         software.amazon.awscdk.services.lambda.CfnCodeSigningConfigProps = (wrapped as

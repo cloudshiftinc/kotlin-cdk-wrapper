@@ -189,7 +189,8 @@ public interface CfnPlacementGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnPlacementGroupProps):
-        CfnPlacementGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnPlacementGroupProps
+        CfnPlacementGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPlacementGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlacementGroupProps):
         software.amazon.awscdk.services.ec2.CfnPlacementGroupProps = (wrapped as

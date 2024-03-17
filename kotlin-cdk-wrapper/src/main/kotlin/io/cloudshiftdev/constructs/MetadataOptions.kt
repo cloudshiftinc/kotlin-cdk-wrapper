@@ -51,7 +51,7 @@ public interface MetadataOptions {
     }
 
     internal fun wrap(cdkObject: software.constructs.MetadataOptions): MetadataOptions =
-        CdkObjectWrappers.wrap(cdkObject) as MetadataOptions
+        CdkObjectWrappers.wrap(cdkObject) as? MetadataOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetadataOptions): software.constructs.MetadataOptions = (wrapped as
         CdkObject).cdkObject as software.constructs.MetadataOptions

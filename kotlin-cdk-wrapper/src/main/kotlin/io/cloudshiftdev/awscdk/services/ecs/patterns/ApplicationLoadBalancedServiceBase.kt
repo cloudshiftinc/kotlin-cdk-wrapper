@@ -63,11 +63,16 @@ public abstract class ApplicationLoadBalancedServiceBase internal constructor(
   public open fun targetGroup(): ApplicationTargetGroup =
       unwrap(this).getTargetGroup().let(ApplicationTargetGroup::wrap)
 
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase,
+  ) : ApplicationLoadBalancedServiceBase(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase):
-        ApplicationLoadBalancedServiceBase = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancedServiceBase
+        ApplicationLoadBalancedServiceBase = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancedServiceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedServiceBase):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBase = (wrapped

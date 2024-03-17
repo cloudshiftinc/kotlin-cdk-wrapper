@@ -172,7 +172,8 @@ public interface RolloutStrategyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategyProps):
-        RolloutStrategyProps = CdkObjectWrappers.wrap(cdkObject) as RolloutStrategyProps
+        RolloutStrategyProps = CdkObjectWrappers.wrap(cdkObject) as? RolloutStrategyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RolloutStrategyProps):
         software.amazon.awscdk.services.appconfig.RolloutStrategyProps = (wrapped as

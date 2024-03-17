@@ -1258,7 +1258,8 @@ public interface StepFunctionsRestApiProps : RestApiProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsRestApiProps):
-        StepFunctionsRestApiProps = CdkObjectWrappers.wrap(cdkObject) as StepFunctionsRestApiProps
+        StepFunctionsRestApiProps = CdkObjectWrappers.wrap(cdkObject) as? StepFunctionsRestApiProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StepFunctionsRestApiProps):
         software.amazon.awscdk.services.apigateway.StepFunctionsRestApiProps = (wrapped as

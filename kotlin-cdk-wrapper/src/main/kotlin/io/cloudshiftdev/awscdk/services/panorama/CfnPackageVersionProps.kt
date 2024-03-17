@@ -229,7 +229,8 @@ public interface CfnPackageVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.panorama.CfnPackageVersionProps):
-        CfnPackageVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnPackageVersionProps
+        CfnPackageVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPackageVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPackageVersionProps):
         software.amazon.awscdk.services.panorama.CfnPackageVersionProps = (wrapped as

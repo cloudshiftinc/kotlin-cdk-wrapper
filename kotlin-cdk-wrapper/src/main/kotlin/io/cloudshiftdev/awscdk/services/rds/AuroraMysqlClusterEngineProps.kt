@@ -80,8 +80,8 @@ public interface AuroraMysqlClusterEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps):
-        AuroraMysqlClusterEngineProps = CdkObjectWrappers.wrap(cdkObject) as
-        AuroraMysqlClusterEngineProps
+        AuroraMysqlClusterEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AuroraMysqlClusterEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuroraMysqlClusterEngineProps):
         software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps = (wrapped as

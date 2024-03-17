@@ -212,7 +212,8 @@ public interface AlgorithmSpecification {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification):
-        AlgorithmSpecification = CdkObjectWrappers.wrap(cdkObject) as AlgorithmSpecification
+        AlgorithmSpecification = CdkObjectWrappers.wrap(cdkObject) as? AlgorithmSpecification ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AlgorithmSpecification):
         software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification = (wrapped as

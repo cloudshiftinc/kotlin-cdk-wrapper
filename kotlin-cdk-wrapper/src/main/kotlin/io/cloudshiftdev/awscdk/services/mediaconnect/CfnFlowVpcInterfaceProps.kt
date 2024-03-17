@@ -250,7 +250,8 @@ public interface CfnFlowVpcInterfaceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterfaceProps):
-        CfnFlowVpcInterfaceProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlowVpcInterfaceProps
+        CfnFlowVpcInterfaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFlowVpcInterfaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowVpcInterfaceProps):
         software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterfaceProps = (wrapped as

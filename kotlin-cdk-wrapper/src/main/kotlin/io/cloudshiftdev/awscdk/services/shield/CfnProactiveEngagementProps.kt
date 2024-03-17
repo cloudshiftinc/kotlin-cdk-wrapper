@@ -274,8 +274,8 @@ public interface CfnProactiveEngagementProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagementProps):
-        CfnProactiveEngagementProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnProactiveEngagementProps
+        CfnProactiveEngagementProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnProactiveEngagementProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnProactiveEngagementProps):
         software.amazon.awscdk.services.shield.CfnProactiveEngagementProps = (wrapped as

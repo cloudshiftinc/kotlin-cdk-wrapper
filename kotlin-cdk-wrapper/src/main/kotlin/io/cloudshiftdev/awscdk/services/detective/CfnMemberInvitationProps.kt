@@ -224,7 +224,8 @@ public interface CfnMemberInvitationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitationProps):
-        CfnMemberInvitationProps = CdkObjectWrappers.wrap(cdkObject) as CfnMemberInvitationProps
+        CfnMemberInvitationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMemberInvitationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMemberInvitationProps):
         software.amazon.awscdk.services.detective.CfnMemberInvitationProps = (wrapped as

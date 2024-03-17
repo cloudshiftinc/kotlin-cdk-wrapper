@@ -433,7 +433,8 @@ public interface CfnSimpleADProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.directoryservice.CfnSimpleADProps):
-        CfnSimpleADProps = CdkObjectWrappers.wrap(cdkObject) as CfnSimpleADProps
+        CfnSimpleADProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSimpleADProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimpleADProps):
         software.amazon.awscdk.services.directoryservice.CfnSimpleADProps = (wrapped as

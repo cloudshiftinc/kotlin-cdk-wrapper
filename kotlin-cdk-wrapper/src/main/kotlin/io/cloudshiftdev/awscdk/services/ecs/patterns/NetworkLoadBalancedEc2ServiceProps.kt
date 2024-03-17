@@ -1017,8 +1017,8 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2ServiceProps):
-        NetworkLoadBalancedEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkLoadBalancedEc2ServiceProps
+        NetworkLoadBalancedEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancedEc2ServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancedEc2ServiceProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2ServiceProps = (wrapped

@@ -149,7 +149,8 @@ public interface CfnWALWorkspaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspaceProps):
-        CfnWALWorkspaceProps = CdkObjectWrappers.wrap(cdkObject) as CfnWALWorkspaceProps
+        CfnWALWorkspaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWALWorkspaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWALWorkspaceProps):
         software.amazon.awscdk.services.emr.CfnWALWorkspaceProps = (wrapped as CdkObject).cdkObject

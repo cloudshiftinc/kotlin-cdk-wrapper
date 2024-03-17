@@ -127,7 +127,7 @@ public interface Selector {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.Selector): Selector =
-        CdkObjectWrappers.wrap(cdkObject) as Selector
+        CdkObjectWrappers.wrap(cdkObject) as? Selector ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Selector): software.amazon.awscdk.services.eks.Selector = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.eks.Selector

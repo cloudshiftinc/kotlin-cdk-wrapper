@@ -456,7 +456,8 @@ public interface CfnMaintenanceWindowProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowProps):
-        CfnMaintenanceWindowProps = CdkObjectWrappers.wrap(cdkObject) as CfnMaintenanceWindowProps
+        CfnMaintenanceWindowProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMaintenanceWindowProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMaintenanceWindowProps):
         software.amazon.awscdk.services.ssm.CfnMaintenanceWindowProps = (wrapped as

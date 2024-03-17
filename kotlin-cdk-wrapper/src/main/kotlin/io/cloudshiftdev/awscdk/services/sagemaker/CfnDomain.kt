@@ -1183,7 +1183,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty):
-          ResourceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceSpecProperty
+          ResourceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceSpecProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceSpecProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty = (wrapped as
@@ -1307,8 +1308,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty):
-          JupyterServerAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          JupyterServerAppSettingsProperty
+          JupyterServerAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JupyterServerAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JupyterServerAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty =
@@ -1529,8 +1530,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty):
-          KernelGatewayAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KernelGatewayAppSettingsProperty
+          KernelGatewayAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KernelGatewayAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KernelGatewayAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty =
@@ -1771,7 +1772,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty):
-          DomainSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as DomainSettingsProperty
+          DomainSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DomainSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DomainSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty = (wrapped as
@@ -2070,8 +2072,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty):
-          JupyterLabAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          JupyterLabAppSettingsProperty
+          JupyterLabAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JupyterLabAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JupyterLabAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty =
@@ -2254,8 +2256,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty):
-          RSessionAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RSessionAppSettingsProperty
+          RSessionAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RSessionAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RSessionAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty = (wrapped
@@ -2464,8 +2466,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProDomainSettingsProperty):
-          RStudioServerProDomainSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RStudioServerProDomainSettingsProperty
+          RStudioServerProDomainSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RStudioServerProDomainSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RStudioServerProDomainSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProDomainSettingsProperty
@@ -2589,7 +2591,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty):
-          DockerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as DockerSettingsProperty
+          DockerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DockerSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DockerSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty = (wrapped as
@@ -2714,8 +2717,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty):
-          RStudioServerProAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RStudioServerProAppSettingsProperty
+          RStudioServerProAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RStudioServerProAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RStudioServerProAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty =
@@ -2834,8 +2837,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty):
-          CustomFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomFileSystemConfigProperty
+          CustomFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomFileSystemConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomFileSystemConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty =
@@ -2979,7 +2982,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty):
-          CustomImageProperty = CdkObjectWrappers.wrap(cdkObject) as CustomImageProperty
+          CustomImageProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomImageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomImageProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty = (wrapped as
@@ -3060,7 +3064,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty):
-          CodeRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as CodeRepositoryProperty
+          CodeRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeRepositoryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeRepositoryProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty = (wrapped as
@@ -3178,8 +3183,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty):
-          EFSFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EFSFileSystemConfigProperty
+          EFSFileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EFSFileSystemConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EFSFileSystemConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty = (wrapped
@@ -3289,8 +3294,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty):
-          CustomPosixUserConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomPosixUserConfigProperty
+          CustomPosixUserConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomPosixUserConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomPosixUserConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty =
@@ -3461,8 +3466,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty):
-          CodeEditorAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CodeEditorAppSettingsProperty
+          CodeEditorAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeEditorAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeEditorAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty =
@@ -3578,8 +3583,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty):
-          DefaultEbsStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DefaultEbsStorageSettingsProperty
+          DefaultEbsStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultEbsStorageSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultEbsStorageSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty =
@@ -4527,7 +4532,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty):
-          UserSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as UserSettingsProperty
+          UserSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? UserSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty = (wrapped as
@@ -4646,8 +4652,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty):
-          DefaultSpaceStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DefaultSpaceStorageSettingsProperty
+          DefaultSpaceStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultSpaceStorageSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultSpaceStorageSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty =
@@ -4910,8 +4916,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty):
-          DefaultSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DefaultSpaceSettingsProperty
+          DefaultSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultSpaceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultSpaceSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty =
@@ -5068,7 +5074,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty):
-          SharingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as SharingSettingsProperty
+          SharingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SharingSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SharingSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty = (wrapped as

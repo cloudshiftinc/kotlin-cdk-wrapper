@@ -217,7 +217,7 @@ public interface MethodProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.MethodProps):
-        MethodProps = CdkObjectWrappers.wrap(cdkObject) as MethodProps
+        MethodProps = CdkObjectWrappers.wrap(cdkObject) as? MethodProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MethodProps):
         software.amazon.awscdk.services.apigateway.MethodProps = (wrapped as CdkObject).cdkObject as

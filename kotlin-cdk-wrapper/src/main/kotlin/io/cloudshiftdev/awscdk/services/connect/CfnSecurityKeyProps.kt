@@ -139,7 +139,8 @@ public interface CfnSecurityKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnSecurityKeyProps):
-        CfnSecurityKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnSecurityKeyProps
+        CfnSecurityKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSecurityKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityKeyProps):
         software.amazon.awscdk.services.connect.CfnSecurityKeyProps = (wrapped as

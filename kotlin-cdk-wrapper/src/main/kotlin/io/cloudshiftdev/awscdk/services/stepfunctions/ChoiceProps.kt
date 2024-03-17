@@ -180,7 +180,7 @@ public interface ChoiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceProps):
-        ChoiceProps = CdkObjectWrappers.wrap(cdkObject) as ChoiceProps
+        ChoiceProps = CdkObjectWrappers.wrap(cdkObject) as? ChoiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ChoiceProps):
         software.amazon.awscdk.services.stepfunctions.ChoiceProps = (wrapped as CdkObject).cdkObject

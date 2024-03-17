@@ -94,7 +94,7 @@ public interface MatchCapture {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.MatchCapture): MatchCapture =
-        CdkObjectWrappers.wrap(cdkObject) as MatchCapture
+        CdkObjectWrappers.wrap(cdkObject) as? MatchCapture ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MatchCapture): software.amazon.awscdk.assertions.MatchCapture =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.assertions.MatchCapture

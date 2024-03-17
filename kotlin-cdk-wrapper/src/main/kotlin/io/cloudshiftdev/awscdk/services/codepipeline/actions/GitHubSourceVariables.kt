@@ -215,7 +215,8 @@ public interface GitHubSourceVariables {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.GitHubSourceVariables):
-        GitHubSourceVariables = CdkObjectWrappers.wrap(cdkObject) as GitHubSourceVariables
+        GitHubSourceVariables = CdkObjectWrappers.wrap(cdkObject) as? GitHubSourceVariables ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitHubSourceVariables):
         software.amazon.awscdk.services.codepipeline.actions.GitHubSourceVariables = (wrapped as

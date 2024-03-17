@@ -245,7 +245,8 @@ public interface SystemdConfigFileOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SystemdConfigFileOptions):
-        SystemdConfigFileOptions = CdkObjectWrappers.wrap(cdkObject) as SystemdConfigFileOptions
+        SystemdConfigFileOptions = CdkObjectWrappers.wrap(cdkObject) as? SystemdConfigFileOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SystemdConfigFileOptions):
         software.amazon.awscdk.services.ec2.SystemdConfigFileOptions = (wrapped as

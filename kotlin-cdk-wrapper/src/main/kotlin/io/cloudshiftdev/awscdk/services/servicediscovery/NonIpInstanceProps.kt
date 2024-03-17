@@ -115,7 +115,8 @@ public interface NonIpInstanceProps : NonIpInstanceBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.NonIpInstanceProps):
-        NonIpInstanceProps = CdkObjectWrappers.wrap(cdkObject) as NonIpInstanceProps
+        NonIpInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? NonIpInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NonIpInstanceProps):
         software.amazon.awscdk.services.servicediscovery.NonIpInstanceProps = (wrapped as

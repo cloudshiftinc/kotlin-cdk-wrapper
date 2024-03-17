@@ -158,7 +158,7 @@ public interface ResolveOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ResolveOptions): ResolveOptions =
-        CdkObjectWrappers.wrap(cdkObject) as ResolveOptions
+        CdkObjectWrappers.wrap(cdkObject) as? ResolveOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResolveOptions): software.amazon.awscdk.ResolveOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.ResolveOptions

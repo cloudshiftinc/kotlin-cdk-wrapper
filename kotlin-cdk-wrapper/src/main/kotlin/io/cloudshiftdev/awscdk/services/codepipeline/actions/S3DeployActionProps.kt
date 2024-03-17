@@ -400,7 +400,8 @@ public interface S3DeployActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3DeployActionProps):
-        S3DeployActionProps = CdkObjectWrappers.wrap(cdkObject) as S3DeployActionProps
+        S3DeployActionProps = CdkObjectWrappers.wrap(cdkObject) as? S3DeployActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3DeployActionProps):
         software.amazon.awscdk.services.codepipeline.actions.S3DeployActionProps = (wrapped as

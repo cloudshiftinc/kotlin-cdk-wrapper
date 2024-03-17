@@ -213,7 +213,8 @@ public interface TlsClientPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsClientPolicy):
-        TlsClientPolicy = CdkObjectWrappers.wrap(cdkObject) as TlsClientPolicy
+        TlsClientPolicy = CdkObjectWrappers.wrap(cdkObject) as? TlsClientPolicy ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TlsClientPolicy):
         software.amazon.awscdk.services.appmesh.TlsClientPolicy = (wrapped as CdkObject).cdkObject

@@ -72,7 +72,8 @@ public interface AccessLogDestinationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig):
-        AccessLogDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as AccessLogDestinationConfig
+        AccessLogDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        AccessLogDestinationConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AccessLogDestinationConfig):
         software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig = (wrapped as

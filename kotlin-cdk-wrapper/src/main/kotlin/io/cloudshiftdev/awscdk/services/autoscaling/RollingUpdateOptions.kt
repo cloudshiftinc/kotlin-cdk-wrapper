@@ -263,7 +263,8 @@ public interface RollingUpdateOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.RollingUpdateOptions):
-        RollingUpdateOptions = CdkObjectWrappers.wrap(cdkObject) as RollingUpdateOptions
+        RollingUpdateOptions = CdkObjectWrappers.wrap(cdkObject) as? RollingUpdateOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RollingUpdateOptions):
         software.amazon.awscdk.services.autoscaling.RollingUpdateOptions = (wrapped as

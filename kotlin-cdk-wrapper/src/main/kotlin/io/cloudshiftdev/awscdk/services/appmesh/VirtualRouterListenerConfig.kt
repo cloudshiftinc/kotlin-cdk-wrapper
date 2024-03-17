@@ -94,8 +94,8 @@ public interface VirtualRouterListenerConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig):
-        VirtualRouterListenerConfig = CdkObjectWrappers.wrap(cdkObject) as
-        VirtualRouterListenerConfig
+        VirtualRouterListenerConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        VirtualRouterListenerConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualRouterListenerConfig):
         software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig = (wrapped as

@@ -303,7 +303,8 @@ public interface DockerBuildAssetOptions : DockerBuildOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.DockerBuildAssetOptions):
-        DockerBuildAssetOptions = CdkObjectWrappers.wrap(cdkObject) as DockerBuildAssetOptions
+        DockerBuildAssetOptions = CdkObjectWrappers.wrap(cdkObject) as? DockerBuildAssetOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerBuildAssetOptions):
         software.amazon.awscdk.services.lambda.DockerBuildAssetOptions = (wrapped as

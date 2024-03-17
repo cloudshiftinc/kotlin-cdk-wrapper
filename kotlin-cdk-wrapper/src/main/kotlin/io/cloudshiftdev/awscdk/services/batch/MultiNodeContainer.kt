@@ -145,7 +145,8 @@ public interface MultiNodeContainer {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.MultiNodeContainer):
-        MultiNodeContainer = CdkObjectWrappers.wrap(cdkObject) as MultiNodeContainer
+        MultiNodeContainer = CdkObjectWrappers.wrap(cdkObject) as? MultiNodeContainer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MultiNodeContainer):
         software.amazon.awscdk.services.batch.MultiNodeContainer = (wrapped as CdkObject).cdkObject

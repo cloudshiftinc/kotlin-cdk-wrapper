@@ -387,7 +387,8 @@ public interface PolicyStatementProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.PolicyStatementProps):
-        PolicyStatementProps = CdkObjectWrappers.wrap(cdkObject) as PolicyStatementProps
+        PolicyStatementProps = CdkObjectWrappers.wrap(cdkObject) as? PolicyStatementProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PolicyStatementProps):
         software.amazon.awscdk.services.iam.PolicyStatementProps = (wrapped as CdkObject).cdkObject

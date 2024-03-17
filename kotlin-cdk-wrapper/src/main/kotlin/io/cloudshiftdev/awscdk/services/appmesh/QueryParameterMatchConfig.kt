@@ -95,7 +95,8 @@ public interface QueryParameterMatchConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig):
-        QueryParameterMatchConfig = CdkObjectWrappers.wrap(cdkObject) as QueryParameterMatchConfig
+        QueryParameterMatchConfig = CdkObjectWrappers.wrap(cdkObject) as? QueryParameterMatchConfig
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueryParameterMatchConfig):
         software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig = (wrapped as

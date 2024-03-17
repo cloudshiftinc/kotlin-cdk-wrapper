@@ -23,10 +23,15 @@ public abstract class StreamEventSource internal constructor(
     unwrap(this).bind(target.let(IFunction::unwrap))
   }
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.StreamEventSource,
+  ) : StreamEventSource(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.StreamEventSource):
-        StreamEventSource = CdkObjectWrappers.wrap(cdkObject) as StreamEventSource
+        StreamEventSource = CdkObjectWrappers.wrap(cdkObject) as? StreamEventSource ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamEventSource):
         software.amazon.awscdk.services.lambda.eventsources.StreamEventSource = (wrapped as

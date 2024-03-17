@@ -93,7 +93,7 @@ public interface Host {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Host): Host =
-        CdkObjectWrappers.wrap(cdkObject) as Host
+        CdkObjectWrappers.wrap(cdkObject) as? Host ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Host): software.amazon.awscdk.services.ecs.Host = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ecs.Host

@@ -927,7 +927,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty):
-          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as ConditionProperty
+          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionProperty):
           software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty = (wrapped as
@@ -1510,7 +1511,8 @@ public open class CfnFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty):
-          FindingCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as FindingCriteriaProperty
+          FindingCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? FindingCriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FindingCriteriaProperty):
           software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty = (wrapped as

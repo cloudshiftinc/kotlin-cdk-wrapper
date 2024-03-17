@@ -303,7 +303,8 @@ public interface StringParameterAttributes : CommonStringParameterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.StringParameterAttributes):
-        StringParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as StringParameterAttributes
+        StringParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as? StringParameterAttributes
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StringParameterAttributes):
         software.amazon.awscdk.services.ssm.StringParameterAttributes = (wrapped as

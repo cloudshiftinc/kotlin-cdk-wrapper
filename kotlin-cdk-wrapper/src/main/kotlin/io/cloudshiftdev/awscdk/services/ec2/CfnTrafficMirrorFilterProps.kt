@@ -168,8 +168,8 @@ public interface CfnTrafficMirrorFilterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterProps):
-        CfnTrafficMirrorFilterProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTrafficMirrorFilterProps
+        CfnTrafficMirrorFilterProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrafficMirrorFilterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficMirrorFilterProps):
         software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterProps = (wrapped as

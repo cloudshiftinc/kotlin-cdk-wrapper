@@ -179,7 +179,7 @@ public interface SucceedProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.SucceedProps):
-        SucceedProps = CdkObjectWrappers.wrap(cdkObject) as SucceedProps
+        SucceedProps = CdkObjectWrappers.wrap(cdkObject) as? SucceedProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SucceedProps):
         software.amazon.awscdk.services.stepfunctions.SucceedProps = (wrapped as

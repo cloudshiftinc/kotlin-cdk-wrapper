@@ -331,7 +331,8 @@ public interface CfnDistributionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistributionProps):
-        CfnDistributionProps = CdkObjectWrappers.wrap(cdkObject) as CfnDistributionProps
+        CfnDistributionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDistributionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDistributionProps):
         software.amazon.awscdk.services.cloudfront.CfnDistributionProps = (wrapped as

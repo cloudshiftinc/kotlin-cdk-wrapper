@@ -141,7 +141,8 @@ public interface CfnSubnetGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dax.CfnSubnetGroupProps):
-        CfnSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnSubnetGroupProps
+        CfnSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSubnetGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetGroupProps):
         software.amazon.awscdk.services.dax.CfnSubnetGroupProps = (wrapped as CdkObject).cdkObject

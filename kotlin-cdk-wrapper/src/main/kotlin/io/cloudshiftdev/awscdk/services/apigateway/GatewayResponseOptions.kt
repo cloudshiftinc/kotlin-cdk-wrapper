@@ -162,7 +162,8 @@ public interface GatewayResponseOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponseOptions):
-        GatewayResponseOptions = CdkObjectWrappers.wrap(cdkObject) as GatewayResponseOptions
+        GatewayResponseOptions = CdkObjectWrappers.wrap(cdkObject) as? GatewayResponseOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayResponseOptions):
         software.amazon.awscdk.services.apigateway.GatewayResponseOptions = (wrapped as

@@ -163,7 +163,8 @@ public interface CfnPublisherProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnPublisherProps):
-        CfnPublisherProps = CdkObjectWrappers.wrap(cdkObject) as CfnPublisherProps
+        CfnPublisherProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPublisherProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPublisherProps):
         software.amazon.awscdk.services.cloudformation.CfnPublisherProps = (wrapped as

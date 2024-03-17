@@ -206,7 +206,8 @@ public interface AclTrafficConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclTrafficConfig):
-        AclTrafficConfig = CdkObjectWrappers.wrap(cdkObject) as AclTrafficConfig
+        AclTrafficConfig = CdkObjectWrappers.wrap(cdkObject) as? AclTrafficConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AclTrafficConfig):
         software.amazon.awscdk.services.ec2.AclTrafficConfig = (wrapped as CdkObject).cdkObject as

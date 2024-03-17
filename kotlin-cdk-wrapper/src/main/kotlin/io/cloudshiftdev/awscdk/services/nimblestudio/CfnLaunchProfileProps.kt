@@ -404,7 +404,8 @@ public interface CfnLaunchProfileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfileProps):
-        CfnLaunchProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnLaunchProfileProps
+        CfnLaunchProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLaunchProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchProfileProps):
         software.amazon.awscdk.services.nimblestudio.CfnLaunchProfileProps = (wrapped as

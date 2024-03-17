@@ -144,8 +144,8 @@ public interface CfnVPCGatewayAttachmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachmentProps):
-        CfnVPCGatewayAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVPCGatewayAttachmentProps
+        CfnVPCGatewayAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPCGatewayAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCGatewayAttachmentProps):
         software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachmentProps = (wrapped as

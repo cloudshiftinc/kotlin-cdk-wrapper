@@ -231,7 +231,8 @@ public interface LogRetentionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.LogRetentionProps):
-        LogRetentionProps = CdkObjectWrappers.wrap(cdkObject) as LogRetentionProps
+        LogRetentionProps = CdkObjectWrappers.wrap(cdkObject) as? LogRetentionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogRetentionProps):
         software.amazon.awscdk.services.logs.LogRetentionProps = (wrapped as CdkObject).cdkObject as

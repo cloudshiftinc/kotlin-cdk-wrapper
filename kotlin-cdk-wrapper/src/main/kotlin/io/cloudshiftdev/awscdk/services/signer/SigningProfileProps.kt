@@ -138,7 +138,8 @@ public interface SigningProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.signer.SigningProfileProps):
-        SigningProfileProps = CdkObjectWrappers.wrap(cdkObject) as SigningProfileProps
+        SigningProfileProps = CdkObjectWrappers.wrap(cdkObject) as? SigningProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SigningProfileProps):
         software.amazon.awscdk.services.signer.SigningProfileProps = (wrapped as

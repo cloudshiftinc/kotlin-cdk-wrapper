@@ -129,7 +129,7 @@ public interface ByoDkimOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.ByoDkimOptions): ByoDkimOptions
-        = CdkObjectWrappers.wrap(cdkObject) as ByoDkimOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? ByoDkimOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ByoDkimOptions): software.amazon.awscdk.services.ses.ByoDkimOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.ByoDkimOptions

@@ -247,7 +247,8 @@ public interface CfnNetworkSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnNetworkSettingsProps):
-        CfnNetworkSettingsProps = CdkObjectWrappers.wrap(cdkObject) as CfnNetworkSettingsProps
+        CfnNetworkSettingsProps = CdkObjectWrappers.wrap(cdkObject) as? CfnNetworkSettingsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkSettingsProps):
         software.amazon.awscdk.services.workspacesweb.CfnNetworkSettingsProps = (wrapped as

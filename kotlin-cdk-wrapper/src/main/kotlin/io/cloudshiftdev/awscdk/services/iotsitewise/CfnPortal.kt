@@ -629,7 +629,8 @@ public open class CfnPortal internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal.AlarmsProperty):
-          AlarmsProperty = CdkObjectWrappers.wrap(cdkObject) as AlarmsProperty
+          AlarmsProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AlarmsProperty):
           software.amazon.awscdk.services.iotsitewise.CfnPortal.AlarmsProperty = (wrapped as

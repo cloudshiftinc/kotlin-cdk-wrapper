@@ -385,7 +385,8 @@ public interface EndpointGroupOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.EndpointGroupOptions):
-        EndpointGroupOptions = CdkObjectWrappers.wrap(cdkObject) as EndpointGroupOptions
+        EndpointGroupOptions = CdkObjectWrappers.wrap(cdkObject) as? EndpointGroupOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EndpointGroupOptions):
         software.amazon.awscdk.services.globalaccelerator.EndpointGroupOptions = (wrapped as

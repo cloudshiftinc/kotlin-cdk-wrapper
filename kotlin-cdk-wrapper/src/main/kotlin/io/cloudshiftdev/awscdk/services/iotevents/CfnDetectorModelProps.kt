@@ -327,7 +327,8 @@ public interface CfnDetectorModelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModelProps):
-        CfnDetectorModelProps = CdkObjectWrappers.wrap(cdkObject) as CfnDetectorModelProps
+        CfnDetectorModelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDetectorModelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDetectorModelProps):
         software.amazon.awscdk.services.iotevents.CfnDetectorModelProps = (wrapped as

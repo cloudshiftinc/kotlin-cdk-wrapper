@@ -165,7 +165,8 @@ public interface ConnectionsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ConnectionsProps):
-        ConnectionsProps = CdkObjectWrappers.wrap(cdkObject) as ConnectionsProps
+        ConnectionsProps = CdkObjectWrappers.wrap(cdkObject) as? ConnectionsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConnectionsProps):
         software.amazon.awscdk.services.ec2.ConnectionsProps = (wrapped as CdkObject).cdkObject as

@@ -204,8 +204,8 @@ public interface CfnStudioSessionMappingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnStudioSessionMappingProps):
-        CfnStudioSessionMappingProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnStudioSessionMappingProps
+        CfnStudioSessionMappingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnStudioSessionMappingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStudioSessionMappingProps):
         software.amazon.awscdk.services.emr.CfnStudioSessionMappingProps = (wrapped as

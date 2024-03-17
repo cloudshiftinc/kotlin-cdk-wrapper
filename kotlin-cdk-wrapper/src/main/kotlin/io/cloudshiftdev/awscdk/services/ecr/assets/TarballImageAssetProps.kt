@@ -83,7 +83,8 @@ public interface TarballImageAssetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.assets.TarballImageAssetProps):
-        TarballImageAssetProps = CdkObjectWrappers.wrap(cdkObject) as TarballImageAssetProps
+        TarballImageAssetProps = CdkObjectWrappers.wrap(cdkObject) as? TarballImageAssetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TarballImageAssetProps):
         software.amazon.awscdk.services.ecr.assets.TarballImageAssetProps = (wrapped as

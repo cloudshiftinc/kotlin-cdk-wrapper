@@ -202,7 +202,8 @@ public interface EventBridgePutEventsEntry {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry):
-        EventBridgePutEventsEntry = CdkObjectWrappers.wrap(cdkObject) as EventBridgePutEventsEntry
+        EventBridgePutEventsEntry = CdkObjectWrappers.wrap(cdkObject) as? EventBridgePutEventsEntry
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventBridgePutEventsEntry):
         software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry = (wrapped as

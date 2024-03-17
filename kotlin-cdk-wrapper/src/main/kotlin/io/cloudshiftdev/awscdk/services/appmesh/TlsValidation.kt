@@ -134,7 +134,7 @@ public interface TlsValidation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsValidation):
-        TlsValidation = CdkObjectWrappers.wrap(cdkObject) as TlsValidation
+        TlsValidation = CdkObjectWrappers.wrap(cdkObject) as? TlsValidation ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TlsValidation):
         software.amazon.awscdk.services.appmesh.TlsValidation = (wrapped as CdkObject).cdkObject as

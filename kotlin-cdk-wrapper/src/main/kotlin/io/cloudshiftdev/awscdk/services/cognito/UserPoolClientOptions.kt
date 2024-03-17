@@ -585,7 +585,8 @@ public interface UserPoolClientOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolClientOptions):
-        UserPoolClientOptions = CdkObjectWrappers.wrap(cdkObject) as UserPoolClientOptions
+        UserPoolClientOptions = CdkObjectWrappers.wrap(cdkObject) as? UserPoolClientOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolClientOptions):
         software.amazon.awscdk.services.cognito.UserPoolClientOptions = (wrapped as

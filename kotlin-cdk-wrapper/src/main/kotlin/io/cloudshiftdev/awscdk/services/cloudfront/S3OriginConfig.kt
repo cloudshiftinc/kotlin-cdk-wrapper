@@ -195,7 +195,7 @@ public interface S3OriginConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.S3OriginConfig):
-        S3OriginConfig = CdkObjectWrappers.wrap(cdkObject) as S3OriginConfig
+        S3OriginConfig = CdkObjectWrappers.wrap(cdkObject) as? S3OriginConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3OriginConfig):
         software.amazon.awscdk.services.cloudfront.S3OriginConfig = (wrapped as CdkObject).cdkObject

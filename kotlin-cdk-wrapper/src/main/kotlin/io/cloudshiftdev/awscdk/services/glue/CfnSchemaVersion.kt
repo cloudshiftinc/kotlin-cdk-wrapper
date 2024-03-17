@@ -349,7 +349,8 @@ public open class CfnSchemaVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion.SchemaProperty):
-          SchemaProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaProperty
+          SchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaProperty):
           software.amazon.awscdk.services.glue.CfnSchemaVersion.SchemaProperty = (wrapped as

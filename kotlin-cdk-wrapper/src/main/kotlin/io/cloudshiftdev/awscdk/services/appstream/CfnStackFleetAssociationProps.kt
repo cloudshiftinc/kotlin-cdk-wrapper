@@ -142,8 +142,8 @@ public interface CfnStackFleetAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStackFleetAssociationProps):
-        CfnStackFleetAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnStackFleetAssociationProps
+        CfnStackFleetAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnStackFleetAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStackFleetAssociationProps):
         software.amazon.awscdk.services.appstream.CfnStackFleetAssociationProps = (wrapped as

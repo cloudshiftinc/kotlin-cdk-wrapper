@@ -531,7 +531,8 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty):
-          ThemeValuesProperty = CdkObjectWrappers.wrap(cdkObject) as ThemeValuesProperty
+          ThemeValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? ThemeValuesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThemeValuesProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty = (wrapped
@@ -665,7 +666,8 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty):
-          ThemeValueProperty = CdkObjectWrappers.wrap(cdkObject) as ThemeValueProperty
+          ThemeValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ThemeValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThemeValueProperty):
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty = (wrapped as

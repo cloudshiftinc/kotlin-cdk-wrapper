@@ -213,7 +213,8 @@ public interface CfnEntitlementProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlementProps):
-        CfnEntitlementProps = CdkObjectWrappers.wrap(cdkObject) as CfnEntitlementProps
+        CfnEntitlementProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEntitlementProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEntitlementProps):
         software.amazon.awscdk.services.appstream.CfnEntitlementProps = (wrapped as

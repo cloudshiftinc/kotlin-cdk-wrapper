@@ -577,7 +577,8 @@ public interface CfnFeatureGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps):
-        CfnFeatureGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnFeatureGroupProps
+        CfnFeatureGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFeatureGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFeatureGroupProps):
         software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps = (wrapped as

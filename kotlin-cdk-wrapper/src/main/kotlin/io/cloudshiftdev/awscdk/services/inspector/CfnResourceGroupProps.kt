@@ -136,7 +136,8 @@ public interface CfnResourceGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.inspector.CfnResourceGroupProps):
-        CfnResourceGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceGroupProps
+        CfnResourceGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceGroupProps):
         software.amazon.awscdk.services.inspector.CfnResourceGroupProps = (wrapped as

@@ -453,7 +453,8 @@ public open class CfnSecurityConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty):
-          SamlConfigOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as SamlConfigOptionsProperty
+          SamlConfigOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SamlConfigOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SamlConfigOptionsProperty):
           software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty

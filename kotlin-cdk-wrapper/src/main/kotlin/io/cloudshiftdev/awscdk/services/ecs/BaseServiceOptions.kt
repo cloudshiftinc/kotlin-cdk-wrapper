@@ -794,7 +794,8 @@ public interface BaseServiceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.BaseServiceOptions):
-        BaseServiceOptions = CdkObjectWrappers.wrap(cdkObject) as BaseServiceOptions
+        BaseServiceOptions = CdkObjectWrappers.wrap(cdkObject) as? BaseServiceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseServiceOptions):
         software.amazon.awscdk.services.ecs.BaseServiceOptions = (wrapped as CdkObject).cdkObject as

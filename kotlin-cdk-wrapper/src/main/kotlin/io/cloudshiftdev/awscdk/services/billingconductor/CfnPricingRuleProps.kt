@@ -435,7 +435,8 @@ public interface CfnPricingRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRuleProps):
-        CfnPricingRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnPricingRuleProps
+        CfnPricingRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPricingRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPricingRuleProps):
         software.amazon.awscdk.services.billingconductor.CfnPricingRuleProps = (wrapped as

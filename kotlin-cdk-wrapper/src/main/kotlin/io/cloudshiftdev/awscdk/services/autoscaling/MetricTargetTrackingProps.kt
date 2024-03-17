@@ -192,7 +192,8 @@ public interface MetricTargetTrackingProps : BaseTargetTrackingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps):
-        MetricTargetTrackingProps = CdkObjectWrappers.wrap(cdkObject) as MetricTargetTrackingProps
+        MetricTargetTrackingProps = CdkObjectWrappers.wrap(cdkObject) as? MetricTargetTrackingProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetricTargetTrackingProps):
         software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps = (wrapped as

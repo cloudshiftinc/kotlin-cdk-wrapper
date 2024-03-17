@@ -137,7 +137,7 @@ public interface CfnApiKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnApiKeyProps):
-        CfnApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnApiKeyProps
+        CfnApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnApiKeyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiKeyProps):
         software.amazon.awscdk.services.appsync.CfnApiKeyProps = (wrapped as CdkObject).cdkObject as

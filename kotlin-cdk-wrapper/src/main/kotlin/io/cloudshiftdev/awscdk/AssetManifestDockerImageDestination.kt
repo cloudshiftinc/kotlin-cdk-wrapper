@@ -146,8 +146,8 @@ public interface AssetManifestDockerImageDestination {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.AssetManifestDockerImageDestination):
-        AssetManifestDockerImageDestination = CdkObjectWrappers.wrap(cdkObject) as
-        AssetManifestDockerImageDestination
+        AssetManifestDockerImageDestination = CdkObjectWrappers.wrap(cdkObject) as?
+        AssetManifestDockerImageDestination ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetManifestDockerImageDestination):
         software.amazon.awscdk.AssetManifestDockerImageDestination = (wrapped as

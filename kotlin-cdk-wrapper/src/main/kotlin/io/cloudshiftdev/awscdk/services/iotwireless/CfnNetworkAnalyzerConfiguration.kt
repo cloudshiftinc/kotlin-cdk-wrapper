@@ -512,7 +512,8 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration.TraceContentProperty):
-          TraceContentProperty = CdkObjectWrappers.wrap(cdkObject) as TraceContentProperty
+          TraceContentProperty = CdkObjectWrappers.wrap(cdkObject) as? TraceContentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TraceContentProperty):
           software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration.TraceContentProperty

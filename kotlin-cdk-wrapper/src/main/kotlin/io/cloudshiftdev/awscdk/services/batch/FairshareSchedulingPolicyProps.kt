@@ -263,8 +263,8 @@ public interface FairshareSchedulingPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicyProps):
-        FairshareSchedulingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
-        FairshareSchedulingPolicyProps
+        FairshareSchedulingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        FairshareSchedulingPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FairshareSchedulingPolicyProps):
         software.amazon.awscdk.services.batch.FairshareSchedulingPolicyProps = (wrapped as

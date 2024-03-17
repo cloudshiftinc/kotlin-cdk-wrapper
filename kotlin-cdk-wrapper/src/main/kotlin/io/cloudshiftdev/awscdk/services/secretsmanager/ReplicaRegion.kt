@@ -103,7 +103,7 @@ public interface ReplicaRegion {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.ReplicaRegion):
-        ReplicaRegion = CdkObjectWrappers.wrap(cdkObject) as ReplicaRegion
+        ReplicaRegion = CdkObjectWrappers.wrap(cdkObject) as? ReplicaRegion ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReplicaRegion):
         software.amazon.awscdk.services.secretsmanager.ReplicaRegion = (wrapped as

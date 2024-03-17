@@ -446,7 +446,7 @@ public interface CfnVPCProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCProps): CfnVPCProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnVPCProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnVPCProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCProps): software.amazon.awscdk.services.ec2.CfnVPCProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnVPCProps

@@ -79,8 +79,8 @@ public interface CfnEgressOnlyInternetGatewayProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps):
-        CfnEgressOnlyInternetGatewayProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnEgressOnlyInternetGatewayProps
+        CfnEgressOnlyInternetGatewayProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEgressOnlyInternetGatewayProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEgressOnlyInternetGatewayProps):
         software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps = (wrapped as

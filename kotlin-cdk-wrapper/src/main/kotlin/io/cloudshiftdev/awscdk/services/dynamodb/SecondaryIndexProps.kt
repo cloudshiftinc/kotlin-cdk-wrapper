@@ -140,7 +140,8 @@ public interface SecondaryIndexProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.SecondaryIndexProps):
-        SecondaryIndexProps = CdkObjectWrappers.wrap(cdkObject) as SecondaryIndexProps
+        SecondaryIndexProps = CdkObjectWrappers.wrap(cdkObject) as? SecondaryIndexProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecondaryIndexProps):
         software.amazon.awscdk.services.dynamodb.SecondaryIndexProps = (wrapped as

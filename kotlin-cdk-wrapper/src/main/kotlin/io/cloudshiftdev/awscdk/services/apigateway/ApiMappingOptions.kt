@@ -99,7 +99,8 @@ public interface ApiMappingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiMappingOptions):
-        ApiMappingOptions = CdkObjectWrappers.wrap(cdkObject) as ApiMappingOptions
+        ApiMappingOptions = CdkObjectWrappers.wrap(cdkObject) as? ApiMappingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiMappingOptions):
         software.amazon.awscdk.services.apigateway.ApiMappingOptions = (wrapped as

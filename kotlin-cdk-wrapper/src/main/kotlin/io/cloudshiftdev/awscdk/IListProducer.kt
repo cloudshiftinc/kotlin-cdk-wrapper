@@ -18,9 +18,21 @@ public interface IListProducer {
    */
   public fun produce(context: IResolveContext): List<String>
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.IListProducer,
+  ) : CdkObject(cdkObject), IListProducer {
+    /**
+     * Produce the list value.
+     *
+     * @param context 
+     */
+    override fun produce(context: IResolveContext): List<String> =
+        unwrap(this).produce(context.let(IResolveContext::unwrap)) ?: emptyList()
+  }
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.IListProducer): IListProducer =
-        CdkObjectWrappers.wrap(cdkObject) as IListProducer
+        CdkObjectWrappers.wrap(cdkObject) as? IListProducer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IListProducer): software.amazon.awscdk.IListProducer = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.IListProducer

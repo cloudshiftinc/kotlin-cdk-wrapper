@@ -1073,7 +1073,8 @@ public interface CfnGraphQLApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApiProps):
-        CfnGraphQLApiProps = CdkObjectWrappers.wrap(cdkObject) as CfnGraphQLApiProps
+        CfnGraphQLApiProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGraphQLApiProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraphQLApiProps):
         software.amazon.awscdk.services.appsync.CfnGraphQLApiProps = (wrapped as

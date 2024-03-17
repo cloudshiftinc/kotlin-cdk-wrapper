@@ -103,7 +103,7 @@ public interface LazyAnyValueOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.LazyAnyValueOptions): LazyAnyValueOptions =
-        CdkObjectWrappers.wrap(cdkObject) as LazyAnyValueOptions
+        CdkObjectWrappers.wrap(cdkObject) as? LazyAnyValueOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LazyAnyValueOptions): software.amazon.awscdk.LazyAnyValueOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.LazyAnyValueOptions

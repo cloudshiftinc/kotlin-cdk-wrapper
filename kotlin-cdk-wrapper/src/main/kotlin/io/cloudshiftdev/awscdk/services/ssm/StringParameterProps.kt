@@ -278,7 +278,8 @@ public interface StringParameterProps : ParameterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.StringParameterProps):
-        StringParameterProps = CdkObjectWrappers.wrap(cdkObject) as StringParameterProps
+        StringParameterProps = CdkObjectWrappers.wrap(cdkObject) as? StringParameterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StringParameterProps):
         software.amazon.awscdk.services.ssm.StringParameterProps = (wrapped as CdkObject).cdkObject

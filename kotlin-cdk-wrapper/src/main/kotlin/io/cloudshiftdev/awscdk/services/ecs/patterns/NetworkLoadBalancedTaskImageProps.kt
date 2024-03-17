@@ -475,8 +475,8 @@ public interface NetworkLoadBalancedTaskImageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps):
-        NetworkLoadBalancedTaskImageProps = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkLoadBalancedTaskImageProps
+        NetworkLoadBalancedTaskImageProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancedTaskImageProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancedTaskImageProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps = (wrapped as

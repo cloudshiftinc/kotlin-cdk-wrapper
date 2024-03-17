@@ -622,8 +622,8 @@ public open class CfnBackupVault internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty):
-          NotificationObjectTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationObjectTypeProperty
+          NotificationObjectTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationObjectTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationObjectTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty =
@@ -927,8 +927,8 @@ public open class CfnBackupVault internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty):
-          LockConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LockConfigurationTypeProperty
+          LockConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LockConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LockConfigurationTypeProperty):
           software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty =

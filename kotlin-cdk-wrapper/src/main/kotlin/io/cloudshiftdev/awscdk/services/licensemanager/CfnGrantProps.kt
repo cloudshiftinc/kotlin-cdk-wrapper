@@ -258,7 +258,7 @@ public interface CfnGrantProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnGrantProps):
-        CfnGrantProps = CdkObjectWrappers.wrap(cdkObject) as CfnGrantProps
+        CfnGrantProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGrantProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGrantProps):
         software.amazon.awscdk.services.licensemanager.CfnGrantProps = (wrapped as

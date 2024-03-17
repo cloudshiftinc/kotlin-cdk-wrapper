@@ -125,8 +125,8 @@ public interface CfnServicePrincipalNameProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalNameProps):
-        CfnServicePrincipalNameProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnServicePrincipalNameProps
+        CfnServicePrincipalNameProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnServicePrincipalNameProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServicePrincipalNameProps):
         software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalNameProps = (wrapped as

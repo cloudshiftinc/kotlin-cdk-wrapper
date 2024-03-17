@@ -525,8 +525,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty):
-          LabelNameConditionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LabelNameConditionProperty
+          LabelNameConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LabelNameConditionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LabelNameConditionProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty =
@@ -700,7 +700,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as FilterProperty
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty = (wrapped as
@@ -848,7 +849,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty):
-          LoggingFilterProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingFilterProperty
+          LoggingFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingFilterProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty =
@@ -940,7 +942,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty):
-          SingleHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as SingleHeaderProperty
+          SingleHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? SingleHeaderProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleHeaderProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty =
@@ -1144,7 +1147,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty):
-          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as ConditionProperty
+          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty = (wrapped
@@ -1250,7 +1254,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty):
-          ActionConditionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionConditionProperty
+          ActionConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionConditionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionConditionProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty =
@@ -1494,7 +1499,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FieldToMatchProperty):
-          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldToMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FieldToMatchProperty =
@@ -1605,7 +1611,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty):
-          MatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as MatchPatternProperty
+          MatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as? MatchPatternProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MatchPatternProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty =
@@ -1758,7 +1765,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty):
-          JsonBodyProperty = CdkObjectWrappers.wrap(cdkObject) as JsonBodyProperty
+          JsonBodyProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonBodyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonBodyProperty):
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty = (wrapped

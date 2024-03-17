@@ -461,8 +461,8 @@ public open class CfnLiveSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty):
-          HttpPackageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HttpPackageConfigurationProperty
+          HttpPackageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpPackageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpPackageConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty

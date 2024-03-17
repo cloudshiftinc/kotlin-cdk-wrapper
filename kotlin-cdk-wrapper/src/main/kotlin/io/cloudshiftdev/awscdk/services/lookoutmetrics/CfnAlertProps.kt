@@ -227,7 +227,7 @@ public interface CfnAlertProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlertProps):
-        CfnAlertProps = CdkObjectWrappers.wrap(cdkObject) as CfnAlertProps
+        CfnAlertProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAlertProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlertProps):
         software.amazon.awscdk.services.lookoutmetrics.CfnAlertProps = (wrapped as

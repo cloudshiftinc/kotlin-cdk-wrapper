@@ -413,8 +413,8 @@ public interface EcsBlueGreenDeploymentConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig):
-        EcsBlueGreenDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as
-        EcsBlueGreenDeploymentConfig
+        EcsBlueGreenDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        EcsBlueGreenDeploymentConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsBlueGreenDeploymentConfig):
         software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig = (wrapped as

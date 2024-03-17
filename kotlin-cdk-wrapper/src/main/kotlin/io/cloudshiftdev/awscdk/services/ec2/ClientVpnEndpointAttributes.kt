@@ -107,8 +107,8 @@ public interface ClientVpnEndpointAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes):
-        ClientVpnEndpointAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        ClientVpnEndpointAttributes
+        ClientVpnEndpointAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        ClientVpnEndpointAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClientVpnEndpointAttributes):
         software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes = (wrapped as

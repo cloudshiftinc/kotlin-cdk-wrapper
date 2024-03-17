@@ -182,7 +182,8 @@ public interface CfnGroupMembershipProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps):
-        CfnGroupMembershipProps = CdkObjectWrappers.wrap(cdkObject) as CfnGroupMembershipProps
+        CfnGroupMembershipProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGroupMembershipProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroupMembershipProps):
         software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps = (wrapped as

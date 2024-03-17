@@ -85,7 +85,8 @@ public interface HealthCheckCustomConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig):
-        HealthCheckCustomConfig = CdkObjectWrappers.wrap(cdkObject) as HealthCheckCustomConfig
+        HealthCheckCustomConfig = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckCustomConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HealthCheckCustomConfig):
         software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig = (wrapped as

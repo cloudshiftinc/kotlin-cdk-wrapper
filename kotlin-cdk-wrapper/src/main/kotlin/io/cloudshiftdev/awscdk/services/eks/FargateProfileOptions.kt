@@ -298,7 +298,8 @@ public interface FargateProfileOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.FargateProfileOptions):
-        FargateProfileOptions = CdkObjectWrappers.wrap(cdkObject) as FargateProfileOptions
+        FargateProfileOptions = CdkObjectWrappers.wrap(cdkObject) as? FargateProfileOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateProfileOptions):
         software.amazon.awscdk.services.eks.FargateProfileOptions = (wrapped as CdkObject).cdkObject

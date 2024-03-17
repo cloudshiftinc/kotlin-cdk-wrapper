@@ -183,7 +183,8 @@ public interface CfnDBSubnetGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.neptune.CfnDBSubnetGroupProps):
-        CfnDBSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBSubnetGroupProps
+        CfnDBSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDBSubnetGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBSubnetGroupProps):
         software.amazon.awscdk.services.neptune.CfnDBSubnetGroupProps = (wrapped as

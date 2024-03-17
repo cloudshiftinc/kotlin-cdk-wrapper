@@ -788,7 +788,7 @@ public interface CfnPipeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipeProps): CfnPipeProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnPipeProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnPipeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPipeProps): software.amazon.awscdk.services.pipes.CfnPipeProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.pipes.CfnPipeProps

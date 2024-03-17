@@ -419,9 +419,13 @@ public abstract class FunctionBase internal constructor(
    */
   public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.lambda.FunctionBase,
+  ) : FunctionBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionBase): FunctionBase
-        = CdkObjectWrappers.wrap(cdkObject) as FunctionBase
+        = CdkObjectWrappers.wrap(cdkObject) as? FunctionBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionBase): software.amazon.awscdk.services.lambda.FunctionBase
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.FunctionBase

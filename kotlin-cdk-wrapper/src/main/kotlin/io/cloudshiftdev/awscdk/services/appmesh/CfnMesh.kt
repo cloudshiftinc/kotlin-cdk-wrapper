@@ -413,8 +413,8 @@ public open class CfnMesh internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty):
-          MeshServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MeshServiceDiscoveryProperty
+          MeshServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MeshServiceDiscoveryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MeshServiceDiscoveryProperty):
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty = (wrapped as
@@ -533,7 +533,8 @@ public open class CfnMesh internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty):
-          EgressFilterProperty = CdkObjectWrappers.wrap(cdkObject) as EgressFilterProperty
+          EgressFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? EgressFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EgressFilterProperty):
           software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty = (wrapped as
@@ -704,7 +705,8 @@ public open class CfnMesh internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty):
-          MeshSpecProperty = CdkObjectWrappers.wrap(cdkObject) as MeshSpecProperty
+          MeshSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? MeshSpecProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MeshSpecProperty):
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty = (wrapped as

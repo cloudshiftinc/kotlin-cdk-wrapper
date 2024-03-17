@@ -279,8 +279,8 @@ public interface CfnObservabilityConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnObservabilityConfigurationProps):
-        CfnObservabilityConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnObservabilityConfigurationProps
+        CfnObservabilityConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnObservabilityConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnObservabilityConfigurationProps):
         software.amazon.awscdk.services.apprunner.CfnObservabilityConfigurationProps = (wrapped as

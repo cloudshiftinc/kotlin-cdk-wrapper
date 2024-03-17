@@ -528,7 +528,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty):
-          FunctionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as FunctionMetadataProperty
+          FunctionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionMetadataProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FunctionMetadataProperty):
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty = (wrapped
@@ -689,7 +690,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty):
-          FunctionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as FunctionConfigProperty
+          FunctionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FunctionConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty = (wrapped
@@ -772,8 +774,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.KeyValueStoreAssociationProperty):
-          KeyValueStoreAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KeyValueStoreAssociationProperty
+          KeyValueStoreAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KeyValueStoreAssociationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyValueStoreAssociationProperty):
           software.amazon.awscdk.services.cloudfront.CfnFunction.KeyValueStoreAssociationProperty =

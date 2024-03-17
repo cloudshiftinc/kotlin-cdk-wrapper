@@ -406,7 +406,8 @@ public interface CfnVPCCidrBlockProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCCidrBlockProps):
-        CfnVPCCidrBlockProps = CdkObjectWrappers.wrap(cdkObject) as CfnVPCCidrBlockProps
+        CfnVPCCidrBlockProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVPCCidrBlockProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCCidrBlockProps):
         software.amazon.awscdk.services.ec2.CfnVPCCidrBlockProps = (wrapped as CdkObject).cdkObject

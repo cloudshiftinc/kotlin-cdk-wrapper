@@ -324,7 +324,8 @@ public interface AwsLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AwsLogDriverProps):
-        AwsLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as AwsLogDriverProps
+        AwsLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? AwsLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsLogDriverProps):
         software.amazon.awscdk.services.ecs.AwsLogDriverProps = (wrapped as CdkObject).cdkObject as

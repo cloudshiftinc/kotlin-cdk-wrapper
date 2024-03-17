@@ -514,8 +514,8 @@ public open class CfnAssistant internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty):
-          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServerSideEncryptionConfigurationProperty
+          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
           software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty

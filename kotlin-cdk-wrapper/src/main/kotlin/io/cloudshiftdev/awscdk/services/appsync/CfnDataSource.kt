@@ -1190,7 +1190,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty):
-          HttpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HttpConfigProperty
+          HttpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty = (wrapped as
@@ -1341,8 +1342,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.AuthorizationConfigProperty):
-          AuthorizationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AuthorizationConfigProperty
+          AuthorizationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthorizationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuthorizationConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.AuthorizationConfigProperty =
@@ -1435,7 +1436,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty):
-          EventBridgeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as EventBridgeConfigProperty
+          EventBridgeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventBridgeConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty = (wrapped
@@ -1588,8 +1590,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty):
-          RelationalDatabaseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RelationalDatabaseConfigProperty
+          RelationalDatabaseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RelationalDatabaseConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RelationalDatabaseConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty =
@@ -1704,8 +1706,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty):
-          OpenSearchServiceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OpenSearchServiceConfigProperty
+          OpenSearchServiceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenSearchServiceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OpenSearchServiceConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty =
@@ -1820,7 +1822,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty):
-          AwsIamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as AwsIamConfigProperty
+          AwsIamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AwsIamConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsIamConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty = (wrapped as
@@ -1938,8 +1941,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty):
-          ElasticsearchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ElasticsearchConfigProperty
+          ElasticsearchConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticsearchConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ElasticsearchConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty =
@@ -2076,7 +2079,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.DeltaSyncConfigProperty):
-          DeltaSyncConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DeltaSyncConfigProperty
+          DeltaSyncConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeltaSyncConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeltaSyncConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.DeltaSyncConfigProperty = (wrapped
@@ -2334,7 +2338,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.DynamoDBConfigProperty):
-          DynamoDBConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DynamoDBConfigProperty
+          DynamoDBConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DynamoDBConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynamoDBConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.DynamoDBConfigProperty = (wrapped as
@@ -2419,7 +2424,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty):
-          LambdaConfigProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaConfigProperty
+          LambdaConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty = (wrapped as
@@ -2616,8 +2622,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource.RdsHttpEndpointConfigProperty):
-          RdsHttpEndpointConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RdsHttpEndpointConfigProperty
+          RdsHttpEndpointConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RdsHttpEndpointConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RdsHttpEndpointConfigProperty):
           software.amazon.awscdk.services.appsync.CfnDataSource.RdsHttpEndpointConfigProperty =

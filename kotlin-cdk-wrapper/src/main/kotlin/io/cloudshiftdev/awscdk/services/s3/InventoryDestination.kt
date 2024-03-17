@@ -146,7 +146,8 @@ public interface InventoryDestination {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.InventoryDestination):
-        InventoryDestination = CdkObjectWrappers.wrap(cdkObject) as InventoryDestination
+        InventoryDestination = CdkObjectWrappers.wrap(cdkObject) as? InventoryDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InventoryDestination):
         software.amazon.awscdk.services.s3.InventoryDestination = (wrapped as CdkObject).cdkObject

@@ -145,7 +145,8 @@ public interface DockerImageAsset {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageAsset):
-        DockerImageAsset = CdkObjectWrappers.wrap(cdkObject) as DockerImageAsset
+        DockerImageAsset = CdkObjectWrappers.wrap(cdkObject) as? DockerImageAsset ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageAsset):
         software.amazon.awscdk.cloudassembly.schema.DockerImageAsset = (wrapped as

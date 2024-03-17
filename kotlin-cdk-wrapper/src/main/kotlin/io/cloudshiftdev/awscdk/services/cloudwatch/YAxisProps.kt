@@ -157,7 +157,7 @@ public interface YAxisProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.YAxisProps): YAxisProps
-        = CdkObjectWrappers.wrap(cdkObject) as YAxisProps
+        = CdkObjectWrappers.wrap(cdkObject) as? YAxisProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: YAxisProps): software.amazon.awscdk.services.cloudwatch.YAxisProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.YAxisProps

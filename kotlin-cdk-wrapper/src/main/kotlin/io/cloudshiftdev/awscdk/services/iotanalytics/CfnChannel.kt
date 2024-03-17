@@ -527,7 +527,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property):
-          CustomerManagedS3Property = CdkObjectWrappers.wrap(cdkObject) as CustomerManagedS3Property
+          CustomerManagedS3Property = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerManagedS3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomerManagedS3Property):
           software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property =
@@ -698,7 +699,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty):
-          ChannelStorageProperty = CdkObjectWrappers.wrap(cdkObject) as ChannelStorageProperty
+          ChannelStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? ChannelStorageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ChannelStorageProperty):
           software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty = (wrapped
@@ -824,7 +826,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty):
-          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as RetentionPeriodProperty
+          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetentionPeriodProperty):
           software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty = (wrapped

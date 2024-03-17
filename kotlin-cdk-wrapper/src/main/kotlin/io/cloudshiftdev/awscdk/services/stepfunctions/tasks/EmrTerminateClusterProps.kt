@@ -419,7 +419,8 @@ public interface EmrTerminateClusterProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateClusterProps):
-        EmrTerminateClusterProps = CdkObjectWrappers.wrap(cdkObject) as EmrTerminateClusterProps
+        EmrTerminateClusterProps = CdkObjectWrappers.wrap(cdkObject) as? EmrTerminateClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrTerminateClusterProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateClusterProps = (wrapped as

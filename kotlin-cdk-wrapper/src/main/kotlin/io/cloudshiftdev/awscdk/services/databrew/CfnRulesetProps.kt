@@ -265,7 +265,8 @@ public interface CfnRulesetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRulesetProps):
-        CfnRulesetProps = CdkObjectWrappers.wrap(cdkObject) as CfnRulesetProps
+        CfnRulesetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRulesetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRulesetProps):
         software.amazon.awscdk.services.databrew.CfnRulesetProps = (wrapped as CdkObject).cdkObject

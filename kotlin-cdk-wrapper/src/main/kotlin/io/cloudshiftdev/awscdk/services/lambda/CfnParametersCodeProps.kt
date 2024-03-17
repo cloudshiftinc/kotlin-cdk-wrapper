@@ -127,7 +127,8 @@ public interface CfnParametersCodeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnParametersCodeProps):
-        CfnParametersCodeProps = CdkObjectWrappers.wrap(cdkObject) as CfnParametersCodeProps
+        CfnParametersCodeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnParametersCodeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnParametersCodeProps):
         software.amazon.awscdk.services.lambda.CfnParametersCodeProps = (wrapped as

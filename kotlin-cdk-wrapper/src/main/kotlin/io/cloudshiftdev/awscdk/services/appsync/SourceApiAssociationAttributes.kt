@@ -120,8 +120,8 @@ public interface SourceApiAssociationAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes):
-        SourceApiAssociationAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        SourceApiAssociationAttributes
+        SourceApiAssociationAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        SourceApiAssociationAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceApiAssociationAttributes):
         software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes = (wrapped as

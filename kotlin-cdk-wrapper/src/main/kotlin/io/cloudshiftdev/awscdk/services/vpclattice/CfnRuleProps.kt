@@ -376,7 +376,7 @@ public interface CfnRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRuleProps):
-        CfnRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnRuleProps
+        CfnRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleProps):
         software.amazon.awscdk.services.vpclattice.CfnRuleProps = (wrapped as CdkObject).cdkObject

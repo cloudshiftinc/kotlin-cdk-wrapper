@@ -151,8 +151,8 @@ public interface EndpointServiceAvailabilityZonesContextQuery {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery):
-        EndpointServiceAvailabilityZonesContextQuery = CdkObjectWrappers.wrap(cdkObject) as
-        EndpointServiceAvailabilityZonesContextQuery
+        EndpointServiceAvailabilityZonesContextQuery = CdkObjectWrappers.wrap(cdkObject) as?
+        EndpointServiceAvailabilityZonesContextQuery ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EndpointServiceAvailabilityZonesContextQuery):
         software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery =

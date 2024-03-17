@@ -1495,8 +1495,8 @@ public open class CfnWorkspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.AssertionAttributesProperty):
-          AssertionAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AssertionAttributesProperty
+          AssertionAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AssertionAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssertionAttributesProperty):
           software.amazon.awscdk.services.grafana.CfnWorkspace.AssertionAttributesProperty =
@@ -1608,7 +1608,8 @@ public open class CfnWorkspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.IdpMetadataProperty):
-          IdpMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as IdpMetadataProperty
+          IdpMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? IdpMetadataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdpMetadataProperty):
           software.amazon.awscdk.services.grafana.CfnWorkspace.IdpMetadataProperty = (wrapped as
@@ -1953,7 +1954,8 @@ public open class CfnWorkspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.SamlConfigurationProperty):
-          SamlConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as SamlConfigurationProperty
+          SamlConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SamlConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SamlConfigurationProperty):
           software.amazon.awscdk.services.grafana.CfnWorkspace.SamlConfigurationProperty = (wrapped
@@ -2257,8 +2259,8 @@ public open class CfnWorkspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty):
-          NetworkAccessControlProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkAccessControlProperty
+          NetworkAccessControlProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkAccessControlProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkAccessControlProperty):
           software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty =
@@ -2471,7 +2473,8 @@ public open class CfnWorkspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty):
-          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigurationProperty
+          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigurationProperty):
           software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty = (wrapped
@@ -2610,7 +2613,8 @@ public open class CfnWorkspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty):
-          RoleValuesProperty = CdkObjectWrappers.wrap(cdkObject) as RoleValuesProperty
+          RoleValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? RoleValuesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoleValuesProperty):
           software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty = (wrapped as

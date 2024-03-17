@@ -272,7 +272,8 @@ public interface RedirectOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions):
-        RedirectOptions = CdkObjectWrappers.wrap(cdkObject) as RedirectOptions
+        RedirectOptions = CdkObjectWrappers.wrap(cdkObject) as? RedirectOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RedirectOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions = (wrapped as

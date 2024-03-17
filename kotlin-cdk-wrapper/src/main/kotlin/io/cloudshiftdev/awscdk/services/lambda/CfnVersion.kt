@@ -499,8 +499,8 @@ public open class CfnVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty):
-          ProvisionedConcurrencyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProvisionedConcurrencyConfigurationProperty
+          ProvisionedConcurrencyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisionedConcurrencyConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisionedConcurrencyConfigurationProperty):
           software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty
@@ -614,7 +614,8 @@ public open class CfnVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty):
-          RuntimePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as RuntimePolicyProperty
+          RuntimePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? RuntimePolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuntimePolicyProperty):
           software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty = (wrapped as

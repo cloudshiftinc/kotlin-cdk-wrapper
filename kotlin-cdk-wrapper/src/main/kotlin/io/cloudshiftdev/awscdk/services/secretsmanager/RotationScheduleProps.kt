@@ -256,7 +256,8 @@ public interface RotationScheduleProps : RotationScheduleOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.RotationScheduleProps):
-        RotationScheduleProps = CdkObjectWrappers.wrap(cdkObject) as RotationScheduleProps
+        RotationScheduleProps = CdkObjectWrappers.wrap(cdkObject) as? RotationScheduleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RotationScheduleProps):
         software.amazon.awscdk.services.secretsmanager.RotationScheduleProps = (wrapped as

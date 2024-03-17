@@ -42,6 +42,10 @@ public abstract class FlowLogDestination internal constructor(
       unwrap(this).bind(scope.let(Construct::unwrap),
       flowLog.let(FlowLog::unwrap)).let(FlowLogDestinationConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination,
+  ) : FlowLogDestination(cdkObject)
+
   public companion object {
     public fun toCloudWatchLogs(): FlowLogDestination =
         software.amazon.awscdk.services.ec2.FlowLogDestination.toCloudWatchLogs().let(FlowLogDestination::wrap)
@@ -83,7 +87,8 @@ public abstract class FlowLogDestination internal constructor(
     ): FlowLogDestination = toS3(bucket, keyPrefix, S3DestinationOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination):
-        FlowLogDestination = CdkObjectWrappers.wrap(cdkObject) as FlowLogDestination
+        FlowLogDestination = CdkObjectWrappers.wrap(cdkObject) as? FlowLogDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FlowLogDestination):
         software.amazon.awscdk.services.ec2.FlowLogDestination = (wrapped as CdkObject).cdkObject as

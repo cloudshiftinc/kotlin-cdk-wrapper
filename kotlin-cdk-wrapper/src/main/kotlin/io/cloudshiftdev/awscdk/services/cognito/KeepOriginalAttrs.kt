@@ -111,7 +111,8 @@ public interface KeepOriginalAttrs {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.KeepOriginalAttrs):
-        KeepOriginalAttrs = CdkObjectWrappers.wrap(cdkObject) as KeepOriginalAttrs
+        KeepOriginalAttrs = CdkObjectWrappers.wrap(cdkObject) as? KeepOriginalAttrs ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeepOriginalAttrs):
         software.amazon.awscdk.services.cognito.KeepOriginalAttrs = (wrapped as CdkObject).cdkObject

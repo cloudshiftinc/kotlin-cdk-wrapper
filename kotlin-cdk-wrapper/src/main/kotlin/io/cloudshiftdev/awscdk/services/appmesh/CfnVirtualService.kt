@@ -499,8 +499,8 @@ public open class CfnVirtualService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty):
-          VirtualRouterServiceProviderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualRouterServiceProviderProperty
+          VirtualRouterServiceProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualRouterServiceProviderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualRouterServiceProviderProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty
@@ -626,8 +626,8 @@ public open class CfnVirtualService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty):
-          VirtualServiceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualServiceSpecProperty
+          VirtualServiceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualServiceSpecProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualServiceSpecProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty =
@@ -797,8 +797,8 @@ public open class CfnVirtualService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty):
-          VirtualServiceProviderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualServiceProviderProperty
+          VirtualServiceProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualServiceProviderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualServiceProviderProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty =
@@ -882,8 +882,8 @@ public open class CfnVirtualService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty):
-          VirtualNodeServiceProviderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualNodeServiceProviderProperty
+          VirtualNodeServiceProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualNodeServiceProviderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualNodeServiceProviderProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty

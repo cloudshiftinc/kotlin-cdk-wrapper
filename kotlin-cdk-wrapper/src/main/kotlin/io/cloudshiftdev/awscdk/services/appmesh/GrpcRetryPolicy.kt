@@ -242,7 +242,8 @@ public interface GrpcRetryPolicy : HttpRetryPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcRetryPolicy):
-        GrpcRetryPolicy = CdkObjectWrappers.wrap(cdkObject) as GrpcRetryPolicy
+        GrpcRetryPolicy = CdkObjectWrappers.wrap(cdkObject) as? GrpcRetryPolicy ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcRetryPolicy):
         software.amazon.awscdk.services.appmesh.GrpcRetryPolicy = (wrapped as CdkObject).cdkObject

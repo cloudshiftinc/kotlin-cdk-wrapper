@@ -209,7 +209,8 @@ public interface CfnStreamingImageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImageProps):
-        CfnStreamingImageProps = CdkObjectWrappers.wrap(cdkObject) as CfnStreamingImageProps
+        CfnStreamingImageProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStreamingImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamingImageProps):
         software.amazon.awscdk.services.nimblestudio.CfnStreamingImageProps = (wrapped as

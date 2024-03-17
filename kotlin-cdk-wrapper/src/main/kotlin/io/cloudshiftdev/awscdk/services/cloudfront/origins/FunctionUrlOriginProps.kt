@@ -345,7 +345,8 @@ public interface FunctionUrlOriginProps : OriginProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOriginProps):
-        FunctionUrlOriginProps = CdkObjectWrappers.wrap(cdkObject) as FunctionUrlOriginProps
+        FunctionUrlOriginProps = CdkObjectWrappers.wrap(cdkObject) as? FunctionUrlOriginProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionUrlOriginProps):
         software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOriginProps = (wrapped as

@@ -15,6 +15,10 @@ import kotlin.collections.Map
 public abstract class Match internal constructor(
   internal override val cdkObject: software.amazon.awscdk.assertions.Match,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.assertions.Match,
+  ) : Match(cdkObject)
+
   public companion object {
     public fun absent(): Matcher =
         software.amazon.awscdk.assertions.Match.absent().let(Matcher::wrap)
@@ -51,7 +55,7 @@ public abstract class Match internal constructor(
         software.amazon.awscdk.assertions.Match.stringLikeRegexp(pattern).let(Matcher::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.Match): Match =
-        CdkObjectWrappers.wrap(cdkObject) as Match
+        CdkObjectWrappers.wrap(cdkObject) as? Match ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Match): software.amazon.awscdk.assertions.Match = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.assertions.Match

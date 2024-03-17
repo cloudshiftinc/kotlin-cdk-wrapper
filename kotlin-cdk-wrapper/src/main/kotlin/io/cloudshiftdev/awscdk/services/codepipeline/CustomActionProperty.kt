@@ -251,7 +251,8 @@ public interface CustomActionProperty {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CustomActionProperty):
-        CustomActionProperty = CdkObjectWrappers.wrap(cdkObject) as CustomActionProperty
+        CustomActionProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomActionProperty ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomActionProperty):
         software.amazon.awscdk.services.codepipeline.CustomActionProperty = (wrapped as

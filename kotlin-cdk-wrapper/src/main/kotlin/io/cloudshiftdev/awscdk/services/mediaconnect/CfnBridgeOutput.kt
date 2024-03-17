@@ -421,8 +421,8 @@ public open class CfnBridgeOutput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.BridgeNetworkOutputProperty):
-          BridgeNetworkOutputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BridgeNetworkOutputProperty
+          BridgeNetworkOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BridgeNetworkOutputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BridgeNetworkOutputProperty):
           software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.BridgeNetworkOutputProperty =

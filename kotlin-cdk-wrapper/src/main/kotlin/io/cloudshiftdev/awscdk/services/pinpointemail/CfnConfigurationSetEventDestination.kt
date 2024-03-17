@@ -389,8 +389,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty):
-          KinesisFirehoseDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KinesisFirehoseDestinationProperty
+          KinesisFirehoseDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisFirehoseDestinationProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty
@@ -608,8 +608,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.DimensionConfigurationProperty):
-          DimensionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DimensionConfigurationProperty
+          DimensionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DimensionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DimensionConfigurationProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.DimensionConfigurationProperty
@@ -1110,7 +1110,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.EventDestinationProperty):
-          EventDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as EventDestinationProperty
+          EventDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? EventDestinationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventDestinationProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.EventDestinationProperty
@@ -1208,7 +1209,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.SnsDestinationProperty):
-          SnsDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as SnsDestinationProperty
+          SnsDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsDestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnsDestinationProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.SnsDestinationProperty
@@ -1297,8 +1299,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty):
-          PinpointDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PinpointDestinationProperty
+          PinpointDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PinpointDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PinpointDestinationProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.PinpointDestinationProperty
@@ -1418,8 +1420,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty):
-          CloudWatchDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchDestinationProperty
+          CloudWatchDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchDestinationProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty

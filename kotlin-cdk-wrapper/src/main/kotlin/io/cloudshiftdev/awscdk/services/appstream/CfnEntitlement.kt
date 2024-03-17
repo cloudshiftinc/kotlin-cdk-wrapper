@@ -448,7 +448,8 @@ public open class CfnEntitlement internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlement.AttributeProperty):
-          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeProperty
+          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeProperty):
           software.amazon.awscdk.services.appstream.CfnEntitlement.AttributeProperty = (wrapped as

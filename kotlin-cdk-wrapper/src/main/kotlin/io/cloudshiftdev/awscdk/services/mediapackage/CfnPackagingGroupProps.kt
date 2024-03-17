@@ -241,7 +241,8 @@ public interface CfnPackagingGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroupProps):
-        CfnPackagingGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnPackagingGroupProps
+        CfnPackagingGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPackagingGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPackagingGroupProps):
         software.amazon.awscdk.services.mediapackage.CfnPackagingGroupProps = (wrapped as

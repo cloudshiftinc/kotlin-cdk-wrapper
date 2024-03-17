@@ -123,6 +123,10 @@ public abstract class Credentials internal constructor(
    */
   public open fun usernameAsString(): Boolean? = unwrap(this).getUsernameAsString()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.rds.Credentials,
+  ) : Credentials(cdkObject)
+
   public companion object {
     public fun fromGeneratedSecret(username: String): Credentials =
         software.amazon.awscdk.services.rds.Credentials.fromGeneratedSecret(username).let(Credentials::wrap)
@@ -162,7 +166,7 @@ public abstract class Credentials internal constructor(
         fromUsername(username, CredentialsFromUsernameOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.Credentials): Credentials =
-        CdkObjectWrappers.wrap(cdkObject) as Credentials
+        CdkObjectWrappers.wrap(cdkObject) as? Credentials ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Credentials): software.amazon.awscdk.services.rds.Credentials =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.rds.Credentials

@@ -377,7 +377,8 @@ public interface CfnSolutionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolutionProps):
-        CfnSolutionProps = CdkObjectWrappers.wrap(cdkObject) as CfnSolutionProps
+        CfnSolutionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSolutionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSolutionProps):
         software.amazon.awscdk.services.personalize.CfnSolutionProps = (wrapped as

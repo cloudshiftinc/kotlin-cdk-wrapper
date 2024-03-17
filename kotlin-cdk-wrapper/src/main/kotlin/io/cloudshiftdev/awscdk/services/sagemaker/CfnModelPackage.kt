@@ -2048,7 +2048,7 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.BiasProperty):
-          BiasProperty = CdkObjectWrappers.wrap(cdkObject) as BiasProperty
+          BiasProperty = CdkObjectWrappers.wrap(cdkObject) as? BiasProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BiasProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.BiasProperty = (wrapped as
@@ -2159,8 +2159,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty):
-          SourceAlgorithmSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SourceAlgorithmSpecificationProperty
+          SourceAlgorithmSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceAlgorithmSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceAlgorithmSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty
@@ -2273,7 +2273,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty):
-          ExplainabilityProperty = CdkObjectWrappers.wrap(cdkObject) as ExplainabilityProperty
+          ExplainabilityProperty = CdkObjectWrappers.wrap(cdkObject) as? ExplainabilityProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExplainabilityProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ExplainabilityProperty =
@@ -2638,8 +2639,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBaselinesProperty):
-          DriftCheckBaselinesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DriftCheckBaselinesProperty
+          DriftCheckBaselinesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DriftCheckBaselinesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DriftCheckBaselinesProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBaselinesProperty =
@@ -2821,7 +2822,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty):
-          ValidationProfileProperty = CdkObjectWrappers.wrap(cdkObject) as ValidationProfileProperty
+          ValidationProfileProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValidationProfileProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValidationProfileProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationProfileProperty =
@@ -3133,8 +3135,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.InferenceSpecificationProperty):
-          InferenceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InferenceSpecificationProperty
+          InferenceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.InferenceSpecificationProperty =
@@ -3309,8 +3311,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty):
-          DriftCheckModelQualityProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DriftCheckModelQualityProperty
+          DriftCheckModelQualityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DriftCheckModelQualityProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DriftCheckModelQualityProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelQualityProperty =
@@ -3422,8 +3424,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusDetailsProperty):
-          ModelPackageStatusDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ModelPackageStatusDetailsProperty
+          ModelPackageStatusDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelPackageStatusDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelPackageStatusDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusDetailsProperty
@@ -3667,8 +3669,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty):
-          TransformResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TransformResourcesProperty
+          TransformResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransformResourcesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformResourcesProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformResourcesProperty =
@@ -3843,8 +3845,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty):
-          DriftCheckExplainabilityProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DriftCheckExplainabilityProperty
+          DriftCheckExplainabilityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DriftCheckExplainabilityProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DriftCheckExplainabilityProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckExplainabilityProperty
@@ -4258,8 +4260,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty):
-          TransformJobDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TransformJobDefinitionProperty
+          TransformJobDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransformJobDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformJobDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformJobDefinitionProperty =
@@ -4395,7 +4397,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty):
-          MetricsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as MetricsSourceProperty
+          MetricsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricsSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricsSourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetricsSourceProperty = (wrapped
@@ -4716,7 +4719,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty):
-          ModelMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as ModelMetricsProperty
+          ModelMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelMetricsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelMetricsProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelMetricsProperty = (wrapped
@@ -4864,7 +4868,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty):
-          SourceAlgorithmProperty = CdkObjectWrappers.wrap(cdkObject) as SourceAlgorithmProperty
+          SourceAlgorithmProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceAlgorithmProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceAlgorithmProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmProperty =
@@ -5205,7 +5210,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty):
-          TransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as TransformInputProperty
+          TransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as? TransformInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformInputProperty =
@@ -5525,7 +5531,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformOutputProperty):
-          TransformOutputProperty = CdkObjectWrappers.wrap(cdkObject) as TransformOutputProperty
+          TransformOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? TransformOutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformOutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.TransformOutputProperty =
@@ -5915,8 +5922,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty):
-          ModelPackageContainerDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ModelPackageContainerDefinitionProperty
+          ModelPackageContainerDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelPackageContainerDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelPackageContainerDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageContainerDefinitionProperty
@@ -5997,7 +6004,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty):
-          ModelInputProperty = CdkObjectWrappers.wrap(cdkObject) as ModelInputProperty
+          ModelInputProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelInputProperty = (wrapped as
@@ -6169,7 +6177,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty):
-          ModelQualityProperty = CdkObjectWrappers.wrap(cdkObject) as ModelQualityProperty
+          ModelQualityProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelQualityProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelQualityProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelQualityProperty = (wrapped
@@ -6307,8 +6316,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty):
-          ModelPackageStatusItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ModelPackageStatusItemProperty
+          ModelPackageStatusItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelPackageStatusItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelPackageStatusItemProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusItemProperty =
@@ -6481,7 +6490,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty):
-          ModelDataQualityProperty = CdkObjectWrappers.wrap(cdkObject) as ModelDataQualityProperty
+          ModelDataQualityProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelDataQualityProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelDataQualityProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelDataQualityProperty =
@@ -6657,8 +6667,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty):
-          ValidationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ValidationSpecificationProperty
+          ValidationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValidationSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValidationSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ValidationSpecificationProperty
@@ -6821,8 +6831,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty):
-          MetadataPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MetadataPropertiesProperty
+          MetadataPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetadataPropertiesProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.MetadataPropertiesProperty =
@@ -7132,7 +7142,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty):
-          S3DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as S3DataSourceProperty
+          S3DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DataSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DataSourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.S3DataSourceProperty = (wrapped
@@ -7243,7 +7254,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty):
-          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as DataSourceProperty
+          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DataSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.DataSourceProperty = (wrapped as
@@ -7419,8 +7431,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty):
-          DriftCheckModelDataQualityProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DriftCheckModelDataQualityProperty
+          DriftCheckModelDataQualityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DriftCheckModelDataQualityProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DriftCheckModelDataQualityProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckModelDataQualityProperty
@@ -7656,7 +7668,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty):
-          DriftCheckBiasProperty = CdkObjectWrappers.wrap(cdkObject) as DriftCheckBiasProperty
+          DriftCheckBiasProperty = CdkObjectWrappers.wrap(cdkObject) as? DriftCheckBiasProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DriftCheckBiasProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.DriftCheckBiasProperty =
@@ -7792,7 +7805,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty):
-          FileSourceProperty = CdkObjectWrappers.wrap(cdkObject) as FileSourceProperty
+          FileSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? FileSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FileSourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.FileSourceProperty = (wrapped as
@@ -8160,8 +8174,8 @@ public open class CfnModelPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty):
-          AdditionalInferenceSpecificationDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdditionalInferenceSpecificationDefinitionProperty
+          AdditionalInferenceSpecificationDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdditionalInferenceSpecificationDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdditionalInferenceSpecificationDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty

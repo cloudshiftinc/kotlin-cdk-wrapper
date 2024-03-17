@@ -342,7 +342,7 @@ public interface AssetStagingProps : FingerprintOptions, AssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.AssetStagingProps): AssetStagingProps =
-        CdkObjectWrappers.wrap(cdkObject) as AssetStagingProps
+        CdkObjectWrappers.wrap(cdkObject) as? AssetStagingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetStagingProps): software.amazon.awscdk.AssetStagingProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.AssetStagingProps

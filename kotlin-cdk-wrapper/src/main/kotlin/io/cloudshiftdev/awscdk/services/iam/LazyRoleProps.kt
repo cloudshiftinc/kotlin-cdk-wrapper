@@ -407,7 +407,7 @@ public interface LazyRoleProps : RoleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.LazyRoleProps): LazyRoleProps =
-        CdkObjectWrappers.wrap(cdkObject) as LazyRoleProps
+        CdkObjectWrappers.wrap(cdkObject) as? LazyRoleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LazyRoleProps): software.amazon.awscdk.services.iam.LazyRoleProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.LazyRoleProps

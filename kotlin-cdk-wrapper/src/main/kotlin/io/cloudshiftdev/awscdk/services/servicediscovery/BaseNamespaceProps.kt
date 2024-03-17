@@ -98,7 +98,8 @@ public interface BaseNamespaceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.BaseNamespaceProps):
-        BaseNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as BaseNamespaceProps
+        BaseNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as? BaseNamespaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseNamespaceProps):
         software.amazon.awscdk.services.servicediscovery.BaseNamespaceProps = (wrapped as

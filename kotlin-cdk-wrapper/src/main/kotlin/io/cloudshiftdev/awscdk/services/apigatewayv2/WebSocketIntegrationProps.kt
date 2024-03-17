@@ -343,7 +343,8 @@ public interface WebSocketIntegrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketIntegrationProps):
-        WebSocketIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as WebSocketIntegrationProps
+        WebSocketIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? WebSocketIntegrationProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketIntegrationProps):
         software.amazon.awscdk.services.apigatewayv2.WebSocketIntegrationProps = (wrapped as

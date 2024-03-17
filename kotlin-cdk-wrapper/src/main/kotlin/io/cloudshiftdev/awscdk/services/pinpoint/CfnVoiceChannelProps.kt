@@ -121,7 +121,8 @@ public interface CfnVoiceChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnVoiceChannelProps):
-        CfnVoiceChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnVoiceChannelProps
+        CfnVoiceChannelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVoiceChannelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVoiceChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnVoiceChannelProps = (wrapped as

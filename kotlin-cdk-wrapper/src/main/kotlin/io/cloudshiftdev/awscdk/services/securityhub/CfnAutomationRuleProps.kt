@@ -624,7 +624,8 @@ public interface CfnAutomationRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRuleProps):
-        CfnAutomationRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnAutomationRuleProps
+        CfnAutomationRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAutomationRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutomationRuleProps):
         software.amazon.awscdk.services.securityhub.CfnAutomationRuleProps = (wrapped as

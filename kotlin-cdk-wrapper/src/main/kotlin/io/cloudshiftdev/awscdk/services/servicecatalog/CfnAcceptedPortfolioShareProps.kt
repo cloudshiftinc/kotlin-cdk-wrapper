@@ -119,8 +119,8 @@ public interface CfnAcceptedPortfolioShareProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShareProps):
-        CfnAcceptedPortfolioShareProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAcceptedPortfolioShareProps
+        CfnAcceptedPortfolioShareProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAcceptedPortfolioShareProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAcceptedPortfolioShareProps):
         software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShareProps = (wrapped as

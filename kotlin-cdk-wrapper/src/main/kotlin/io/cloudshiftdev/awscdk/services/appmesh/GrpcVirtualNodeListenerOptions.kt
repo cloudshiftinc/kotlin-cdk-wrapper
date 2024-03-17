@@ -303,8 +303,8 @@ public interface GrpcVirtualNodeListenerOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcVirtualNodeListenerOptions):
-        GrpcVirtualNodeListenerOptions = CdkObjectWrappers.wrap(cdkObject) as
-        GrpcVirtualNodeListenerOptions
+        GrpcVirtualNodeListenerOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        GrpcVirtualNodeListenerOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcVirtualNodeListenerOptions):
         software.amazon.awscdk.services.appmesh.GrpcVirtualNodeListenerOptions = (wrapped as

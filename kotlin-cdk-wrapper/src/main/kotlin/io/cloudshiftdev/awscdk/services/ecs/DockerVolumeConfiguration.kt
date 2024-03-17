@@ -189,7 +189,8 @@ public interface DockerVolumeConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DockerVolumeConfiguration):
-        DockerVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as DockerVolumeConfiguration
+        DockerVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as? DockerVolumeConfiguration
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerVolumeConfiguration):
         software.amazon.awscdk.services.ecs.DockerVolumeConfiguration = (wrapped as

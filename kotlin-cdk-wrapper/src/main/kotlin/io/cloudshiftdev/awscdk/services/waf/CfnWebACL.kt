@@ -667,7 +667,8 @@ public open class CfnWebACL internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnWebACL.ActivatedRuleProperty):
-          ActivatedRuleProperty = CdkObjectWrappers.wrap(cdkObject) as ActivatedRuleProperty
+          ActivatedRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ActivatedRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActivatedRuleProperty):
           software.amazon.awscdk.services.waf.CfnWebACL.ActivatedRuleProperty = (wrapped as
@@ -792,7 +793,8 @@ public open class CfnWebACL internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnWebACL.WafActionProperty):
-          WafActionProperty = CdkObjectWrappers.wrap(cdkObject) as WafActionProperty
+          WafActionProperty = CdkObjectWrappers.wrap(cdkObject) as? WafActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WafActionProperty):
           software.amazon.awscdk.services.waf.CfnWebACL.WafActionProperty = (wrapped as

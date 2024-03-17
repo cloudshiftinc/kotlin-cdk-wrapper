@@ -954,8 +954,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty):
-          PrivateRegistryAccessProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PrivateRegistryAccessProperty
+          PrivateRegistryAccessProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateRegistryAccessProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrivateRegistryAccessProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty =
@@ -1068,8 +1068,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty):
-          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnvironmentVariableProperty
+          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentVariableProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty =
@@ -1191,7 +1191,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty):
-          PublicDomainNameProperty = CdkObjectWrappers.wrap(cdkObject) as PublicDomainNameProperty
+          PublicDomainNameProperty = CdkObjectWrappers.wrap(cdkObject) as? PublicDomainNameProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicDomainNameProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty = (wrapped
@@ -1319,8 +1320,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty):
-          EcrImagePullerRoleProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EcrImagePullerRoleProperty
+          EcrImagePullerRoleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EcrImagePullerRoleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcrImagePullerRoleProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty =
@@ -1436,7 +1437,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty):
-          PortInfoProperty = CdkObjectWrappers.wrap(cdkObject) as PortInfoProperty
+          PortInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? PortInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortInfoProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty = (wrapped as
@@ -1738,7 +1740,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty):
-          ContainerProperty = CdkObjectWrappers.wrap(cdkObject) as ContainerProperty
+          ContainerProperty = CdkObjectWrappers.wrap(cdkObject) as? ContainerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty = (wrapped as
@@ -2011,7 +2014,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty):
-          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckConfigProperty
+          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthCheckConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckConfigProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty =
@@ -2205,8 +2209,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty):
-          ContainerServiceDeploymentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ContainerServiceDeploymentProperty
+          ContainerServiceDeploymentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContainerServiceDeploymentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerServiceDeploymentProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty
@@ -2388,7 +2392,8 @@ public open class CfnContainer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty):
-          PublicEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as PublicEndpointProperty
+          PublicEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? PublicEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicEndpointProperty):
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty = (wrapped

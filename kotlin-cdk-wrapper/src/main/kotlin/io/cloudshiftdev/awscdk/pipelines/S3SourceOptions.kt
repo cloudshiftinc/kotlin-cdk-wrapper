@@ -152,7 +152,7 @@ public interface S3SourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.S3SourceOptions): S3SourceOptions
-        = CdkObjectWrappers.wrap(cdkObject) as S3SourceOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? S3SourceOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3SourceOptions): software.amazon.awscdk.pipelines.S3SourceOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.pipelines.S3SourceOptions

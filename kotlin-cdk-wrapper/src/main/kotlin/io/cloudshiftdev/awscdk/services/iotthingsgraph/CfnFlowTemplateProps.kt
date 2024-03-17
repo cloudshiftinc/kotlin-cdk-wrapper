@@ -133,7 +133,8 @@ public interface CfnFlowTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplateProps):
-        CfnFlowTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlowTemplateProps
+        CfnFlowTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFlowTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowTemplateProps):
         software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplateProps = (wrapped as

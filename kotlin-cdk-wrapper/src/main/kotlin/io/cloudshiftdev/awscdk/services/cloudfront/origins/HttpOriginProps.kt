@@ -476,7 +476,8 @@ public interface HttpOriginProps : OriginProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.HttpOriginProps):
-        HttpOriginProps = CdkObjectWrappers.wrap(cdkObject) as HttpOriginProps
+        HttpOriginProps = CdkObjectWrappers.wrap(cdkObject) as? HttpOriginProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpOriginProps):
         software.amazon.awscdk.services.cloudfront.origins.HttpOriginProps = (wrapped as

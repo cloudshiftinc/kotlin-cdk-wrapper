@@ -460,8 +460,8 @@ public interface CfnConfigurationProfileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnConfigurationProfileProps):
-        CfnConfigurationProfileProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnConfigurationProfileProps
+        CfnConfigurationProfileProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnConfigurationProfileProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationProfileProps):
         software.amazon.awscdk.services.appconfig.CfnConfigurationProfileProps = (wrapped as

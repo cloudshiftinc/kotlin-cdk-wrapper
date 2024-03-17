@@ -452,8 +452,8 @@ public open class CfnDataQualityRuleset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty):
-          DataQualityTargetTableProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataQualityTargetTableProperty
+          DataQualityTargetTableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataQualityTargetTableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataQualityTargetTableProperty):
           software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty

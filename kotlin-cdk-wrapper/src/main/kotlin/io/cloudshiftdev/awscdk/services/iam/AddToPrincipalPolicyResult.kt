@@ -103,7 +103,8 @@ public interface AddToPrincipalPolicyResult {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.AddToPrincipalPolicyResult):
-        AddToPrincipalPolicyResult = CdkObjectWrappers.wrap(cdkObject) as AddToPrincipalPolicyResult
+        AddToPrincipalPolicyResult = CdkObjectWrappers.wrap(cdkObject) as?
+        AddToPrincipalPolicyResult ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddToPrincipalPolicyResult):
         software.amazon.awscdk.services.iam.AddToPrincipalPolicyResult = (wrapped as

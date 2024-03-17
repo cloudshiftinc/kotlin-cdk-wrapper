@@ -365,7 +365,8 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty):
-          HeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HeadersConfigProperty
+          HeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HeadersConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeadersConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty = (wrapped
@@ -1000,8 +1001,8 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty):
-          ParametersInCacheKeyAndForwardedToOriginProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ParametersInCacheKeyAndForwardedToOriginProperty
+          ParametersInCacheKeyAndForwardedToOriginProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParametersInCacheKeyAndForwardedToOriginProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParametersInCacheKeyAndForwardedToOriginProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty
@@ -1175,7 +1176,8 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty):
-          CookiesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as CookiesConfigProperty
+          CookiesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CookiesConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookiesConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty = (wrapped
@@ -1355,8 +1357,8 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty):
-          QueryStringsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          QueryStringsConfigProperty
+          QueryStringsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryStringsConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryStringsConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty =
@@ -1776,7 +1778,8 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty):
-          CachePolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as CachePolicyConfigProperty
+          CachePolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CachePolicyConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CachePolicyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty =

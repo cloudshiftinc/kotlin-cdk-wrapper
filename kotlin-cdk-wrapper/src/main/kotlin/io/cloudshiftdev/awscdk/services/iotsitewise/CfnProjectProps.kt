@@ -230,7 +230,8 @@ public interface CfnProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnProjectProps):
-        CfnProjectProps = CdkObjectWrappers.wrap(cdkObject) as CfnProjectProps
+        CfnProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnProjectProps):
         software.amazon.awscdk.services.iotsitewise.CfnProjectProps = (wrapped as

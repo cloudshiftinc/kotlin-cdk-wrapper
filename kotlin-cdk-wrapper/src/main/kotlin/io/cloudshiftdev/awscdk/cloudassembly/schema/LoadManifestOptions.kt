@@ -162,7 +162,8 @@ public interface LoadManifestOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadManifestOptions):
-        LoadManifestOptions = CdkObjectWrappers.wrap(cdkObject) as LoadManifestOptions
+        LoadManifestOptions = CdkObjectWrappers.wrap(cdkObject) as? LoadManifestOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadManifestOptions):
         software.amazon.awscdk.cloudassembly.schema.LoadManifestOptions = (wrapped as

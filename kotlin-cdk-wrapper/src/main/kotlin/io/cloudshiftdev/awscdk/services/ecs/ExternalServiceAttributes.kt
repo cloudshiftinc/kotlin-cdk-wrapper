@@ -126,7 +126,8 @@ public interface ExternalServiceAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExternalServiceAttributes):
-        ExternalServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as ExternalServiceAttributes
+        ExternalServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as? ExternalServiceAttributes
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExternalServiceAttributes):
         software.amazon.awscdk.services.ecs.ExternalServiceAttributes = (wrapped as

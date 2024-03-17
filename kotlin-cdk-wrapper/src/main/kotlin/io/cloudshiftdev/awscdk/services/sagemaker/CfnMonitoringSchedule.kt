@@ -748,7 +748,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty):
-          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as StoppingConditionProperty
+          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StoppingConditionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StoppingConditionProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StoppingConditionProperty
@@ -1028,8 +1029,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BatchTransformInputProperty):
-          BatchTransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BatchTransformInputProperty
+          BatchTransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchTransformInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchTransformInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BatchTransformInputProperty
@@ -1122,7 +1123,7 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty):
-          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as JsonProperty
+          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.JsonProperty = (wrapped as
@@ -1343,7 +1344,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.EndpointInputProperty):
-          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointInputProperty
+          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.EndpointInputProperty =
@@ -1597,8 +1599,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringAppSpecificationProperty):
-          MonitoringAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringAppSpecificationProperty
+          MonitoringAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringAppSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringAppSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringAppSpecificationProperty
@@ -1753,8 +1755,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty):
-          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringOutputConfigProperty
+          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringOutputConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputConfigProperty
@@ -1942,7 +1944,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty):
-          MonitoringInputProperty = CdkObjectWrappers.wrap(cdkObject) as MonitoringInputProperty
+          MonitoringInputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringInputProperty =
@@ -2109,7 +2112,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.VpcConfigProperty =
@@ -2385,8 +2389,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringExecutionSummaryProperty):
-          MonitoringExecutionSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringExecutionSummaryProperty
+          MonitoringExecutionSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringExecutionSummaryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringExecutionSummaryProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringExecutionSummaryProperty
@@ -2506,7 +2510,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty):
-          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as MonitoringOutputProperty
+          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitoringOutputProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringOutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringOutputProperty =
@@ -2588,8 +2593,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty):
-          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConstraintsResourceProperty
+          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConstraintsResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConstraintsResourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ConstraintsResourceProperty
@@ -2682,7 +2687,7 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty):
-          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as CsvProperty
+          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CsvProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.CsvProperty = (wrapped as
@@ -3316,8 +3321,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringJobDefinitionProperty):
-          MonitoringJobDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringJobDefinitionProperty
+          MonitoringJobDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringJobDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringJobDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringJobDefinitionProperty
@@ -3438,8 +3443,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringResourcesProperty):
-          MonitoringResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringResourcesProperty
+          MonitoringResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringResourcesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringResourcesProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringResourcesProperty
@@ -3643,7 +3648,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty):
-          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as DatasetFormatProperty
+          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetFormatProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.DatasetFormatProperty =
@@ -3829,7 +3835,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty):
-          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ClusterConfigProperty
+          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClusterConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ClusterConfigProperty =
@@ -3912,8 +3919,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty):
-          StatisticsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StatisticsResourceProperty
+          StatisticsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatisticsResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StatisticsResourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.StatisticsResourceProperty
@@ -4278,7 +4285,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty):
-          ScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduleConfigProperty
+          ScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.ScheduleConfigProperty =
@@ -4431,7 +4439,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty):
-          S3OutputProperty = CdkObjectWrappers.wrap(cdkObject) as S3OutputProperty
+          S3OutputProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3OutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.S3OutputProperty =
@@ -4611,7 +4620,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty):
-          BaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as BaselineConfigProperty
+          BaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BaselineConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BaselineConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.BaselineConfigProperty =
@@ -4919,8 +4929,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringScheduleConfigProperty):
-          MonitoringScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringScheduleConfigProperty
+          MonitoringScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringScheduleConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringScheduleConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.MonitoringScheduleConfigProperty
@@ -5184,7 +5194,8 @@ public open class CfnMonitoringSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.NetworkConfigProperty):
-          NetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as NetworkConfigProperty
+          NetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule.NetworkConfigProperty =

@@ -584,8 +584,8 @@ public open class CfnRoom internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnRoom.MessageReviewHandlerProperty):
-          MessageReviewHandlerProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MessageReviewHandlerProperty
+          MessageReviewHandlerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MessageReviewHandlerProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MessageReviewHandlerProperty):
           software.amazon.awscdk.services.ivschat.CfnRoom.MessageReviewHandlerProperty = (wrapped as

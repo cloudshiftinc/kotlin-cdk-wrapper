@@ -862,8 +862,8 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsExecutionIntegrationOptions):
-        StepFunctionsExecutionIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as
-        StepFunctionsExecutionIntegrationOptions
+        StepFunctionsExecutionIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        StepFunctionsExecutionIntegrationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StepFunctionsExecutionIntegrationOptions):
         software.amazon.awscdk.services.apigateway.StepFunctionsExecutionIntegrationOptions =

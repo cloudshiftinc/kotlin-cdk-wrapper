@@ -250,8 +250,8 @@ public interface CliCredentialsStackSynthesizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CliCredentialsStackSynthesizerProps):
-        CliCredentialsStackSynthesizerProps = CdkObjectWrappers.wrap(cdkObject) as
-        CliCredentialsStackSynthesizerProps
+        CliCredentialsStackSynthesizerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CliCredentialsStackSynthesizerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CliCredentialsStackSynthesizerProps):
         software.amazon.awscdk.CliCredentialsStackSynthesizerProps = (wrapped as

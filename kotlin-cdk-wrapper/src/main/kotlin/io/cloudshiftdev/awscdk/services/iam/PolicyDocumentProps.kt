@@ -190,7 +190,8 @@ public interface PolicyDocumentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.PolicyDocumentProps):
-        PolicyDocumentProps = CdkObjectWrappers.wrap(cdkObject) as PolicyDocumentProps
+        PolicyDocumentProps = CdkObjectWrappers.wrap(cdkObject) as? PolicyDocumentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PolicyDocumentProps):
         software.amazon.awscdk.services.iam.PolicyDocumentProps = (wrapped as CdkObject).cdkObject

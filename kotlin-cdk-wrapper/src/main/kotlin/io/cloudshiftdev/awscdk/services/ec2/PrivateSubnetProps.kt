@@ -171,7 +171,8 @@ public interface PrivateSubnetProps : SubnetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnetProps):
-        PrivateSubnetProps = CdkObjectWrappers.wrap(cdkObject) as PrivateSubnetProps
+        PrivateSubnetProps = CdkObjectWrappers.wrap(cdkObject) as? PrivateSubnetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PrivateSubnetProps):
         software.amazon.awscdk.services.ec2.PrivateSubnetProps = (wrapped as CdkObject).cdkObject as

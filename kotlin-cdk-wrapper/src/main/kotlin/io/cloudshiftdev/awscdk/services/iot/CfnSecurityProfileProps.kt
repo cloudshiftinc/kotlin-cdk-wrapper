@@ -481,7 +481,8 @@ public interface CfnSecurityProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfileProps):
-        CfnSecurityProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnSecurityProfileProps
+        CfnSecurityProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSecurityProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityProfileProps):
         software.amazon.awscdk.services.iot.CfnSecurityProfileProps = (wrapped as

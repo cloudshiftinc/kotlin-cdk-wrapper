@@ -801,7 +801,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment.MaintenanceWindowProperty):
-          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as MaintenanceWindowProperty
+          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceWindowProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaintenanceWindowProperty):
           software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment.MaintenanceWindowProperty

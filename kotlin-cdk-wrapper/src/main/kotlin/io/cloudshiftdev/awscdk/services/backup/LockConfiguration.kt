@@ -209,7 +209,8 @@ public interface LockConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.LockConfiguration):
-        LockConfiguration = CdkObjectWrappers.wrap(cdkObject) as LockConfiguration
+        LockConfiguration = CdkObjectWrappers.wrap(cdkObject) as? LockConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LockConfiguration):
         software.amazon.awscdk.services.backup.LockConfiguration = (wrapped as CdkObject).cdkObject

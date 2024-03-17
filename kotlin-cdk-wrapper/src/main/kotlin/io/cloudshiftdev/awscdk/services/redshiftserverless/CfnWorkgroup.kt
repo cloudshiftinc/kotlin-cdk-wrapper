@@ -879,7 +879,8 @@ public open class CfnWorkgroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.ConfigParameterProperty):
-          ConfigParameterProperty = CdkObjectWrappers.wrap(cdkObject) as ConfigParameterProperty
+          ConfigParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigParameterProperty):
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.ConfigParameterProperty =
@@ -1043,7 +1044,8 @@ public open class CfnWorkgroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty):
-          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as NetworkInterfaceProperty
+          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkInterfaceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkInterfaceProperty):
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty =
@@ -1210,7 +1212,8 @@ public open class CfnWorkgroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty):
-          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointProperty
+          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty =
@@ -1386,7 +1389,8 @@ public open class CfnWorkgroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.VpcEndpointProperty):
-          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as VpcEndpointProperty
+          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcEndpointProperty):
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.VpcEndpointProperty =
@@ -2012,7 +2016,8 @@ public open class CfnWorkgroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.WorkgroupProperty):
-          WorkgroupProperty = CdkObjectWrappers.wrap(cdkObject) as WorkgroupProperty
+          WorkgroupProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkgroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkgroupProperty):
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.WorkgroupProperty =

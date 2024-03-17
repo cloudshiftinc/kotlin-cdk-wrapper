@@ -590,8 +590,8 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.ManagedComputeEnvironmentProps):
-        ManagedComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        ManagedComputeEnvironmentProps
+        ManagedComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ManagedComputeEnvironmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ManagedComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.ManagedComputeEnvironmentProps = (wrapped as

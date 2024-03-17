@@ -228,7 +228,7 @@ public interface PasswordPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.PasswordPolicy):
-        PasswordPolicy = CdkObjectWrappers.wrap(cdkObject) as PasswordPolicy
+        PasswordPolicy = CdkObjectWrappers.wrap(cdkObject) as? PasswordPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PasswordPolicy):
         software.amazon.awscdk.services.cognito.PasswordPolicy = (wrapped as CdkObject).cdkObject as

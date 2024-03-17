@@ -425,7 +425,8 @@ public interface BucketAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.BucketAttributes):
-        BucketAttributes = CdkObjectWrappers.wrap(cdkObject) as BucketAttributes
+        BucketAttributes = CdkObjectWrappers.wrap(cdkObject) as? BucketAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketAttributes):
         software.amazon.awscdk.services.s3.BucketAttributes = (wrapped as CdkObject).cdkObject as

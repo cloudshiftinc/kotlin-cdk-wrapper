@@ -141,7 +141,8 @@ public interface CfnSizeConstraintSetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSetProps):
-        CfnSizeConstraintSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnSizeConstraintSetProps
+        CfnSizeConstraintSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSizeConstraintSetProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSizeConstraintSetProps):
         software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSetProps = (wrapped as

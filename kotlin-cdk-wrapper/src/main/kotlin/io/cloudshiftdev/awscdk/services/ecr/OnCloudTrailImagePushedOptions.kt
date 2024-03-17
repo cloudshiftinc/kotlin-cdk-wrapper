@@ -240,8 +240,8 @@ public interface OnCloudTrailImagePushedOptions : OnEventOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions):
-        OnCloudTrailImagePushedOptions = CdkObjectWrappers.wrap(cdkObject) as
-        OnCloudTrailImagePushedOptions
+        OnCloudTrailImagePushedOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        OnCloudTrailImagePushedOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OnCloudTrailImagePushedOptions):
         software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions = (wrapped as

@@ -186,7 +186,8 @@ public interface CfnPricingPlanProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingPlanProps):
-        CfnPricingPlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnPricingPlanProps
+        CfnPricingPlanProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPricingPlanProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPricingPlanProps):
         software.amazon.awscdk.services.billingconductor.CfnPricingPlanProps = (wrapped as

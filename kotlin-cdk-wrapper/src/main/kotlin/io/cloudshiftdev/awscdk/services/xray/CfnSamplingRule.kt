@@ -939,8 +939,8 @@ public open class CfnSamplingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty):
-          SamplingRuleUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SamplingRuleUpdateProperty
+          SamplingRuleUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SamplingRuleUpdateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SamplingRuleUpdateProperty):
           software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty = (wrapped
@@ -1112,8 +1112,8 @@ public open class CfnSamplingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty):
-          SamplingRuleRecordProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SamplingRuleRecordProperty
+          SamplingRuleRecordProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SamplingRuleRecordProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SamplingRuleRecordProperty):
           software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty = (wrapped
@@ -1616,7 +1616,8 @@ public open class CfnSamplingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty):
-          SamplingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as SamplingRuleProperty
+          SamplingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? SamplingRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SamplingRuleProperty):
           software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty = (wrapped as

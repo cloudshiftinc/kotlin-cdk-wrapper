@@ -25,6 +25,10 @@ import kotlin.jvm.JvmName
 public abstract class ImportSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
+  ) : ImportSource(cdkObject)
+
   public companion object {
     public fun fromAsset(path: String): ImportSource =
         software.amazon.awscdk.services.cloudfront.ImportSource.fromAsset(path).let(ImportSource::wrap)
@@ -43,7 +47,7 @@ public abstract class ImportSource internal constructor(
         key).let(ImportSource::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource):
-        ImportSource = CdkObjectWrappers.wrap(cdkObject) as ImportSource
+        ImportSource = CdkObjectWrappers.wrap(cdkObject) as? ImportSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ImportSource):
         software.amazon.awscdk.services.cloudfront.ImportSource = (wrapped as CdkObject).cdkObject

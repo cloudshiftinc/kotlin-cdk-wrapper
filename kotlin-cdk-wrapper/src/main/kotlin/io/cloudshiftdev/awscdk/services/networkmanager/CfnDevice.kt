@@ -689,7 +689,8 @@ public open class CfnDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice.AWSLocationProperty):
-          AWSLocationProperty = CdkObjectWrappers.wrap(cdkObject) as AWSLocationProperty
+          AWSLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? AWSLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AWSLocationProperty):
           software.amazon.awscdk.services.networkmanager.CfnDevice.AWSLocationProperty = (wrapped as
@@ -823,7 +824,8 @@ public open class CfnDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice.LocationProperty):
-          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as LocationProperty
+          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LocationProperty):
           software.amazon.awscdk.services.networkmanager.CfnDevice.LocationProperty = (wrapped as

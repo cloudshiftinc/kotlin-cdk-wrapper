@@ -104,7 +104,8 @@ public interface InstanceProfileAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.InstanceProfileAttributes):
-        InstanceProfileAttributes = CdkObjectWrappers.wrap(cdkObject) as InstanceProfileAttributes
+        InstanceProfileAttributes = CdkObjectWrappers.wrap(cdkObject) as? InstanceProfileAttributes
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceProfileAttributes):
         software.amazon.awscdk.services.iam.InstanceProfileAttributes = (wrapped as

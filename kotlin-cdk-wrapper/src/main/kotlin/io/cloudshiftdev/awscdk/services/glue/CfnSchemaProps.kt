@@ -383,7 +383,7 @@ public interface CfnSchemaProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchemaProps):
-        CfnSchemaProps = CdkObjectWrappers.wrap(cdkObject) as CfnSchemaProps
+        CfnSchemaProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSchemaProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchemaProps):
         software.amazon.awscdk.services.glue.CfnSchemaProps = (wrapped as CdkObject).cdkObject as

@@ -137,7 +137,8 @@ public interface EncryptionAtRestOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions):
-        EncryptionAtRestOptions = CdkObjectWrappers.wrap(cdkObject) as EncryptionAtRestOptions
+        EncryptionAtRestOptions = CdkObjectWrappers.wrap(cdkObject) as? EncryptionAtRestOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EncryptionAtRestOptions):
         software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions = (wrapped as

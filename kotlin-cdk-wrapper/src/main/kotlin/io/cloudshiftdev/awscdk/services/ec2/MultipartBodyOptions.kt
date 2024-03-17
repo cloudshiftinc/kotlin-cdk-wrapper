@@ -151,7 +151,8 @@ public interface MultipartBodyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MultipartBodyOptions):
-        MultipartBodyOptions = CdkObjectWrappers.wrap(cdkObject) as MultipartBodyOptions
+        MultipartBodyOptions = CdkObjectWrappers.wrap(cdkObject) as? MultipartBodyOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MultipartBodyOptions):
         software.amazon.awscdk.services.ec2.MultipartBodyOptions = (wrapped as CdkObject).cdkObject

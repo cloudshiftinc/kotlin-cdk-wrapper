@@ -643,7 +643,8 @@ public interface CfnTopicRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleProps):
-        CfnTopicRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnTopicRuleProps
+        CfnTopicRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTopicRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTopicRuleProps):
         software.amazon.awscdk.services.iot.CfnTopicRuleProps = (wrapped as CdkObject).cdkObject as

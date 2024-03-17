@@ -69,7 +69,7 @@ public interface EncodingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.EncodingOptions): EncodingOptions =
-        CdkObjectWrappers.wrap(cdkObject) as EncodingOptions
+        CdkObjectWrappers.wrap(cdkObject) as? EncodingOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EncodingOptions): software.amazon.awscdk.EncodingOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.EncodingOptions

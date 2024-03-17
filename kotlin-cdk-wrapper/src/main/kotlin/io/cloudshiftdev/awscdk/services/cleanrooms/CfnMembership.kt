@@ -589,8 +589,8 @@ public open class CfnMembership internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty):
-          MembershipPaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MembershipPaymentConfigurationProperty
+          MembershipPaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipPaymentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MembershipPaymentConfigurationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty
@@ -729,8 +729,8 @@ public open class CfnMembership internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty):
-          ProtectedQueryS3OutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProtectedQueryS3OutputConfigurationProperty
+          ProtectedQueryS3OutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProtectedQueryS3OutputConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProtectedQueryS3OutputConfigurationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty
@@ -886,8 +886,8 @@ public open class CfnMembership internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty):
-          MembershipQueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MembershipQueryComputePaymentConfigProperty
+          MembershipQueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MembershipQueryComputePaymentConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MembershipQueryComputePaymentConfigProperty):
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty
@@ -1043,8 +1043,8 @@ public open class CfnMembership internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryResultConfigurationProperty):
-          MembershipProtectedQueryResultConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MembershipProtectedQueryResultConfigurationProperty
+          MembershipProtectedQueryResultConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? MembershipProtectedQueryResultConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MembershipProtectedQueryResultConfigurationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryResultConfigurationProperty
@@ -1161,8 +1161,8 @@ public open class CfnMembership internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty):
-          MembershipProtectedQueryOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MembershipProtectedQueryOutputConfigurationProperty
+          MembershipProtectedQueryOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? MembershipProtectedQueryOutputConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MembershipProtectedQueryOutputConfigurationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty

@@ -301,7 +301,8 @@ public interface MathExpressionProps : MathExpressionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.MathExpressionProps):
-        MathExpressionProps = CdkObjectWrappers.wrap(cdkObject) as MathExpressionProps
+        MathExpressionProps = CdkObjectWrappers.wrap(cdkObject) as? MathExpressionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MathExpressionProps):
         software.amazon.awscdk.services.cloudwatch.MathExpressionProps = (wrapped as

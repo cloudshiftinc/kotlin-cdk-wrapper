@@ -42,6 +42,10 @@ public abstract class Schedule internal constructor(
    */
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.applicationautoscaling.Schedule,
+  ) : Schedule(cdkObject)
+
   public companion object {
     public fun at(moment: Instant): Schedule =
         software.amazon.awscdk.services.applicationautoscaling.Schedule.at(moment).let(Schedule::wrap)
@@ -60,7 +64,7 @@ public abstract class Schedule internal constructor(
         software.amazon.awscdk.services.applicationautoscaling.Schedule.rate(duration.let(Duration::unwrap)).let(Schedule::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.Schedule):
-        Schedule = CdkObjectWrappers.wrap(cdkObject) as Schedule
+        Schedule = CdkObjectWrappers.wrap(cdkObject) as? Schedule ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Schedule):
         software.amazon.awscdk.services.applicationautoscaling.Schedule = (wrapped as

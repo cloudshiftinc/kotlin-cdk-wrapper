@@ -300,7 +300,8 @@ public interface CfnConnectPeerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeerProps):
-        CfnConnectPeerProps = CdkObjectWrappers.wrap(cdkObject) as CfnConnectPeerProps
+        CfnConnectPeerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConnectPeerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectPeerProps):
         software.amazon.awscdk.services.networkmanager.CfnConnectPeerProps = (wrapped as

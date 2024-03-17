@@ -353,7 +353,8 @@ public interface CfnAPNSChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSChannelProps):
-        CfnAPNSChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnAPNSChannelProps
+        CfnAPNSChannelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAPNSChannelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAPNSChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnAPNSChannelProps = (wrapped as

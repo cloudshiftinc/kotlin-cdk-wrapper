@@ -481,8 +481,8 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskImageOptions):
-        ScheduledFargateTaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ScheduledFargateTaskImageOptions
+        ScheduledFargateTaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ScheduledFargateTaskImageOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledFargateTaskImageOptions):
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskImageOptions = (wrapped as

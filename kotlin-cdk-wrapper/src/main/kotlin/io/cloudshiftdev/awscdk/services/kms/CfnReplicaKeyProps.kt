@@ -797,7 +797,8 @@ public interface CfnReplicaKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.CfnReplicaKeyProps):
-        CfnReplicaKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnReplicaKeyProps
+        CfnReplicaKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReplicaKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicaKeyProps):
         software.amazon.awscdk.services.kms.CfnReplicaKeyProps = (wrapped as CdkObject).cdkObject as

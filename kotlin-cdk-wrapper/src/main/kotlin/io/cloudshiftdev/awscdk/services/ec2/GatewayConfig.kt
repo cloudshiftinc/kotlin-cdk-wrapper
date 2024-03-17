@@ -92,7 +92,7 @@ public interface GatewayConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.GatewayConfig): GatewayConfig =
-        CdkObjectWrappers.wrap(cdkObject) as GatewayConfig
+        CdkObjectWrappers.wrap(cdkObject) as? GatewayConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayConfig): software.amazon.awscdk.services.ec2.GatewayConfig =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.GatewayConfig

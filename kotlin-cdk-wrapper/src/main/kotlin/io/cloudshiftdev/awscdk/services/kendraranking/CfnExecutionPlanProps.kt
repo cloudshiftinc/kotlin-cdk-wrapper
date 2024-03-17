@@ -273,7 +273,8 @@ public interface CfnExecutionPlanProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kendraranking.CfnExecutionPlanProps):
-        CfnExecutionPlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnExecutionPlanProps
+        CfnExecutionPlanProps = CdkObjectWrappers.wrap(cdkObject) as? CfnExecutionPlanProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnExecutionPlanProps):
         software.amazon.awscdk.services.kendraranking.CfnExecutionPlanProps = (wrapped as

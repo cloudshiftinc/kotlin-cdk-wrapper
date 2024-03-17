@@ -178,7 +178,8 @@ public interface ManagedRuleProps : RuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.ManagedRuleProps):
-        ManagedRuleProps = CdkObjectWrappers.wrap(cdkObject) as ManagedRuleProps
+        ManagedRuleProps = CdkObjectWrappers.wrap(cdkObject) as? ManagedRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ManagedRuleProps):
         software.amazon.awscdk.services.config.ManagedRuleProps = (wrapped as CdkObject).cdkObject

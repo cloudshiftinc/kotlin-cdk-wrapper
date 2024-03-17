@@ -118,8 +118,8 @@ public interface ResponseHeadersContentTypeOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOptions):
-        ResponseHeadersContentTypeOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseHeadersContentTypeOptions
+        ResponseHeadersContentTypeOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersContentTypeOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersContentTypeOptions):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOptions = (wrapped as

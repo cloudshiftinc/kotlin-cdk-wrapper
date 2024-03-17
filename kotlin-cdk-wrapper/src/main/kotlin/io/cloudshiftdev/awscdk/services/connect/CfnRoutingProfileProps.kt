@@ -374,7 +374,8 @@ public interface CfnRoutingProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfileProps):
-        CfnRoutingProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnRoutingProfileProps
+        CfnRoutingProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRoutingProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoutingProfileProps):
         software.amazon.awscdk.services.connect.CfnRoutingProfileProps = (wrapped as

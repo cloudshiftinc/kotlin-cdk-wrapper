@@ -435,8 +435,8 @@ public interface CfnAutoScalingRollingUpdate {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnAutoScalingRollingUpdate):
-        CfnAutoScalingRollingUpdate = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAutoScalingRollingUpdate
+        CfnAutoScalingRollingUpdate = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAutoScalingRollingUpdate ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutoScalingRollingUpdate):
         software.amazon.awscdk.CfnAutoScalingRollingUpdate = (wrapped as CdkObject).cdkObject as

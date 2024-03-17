@@ -716,8 +716,8 @@ public open class CfnConfigurationTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty):
-          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SourceConfigurationProperty
+          SourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConfigurationProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty
@@ -902,8 +902,8 @@ public open class CfnConfigurationTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty):
-          ConfigurationOptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConfigurationOptionSettingProperty
+          ConfigurationOptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationOptionSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationOptionSettingProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty

@@ -298,7 +298,8 @@ public interface CfnComponentVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersionProps):
-        CfnComponentVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnComponentVersionProps
+        CfnComponentVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnComponentVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnComponentVersionProps):
         software.amazon.awscdk.services.greengrassv2.CfnComponentVersionProps = (wrapped as

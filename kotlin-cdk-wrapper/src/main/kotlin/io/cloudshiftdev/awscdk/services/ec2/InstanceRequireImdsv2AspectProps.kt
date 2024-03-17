@@ -129,8 +129,8 @@ public interface InstanceRequireImdsv2AspectProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InstanceRequireImdsv2AspectProps):
-        InstanceRequireImdsv2AspectProps = CdkObjectWrappers.wrap(cdkObject) as
-        InstanceRequireImdsv2AspectProps
+        InstanceRequireImdsv2AspectProps = CdkObjectWrappers.wrap(cdkObject) as?
+        InstanceRequireImdsv2AspectProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceRequireImdsv2AspectProps):
         software.amazon.awscdk.services.ec2.InstanceRequireImdsv2AspectProps = (wrapped as

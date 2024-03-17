@@ -150,8 +150,8 @@ public interface InterfaceVpcEndpointAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes):
-        InterfaceVpcEndpointAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        InterfaceVpcEndpointAttributes
+        InterfaceVpcEndpointAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        InterfaceVpcEndpointAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InterfaceVpcEndpointAttributes):
         software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes = (wrapped as

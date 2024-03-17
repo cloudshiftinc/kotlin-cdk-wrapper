@@ -1011,8 +1011,8 @@ public open class CfnFeatureGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OfflineStoreConfigProperty):
-          OfflineStoreConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OfflineStoreConfigProperty
+          OfflineStoreConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OfflineStoreConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OfflineStoreConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OfflineStoreConfigProperty =
@@ -1190,7 +1190,8 @@ public open class CfnFeatureGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty):
-          ThroughputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ThroughputConfigProperty
+          ThroughputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ThroughputConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThroughputConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty =
@@ -1356,8 +1357,8 @@ public open class CfnFeatureGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty):
-          OnlineStoreSecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OnlineStoreSecurityConfigProperty
+          OnlineStoreSecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnlineStoreSecurityConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnlineStoreSecurityConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty
@@ -1485,7 +1486,8 @@ public open class CfnFeatureGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty):
-          FeatureDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as FeatureDefinitionProperty
+          FeatureDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FeatureDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FeatureDefinitionProperty):
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty =
@@ -1621,7 +1623,8 @@ public open class CfnFeatureGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty):
-          DataCatalogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DataCatalogConfigProperty
+          DataCatalogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCatalogConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataCatalogConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty =
@@ -1733,7 +1736,8 @@ public open class CfnFeatureGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty):
-          TtlDurationProperty = CdkObjectWrappers.wrap(cdkObject) as TtlDurationProperty
+          TtlDurationProperty = CdkObjectWrappers.wrap(cdkObject) as? TtlDurationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TtlDurationProperty):
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty = (wrapped
@@ -2054,7 +2058,8 @@ public open class CfnFeatureGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreConfigProperty):
-          OnlineStoreConfigProperty = CdkObjectWrappers.wrap(cdkObject) as OnlineStoreConfigProperty
+          OnlineStoreConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnlineStoreConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnlineStoreConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreConfigProperty =
@@ -2193,7 +2198,8 @@ public open class CfnFeatureGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.S3StorageConfigProperty):
-          S3StorageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as S3StorageConfigProperty
+          S3StorageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? S3StorageConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3StorageConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.S3StorageConfigProperty =

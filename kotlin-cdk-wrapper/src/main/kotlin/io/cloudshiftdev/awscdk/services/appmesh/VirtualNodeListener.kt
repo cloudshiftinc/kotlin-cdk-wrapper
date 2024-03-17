@@ -55,6 +55,10 @@ public abstract class VirtualNodeListener internal constructor(
   public open fun bind(scope: Construct): VirtualNodeListenerConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualNodeListenerConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListener,
+  ) : VirtualNodeListener(cdkObject)
+
   public companion object {
     public fun grpc(): VirtualNodeListener =
         software.amazon.awscdk.services.appmesh.VirtualNodeListener.grpc().let(VirtualNodeListener::wrap)
@@ -101,7 +105,8 @@ public abstract class VirtualNodeListener internal constructor(
         tcp(TcpVirtualNodeListenerOptions(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListener):
-        VirtualNodeListener = CdkObjectWrappers.wrap(cdkObject) as VirtualNodeListener
+        VirtualNodeListener = CdkObjectWrappers.wrap(cdkObject) as? VirtualNodeListener ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualNodeListener):
         software.amazon.awscdk.services.appmesh.VirtualNodeListener = (wrapped as

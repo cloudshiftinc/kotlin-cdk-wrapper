@@ -563,8 +563,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty):
-          ApiGatewayProxyInputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApiGatewayProxyInputProperty
+          ApiGatewayProxyInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApiGatewayProxyInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApiGatewayProxyInputProperty):
           software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty

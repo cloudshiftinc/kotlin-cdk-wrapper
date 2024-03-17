@@ -883,7 +883,8 @@ public interface CodeBuildStepProps : ShellStepProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodeBuildStepProps):
-        CodeBuildStepProps = CdkObjectWrappers.wrap(cdkObject) as CodeBuildStepProps
+        CodeBuildStepProps = CdkObjectWrappers.wrap(cdkObject) as? CodeBuildStepProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildStepProps):
         software.amazon.awscdk.pipelines.CodeBuildStepProps = (wrapped as CdkObject).cdkObject as

@@ -742,8 +742,8 @@ public open class CfnMatchingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty):
-          RuleBasedPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RuleBasedPropertiesProperty
+          RuleBasedPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RuleBasedPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleBasedPropertiesProperty):
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty
@@ -1004,7 +1004,8 @@ public open class CfnMatchingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputSourceProperty):
-          OutputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as OutputSourceProperty
+          OutputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputSourceProperty):
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputSourceProperty
@@ -1211,8 +1212,8 @@ public open class CfnMatchingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ProviderPropertiesProperty):
-          ProviderPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProviderPropertiesProperty
+          ProviderPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProviderPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProviderPropertiesProperty):
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ProviderPropertiesProperty
@@ -1435,8 +1436,8 @@ public open class CfnMatchingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ResolutionTechniquesProperty):
-          ResolutionTechniquesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResolutionTechniquesProperty
+          ResolutionTechniquesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResolutionTechniquesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResolutionTechniquesProperty):
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ResolutionTechniquesProperty
@@ -1611,7 +1612,8 @@ public open class CfnMatchingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty):
-          InputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as InputSourceProperty
+          InputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputSourceProperty):
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty =
@@ -1703,8 +1705,8 @@ public open class CfnMatchingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty):
-          IntermediateSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IntermediateSourceConfigurationProperty
+          IntermediateSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntermediateSourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntermediateSourceConfigurationProperty):
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty
@@ -1835,7 +1837,8 @@ public open class CfnMatchingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty):
-          OutputAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as OutputAttributeProperty
+          OutputAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputAttributeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputAttributeProperty):
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty
@@ -1969,7 +1972,7 @@ public open class CfnMatchingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleProperty):
-          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleProperty =

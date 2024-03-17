@@ -102,7 +102,8 @@ public interface WorkmailActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.WorkmailActionConfig):
-        WorkmailActionConfig = CdkObjectWrappers.wrap(cdkObject) as WorkmailActionConfig
+        WorkmailActionConfig = CdkObjectWrappers.wrap(cdkObject) as? WorkmailActionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WorkmailActionConfig):
         software.amazon.awscdk.services.ses.WorkmailActionConfig = (wrapped as CdkObject).cdkObject

@@ -269,7 +269,7 @@ public interface HttpRouteMatch {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpRouteMatch):
-        HttpRouteMatch = CdkObjectWrappers.wrap(cdkObject) as HttpRouteMatch
+        HttpRouteMatch = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteMatch ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteMatch):
         software.amazon.awscdk.services.appmesh.HttpRouteMatch = (wrapped as CdkObject).cdkObject as

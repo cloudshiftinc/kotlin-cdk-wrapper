@@ -178,7 +178,8 @@ public interface CfnAttributeGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupProps):
-        CfnAttributeGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnAttributeGroupProps
+        CfnAttributeGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAttributeGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAttributeGroupProps):
         software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupProps = (wrapped

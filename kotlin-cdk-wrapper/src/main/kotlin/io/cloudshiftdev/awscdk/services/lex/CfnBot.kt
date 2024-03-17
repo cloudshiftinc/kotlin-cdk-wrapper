@@ -886,7 +886,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.PlainTextMessageProperty):
-          PlainTextMessageProperty = CdkObjectWrappers.wrap(cdkObject) as PlainTextMessageProperty
+          PlainTextMessageProperty = CdkObjectWrappers.wrap(cdkObject) as? PlainTextMessageProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlainTextMessageProperty):
           software.amazon.awscdk.services.lex.CfnBot.PlainTextMessageProperty = (wrapped as
@@ -1021,8 +1022,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueRegexFilterProperty):
-          SlotValueRegexFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SlotValueRegexFilterProperty
+          SlotValueRegexFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlotValueRegexFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotValueRegexFilterProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotValueRegexFilterProperty = (wrapped as
@@ -1352,8 +1353,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.PromptSpecificationProperty):
-          PromptSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PromptSpecificationProperty
+          PromptSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PromptSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PromptSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.PromptSpecificationProperty = (wrapped as
@@ -1453,8 +1454,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SentimentAnalysisSettingsProperty):
-          SentimentAnalysisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SentimentAnalysisSettingsProperty
+          SentimentAnalysisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SentimentAnalysisSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SentimentAnalysisSettingsProperty):
           software.amazon.awscdk.services.lex.CfnBot.SentimentAnalysisSettingsProperty = (wrapped as
@@ -1603,7 +1604,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.OutputContextProperty):
-          OutputContextProperty = CdkObjectWrappers.wrap(cdkObject) as OutputContextProperty
+          OutputContextProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputContextProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputContextProperty):
           software.amazon.awscdk.services.lex.CfnBot.OutputContextProperty = (wrapped as
@@ -1753,8 +1755,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueOverrideMapProperty):
-          SlotValueOverrideMapProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SlotValueOverrideMapProperty
+          SlotValueOverrideMapProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlotValueOverrideMapProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotValueOverrideMapProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotValueOverrideMapProperty = (wrapped as
@@ -1968,8 +1970,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.AudioAndDTMFInputSpecificationProperty):
-          AudioAndDTMFInputSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioAndDTMFInputSpecificationProperty
+          AudioAndDTMFInputSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioAndDTMFInputSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioAndDTMFInputSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.AudioAndDTMFInputSpecificationProperty =
@@ -2216,8 +2218,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdateResponseSpecificationProperty):
-          FulfillmentUpdateResponseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FulfillmentUpdateResponseSpecificationProperty
+          FulfillmentUpdateResponseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FulfillmentUpdateResponseSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FulfillmentUpdateResponseSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdateResponseSpecificationProperty
@@ -2348,8 +2350,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ElicitationCodeHookInvocationSettingProperty):
-          ElicitationCodeHookInvocationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ElicitationCodeHookInvocationSettingProperty
+          ElicitationCodeHookInvocationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElicitationCodeHookInvocationSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ElicitationCodeHookInvocationSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.ElicitationCodeHookInvocationSettingProperty =
@@ -2474,8 +2476,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotDefaultValueSpecificationProperty):
-          SlotDefaultValueSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SlotDefaultValueSpecificationProperty
+          SlotDefaultValueSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlotDefaultValueSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotDefaultValueSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotDefaultValueSpecificationProperty =
@@ -2617,8 +2619,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.S3BucketLogDestinationProperty):
-          S3BucketLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3BucketLogDestinationProperty
+          S3BucketLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3BucketLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3BucketLogDestinationProperty):
           software.amazon.awscdk.services.lex.CfnBot.S3BucketLogDestinationProperty = (wrapped as
@@ -2789,8 +2791,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BotAliasLocaleSettingsProperty):
-          BotAliasLocaleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BotAliasLocaleSettingsProperty
+          BotAliasLocaleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BotAliasLocaleSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BotAliasLocaleSettingsProperty):
           software.amazon.awscdk.services.lex.CfnBot.BotAliasLocaleSettingsProperty = (wrapped as
@@ -3198,8 +3200,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueElicitationSettingProperty):
-          SlotValueElicitationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SlotValueElicitationSettingProperty
+          SlotValueElicitationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlotValueElicitationSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotValueElicitationSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotValueElicitationSettingProperty = (wrapped
@@ -3807,8 +3809,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.PostDialogCodeHookInvocationSpecificationProperty):
-          PostDialogCodeHookInvocationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PostDialogCodeHookInvocationSpecificationProperty
+          PostDialogCodeHookInvocationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PostDialogCodeHookInvocationSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PostDialogCodeHookInvocationSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.PostDialogCodeHookInvocationSpecificationProperty
@@ -3885,7 +3887,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SSMLMessageProperty):
-          SSMLMessageProperty = CdkObjectWrappers.wrap(cdkObject) as SSMLMessageProperty
+          SSMLMessageProperty = CdkObjectWrappers.wrap(cdkObject) as? SSMLMessageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SSMLMessageProperty):
           software.amazon.awscdk.services.lex.CfnBot.SSMLMessageProperty = (wrapped as
@@ -4021,8 +4024,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.GrammarSlotTypeSourceProperty):
-          GrammarSlotTypeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GrammarSlotTypeSourceProperty
+          GrammarSlotTypeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GrammarSlotTypeSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrammarSlotTypeSourceProperty):
           software.amazon.awscdk.services.lex.CfnBot.GrammarSlotTypeSourceProperty = (wrapped as
@@ -4245,7 +4248,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ImageResponseCardProperty):
-          ImageResponseCardProperty = CdkObjectWrappers.wrap(cdkObject) as ImageResponseCardProperty
+          ImageResponseCardProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageResponseCardProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageResponseCardProperty):
           software.amazon.awscdk.services.lex.CfnBot.ImageResponseCardProperty = (wrapped as
@@ -4515,8 +4519,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.StillWaitingResponseSpecificationProperty):
-          StillWaitingResponseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StillWaitingResponseSpecificationProperty
+          StillWaitingResponseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StillWaitingResponseSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StillWaitingResponseSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.StillWaitingResponseSpecificationProperty =
@@ -4790,8 +4794,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.TestBotAliasSettingsProperty):
-          TestBotAliasSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TestBotAliasSettingsProperty
+          TestBotAliasSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TestBotAliasSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TestBotAliasSettingsProperty):
           software.amazon.awscdk.services.lex.CfnBot.TestBotAliasSettingsProperty = (wrapped as
@@ -5034,8 +5038,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DefaultConditionalBranchProperty):
-          DefaultConditionalBranchProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DefaultConditionalBranchProperty
+          DefaultConditionalBranchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultConditionalBranchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultConditionalBranchProperty):
           software.amazon.awscdk.services.lex.CfnBot.DefaultConditionalBranchProperty = (wrapped as
@@ -5197,7 +5201,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentOverrideProperty):
-          IntentOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as IntentOverrideProperty
+          IntentOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as? IntentOverrideProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntentOverrideProperty):
           software.amazon.awscdk.services.lex.CfnBot.IntentOverrideProperty = (wrapped as
@@ -5281,8 +5286,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.AdvancedRecognitionSettingProperty):
-          AdvancedRecognitionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdvancedRecognitionSettingProperty
+          AdvancedRecognitionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedRecognitionSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedRecognitionSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.AdvancedRecognitionSettingProperty = (wrapped
@@ -5454,7 +5459,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DTMFSpecificationProperty):
-          DTMFSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as DTMFSpecificationProperty
+          DTMFSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DTMFSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DTMFSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.DTMFSpecificationProperty = (wrapped as
@@ -5826,8 +5832,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdatesSpecificationProperty):
-          FulfillmentUpdatesSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FulfillmentUpdatesSpecificationProperty
+          FulfillmentUpdatesSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FulfillmentUpdatesSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FulfillmentUpdatesSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdatesSpecificationProperty =
@@ -6279,7 +6285,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotTypeProperty):
-          SlotTypeProperty = CdkObjectWrappers.wrap(cdkObject) as SlotTypeProperty
+          SlotTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? SlotTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotTypeProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotTypeProperty = (wrapped as
@@ -6521,8 +6528,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.FulfillmentStartResponseSpecificationProperty):
-          FulfillmentStartResponseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FulfillmentStartResponseSpecificationProperty
+          FulfillmentStartResponseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FulfillmentStartResponseSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FulfillmentStartResponseSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.FulfillmentStartResponseSpecificationProperty =
@@ -6752,8 +6759,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DialogCodeHookInvocationSettingProperty):
-          DialogCodeHookInvocationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DialogCodeHookInvocationSettingProperty
+          DialogCodeHookInvocationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DialogCodeHookInvocationSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DialogCodeHookInvocationSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.DialogCodeHookInvocationSettingProperty =
@@ -7006,7 +7013,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DialogStateProperty):
-          DialogStateProperty = CdkObjectWrappers.wrap(cdkObject) as DialogStateProperty
+          DialogStateProperty = CdkObjectWrappers.wrap(cdkObject) as? DialogStateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DialogStateProperty):
           software.amazon.awscdk.services.lex.CfnBot.DialogStateProperty = (wrapped as
@@ -7137,7 +7145,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.lex.CfnBot.S3LocationProperty = (wrapped as
@@ -7227,7 +7236,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueProperty):
-          SlotValueProperty = CdkObjectWrappers.wrap(cdkObject) as SlotValueProperty
+          SlotValueProperty = CdkObjectWrappers.wrap(cdkObject) as? SlotValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotValueProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotValueProperty = (wrapped as
@@ -7840,8 +7850,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.PostFulfillmentStatusSpecificationProperty):
-          PostFulfillmentStatusSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PostFulfillmentStatusSpecificationProperty
+          PostFulfillmentStatusSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PostFulfillmentStatusSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PostFulfillmentStatusSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.PostFulfillmentStatusSpecificationProperty =
@@ -8382,8 +8392,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentClosingSettingProperty):
-          IntentClosingSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IntentClosingSettingProperty
+          IntentClosingSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntentClosingSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntentClosingSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.IntentClosingSettingProperty = (wrapped as
@@ -8673,8 +8683,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.PromptAttemptSpecificationProperty):
-          PromptAttemptSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PromptAttemptSpecificationProperty
+          PromptAttemptSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PromptAttemptSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PromptAttemptSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.PromptAttemptSpecificationProperty = (wrapped
@@ -8804,7 +8814,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.AllowedInputTypesProperty):
-          AllowedInputTypesProperty = CdkObjectWrappers.wrap(cdkObject) as AllowedInputTypesProperty
+          AllowedInputTypesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AllowedInputTypesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AllowedInputTypesProperty):
           software.amazon.awscdk.services.lex.CfnBot.AllowedInputTypesProperty = (wrapped as
@@ -9017,7 +9028,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.MessageGroupProperty):
-          MessageGroupProperty = CdkObjectWrappers.wrap(cdkObject) as MessageGroupProperty
+          MessageGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? MessageGroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MessageGroupProperty):
           software.amazon.awscdk.services.lex.CfnBot.MessageGroupProperty = (wrapped as
@@ -9189,8 +9201,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ConversationLogSettingsProperty):
-          ConversationLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConversationLogSettingsProperty
+          ConversationLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConversationLogSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConversationLogSettingsProperty):
           software.amazon.awscdk.services.lex.CfnBot.ConversationLogSettingsProperty = (wrapped as
@@ -9485,8 +9497,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.FulfillmentCodeHookSettingProperty):
-          FulfillmentCodeHookSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FulfillmentCodeHookSettingProperty
+          FulfillmentCodeHookSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FulfillmentCodeHookSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FulfillmentCodeHookSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.FulfillmentCodeHookSettingProperty = (wrapped
@@ -9591,7 +9603,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotPriorityProperty):
-          SlotPriorityProperty = CdkObjectWrappers.wrap(cdkObject) as SlotPriorityProperty
+          SlotPriorityProperty = CdkObjectWrappers.wrap(cdkObject) as? SlotPriorityProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotPriorityProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotPriorityProperty = (wrapped as
@@ -9746,7 +9759,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.TextLogSettingProperty):
-          TextLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as TextLogSettingProperty
+          TextLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? TextLogSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TextLogSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.TextLogSettingProperty = (wrapped as
@@ -10054,8 +10068,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.InitialResponseSettingProperty):
-          InitialResponseSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InitialResponseSettingProperty
+          InitialResponseSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InitialResponseSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InitialResponseSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.InitialResponseSettingProperty = (wrapped as
@@ -10257,8 +10271,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ResponseSpecificationProperty):
-          ResponseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResponseSpecificationProperty
+          ResponseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResponseSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResponseSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.ResponseSpecificationProperty = (wrapped as
@@ -10420,7 +10434,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.AudioLogSettingProperty):
-          AudioLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as AudioLogSettingProperty
+          AudioLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? AudioLogSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioLogSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.AudioLogSettingProperty = (wrapped as
@@ -10632,7 +10647,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueOverrideProperty):
-          SlotValueOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as SlotValueOverrideProperty
+          SlotValueOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlotValueOverrideProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotValueOverrideProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotValueOverrideProperty = (wrapped as
@@ -10741,7 +10757,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SessionAttributeProperty):
-          SessionAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as SessionAttributeProperty
+          SessionAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? SessionAttributeProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SessionAttributeProperty):
           software.amazon.awscdk.services.lex.CfnBot.SessionAttributeProperty = (wrapped as
@@ -10854,8 +10871,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.GrammarSlotTypeSettingProperty):
-          GrammarSlotTypeSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GrammarSlotTypeSettingProperty
+          GrammarSlotTypeSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GrammarSlotTypeSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrammarSlotTypeSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.GrammarSlotTypeSettingProperty = (wrapped as
@@ -10948,8 +10965,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DialogCodeHookSettingProperty):
-          DialogCodeHookSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DialogCodeHookSettingProperty
+          DialogCodeHookSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DialogCodeHookSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DialogCodeHookSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.DialogCodeHookSettingProperty = (wrapped as
@@ -11032,8 +11049,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.TextInputSpecificationProperty):
-          TextInputSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TextInputSpecificationProperty
+          TextInputSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TextInputSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TextInputSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.TextInputSpecificationProperty = (wrapped as
@@ -11120,8 +11137,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ObfuscationSettingProperty):
-          ObfuscationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ObfuscationSettingProperty
+          ObfuscationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ObfuscationSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ObfuscationSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.ObfuscationSettingProperty = (wrapped as
@@ -11268,7 +11285,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DialogActionProperty):
-          DialogActionProperty = CdkObjectWrappers.wrap(cdkObject) as DialogActionProperty
+          DialogActionProperty = CdkObjectWrappers.wrap(cdkObject) as? DialogActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DialogActionProperty):
           software.amazon.awscdk.services.lex.CfnBot.DialogActionProperty = (wrapped as
@@ -11378,7 +11396,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.LambdaCodeHookProperty):
-          LambdaCodeHookProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaCodeHookProperty
+          LambdaCodeHookProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaCodeHookProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaCodeHookProperty):
           software.amazon.awscdk.services.lex.CfnBot.LambdaCodeHookProperty = (wrapped as
@@ -11494,8 +11513,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.CloudWatchLogGroupLogDestinationProperty):
-          CloudWatchLogGroupLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchLogGroupLogDestinationProperty
+          CloudWatchLogGroupLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogGroupLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogGroupLogDestinationProperty):
           software.amazon.awscdk.services.lex.CfnBot.CloudWatchLogGroupLogDestinationProperty =
@@ -11829,7 +11848,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ConditionalBranchProperty):
-          ConditionalBranchProperty = CdkObjectWrappers.wrap(cdkObject) as ConditionalBranchProperty
+          ConditionalBranchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConditionalBranchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionalBranchProperty):
           software.amazon.awscdk.services.lex.CfnBot.ConditionalBranchProperty = (wrapped as
@@ -11906,7 +11926,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SampleValueProperty):
-          SampleValueProperty = CdkObjectWrappers.wrap(cdkObject) as SampleValueProperty
+          SampleValueProperty = CdkObjectWrappers.wrap(cdkObject) as? SampleValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SampleValueProperty):
           software.amazon.awscdk.services.lex.CfnBot.SampleValueProperty = (wrapped as
@@ -11983,7 +12004,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.InputContextProperty):
-          InputContextProperty = CdkObjectWrappers.wrap(cdkObject) as InputContextProperty
+          InputContextProperty = CdkObjectWrappers.wrap(cdkObject) as? InputContextProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputContextProperty):
           software.amazon.awscdk.services.lex.CfnBot.InputContextProperty = (wrapped as
@@ -12337,7 +12359,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BotLocaleProperty):
-          BotLocaleProperty = CdkObjectWrappers.wrap(cdkObject) as BotLocaleProperty
+          BotLocaleProperty = CdkObjectWrappers.wrap(cdkObject) as? BotLocaleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BotLocaleProperty):
           software.amazon.awscdk.services.lex.CfnBot.BotLocaleProperty = (wrapped as
@@ -12450,8 +12473,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.AudioSpecificationProperty):
-          AudioSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioSpecificationProperty
+          AudioSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.AudioSpecificationProperty = (wrapped as
@@ -12574,8 +12597,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ExternalSourceSettingProperty):
-          ExternalSourceSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ExternalSourceSettingProperty
+          ExternalSourceSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExternalSourceSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExternalSourceSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.ExternalSourceSettingProperty = (wrapped as
@@ -13097,8 +13120,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotCaptureSettingProperty):
-          SlotCaptureSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SlotCaptureSettingProperty
+          SlotCaptureSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlotCaptureSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotCaptureSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotCaptureSettingProperty = (wrapped as
@@ -13214,8 +13237,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.TextLogDestinationProperty):
-          TextLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TextLogDestinationProperty
+          TextLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TextLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TextLogDestinationProperty):
           software.amazon.awscdk.services.lex.CfnBot.TextLogDestinationProperty = (wrapped as
@@ -13610,7 +13633,7 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotProperty):
-          SlotProperty = CdkObjectWrappers.wrap(cdkObject) as SlotProperty
+          SlotProperty = CdkObjectWrappers.wrap(cdkObject) as? SlotProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotProperty = (wrapped as CdkObject).cdkObject
@@ -13771,7 +13794,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotTypeValueProperty):
-          SlotTypeValueProperty = CdkObjectWrappers.wrap(cdkObject) as SlotTypeValueProperty
+          SlotTypeValueProperty = CdkObjectWrappers.wrap(cdkObject) as? SlotTypeValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotTypeValueProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotTypeValueProperty = (wrapped as
@@ -13918,8 +13942,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.BotAliasLocaleSettingsItemProperty):
-          BotAliasLocaleSettingsItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BotAliasLocaleSettingsItemProperty
+          BotAliasLocaleSettingsItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BotAliasLocaleSettingsItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BotAliasLocaleSettingsItemProperty):
           software.amazon.awscdk.services.lex.CfnBot.BotAliasLocaleSettingsItemProperty = (wrapped
@@ -14063,8 +14087,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.CustomVocabularyItemProperty):
-          CustomVocabularyItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomVocabularyItemProperty
+          CustomVocabularyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomVocabularyItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomVocabularyItemProperty):
           software.amazon.awscdk.services.lex.CfnBot.CustomVocabularyItemProperty = (wrapped as
@@ -14201,8 +14225,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.MultipleValuesSettingProperty):
-          MultipleValuesSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultipleValuesSettingProperty
+          MultipleValuesSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultipleValuesSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultipleValuesSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.MultipleValuesSettingProperty = (wrapped as
@@ -14318,7 +14342,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.CustomVocabularyProperty):
-          CustomVocabularyProperty = CdkObjectWrappers.wrap(cdkObject) as CustomVocabularyProperty
+          CustomVocabularyProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomVocabularyProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomVocabularyProperty):
           software.amazon.awscdk.services.lex.CfnBot.CustomVocabularyProperty = (wrapped as
@@ -14434,7 +14459,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ButtonProperty):
-          ButtonProperty = CdkObjectWrappers.wrap(cdkObject) as ButtonProperty
+          ButtonProperty = CdkObjectWrappers.wrap(cdkObject) as? ButtonProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ButtonProperty):
           software.amazon.awscdk.services.lex.CfnBot.ButtonProperty = (wrapped as
@@ -15259,7 +15285,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentProperty):
-          IntentProperty = CdkObjectWrappers.wrap(cdkObject) as IntentProperty
+          IntentProperty = CdkObjectWrappers.wrap(cdkObject) as? IntentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntentProperty):
           software.amazon.awscdk.services.lex.CfnBot.IntentProperty = (wrapped as
@@ -15664,8 +15691,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ConditionalSpecificationProperty):
-          ConditionalSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConditionalSpecificationProperty
+          ConditionalSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConditionalSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionalSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.ConditionalSpecificationProperty = (wrapped as
@@ -16115,8 +16142,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.WaitAndContinueSpecificationProperty):
-          WaitAndContinueSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          WaitAndContinueSpecificationProperty
+          WaitAndContinueSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WaitAndContinueSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WaitAndContinueSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.WaitAndContinueSpecificationProperty = (wrapped
@@ -16377,8 +16404,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotValueSelectionSettingProperty):
-          SlotValueSelectionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SlotValueSelectionSettingProperty
+          SlotValueSelectionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlotValueSelectionSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotValueSelectionSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotValueSelectionSettingProperty = (wrapped as
@@ -16459,7 +16486,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.CustomPayloadProperty):
-          CustomPayloadProperty = CdkObjectWrappers.wrap(cdkObject) as CustomPayloadProperty
+          CustomPayloadProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomPayloadProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomPayloadProperty):
           software.amazon.awscdk.services.lex.CfnBot.CustomPayloadProperty = (wrapped as
@@ -16633,8 +16661,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.KendraConfigurationProperty):
-          KendraConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KendraConfigurationProperty
+          KendraConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KendraConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KendraConfigurationProperty):
           software.amazon.awscdk.services.lex.CfnBot.KendraConfigurationProperty = (wrapped as
@@ -16767,7 +16795,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.VoiceSettingsProperty):
-          VoiceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as VoiceSettingsProperty
+          VoiceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? VoiceSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VoiceSettingsProperty):
           software.amazon.awscdk.services.lex.CfnBot.VoiceSettingsProperty = (wrapped as
@@ -16847,7 +16876,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SlotDefaultValueProperty):
-          SlotDefaultValueProperty = CdkObjectWrappers.wrap(cdkObject) as SlotDefaultValueProperty
+          SlotDefaultValueProperty = CdkObjectWrappers.wrap(cdkObject) as? SlotDefaultValueProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlotDefaultValueProperty):
           software.amazon.awscdk.services.lex.CfnBot.SlotDefaultValueProperty = (wrapped as
@@ -16928,7 +16958,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceProperty):
-          SampleUtteranceProperty = CdkObjectWrappers.wrap(cdkObject) as SampleUtteranceProperty
+          SampleUtteranceProperty = CdkObjectWrappers.wrap(cdkObject) as? SampleUtteranceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SampleUtteranceProperty):
           software.amazon.awscdk.services.lex.CfnBot.SampleUtteranceProperty = (wrapped as
@@ -17046,8 +17077,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.CodeHookSpecificationProperty):
-          CodeHookSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CodeHookSpecificationProperty
+          CodeHookSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeHookSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeHookSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBot.CodeHookSpecificationProperty = (wrapped as
@@ -17335,7 +17366,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.MessageProperty):
-          MessageProperty = CdkObjectWrappers.wrap(cdkObject) as MessageProperty
+          MessageProperty = CdkObjectWrappers.wrap(cdkObject) as? MessageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MessageProperty):
           software.amazon.awscdk.services.lex.CfnBot.MessageProperty = (wrapped as
@@ -18264,8 +18296,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.IntentConfirmationSettingProperty):
-          IntentConfirmationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IntentConfirmationSettingProperty
+          IntentConfirmationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntentConfirmationSettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntentConfirmationSettingProperty):
           software.amazon.awscdk.services.lex.CfnBot.IntentConfirmationSettingProperty = (wrapped as
@@ -18377,8 +18409,8 @@ public open class CfnBot internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.AudioLogDestinationProperty):
-          AudioLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioLogDestinationProperty
+          AudioLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioLogDestinationProperty):
           software.amazon.awscdk.services.lex.CfnBot.AudioLogDestinationProperty = (wrapped as
@@ -18455,7 +18487,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.ConditionProperty):
-          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as ConditionProperty
+          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionProperty):
           software.amazon.awscdk.services.lex.CfnBot.ConditionProperty = (wrapped as
@@ -18656,7 +18689,8 @@ public open class CfnBot internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBot.DataPrivacyProperty):
-          DataPrivacyProperty = CdkObjectWrappers.wrap(cdkObject) as DataPrivacyProperty
+          DataPrivacyProperty = CdkObjectWrappers.wrap(cdkObject) as? DataPrivacyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataPrivacyProperty):
           software.amazon.awscdk.services.lex.CfnBot.DataPrivacyProperty = (wrapped as

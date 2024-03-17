@@ -336,7 +336,8 @@ public interface CfnFargateProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfileProps):
-        CfnFargateProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnFargateProfileProps
+        CfnFargateProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFargateProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFargateProfileProps):
         software.amazon.awscdk.services.eks.CfnFargateProfileProps = (wrapped as

@@ -141,7 +141,8 @@ public interface UserInvitationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserInvitationConfig):
-        UserInvitationConfig = CdkObjectWrappers.wrap(cdkObject) as UserInvitationConfig
+        UserInvitationConfig = CdkObjectWrappers.wrap(cdkObject) as? UserInvitationConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserInvitationConfig):
         software.amazon.awscdk.services.cognito.UserInvitationConfig = (wrapped as

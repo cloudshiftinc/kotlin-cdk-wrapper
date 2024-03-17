@@ -128,7 +128,8 @@ public interface EcsOptimizedImageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EcsOptimizedImageOptions):
-        EcsOptimizedImageOptions = CdkObjectWrappers.wrap(cdkObject) as EcsOptimizedImageOptions
+        EcsOptimizedImageOptions = CdkObjectWrappers.wrap(cdkObject) as? EcsOptimizedImageOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsOptimizedImageOptions):
         software.amazon.awscdk.services.ecs.EcsOptimizedImageOptions = (wrapped as

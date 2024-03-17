@@ -117,7 +117,8 @@ public interface DomainAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.DomainAttributes):
-        DomainAttributes = CdkObjectWrappers.wrap(cdkObject) as DomainAttributes
+        DomainAttributes = CdkObjectWrappers.wrap(cdkObject) as? DomainAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DomainAttributes):
         software.amazon.awscdk.services.elasticsearch.DomainAttributes = (wrapped as

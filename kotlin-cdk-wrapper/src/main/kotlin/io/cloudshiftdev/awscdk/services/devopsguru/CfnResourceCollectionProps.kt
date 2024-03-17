@@ -128,7 +128,8 @@ public interface CfnResourceCollectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps):
-        CfnResourceCollectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceCollectionProps
+        CfnResourceCollectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResourceCollectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceCollectionProps):
         software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps = (wrapped as

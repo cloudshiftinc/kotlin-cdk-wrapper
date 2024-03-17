@@ -102,8 +102,8 @@ public interface NestedCloudAssemblyProperties {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties):
-        NestedCloudAssemblyProperties = CdkObjectWrappers.wrap(cdkObject) as
-        NestedCloudAssemblyProperties
+        NestedCloudAssemblyProperties = CdkObjectWrappers.wrap(cdkObject) as?
+        NestedCloudAssemblyProperties ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NestedCloudAssemblyProperties):
         software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties = (wrapped as

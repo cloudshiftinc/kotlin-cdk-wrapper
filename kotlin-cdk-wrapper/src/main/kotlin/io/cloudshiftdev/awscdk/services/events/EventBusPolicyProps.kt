@@ -139,7 +139,8 @@ public interface EventBusPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.EventBusPolicyProps):
-        EventBusPolicyProps = CdkObjectWrappers.wrap(cdkObject) as EventBusPolicyProps
+        EventBusPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? EventBusPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventBusPolicyProps):
         software.amazon.awscdk.services.events.EventBusPolicyProps = (wrapped as

@@ -83,7 +83,8 @@ public interface CognitoDomainOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions):
-        CognitoDomainOptions = CdkObjectWrappers.wrap(cdkObject) as CognitoDomainOptions
+        CognitoDomainOptions = CdkObjectWrappers.wrap(cdkObject) as? CognitoDomainOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CognitoDomainOptions):
         software.amazon.awscdk.services.cognito.CognitoDomainOptions = (wrapped as

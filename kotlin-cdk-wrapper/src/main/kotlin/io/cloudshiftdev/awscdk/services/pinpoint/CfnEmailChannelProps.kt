@@ -251,7 +251,8 @@ public interface CfnEmailChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailChannelProps):
-        CfnEmailChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnEmailChannelProps
+        CfnEmailChannelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEmailChannelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEmailChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnEmailChannelProps = (wrapped as

@@ -188,8 +188,8 @@ public interface CfnAccessGrantsLocationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsLocationProps):
-        CfnAccessGrantsLocationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAccessGrantsLocationProps
+        CfnAccessGrantsLocationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAccessGrantsLocationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessGrantsLocationProps):
         software.amazon.awscdk.services.s3.CfnAccessGrantsLocationProps = (wrapped as

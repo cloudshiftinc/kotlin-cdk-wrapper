@@ -813,7 +813,8 @@ public interface CfnDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDataSourceProps):
-        CfnDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataSourceProps
+        CfnDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataSourceProps):
         software.amazon.awscdk.services.appsync.CfnDataSourceProps = (wrapped as

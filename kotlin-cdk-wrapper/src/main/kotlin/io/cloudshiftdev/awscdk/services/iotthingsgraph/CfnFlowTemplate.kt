@@ -281,8 +281,8 @@ public open class CfnFlowTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.DefinitionDocumentProperty):
-          DefinitionDocumentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DefinitionDocumentProperty
+          DefinitionDocumentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefinitionDocumentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefinitionDocumentProperty):
           software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.DefinitionDocumentProperty

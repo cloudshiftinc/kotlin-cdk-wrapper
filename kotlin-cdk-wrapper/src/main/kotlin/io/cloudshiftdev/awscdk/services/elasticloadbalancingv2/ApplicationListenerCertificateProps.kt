@@ -129,8 +129,8 @@ public interface ApplicationListenerCertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificateProps):
-        ApplicationListenerCertificateProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationListenerCertificateProps
+        ApplicationListenerCertificateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationListenerCertificateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationListenerCertificateProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificateProps =

@@ -1791,7 +1791,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty):
-          PoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as PoliciesProperty
+          PoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as? PoliciesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PoliciesProperty):
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty =
@@ -1923,8 +1924,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty):
-          LBCookieStickinessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LBCookieStickinessPolicyProperty
+          LBCookieStickinessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LBCookieStickinessPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LBCookieStickinessPolicyProperty):
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty
@@ -2120,8 +2121,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty):
-          AccessLoggingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccessLoggingPolicyProperty
+          AccessLoggingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessLoggingPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessLoggingPolicyProperty):
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty
@@ -2243,8 +2244,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty):
-          AppCookieStickinessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AppCookieStickinessPolicyProperty
+          AppCookieStickinessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AppCookieStickinessPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AppCookieStickinessPolicyProperty):
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty
@@ -2522,7 +2523,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty):
-          ListenersProperty = CdkObjectWrappers.wrap(cdkObject) as ListenersProperty
+          ListenersProperty = CdkObjectWrappers.wrap(cdkObject) as? ListenersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenersProperty):
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty =
@@ -2608,8 +2610,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty):
-          ConnectionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectionSettingsProperty
+          ConnectionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionSettingsProperty):
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty
@@ -2879,7 +2881,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty):
-          HealthCheckProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckProperty
+          HealthCheckProperty = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckProperty):
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty =
@@ -3006,8 +3009,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty):
-          ConnectionDrainingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectionDrainingPolicyProperty
+          ConnectionDrainingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionDrainingPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionDrainingPolicyProperty):
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty

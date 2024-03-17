@@ -229,7 +229,8 @@ public interface CfnSmsTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSmsTemplateProps):
-        CfnSmsTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnSmsTemplateProps
+        CfnSmsTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSmsTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSmsTemplateProps):
         software.amazon.awscdk.services.pinpoint.CfnSmsTemplateProps = (wrapped as

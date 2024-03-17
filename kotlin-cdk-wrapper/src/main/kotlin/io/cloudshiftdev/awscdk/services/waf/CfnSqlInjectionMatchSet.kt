@@ -616,8 +616,8 @@ public open class CfnSqlInjectionMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty):
-          SqlInjectionMatchTupleProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SqlInjectionMatchTupleProperty
+          SqlInjectionMatchTupleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SqlInjectionMatchTupleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SqlInjectionMatchTupleProperty):
           software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty
@@ -853,7 +853,8 @@ public open class CfnSqlInjectionMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.FieldToMatchProperty):
-          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldToMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.FieldToMatchProperty =

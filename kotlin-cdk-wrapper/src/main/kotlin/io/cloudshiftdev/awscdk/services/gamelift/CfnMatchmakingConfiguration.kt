@@ -1154,7 +1154,8 @@ public open class CfnMatchmakingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration.GamePropertyProperty):
-          GamePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as GamePropertyProperty
+          GamePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? GamePropertyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GamePropertyProperty):
           software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration.GamePropertyProperty

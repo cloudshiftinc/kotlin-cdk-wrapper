@@ -87,8 +87,8 @@ public interface NetworkLoadBalancerEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpointProps):
-        NetworkLoadBalancerEndpointProps = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkLoadBalancerEndpointProps
+        NetworkLoadBalancerEndpointProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancerEndpointProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancerEndpointProps):
         software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpointProps

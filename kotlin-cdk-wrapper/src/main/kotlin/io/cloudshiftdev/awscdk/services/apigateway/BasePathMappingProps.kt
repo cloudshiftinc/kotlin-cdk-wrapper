@@ -169,7 +169,8 @@ public interface BasePathMappingProps : BasePathMappingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.BasePathMappingProps):
-        BasePathMappingProps = CdkObjectWrappers.wrap(cdkObject) as BasePathMappingProps
+        BasePathMappingProps = CdkObjectWrappers.wrap(cdkObject) as? BasePathMappingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BasePathMappingProps):
         software.amazon.awscdk.services.apigateway.BasePathMappingProps = (wrapped as

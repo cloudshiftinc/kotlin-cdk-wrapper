@@ -341,8 +341,8 @@ public interface CfnProvisioningTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplateProps):
-        CfnProvisioningTemplateProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnProvisioningTemplateProps
+        CfnProvisioningTemplateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnProvisioningTemplateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnProvisioningTemplateProps):
         software.amazon.awscdk.services.iot.CfnProvisioningTemplateProps = (wrapped as

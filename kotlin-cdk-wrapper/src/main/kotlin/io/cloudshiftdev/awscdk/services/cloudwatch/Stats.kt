@@ -30,6 +30,10 @@ import kotlin.String
 public abstract class Stats internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Stats,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudwatch.Stats,
+  ) : Stats(cdkObject)
+
   public companion object {
     public val AVERAGE: String = software.amazon.awscdk.services.cloudwatch.Stats.AVERAGE
 
@@ -105,7 +109,7 @@ public abstract class Stats internal constructor(
         software.amazon.awscdk.services.cloudwatch.Stats.wm(p1, p2)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.Stats): Stats =
-        CdkObjectWrappers.wrap(cdkObject) as Stats
+        CdkObjectWrappers.wrap(cdkObject) as? Stats ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Stats): software.amazon.awscdk.services.cloudwatch.Stats = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.Stats

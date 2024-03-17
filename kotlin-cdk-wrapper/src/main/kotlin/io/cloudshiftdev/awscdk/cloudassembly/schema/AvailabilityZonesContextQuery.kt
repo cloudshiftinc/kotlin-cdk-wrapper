@@ -125,8 +125,8 @@ public interface AvailabilityZonesContextQuery {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery):
-        AvailabilityZonesContextQuery = CdkObjectWrappers.wrap(cdkObject) as
-        AvailabilityZonesContextQuery
+        AvailabilityZonesContextQuery = CdkObjectWrappers.wrap(cdkObject) as?
+        AvailabilityZonesContextQuery ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AvailabilityZonesContextQuery):
         software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery = (wrapped as

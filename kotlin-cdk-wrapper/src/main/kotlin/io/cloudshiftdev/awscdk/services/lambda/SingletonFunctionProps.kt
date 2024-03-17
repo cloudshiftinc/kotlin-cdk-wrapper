@@ -1597,7 +1597,8 @@ public interface SingletonFunctionProps : FunctionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.SingletonFunctionProps):
-        SingletonFunctionProps = CdkObjectWrappers.wrap(cdkObject) as SingletonFunctionProps
+        SingletonFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? SingletonFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SingletonFunctionProps):
         software.amazon.awscdk.services.lambda.SingletonFunctionProps = (wrapped as

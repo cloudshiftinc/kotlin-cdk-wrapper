@@ -331,7 +331,8 @@ public open class CfnKeyGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroup.KeyGroupConfigProperty):
-          KeyGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as KeyGroupConfigProperty
+          KeyGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyGroupConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyGroupConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnKeyGroup.KeyGroupConfigProperty = (wrapped

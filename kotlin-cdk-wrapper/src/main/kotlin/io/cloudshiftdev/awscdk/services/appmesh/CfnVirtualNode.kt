@@ -747,8 +747,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextAcmTrustProperty):
-          TlsValidationContextAcmTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TlsValidationContextAcmTrustProperty
+          TlsValidationContextAcmTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TlsValidationContextAcmTrustProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TlsValidationContextAcmTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextAcmTrustProperty
@@ -967,7 +967,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.HttpTimeoutProperty):
-          HttpTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as HttpTimeoutProperty
+          HttpTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpTimeoutProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpTimeoutProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.HttpTimeoutProperty = (wrapped as
@@ -1084,7 +1085,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.AccessLogProperty):
-          AccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as AccessLogProperty
+          AccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessLogProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessLogProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AccessLogProperty = (wrapped as
@@ -1173,8 +1175,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextFileTrustProperty):
-          TlsValidationContextFileTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TlsValidationContextFileTrustProperty
+          TlsValidationContextFileTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TlsValidationContextFileTrustProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TlsValidationContextFileTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextFileTrustProperty
@@ -1269,8 +1271,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsSdsCertificateProperty):
-          ListenerTlsSdsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ListenerTlsSdsCertificateProperty
+          ListenerTlsSdsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ListenerTlsSdsCertificateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerTlsSdsCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsSdsCertificateProperty =
@@ -1416,7 +1418,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyProperty):
-          ClientPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as ClientPolicyProperty
+          ClientPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ClientPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClientPolicyProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyProperty = (wrapped as
@@ -1518,8 +1521,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsAcmCertificateProperty):
-          ListenerTlsAcmCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ListenerTlsAcmCertificateProperty
+          ListenerTlsAcmCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ListenerTlsAcmCertificateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerTlsAcmCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsAcmCertificateProperty =
@@ -1707,7 +1710,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.FileAccessLogProperty):
-          FileAccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as FileAccessLogProperty
+          FileAccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as? FileAccessLogProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FileAccessLogProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.FileAccessLogProperty = (wrapped as
@@ -1840,7 +1844,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingFormatProperty):
-          LoggingFormatProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingFormatProperty
+          LoggingFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingFormatProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingFormatProperty = (wrapped as
@@ -2064,8 +2069,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty):
-          AwsCloudMapServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AwsCloudMapServiceDiscoveryProperty
+          AwsCloudMapServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsCloudMapServiceDiscoveryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsCloudMapServiceDiscoveryProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty
@@ -2184,7 +2189,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingProperty):
-          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingProperty
+          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingProperty = (wrapped as
@@ -2279,8 +2285,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNameMatchersProperty):
-          SubjectAlternativeNameMatchersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SubjectAlternativeNameMatchersProperty
+          SubjectAlternativeNameMatchersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubjectAlternativeNameMatchersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubjectAlternativeNameMatchersProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNameMatchersProperty
@@ -2476,8 +2482,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextProperty):
-          ListenerTlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ListenerTlsValidationContextProperty
+          ListenerTlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ListenerTlsValidationContextProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerTlsValidationContextProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextProperty
@@ -2565,8 +2571,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeGrpcConnectionPoolProperty):
-          VirtualNodeGrpcConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualNodeGrpcConnectionPoolProperty
+          VirtualNodeGrpcConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualNodeGrpcConnectionPoolProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualNodeGrpcConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeGrpcConnectionPoolProperty
@@ -2851,7 +2857,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyTlsProperty):
-          ClientPolicyTlsProperty = CdkObjectWrappers.wrap(cdkObject) as ClientPolicyTlsProperty
+          ClientPolicyTlsProperty = CdkObjectWrappers.wrap(cdkObject) as? ClientPolicyTlsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClientPolicyTlsProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyTlsProperty = (wrapped
@@ -3082,8 +3089,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsCertificateProperty):
-          ListenerTlsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ListenerTlsCertificateProperty
+          ListenerTlsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ListenerTlsCertificateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerTlsCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsCertificateProperty =
@@ -3371,8 +3378,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeConnectionPoolProperty):
-          VirtualNodeConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualNodeConnectionPoolProperty
+          VirtualNodeConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualNodeConnectionPoolProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualNodeConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeConnectionPoolProperty =
@@ -3479,7 +3486,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.DurationProperty):
-          DurationProperty = CdkObjectWrappers.wrap(cdkObject) as DurationProperty
+          DurationProperty = CdkObjectWrappers.wrap(cdkObject) as? DurationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DurationProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.DurationProperty = (wrapped as
@@ -3973,7 +3981,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerProperty):
-          ListenerProperty = CdkObjectWrappers.wrap(cdkObject) as ListenerProperty
+          ListenerProperty = CdkObjectWrappers.wrap(cdkObject) as? ListenerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerProperty = (wrapped as
@@ -4081,7 +4090,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.JsonFormatRefProperty):
-          JsonFormatRefProperty = CdkObjectWrappers.wrap(cdkObject) as JsonFormatRefProperty
+          JsonFormatRefProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonFormatRefProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonFormatRefProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.JsonFormatRefProperty = (wrapped as
@@ -4266,8 +4276,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextTrustProperty):
-          ListenerTlsValidationContextTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ListenerTlsValidationContextTrustProperty
+          ListenerTlsValidationContextTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ListenerTlsValidationContextTrustProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerTlsValidationContextTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextTrustProperty
@@ -4880,7 +4890,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeSpecProperty):
-          VirtualNodeSpecProperty = CdkObjectWrappers.wrap(cdkObject) as VirtualNodeSpecProperty
+          VirtualNodeSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? VirtualNodeSpecProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualNodeSpecProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeSpecProperty = (wrapped
@@ -4968,8 +4979,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeTcpConnectionPoolProperty):
-          VirtualNodeTcpConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualNodeTcpConnectionPoolProperty
+          VirtualNodeTcpConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualNodeTcpConnectionPoolProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualNodeTcpConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeTcpConnectionPoolProperty
@@ -5115,7 +5126,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendProperty):
-          BackendProperty = CdkObjectWrappers.wrap(cdkObject) as BackendProperty
+          BackendProperty = CdkObjectWrappers.wrap(cdkObject) as? BackendProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BackendProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendProperty = (wrapped as
@@ -5242,8 +5254,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapInstanceAttributeProperty):
-          AwsCloudMapInstanceAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AwsCloudMapInstanceAttributeProperty
+          AwsCloudMapInstanceAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsCloudMapInstanceAttributeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsCloudMapInstanceAttributeProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapInstanceAttributeProperty
@@ -5488,7 +5500,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsProperty):
-          ListenerTlsProperty = CdkObjectWrappers.wrap(cdkObject) as ListenerTlsProperty
+          ListenerTlsProperty = CdkObjectWrappers.wrap(cdkObject) as? ListenerTlsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerTlsProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsProperty = (wrapped as
@@ -5692,8 +5705,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualServiceBackendProperty):
-          VirtualServiceBackendProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualServiceBackendProperty
+          VirtualServiceBackendProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualServiceBackendProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualServiceBackendProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualServiceBackendProperty =
@@ -5806,7 +5819,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.PortMappingProperty):
-          PortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as PortMappingProperty
+          PortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? PortMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortMappingProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.PortMappingProperty = (wrapped as
@@ -6025,7 +6039,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.GrpcTimeoutProperty):
-          GrpcTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as GrpcTimeoutProperty
+          GrpcTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as? GrpcTimeoutProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GrpcTimeoutProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.GrpcTimeoutProperty = (wrapped as
@@ -6145,8 +6160,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsFileCertificateProperty):
-          ListenerTlsFileCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ListenerTlsFileCertificateProperty
+          ListenerTlsFileCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ListenerTlsFileCertificateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerTlsFileCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsFileCertificateProperty
@@ -6395,8 +6410,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextProperty):
-          TlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TlsValidationContextProperty
+          TlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TlsValidationContextProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TlsValidationContextProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextProperty =
@@ -6645,8 +6660,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextTrustProperty):
-          TlsValidationContextTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TlsValidationContextTrustProperty
+          TlsValidationContextTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TlsValidationContextTrustProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TlsValidationContextTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextTrustProperty =
@@ -6738,8 +6753,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextSdsTrustProperty):
-          TlsValidationContextSdsTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TlsValidationContextSdsTrustProperty
+          TlsValidationContextSdsTrustProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TlsValidationContextSdsTrustProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TlsValidationContextSdsTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextSdsTrustProperty
@@ -6881,7 +6896,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendDefaultsProperty):
-          BackendDefaultsProperty = CdkObjectWrappers.wrap(cdkObject) as BackendDefaultsProperty
+          BackendDefaultsProperty = CdkObjectWrappers.wrap(cdkObject) as? BackendDefaultsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BackendDefaultsProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendDefaultsProperty = (wrapped
@@ -7028,8 +7044,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.DnsServiceDiscoveryProperty):
-          DnsServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DnsServiceDiscoveryProperty
+          DnsServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DnsServiceDiscoveryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DnsServiceDiscoveryProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.DnsServiceDiscoveryProperty =
@@ -7157,7 +7173,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.TcpTimeoutProperty):
-          TcpTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as TcpTimeoutProperty
+          TcpTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as? TcpTimeoutProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TcpTimeoutProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TcpTimeoutProperty = (wrapped as
@@ -7333,7 +7350,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ServiceDiscoveryProperty):
-          ServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as ServiceDiscoveryProperty
+          ServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as? ServiceDiscoveryProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceDiscoveryProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ServiceDiscoveryProperty = (wrapped
@@ -7445,8 +7463,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNamesProperty):
-          SubjectAlternativeNamesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SubjectAlternativeNamesProperty
+          SubjectAlternativeNamesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubjectAlternativeNamesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubjectAlternativeNamesProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNamesProperty =
@@ -7565,8 +7583,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttpConnectionPoolProperty):
-          VirtualNodeHttpConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualNodeHttpConnectionPoolProperty
+          VirtualNodeHttpConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualNodeHttpConnectionPoolProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualNodeHttpConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttpConnectionPoolProperty
@@ -7797,7 +7815,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.OutlierDetectionProperty):
-          OutlierDetectionProperty = CdkObjectWrappers.wrap(cdkObject) as OutlierDetectionProperty
+          OutlierDetectionProperty = CdkObjectWrappers.wrap(cdkObject) as? OutlierDetectionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutlierDetectionProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.OutlierDetectionProperty = (wrapped
@@ -7999,8 +8018,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientTlsCertificateProperty):
-          ClientTlsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ClientTlsCertificateProperty
+          ClientTlsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientTlsCertificateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClientTlsCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientTlsCertificateProperty =
@@ -8088,8 +8107,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty):
-          VirtualNodeHttp2ConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualNodeHttp2ConnectionPoolProperty
+          VirtualNodeHttp2ConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualNodeHttp2ConnectionPoolProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualNodeHttp2ConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty
@@ -8373,7 +8392,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.HealthCheckProperty):
-          HealthCheckProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckProperty
+          HealthCheckProperty = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.HealthCheckProperty = (wrapped as
@@ -8675,7 +8695,8 @@ public open class CfnVirtualNode internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTimeoutProperty):
-          ListenerTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as ListenerTimeoutProperty
+          ListenerTimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as? ListenerTimeoutProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ListenerTimeoutProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTimeoutProperty = (wrapped

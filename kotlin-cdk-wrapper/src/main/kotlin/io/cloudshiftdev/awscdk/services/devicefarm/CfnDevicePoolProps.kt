@@ -302,7 +302,8 @@ public interface CfnDevicePoolProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePoolProps):
-        CfnDevicePoolProps = CdkObjectWrappers.wrap(cdkObject) as CfnDevicePoolProps
+        CfnDevicePoolProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDevicePoolProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDevicePoolProps):
         software.amazon.awscdk.services.devicefarm.CfnDevicePoolProps = (wrapped as

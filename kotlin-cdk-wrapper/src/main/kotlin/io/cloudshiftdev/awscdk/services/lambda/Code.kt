@@ -88,6 +88,10 @@ public abstract class Code internal constructor(
       options: ResourceBindOptions.Builder.() -> Unit): Unit = bindToResource(resource,
       ResourceBindOptions(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.lambda.Code,
+  ) : Code(cdkObject)
+
   public companion object {
     public fun fromAsset(path: String): AssetCode =
         software.amazon.awscdk.services.lambda.Code.fromAsset(path).let(AssetCode::wrap)
@@ -163,7 +167,7 @@ public abstract class Code internal constructor(
         software.amazon.awscdk.services.lambda.Code.fromInline(code).let(InlineCode::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.Code): Code =
-        CdkObjectWrappers.wrap(cdkObject) as Code
+        CdkObjectWrappers.wrap(cdkObject) as? Code ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Code): software.amazon.awscdk.services.lambda.Code = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.lambda.Code

@@ -455,7 +455,8 @@ public open class CfnXssMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnXssMatchSet.FieldToMatchProperty):
-          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldToMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.waf.CfnXssMatchSet.FieldToMatchProperty = (wrapped as
@@ -840,7 +841,8 @@ public open class CfnXssMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnXssMatchSet.XssMatchTupleProperty):
-          XssMatchTupleProperty = CdkObjectWrappers.wrap(cdkObject) as XssMatchTupleProperty
+          XssMatchTupleProperty = CdkObjectWrappers.wrap(cdkObject) as? XssMatchTupleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: XssMatchTupleProperty):
           software.amazon.awscdk.services.waf.CfnXssMatchSet.XssMatchTupleProperty = (wrapped as

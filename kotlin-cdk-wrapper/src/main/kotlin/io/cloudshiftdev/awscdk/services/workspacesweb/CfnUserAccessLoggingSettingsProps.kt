@@ -132,8 +132,8 @@ public interface CfnUserAccessLoggingSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettingsProps):
-        CfnUserAccessLoggingSettingsProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnUserAccessLoggingSettingsProps
+        CfnUserAccessLoggingSettingsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserAccessLoggingSettingsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserAccessLoggingSettingsProps):
         software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettingsProps = (wrapped

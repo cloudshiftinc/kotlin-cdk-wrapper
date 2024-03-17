@@ -121,7 +121,7 @@ public interface FileAsset {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.FileAsset): FileAsset =
-        CdkObjectWrappers.wrap(cdkObject) as FileAsset
+        CdkObjectWrappers.wrap(cdkObject) as? FileAsset ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileAsset): software.amazon.awscdk.cloudassembly.schema.FileAsset =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.cloudassembly.schema.FileAsset

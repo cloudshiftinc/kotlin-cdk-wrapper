@@ -1087,7 +1087,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DeletedProperty):
-          DeletedProperty = CdkObjectWrappers.wrap(cdkObject) as DeletedProperty
+          DeletedProperty = CdkObjectWrappers.wrap(cdkObject) as? DeletedProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeletedProperty):
           software.amazon.awscdk.services.datasync.CfnTask.DeletedProperty = (wrapped as
@@ -1205,7 +1206,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty):
-          FilterRuleProperty = CdkObjectWrappers.wrap(cdkObject) as FilterRuleProperty
+          FilterRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterRuleProperty):
           software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty = (wrapped as
@@ -1543,7 +1545,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty):
-          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as OverridesProperty
+          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as? OverridesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OverridesProperty):
           software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty = (wrapped as
@@ -1628,7 +1631,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty):
-          TaskScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as TaskScheduleProperty
+          TaskScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskScheduleProperty):
           software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty = (wrapped as
@@ -1774,7 +1778,7 @@ public open class CfnTask internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property):
-          S3Property = CdkObjectWrappers.wrap(cdkObject) as S3Property
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.datasync.CfnTask.S3Property = (wrapped as
@@ -1883,7 +1887,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty):
-          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as DestinationProperty
+          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? DestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationProperty):
           software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty = (wrapped as
@@ -3065,7 +3070,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OptionsProperty):
-          OptionsProperty = CdkObjectWrappers.wrap(cdkObject) as OptionsProperty
+          OptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? OptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OptionsProperty):
           software.amazon.awscdk.services.datasync.CfnTask.OptionsProperty = (wrapped as
@@ -3443,7 +3449,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskReportConfigProperty):
-          TaskReportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TaskReportConfigProperty
+          TaskReportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskReportConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskReportConfigProperty):
           software.amazon.awscdk.services.datasync.CfnTask.TaskReportConfigProperty = (wrapped as
@@ -3536,7 +3543,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty):
-          SkippedProperty = CdkObjectWrappers.wrap(cdkObject) as SkippedProperty
+          SkippedProperty = CdkObjectWrappers.wrap(cdkObject) as? SkippedProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SkippedProperty):
           software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty = (wrapped as
@@ -3628,7 +3636,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty):
-          VerifiedProperty = CdkObjectWrappers.wrap(cdkObject) as VerifiedProperty
+          VerifiedProperty = CdkObjectWrappers.wrap(cdkObject) as? VerifiedProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VerifiedProperty):
           software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty = (wrapped as
@@ -3720,7 +3729,8 @@ public open class CfnTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty):
-          TransferredProperty = CdkObjectWrappers.wrap(cdkObject) as TransferredProperty
+          TransferredProperty = CdkObjectWrappers.wrap(cdkObject) as? TransferredProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransferredProperty):
           software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty = (wrapped as

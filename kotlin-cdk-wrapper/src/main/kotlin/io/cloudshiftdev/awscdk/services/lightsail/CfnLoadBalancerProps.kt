@@ -444,7 +444,8 @@ public interface CfnLoadBalancerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancerProps):
-        CfnLoadBalancerProps = CdkObjectWrappers.wrap(cdkObject) as CfnLoadBalancerProps
+        CfnLoadBalancerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLoadBalancerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoadBalancerProps):
         software.amazon.awscdk.services.lightsail.CfnLoadBalancerProps = (wrapped as

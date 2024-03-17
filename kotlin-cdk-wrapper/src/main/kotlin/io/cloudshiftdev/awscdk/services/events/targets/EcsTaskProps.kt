@@ -630,7 +630,7 @@ public interface EcsTaskProps : TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.EcsTaskProps):
-        EcsTaskProps = CdkObjectWrappers.wrap(cdkObject) as EcsTaskProps
+        EcsTaskProps = CdkObjectWrappers.wrap(cdkObject) as? EcsTaskProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsTaskProps):
         software.amazon.awscdk.services.events.targets.EcsTaskProps = (wrapped as

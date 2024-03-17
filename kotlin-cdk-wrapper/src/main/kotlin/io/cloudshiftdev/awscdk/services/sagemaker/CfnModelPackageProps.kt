@@ -1417,7 +1417,8 @@ public interface CfnModelPackageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageProps):
-        CfnModelPackageProps = CdkObjectWrappers.wrap(cdkObject) as CfnModelPackageProps
+        CfnModelPackageProps = CdkObjectWrappers.wrap(cdkObject) as? CfnModelPackageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelPackageProps):
         software.amazon.awscdk.services.sagemaker.CfnModelPackageProps = (wrapped as

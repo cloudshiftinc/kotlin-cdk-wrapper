@@ -1441,7 +1441,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty):
-          RdsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as RdsParametersProperty
+          RdsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? RdsParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RdsParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.RdsParametersProperty = (wrapped
@@ -1577,7 +1578,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraParametersProperty):
-          AuroraParametersProperty = CdkObjectWrappers.wrap(cdkObject) as AuroraParametersProperty
+          AuroraParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? AuroraParametersProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuroraParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraParametersProperty =
@@ -1762,8 +1764,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty):
-          RedshiftParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RedshiftParametersProperty
+          RedshiftParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedshiftParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.RedshiftParametersProperty =
@@ -1899,8 +1901,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty):
-          TeradataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TeradataParametersProperty
+          TeradataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TeradataParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TeradataParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.TeradataParametersProperty =
@@ -1994,7 +1996,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty):
-          SslPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as SslPropertiesProperty
+          SslPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? SslPropertiesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SslPropertiesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.SslPropertiesProperty = (wrapped
@@ -2130,7 +2133,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty):
-          OracleParametersProperty = CdkObjectWrappers.wrap(cdkObject) as OracleParametersProperty
+          OracleParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? OracleParametersProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OracleParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.OracleParametersProperty =
@@ -2213,8 +2217,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty):
-          VpcConnectionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VpcConnectionPropertiesProperty
+          VpcConnectionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcConnectionPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConnectionPropertiesProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.VpcConnectionPropertiesProperty =
@@ -2385,7 +2389,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty):
-          S3ParametersProperty = CdkObjectWrappers.wrap(cdkObject) as S3ParametersProperty
+          S3ParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? S3ParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3ParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.S3ParametersProperty = (wrapped
@@ -2523,8 +2528,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraPostgreSqlParametersProperty):
-          AuroraPostgreSqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AuroraPostgreSqlParametersProperty
+          AuroraPostgreSqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuroraPostgreSqlParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuroraPostgreSqlParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.AuroraPostgreSqlParametersProperty
@@ -2659,7 +2664,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty):
-          TrinoParametersProperty = CdkObjectWrappers.wrap(cdkObject) as TrinoParametersProperty
+          TrinoParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? TrinoParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrinoParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.TrinoParametersProperty =
@@ -2809,8 +2815,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty):
-          ResourcePermissionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResourcePermissionProperty
+          ResourcePermissionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourcePermissionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourcePermissionProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty =
@@ -2946,7 +2952,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty):
-          PrestoParametersProperty = CdkObjectWrappers.wrap(cdkObject) as PrestoParametersProperty
+          PrestoParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? PrestoParametersProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrestoParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.PrestoParametersProperty =
@@ -3272,7 +3279,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.CredentialPairProperty):
-          CredentialPairProperty = CdkObjectWrappers.wrap(cdkObject) as CredentialPairProperty
+          CredentialPairProperty = CdkObjectWrappers.wrap(cdkObject) as? CredentialPairProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CredentialPairProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.CredentialPairProperty = (wrapped
@@ -3356,8 +3364,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty):
-          AmazonOpenSearchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AmazonOpenSearchParametersProperty
+          AmazonOpenSearchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmazonOpenSearchParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AmazonOpenSearchParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonOpenSearchParametersProperty
@@ -4620,8 +4628,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceParametersProperty):
-          DataSourceParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataSourceParametersProperty
+          DataSourceParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceParametersProperty =
@@ -4730,8 +4738,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty):
-          DataSourceErrorInfoProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataSourceErrorInfoProperty
+          DataSourceErrorInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceErrorInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceErrorInfoProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceErrorInfoProperty =
@@ -4867,8 +4875,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty):
-          SqlServerParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SqlServerParametersProperty
+          SqlServerParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SqlServerParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SqlServerParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.SqlServerParametersProperty =
@@ -4999,7 +5007,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty):
-          AthenaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as AthenaParametersProperty
+          AthenaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? AthenaParametersProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AthenaParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.AthenaParametersProperty =
@@ -5135,8 +5144,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SnowflakeParametersProperty):
-          SnowflakeParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SnowflakeParametersProperty
+          SnowflakeParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnowflakeParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.SnowflakeParametersProperty =
@@ -5244,7 +5253,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.SparkParametersProperty):
-          SparkParametersProperty = CdkObjectWrappers.wrap(cdkObject) as SparkParametersProperty
+          SparkParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? SparkParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SparkParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.SparkParametersProperty =
@@ -5408,8 +5418,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.StarburstParametersProperty):
-          StarburstParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StarburstParametersProperty
+          StarburstParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StarburstParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StarburstParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.StarburstParametersProperty =
@@ -5519,8 +5529,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty):
-          ManifestFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ManifestFileLocationProperty
+          ManifestFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManifestFileLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManifestFileLocationProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.ManifestFileLocationProperty =
@@ -5837,8 +5847,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty):
-          DataSourceCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataSourceCredentialsProperty
+          DataSourceCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceCredentialsProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.DataSourceCredentialsProperty =
@@ -5973,7 +5983,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty):
-          MySqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as MySqlParametersProperty
+          MySqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? MySqlParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MySqlParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.MySqlParametersProperty =
@@ -6057,8 +6068,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty):
-          AmazonElasticsearchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AmazonElasticsearchParametersProperty
+          AmazonElasticsearchParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmazonElasticsearchParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AmazonElasticsearchParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.AmazonElasticsearchParametersProperty
@@ -6195,8 +6206,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty):
-          DatabricksParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DatabricksParametersProperty
+          DatabricksParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabricksParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatabricksParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.DatabricksParametersProperty =
@@ -6333,8 +6344,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty):
-          PostgreSqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PostgreSqlParametersProperty
+          PostgreSqlParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PostgreSqlParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PostgreSqlParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.PostgreSqlParametersProperty =
@@ -6470,7 +6481,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty):
-          MariaDbParametersProperty = CdkObjectWrappers.wrap(cdkObject) as MariaDbParametersProperty
+          MariaDbParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MariaDbParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MariaDbParametersProperty):
           software.amazon.awscdk.services.quicksight.CfnDataSource.MariaDbParametersProperty =

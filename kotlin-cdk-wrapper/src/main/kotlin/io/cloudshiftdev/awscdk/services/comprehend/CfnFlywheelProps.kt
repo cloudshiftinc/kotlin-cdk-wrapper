@@ -379,7 +379,8 @@ public interface CfnFlywheelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheelProps):
-        CfnFlywheelProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlywheelProps
+        CfnFlywheelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFlywheelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlywheelProps):
         software.amazon.awscdk.services.comprehend.CfnFlywheelProps = (wrapped as

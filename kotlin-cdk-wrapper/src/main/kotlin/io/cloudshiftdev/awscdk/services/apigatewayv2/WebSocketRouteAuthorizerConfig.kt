@@ -120,8 +120,8 @@ public interface WebSocketRouteAuthorizerConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig):
-        WebSocketRouteAuthorizerConfig = CdkObjectWrappers.wrap(cdkObject) as
-        WebSocketRouteAuthorizerConfig
+        WebSocketRouteAuthorizerConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        WebSocketRouteAuthorizerConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketRouteAuthorizerConfig):
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig = (wrapped as

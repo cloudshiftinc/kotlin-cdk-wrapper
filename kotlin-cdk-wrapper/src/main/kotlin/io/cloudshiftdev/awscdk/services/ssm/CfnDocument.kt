@@ -933,7 +933,8 @@ public open class CfnDocument internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty):
-          AttachmentsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as AttachmentsSourceProperty
+          AttachmentsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AttachmentsSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttachmentsSourceProperty):
           software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty = (wrapped as
@@ -1046,7 +1047,8 @@ public open class CfnDocument internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty):
-          DocumentRequiresProperty = CdkObjectWrappers.wrap(cdkObject) as DocumentRequiresProperty
+          DocumentRequiresProperty = CdkObjectWrappers.wrap(cdkObject) as? DocumentRequiresProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentRequiresProperty):
           software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty = (wrapped as

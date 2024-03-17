@@ -242,7 +242,8 @@ public interface CfnServiceTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.proton.CfnServiceTemplateProps):
-        CfnServiceTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnServiceTemplateProps
+        CfnServiceTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServiceTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceTemplateProps):
         software.amazon.awscdk.services.proton.CfnServiceTemplateProps = (wrapped as

@@ -1476,7 +1476,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty = (wrapped as
@@ -1607,7 +1608,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty):
-          ComputeCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as ComputeCapacityProperty
+          ComputeCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as? ComputeCapacityProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputeCapacityProperty):
           software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty = (wrapped as
@@ -1749,7 +1751,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty = (wrapped as
@@ -1864,7 +1867,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty):
-          DomainJoinInfoProperty = CdkObjectWrappers.wrap(cdkObject) as DomainJoinInfoProperty
+          DomainJoinInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? DomainJoinInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DomainJoinInfoProperty):
           software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty = (wrapped as

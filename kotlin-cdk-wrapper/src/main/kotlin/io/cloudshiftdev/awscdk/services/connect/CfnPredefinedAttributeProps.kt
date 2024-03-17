@@ -164,8 +164,8 @@ public interface CfnPredefinedAttributeProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttributeProps):
-        CfnPredefinedAttributeProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnPredefinedAttributeProps
+        CfnPredefinedAttributeProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPredefinedAttributeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPredefinedAttributeProps):
         software.amazon.awscdk.services.connect.CfnPredefinedAttributeProps = (wrapped as

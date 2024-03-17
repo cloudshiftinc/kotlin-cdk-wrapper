@@ -544,7 +544,8 @@ public open class CfnFramework internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty):
-          FrameworkControlProperty = CdkObjectWrappers.wrap(cdkObject) as FrameworkControlProperty
+          FrameworkControlProperty = CdkObjectWrappers.wrap(cdkObject) as? FrameworkControlProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrameworkControlProperty):
           software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty = (wrapped as
@@ -775,7 +776,8 @@ public open class CfnFramework internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty):
-          ControlScopeProperty = CdkObjectWrappers.wrap(cdkObject) as ControlScopeProperty
+          ControlScopeProperty = CdkObjectWrappers.wrap(cdkObject) as? ControlScopeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ControlScopeProperty):
           software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty = (wrapped as
@@ -889,8 +891,8 @@ public open class CfnFramework internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty):
-          ControlInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ControlInputParameterProperty
+          ControlInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ControlInputParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ControlInputParameterProperty):
           software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =

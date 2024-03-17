@@ -152,7 +152,7 @@ public interface MeshProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.MeshProps): MeshProps =
-        CdkObjectWrappers.wrap(cdkObject) as MeshProps
+        CdkObjectWrappers.wrap(cdkObject) as? MeshProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MeshProps): software.amazon.awscdk.services.appmesh.MeshProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.MeshProps

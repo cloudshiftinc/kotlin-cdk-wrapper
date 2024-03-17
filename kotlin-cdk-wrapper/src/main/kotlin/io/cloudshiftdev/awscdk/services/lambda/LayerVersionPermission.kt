@@ -127,7 +127,8 @@ public interface LayerVersionPermission {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.LayerVersionPermission):
-        LayerVersionPermission = CdkObjectWrappers.wrap(cdkObject) as LayerVersionPermission
+        LayerVersionPermission = CdkObjectWrappers.wrap(cdkObject) as? LayerVersionPermission ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LayerVersionPermission):
         software.amazon.awscdk.services.lambda.LayerVersionPermission = (wrapped as

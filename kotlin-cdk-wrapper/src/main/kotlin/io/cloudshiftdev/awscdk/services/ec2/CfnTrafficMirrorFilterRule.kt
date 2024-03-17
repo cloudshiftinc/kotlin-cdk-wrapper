@@ -646,8 +646,8 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty):
-          TrafficMirrorPortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TrafficMirrorPortRangeProperty
+          TrafficMirrorPortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrafficMirrorPortRangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrafficMirrorPortRangeProperty):
           software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty

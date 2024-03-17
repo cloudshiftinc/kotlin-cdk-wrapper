@@ -109,7 +109,7 @@ public interface PortOverride {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.PortOverride):
-        PortOverride = CdkObjectWrappers.wrap(cdkObject) as PortOverride
+        PortOverride = CdkObjectWrappers.wrap(cdkObject) as? PortOverride ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PortOverride):
         software.amazon.awscdk.services.globalaccelerator.PortOverride = (wrapped as

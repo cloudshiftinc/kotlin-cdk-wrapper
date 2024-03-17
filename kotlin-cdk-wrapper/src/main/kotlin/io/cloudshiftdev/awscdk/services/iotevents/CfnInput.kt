@@ -418,7 +418,8 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty):
-          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeProperty
+          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeProperty):
           software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty = (wrapped as
@@ -562,7 +563,8 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty):
-          InputDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as InputDefinitionProperty
+          InputDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? InputDefinitionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputDefinitionProperty):
           software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty = (wrapped as

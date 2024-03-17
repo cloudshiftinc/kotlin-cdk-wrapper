@@ -1263,8 +1263,8 @@ public open class CfnDatabase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDatabase.RelationalDatabaseParameterProperty):
-          RelationalDatabaseParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RelationalDatabaseParameterProperty
+          RelationalDatabaseParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RelationalDatabaseParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RelationalDatabaseParameterProperty):
           software.amazon.awscdk.services.lightsail.CfnDatabase.RelationalDatabaseParameterProperty

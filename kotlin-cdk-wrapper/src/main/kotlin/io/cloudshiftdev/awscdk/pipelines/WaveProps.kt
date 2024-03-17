@@ -121,7 +121,7 @@ public interface WaveProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.WaveProps): WaveProps =
-        CdkObjectWrappers.wrap(cdkObject) as WaveProps
+        CdkObjectWrappers.wrap(cdkObject) as? WaveProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WaveProps): software.amazon.awscdk.pipelines.WaveProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.pipelines.WaveProps

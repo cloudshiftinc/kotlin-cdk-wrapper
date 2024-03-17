@@ -201,7 +201,8 @@ public interface JournaldLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.JournaldLogDriverProps):
-        JournaldLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as JournaldLogDriverProps
+        JournaldLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? JournaldLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JournaldLogDriverProps):
         software.amazon.awscdk.services.ecs.JournaldLogDriverProps = (wrapped as

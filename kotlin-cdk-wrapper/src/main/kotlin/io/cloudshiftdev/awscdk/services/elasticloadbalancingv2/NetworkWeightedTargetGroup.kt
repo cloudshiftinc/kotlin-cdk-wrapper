@@ -110,7 +110,8 @@ public interface NetworkWeightedTargetGroup {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkWeightedTargetGroup):
-        NetworkWeightedTargetGroup = CdkObjectWrappers.wrap(cdkObject) as NetworkWeightedTargetGroup
+        NetworkWeightedTargetGroup = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkWeightedTargetGroup ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkWeightedTargetGroup):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkWeightedTargetGroup = (wrapped

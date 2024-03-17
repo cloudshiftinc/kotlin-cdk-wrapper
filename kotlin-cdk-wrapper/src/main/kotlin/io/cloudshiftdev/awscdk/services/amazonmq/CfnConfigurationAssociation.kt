@@ -319,7 +319,8 @@ public open class CfnConfigurationAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty):
-          ConfigurationIdProperty = CdkObjectWrappers.wrap(cdkObject) as ConfigurationIdProperty
+          ConfigurationIdProperty = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationIdProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationIdProperty):
           software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty

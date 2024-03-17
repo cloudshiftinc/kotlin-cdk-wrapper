@@ -256,7 +256,7 @@ public interface AssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.AssetOptions): AssetOptions =
-        CdkObjectWrappers.wrap(cdkObject) as AssetOptions
+        CdkObjectWrappers.wrap(cdkObject) as? AssetOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetOptions): software.amazon.awscdk.AssetOptions = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.AssetOptions

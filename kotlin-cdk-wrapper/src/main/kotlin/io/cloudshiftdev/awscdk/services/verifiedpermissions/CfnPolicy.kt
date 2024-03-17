@@ -388,7 +388,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty):
-          EntityIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as EntityIdentifierProperty
+          EntityIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as? EntityIdentifierProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EntityIdentifierProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty =
@@ -630,8 +631,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty):
-          TemplateLinkedPolicyDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TemplateLinkedPolicyDefinitionProperty
+          TemplateLinkedPolicyDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemplateLinkedPolicyDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TemplateLinkedPolicyDefinitionProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty
@@ -868,7 +869,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty):
-          PolicyDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyDefinitionProperty
+          PolicyDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyDefinitionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyDefinitionProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty =
@@ -981,8 +983,8 @@ public open class CfnPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty):
-          StaticPolicyDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StaticPolicyDefinitionProperty
+          StaticPolicyDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StaticPolicyDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StaticPolicyDefinitionProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty

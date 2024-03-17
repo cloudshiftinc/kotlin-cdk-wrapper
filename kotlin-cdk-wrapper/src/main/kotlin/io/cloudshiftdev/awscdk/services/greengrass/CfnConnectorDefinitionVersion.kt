@@ -413,7 +413,8 @@ public open class CfnConnectorDefinitionVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion.ConnectorProperty):
-          ConnectorProperty = CdkObjectWrappers.wrap(cdkObject) as ConnectorProperty
+          ConnectorProperty = CdkObjectWrappers.wrap(cdkObject) as? ConnectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorProperty):
           software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion.ConnectorProperty

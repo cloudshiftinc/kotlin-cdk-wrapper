@@ -832,7 +832,8 @@ public interface FargateClusterProps : ClusterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.FargateClusterProps):
-        FargateClusterProps = CdkObjectWrappers.wrap(cdkObject) as FargateClusterProps
+        FargateClusterProps = CdkObjectWrappers.wrap(cdkObject) as? FargateClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateClusterProps):
         software.amazon.awscdk.services.eks.FargateClusterProps = (wrapped as CdkObject).cdkObject

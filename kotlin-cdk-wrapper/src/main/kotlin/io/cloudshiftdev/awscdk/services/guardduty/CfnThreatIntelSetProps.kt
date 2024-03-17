@@ -287,7 +287,8 @@ public interface CfnThreatIntelSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnThreatIntelSetProps):
-        CfnThreatIntelSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnThreatIntelSetProps
+        CfnThreatIntelSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnThreatIntelSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnThreatIntelSetProps):
         software.amazon.awscdk.services.guardduty.CfnThreatIntelSetProps = (wrapped as

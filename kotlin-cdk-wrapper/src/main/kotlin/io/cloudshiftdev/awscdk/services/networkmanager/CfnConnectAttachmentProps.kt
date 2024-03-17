@@ -313,7 +313,8 @@ public interface CfnConnectAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachmentProps):
-        CfnConnectAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as CfnConnectAttachmentProps
+        CfnConnectAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConnectAttachmentProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectAttachmentProps):
         software.amazon.awscdk.services.networkmanager.CfnConnectAttachmentProps = (wrapped as

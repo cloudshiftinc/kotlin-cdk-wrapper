@@ -890,7 +890,8 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty):
-          RouteSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as RouteSettingsProperty
+          RouteSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RouteSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RouteSettingsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty = (wrapped as
@@ -1017,7 +1018,8 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty):
-          AccessLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as AccessLogSettingsProperty
+          AccessLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessLogSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessLogSettingsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty = (wrapped

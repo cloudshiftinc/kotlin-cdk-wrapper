@@ -97,7 +97,8 @@ public interface ECRSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ECRSourceOptions):
-        ECRSourceOptions = CdkObjectWrappers.wrap(cdkObject) as ECRSourceOptions
+        ECRSourceOptions = CdkObjectWrappers.wrap(cdkObject) as? ECRSourceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ECRSourceOptions):
         software.amazon.awscdk.pipelines.ECRSourceOptions = (wrapped as CdkObject).cdkObject as

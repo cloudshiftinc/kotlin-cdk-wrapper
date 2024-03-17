@@ -959,7 +959,7 @@ public interface DeployOptions : DefaultCdkOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DeployOptions):
-        DeployOptions = CdkObjectWrappers.wrap(cdkObject) as DeployOptions
+        DeployOptions = CdkObjectWrappers.wrap(cdkObject) as? DeployOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeployOptions):
         software.amazon.awscdk.cloudassembly.schema.DeployOptions = (wrapped as CdkObject).cdkObject

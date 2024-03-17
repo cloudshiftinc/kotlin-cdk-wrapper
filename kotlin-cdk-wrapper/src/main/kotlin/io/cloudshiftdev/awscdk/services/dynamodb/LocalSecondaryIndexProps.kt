@@ -161,7 +161,8 @@ public interface LocalSecondaryIndexProps : SecondaryIndexProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps):
-        LocalSecondaryIndexProps = CdkObjectWrappers.wrap(cdkObject) as LocalSecondaryIndexProps
+        LocalSecondaryIndexProps = CdkObjectWrappers.wrap(cdkObject) as? LocalSecondaryIndexProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LocalSecondaryIndexProps):
         software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps = (wrapped as

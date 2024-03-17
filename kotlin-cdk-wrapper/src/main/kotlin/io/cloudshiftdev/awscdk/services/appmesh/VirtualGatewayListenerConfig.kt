@@ -152,8 +152,8 @@ public interface VirtualGatewayListenerConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListenerConfig):
-        VirtualGatewayListenerConfig = CdkObjectWrappers.wrap(cdkObject) as
-        VirtualGatewayListenerConfig
+        VirtualGatewayListenerConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        VirtualGatewayListenerConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualGatewayListenerConfig):
         software.amazon.awscdk.services.appmesh.VirtualGatewayListenerConfig = (wrapped as

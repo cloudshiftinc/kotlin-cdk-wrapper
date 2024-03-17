@@ -477,7 +477,8 @@ public open class CfnPackagingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.AuthorizationProperty):
-          AuthorizationProperty = CdkObjectWrappers.wrap(cdkObject) as AuthorizationProperty
+          AuthorizationProperty = CdkObjectWrappers.wrap(cdkObject) as? AuthorizationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuthorizationProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.AuthorizationProperty =
@@ -572,7 +573,8 @@ public open class CfnPackagingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.LogConfigurationProperty):
-          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as LogConfigurationProperty
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogConfigurationProperty):
           software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.LogConfigurationProperty =

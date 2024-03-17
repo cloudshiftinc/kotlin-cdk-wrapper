@@ -255,8 +255,8 @@ public interface CfnExtensionAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnExtensionAssociationProps):
-        CfnExtensionAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnExtensionAssociationProps
+        CfnExtensionAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnExtensionAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnExtensionAssociationProps):
         software.amazon.awscdk.services.appconfig.CfnExtensionAssociationProps = (wrapped as

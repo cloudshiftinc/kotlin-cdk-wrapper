@@ -1197,7 +1197,8 @@ public interface CfnNodegroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroupProps):
-        CfnNodegroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnNodegroupProps
+        CfnNodegroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnNodegroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNodegroupProps):
         software.amazon.awscdk.services.eks.CfnNodegroupProps = (wrapped as CdkObject).cdkObject as

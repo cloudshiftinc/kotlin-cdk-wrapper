@@ -685,7 +685,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty):
-          RootDirectoryProperty = CdkObjectWrappers.wrap(cdkObject) as RootDirectoryProperty
+          RootDirectoryProperty = CdkObjectWrappers.wrap(cdkObject) as? RootDirectoryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RootDirectoryProperty):
           software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty = (wrapped as
@@ -801,7 +802,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty):
-          AccessPointTagProperty = CdkObjectWrappers.wrap(cdkObject) as AccessPointTagProperty
+          AccessPointTagProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessPointTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessPointTagProperty):
           software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty = (wrapped as
@@ -966,7 +968,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty):
-          CreationInfoProperty = CdkObjectWrappers.wrap(cdkObject) as CreationInfoProperty
+          CreationInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? CreationInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CreationInfoProperty):
           software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty = (wrapped as
@@ -1117,7 +1120,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty):
-          PosixUserProperty = CdkObjectWrappers.wrap(cdkObject) as PosixUserProperty
+          PosixUserProperty = CdkObjectWrappers.wrap(cdkObject) as? PosixUserProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PosixUserProperty):
           software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty = (wrapped as

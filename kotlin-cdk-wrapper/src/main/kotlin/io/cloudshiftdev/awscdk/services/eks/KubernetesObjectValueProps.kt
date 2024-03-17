@@ -216,7 +216,8 @@ public interface KubernetesObjectValueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubernetesObjectValueProps):
-        KubernetesObjectValueProps = CdkObjectWrappers.wrap(cdkObject) as KubernetesObjectValueProps
+        KubernetesObjectValueProps = CdkObjectWrappers.wrap(cdkObject) as?
+        KubernetesObjectValueProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesObjectValueProps):
         software.amazon.awscdk.services.eks.KubernetesObjectValueProps = (wrapped as

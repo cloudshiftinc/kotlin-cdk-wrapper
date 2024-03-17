@@ -218,7 +218,8 @@ public interface PlacementGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PlacementGroupProps):
-        PlacementGroupProps = CdkObjectWrappers.wrap(cdkObject) as PlacementGroupProps
+        PlacementGroupProps = CdkObjectWrappers.wrap(cdkObject) as? PlacementGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PlacementGroupProps):
         software.amazon.awscdk.services.ec2.PlacementGroupProps = (wrapped as CdkObject).cdkObject

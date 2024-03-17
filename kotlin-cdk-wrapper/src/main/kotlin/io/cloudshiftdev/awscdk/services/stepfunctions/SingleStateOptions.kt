@@ -262,7 +262,8 @@ public interface SingleStateOptions : ParallelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.SingleStateOptions):
-        SingleStateOptions = CdkObjectWrappers.wrap(cdkObject) as SingleStateOptions
+        SingleStateOptions = CdkObjectWrappers.wrap(cdkObject) as? SingleStateOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SingleStateOptions):
         software.amazon.awscdk.services.stepfunctions.SingleStateOptions = (wrapped as

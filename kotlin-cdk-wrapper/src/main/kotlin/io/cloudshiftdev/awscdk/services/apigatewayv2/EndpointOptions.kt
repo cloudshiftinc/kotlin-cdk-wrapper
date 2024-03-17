@@ -223,7 +223,8 @@ public interface EndpointOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.EndpointOptions):
-        EndpointOptions = CdkObjectWrappers.wrap(cdkObject) as EndpointOptions
+        EndpointOptions = CdkObjectWrappers.wrap(cdkObject) as? EndpointOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EndpointOptions):
         software.amazon.awscdk.services.apigatewayv2.EndpointOptions = (wrapped as

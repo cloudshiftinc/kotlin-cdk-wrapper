@@ -359,7 +359,8 @@ public interface CfnLifecycleHookProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLifecycleHookProps):
-        CfnLifecycleHookProps = CdkObjectWrappers.wrap(cdkObject) as CfnLifecycleHookProps
+        CfnLifecycleHookProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLifecycleHookProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLifecycleHookProps):
         software.amazon.awscdk.services.autoscaling.CfnLifecycleHookProps = (wrapped as

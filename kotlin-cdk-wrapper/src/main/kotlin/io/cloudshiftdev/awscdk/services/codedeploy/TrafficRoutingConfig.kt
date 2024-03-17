@@ -186,7 +186,8 @@ public interface TrafficRoutingConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRoutingConfig):
-        TrafficRoutingConfig = CdkObjectWrappers.wrap(cdkObject) as TrafficRoutingConfig
+        TrafficRoutingConfig = CdkObjectWrappers.wrap(cdkObject) as? TrafficRoutingConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TrafficRoutingConfig):
         software.amazon.awscdk.services.codedeploy.TrafficRoutingConfig = (wrapped as

@@ -29,10 +29,16 @@ public abstract class BaseJenkinsProvider internal constructor(
    */
   public override fun version(): String = unwrap(this).getVersion()
 
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
+  ) : BaseJenkinsProvider(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider):
-        BaseJenkinsProvider = CdkObjectWrappers.wrap(cdkObject) as BaseJenkinsProvider
+        BaseJenkinsProvider = CdkObjectWrappers.wrap(cdkObject) as? BaseJenkinsProvider ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseJenkinsProvider):
         software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider = (wrapped as

@@ -172,7 +172,8 @@ public interface CfnDatasetGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnDatasetGroupProps):
-        CfnDatasetGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnDatasetGroupProps
+        CfnDatasetGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDatasetGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatasetGroupProps):
         software.amazon.awscdk.services.personalize.CfnDatasetGroupProps = (wrapped as

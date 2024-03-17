@@ -71,7 +71,7 @@ public interface StopProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.StopProps): StopProps =
-        CdkObjectWrappers.wrap(cdkObject) as StopProps
+        CdkObjectWrappers.wrap(cdkObject) as? StopProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StopProps): software.amazon.awscdk.services.ses.actions.StopProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.actions.StopProps

@@ -196,7 +196,8 @@ public interface CfnUserProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnUserProfileProps):
-        CfnUserProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnUserProfileProps
+        CfnUserProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnUserProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserProfileProps):
         software.amazon.awscdk.services.opsworks.CfnUserProfileProps = (wrapped as

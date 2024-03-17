@@ -417,8 +417,8 @@ public interface CodeStarConnectionsSourceActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceActionProps):
-        CodeStarConnectionsSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CodeStarConnectionsSourceActionProps
+        CodeStarConnectionsSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CodeStarConnectionsSourceActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeStarConnectionsSourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceActionProps =

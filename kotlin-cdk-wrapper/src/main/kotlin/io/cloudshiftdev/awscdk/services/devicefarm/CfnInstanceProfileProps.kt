@@ -319,7 +319,8 @@ public interface CfnInstanceProfileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnInstanceProfileProps):
-        CfnInstanceProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnInstanceProfileProps
+        CfnInstanceProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnInstanceProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceProfileProps):
         software.amazon.awscdk.services.devicefarm.CfnInstanceProfileProps = (wrapped as

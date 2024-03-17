@@ -1324,7 +1324,8 @@ public open class CfnNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty):
-          NamespaceProperty = CdkObjectWrappers.wrap(cdkObject) as NamespaceProperty
+          NamespaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NamespaceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NamespaceProperty):
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty =
@@ -1449,8 +1450,8 @@ public open class CfnNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty):
-          SnapshotCopyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SnapshotCopyConfigurationProperty
+          SnapshotCopyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnapshotCopyConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnapshotCopyConfigurationProperty):
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty

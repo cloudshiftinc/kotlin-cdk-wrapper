@@ -50,6 +50,10 @@ public abstract class TableEncryptionV2 internal constructor(
    */
   public open fun type(): TableEncryption = unwrap(this).getType().let(TableEncryption::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.dynamodb.TableEncryptionV2,
+  ) : TableEncryptionV2(cdkObject)
+
   public companion object {
     public fun awsManagedKey(): TableEncryptionV2 =
         software.amazon.awscdk.services.dynamodb.TableEncryptionV2.awsManagedKey().let(TableEncryptionV2::wrap)
@@ -66,7 +70,8 @@ public abstract class TableEncryptionV2 internal constructor(
         software.amazon.awscdk.services.dynamodb.TableEncryptionV2.dynamoOwnedKey().let(TableEncryptionV2::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TableEncryptionV2):
-        TableEncryptionV2 = CdkObjectWrappers.wrap(cdkObject) as TableEncryptionV2
+        TableEncryptionV2 = CdkObjectWrappers.wrap(cdkObject) as? TableEncryptionV2 ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableEncryptionV2):
         software.amazon.awscdk.services.dynamodb.TableEncryptionV2 = (wrapped as

@@ -557,7 +557,8 @@ public interface CfnComponentTypeProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentTypeProps):
-        CfnComponentTypeProps = CdkObjectWrappers.wrap(cdkObject) as CfnComponentTypeProps
+        CfnComponentTypeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnComponentTypeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnComponentTypeProps):
         software.amazon.awscdk.services.iottwinmaker.CfnComponentTypeProps = (wrapped as

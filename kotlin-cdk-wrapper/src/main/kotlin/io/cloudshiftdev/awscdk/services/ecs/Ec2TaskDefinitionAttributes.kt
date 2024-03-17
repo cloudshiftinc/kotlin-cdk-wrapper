@@ -139,8 +139,8 @@ public interface Ec2TaskDefinitionAttributes : CommonTaskDefinitionAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Ec2TaskDefinitionAttributes):
-        Ec2TaskDefinitionAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        Ec2TaskDefinitionAttributes
+        Ec2TaskDefinitionAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        Ec2TaskDefinitionAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Ec2TaskDefinitionAttributes):
         software.amazon.awscdk.services.ecs.Ec2TaskDefinitionAttributes = (wrapped as

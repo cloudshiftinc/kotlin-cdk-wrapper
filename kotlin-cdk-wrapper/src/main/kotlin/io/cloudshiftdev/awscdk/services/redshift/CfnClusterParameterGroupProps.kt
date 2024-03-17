@@ -298,8 +298,8 @@ public interface CfnClusterParameterGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroupProps):
-        CfnClusterParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnClusterParameterGroupProps
+        CfnClusterParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnClusterParameterGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterParameterGroupProps):
         software.amazon.awscdk.services.redshift.CfnClusterParameterGroupProps = (wrapped as

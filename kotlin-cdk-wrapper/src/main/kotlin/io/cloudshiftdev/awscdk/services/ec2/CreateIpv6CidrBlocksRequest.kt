@@ -122,8 +122,8 @@ public interface CreateIpv6CidrBlocksRequest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest):
-        CreateIpv6CidrBlocksRequest = CdkObjectWrappers.wrap(cdkObject) as
-        CreateIpv6CidrBlocksRequest
+        CreateIpv6CidrBlocksRequest = CdkObjectWrappers.wrap(cdkObject) as?
+        CreateIpv6CidrBlocksRequest ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CreateIpv6CidrBlocksRequest):
         software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest = (wrapped as

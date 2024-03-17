@@ -479,8 +479,8 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations.CapacityProviderStrategyProperty):
-          CapacityProviderStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CapacityProviderStrategyProperty
+          CapacityProviderStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityProviderStrategyProperty):
           software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations.CapacityProviderStrategyProperty

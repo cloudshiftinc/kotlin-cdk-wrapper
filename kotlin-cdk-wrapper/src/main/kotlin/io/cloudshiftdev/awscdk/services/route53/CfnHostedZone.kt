@@ -1252,8 +1252,8 @@ public open class CfnHostedZone internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty):
-          QueryLoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          QueryLoggingConfigProperty
+          QueryLoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryLoggingConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryLoggingConfigProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty =
@@ -1391,7 +1391,7 @@ public open class CfnHostedZone internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty):
-          VPCProperty = CdkObjectWrappers.wrap(cdkObject) as VPCProperty
+          VPCProperty = CdkObjectWrappers.wrap(cdkObject) as? VPCProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VPCProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty = (wrapped as
@@ -1543,7 +1543,8 @@ public open class CfnHostedZone internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty):
-          HostedZoneTagProperty = CdkObjectWrappers.wrap(cdkObject) as HostedZoneTagProperty
+          HostedZoneTagProperty = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HostedZoneTagProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty = (wrapped as
@@ -1627,7 +1628,8 @@ public open class CfnHostedZone internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty):
-          HostedZoneConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HostedZoneConfigProperty
+          HostedZoneConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HostedZoneConfigProperty):
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty = (wrapped

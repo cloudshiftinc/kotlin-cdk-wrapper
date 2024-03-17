@@ -248,7 +248,8 @@ public interface CfnResiliencyPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicyProps):
-        CfnResiliencyPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnResiliencyPolicyProps
+        CfnResiliencyPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResiliencyPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResiliencyPolicyProps):
         software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicyProps = (wrapped as

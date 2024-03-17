@@ -1017,7 +1017,8 @@ public interface CfnFileSystemProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystemProps):
-        CfnFileSystemProps = CdkObjectWrappers.wrap(cdkObject) as CfnFileSystemProps
+        CfnFileSystemProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFileSystemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFileSystemProps):
         software.amazon.awscdk.services.efs.CfnFileSystemProps = (wrapped as CdkObject).cdkObject as

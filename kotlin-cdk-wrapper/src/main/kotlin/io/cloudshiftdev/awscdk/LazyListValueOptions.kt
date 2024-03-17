@@ -101,7 +101,7 @@ public interface LazyListValueOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.LazyListValueOptions): LazyListValueOptions
-        = CdkObjectWrappers.wrap(cdkObject) as LazyListValueOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? LazyListValueOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LazyListValueOptions): software.amazon.awscdk.LazyListValueOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.LazyListValueOptions

@@ -487,7 +487,8 @@ public interface CfnConfigurationSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetProps):
-        CfnConfigurationSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnConfigurationSetProps
+        CfnConfigurationSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConfigurationSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationSetProps):
         software.amazon.awscdk.services.ses.CfnConfigurationSetProps = (wrapped as

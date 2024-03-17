@@ -149,7 +149,8 @@ public interface CfnReadinessCheckProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheckProps):
-        CfnReadinessCheckProps = CdkObjectWrappers.wrap(cdkObject) as CfnReadinessCheckProps
+        CfnReadinessCheckProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReadinessCheckProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReadinessCheckProps):
         software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheckProps = (wrapped

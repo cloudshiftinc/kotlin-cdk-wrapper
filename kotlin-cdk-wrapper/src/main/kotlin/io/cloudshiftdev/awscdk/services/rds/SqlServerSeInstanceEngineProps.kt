@@ -76,8 +76,8 @@ public interface SqlServerSeInstanceEngineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps):
-        SqlServerSeInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as
-        SqlServerSeInstanceEngineProps
+        SqlServerSeInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SqlServerSeInstanceEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SqlServerSeInstanceEngineProps):
         software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps = (wrapped as

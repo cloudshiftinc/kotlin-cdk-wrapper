@@ -709,7 +709,8 @@ public open class CfnLocationSMB internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationSMB.MountOptionsProperty):
-          MountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as MountOptionsProperty
+          MountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MountOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MountOptionsProperty):
           software.amazon.awscdk.services.datasync.CfnLocationSMB.MountOptionsProperty = (wrapped as

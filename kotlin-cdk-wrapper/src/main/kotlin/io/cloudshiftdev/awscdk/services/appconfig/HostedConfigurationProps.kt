@@ -313,7 +313,8 @@ public interface HostedConfigurationProps : ConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.HostedConfigurationProps):
-        HostedConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as HostedConfigurationProps
+        HostedConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as? HostedConfigurationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HostedConfigurationProps):
         software.amazon.awscdk.services.appconfig.HostedConfigurationProps = (wrapped as

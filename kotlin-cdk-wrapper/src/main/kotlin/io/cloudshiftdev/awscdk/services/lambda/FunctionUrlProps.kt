@@ -162,7 +162,8 @@ public interface FunctionUrlProps : FunctionUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionUrlProps):
-        FunctionUrlProps = CdkObjectWrappers.wrap(cdkObject) as FunctionUrlProps
+        FunctionUrlProps = CdkObjectWrappers.wrap(cdkObject) as? FunctionUrlProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionUrlProps):
         software.amazon.awscdk.services.lambda.FunctionUrlProps = (wrapped as CdkObject).cdkObject

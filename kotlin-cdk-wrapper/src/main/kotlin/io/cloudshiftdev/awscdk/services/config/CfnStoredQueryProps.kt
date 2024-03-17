@@ -187,7 +187,8 @@ public interface CfnStoredQueryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnStoredQueryProps):
-        CfnStoredQueryProps = CdkObjectWrappers.wrap(cdkObject) as CfnStoredQueryProps
+        CfnStoredQueryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStoredQueryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStoredQueryProps):
         software.amazon.awscdk.services.config.CfnStoredQueryProps = (wrapped as

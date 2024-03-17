@@ -45,6 +45,11 @@ public abstract class StackSetDeploymentModel internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel,
+  ) : StackSetDeploymentModel(cdkObject)
+
   public companion object {
     public fun organizations(): StackSetDeploymentModel =
         software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel.organizations().let(StackSetDeploymentModel::wrap)
@@ -70,7 +75,8 @@ public abstract class StackSetDeploymentModel internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel):
-        StackSetDeploymentModel = CdkObjectWrappers.wrap(cdkObject) as StackSetDeploymentModel
+        StackSetDeploymentModel = CdkObjectWrappers.wrap(cdkObject) as? StackSetDeploymentModel ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSetDeploymentModel):
         software.amazon.awscdk.services.codepipeline.actions.StackSetDeploymentModel = (wrapped as

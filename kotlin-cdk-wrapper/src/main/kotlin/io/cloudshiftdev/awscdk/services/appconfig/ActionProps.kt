@@ -230,7 +230,7 @@ public interface ActionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ActionProps): ActionProps
-        = CdkObjectWrappers.wrap(cdkObject) as ActionProps
+        = CdkObjectWrappers.wrap(cdkObject) as? ActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ActionProps): software.amazon.awscdk.services.appconfig.ActionProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appconfig.ActionProps

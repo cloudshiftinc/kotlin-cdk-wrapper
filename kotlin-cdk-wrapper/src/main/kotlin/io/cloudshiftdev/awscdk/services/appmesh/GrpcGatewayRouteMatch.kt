@@ -217,7 +217,8 @@ public interface GrpcGatewayRouteMatch {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch):
-        GrpcGatewayRouteMatch = CdkObjectWrappers.wrap(cdkObject) as GrpcGatewayRouteMatch
+        GrpcGatewayRouteMatch = CdkObjectWrappers.wrap(cdkObject) as? GrpcGatewayRouteMatch ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcGatewayRouteMatch):
         software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch = (wrapped as

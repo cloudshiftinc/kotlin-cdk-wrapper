@@ -372,7 +372,8 @@ public interface KafkaEventSourceProps : BaseStreamEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.KafkaEventSourceProps):
-        KafkaEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as KafkaEventSourceProps
+        KafkaEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as? KafkaEventSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KafkaEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.KafkaEventSourceProps = (wrapped as

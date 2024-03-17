@@ -780,7 +780,8 @@ public open class CfnFirewallRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty):
-          FirewallRuleProperty = CdkObjectWrappers.wrap(cdkObject) as FirewallRuleProperty
+          FirewallRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? FirewallRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FirewallRuleProperty):
           software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty

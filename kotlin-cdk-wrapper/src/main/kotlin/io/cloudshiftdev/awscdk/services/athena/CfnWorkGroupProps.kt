@@ -498,7 +498,8 @@ public interface CfnWorkGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroupProps):
-        CfnWorkGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnWorkGroupProps
+        CfnWorkGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkGroupProps):
         software.amazon.awscdk.services.athena.CfnWorkGroupProps = (wrapped as CdkObject).cdkObject

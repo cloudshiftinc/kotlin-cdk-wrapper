@@ -373,7 +373,8 @@ public open class CfnTrustStoreRevocation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.RevocationContentProperty):
-          RevocationContentProperty = CdkObjectWrappers.wrap(cdkObject) as RevocationContentProperty
+          RevocationContentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RevocationContentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RevocationContentProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.RevocationContentProperty
@@ -537,8 +538,8 @@ public open class CfnTrustStoreRevocation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.TrustStoreRevocationProperty):
-          TrustStoreRevocationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TrustStoreRevocationProperty
+          TrustStoreRevocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrustStoreRevocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrustStoreRevocationProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.TrustStoreRevocationProperty

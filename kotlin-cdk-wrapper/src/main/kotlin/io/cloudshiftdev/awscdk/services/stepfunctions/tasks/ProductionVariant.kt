@@ -222,7 +222,8 @@ public interface ProductionVariant {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant):
-        ProductionVariant = CdkObjectWrappers.wrap(cdkObject) as ProductionVariant
+        ProductionVariant = CdkObjectWrappers.wrap(cdkObject) as? ProductionVariant ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProductionVariant):
         software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant = (wrapped as

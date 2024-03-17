@@ -72,7 +72,8 @@ public interface BatchBuildConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BatchBuildConfig):
-        BatchBuildConfig = CdkObjectWrappers.wrap(cdkObject) as BatchBuildConfig
+        BatchBuildConfig = CdkObjectWrappers.wrap(cdkObject) as? BatchBuildConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BatchBuildConfig):
         software.amazon.awscdk.services.codebuild.BatchBuildConfig = (wrapped as

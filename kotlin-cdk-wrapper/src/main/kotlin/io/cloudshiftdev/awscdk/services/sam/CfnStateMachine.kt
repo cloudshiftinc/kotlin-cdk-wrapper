@@ -811,7 +811,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty):
-          StateMachineSAMPTProperty = CdkObjectWrappers.wrap(cdkObject) as StateMachineSAMPTProperty
+          StateMachineSAMPTProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StateMachineSAMPTProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StateMachineSAMPTProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.StateMachineSAMPTProperty = (wrapped
@@ -958,8 +959,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.EventBridgeRuleEventProperty):
-          EventBridgeRuleEventProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EventBridgeRuleEventProperty
+          EventBridgeRuleEventProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeRuleEventProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventBridgeRuleEventProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.EventBridgeRuleEventProperty =
@@ -1106,8 +1107,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty):
-          CloudWatchEventEventProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchEventEventProperty
+          CloudWatchEventEventProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchEventEventProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchEventEventProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchEventEventProperty =
@@ -1268,8 +1269,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.LoggingConfigurationProperty):
-          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoggingConfigurationProperty
+          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigurationProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.LoggingConfigurationProperty =
@@ -1390,7 +1391,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.S3LocationProperty = (wrapped as
@@ -1495,7 +1497,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty):
-          LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as LogDestinationProperty
+          LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogDestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogDestinationProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.LogDestinationProperty = (wrapped as
@@ -1569,7 +1572,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty):
-          FunctionSAMPTProperty = CdkObjectWrappers.wrap(cdkObject) as FunctionSAMPTProperty
+          FunctionSAMPTProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionSAMPTProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FunctionSAMPTProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.FunctionSAMPTProperty = (wrapped as
@@ -1731,7 +1735,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.SAMPolicyTemplateProperty):
-          SAMPolicyTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as SAMPolicyTemplateProperty
+          SAMPolicyTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAMPolicyTemplateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SAMPolicyTemplateProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.SAMPolicyTemplateProperty = (wrapped
@@ -1829,7 +1834,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ScheduleEventProperty):
-          ScheduleEventProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduleEventProperty
+          ScheduleEventProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleEventProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleEventProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.ScheduleEventProperty = (wrapped as
@@ -1906,8 +1912,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty):
-          CloudWatchLogsLogGroupProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchLogsLogGroupProperty
+          CloudWatchLogsLogGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsLogGroupProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogsLogGroupProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.CloudWatchLogsLogGroupProperty =
@@ -1995,8 +2001,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.TracingConfigurationProperty):
-          TracingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TracingConfigurationProperty
+          TracingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TracingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TracingConfigurationProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.TracingConfigurationProperty =
@@ -2206,7 +2212,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty):
-          EventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as EventSourceProperty
+          EventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? EventSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventSourceProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.EventSourceProperty = (wrapped as
@@ -2304,7 +2311,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty):
-          IAMPolicyDocumentProperty = CdkObjectWrappers.wrap(cdkObject) as IAMPolicyDocumentProperty
+          IAMPolicyDocumentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IAMPolicyDocumentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IAMPolicyDocumentProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.IAMPolicyDocumentProperty = (wrapped
@@ -2424,7 +2432,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty):
-          ApiEventProperty = CdkObjectWrappers.wrap(cdkObject) as ApiEventProperty
+          ApiEventProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiEventProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApiEventProperty):
           software.amazon.awscdk.services.sam.CfnStateMachine.ApiEventProperty = (wrapped as

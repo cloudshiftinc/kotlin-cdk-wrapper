@@ -157,7 +157,8 @@ public interface GatewayResponseProps : GatewayResponseOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponseProps):
-        GatewayResponseProps = CdkObjectWrappers.wrap(cdkObject) as GatewayResponseProps
+        GatewayResponseProps = CdkObjectWrappers.wrap(cdkObject) as? GatewayResponseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayResponseProps):
         software.amazon.awscdk.services.apigateway.GatewayResponseProps = (wrapped as

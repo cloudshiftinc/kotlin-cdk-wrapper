@@ -349,7 +349,7 @@ public interface CfnEIPProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEIPProps): CfnEIPProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnEIPProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnEIPProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEIPProps): software.amazon.awscdk.services.ec2.CfnEIPProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnEIPProps

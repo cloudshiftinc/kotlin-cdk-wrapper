@@ -715,8 +715,8 @@ public open class CfnAccessGrant internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty):
-          AccessGrantsLocationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccessGrantsLocationConfigurationProperty
+          AccessGrantsLocationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessGrantsLocationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessGrantsLocationConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty
@@ -878,7 +878,8 @@ public open class CfnAccessGrant internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty):
-          GranteeProperty = CdkObjectWrappers.wrap(cdkObject) as GranteeProperty
+          GranteeProperty = CdkObjectWrappers.wrap(cdkObject) as? GranteeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GranteeProperty):
           software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty = (wrapped as

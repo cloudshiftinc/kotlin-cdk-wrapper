@@ -186,7 +186,8 @@ public interface AccessKeysRotatedProps : RuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.AccessKeysRotatedProps):
-        AccessKeysRotatedProps = CdkObjectWrappers.wrap(cdkObject) as AccessKeysRotatedProps
+        AccessKeysRotatedProps = CdkObjectWrappers.wrap(cdkObject) as? AccessKeysRotatedProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AccessKeysRotatedProps):
         software.amazon.awscdk.services.config.AccessKeysRotatedProps = (wrapped as

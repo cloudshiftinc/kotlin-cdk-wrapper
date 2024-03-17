@@ -423,8 +423,8 @@ public interface NetworkLoadBalancedTaskImageOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions):
-        NetworkLoadBalancedTaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkLoadBalancedTaskImageOptions
+        NetworkLoadBalancedTaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancedTaskImageOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancedTaskImageOptions):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions = (wrapped

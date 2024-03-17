@@ -260,8 +260,8 @@ public interface CfnVPCPeeringConnectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCPeeringConnectionProps):
-        CfnVPCPeeringConnectionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVPCPeeringConnectionProps
+        CfnVPCPeeringConnectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPCPeeringConnectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCPeeringConnectionProps):
         software.amazon.awscdk.services.ec2.CfnVPCPeeringConnectionProps = (wrapped as

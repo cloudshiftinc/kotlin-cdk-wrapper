@@ -174,7 +174,7 @@ public interface MethodResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.MethodResponse):
-        MethodResponse = CdkObjectWrappers.wrap(cdkObject) as MethodResponse
+        MethodResponse = CdkObjectWrappers.wrap(cdkObject) as? MethodResponse ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MethodResponse):
         software.amazon.awscdk.services.apigateway.MethodResponse = (wrapped as CdkObject).cdkObject

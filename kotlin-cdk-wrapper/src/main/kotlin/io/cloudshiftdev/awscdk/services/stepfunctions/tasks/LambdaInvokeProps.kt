@@ -652,7 +652,8 @@ public interface LambdaInvokeProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvokeProps):
-        LambdaInvokeProps = CdkObjectWrappers.wrap(cdkObject) as LambdaInvokeProps
+        LambdaInvokeProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaInvokeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaInvokeProps):
         software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvokeProps = (wrapped as

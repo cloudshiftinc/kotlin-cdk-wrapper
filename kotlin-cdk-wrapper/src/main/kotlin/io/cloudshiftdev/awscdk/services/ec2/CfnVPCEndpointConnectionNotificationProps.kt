@@ -184,8 +184,8 @@ public interface CfnVPCEndpointConnectionNotificationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotificationProps):
-        CfnVPCEndpointConnectionNotificationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVPCEndpointConnectionNotificationProps
+        CfnVPCEndpointConnectionNotificationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPCEndpointConnectionNotificationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCEndpointConnectionNotificationProps):
         software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotificationProps = (wrapped as

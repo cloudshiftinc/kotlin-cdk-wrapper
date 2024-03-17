@@ -264,7 +264,7 @@ public interface VersionOptions : EventInvokeConfigOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.VersionOptions):
-        VersionOptions = CdkObjectWrappers.wrap(cdkObject) as VersionOptions
+        VersionOptions = CdkObjectWrappers.wrap(cdkObject) as? VersionOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VersionOptions):
         software.amazon.awscdk.services.lambda.VersionOptions = (wrapped as CdkObject).cdkObject as

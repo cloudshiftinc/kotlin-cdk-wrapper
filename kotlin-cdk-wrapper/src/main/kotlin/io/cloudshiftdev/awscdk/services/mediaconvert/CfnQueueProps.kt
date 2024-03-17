@@ -246,7 +246,7 @@ public interface CfnQueueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnQueueProps):
-        CfnQueueProps = CdkObjectWrappers.wrap(cdkObject) as CfnQueueProps
+        CfnQueueProps = CdkObjectWrappers.wrap(cdkObject) as? CfnQueueProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnQueueProps):
         software.amazon.awscdk.services.mediaconvert.CfnQueueProps = (wrapped as

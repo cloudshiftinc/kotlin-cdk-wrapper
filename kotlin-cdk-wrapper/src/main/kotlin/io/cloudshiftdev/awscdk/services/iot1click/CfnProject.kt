@@ -405,7 +405,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty):
-          PlacementTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as PlacementTemplateProperty
+          PlacementTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementTemplateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementTemplateProperty):
           software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty = (wrapped
@@ -504,7 +505,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty):
-          DeviceTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as DeviceTemplateProperty
+          DeviceTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceTemplateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceTemplateProperty):
           software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty = (wrapped as

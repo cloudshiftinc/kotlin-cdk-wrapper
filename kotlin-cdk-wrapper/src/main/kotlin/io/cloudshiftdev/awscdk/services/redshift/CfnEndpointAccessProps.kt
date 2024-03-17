@@ -205,7 +205,8 @@ public interface CfnEndpointAccessProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccessProps):
-        CfnEndpointAccessProps = CdkObjectWrappers.wrap(cdkObject) as CfnEndpointAccessProps
+        CfnEndpointAccessProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEndpointAccessProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointAccessProps):
         software.amazon.awscdk.services.redshift.CfnEndpointAccessProps = (wrapped as

@@ -70,8 +70,8 @@ public interface ParameterGroupClusterConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterConfig):
-        ParameterGroupClusterConfig = CdkObjectWrappers.wrap(cdkObject) as
-        ParameterGroupClusterConfig
+        ParameterGroupClusterConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        ParameterGroupClusterConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParameterGroupClusterConfig):
         software.amazon.awscdk.services.rds.ParameterGroupClusterConfig = (wrapped as

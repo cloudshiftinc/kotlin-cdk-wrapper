@@ -100,7 +100,8 @@ public interface WindowsUserDataOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.WindowsUserDataOptions):
-        WindowsUserDataOptions = CdkObjectWrappers.wrap(cdkObject) as WindowsUserDataOptions
+        WindowsUserDataOptions = CdkObjectWrappers.wrap(cdkObject) as? WindowsUserDataOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WindowsUserDataOptions):
         software.amazon.awscdk.services.ec2.WindowsUserDataOptions = (wrapped as

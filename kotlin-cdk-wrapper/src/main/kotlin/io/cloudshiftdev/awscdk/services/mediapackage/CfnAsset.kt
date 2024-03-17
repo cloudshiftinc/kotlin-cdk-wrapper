@@ -509,7 +509,8 @@ public open class CfnAsset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnAsset.EgressEndpointProperty):
-          EgressEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as EgressEndpointProperty
+          EgressEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? EgressEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EgressEndpointProperty):
           software.amazon.awscdk.services.mediapackage.CfnAsset.EgressEndpointProperty = (wrapped as

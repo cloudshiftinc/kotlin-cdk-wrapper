@@ -91,8 +91,8 @@ public interface CfnDefaultViewAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociationProps):
-        CfnDefaultViewAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDefaultViewAssociationProps
+        CfnDefaultViewAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDefaultViewAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDefaultViewAssociationProps):
         software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociationProps = (wrapped

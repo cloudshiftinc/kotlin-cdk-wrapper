@@ -300,7 +300,8 @@ public interface EmailIdentityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.EmailIdentityProps):
-        EmailIdentityProps = CdkObjectWrappers.wrap(cdkObject) as EmailIdentityProps
+        EmailIdentityProps = CdkObjectWrappers.wrap(cdkObject) as? EmailIdentityProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmailIdentityProps):
         software.amazon.awscdk.services.ses.EmailIdentityProps = (wrapped as CdkObject).cdkObject as

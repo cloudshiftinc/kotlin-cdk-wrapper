@@ -158,8 +158,8 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions):
-        SnapshotCredentialsFromGeneratedPasswordOptions = CdkObjectWrappers.wrap(cdkObject) as
-        SnapshotCredentialsFromGeneratedPasswordOptions
+        SnapshotCredentialsFromGeneratedPasswordOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        SnapshotCredentialsFromGeneratedPasswordOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SnapshotCredentialsFromGeneratedPasswordOptions):
         software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions =

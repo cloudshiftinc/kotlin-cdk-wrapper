@@ -405,7 +405,8 @@ public interface CfnMissionProfileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfileProps):
-        CfnMissionProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnMissionProfileProps
+        CfnMissionProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMissionProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMissionProfileProps):
         software.amazon.awscdk.services.groundstation.CfnMissionProfileProps = (wrapped as

@@ -793,8 +793,8 @@ public open class CfnCollaboration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty):
-          PaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PaymentConfigurationProperty
+          PaymentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PaymentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PaymentConfigurationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
@@ -1040,8 +1040,8 @@ public open class CfnCollaboration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty):
-          MemberSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MemberSpecificationProperty
+          MemberSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemberSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemberSpecificationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty =
@@ -1193,8 +1193,8 @@ public open class CfnCollaboration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty):
-          QueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          QueryComputePaymentConfigProperty
+          QueryComputePaymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueryComputePaymentConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueryComputePaymentConfigProperty):
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty
@@ -1441,8 +1441,8 @@ public open class CfnCollaboration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty):
-          DataEncryptionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataEncryptionMetadataProperty
+          DataEncryptionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataEncryptionMetadataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataEncryptionMetadataProperty):
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty

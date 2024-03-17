@@ -764,7 +764,8 @@ public open class CfnSignalCatalog internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.ActuatorProperty):
-          ActuatorProperty = CdkObjectWrappers.wrap(cdkObject) as ActuatorProperty
+          ActuatorProperty = CdkObjectWrappers.wrap(cdkObject) as? ActuatorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActuatorProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.ActuatorProperty = (wrapped
@@ -1163,7 +1164,7 @@ public open class CfnSignalCatalog internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeProperty):
-          NodeProperty = CdkObjectWrappers.wrap(cdkObject) as NodeProperty
+          NodeProperty = CdkObjectWrappers.wrap(cdkObject) as? NodeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NodeProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeProperty = (wrapped as
@@ -1429,7 +1430,8 @@ public open class CfnSignalCatalog internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty):
-          SensorProperty = CdkObjectWrappers.wrap(cdkObject) as SensorProperty
+          SensorProperty = CdkObjectWrappers.wrap(cdkObject) as? SensorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SensorProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty = (wrapped as
@@ -1745,7 +1747,8 @@ public open class CfnSignalCatalog internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty):
-          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeProperty
+          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty = (wrapped
@@ -1860,7 +1863,8 @@ public open class CfnSignalCatalog internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty):
-          BranchProperty = CdkObjectWrappers.wrap(cdkObject) as BranchProperty
+          BranchProperty = CdkObjectWrappers.wrap(cdkObject) as? BranchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BranchProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty = (wrapped as
@@ -2057,7 +2061,8 @@ public open class CfnSignalCatalog internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty):
-          NodeCountsProperty = CdkObjectWrappers.wrap(cdkObject) as NodeCountsProperty
+          NodeCountsProperty = CdkObjectWrappers.wrap(cdkObject) as? NodeCountsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NodeCountsProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty =

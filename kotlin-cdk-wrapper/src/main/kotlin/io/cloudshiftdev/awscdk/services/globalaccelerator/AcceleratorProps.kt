@@ -264,7 +264,8 @@ public interface AcceleratorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorProps):
-        AcceleratorProps = CdkObjectWrappers.wrap(cdkObject) as AcceleratorProps
+        AcceleratorProps = CdkObjectWrappers.wrap(cdkObject) as? AcceleratorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AcceleratorProps):
         software.amazon.awscdk.services.globalaccelerator.AcceleratorProps = (wrapped as

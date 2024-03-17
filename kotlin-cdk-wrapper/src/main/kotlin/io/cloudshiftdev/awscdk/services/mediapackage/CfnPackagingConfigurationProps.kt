@@ -493,8 +493,8 @@ public interface CfnPackagingConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnPackagingConfigurationProps):
-        CfnPackagingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnPackagingConfigurationProps
+        CfnPackagingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPackagingConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPackagingConfigurationProps):
         software.amazon.awscdk.services.mediapackage.CfnPackagingConfigurationProps = (wrapped as

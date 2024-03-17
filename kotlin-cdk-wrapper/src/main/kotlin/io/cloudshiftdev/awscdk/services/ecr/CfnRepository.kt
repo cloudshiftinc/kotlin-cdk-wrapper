@@ -805,8 +805,8 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty):
-          ImageScanningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ImageScanningConfigurationProperty
+          ImageScanningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageScanningConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageScanningConfigurationProperty):
           software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty =
@@ -925,7 +925,8 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty):
-          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as LifecyclePolicyProperty
+          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? LifecyclePolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LifecyclePolicyProperty):
           software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty = (wrapped as
@@ -1124,8 +1125,8 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EncryptionConfigurationProperty
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionConfigurationProperty):
           software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty =

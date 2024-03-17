@@ -24,6 +24,10 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 public abstract class TargetObjectKeyFormat internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat,
+  ) : TargetObjectKeyFormat(cdkObject)
+
   public companion object {
     public fun partitionedPrefix(): TargetObjectKeyFormat =
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat.partitionedPrefix().let(TargetObjectKeyFormat::wrap)
@@ -35,7 +39,8 @@ public abstract class TargetObjectKeyFormat internal constructor(
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat.simplePrefix().let(TargetObjectKeyFormat::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat):
-        TargetObjectKeyFormat = CdkObjectWrappers.wrap(cdkObject) as TargetObjectKeyFormat
+        TargetObjectKeyFormat = CdkObjectWrappers.wrap(cdkObject) as? TargetObjectKeyFormat ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TargetObjectKeyFormat):
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat = (wrapped as CdkObject).cdkObject

@@ -172,8 +172,8 @@ public interface ExternalDockerCredentialOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions):
-        ExternalDockerCredentialOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ExternalDockerCredentialOptions
+        ExternalDockerCredentialOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ExternalDockerCredentialOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExternalDockerCredentialOptions):
         software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions = (wrapped as

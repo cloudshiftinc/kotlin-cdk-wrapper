@@ -167,7 +167,8 @@ public interface HttpRouteAuthorizerConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig):
-        HttpRouteAuthorizerConfig = CdkObjectWrappers.wrap(cdkObject) as HttpRouteAuthorizerConfig
+        HttpRouteAuthorizerConfig = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteAuthorizerConfig
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteAuthorizerConfig):
         software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig = (wrapped as

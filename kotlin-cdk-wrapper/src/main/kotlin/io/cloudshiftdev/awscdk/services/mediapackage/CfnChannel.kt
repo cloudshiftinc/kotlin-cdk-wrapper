@@ -641,7 +641,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty):
-          IngestEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as IngestEndpointProperty
+          IngestEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? IngestEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IngestEndpointProperty):
           software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty = (wrapped
@@ -749,7 +750,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty):
-          HlsIngestProperty = CdkObjectWrappers.wrap(cdkObject) as HlsIngestProperty
+          HlsIngestProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsIngestProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsIngestProperty):
           software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty = (wrapped as
@@ -830,7 +832,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty):
-          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as LogConfigurationProperty
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogConfigurationProperty):
           software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty =

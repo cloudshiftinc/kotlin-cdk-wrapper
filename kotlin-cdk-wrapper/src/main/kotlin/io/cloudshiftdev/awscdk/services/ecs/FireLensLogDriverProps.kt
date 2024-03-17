@@ -257,7 +257,8 @@ public interface FireLensLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FireLensLogDriverProps):
-        FireLensLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as FireLensLogDriverProps
+        FireLensLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? FireLensLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FireLensLogDriverProps):
         software.amazon.awscdk.services.ecs.FireLensLogDriverProps = (wrapped as

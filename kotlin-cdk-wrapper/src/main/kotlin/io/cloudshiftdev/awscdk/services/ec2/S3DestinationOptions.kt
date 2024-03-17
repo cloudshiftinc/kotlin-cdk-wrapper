@@ -132,7 +132,8 @@ public interface S3DestinationOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.S3DestinationOptions):
-        S3DestinationOptions = CdkObjectWrappers.wrap(cdkObject) as S3DestinationOptions
+        S3DestinationOptions = CdkObjectWrappers.wrap(cdkObject) as? S3DestinationOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3DestinationOptions):
         software.amazon.awscdk.services.ec2.S3DestinationOptions = (wrapped as CdkObject).cdkObject

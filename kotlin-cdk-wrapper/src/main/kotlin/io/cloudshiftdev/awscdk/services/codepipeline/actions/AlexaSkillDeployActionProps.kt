@@ -270,8 +270,8 @@ public interface AlexaSkillDeployActionProps : CommonActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployActionProps):
-        AlexaSkillDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        AlexaSkillDeployActionProps
+        AlexaSkillDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AlexaSkillDeployActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AlexaSkillDeployActionProps):
         software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployActionProps = (wrapped

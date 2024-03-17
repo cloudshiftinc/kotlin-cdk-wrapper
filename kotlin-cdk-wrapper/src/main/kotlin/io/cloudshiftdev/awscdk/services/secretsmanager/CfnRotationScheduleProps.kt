@@ -475,7 +475,8 @@ public interface CfnRotationScheduleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationScheduleProps):
-        CfnRotationScheduleProps = CdkObjectWrappers.wrap(cdkObject) as CfnRotationScheduleProps
+        CfnRotationScheduleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRotationScheduleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRotationScheduleProps):
         software.amazon.awscdk.services.secretsmanager.CfnRotationScheduleProps = (wrapped as

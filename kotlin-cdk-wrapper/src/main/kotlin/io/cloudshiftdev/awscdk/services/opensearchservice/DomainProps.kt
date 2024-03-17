@@ -1268,7 +1268,7 @@ public interface DomainProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.DomainProps):
-        DomainProps = CdkObjectWrappers.wrap(cdkObject) as DomainProps
+        DomainProps = CdkObjectWrappers.wrap(cdkObject) as? DomainProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DomainProps):
         software.amazon.awscdk.services.opensearchservice.DomainProps = (wrapped as

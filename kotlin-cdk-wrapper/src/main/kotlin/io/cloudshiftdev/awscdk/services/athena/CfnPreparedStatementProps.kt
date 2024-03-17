@@ -158,7 +158,8 @@ public interface CfnPreparedStatementProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnPreparedStatementProps):
-        CfnPreparedStatementProps = CdkObjectWrappers.wrap(cdkObject) as CfnPreparedStatementProps
+        CfnPreparedStatementProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPreparedStatementProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPreparedStatementProps):
         software.amazon.awscdk.services.athena.CfnPreparedStatementProps = (wrapped as

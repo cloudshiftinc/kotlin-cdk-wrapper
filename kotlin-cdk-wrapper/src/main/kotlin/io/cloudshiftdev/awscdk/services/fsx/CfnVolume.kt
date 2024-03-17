@@ -629,7 +629,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty):
-          NfsExportsProperty = CdkObjectWrappers.wrap(cdkObject) as NfsExportsProperty
+          NfsExportsProperty = CdkObjectWrappers.wrap(cdkObject) as? NfsExportsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NfsExportsProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty = (wrapped as
@@ -838,8 +839,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AggregateConfigurationProperty):
-          AggregateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AggregateConfigurationProperty
+          AggregateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AggregateConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AggregateConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.AggregateConfigurationProperty = (wrapped as
@@ -1120,8 +1121,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty):
-          SnaplockRetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SnaplockRetentionPeriodProperty
+          SnaplockRetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnaplockRetentionPeriodProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnaplockRetentionPeriodProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.SnaplockRetentionPeriodProperty = (wrapped
@@ -1287,7 +1288,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty):
-          TieringPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as TieringPolicyProperty
+          TieringPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? TieringPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TieringPolicyProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.TieringPolicyProperty = (wrapped as
@@ -1482,8 +1484,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.ClientConfigurationsProperty):
-          ClientConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ClientConfigurationsProperty
+          ClientConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientConfigurationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClientConfigurationsProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.ClientConfigurationsProperty = (wrapped as
@@ -1617,8 +1619,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty):
-          UserAndGroupQuotasProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UserAndGroupQuotasProperty
+          UserAndGroupQuotasProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserAndGroupQuotasProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserAndGroupQuotasProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.UserAndGroupQuotasProperty = (wrapped as
@@ -1788,7 +1790,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty):
-          OriginSnapshotProperty = CdkObjectWrappers.wrap(cdkObject) as OriginSnapshotProperty
+          OriginSnapshotProperty = CdkObjectWrappers.wrap(cdkObject) as? OriginSnapshotProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OriginSnapshotProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.OriginSnapshotProperty = (wrapped as
@@ -1957,7 +1960,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty):
-          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as RetentionPeriodProperty
+          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? RetentionPeriodProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetentionPeriodProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.RetentionPeriodProperty = (wrapped as
@@ -2115,7 +2119,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty):
-          AutocommitPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as AutocommitPeriodProperty
+          AutocommitPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? AutocommitPeriodProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutocommitPeriodProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.AutocommitPeriodProperty = (wrapped as
@@ -2775,8 +2780,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty):
-          OpenZFSConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OpenZFSConfigurationProperty
+          OpenZFSConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenZFSConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OpenZFSConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty = (wrapped as
@@ -3663,8 +3668,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty):
-          OntapConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OntapConfigurationProperty
+          OntapConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OntapConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OntapConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.OntapConfigurationProperty = (wrapped as
@@ -4110,8 +4115,8 @@ public open class CfnVolume internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty):
-          SnaplockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SnaplockConfigurationProperty
+          SnaplockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnaplockConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnaplockConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnVolume.SnaplockConfigurationProperty = (wrapped as

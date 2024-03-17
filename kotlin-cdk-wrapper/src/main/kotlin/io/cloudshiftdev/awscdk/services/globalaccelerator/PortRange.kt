@@ -98,7 +98,7 @@ public interface PortRange {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.PortRange):
-        PortRange = CdkObjectWrappers.wrap(cdkObject) as PortRange
+        PortRange = CdkObjectWrappers.wrap(cdkObject) as? PortRange ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PortRange):
         software.amazon.awscdk.services.globalaccelerator.PortRange = (wrapped as

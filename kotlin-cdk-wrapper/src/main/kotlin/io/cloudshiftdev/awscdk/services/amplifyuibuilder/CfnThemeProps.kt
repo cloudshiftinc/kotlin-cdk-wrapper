@@ -273,7 +273,7 @@ public interface CfnThemeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnThemeProps):
-        CfnThemeProps = CdkObjectWrappers.wrap(cdkObject) as CfnThemeProps
+        CfnThemeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnThemeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnThemeProps):
         software.amazon.awscdk.services.amplifyuibuilder.CfnThemeProps = (wrapped as

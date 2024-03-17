@@ -165,7 +165,8 @@ public interface CfnKeyValueStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStoreProps):
-        CfnKeyValueStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnKeyValueStoreProps
+        CfnKeyValueStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnKeyValueStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeyValueStoreProps):
         software.amazon.awscdk.services.cloudfront.CfnKeyValueStoreProps = (wrapped as

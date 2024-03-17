@@ -462,7 +462,8 @@ public interface CfnResponsePlanProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlanProps):
-        CfnResponsePlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnResponsePlanProps
+        CfnResponsePlanProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResponsePlanProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResponsePlanProps):
         software.amazon.awscdk.services.ssmincidents.CfnResponsePlanProps = (wrapped as

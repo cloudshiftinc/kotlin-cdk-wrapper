@@ -525,7 +525,8 @@ public open class CfnLink internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnLink.BandwidthProperty):
-          BandwidthProperty = CdkObjectWrappers.wrap(cdkObject) as BandwidthProperty
+          BandwidthProperty = CdkObjectWrappers.wrap(cdkObject) as? BandwidthProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BandwidthProperty):
           software.amazon.awscdk.services.networkmanager.CfnLink.BandwidthProperty = (wrapped as

@@ -878,8 +878,8 @@ public interface CloudFormationCreateReplaceChangeSetActionProps : CommonAwsActi
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetActionProps):
-        CloudFormationCreateReplaceChangeSetActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationCreateReplaceChangeSetActionProps
+        CloudFormationCreateReplaceChangeSetActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationCreateReplaceChangeSetActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationCreateReplaceChangeSetActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetActionProps

@@ -139,7 +139,7 @@ public interface SrvRecordValue {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.SrvRecordValue):
-        SrvRecordValue = CdkObjectWrappers.wrap(cdkObject) as SrvRecordValue
+        SrvRecordValue = CdkObjectWrappers.wrap(cdkObject) as? SrvRecordValue ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SrvRecordValue):
         software.amazon.awscdk.services.route53.SrvRecordValue = (wrapped as CdkObject).cdkObject as

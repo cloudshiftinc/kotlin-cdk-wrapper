@@ -272,8 +272,8 @@ public interface CfnEnvironmentTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentTemplateProps):
-        CfnEnvironmentTemplateProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnEnvironmentTemplateProps
+        CfnEnvironmentTemplateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEnvironmentTemplateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironmentTemplateProps):
         software.amazon.awscdk.services.proton.CfnEnvironmentTemplateProps = (wrapped as

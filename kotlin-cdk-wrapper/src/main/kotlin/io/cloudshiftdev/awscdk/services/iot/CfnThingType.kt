@@ -495,8 +495,8 @@ public open class CfnThingType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThingType.ThingTypePropertiesProperty):
-          ThingTypePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ThingTypePropertiesProperty
+          ThingTypePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ThingTypePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThingTypePropertiesProperty):
           software.amazon.awscdk.services.iot.CfnThingType.ThingTypePropertiesProperty = (wrapped as

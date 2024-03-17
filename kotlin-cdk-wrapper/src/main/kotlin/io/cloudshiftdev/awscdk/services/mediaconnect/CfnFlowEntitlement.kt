@@ -826,7 +826,8 @@ public open class CfnFlowEntitlement internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.EncryptionProperty):
-          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionProperty
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.EncryptionProperty =

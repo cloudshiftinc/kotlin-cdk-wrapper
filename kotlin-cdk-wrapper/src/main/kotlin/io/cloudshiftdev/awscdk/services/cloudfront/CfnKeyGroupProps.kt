@@ -111,7 +111,8 @@ public interface CfnKeyGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroupProps):
-        CfnKeyGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnKeyGroupProps
+        CfnKeyGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnKeyGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeyGroupProps):
         software.amazon.awscdk.services.cloudfront.CfnKeyGroupProps = (wrapped as

@@ -547,8 +547,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty):
-          AccessControlAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccessControlAttributeProperty
+          AccessControlAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessControlAttributeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessControlAttributeProperty):
           software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeProperty
@@ -646,8 +646,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty):
-          AccessControlAttributeValueProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccessControlAttributeValueProperty
+          AccessControlAttributeValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccessControlAttributeValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessControlAttributeValueProperty):
           software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty
@@ -759,8 +759,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty):
-          InstanceAccessControlAttributeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceAccessControlAttributeConfigurationProperty
+          InstanceAccessControlAttributeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? InstanceAccessControlAttributeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceAccessControlAttributeConfigurationProperty):
           software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty

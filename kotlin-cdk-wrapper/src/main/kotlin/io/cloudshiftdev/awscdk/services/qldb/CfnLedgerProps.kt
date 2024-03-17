@@ -511,7 +511,7 @@ public interface CfnLedgerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.qldb.CfnLedgerProps):
-        CfnLedgerProps = CdkObjectWrappers.wrap(cdkObject) as CfnLedgerProps
+        CfnLedgerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLedgerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLedgerProps):
         software.amazon.awscdk.services.qldb.CfnLedgerProps = (wrapped as CdkObject).cdkObject as

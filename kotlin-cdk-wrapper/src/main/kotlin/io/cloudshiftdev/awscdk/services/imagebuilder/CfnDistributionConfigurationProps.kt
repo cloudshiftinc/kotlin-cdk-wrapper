@@ -225,8 +225,8 @@ public interface CfnDistributionConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfigurationProps):
-        CfnDistributionConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDistributionConfigurationProps
+        CfnDistributionConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDistributionConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDistributionConfigurationProps):
         software.amazon.awscdk.services.imagebuilder.CfnDistributionConfigurationProps = (wrapped as

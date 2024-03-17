@@ -92,8 +92,8 @@ public interface ApplicationLoadBalancerLookupOptions : BaseLoadBalancerLookupOp
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerLookupOptions):
-        ApplicationLoadBalancerLookupOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancerLookupOptions
+        ApplicationLoadBalancerLookupOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancerLookupOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancerLookupOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerLookupOptions

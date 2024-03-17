@@ -101,7 +101,8 @@ public interface DataSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.DataSourceOptions):
-        DataSourceOptions = CdkObjectWrappers.wrap(cdkObject) as DataSourceOptions
+        DataSourceOptions = CdkObjectWrappers.wrap(cdkObject) as? DataSourceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DataSourceOptions):
         software.amazon.awscdk.services.appsync.DataSourceOptions = (wrapped as CdkObject).cdkObject

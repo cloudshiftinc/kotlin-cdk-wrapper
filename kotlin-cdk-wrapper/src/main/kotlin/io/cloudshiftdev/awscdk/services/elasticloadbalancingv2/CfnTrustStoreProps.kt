@@ -214,7 +214,8 @@ public interface CfnTrustStoreProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreProps):
-        CfnTrustStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnTrustStoreProps
+        CfnTrustStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTrustStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrustStoreProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreProps = (wrapped as

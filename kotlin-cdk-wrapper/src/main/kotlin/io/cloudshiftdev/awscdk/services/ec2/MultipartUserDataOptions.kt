@@ -86,7 +86,8 @@ public interface MultipartUserDataOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MultipartUserDataOptions):
-        MultipartUserDataOptions = CdkObjectWrappers.wrap(cdkObject) as MultipartUserDataOptions
+        MultipartUserDataOptions = CdkObjectWrappers.wrap(cdkObject) as? MultipartUserDataOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MultipartUserDataOptions):
         software.amazon.awscdk.services.ec2.MultipartUserDataOptions = (wrapped as

@@ -705,7 +705,8 @@ public open class CfnAccessEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty):
-          AccessScopeProperty = CdkObjectWrappers.wrap(cdkObject) as AccessScopeProperty
+          AccessScopeProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessScopeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessScopeProperty):
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty = (wrapped as
@@ -853,7 +854,8 @@ public open class CfnAccessEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty):
-          AccessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as AccessPolicyProperty
+          AccessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessPolicyProperty):
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty = (wrapped as

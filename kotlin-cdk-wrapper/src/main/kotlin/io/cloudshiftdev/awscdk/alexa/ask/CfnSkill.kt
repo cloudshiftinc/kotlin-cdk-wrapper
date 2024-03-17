@@ -621,7 +621,8 @@ public open class CfnSkill internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty):
-          SkillPackageProperty = CdkObjectWrappers.wrap(cdkObject) as SkillPackageProperty
+          SkillPackageProperty = CdkObjectWrappers.wrap(cdkObject) as? SkillPackageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SkillPackageProperty):
           software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty = (wrapped as
@@ -710,7 +711,8 @@ public open class CfnSkill internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty):
-          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as OverridesProperty
+          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as? OverridesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OverridesProperty):
           software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty = (wrapped as
@@ -861,8 +863,8 @@ public open class CfnSkill internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty):
-          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AuthenticationConfigurationProperty
+          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthenticationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuthenticationConfigurationProperty):
           software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty = (wrapped

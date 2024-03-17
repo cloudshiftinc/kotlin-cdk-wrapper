@@ -928,8 +928,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty):
-          ThumbnailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ThumbnailConfigurationProperty
+          ThumbnailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ThumbnailConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThumbnailConfigurationProperty):
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty
@@ -1100,8 +1100,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty):
-          RenditionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RenditionConfigurationProperty
+          RenditionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RenditionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RenditionConfigurationProperty):
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty
@@ -1186,8 +1186,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty):
-          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3DestinationConfigurationProperty
+          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3DestinationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty
@@ -1329,8 +1329,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty):
-          DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DestinationConfigurationProperty
+          DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationConfigurationProperty):
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty

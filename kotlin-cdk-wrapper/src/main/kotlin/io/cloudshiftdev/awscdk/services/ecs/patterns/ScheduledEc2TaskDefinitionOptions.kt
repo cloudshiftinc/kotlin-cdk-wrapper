@@ -92,8 +92,8 @@ public interface ScheduledEc2TaskDefinitionOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions):
-        ScheduledEc2TaskDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ScheduledEc2TaskDefinitionOptions
+        ScheduledEc2TaskDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ScheduledEc2TaskDefinitionOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledEc2TaskDefinitionOptions):
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions = (wrapped as

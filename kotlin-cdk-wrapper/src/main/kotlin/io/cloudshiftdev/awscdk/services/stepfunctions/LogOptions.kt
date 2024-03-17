@@ -127,7 +127,7 @@ public interface LogOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.LogOptions):
-        LogOptions = CdkObjectWrappers.wrap(cdkObject) as LogOptions
+        LogOptions = CdkObjectWrappers.wrap(cdkObject) as? LogOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogOptions):
         software.amazon.awscdk.services.stepfunctions.LogOptions = (wrapped as CdkObject).cdkObject

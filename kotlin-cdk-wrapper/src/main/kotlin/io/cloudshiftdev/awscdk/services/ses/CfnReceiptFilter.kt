@@ -316,7 +316,8 @@ public open class CfnReceiptFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty):
-          IpFilterProperty = CdkObjectWrappers.wrap(cdkObject) as IpFilterProperty
+          IpFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? IpFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IpFilterProperty):
           software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty = (wrapped as
@@ -477,7 +478,8 @@ public open class CfnReceiptFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as FilterProperty
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty = (wrapped as

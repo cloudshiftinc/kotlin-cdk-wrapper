@@ -349,8 +349,8 @@ public open class CfnGeoMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty):
-          GeoMatchConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GeoMatchConstraintProperty
+          GeoMatchConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GeoMatchConstraintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GeoMatchConstraintProperty):
           software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty =

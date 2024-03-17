@@ -94,7 +94,8 @@ public interface VirtualRouterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterAttributes):
-        VirtualRouterAttributes = CdkObjectWrappers.wrap(cdkObject) as VirtualRouterAttributes
+        VirtualRouterAttributes = CdkObjectWrappers.wrap(cdkObject) as? VirtualRouterAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualRouterAttributes):
         software.amazon.awscdk.services.appmesh.VirtualRouterAttributes = (wrapped as

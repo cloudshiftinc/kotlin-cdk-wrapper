@@ -454,7 +454,8 @@ public interface BastionHostLinuxProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.BastionHostLinuxProps):
-        BastionHostLinuxProps = CdkObjectWrappers.wrap(cdkObject) as BastionHostLinuxProps
+        BastionHostLinuxProps = CdkObjectWrappers.wrap(cdkObject) as? BastionHostLinuxProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BastionHostLinuxProps):
         software.amazon.awscdk.services.ec2.BastionHostLinuxProps = (wrapped as CdkObject).cdkObject

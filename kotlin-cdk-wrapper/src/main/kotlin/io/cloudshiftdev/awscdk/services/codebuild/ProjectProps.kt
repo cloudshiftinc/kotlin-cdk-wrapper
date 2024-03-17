@@ -980,7 +980,7 @@ public interface ProjectProps : CommonProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.ProjectProps):
-        ProjectProps = CdkObjectWrappers.wrap(cdkObject) as ProjectProps
+        ProjectProps = CdkObjectWrappers.wrap(cdkObject) as? ProjectProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProjectProps):
         software.amazon.awscdk.services.codebuild.ProjectProps = (wrapped as CdkObject).cdkObject as

@@ -199,7 +199,8 @@ public interface EventInvokeConfigProps : EventInvokeConfigOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfigProps):
-        EventInvokeConfigProps = CdkObjectWrappers.wrap(cdkObject) as EventInvokeConfigProps
+        EventInvokeConfigProps = CdkObjectWrappers.wrap(cdkObject) as? EventInvokeConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventInvokeConfigProps):
         software.amazon.awscdk.services.lambda.EventInvokeConfigProps = (wrapped as

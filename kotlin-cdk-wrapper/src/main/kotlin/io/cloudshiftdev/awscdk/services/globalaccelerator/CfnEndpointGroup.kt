@@ -756,7 +756,8 @@ public open class CfnEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty):
-          PortOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as PortOverrideProperty
+          PortOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as? PortOverrideProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortOverrideProperty):
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty =
@@ -1070,8 +1071,8 @@ public open class CfnEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EndpointConfigurationProperty
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EndpointConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointConfigurationProperty):
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty

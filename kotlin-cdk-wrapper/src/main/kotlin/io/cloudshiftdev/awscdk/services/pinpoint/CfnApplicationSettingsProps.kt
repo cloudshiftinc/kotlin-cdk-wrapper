@@ -468,8 +468,8 @@ public interface CfnApplicationSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettingsProps):
-        CfnApplicationSettingsProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnApplicationSettingsProps
+        CfnApplicationSettingsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnApplicationSettingsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationSettingsProps):
         software.amazon.awscdk.services.pinpoint.CfnApplicationSettingsProps = (wrapped as

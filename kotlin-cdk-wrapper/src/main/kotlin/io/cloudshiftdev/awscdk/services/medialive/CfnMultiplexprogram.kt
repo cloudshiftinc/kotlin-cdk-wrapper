@@ -987,8 +987,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty):
-          MultiplexProgramPacketIdentifiersMapProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexProgramPacketIdentifiersMapProperty
+          MultiplexProgramPacketIdentifiersMapProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexProgramPacketIdentifiersMapProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexProgramPacketIdentifiersMapProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty
@@ -1103,8 +1103,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty):
-          MultiplexProgramPipelineDetailProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexProgramPipelineDetailProperty
+          MultiplexProgramPipelineDetailProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexProgramPipelineDetailProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexProgramPipelineDetailProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty
@@ -1263,8 +1263,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty):
-          MultiplexVideoSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexVideoSettingsProperty
+          MultiplexVideoSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexVideoSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexVideoSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty
@@ -1503,8 +1503,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty):
-          MultiplexProgramSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexProgramSettingsProperty
+          MultiplexProgramSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexProgramSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexProgramSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty
@@ -1660,8 +1660,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty):
-          MultiplexStatmuxVideoSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexStatmuxVideoSettingsProperty
+          MultiplexStatmuxVideoSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexStatmuxVideoSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexStatmuxVideoSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty
@@ -1772,8 +1772,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty):
-          MultiplexProgramServiceDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexProgramServiceDescriptorProperty
+          MultiplexProgramServiceDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexProgramServiceDescriptorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexProgramServiceDescriptorProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty

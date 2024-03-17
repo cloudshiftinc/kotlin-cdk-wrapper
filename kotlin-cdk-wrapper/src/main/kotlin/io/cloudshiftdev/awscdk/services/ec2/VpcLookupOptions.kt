@@ -337,7 +337,8 @@ public interface VpcLookupOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpcLookupOptions):
-        VpcLookupOptions = CdkObjectWrappers.wrap(cdkObject) as VpcLookupOptions
+        VpcLookupOptions = CdkObjectWrappers.wrap(cdkObject) as? VpcLookupOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcLookupOptions):
         software.amazon.awscdk.services.ec2.VpcLookupOptions = (wrapped as CdkObject).cdkObject as

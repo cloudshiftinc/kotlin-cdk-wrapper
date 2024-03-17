@@ -147,8 +147,8 @@ public interface ResponseHeadersContentSecurityPolicy {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy):
-        ResponseHeadersContentSecurityPolicy = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseHeadersContentSecurityPolicy
+        ResponseHeadersContentSecurityPolicy = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersContentSecurityPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersContentSecurityPolicy):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy = (wrapped

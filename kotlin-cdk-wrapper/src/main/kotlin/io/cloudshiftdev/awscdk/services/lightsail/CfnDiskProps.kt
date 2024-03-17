@@ -359,7 +359,7 @@ public interface CfnDiskProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDiskProps):
-        CfnDiskProps = CdkObjectWrappers.wrap(cdkObject) as CfnDiskProps
+        CfnDiskProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDiskProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDiskProps):
         software.amazon.awscdk.services.lightsail.CfnDiskProps = (wrapped as CdkObject).cdkObject as

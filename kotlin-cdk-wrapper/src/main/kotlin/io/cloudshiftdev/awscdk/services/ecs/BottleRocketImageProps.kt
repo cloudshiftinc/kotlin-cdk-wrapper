@@ -186,7 +186,8 @@ public interface BottleRocketImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImageProps):
-        BottleRocketImageProps = CdkObjectWrappers.wrap(cdkObject) as BottleRocketImageProps
+        BottleRocketImageProps = CdkObjectWrappers.wrap(cdkObject) as? BottleRocketImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BottleRocketImageProps):
         software.amazon.awscdk.services.ecs.BottleRocketImageProps = (wrapped as

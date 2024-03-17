@@ -146,7 +146,7 @@ public interface EdgeLambda {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.EdgeLambda): EdgeLambda
-        = CdkObjectWrappers.wrap(cdkObject) as EdgeLambda
+        = CdkObjectWrappers.wrap(cdkObject) as? EdgeLambda ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EdgeLambda): software.amazon.awscdk.services.cloudfront.EdgeLambda
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.EdgeLambda

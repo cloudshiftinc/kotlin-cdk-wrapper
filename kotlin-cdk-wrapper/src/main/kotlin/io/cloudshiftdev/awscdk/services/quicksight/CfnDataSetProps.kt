@@ -1081,7 +1081,8 @@ public interface CfnDataSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSetProps):
-        CfnDataSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataSetProps
+        CfnDataSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDataSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataSetProps):
         software.amazon.awscdk.services.quicksight.CfnDataSetProps = (wrapped as

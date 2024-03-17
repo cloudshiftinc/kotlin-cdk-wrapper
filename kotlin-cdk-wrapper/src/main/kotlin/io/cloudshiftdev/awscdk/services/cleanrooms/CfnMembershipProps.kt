@@ -318,7 +318,8 @@ public interface CfnMembershipProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembershipProps):
-        CfnMembershipProps = CdkObjectWrappers.wrap(cdkObject) as CfnMembershipProps
+        CfnMembershipProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMembershipProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMembershipProps):
         software.amazon.awscdk.services.cleanrooms.CfnMembershipProps = (wrapped as

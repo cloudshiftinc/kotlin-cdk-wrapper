@@ -45,8 +45,8 @@ public interface PermissionsBoundaryBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.PermissionsBoundaryBindOptions):
-        PermissionsBoundaryBindOptions = CdkObjectWrappers.wrap(cdkObject) as
-        PermissionsBoundaryBindOptions
+        PermissionsBoundaryBindOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        PermissionsBoundaryBindOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PermissionsBoundaryBindOptions):
         software.amazon.awscdk.PermissionsBoundaryBindOptions = (wrapped as CdkObject).cdkObject as

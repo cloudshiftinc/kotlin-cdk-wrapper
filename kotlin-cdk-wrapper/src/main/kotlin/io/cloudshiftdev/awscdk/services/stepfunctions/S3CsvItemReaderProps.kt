@@ -140,7 +140,8 @@ public interface S3CsvItemReaderProps : S3FileItemReaderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.S3CsvItemReaderProps):
-        S3CsvItemReaderProps = CdkObjectWrappers.wrap(cdkObject) as S3CsvItemReaderProps
+        S3CsvItemReaderProps = CdkObjectWrappers.wrap(cdkObject) as? S3CsvItemReaderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3CsvItemReaderProps):
         software.amazon.awscdk.services.stepfunctions.S3CsvItemReaderProps = (wrapped as

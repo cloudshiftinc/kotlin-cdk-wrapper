@@ -132,7 +132,8 @@ public interface LoggingConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.LoggingConfiguration):
-        LoggingConfiguration = CdkObjectWrappers.wrap(cdkObject) as LoggingConfiguration
+        LoggingConfiguration = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoggingConfiguration):
         software.amazon.awscdk.services.cloudfront.LoggingConfiguration = (wrapped as

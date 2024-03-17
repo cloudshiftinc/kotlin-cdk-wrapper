@@ -111,8 +111,8 @@ public interface CfnNotificationChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnNotificationChannelProps):
-        CfnNotificationChannelProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnNotificationChannelProps
+        CfnNotificationChannelProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNotificationChannelProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotificationChannelProps):
         software.amazon.awscdk.services.fms.CfnNotificationChannelProps = (wrapped as

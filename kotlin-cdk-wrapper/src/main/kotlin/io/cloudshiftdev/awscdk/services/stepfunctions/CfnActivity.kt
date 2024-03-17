@@ -331,7 +331,8 @@ public open class CfnActivity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivity.TagsEntryProperty):
-          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as TagsEntryProperty
+          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? TagsEntryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagsEntryProperty):
           software.amazon.awscdk.services.stepfunctions.CfnActivity.TagsEntryProperty = (wrapped as

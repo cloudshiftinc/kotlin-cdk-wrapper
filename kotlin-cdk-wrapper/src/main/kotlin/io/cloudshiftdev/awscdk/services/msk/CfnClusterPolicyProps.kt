@@ -105,7 +105,8 @@ public interface CfnClusterPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnClusterPolicyProps):
-        CfnClusterPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnClusterPolicyProps
+        CfnClusterPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnClusterPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterPolicyProps):
         software.amazon.awscdk.services.msk.CfnClusterPolicyProps = (wrapped as CdkObject).cdkObject

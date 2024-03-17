@@ -222,7 +222,8 @@ public interface DatabaseInstanceAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes):
-        DatabaseInstanceAttributes = CdkObjectWrappers.wrap(cdkObject) as DatabaseInstanceAttributes
+        DatabaseInstanceAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        DatabaseInstanceAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseInstanceAttributes):
         software.amazon.awscdk.services.rds.DatabaseInstanceAttributes = (wrapped as

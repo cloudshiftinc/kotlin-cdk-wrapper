@@ -203,8 +203,8 @@ public interface CfnSoftwarePackageVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackageVersionProps):
-        CfnSoftwarePackageVersionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSoftwarePackageVersionProps
+        CfnSoftwarePackageVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSoftwarePackageVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSoftwarePackageVersionProps):
         software.amazon.awscdk.services.iot.CfnSoftwarePackageVersionProps = (wrapped as

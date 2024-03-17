@@ -218,7 +218,8 @@ public interface CodeImageConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CodeImageConfig):
-        CodeImageConfig = CdkObjectWrappers.wrap(cdkObject) as CodeImageConfig
+        CodeImageConfig = CdkObjectWrappers.wrap(cdkObject) as? CodeImageConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeImageConfig):
         software.amazon.awscdk.services.lambda.CodeImageConfig = (wrapped as CdkObject).cdkObject as

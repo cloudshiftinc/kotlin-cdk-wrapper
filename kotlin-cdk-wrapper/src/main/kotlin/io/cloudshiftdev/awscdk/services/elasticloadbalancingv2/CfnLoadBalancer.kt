@@ -1027,7 +1027,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty):
-          SubnetMappingProperty = CdkObjectWrappers.wrap(cdkObject) as SubnetMappingProperty
+          SubnetMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubnetMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubnetMappingProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty
@@ -1460,8 +1461,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty):
-          LoadBalancerAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoadBalancerAttributeProperty
+          LoadBalancerAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoadBalancerAttributeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoadBalancerAttributeProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty

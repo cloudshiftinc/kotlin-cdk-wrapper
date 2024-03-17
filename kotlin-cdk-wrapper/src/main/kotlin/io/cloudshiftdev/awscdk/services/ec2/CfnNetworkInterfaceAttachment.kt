@@ -467,8 +467,8 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty):
-          EnaSrdUdpSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnaSrdUdpSpecificationProperty
+          EnaSrdUdpSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnaSrdUdpSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnaSrdUdpSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty
@@ -630,8 +630,8 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty):
-          EnaSrdSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnaSrdSpecificationProperty
+          EnaSrdSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnaSrdSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnaSrdSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty

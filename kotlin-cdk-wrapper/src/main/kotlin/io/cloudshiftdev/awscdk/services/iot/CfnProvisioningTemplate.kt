@@ -568,7 +568,8 @@ public open class CfnProvisioningTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplate.ProvisioningHookProperty):
-          ProvisioningHookProperty = CdkObjectWrappers.wrap(cdkObject) as ProvisioningHookProperty
+          ProvisioningHookProperty = CdkObjectWrappers.wrap(cdkObject) as? ProvisioningHookProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisioningHookProperty):
           software.amazon.awscdk.services.iot.CfnProvisioningTemplate.ProvisioningHookProperty =

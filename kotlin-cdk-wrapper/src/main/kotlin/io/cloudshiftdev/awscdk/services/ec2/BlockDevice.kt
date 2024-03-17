@@ -155,7 +155,7 @@ public interface BlockDevice {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.BlockDevice): BlockDevice =
-        CdkObjectWrappers.wrap(cdkObject) as BlockDevice
+        CdkObjectWrappers.wrap(cdkObject) as? BlockDevice ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BlockDevice): software.amazon.awscdk.services.ec2.BlockDevice =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.BlockDevice

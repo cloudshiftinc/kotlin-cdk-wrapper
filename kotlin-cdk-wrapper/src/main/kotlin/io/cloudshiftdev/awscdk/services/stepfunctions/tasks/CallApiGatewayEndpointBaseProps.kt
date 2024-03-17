@@ -584,8 +584,8 @@ public interface CallApiGatewayEndpointBaseProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayEndpointBaseProps):
-        CallApiGatewayEndpointBaseProps = CdkObjectWrappers.wrap(cdkObject) as
-        CallApiGatewayEndpointBaseProps
+        CallApiGatewayEndpointBaseProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CallApiGatewayEndpointBaseProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CallApiGatewayEndpointBaseProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayEndpointBaseProps =

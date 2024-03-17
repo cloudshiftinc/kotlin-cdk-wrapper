@@ -494,7 +494,8 @@ public interface CfnFirewallProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallProps):
-        CfnFirewallProps = CdkObjectWrappers.wrap(cdkObject) as CfnFirewallProps
+        CfnFirewallProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFirewallProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallProps):
         software.amazon.awscdk.services.networkfirewall.CfnFirewallProps = (wrapped as

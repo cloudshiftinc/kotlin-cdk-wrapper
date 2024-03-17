@@ -106,8 +106,8 @@ public interface PermissionsBroadeningCheckProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps):
-        PermissionsBroadeningCheckProps = CdkObjectWrappers.wrap(cdkObject) as
-        PermissionsBroadeningCheckProps
+        PermissionsBroadeningCheckProps = CdkObjectWrappers.wrap(cdkObject) as?
+        PermissionsBroadeningCheckProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PermissionsBroadeningCheckProps):
         software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps = (wrapped as

@@ -74,7 +74,8 @@ public interface TcpConnectionPool {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TcpConnectionPool):
-        TcpConnectionPool = CdkObjectWrappers.wrap(cdkObject) as TcpConnectionPool
+        TcpConnectionPool = CdkObjectWrappers.wrap(cdkObject) as? TcpConnectionPool ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TcpConnectionPool):
         software.amazon.awscdk.services.appmesh.TcpConnectionPool = (wrapped as CdkObject).cdkObject

@@ -580,7 +580,8 @@ public interface CfnComponentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponentProps):
-        CfnComponentProps = CdkObjectWrappers.wrap(cdkObject) as CfnComponentProps
+        CfnComponentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnComponentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnComponentProps):
         software.amazon.awscdk.services.amplifyuibuilder.CfnComponentProps = (wrapped as

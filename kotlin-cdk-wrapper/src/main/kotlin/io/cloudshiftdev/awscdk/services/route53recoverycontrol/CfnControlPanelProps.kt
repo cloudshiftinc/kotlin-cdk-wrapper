@@ -155,7 +155,8 @@ public interface CfnControlPanelProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanelProps):
-        CfnControlPanelProps = CdkObjectWrappers.wrap(cdkObject) as CfnControlPanelProps
+        CfnControlPanelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnControlPanelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnControlPanelProps):
         software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanelProps = (wrapped as

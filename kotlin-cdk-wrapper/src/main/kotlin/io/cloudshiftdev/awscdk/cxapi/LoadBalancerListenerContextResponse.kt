@@ -131,8 +131,8 @@ public interface LoadBalancerListenerContextResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.LoadBalancerListenerContextResponse):
-        LoadBalancerListenerContextResponse = CdkObjectWrappers.wrap(cdkObject) as
-        LoadBalancerListenerContextResponse
+        LoadBalancerListenerContextResponse = CdkObjectWrappers.wrap(cdkObject) as?
+        LoadBalancerListenerContextResponse ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerListenerContextResponse):
         software.amazon.awscdk.cxapi.LoadBalancerListenerContextResponse = (wrapped as

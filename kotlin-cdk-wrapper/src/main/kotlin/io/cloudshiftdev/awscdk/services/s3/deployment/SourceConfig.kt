@@ -128,7 +128,7 @@ public interface SourceConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.SourceConfig):
-        SourceConfig = CdkObjectWrappers.wrap(cdkObject) as SourceConfig
+        SourceConfig = CdkObjectWrappers.wrap(cdkObject) as? SourceConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceConfig):
         software.amazon.awscdk.services.s3.deployment.SourceConfig = (wrapped as

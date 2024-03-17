@@ -1136,7 +1136,7 @@ public interface VpcProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpcProps): VpcProps =
-        CdkObjectWrappers.wrap(cdkObject) as VpcProps
+        CdkObjectWrappers.wrap(cdkObject) as? VpcProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcProps): software.amazon.awscdk.services.ec2.VpcProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.VpcProps

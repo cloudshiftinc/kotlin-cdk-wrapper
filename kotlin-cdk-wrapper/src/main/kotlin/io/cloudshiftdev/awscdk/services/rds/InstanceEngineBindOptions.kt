@@ -187,7 +187,8 @@ public interface InstanceEngineBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.InstanceEngineBindOptions):
-        InstanceEngineBindOptions = CdkObjectWrappers.wrap(cdkObject) as InstanceEngineBindOptions
+        InstanceEngineBindOptions = CdkObjectWrappers.wrap(cdkObject) as? InstanceEngineBindOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceEngineBindOptions):
         software.amazon.awscdk.services.rds.InstanceEngineBindOptions = (wrapped as

@@ -537,7 +537,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.systemsmanagersap.CfnApplication.CredentialProperty):
-          CredentialProperty = CdkObjectWrappers.wrap(cdkObject) as CredentialProperty
+          CredentialProperty = CdkObjectWrappers.wrap(cdkObject) as? CredentialProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CredentialProperty):
           software.amazon.awscdk.services.systemsmanagersap.CfnApplication.CredentialProperty =

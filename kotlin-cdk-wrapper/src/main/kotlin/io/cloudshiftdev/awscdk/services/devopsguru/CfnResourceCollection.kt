@@ -559,8 +559,8 @@ public open class CfnResourceCollection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty):
-          ResourceCollectionFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResourceCollectionFilterProperty
+          ResourceCollectionFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceCollectionFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceCollectionFilterProperty):
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty
@@ -791,7 +791,8 @@ public open class CfnResourceCollection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty):
-          TagCollectionProperty = CdkObjectWrappers.wrap(cdkObject) as TagCollectionProperty
+          TagCollectionProperty = CdkObjectWrappers.wrap(cdkObject) as? TagCollectionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagCollectionProperty):
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty =
@@ -890,8 +891,8 @@ public open class CfnResourceCollection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty):
-          CloudFormationCollectionFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudFormationCollectionFilterProperty
+          CloudFormationCollectionFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudFormationCollectionFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudFormationCollectionFilterProperty):
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty

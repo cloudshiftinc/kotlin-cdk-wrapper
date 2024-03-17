@@ -472,7 +472,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty):
-          SelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as SelectionCriteriaProperty
+          SelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelectionCriteriaProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelectionCriteriaProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.SelectionCriteriaProperty = (wrapped as
@@ -854,7 +855,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty):
-          BucketLevelProperty = CdkObjectWrappers.wrap(cdkObject) as BucketLevelProperty
+          BucketLevelProperty = CdkObjectWrappers.wrap(cdkObject) as? BucketLevelProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BucketLevelProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.BucketLevelProperty = (wrapped as
@@ -993,8 +995,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty):
-          StorageLensGroupLevelProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StorageLensGroupLevelProperty
+          StorageLensGroupLevelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageLensGroupLevelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageLensGroupLevelProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupLevelProperty = (wrapped
@@ -1100,8 +1102,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty):
-          AdvancedCostOptimizationMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdvancedCostOptimizationMetricsProperty
+          AdvancedCostOptimizationMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedCostOptimizationMetricsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedCostOptimizationMetricsProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedCostOptimizationMetricsProperty
@@ -1199,7 +1201,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty):
-          SSEKMSProperty = CdkObjectWrappers.wrap(cdkObject) as SSEKMSProperty
+          SSEKMSProperty = CdkObjectWrappers.wrap(cdkObject) as? SSEKMSProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SSEKMSProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.SSEKMSProperty = (wrapped as
@@ -1303,8 +1306,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty):
-          AdvancedDataProtectionMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdvancedDataProtectionMetricsProperty
+          AdvancedDataProtectionMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedDataProtectionMetricsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedDataProtectionMetricsProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.AdvancedDataProtectionMetricsProperty =
@@ -1474,8 +1477,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty):
-          PrefixLevelStorageMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PrefixLevelStorageMetricsProperty
+          PrefixLevelStorageMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrefixLevelStorageMetricsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrefixLevelStorageMetricsProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelStorageMetricsProperty =
@@ -1596,7 +1599,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty):
-          PrefixLevelProperty = CdkObjectWrappers.wrap(cdkObject) as PrefixLevelProperty
+          PrefixLevelProperty = CdkObjectWrappers.wrap(cdkObject) as? PrefixLevelProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrefixLevelProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.PrefixLevelProperty = (wrapped as
@@ -1697,7 +1701,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty):
-          ActivityMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as ActivityMetricsProperty
+          ActivityMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as? ActivityMetricsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActivityMetricsProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty = (wrapped as
@@ -1844,8 +1849,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty):
-          StorageLensGroupSelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StorageLensGroupSelectionCriteriaProperty
+          StorageLensGroupSelectionCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageLensGroupSelectionCriteriaProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageLensGroupSelectionCriteriaProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty
@@ -2010,7 +2015,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty):
-          BucketsAndRegionsProperty = CdkObjectWrappers.wrap(cdkObject) as BucketsAndRegionsProperty
+          BucketsAndRegionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BucketsAndRegionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BucketsAndRegionsProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty = (wrapped as
@@ -2491,7 +2497,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AccountLevelProperty):
-          AccountLevelProperty = CdkObjectWrappers.wrap(cdkObject) as AccountLevelProperty
+          AccountLevelProperty = CdkObjectWrappers.wrap(cdkObject) as? AccountLevelProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountLevelProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.AccountLevelProperty = (wrapped as
@@ -2595,7 +2602,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.CloudWatchMetricsProperty):
-          CloudWatchMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as CloudWatchMetricsProperty
+          CloudWatchMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchMetricsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchMetricsProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.CloudWatchMetricsProperty = (wrapped as
@@ -2874,8 +2882,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.S3BucketDestinationProperty):
-          S3BucketDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3BucketDestinationProperty
+          S3BucketDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3BucketDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3BucketDestinationProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.S3BucketDestinationProperty = (wrapped
@@ -3420,8 +3428,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensConfigurationProperty):
-          StorageLensConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StorageLensConfigurationProperty
+          StorageLensConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageLensConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageLensConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensConfigurationProperty =
@@ -3574,7 +3582,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty):
-          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionProperty
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.EncryptionProperty = (wrapped as
@@ -3653,7 +3662,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty):
-          AwsOrgProperty = CdkObjectWrappers.wrap(cdkObject) as AwsOrgProperty
+          AwsOrgProperty = CdkObjectWrappers.wrap(cdkObject) as? AwsOrgProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsOrgProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.AwsOrgProperty = (wrapped as
@@ -3757,8 +3767,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty):
-          DetailedStatusCodesMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DetailedStatusCodesMetricsProperty
+          DetailedStatusCodesMetricsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DetailedStatusCodesMetricsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DetailedStatusCodesMetricsProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.DetailedStatusCodesMetricsProperty =
@@ -3951,7 +3961,8 @@ public open class CfnStorageLens internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty):
-          DataExportProperty = CdkObjectWrappers.wrap(cdkObject) as DataExportProperty
+          DataExportProperty = CdkObjectWrappers.wrap(cdkObject) as? DataExportProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataExportProperty):
           software.amazon.awscdk.services.s3.CfnStorageLens.DataExportProperty = (wrapped as

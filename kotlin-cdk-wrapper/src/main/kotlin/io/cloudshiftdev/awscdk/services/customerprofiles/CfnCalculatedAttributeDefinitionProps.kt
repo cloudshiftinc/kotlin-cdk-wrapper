@@ -379,8 +379,8 @@ public interface CfnCalculatedAttributeDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinitionProps):
-        CfnCalculatedAttributeDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCalculatedAttributeDefinitionProps
+        CfnCalculatedAttributeDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCalculatedAttributeDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCalculatedAttributeDefinitionProps):
         software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinitionProps =

@@ -906,7 +906,8 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty):
-          UserIdentityInfoProperty = CdkObjectWrappers.wrap(cdkObject) as UserIdentityInfoProperty
+          UserIdentityInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? UserIdentityInfoProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserIdentityInfoProperty):
           software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty = (wrapped as
@@ -1064,7 +1065,8 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty):
-          UserProficiencyProperty = CdkObjectWrappers.wrap(cdkObject) as UserProficiencyProperty
+          UserProficiencyProperty = CdkObjectWrappers.wrap(cdkObject) as? UserProficiencyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserProficiencyProperty):
           software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty = (wrapped as
@@ -1275,7 +1277,8 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty):
-          UserPhoneConfigProperty = CdkObjectWrappers.wrap(cdkObject) as UserPhoneConfigProperty
+          UserPhoneConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? UserPhoneConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserPhoneConfigProperty):
           software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty = (wrapped as

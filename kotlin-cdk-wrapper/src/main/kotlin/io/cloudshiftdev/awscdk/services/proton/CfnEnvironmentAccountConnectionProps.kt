@@ -354,8 +354,8 @@ public interface CfnEnvironmentAccountConnectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnectionProps):
-        CfnEnvironmentAccountConnectionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnEnvironmentAccountConnectionProps
+        CfnEnvironmentAccountConnectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEnvironmentAccountConnectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironmentAccountConnectionProps):
         software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnectionProps = (wrapped as

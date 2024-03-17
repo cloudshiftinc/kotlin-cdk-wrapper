@@ -405,7 +405,8 @@ public interface CfnWirelessDeviceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceProps):
-        CfnWirelessDeviceProps = CdkObjectWrappers.wrap(cdkObject) as CfnWirelessDeviceProps
+        CfnWirelessDeviceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWirelessDeviceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWirelessDeviceProps):
         software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceProps = (wrapped as

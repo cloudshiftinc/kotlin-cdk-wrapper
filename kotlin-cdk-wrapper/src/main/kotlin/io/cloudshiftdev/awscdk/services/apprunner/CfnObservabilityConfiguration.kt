@@ -455,8 +455,8 @@ public open class CfnObservabilityConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration.TraceConfigurationProperty):
-          TraceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TraceConfigurationProperty
+          TraceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TraceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TraceConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration.TraceConfigurationProperty

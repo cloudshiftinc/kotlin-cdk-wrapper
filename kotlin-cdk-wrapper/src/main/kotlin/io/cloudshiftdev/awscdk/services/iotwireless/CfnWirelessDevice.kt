@@ -658,7 +658,8 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property):
-          AbpV11Property = CdkObjectWrappers.wrap(cdkObject) as AbpV11Property
+          AbpV11Property = CdkObjectWrappers.wrap(cdkObject) as? AbpV11Property ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AbpV11Property):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property = (wrapped as
@@ -893,7 +894,8 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property):
-          SessionKeysAbpV11Property = CdkObjectWrappers.wrap(cdkObject) as SessionKeysAbpV11Property
+          SessionKeysAbpV11Property = CdkObjectWrappers.wrap(cdkObject) as?
+          SessionKeysAbpV11Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SessionKeysAbpV11Property):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property =
@@ -1064,7 +1066,8 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property):
-          OtaaV11Property = CdkObjectWrappers.wrap(cdkObject) as OtaaV11Property
+          OtaaV11Property = CdkObjectWrappers.wrap(cdkObject) as? OtaaV11Property ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OtaaV11Property):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property = (wrapped
@@ -1202,7 +1205,8 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty):
-          AbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as AbpV10xProperty
+          AbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as? AbpV10xProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AbpV10xProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty = (wrapped
@@ -1314,7 +1318,8 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty):
-          OtaaV10xProperty = CdkObjectWrappers.wrap(cdkObject) as OtaaV10xProperty
+          OtaaV10xProperty = CdkObjectWrappers.wrap(cdkObject) as? OtaaV10xProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OtaaV10xProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty = (wrapped
@@ -1423,8 +1428,8 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty):
-          SessionKeysAbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SessionKeysAbpV10xProperty
+          SessionKeysAbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SessionKeysAbpV10xProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SessionKeysAbpV10xProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty =
@@ -1797,7 +1802,8 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty):
-          LoRaWANDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as LoRaWANDeviceProperty
+          LoRaWANDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? LoRaWANDeviceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoRaWANDeviceProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty =

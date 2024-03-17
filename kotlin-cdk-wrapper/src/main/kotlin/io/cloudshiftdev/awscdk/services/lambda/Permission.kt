@@ -412,7 +412,7 @@ public interface Permission {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.Permission): Permission =
-        CdkObjectWrappers.wrap(cdkObject) as Permission
+        CdkObjectWrappers.wrap(cdkObject) as? Permission ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Permission): software.amazon.awscdk.services.lambda.Permission =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.Permission

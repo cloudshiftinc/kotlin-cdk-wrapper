@@ -294,8 +294,8 @@ public interface StepFunctionsInvokeActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StepFunctionsInvokeActionProps):
-        StepFunctionsInvokeActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        StepFunctionsInvokeActionProps
+        StepFunctionsInvokeActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        StepFunctionsInvokeActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StepFunctionsInvokeActionProps):
         software.amazon.awscdk.services.codepipeline.actions.StepFunctionsInvokeActionProps =

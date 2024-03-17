@@ -73,7 +73,8 @@ public interface MariaDbInstanceEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps):
-        MariaDbInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as MariaDbInstanceEngineProps
+        MariaDbInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        MariaDbInstanceEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MariaDbInstanceEngineProps):
         software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps = (wrapped as

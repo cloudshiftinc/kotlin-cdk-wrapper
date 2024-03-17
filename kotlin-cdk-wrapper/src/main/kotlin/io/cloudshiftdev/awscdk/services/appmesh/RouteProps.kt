@@ -135,7 +135,7 @@ public interface RouteProps : RouteBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.RouteProps): RouteProps =
-        CdkObjectWrappers.wrap(cdkObject) as RouteProps
+        CdkObjectWrappers.wrap(cdkObject) as? RouteProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RouteProps): software.amazon.awscdk.services.appmesh.RouteProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.RouteProps

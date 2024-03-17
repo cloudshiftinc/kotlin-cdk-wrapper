@@ -92,7 +92,7 @@ public interface DkimRecord {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.DkimRecord): DkimRecord =
-        CdkObjectWrappers.wrap(cdkObject) as DkimRecord
+        CdkObjectWrappers.wrap(cdkObject) as? DkimRecord ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DkimRecord): software.amazon.awscdk.services.ses.DkimRecord =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.DkimRecord

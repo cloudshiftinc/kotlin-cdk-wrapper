@@ -98,7 +98,8 @@ public interface FileSystemConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.FileSystemConfig):
-        FileSystemConfig = CdkObjectWrappers.wrap(cdkObject) as FileSystemConfig
+        FileSystemConfig = CdkObjectWrappers.wrap(cdkObject) as? FileSystemConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSystemConfig):
         software.amazon.awscdk.services.codebuild.FileSystemConfig = (wrapped as

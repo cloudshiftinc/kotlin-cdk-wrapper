@@ -552,9 +552,13 @@ public abstract class TableBase internal constructor(
    */
   public override fun tableStreamArn(): String? = unwrap(this).getTableStreamArn()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.dynamodb.TableBase,
+  ) : TableBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TableBase): TableBase =
-        CdkObjectWrappers.wrap(cdkObject) as TableBase
+        CdkObjectWrappers.wrap(cdkObject) as? TableBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableBase): software.amazon.awscdk.services.dynamodb.TableBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.TableBase

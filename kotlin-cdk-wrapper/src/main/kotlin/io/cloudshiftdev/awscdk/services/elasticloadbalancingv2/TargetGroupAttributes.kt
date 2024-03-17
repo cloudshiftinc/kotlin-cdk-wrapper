@@ -98,7 +98,8 @@ public interface TargetGroupAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes):
-        TargetGroupAttributes = CdkObjectWrappers.wrap(cdkObject) as TargetGroupAttributes
+        TargetGroupAttributes = CdkObjectWrappers.wrap(cdkObject) as? TargetGroupAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TargetGroupAttributes):
         software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes = (wrapped as

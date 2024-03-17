@@ -505,7 +505,7 @@ public open class CfnMultiplex internal constructor(
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty):
           MultiplexMediaConnectOutputDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject)
-          as MultiplexMediaConnectOutputDestinationSettingsProperty
+          as? MultiplexMediaConnectOutputDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexMediaConnectOutputDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty
@@ -673,7 +673,8 @@ public open class CfnMultiplex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty):
-          MultiplexSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as MultiplexSettingsProperty
+          MultiplexSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty =
@@ -801,8 +802,8 @@ public open class CfnMultiplex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty):
-          MultiplexOutputDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexOutputDestinationProperty
+          MultiplexOutputDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexOutputDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexOutputDestinationProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty

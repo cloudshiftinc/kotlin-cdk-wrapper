@@ -180,7 +180,8 @@ public interface BounceActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.BounceActionConfig):
-        BounceActionConfig = CdkObjectWrappers.wrap(cdkObject) as BounceActionConfig
+        BounceActionConfig = CdkObjectWrappers.wrap(cdkObject) as? BounceActionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BounceActionConfig):
         software.amazon.awscdk.services.ses.BounceActionConfig = (wrapped as CdkObject).cdkObject as

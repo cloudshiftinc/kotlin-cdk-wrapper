@@ -109,7 +109,8 @@ public interface WindowStartTime {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.WindowStartTime):
-        WindowStartTime = CdkObjectWrappers.wrap(cdkObject) as WindowStartTime
+        WindowStartTime = CdkObjectWrappers.wrap(cdkObject) as? WindowStartTime ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WindowStartTime):
         software.amazon.awscdk.services.opensearchservice.WindowStartTime = (wrapped as

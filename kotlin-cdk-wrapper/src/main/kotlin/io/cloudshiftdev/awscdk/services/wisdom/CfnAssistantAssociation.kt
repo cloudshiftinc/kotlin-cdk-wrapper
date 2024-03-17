@@ -389,7 +389,8 @@ public open class CfnAssistantAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.AssociationDataProperty):
-          AssociationDataProperty = CdkObjectWrappers.wrap(cdkObject) as AssociationDataProperty
+          AssociationDataProperty = CdkObjectWrappers.wrap(cdkObject) as? AssociationDataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssociationDataProperty):
           software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.AssociationDataProperty =

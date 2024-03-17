@@ -405,7 +405,8 @@ public interface ZoneDelegationRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationRecordProps):
-        ZoneDelegationRecordProps = CdkObjectWrappers.wrap(cdkObject) as ZoneDelegationRecordProps
+        ZoneDelegationRecordProps = CdkObjectWrappers.wrap(cdkObject) as? ZoneDelegationRecordProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ZoneDelegationRecordProps):
         software.amazon.awscdk.services.route53.ZoneDelegationRecordProps = (wrapped as

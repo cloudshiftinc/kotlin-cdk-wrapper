@@ -107,8 +107,8 @@ public interface CfnSubnetNetworkAclAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociationProps):
-        CfnSubnetNetworkAclAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSubnetNetworkAclAssociationProps
+        CfnSubnetNetworkAclAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSubnetNetworkAclAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetNetworkAclAssociationProps):
         software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociationProps = (wrapped as

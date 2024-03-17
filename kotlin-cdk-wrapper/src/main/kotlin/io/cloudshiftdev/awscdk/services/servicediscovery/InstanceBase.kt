@@ -23,9 +23,13 @@ public abstract class InstanceBase internal constructor(
    */
   public override fun service(): IService = unwrap(this).getService().let(IService::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.servicediscovery.InstanceBase,
+  ) : InstanceBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.InstanceBase):
-        InstanceBase = CdkObjectWrappers.wrap(cdkObject) as InstanceBase
+        InstanceBase = CdkObjectWrappers.wrap(cdkObject) as? InstanceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceBase):
         software.amazon.awscdk.services.servicediscovery.InstanceBase = (wrapped as

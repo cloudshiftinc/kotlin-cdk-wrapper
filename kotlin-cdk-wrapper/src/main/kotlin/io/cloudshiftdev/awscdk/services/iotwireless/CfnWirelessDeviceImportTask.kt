@@ -526,7 +526,8 @@ public open class CfnWirelessDeviceImportTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask.SidewalkProperty):
-          SidewalkProperty = CdkObjectWrappers.wrap(cdkObject) as SidewalkProperty
+          SidewalkProperty = CdkObjectWrappers.wrap(cdkObject) as? SidewalkProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SidewalkProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask.SidewalkProperty =

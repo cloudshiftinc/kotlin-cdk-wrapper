@@ -125,7 +125,8 @@ public interface VolumeAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VolumeAttributes):
-        VolumeAttributes = CdkObjectWrappers.wrap(cdkObject) as VolumeAttributes
+        VolumeAttributes = CdkObjectWrappers.wrap(cdkObject) as? VolumeAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VolumeAttributes):
         software.amazon.awscdk.services.ec2.VolumeAttributes = (wrapped as CdkObject).cdkObject as

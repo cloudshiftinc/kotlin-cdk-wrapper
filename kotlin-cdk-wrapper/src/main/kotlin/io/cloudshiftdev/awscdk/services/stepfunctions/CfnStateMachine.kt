@@ -1038,8 +1038,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LoggingConfigurationProperty):
-          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoggingConfigurationProperty
+          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigurationProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LoggingConfigurationProperty
@@ -1181,7 +1181,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.S3LocationProperty =
@@ -1325,7 +1326,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty):
-          LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as LogDestinationProperty
+          LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogDestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogDestinationProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.LogDestinationProperty =
@@ -1422,8 +1424,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty):
-          CloudWatchLogsLogGroupProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchLogsLogGroupProperty
+          CloudWatchLogsLogGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsLogGroupProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogsLogGroupProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.CloudWatchLogsLogGroupProperty
@@ -1531,7 +1533,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TagsEntryProperty):
-          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as TagsEntryProperty
+          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? TagsEntryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagsEntryProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TagsEntryProperty = (wrapped
@@ -1628,8 +1631,8 @@ public open class CfnStateMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TracingConfigurationProperty):
-          TracingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TracingConfigurationProperty
+          TracingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TracingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TracingConfigurationProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachine.TracingConfigurationProperty

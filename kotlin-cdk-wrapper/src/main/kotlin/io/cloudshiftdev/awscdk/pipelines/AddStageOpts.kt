@@ -164,7 +164,7 @@ public interface AddStageOpts {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.AddStageOpts): AddStageOpts =
-        CdkObjectWrappers.wrap(cdkObject) as AddStageOpts
+        CdkObjectWrappers.wrap(cdkObject) as? AddStageOpts ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddStageOpts): software.amazon.awscdk.pipelines.AddStageOpts =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.pipelines.AddStageOpts

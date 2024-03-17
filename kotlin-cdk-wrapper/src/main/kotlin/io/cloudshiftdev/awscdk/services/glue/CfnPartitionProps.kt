@@ -250,7 +250,8 @@ public interface CfnPartitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartitionProps):
-        CfnPartitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnPartitionProps
+        CfnPartitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPartitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPartitionProps):
         software.amazon.awscdk.services.glue.CfnPartitionProps = (wrapped as CdkObject).cdkObject as

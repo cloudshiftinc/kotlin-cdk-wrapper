@@ -189,7 +189,8 @@ public interface CfnWorkspaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnWorkspaceProps):
-        CfnWorkspaceProps = CdkObjectWrappers.wrap(cdkObject) as CfnWorkspaceProps
+        CfnWorkspaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkspaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkspaceProps):
         software.amazon.awscdk.services.iottwinmaker.CfnWorkspaceProps = (wrapped as

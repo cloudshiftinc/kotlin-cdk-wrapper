@@ -4579,7 +4579,8 @@ public interface CfnDBClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterProps):
-        CfnDBClusterProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBClusterProps
+        CfnDBClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDBClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBClusterProps):
         software.amazon.awscdk.services.rds.CfnDBClusterProps = (wrapped as CdkObject).cdkObject as

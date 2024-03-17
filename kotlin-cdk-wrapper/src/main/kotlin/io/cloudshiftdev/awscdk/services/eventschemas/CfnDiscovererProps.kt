@@ -199,7 +199,8 @@ public interface CfnDiscovererProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscovererProps):
-        CfnDiscovererProps = CdkObjectWrappers.wrap(cdkObject) as CfnDiscovererProps
+        CfnDiscovererProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDiscovererProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDiscovererProps):
         software.amazon.awscdk.services.eventschemas.CfnDiscovererProps = (wrapped as

@@ -127,7 +127,8 @@ public interface FileSystemAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.FileSystemAttributes):
-        FileSystemAttributes = CdkObjectWrappers.wrap(cdkObject) as FileSystemAttributes
+        FileSystemAttributes = CdkObjectWrappers.wrap(cdkObject) as? FileSystemAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSystemAttributes):
         software.amazon.awscdk.services.efs.FileSystemAttributes = (wrapped as CdkObject).cdkObject

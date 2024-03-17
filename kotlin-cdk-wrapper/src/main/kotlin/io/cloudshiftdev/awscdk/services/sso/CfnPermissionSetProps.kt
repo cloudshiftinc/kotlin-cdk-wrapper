@@ -578,7 +578,8 @@ public interface CfnPermissionSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSetProps):
-        CfnPermissionSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnPermissionSetProps
+        CfnPermissionSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPermissionSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPermissionSetProps):
         software.amazon.awscdk.services.sso.CfnPermissionSetProps = (wrapped as CdkObject).cdkObject

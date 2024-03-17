@@ -112,7 +112,8 @@ public interface ProcessorConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ProcessorConfig):
-        ProcessorConfig = CdkObjectWrappers.wrap(cdkObject) as ProcessorConfig
+        ProcessorConfig = CdkObjectWrappers.wrap(cdkObject) as? ProcessorConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProcessorConfig):
         software.amazon.awscdk.services.stepfunctions.ProcessorConfig = (wrapped as

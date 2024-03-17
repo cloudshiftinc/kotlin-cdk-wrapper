@@ -427,8 +427,8 @@ public interface AthenaGetQueryExecutionProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryExecutionProps):
-        AthenaGetQueryExecutionProps = CdkObjectWrappers.wrap(cdkObject) as
-        AthenaGetQueryExecutionProps
+        AthenaGetQueryExecutionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AthenaGetQueryExecutionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AthenaGetQueryExecutionProps):
         software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryExecutionProps = (wrapped

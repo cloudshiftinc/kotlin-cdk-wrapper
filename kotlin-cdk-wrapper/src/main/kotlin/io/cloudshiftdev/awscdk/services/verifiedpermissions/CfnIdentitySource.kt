@@ -524,8 +524,8 @@ public open class CfnIdentitySource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty):
-          IdentitySourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IdentitySourceConfigurationProperty
+          IdentitySourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentitySourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdentitySourceConfigurationProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty
@@ -749,8 +749,8 @@ public open class CfnIdentitySource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty):
-          IdentitySourceDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IdentitySourceDetailsProperty
+          IdentitySourceDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentitySourceDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdentitySourceDetailsProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty
@@ -896,8 +896,8 @@ public open class CfnIdentitySource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty):
-          CognitoUserPoolConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CognitoUserPoolConfigurationProperty
+          CognitoUserPoolConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CognitoUserPoolConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CognitoUserPoolConfigurationProperty):
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty

@@ -635,8 +635,8 @@ public open class CfnConnectPeer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty):
-          ConnectPeerBgpConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectPeerBgpConfigurationProperty
+          ConnectPeerBgpConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectPeerBgpConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectPeerBgpConfigurationProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty
@@ -717,7 +717,8 @@ public open class CfnConnectPeer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty):
-          BgpOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as BgpOptionsProperty
+          BgpOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? BgpOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BgpOptionsProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty =
@@ -948,8 +949,8 @@ public open class CfnConnectPeer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty):
-          ConnectPeerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectPeerConfigurationProperty
+          ConnectPeerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectPeerConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectPeerConfigurationProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty

@@ -249,7 +249,8 @@ public interface CfnInsightRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps):
-        CfnInsightRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnInsightRuleProps
+        CfnInsightRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnInsightRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInsightRuleProps):
         software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps = (wrapped as

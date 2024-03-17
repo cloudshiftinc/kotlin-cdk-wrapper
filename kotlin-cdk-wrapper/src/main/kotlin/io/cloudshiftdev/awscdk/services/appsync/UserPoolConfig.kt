@@ -129,7 +129,7 @@ public interface UserPoolConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.UserPoolConfig):
-        UserPoolConfig = CdkObjectWrappers.wrap(cdkObject) as UserPoolConfig
+        UserPoolConfig = CdkObjectWrappers.wrap(cdkObject) as? UserPoolConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolConfig):
         software.amazon.awscdk.services.appsync.UserPoolConfig = (wrapped as CdkObject).cdkObject as

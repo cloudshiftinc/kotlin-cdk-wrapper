@@ -180,7 +180,8 @@ public interface CfnGlobalNetworkProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnGlobalNetworkProps):
-        CfnGlobalNetworkProps = CdkObjectWrappers.wrap(cdkObject) as CfnGlobalNetworkProps
+        CfnGlobalNetworkProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGlobalNetworkProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalNetworkProps):
         software.amazon.awscdk.services.networkmanager.CfnGlobalNetworkProps = (wrapped as

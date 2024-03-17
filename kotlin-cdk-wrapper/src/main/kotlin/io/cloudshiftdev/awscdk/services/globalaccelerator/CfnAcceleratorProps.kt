@@ -377,7 +377,8 @@ public interface CfnAcceleratorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnAcceleratorProps):
-        CfnAcceleratorProps = CdkObjectWrappers.wrap(cdkObject) as CfnAcceleratorProps
+        CfnAcceleratorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAcceleratorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAcceleratorProps):
         software.amazon.awscdk.services.globalaccelerator.CfnAcceleratorProps = (wrapped as

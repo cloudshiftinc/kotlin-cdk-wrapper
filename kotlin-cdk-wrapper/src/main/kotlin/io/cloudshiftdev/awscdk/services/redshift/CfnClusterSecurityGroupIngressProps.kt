@@ -197,8 +197,8 @@ public interface CfnClusterSecurityGroupIngressProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngressProps):
-        CfnClusterSecurityGroupIngressProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnClusterSecurityGroupIngressProps
+        CfnClusterSecurityGroupIngressProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnClusterSecurityGroupIngressProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterSecurityGroupIngressProps):
         software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngressProps = (wrapped as

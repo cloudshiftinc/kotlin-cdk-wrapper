@@ -1944,7 +1944,8 @@ public interface FunctionOptions : EventInvokeConfigOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionOptions):
-        FunctionOptions = CdkObjectWrappers.wrap(cdkObject) as FunctionOptions
+        FunctionOptions = CdkObjectWrappers.wrap(cdkObject) as? FunctionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionOptions):
         software.amazon.awscdk.services.lambda.FunctionOptions = (wrapped as CdkObject).cdkObject as

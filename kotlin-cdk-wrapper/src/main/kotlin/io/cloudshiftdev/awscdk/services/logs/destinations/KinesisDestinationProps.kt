@@ -79,7 +79,8 @@ public interface KinesisDestinationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.logs.destinations.KinesisDestinationProps):
-        KinesisDestinationProps = CdkObjectWrappers.wrap(cdkObject) as KinesisDestinationProps
+        KinesisDestinationProps = CdkObjectWrappers.wrap(cdkObject) as? KinesisDestinationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KinesisDestinationProps):
         software.amazon.awscdk.services.logs.destinations.KinesisDestinationProps = (wrapped as

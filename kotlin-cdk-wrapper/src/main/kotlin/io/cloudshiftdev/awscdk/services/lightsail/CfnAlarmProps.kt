@@ -486,7 +486,7 @@ public interface CfnAlarmProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnAlarmProps):
-        CfnAlarmProps = CdkObjectWrappers.wrap(cdkObject) as CfnAlarmProps
+        CfnAlarmProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAlarmProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlarmProps):
         software.amazon.awscdk.services.lightsail.CfnAlarmProps = (wrapped as CdkObject).cdkObject

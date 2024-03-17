@@ -146,7 +146,8 @@ public interface TableSummaryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.TableSummaryProps):
-        TableSummaryProps = CdkObjectWrappers.wrap(cdkObject) as TableSummaryProps
+        TableSummaryProps = CdkObjectWrappers.wrap(cdkObject) as? TableSummaryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableSummaryProps):
         software.amazon.awscdk.services.cloudwatch.TableSummaryProps = (wrapped as

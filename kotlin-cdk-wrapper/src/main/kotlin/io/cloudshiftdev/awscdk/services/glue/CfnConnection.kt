@@ -754,7 +754,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty):
-          ConnectionInputProperty = CdkObjectWrappers.wrap(cdkObject) as ConnectionInputProperty
+          ConnectionInputProperty = CdkObjectWrappers.wrap(cdkObject) as? ConnectionInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionInputProperty):
           software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty = (wrapped as
@@ -915,8 +916,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty):
-          PhysicalConnectionRequirementsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PhysicalConnectionRequirementsProperty
+          PhysicalConnectionRequirementsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PhysicalConnectionRequirementsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PhysicalConnectionRequirementsProperty):
           software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty

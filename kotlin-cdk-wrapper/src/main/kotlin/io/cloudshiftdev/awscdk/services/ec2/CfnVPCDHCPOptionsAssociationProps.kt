@@ -108,8 +108,8 @@ public interface CfnVPCDHCPOptionsAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociationProps):
-        CfnVPCDHCPOptionsAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVPCDHCPOptionsAssociationProps
+        CfnVPCDHCPOptionsAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPCDHCPOptionsAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCDHCPOptionsAssociationProps):
         software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociationProps = (wrapped as

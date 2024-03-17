@@ -533,7 +533,8 @@ public interface ExtendedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.ExtendedDataSourceProps):
-        ExtendedDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as ExtendedDataSourceProps
+        ExtendedDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? ExtendedDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExtendedDataSourceProps):
         software.amazon.awscdk.services.appsync.ExtendedDataSourceProps = (wrapped as

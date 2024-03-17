@@ -325,7 +325,7 @@ public interface CfnRoomProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnRoomProps): CfnRoomProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnRoomProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnRoomProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoomProps): software.amazon.awscdk.services.ivschat.CfnRoomProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ivschat.CfnRoomProps

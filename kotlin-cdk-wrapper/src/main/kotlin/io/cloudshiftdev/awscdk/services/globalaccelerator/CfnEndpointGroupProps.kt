@@ -524,7 +524,8 @@ public interface CfnEndpointGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroupProps):
-        CfnEndpointGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnEndpointGroupProps
+        CfnEndpointGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEndpointGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointGroupProps):
         software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroupProps = (wrapped as

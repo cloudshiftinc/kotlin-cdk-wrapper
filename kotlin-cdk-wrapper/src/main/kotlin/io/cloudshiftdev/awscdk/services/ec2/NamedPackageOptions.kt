@@ -125,7 +125,8 @@ public interface NamedPackageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NamedPackageOptions):
-        NamedPackageOptions = CdkObjectWrappers.wrap(cdkObject) as NamedPackageOptions
+        NamedPackageOptions = CdkObjectWrappers.wrap(cdkObject) as? NamedPackageOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NamedPackageOptions):
         software.amazon.awscdk.services.ec2.NamedPackageOptions = (wrapped as CdkObject).cdkObject

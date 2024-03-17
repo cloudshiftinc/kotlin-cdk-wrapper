@@ -464,7 +464,7 @@ public interface CfnGraphProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraphProps):
-        CfnGraphProps = CdkObjectWrappers.wrap(cdkObject) as CfnGraphProps
+        CfnGraphProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGraphProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraphProps):
         software.amazon.awscdk.services.neptunegraph.CfnGraphProps = (wrapped as

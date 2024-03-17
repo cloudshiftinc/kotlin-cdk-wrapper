@@ -459,7 +459,8 @@ public interface CfnWebhookProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhookProps):
-        CfnWebhookProps = CdkObjectWrappers.wrap(cdkObject) as CfnWebhookProps
+        CfnWebhookProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWebhookProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebhookProps):
         software.amazon.awscdk.services.codepipeline.CfnWebhookProps = (wrapped as

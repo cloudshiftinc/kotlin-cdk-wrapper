@@ -609,7 +609,8 @@ public open class CfnScript internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnScript.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.gamelift.CfnScript.S3LocationProperty = (wrapped as

@@ -763,7 +763,8 @@ public interface DatabaseProxyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseProxyOptions):
-        DatabaseProxyOptions = CdkObjectWrappers.wrap(cdkObject) as DatabaseProxyOptions
+        DatabaseProxyOptions = CdkObjectWrappers.wrap(cdkObject) as? DatabaseProxyOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseProxyOptions):
         software.amazon.awscdk.services.rds.DatabaseProxyOptions = (wrapped as CdkObject).cdkObject

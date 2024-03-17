@@ -429,7 +429,8 @@ public open class CfnEventIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty):
-          EventFilterProperty = CdkObjectWrappers.wrap(cdkObject) as EventFilterProperty
+          EventFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? EventFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventFilterProperty):
           software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty =

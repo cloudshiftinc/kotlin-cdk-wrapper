@@ -341,7 +341,8 @@ public interface TableAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TableAttributes):
-        TableAttributes = CdkObjectWrappers.wrap(cdkObject) as TableAttributes
+        TableAttributes = CdkObjectWrappers.wrap(cdkObject) as? TableAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableAttributes):
         software.amazon.awscdk.services.dynamodb.TableAttributes = (wrapped as CdkObject).cdkObject

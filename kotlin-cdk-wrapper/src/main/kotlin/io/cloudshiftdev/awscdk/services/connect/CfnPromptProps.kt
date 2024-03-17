@@ -213,7 +213,7 @@ public interface CfnPromptProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnPromptProps):
-        CfnPromptProps = CdkObjectWrappers.wrap(cdkObject) as CfnPromptProps
+        CfnPromptProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPromptProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPromptProps):
         software.amazon.awscdk.services.connect.CfnPromptProps = (wrapped as CdkObject).cdkObject as

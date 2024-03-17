@@ -758,8 +758,8 @@ public open class CfnScheduledAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty):
-          ResizeClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResizeClusterMessageProperty
+          ResizeClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResizeClusterMessageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResizeClusterMessageProperty):
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty =
@@ -844,8 +844,8 @@ public open class CfnScheduledAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty):
-          ResumeClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResumeClusterMessageProperty
+          ResumeClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResumeClusterMessageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResumeClusterMessageProperty):
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty =
@@ -929,8 +929,8 @@ public open class CfnScheduledAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty):
-          PauseClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PauseClusterMessageProperty
+          PauseClusterMessageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PauseClusterMessageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PauseClusterMessageProperty):
           software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty =
@@ -1159,8 +1159,8 @@ public open class CfnScheduledAction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty):
-          ScheduledActionTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ScheduledActionTypeProperty
+          ScheduledActionTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduledActionTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduledActionTypeProperty):
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty =

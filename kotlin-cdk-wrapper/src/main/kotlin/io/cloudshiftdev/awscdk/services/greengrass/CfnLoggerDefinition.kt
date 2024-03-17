@@ -501,8 +501,8 @@ public open class CfnLoggerDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty):
-          LoggerDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoggerDefinitionVersionProperty
+          LoggerDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggerDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggerDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty
@@ -758,7 +758,8 @@ public open class CfnLoggerDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty):
-          LoggerProperty = CdkObjectWrappers.wrap(cdkObject) as LoggerProperty
+          LoggerProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggerProperty):
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty = (wrapped

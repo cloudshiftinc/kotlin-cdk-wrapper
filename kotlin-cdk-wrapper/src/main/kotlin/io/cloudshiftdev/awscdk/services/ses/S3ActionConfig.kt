@@ -157,7 +157,7 @@ public interface S3ActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.S3ActionConfig): S3ActionConfig
-        = CdkObjectWrappers.wrap(cdkObject) as S3ActionConfig
+        = CdkObjectWrappers.wrap(cdkObject) as? S3ActionConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3ActionConfig): software.amazon.awscdk.services.ses.S3ActionConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.S3ActionConfig

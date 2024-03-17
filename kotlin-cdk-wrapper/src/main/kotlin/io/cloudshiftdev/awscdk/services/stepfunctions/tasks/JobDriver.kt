@@ -103,7 +103,7 @@ public interface JobDriver {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.JobDriver):
-        JobDriver = CdkObjectWrappers.wrap(cdkObject) as JobDriver
+        JobDriver = CdkObjectWrappers.wrap(cdkObject) as? JobDriver ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JobDriver):
         software.amazon.awscdk.services.stepfunctions.tasks.JobDriver = (wrapped as

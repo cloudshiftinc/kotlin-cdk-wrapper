@@ -153,7 +153,8 @@ public interface QueryDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.QueryDefinitionProps):
-        QueryDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as QueryDefinitionProps
+        QueryDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? QueryDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueryDefinitionProps):
         software.amazon.awscdk.services.logs.QueryDefinitionProps = (wrapped as CdkObject).cdkObject

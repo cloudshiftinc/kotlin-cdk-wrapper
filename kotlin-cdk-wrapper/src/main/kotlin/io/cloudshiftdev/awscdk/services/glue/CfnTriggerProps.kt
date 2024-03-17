@@ -479,7 +479,8 @@ public interface CfnTriggerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTriggerProps):
-        CfnTriggerProps = CdkObjectWrappers.wrap(cdkObject) as CfnTriggerProps
+        CfnTriggerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTriggerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTriggerProps):
         software.amazon.awscdk.services.glue.CfnTriggerProps = (wrapped as CdkObject).cdkObject as

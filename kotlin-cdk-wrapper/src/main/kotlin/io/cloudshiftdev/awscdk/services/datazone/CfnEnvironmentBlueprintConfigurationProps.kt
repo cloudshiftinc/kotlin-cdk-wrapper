@@ -272,8 +272,8 @@ public interface CfnEnvironmentBlueprintConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfigurationProps):
-        CfnEnvironmentBlueprintConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnEnvironmentBlueprintConfigurationProps
+        CfnEnvironmentBlueprintConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEnvironmentBlueprintConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnvironmentBlueprintConfigurationProps):
         software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfigurationProps =

@@ -155,7 +155,8 @@ public interface FirelensOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FirelensOptions):
-        FirelensOptions = CdkObjectWrappers.wrap(cdkObject) as FirelensOptions
+        FirelensOptions = CdkObjectWrappers.wrap(cdkObject) as? FirelensOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FirelensOptions):
         software.amazon.awscdk.services.ecs.FirelensOptions = (wrapped as CdkObject).cdkObject as

@@ -498,7 +498,8 @@ public open class CfnRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnRule.PredicateProperty):
-          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as PredicateProperty
+          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as? PredicateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PredicateProperty):
           software.amazon.awscdk.services.waf.CfnRule.PredicateProperty = (wrapped as

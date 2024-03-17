@@ -382,7 +382,8 @@ public interface GatewayRouteSpecConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpecConfig):
-        GatewayRouteSpecConfig = CdkObjectWrappers.wrap(cdkObject) as GatewayRouteSpecConfig
+        GatewayRouteSpecConfig = CdkObjectWrappers.wrap(cdkObject) as? GatewayRouteSpecConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayRouteSpecConfig):
         software.amazon.awscdk.services.appmesh.GatewayRouteSpecConfig = (wrapped as

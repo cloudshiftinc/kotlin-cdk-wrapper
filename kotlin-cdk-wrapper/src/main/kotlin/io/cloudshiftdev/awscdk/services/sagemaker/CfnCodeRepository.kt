@@ -460,7 +460,8 @@ public open class CfnCodeRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty):
-          GitConfigProperty = CdkObjectWrappers.wrap(cdkObject) as GitConfigProperty
+          GitConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? GitConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GitConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty = (wrapped

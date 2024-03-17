@@ -237,8 +237,8 @@ public interface CfnIdentityPoolRoleAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachmentProps):
-        CfnIdentityPoolRoleAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnIdentityPoolRoleAttachmentProps
+        CfnIdentityPoolRoleAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnIdentityPoolRoleAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityPoolRoleAttachmentProps):
         software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachmentProps = (wrapped as

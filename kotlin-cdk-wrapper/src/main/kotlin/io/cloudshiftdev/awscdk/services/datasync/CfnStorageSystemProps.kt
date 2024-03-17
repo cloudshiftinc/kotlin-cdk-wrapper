@@ -401,7 +401,8 @@ public interface CfnStorageSystemProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystemProps):
-        CfnStorageSystemProps = CdkObjectWrappers.wrap(cdkObject) as CfnStorageSystemProps
+        CfnStorageSystemProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStorageSystemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageSystemProps):
         software.amazon.awscdk.services.datasync.CfnStorageSystemProps = (wrapped as

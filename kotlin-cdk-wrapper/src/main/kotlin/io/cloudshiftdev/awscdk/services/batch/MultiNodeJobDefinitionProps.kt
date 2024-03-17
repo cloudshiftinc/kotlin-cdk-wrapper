@@ -356,8 +356,8 @@ public interface MultiNodeJobDefinitionProps : JobDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.MultiNodeJobDefinitionProps):
-        MultiNodeJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as
-        MultiNodeJobDefinitionProps
+        MultiNodeJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        MultiNodeJobDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MultiNodeJobDefinitionProps):
         software.amazon.awscdk.services.batch.MultiNodeJobDefinitionProps = (wrapped as

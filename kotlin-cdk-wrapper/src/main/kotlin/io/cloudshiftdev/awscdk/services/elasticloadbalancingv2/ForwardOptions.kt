@@ -85,7 +85,7 @@ public interface ForwardOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions):
-        ForwardOptions = CdkObjectWrappers.wrap(cdkObject) as ForwardOptions
+        ForwardOptions = CdkObjectWrappers.wrap(cdkObject) as? ForwardOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ForwardOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions = (wrapped as

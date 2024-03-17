@@ -420,8 +420,8 @@ public interface GlueDataBrewStartJobRunProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRunProps):
-        GlueDataBrewStartJobRunProps = CdkObjectWrappers.wrap(cdkObject) as
-        GlueDataBrewStartJobRunProps
+        GlueDataBrewStartJobRunProps = CdkObjectWrappers.wrap(cdkObject) as?
+        GlueDataBrewStartJobRunProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GlueDataBrewStartJobRunProps):
         software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRunProps = (wrapped

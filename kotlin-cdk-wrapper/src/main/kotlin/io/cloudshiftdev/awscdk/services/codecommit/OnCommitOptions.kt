@@ -228,7 +228,8 @@ public interface OnCommitOptions : OnEventOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.OnCommitOptions):
-        OnCommitOptions = CdkObjectWrappers.wrap(cdkObject) as OnCommitOptions
+        OnCommitOptions = CdkObjectWrappers.wrap(cdkObject) as? OnCommitOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OnCommitOptions):
         software.amazon.awscdk.services.codecommit.OnCommitOptions = (wrapped as

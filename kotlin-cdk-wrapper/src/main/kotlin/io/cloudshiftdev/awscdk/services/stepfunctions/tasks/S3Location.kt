@@ -69,6 +69,10 @@ public abstract class S3Location internal constructor(
   public open fun bind(task: ISageMakerTask, opts: S3LocationBindOptions.Builder.() -> Unit):
       S3LocationConfig = bind(task, S3LocationBindOptions(opts))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3Location,
+  ) : S3Location(cdkObject)
+
   public companion object {
     public fun fromBucket(bucket: IBucket, keyPrefix: String): S3Location =
         software.amazon.awscdk.services.stepfunctions.tasks.S3Location.fromBucket(bucket.let(IBucket::unwrap),
@@ -78,7 +82,7 @@ public abstract class S3Location internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.S3Location.fromJsonExpression(expression).let(S3Location::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3Location):
-        S3Location = CdkObjectWrappers.wrap(cdkObject) as S3Location
+        S3Location = CdkObjectWrappers.wrap(cdkObject) as? S3Location ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3Location):
         software.amazon.awscdk.services.stepfunctions.tasks.S3Location = (wrapped as

@@ -688,7 +688,8 @@ public interface DynamoDeleteItemProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItemProps):
-        DynamoDeleteItemProps = CdkObjectWrappers.wrap(cdkObject) as DynamoDeleteItemProps
+        DynamoDeleteItemProps = CdkObjectWrappers.wrap(cdkObject) as? DynamoDeleteItemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DynamoDeleteItemProps):
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItemProps = (wrapped as

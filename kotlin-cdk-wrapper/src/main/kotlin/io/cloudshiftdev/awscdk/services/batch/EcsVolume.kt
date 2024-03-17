@@ -54,6 +54,10 @@ public abstract class EcsVolume internal constructor(
    */
   public open fun readonly(): Boolean? = unwrap(this).getReadonly()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.batch.EcsVolume,
+  ) : EcsVolume(cdkObject)
+
   public companion object {
     public fun efs(options: EfsVolumeOptions): EfsVolume =
         software.amazon.awscdk.services.batch.EcsVolume.efs(options.let(EfsVolumeOptions::unwrap)).let(EfsVolume::wrap)
@@ -72,7 +76,7 @@ public abstract class EcsVolume internal constructor(
         host(HostVolumeOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EcsVolume): EcsVolume =
-        CdkObjectWrappers.wrap(cdkObject) as EcsVolume
+        CdkObjectWrappers.wrap(cdkObject) as? EcsVolume ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsVolume): software.amazon.awscdk.services.batch.EcsVolume =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.batch.EcsVolume

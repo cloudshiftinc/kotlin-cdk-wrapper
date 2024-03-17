@@ -116,7 +116,8 @@ public interface LustreMaintenanceTimeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps):
-        LustreMaintenanceTimeProps = CdkObjectWrappers.wrap(cdkObject) as LustreMaintenanceTimeProps
+        LustreMaintenanceTimeProps = CdkObjectWrappers.wrap(cdkObject) as?
+        LustreMaintenanceTimeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LustreMaintenanceTimeProps):
         software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps = (wrapped as

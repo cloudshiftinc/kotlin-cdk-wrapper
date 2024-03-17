@@ -497,8 +497,8 @@ public open class CfnCapacityReservation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentConfigurationProperty):
-          CapacityAssignmentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CapacityAssignmentConfigurationProperty
+          CapacityAssignmentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityAssignmentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityAssignmentConfigurationProperty):
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentConfigurationProperty
@@ -591,8 +591,8 @@ public open class CfnCapacityReservation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty):
-          CapacityAssignmentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CapacityAssignmentProperty
+          CapacityAssignmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityAssignmentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityAssignmentProperty):
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty =

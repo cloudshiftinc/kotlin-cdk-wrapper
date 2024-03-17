@@ -128,7 +128,8 @@ public interface RoutingRuleCondition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.RoutingRuleCondition):
-        RoutingRuleCondition = CdkObjectWrappers.wrap(cdkObject) as RoutingRuleCondition
+        RoutingRuleCondition = CdkObjectWrappers.wrap(cdkObject) as? RoutingRuleCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RoutingRuleCondition):
         software.amazon.awscdk.services.s3.RoutingRuleCondition = (wrapped as CdkObject).cdkObject

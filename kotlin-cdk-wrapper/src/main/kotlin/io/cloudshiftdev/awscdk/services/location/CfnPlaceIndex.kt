@@ -596,8 +596,8 @@ public open class CfnPlaceIndex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndex.DataSourceConfigurationProperty):
-          DataSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataSourceConfigurationProperty
+          DataSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceConfigurationProperty):
           software.amazon.awscdk.services.location.CfnPlaceIndex.DataSourceConfigurationProperty =

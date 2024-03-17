@@ -177,8 +177,8 @@ public interface CfnApplicationOutputV2Props {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2Props):
-        CfnApplicationOutputV2Props = CdkObjectWrappers.wrap(cdkObject) as
-        CfnApplicationOutputV2Props
+        CfnApplicationOutputV2Props = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnApplicationOutputV2Props ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationOutputV2Props):
         software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2Props = (wrapped as

@@ -131,7 +131,8 @@ public interface CfnClusterProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps):
-        CfnClusterProps = CdkObjectWrappers.wrap(cdkObject) as CfnClusterProps
+        CfnClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterProps):
         software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps = (wrapped as

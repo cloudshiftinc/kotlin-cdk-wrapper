@@ -544,7 +544,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.EncryptionConfigProperty):
-          EncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionConfigProperty
+          EncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionConfigProperty):
           software.amazon.awscdk.services.forecast.CfnDataset.EncryptionConfigProperty = (wrapped as
@@ -654,7 +655,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty):
-          SchemaProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaProperty
+          SchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaProperty):
           software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty = (wrapped as
@@ -787,7 +789,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty):
-          TagsItemsProperty = CdkObjectWrappers.wrap(cdkObject) as TagsItemsProperty
+          TagsItemsProperty = CdkObjectWrappers.wrap(cdkObject) as? TagsItemsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagsItemsProperty):
           software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty = (wrapped as
@@ -893,7 +896,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty):
-          AttributesItemsProperty = CdkObjectWrappers.wrap(cdkObject) as AttributesItemsProperty
+          AttributesItemsProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributesItemsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributesItemsProperty):
           software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty = (wrapped as

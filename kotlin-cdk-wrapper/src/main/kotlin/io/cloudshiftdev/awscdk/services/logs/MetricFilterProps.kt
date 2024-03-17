@@ -256,7 +256,8 @@ public interface MetricFilterProps : MetricFilterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.MetricFilterProps):
-        MetricFilterProps = CdkObjectWrappers.wrap(cdkObject) as MetricFilterProps
+        MetricFilterProps = CdkObjectWrappers.wrap(cdkObject) as? MetricFilterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetricFilterProps):
         software.amazon.awscdk.services.logs.MetricFilterProps = (wrapped as CdkObject).cdkObject as

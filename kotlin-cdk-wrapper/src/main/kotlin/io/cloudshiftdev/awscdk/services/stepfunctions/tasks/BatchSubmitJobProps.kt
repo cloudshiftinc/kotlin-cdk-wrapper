@@ -712,7 +712,8 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJobProps):
-        BatchSubmitJobProps = CdkObjectWrappers.wrap(cdkObject) as BatchSubmitJobProps
+        BatchSubmitJobProps = CdkObjectWrappers.wrap(cdkObject) as? BatchSubmitJobProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BatchSubmitJobProps):
         software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJobProps = (wrapped as

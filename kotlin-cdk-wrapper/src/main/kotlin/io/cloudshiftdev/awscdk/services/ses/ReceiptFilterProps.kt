@@ -124,7 +124,8 @@ public interface ReceiptFilterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.ReceiptFilterProps):
-        ReceiptFilterProps = CdkObjectWrappers.wrap(cdkObject) as ReceiptFilterProps
+        ReceiptFilterProps = CdkObjectWrappers.wrap(cdkObject) as? ReceiptFilterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReceiptFilterProps):
         software.amazon.awscdk.services.ses.ReceiptFilterProps = (wrapped as CdkObject).cdkObject as

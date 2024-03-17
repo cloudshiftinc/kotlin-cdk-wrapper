@@ -284,7 +284,8 @@ public interface DataProtectionPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.DataProtectionPolicyProps):
-        DataProtectionPolicyProps = CdkObjectWrappers.wrap(cdkObject) as DataProtectionPolicyProps
+        DataProtectionPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? DataProtectionPolicyProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DataProtectionPolicyProps):
         software.amazon.awscdk.services.logs.DataProtectionPolicyProps = (wrapped as

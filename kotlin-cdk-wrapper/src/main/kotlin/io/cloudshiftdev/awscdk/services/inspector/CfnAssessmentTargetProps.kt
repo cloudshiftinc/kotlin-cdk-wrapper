@@ -123,7 +123,8 @@ public interface CfnAssessmentTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps):
-        CfnAssessmentTargetProps = CdkObjectWrappers.wrap(cdkObject) as CfnAssessmentTargetProps
+        CfnAssessmentTargetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAssessmentTargetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssessmentTargetProps):
         software.amazon.awscdk.services.inspector.CfnAssessmentTargetProps = (wrapped as

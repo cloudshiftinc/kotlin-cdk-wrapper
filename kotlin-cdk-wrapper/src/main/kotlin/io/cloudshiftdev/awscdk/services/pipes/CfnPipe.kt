@@ -1229,8 +1229,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceRabbitMQBrokerParametersProperty):
-          PipeSourceRabbitMQBrokerParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeSourceRabbitMQBrokerParametersProperty
+          PipeSourceRabbitMQBrokerParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeSourceRabbitMQBrokerParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeSourceRabbitMQBrokerParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceRabbitMQBrokerParametersProperty =
@@ -1346,8 +1346,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSageMakerPipelineParametersProperty):
-          PipeTargetSageMakerPipelineParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetSageMakerPipelineParametersProperty
+          PipeTargetSageMakerPipelineParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetSageMakerPipelineParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetSageMakerPipelineParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSageMakerPipelineParametersProperty
@@ -1541,8 +1541,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.AwsVpcConfigurationProperty):
-          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AwsVpcConfigurationProperty
+          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.AwsVpcConfigurationProperty = (wrapped as
@@ -1655,8 +1655,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSqsQueueParametersProperty):
-          PipeSourceSqsQueueParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeSourceSqsQueueParametersProperty
+          PipeSourceSqsQueueParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeSourceSqsQueueParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeSourceSqsQueueParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSqsQueueParametersProperty =
@@ -1775,8 +1775,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSqsQueueParametersProperty):
-          PipeTargetSqsQueueParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetSqsQueueParametersProperty
+          PipeTargetSqsQueueParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetSqsQueueParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetSqsQueueParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSqsQueueParametersProperty =
@@ -1913,8 +1913,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentFileProperty):
-          EcsEnvironmentFileProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EcsEnvironmentFileProperty
+          EcsEnvironmentFileProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EcsEnvironmentFileProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsEnvironmentFileProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentFileProperty = (wrapped as
@@ -2081,7 +2081,7 @@ public open class CfnPipe internal constructor(
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationCredentialsProperty):
           SelfManagedKafkaAccessConfigurationCredentialsProperty = CdkObjectWrappers.wrap(cdkObject)
-          as SelfManagedKafkaAccessConfigurationCredentialsProperty
+          as? SelfManagedKafkaAccessConfigurationCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelfManagedKafkaAccessConfigurationCredentialsProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationCredentialsProperty
@@ -2281,7 +2281,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.S3LogDestinationProperty):
-          S3LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LogDestinationProperty
+          S3LogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LogDestinationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LogDestinationProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.S3LogDestinationProperty = (wrapped as
@@ -2403,8 +2404,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsInferenceAcceleratorOverrideProperty):
-          EcsInferenceAcceleratorOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EcsInferenceAcceleratorOverrideProperty
+          EcsInferenceAcceleratorOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EcsInferenceAcceleratorOverrideProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsInferenceAcceleratorOverrideProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.EcsInferenceAcceleratorOverrideProperty =
@@ -2533,8 +2534,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchEnvironmentVariableProperty):
-          BatchEnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BatchEnvironmentVariableProperty
+          BatchEnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchEnvironmentVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchEnvironmentVariableProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.BatchEnvironmentVariableProperty = (wrapped
@@ -2643,7 +2644,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FilterCriteriaProperty):
-          FilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as FilterCriteriaProperty
+          FilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterCriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterCriteriaProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.FilterCriteriaProperty = (wrapped as
@@ -2785,8 +2787,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PlacementConstraintProperty):
-          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PlacementConstraintProperty
+          PlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementConstraintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementConstraintProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PlacementConstraintProperty = (wrapped as
@@ -2964,8 +2966,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.CapacityProviderStrategyItemProperty):
-          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CapacityProviderStrategyItemProperty
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.CapacityProviderStrategyItemProperty =
@@ -3220,8 +3222,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceManagedStreamingKafkaParametersProperty):
-          PipeSourceManagedStreamingKafkaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeSourceManagedStreamingKafkaParametersProperty
+          PipeSourceManagedStreamingKafkaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeSourceManagedStreamingKafkaParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeSourceManagedStreamingKafkaParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceManagedStreamingKafkaParametersProperty
@@ -3418,8 +3420,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceActiveMQBrokerParametersProperty):
-          PipeSourceActiveMQBrokerParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeSourceActiveMQBrokerParametersProperty
+          PipeSourceActiveMQBrokerParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeSourceActiveMQBrokerParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeSourceActiveMQBrokerParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceActiveMQBrokerParametersProperty =
@@ -3632,8 +3634,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentParametersProperty):
-          PipeEnrichmentParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeEnrichmentParametersProperty
+          PipeEnrichmentParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeEnrichmentParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeEnrichmentParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentParametersProperty = (wrapped
@@ -4100,8 +4102,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsContainerOverrideProperty):
-          EcsContainerOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EcsContainerOverrideProperty
+          EcsContainerOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EcsContainerOverrideProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsContainerOverrideProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.EcsContainerOverrideProperty = (wrapped as
@@ -4199,8 +4201,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchRetryStrategyProperty):
-          BatchRetryStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BatchRetryStrategyProperty
+          BatchRetryStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchRetryStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchRetryStrategyProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.BatchRetryStrategyProperty = (wrapped as
@@ -4310,8 +4312,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetKinesisStreamParametersProperty):
-          PipeTargetKinesisStreamParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetKinesisStreamParametersProperty
+          PipeTargetKinesisStreamParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetKinesisStreamParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetKinesisStreamParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetKinesisStreamParametersProperty =
@@ -4411,8 +4413,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEphemeralStorageProperty):
-          EcsEphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EcsEphemeralStorageProperty
+          EcsEphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EcsEphemeralStorageProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsEphemeralStorageProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.EcsEphemeralStorageProperty = (wrapped as
@@ -4657,8 +4659,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEventBridgeEventBusParametersProperty):
-          PipeTargetEventBridgeEventBusParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetEventBridgeEventBusParametersProperty
+          PipeTargetEventBridgeEventBusParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetEventBridgeEventBusParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetEventBridgeEventBusParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEventBridgeEventBusParametersProperty
@@ -4794,8 +4796,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetLambdaFunctionParametersProperty):
-          PipeTargetLambdaFunctionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetLambdaFunctionParametersProperty
+          PipeTargetLambdaFunctionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetLambdaFunctionParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetLambdaFunctionParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetLambdaFunctionParametersProperty =
@@ -5111,8 +5113,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchContainerOverridesProperty):
-          BatchContainerOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BatchContainerOverridesProperty
+          BatchContainerOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchContainerOverridesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchContainerOverridesProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.BatchContainerOverridesProperty = (wrapped
@@ -5195,8 +5197,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MQBrokerAccessCredentialsProperty):
-          MQBrokerAccessCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MQBrokerAccessCredentialsProperty
+          MQBrokerAccessCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MQBrokerAccessCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MQBrokerAccessCredentialsProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.MQBrokerAccessCredentialsProperty = (wrapped
@@ -5321,8 +5323,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentVariableProperty):
-          EcsEnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EcsEnvironmentVariableProperty
+          EcsEnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EcsEnvironmentVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsEnvironmentVariableProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.EcsEnvironmentVariableProperty = (wrapped as
@@ -5412,7 +5414,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.DeadLetterConfigProperty):
-          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DeadLetterConfigProperty
+          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeadLetterConfigProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.DeadLetterConfigProperty = (wrapped as
@@ -5871,8 +5874,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchResourceRequirementProperty):
-          BatchResourceRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BatchResourceRequirementProperty
+          BatchResourceRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchResourceRequirementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchResourceRequirementProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.BatchResourceRequirementProperty = (wrapped
@@ -6521,8 +6524,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceParametersProperty):
-          PipeSourceParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeSourceParametersProperty
+          PipeSourceParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeSourceParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeSourceParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceParametersProperty = (wrapped as
@@ -6632,8 +6635,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SageMakerPipelineParameterProperty):
-          SageMakerPipelineParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SageMakerPipelineParameterProperty
+          SageMakerPipelineParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SageMakerPipelineParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SageMakerPipelineParameterProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.SageMakerPipelineParameterProperty =
@@ -6793,8 +6796,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty):
-          SelfManagedKafkaAccessConfigurationVpcProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SelfManagedKafkaAccessConfigurationVpcProperty
+          SelfManagedKafkaAccessConfigurationVpcProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedKafkaAccessConfigurationVpcProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelfManagedKafkaAccessConfigurationVpcProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty
@@ -7305,8 +7308,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetBatchJobParametersProperty):
-          PipeTargetBatchJobParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetBatchJobParametersProperty
+          PipeTargetBatchJobParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetBatchJobParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetBatchJobParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetBatchJobParametersProperty =
@@ -7392,8 +7395,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FirehoseLogDestinationProperty):
-          FirehoseLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FirehoseLogDestinationProperty
+          FirehoseLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FirehoseLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FirehoseLogDestinationProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.FirehoseLogDestinationProperty = (wrapped as
@@ -8175,8 +8178,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetParametersProperty):
-          PipeTargetParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetParametersProperty
+          PipeTargetParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetParametersProperty = (wrapped as
@@ -8538,8 +8541,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeLogConfigurationProperty):
-          PipeLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeLogConfigurationProperty
+          PipeLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeLogConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeLogConfigurationProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeLogConfigurationProperty = (wrapped as
@@ -8646,8 +8649,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchJobDependencyProperty):
-          BatchJobDependencyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BatchJobDependencyProperty
+          BatchJobDependencyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchJobDependencyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchJobDependencyProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.BatchJobDependencyProperty = (wrapped as
@@ -8841,8 +8844,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetHttpParametersProperty):
-          PipeTargetHttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetHttpParametersProperty
+          PipeTargetHttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetHttpParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetHttpParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetHttpParametersProperty = (wrapped
@@ -9778,8 +9781,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEcsTaskParametersProperty):
-          PipeTargetEcsTaskParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetEcsTaskParametersProperty
+          PipeTargetEcsTaskParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetEcsTaskParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetEcsTaskParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetEcsTaskParametersProperty =
@@ -9871,8 +9874,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.CloudwatchLogsLogDestinationProperty):
-          CloudwatchLogsLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudwatchLogsLogDestinationProperty
+          CloudwatchLogsLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudwatchLogsLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudwatchLogsLogDestinationProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.CloudwatchLogsLogDestinationProperty =
@@ -10027,7 +10030,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PlacementStrategyProperty):
-          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as PlacementStrategyProperty
+          PlacementStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PlacementStrategyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementStrategyProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PlacementStrategyProperty = (wrapped as
@@ -10302,8 +10306,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetRedshiftDataParametersProperty):
-          PipeTargetRedshiftDataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetRedshiftDataParametersProperty
+          PipeTargetRedshiftDataParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetRedshiftDataParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetRedshiftDataParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetRedshiftDataParametersProperty =
@@ -10664,8 +10668,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceDynamoDBStreamParametersProperty):
-          PipeSourceDynamoDBStreamParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeSourceDynamoDBStreamParametersProperty
+          PipeSourceDynamoDBStreamParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeSourceDynamoDBStreamParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeSourceDynamoDBStreamParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceDynamoDBStreamParametersProperty =
@@ -11058,8 +11062,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSelfManagedKafkaParametersProperty):
-          PipeSourceSelfManagedKafkaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeSourceSelfManagedKafkaParametersProperty
+          PipeSourceSelfManagedKafkaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeSourceSelfManagedKafkaParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeSourceSelfManagedKafkaParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceSelfManagedKafkaParametersProperty
@@ -11446,8 +11450,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceKinesisStreamParametersProperty):
-          PipeSourceKinesisStreamParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeSourceKinesisStreamParametersProperty
+          PipeSourceKinesisStreamParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeSourceKinesisStreamParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeSourceKinesisStreamParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeSourceKinesisStreamParametersProperty =
@@ -11528,7 +11532,8 @@ public open class CfnPipe internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as FilterProperty
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.FilterProperty = (wrapped as
@@ -11615,8 +11620,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.BatchArrayPropertiesProperty):
-          BatchArrayPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BatchArrayPropertiesProperty
+          BatchArrayPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BatchArrayPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BatchArrayPropertiesProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.BatchArrayPropertiesProperty = (wrapped as
@@ -11764,8 +11769,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetStateMachineParametersProperty):
-          PipeTargetStateMachineParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetStateMachineParametersProperty
+          PipeTargetStateMachineParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetStateMachineParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetStateMachineParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetStateMachineParametersProperty =
@@ -12199,7 +12204,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsTaskOverrideProperty):
-          EcsTaskOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as EcsTaskOverrideProperty
+          EcsTaskOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as? EcsTaskOverrideProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsTaskOverrideProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.EcsTaskOverrideProperty = (wrapped as
@@ -12398,8 +12404,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentHttpParametersProperty):
-          PipeEnrichmentHttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeEnrichmentHttpParametersProperty
+          PipeEnrichmentHttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeEnrichmentHttpParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeEnrichmentHttpParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeEnrichmentHttpParametersProperty =
@@ -12507,8 +12513,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.MSKAccessCredentialsProperty):
-          MSKAccessCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MSKAccessCredentialsProperty
+          MSKAccessCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MSKAccessCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MSKAccessCredentialsProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.MSKAccessCredentialsProperty = (wrapped as
@@ -12660,8 +12666,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.EcsResourceRequirementProperty):
-          EcsResourceRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EcsResourceRequirementProperty
+          EcsResourceRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EcsResourceRequirementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EcsResourceRequirementProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.EcsResourceRequirementProperty = (wrapped as
@@ -12776,8 +12782,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetCloudWatchLogsParametersProperty):
-          PipeTargetCloudWatchLogsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PipeTargetCloudWatchLogsParametersProperty
+          PipeTargetCloudWatchLogsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PipeTargetCloudWatchLogsParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipeTargetCloudWatchLogsParametersProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetCloudWatchLogsParametersProperty =
@@ -12910,8 +12916,8 @@ public open class CfnPipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pipes.CfnPipe.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkConfigurationProperty
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.pipes.CfnPipe.NetworkConfigurationProperty = (wrapped as

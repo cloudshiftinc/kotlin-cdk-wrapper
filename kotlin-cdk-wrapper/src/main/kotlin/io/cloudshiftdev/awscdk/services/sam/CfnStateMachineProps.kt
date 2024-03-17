@@ -531,7 +531,8 @@ public interface CfnStateMachineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnStateMachineProps):
-        CfnStateMachineProps = CdkObjectWrappers.wrap(cdkObject) as CfnStateMachineProps
+        CfnStateMachineProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStateMachineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStateMachineProps):
         software.amazon.awscdk.services.sam.CfnStateMachineProps = (wrapped as CdkObject).cdkObject

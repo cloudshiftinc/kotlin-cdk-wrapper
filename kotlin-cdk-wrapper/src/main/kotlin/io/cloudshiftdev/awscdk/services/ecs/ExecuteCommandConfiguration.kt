@@ -181,8 +181,8 @@ public interface ExecuteCommandConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration):
-        ExecuteCommandConfiguration = CdkObjectWrappers.wrap(cdkObject) as
-        ExecuteCommandConfiguration
+        ExecuteCommandConfiguration = CdkObjectWrappers.wrap(cdkObject) as?
+        ExecuteCommandConfiguration ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExecuteCommandConfiguration):
         software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration = (wrapped as

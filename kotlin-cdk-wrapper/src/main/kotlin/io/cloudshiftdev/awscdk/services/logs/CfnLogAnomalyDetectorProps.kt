@@ -351,7 +351,8 @@ public interface CfnLogAnomalyDetectorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnLogAnomalyDetectorProps):
-        CfnLogAnomalyDetectorProps = CdkObjectWrappers.wrap(cdkObject) as CfnLogAnomalyDetectorProps
+        CfnLogAnomalyDetectorProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLogAnomalyDetectorProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogAnomalyDetectorProps):
         software.amazon.awscdk.services.logs.CfnLogAnomalyDetectorProps = (wrapped as

@@ -1254,7 +1254,8 @@ public interface CfnCampaignProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaignProps):
-        CfnCampaignProps = CdkObjectWrappers.wrap(cdkObject) as CfnCampaignProps
+        CfnCampaignProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCampaignProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCampaignProps):
         software.amazon.awscdk.services.pinpoint.CfnCampaignProps = (wrapped as CdkObject).cdkObject

@@ -76,7 +76,8 @@ public interface KeyLookupOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.KeyLookupOptions):
-        KeyLookupOptions = CdkObjectWrappers.wrap(cdkObject) as KeyLookupOptions
+        KeyLookupOptions = CdkObjectWrappers.wrap(cdkObject) as? KeyLookupOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyLookupOptions):
         software.amazon.awscdk.services.kms.KeyLookupOptions = (wrapped as CdkObject).cdkObject as

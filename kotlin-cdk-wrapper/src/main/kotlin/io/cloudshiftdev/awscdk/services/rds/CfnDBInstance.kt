@@ -6349,7 +6349,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty):
-          DBInstanceRoleProperty = CdkObjectWrappers.wrap(cdkObject) as DBInstanceRoleProperty
+          DBInstanceRoleProperty = CdkObjectWrappers.wrap(cdkObject) as? DBInstanceRoleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DBInstanceRoleProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty = (wrapped as
@@ -6493,7 +6494,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty):
-          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointProperty
+          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty = (wrapped as
@@ -6608,8 +6610,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty):
-          CertificateDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CertificateDetailsProperty
+          CertificateDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateDetailsProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty = (wrapped as
@@ -6723,7 +6725,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty):
-          ProcessorFeatureProperty = CdkObjectWrappers.wrap(cdkObject) as ProcessorFeatureProperty
+          ProcessorFeatureProperty = CdkObjectWrappers.wrap(cdkObject) as? ProcessorFeatureProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProcessorFeatureProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty = (wrapped as
@@ -6837,7 +6840,8 @@ public open class CfnDBInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty):
-          MasterUserSecretProperty = CdkObjectWrappers.wrap(cdkObject) as MasterUserSecretProperty
+          MasterUserSecretProperty = CdkObjectWrappers.wrap(cdkObject) as? MasterUserSecretProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MasterUserSecretProperty):
           software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty = (wrapped as

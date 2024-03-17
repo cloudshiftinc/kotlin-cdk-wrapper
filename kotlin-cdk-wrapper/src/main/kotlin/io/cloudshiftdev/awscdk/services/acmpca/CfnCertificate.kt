@@ -858,7 +858,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyInformationProperty):
-          PolicyInformationProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyInformationProperty
+          PolicyInformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PolicyInformationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyInformationProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyInformationProperty = (wrapped
@@ -1451,7 +1452,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.SubjectProperty):
-          SubjectProperty = CdkObjectWrappers.wrap(cdkObject) as SubjectProperty
+          SubjectProperty = CdkObjectWrappers.wrap(cdkObject) as? SubjectProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubjectProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.SubjectProperty = (wrapped as
@@ -1601,8 +1603,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty):
-          PolicyQualifierInfoProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PolicyQualifierInfoProperty
+          PolicyQualifierInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PolicyQualifierInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyQualifierInfoProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyQualifierInfoProperty =
@@ -2043,7 +2045,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty):
-          GeneralNameProperty = CdkObjectWrappers.wrap(cdkObject) as GeneralNameProperty
+          GeneralNameProperty = CdkObjectWrappers.wrap(cdkObject) as? GeneralNameProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GeneralNameProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.GeneralNameProperty = (wrapped as
@@ -2152,7 +2155,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty):
-          EdiPartyNameProperty = CdkObjectWrappers.wrap(cdkObject) as EdiPartyNameProperty
+          EdiPartyNameProperty = CdkObjectWrappers.wrap(cdkObject) as? EdiPartyNameProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EdiPartyNameProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.EdiPartyNameProperty = (wrapped as
@@ -2310,7 +2314,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty):
-          CustomExtensionProperty = CdkObjectWrappers.wrap(cdkObject) as CustomExtensionProperty
+          CustomExtensionProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomExtensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomExtensionProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.CustomExtensionProperty = (wrapped
@@ -2599,7 +2604,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty):
-          ApiPassthroughProperty = CdkObjectWrappers.wrap(cdkObject) as ApiPassthroughProperty
+          ApiPassthroughProperty = CdkObjectWrappers.wrap(cdkObject) as? ApiPassthroughProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApiPassthroughProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.ApiPassthroughProperty = (wrapped as
@@ -3041,7 +3047,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty):
-          KeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as KeyUsageProperty
+          KeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyUsageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyUsageProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty = (wrapped as
@@ -3153,7 +3160,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty):
-          CustomAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as CustomAttributeProperty
+          CustomAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomAttributeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomAttributeProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.CustomAttributeProperty = (wrapped
@@ -3651,7 +3659,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty):
-          ExtensionsProperty = CdkObjectWrappers.wrap(cdkObject) as ExtensionsProperty
+          ExtensionsProperty = CdkObjectWrappers.wrap(cdkObject) as? ExtensionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExtensionsProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty = (wrapped as
@@ -3772,7 +3781,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty):
-          ExtendedKeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as ExtendedKeyUsageProperty
+          ExtendedKeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as? ExtendedKeyUsageProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExtendedKeyUsageProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.ExtendedKeyUsageProperty = (wrapped
@@ -3858,7 +3868,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty):
-          QualifierProperty = CdkObjectWrappers.wrap(cdkObject) as QualifierProperty
+          QualifierProperty = CdkObjectWrappers.wrap(cdkObject) as? QualifierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QualifierProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.QualifierProperty = (wrapped as
@@ -3968,7 +3979,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty):
-          OtherNameProperty = CdkObjectWrappers.wrap(cdkObject) as OtherNameProperty
+          OtherNameProperty = CdkObjectWrappers.wrap(cdkObject) as? OtherNameProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OtherNameProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.OtherNameProperty = (wrapped as
@@ -4078,7 +4090,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate.ValidityProperty):
-          ValidityProperty = CdkObjectWrappers.wrap(cdkObject) as ValidityProperty
+          ValidityProperty = CdkObjectWrappers.wrap(cdkObject) as? ValidityProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValidityProperty):
           software.amazon.awscdk.services.acmpca.CfnCertificate.ValidityProperty = (wrapped as

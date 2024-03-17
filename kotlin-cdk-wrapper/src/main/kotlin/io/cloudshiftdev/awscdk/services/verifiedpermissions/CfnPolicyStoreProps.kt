@@ -317,7 +317,8 @@ public interface CfnPolicyStoreProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStoreProps):
-        CfnPolicyStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnPolicyStoreProps
+        CfnPolicyStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPolicyStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyStoreProps):
         software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStoreProps = (wrapped as

@@ -945,8 +945,8 @@ public interface NetworkLoadBalancedServiceBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBaseProps):
-        NetworkLoadBalancedServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkLoadBalancedServiceBaseProps
+        NetworkLoadBalancedServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancedServiceBaseProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancedServiceBaseProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBaseProps = (wrapped

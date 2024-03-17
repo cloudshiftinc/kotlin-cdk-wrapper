@@ -233,7 +233,8 @@ public interface LayerVersionProps : LayerVersionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.LayerVersionProps):
-        LayerVersionProps = CdkObjectWrappers.wrap(cdkObject) as LayerVersionProps
+        LayerVersionProps = CdkObjectWrappers.wrap(cdkObject) as? LayerVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LayerVersionProps):
         software.amazon.awscdk.services.lambda.LayerVersionProps = (wrapped as CdkObject).cdkObject

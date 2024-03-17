@@ -103,7 +103,8 @@ public interface GatewayRouteBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteBaseProps):
-        GatewayRouteBaseProps = CdkObjectWrappers.wrap(cdkObject) as GatewayRouteBaseProps
+        GatewayRouteBaseProps = CdkObjectWrappers.wrap(cdkObject) as? GatewayRouteBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayRouteBaseProps):
         software.amazon.awscdk.services.appmesh.GatewayRouteBaseProps = (wrapped as

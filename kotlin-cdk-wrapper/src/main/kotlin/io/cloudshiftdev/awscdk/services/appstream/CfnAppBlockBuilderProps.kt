@@ -464,7 +464,8 @@ public interface CfnAppBlockBuilderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilderProps):
-        CfnAppBlockBuilderProps = CdkObjectWrappers.wrap(cdkObject) as CfnAppBlockBuilderProps
+        CfnAppBlockBuilderProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAppBlockBuilderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAppBlockBuilderProps):
         software.amazon.awscdk.services.appstream.CfnAppBlockBuilderProps = (wrapped as

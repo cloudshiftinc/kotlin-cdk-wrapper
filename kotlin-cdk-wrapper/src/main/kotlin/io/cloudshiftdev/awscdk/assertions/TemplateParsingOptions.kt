@@ -88,7 +88,8 @@ public interface TemplateParsingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.TemplateParsingOptions):
-        TemplateParsingOptions = CdkObjectWrappers.wrap(cdkObject) as TemplateParsingOptions
+        TemplateParsingOptions = CdkObjectWrappers.wrap(cdkObject) as? TemplateParsingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TemplateParsingOptions):
         software.amazon.awscdk.assertions.TemplateParsingOptions = (wrapped as CdkObject).cdkObject

@@ -441,7 +441,8 @@ public interface GraphqlApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiProps):
-        GraphqlApiProps = CdkObjectWrappers.wrap(cdkObject) as GraphqlApiProps
+        GraphqlApiProps = CdkObjectWrappers.wrap(cdkObject) as? GraphqlApiProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GraphqlApiProps):
         software.amazon.awscdk.services.appsync.GraphqlApiProps = (wrapped as CdkObject).cdkObject

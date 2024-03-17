@@ -248,7 +248,8 @@ public interface OAuthAuthorizationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.OAuthAuthorizationProps):
-        OAuthAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as OAuthAuthorizationProps
+        OAuthAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as? OAuthAuthorizationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OAuthAuthorizationProps):
         software.amazon.awscdk.services.events.OAuthAuthorizationProps = (wrapped as

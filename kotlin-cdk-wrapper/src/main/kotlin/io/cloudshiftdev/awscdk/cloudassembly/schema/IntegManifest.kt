@@ -277,7 +277,7 @@ public interface IntegManifest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.IntegManifest):
-        IntegManifest = CdkObjectWrappers.wrap(cdkObject) as IntegManifest
+        IntegManifest = CdkObjectWrappers.wrap(cdkObject) as? IntegManifest ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IntegManifest):
         software.amazon.awscdk.cloudassembly.schema.IntegManifest = (wrapped as CdkObject).cdkObject

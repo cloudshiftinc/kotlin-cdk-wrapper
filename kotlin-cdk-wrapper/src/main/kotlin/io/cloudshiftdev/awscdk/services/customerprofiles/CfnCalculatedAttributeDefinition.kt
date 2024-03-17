@@ -590,7 +590,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty):
-          AttributeItemProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeItemProperty
+          AttributeItemProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeItemProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeItemProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty
@@ -742,7 +743,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty):
-          AttributeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeDetailsProperty
+          AttributeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeDetailsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeDetailsProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty
@@ -851,7 +853,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty):
-          ThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as ThresholdProperty
+          ThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as? ThresholdProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThresholdProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
@@ -960,7 +963,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty):
-          RangeProperty = CdkObjectWrappers.wrap(cdkObject) as RangeProperty
+          RangeProperty = CdkObjectWrappers.wrap(cdkObject) as? RangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RangeProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
@@ -1156,7 +1159,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty):
-          ConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as ConditionsProperty
+          ConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionsProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty

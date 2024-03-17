@@ -934,7 +934,8 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty):
-          LaunchGroupObjectProperty = CdkObjectWrappers.wrap(cdkObject) as LaunchGroupObjectProperty
+          LaunchGroupObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchGroupObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LaunchGroupObjectProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty = (wrapped
@@ -1092,8 +1093,8 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty):
-          ExecutionStatusObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ExecutionStatusObjectProperty
+          ExecutionStatusObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExecutionStatusObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExecutionStatusObjectProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty =
@@ -1216,7 +1217,8 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty):
-          GroupToWeightProperty = CdkObjectWrappers.wrap(cdkObject) as GroupToWeightProperty
+          GroupToWeightProperty = CdkObjectWrappers.wrap(cdkObject) as? GroupToWeightProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GroupToWeightProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty = (wrapped as
@@ -1435,8 +1437,8 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty):
-          MetricDefinitionObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MetricDefinitionObjectProperty
+          MetricDefinitionObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricDefinitionObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricDefinitionObjectProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty =
@@ -1649,7 +1651,8 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty):
-          SegmentOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as SegmentOverrideProperty
+          SegmentOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as? SegmentOverrideProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SegmentOverrideProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty = (wrapped as
@@ -1921,7 +1924,8 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty):
-          StepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as StepConfigProperty
+          StepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? StepConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StepConfigProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty = (wrapped as

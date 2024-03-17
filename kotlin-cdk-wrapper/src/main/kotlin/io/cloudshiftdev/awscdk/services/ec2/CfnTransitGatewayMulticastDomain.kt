@@ -385,7 +385,8 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain.OptionsProperty):
-          OptionsProperty = CdkObjectWrappers.wrap(cdkObject) as OptionsProperty
+          OptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? OptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OptionsProperty):
           software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain.OptionsProperty =

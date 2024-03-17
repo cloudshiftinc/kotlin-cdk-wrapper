@@ -251,7 +251,8 @@ public interface AssemblyManifest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AssemblyManifest):
-        AssemblyManifest = CdkObjectWrappers.wrap(cdkObject) as AssemblyManifest
+        AssemblyManifest = CdkObjectWrappers.wrap(cdkObject) as? AssemblyManifest ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssemblyManifest):
         software.amazon.awscdk.cloudassembly.schema.AssemblyManifest = (wrapped as

@@ -397,7 +397,8 @@ public interface HelmChartOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.HelmChartOptions):
-        HelmChartOptions = CdkObjectWrappers.wrap(cdkObject) as HelmChartOptions
+        HelmChartOptions = CdkObjectWrappers.wrap(cdkObject) as? HelmChartOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HelmChartOptions):
         software.amazon.awscdk.services.eks.HelmChartOptions = (wrapped as CdkObject).cdkObject as

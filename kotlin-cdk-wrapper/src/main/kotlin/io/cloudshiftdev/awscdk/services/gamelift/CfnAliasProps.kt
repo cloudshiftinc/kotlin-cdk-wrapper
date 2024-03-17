@@ -178,7 +178,7 @@ public interface CfnAliasProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnAliasProps):
-        CfnAliasProps = CdkObjectWrappers.wrap(cdkObject) as CfnAliasProps
+        CfnAliasProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAliasProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAliasProps):
         software.amazon.awscdk.services.gamelift.CfnAliasProps = (wrapped as CdkObject).cdkObject as

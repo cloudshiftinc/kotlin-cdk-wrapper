@@ -521,7 +521,8 @@ public open class CfnResourceVersion internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.CfnResourceVersion.LoggingConfigProperty):
-          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingConfigProperty
+          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigProperty):
           software.amazon.awscdk.CfnResourceVersion.LoggingConfigProperty = (wrapped as

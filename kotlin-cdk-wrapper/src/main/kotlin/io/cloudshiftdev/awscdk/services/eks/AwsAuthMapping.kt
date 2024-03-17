@@ -108,7 +108,7 @@ public interface AwsAuthMapping {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.AwsAuthMapping): AwsAuthMapping
-        = CdkObjectWrappers.wrap(cdkObject) as AwsAuthMapping
+        = CdkObjectWrappers.wrap(cdkObject) as? AwsAuthMapping ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsAuthMapping): software.amazon.awscdk.services.eks.AwsAuthMapping
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.AwsAuthMapping

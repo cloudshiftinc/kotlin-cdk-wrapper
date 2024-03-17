@@ -42,6 +42,10 @@ public abstract class ParamsAndSecretsLayerVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion,
+  ) : ParamsAndSecretsLayerVersion(cdkObject)
+
   public companion object {
     public fun fromVersion(version: ParamsAndSecretsVersions): ParamsAndSecretsLayerVersion =
         software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion.fromVersion(version.let(ParamsAndSecretsVersions::unwrap)).let(ParamsAndSecretsLayerVersion::wrap)
@@ -72,8 +76,8 @@ public abstract class ParamsAndSecretsLayerVersion internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion):
-        ParamsAndSecretsLayerVersion = CdkObjectWrappers.wrap(cdkObject) as
-        ParamsAndSecretsLayerVersion
+        ParamsAndSecretsLayerVersion = CdkObjectWrappers.wrap(cdkObject) as?
+        ParamsAndSecretsLayerVersion ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParamsAndSecretsLayerVersion):
         software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion = (wrapped as

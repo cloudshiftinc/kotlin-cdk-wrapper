@@ -374,7 +374,8 @@ public interface CfnServerCertificateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnServerCertificateProps):
-        CfnServerCertificateProps = CdkObjectWrappers.wrap(cdkObject) as CfnServerCertificateProps
+        CfnServerCertificateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServerCertificateProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServerCertificateProps):
         software.amazon.awscdk.services.iam.CfnServerCertificateProps = (wrapped as

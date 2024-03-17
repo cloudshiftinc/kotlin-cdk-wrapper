@@ -146,7 +146,8 @@ public interface CfnAccountProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccountProps):
-        CfnAccountProps = CdkObjectWrappers.wrap(cdkObject) as CfnAccountProps
+        CfnAccountProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAccountProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccountProps):
         software.amazon.awscdk.services.certificatemanager.CfnAccountProps = (wrapped as

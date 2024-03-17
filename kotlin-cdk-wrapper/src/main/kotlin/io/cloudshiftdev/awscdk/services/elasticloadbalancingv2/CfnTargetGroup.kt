@@ -1281,7 +1281,8 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.MatcherProperty):
-          MatcherProperty = CdkObjectWrappers.wrap(cdkObject) as MatcherProperty
+          MatcherProperty = CdkObjectWrappers.wrap(cdkObject) as? MatcherProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MatcherProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.MatcherProperty =
@@ -1812,8 +1813,8 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetGroupAttributeProperty):
-          TargetGroupAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TargetGroupAttributeProperty
+          TargetGroupAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetGroupAttributeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetGroupAttributeProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetGroupAttributeProperty
@@ -2064,7 +2065,8 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetDescriptionProperty):
-          TargetDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as TargetDescriptionProperty
+          TargetDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetDescriptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetDescriptionProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetDescriptionProperty

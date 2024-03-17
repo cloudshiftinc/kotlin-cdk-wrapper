@@ -510,8 +510,8 @@ public interface CodeDeployEcsDeployActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployActionProps):
-        CodeDeployEcsDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CodeDeployEcsDeployActionProps
+        CodeDeployEcsDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CodeDeployEcsDeployActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeDeployEcsDeployActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployActionProps =

@@ -92,7 +92,7 @@ public interface AclCidrConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclCidrConfig): AclCidrConfig =
-        CdkObjectWrappers.wrap(cdkObject) as AclCidrConfig
+        CdkObjectWrappers.wrap(cdkObject) as? AclCidrConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AclCidrConfig): software.amazon.awscdk.services.ec2.AclCidrConfig =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.AclCidrConfig

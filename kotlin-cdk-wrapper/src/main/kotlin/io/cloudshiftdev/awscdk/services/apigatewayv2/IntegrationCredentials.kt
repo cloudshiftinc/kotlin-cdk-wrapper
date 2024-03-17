@@ -30,6 +30,10 @@ public abstract class IntegrationCredentials internal constructor(
    */
   public open fun credentialsArn(): String = unwrap(this).getCredentialsArn()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials,
+  ) : IntegrationCredentials(cdkObject)
+
   public companion object {
     public fun fromRole(role: IRole): IntegrationCredentials =
         software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials.fromRole(role.let(IRole::unwrap)).let(IntegrationCredentials::wrap)
@@ -39,7 +43,8 @@ public abstract class IntegrationCredentials internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials):
-        IntegrationCredentials = CdkObjectWrappers.wrap(cdkObject) as IntegrationCredentials
+        IntegrationCredentials = CdkObjectWrappers.wrap(cdkObject) as? IntegrationCredentials ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IntegrationCredentials):
         software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials = (wrapped as

@@ -877,7 +877,8 @@ public interface DistributionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.DistributionProps):
-        DistributionProps = CdkObjectWrappers.wrap(cdkObject) as DistributionProps
+        DistributionProps = CdkObjectWrappers.wrap(cdkObject) as? DistributionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DistributionProps):
         software.amazon.awscdk.services.cloudfront.DistributionProps = (wrapped as

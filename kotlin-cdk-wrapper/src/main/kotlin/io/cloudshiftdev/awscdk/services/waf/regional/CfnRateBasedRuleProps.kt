@@ -284,7 +284,8 @@ public interface CfnRateBasedRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRuleProps):
-        CfnRateBasedRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnRateBasedRuleProps
+        CfnRateBasedRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRateBasedRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRateBasedRuleProps):
         software.amazon.awscdk.services.waf.regional.CfnRateBasedRuleProps = (wrapped as

@@ -1265,7 +1265,8 @@ public open class CfnStackSet internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty):
-          ManagedExecutionProperty = CdkObjectWrappers.wrap(cdkObject) as ManagedExecutionProperty
+          ManagedExecutionProperty = CdkObjectWrappers.wrap(cdkObject) as? ManagedExecutionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManagedExecutionProperty):
           software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty = (wrapped as
@@ -1439,7 +1440,8 @@ public open class CfnStackSet internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.AutoDeploymentProperty):
-          AutoDeploymentProperty = CdkObjectWrappers.wrap(cdkObject) as AutoDeploymentProperty
+          AutoDeploymentProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoDeploymentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoDeploymentProperty):
           software.amazon.awscdk.CfnStackSet.AutoDeploymentProperty = (wrapped as
@@ -1698,7 +1700,8 @@ public open class CfnStackSet internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.DeploymentTargetsProperty):
-          DeploymentTargetsProperty = CdkObjectWrappers.wrap(cdkObject) as DeploymentTargetsProperty
+          DeploymentTargetsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentTargetsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentTargetsProperty):
           software.amazon.awscdk.CfnStackSet.DeploymentTargetsProperty = (wrapped as
@@ -1810,7 +1813,8 @@ public open class CfnStackSet internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.ParameterProperty):
-          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as ParameterProperty
+          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterProperty):
           software.amazon.awscdk.CfnStackSet.ParameterProperty = (wrapped as CdkObject).cdkObject as
@@ -2210,8 +2214,8 @@ public open class CfnStackSet internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.OperationPreferencesProperty):
-          OperationPreferencesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OperationPreferencesProperty
+          OperationPreferencesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OperationPreferencesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OperationPreferencesProperty):
           software.amazon.awscdk.CfnStackSet.OperationPreferencesProperty = (wrapped as
@@ -2433,7 +2437,8 @@ public open class CfnStackSet internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.CfnStackSet.StackInstancesProperty):
-          StackInstancesProperty = CdkObjectWrappers.wrap(cdkObject) as StackInstancesProperty
+          StackInstancesProperty = CdkObjectWrappers.wrap(cdkObject) as? StackInstancesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StackInstancesProperty):
           software.amazon.awscdk.CfnStackSet.StackInstancesProperty = (wrapped as

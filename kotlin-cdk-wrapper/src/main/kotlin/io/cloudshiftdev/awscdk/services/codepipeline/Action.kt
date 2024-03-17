@@ -108,9 +108,13 @@ public abstract class Action internal constructor(
     options: RuleProps.Builder.() -> Unit,
   ): Rule = onStateChange(name, target, RuleProps(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codepipeline.Action,
+  ) : Action(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.Action): Action =
-        CdkObjectWrappers.wrap(cdkObject) as Action
+        CdkObjectWrappers.wrap(cdkObject) as? Action ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Action): software.amazon.awscdk.services.codepipeline.Action =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codepipeline.Action

@@ -229,7 +229,7 @@ public interface CronOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CronOptions):
-        CronOptions = CdkObjectWrappers.wrap(cdkObject) as CronOptions
+        CronOptions = CdkObjectWrappers.wrap(cdkObject) as? CronOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CronOptions):
         software.amazon.awscdk.services.applicationautoscaling.CronOptions = (wrapped as

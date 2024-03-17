@@ -658,8 +658,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSharingSettingsProperty):
-          SpaceSharingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SpaceSharingSettingsProperty
+          SpaceSharingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpaceSharingSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpaceSharingSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSharingSettingsProperty = (wrapped
@@ -792,8 +792,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.JupyterServerAppSettingsProperty):
-          JupyterServerAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          JupyterServerAppSettingsProperty
+          JupyterServerAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JupyterServerAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JupyterServerAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.JupyterServerAppSettingsProperty =
@@ -876,7 +876,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.EFSFileSystemProperty):
-          EFSFileSystemProperty = CdkObjectWrappers.wrap(cdkObject) as EFSFileSystemProperty
+          EFSFileSystemProperty = CdkObjectWrappers.wrap(cdkObject) as? EFSFileSystemProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EFSFileSystemProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.EFSFileSystemProperty = (wrapped as
@@ -1060,8 +1061,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty):
-          SpaceJupyterLabAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SpaceJupyterLabAppSettingsProperty
+          SpaceJupyterLabAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpaceJupyterLabAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpaceJupyterLabAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty =
@@ -1205,7 +1206,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CustomImageProperty):
-          CustomImageProperty = CdkObjectWrappers.wrap(cdkObject) as CustomImageProperty
+          CustomImageProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomImageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomImageProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomImageProperty = (wrapped as
@@ -1286,8 +1288,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty):
-          EbsStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EbsStorageSettingsProperty
+          EbsStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EbsStorageSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsStorageSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty = (wrapped
@@ -1368,7 +1370,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CodeRepositoryProperty):
-          CodeRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as CodeRepositoryProperty
+          CodeRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeRepositoryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeRepositoryProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.CodeRepositoryProperty = (wrapped as
@@ -1449,7 +1452,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty):
-          OwnershipSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as OwnershipSettingsProperty
+          OwnershipSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OwnershipSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OwnershipSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty = (wrapped as
@@ -1924,7 +1928,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSettingsProperty):
-          SpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as SpaceSettingsProperty
+          SpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SpaceSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpaceSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSettingsProperty = (wrapped as
@@ -2083,7 +2088,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.ResourceSpecProperty):
-          ResourceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceSpecProperty
+          ResourceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceSpecProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceSpecProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.ResourceSpecProperty = (wrapped as
@@ -2196,8 +2202,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty):
-          SpaceStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SpaceStorageSettingsProperty
+          SpaceStorageSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpaceStorageSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpaceStorageSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty = (wrapped
@@ -2310,7 +2316,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty):
-          CustomFileSystemProperty = CdkObjectWrappers.wrap(cdkObject) as CustomFileSystemProperty
+          CustomFileSystemProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomFileSystemProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomFileSystemProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty = (wrapped as
@@ -2530,8 +2537,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty):
-          KernelGatewayAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KernelGatewayAppSettingsProperty
+          KernelGatewayAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KernelGatewayAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KernelGatewayAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty =
@@ -2655,8 +2662,8 @@ public open class CfnSpace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty):
-          SpaceCodeEditorAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SpaceCodeEditorAppSettingsProperty
+          SpaceCodeEditorAppSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpaceCodeEditorAppSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpaceCodeEditorAppSettingsProperty):
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty =

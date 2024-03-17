@@ -433,7 +433,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnChannel.DestinationProperty):
-          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as DestinationProperty
+          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? DestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationProperty):
           software.amazon.awscdk.services.cloudtrail.CfnChannel.DestinationProperty = (wrapped as

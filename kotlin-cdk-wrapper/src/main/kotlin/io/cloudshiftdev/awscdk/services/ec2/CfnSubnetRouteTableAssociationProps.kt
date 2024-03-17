@@ -113,8 +113,8 @@ public interface CfnSubnetRouteTableAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociationProps):
-        CfnSubnetRouteTableAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSubnetRouteTableAssociationProps
+        CfnSubnetRouteTableAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSubnetRouteTableAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetRouteTableAssociationProps):
         software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociationProps = (wrapped as

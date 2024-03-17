@@ -159,7 +159,8 @@ public interface BaseTargetTrackingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.BaseTargetTrackingProps):
-        BaseTargetTrackingProps = CdkObjectWrappers.wrap(cdkObject) as BaseTargetTrackingProps
+        BaseTargetTrackingProps = CdkObjectWrappers.wrap(cdkObject) as? BaseTargetTrackingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseTargetTrackingProps):
         software.amazon.awscdk.services.autoscaling.BaseTargetTrackingProps = (wrapped as

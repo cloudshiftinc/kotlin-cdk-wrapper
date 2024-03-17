@@ -1055,7 +1055,8 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty):
-          PosixProfileProperty = CdkObjectWrappers.wrap(cdkObject) as PosixProfileProperty
+          PosixProfileProperty = CdkObjectWrappers.wrap(cdkObject) as? PosixProfileProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PosixProfileProperty):
           software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty = (wrapped as
@@ -1224,8 +1225,8 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty):
-          HomeDirectoryMapEntryProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HomeDirectoryMapEntryProperty
+          HomeDirectoryMapEntryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HomeDirectoryMapEntryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HomeDirectoryMapEntryProperty):
           software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty = (wrapped

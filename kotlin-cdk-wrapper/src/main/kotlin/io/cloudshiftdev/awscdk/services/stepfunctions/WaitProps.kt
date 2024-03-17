@@ -137,7 +137,7 @@ public interface WaitProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.WaitProps): WaitProps
-        = CdkObjectWrappers.wrap(cdkObject) as WaitProps
+        = CdkObjectWrappers.wrap(cdkObject) as? WaitProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WaitProps): software.amazon.awscdk.services.stepfunctions.WaitProps
         = (wrapped as CdkObject).cdkObject as

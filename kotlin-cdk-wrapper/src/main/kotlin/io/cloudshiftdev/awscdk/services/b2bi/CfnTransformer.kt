@@ -627,7 +627,8 @@ public open class CfnTransformer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty):
-          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as X12DetailsProperty
+          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? X12DetailsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: X12DetailsProperty):
           software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty = (wrapped as
@@ -763,7 +764,8 @@ public open class CfnTransformer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty):
-          EdiTypeProperty = CdkObjectWrappers.wrap(cdkObject) as EdiTypeProperty
+          EdiTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? EdiTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EdiTypeProperty):
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty = (wrapped as

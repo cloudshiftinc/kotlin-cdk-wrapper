@@ -676,8 +676,8 @@ public open class CfnIdMappingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty):
-          IdMappingWorkflowOutputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IdMappingWorkflowOutputSourceProperty
+          IdMappingWorkflowOutputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdMappingWorkflowOutputSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdMappingWorkflowOutputSourceProperty):
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty
@@ -829,8 +829,8 @@ public open class CfnIdMappingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty):
-          IdMappingTechniquesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IdMappingTechniquesProperty
+          IdMappingTechniquesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdMappingTechniquesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdMappingTechniquesProperty):
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty
@@ -944,8 +944,8 @@ public open class CfnIdMappingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty):
-          IdMappingWorkflowInputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IdMappingWorkflowInputSourceProperty
+          IdMappingWorkflowInputSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdMappingWorkflowInputSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IdMappingWorkflowInputSourceProperty):
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty
@@ -1152,8 +1152,8 @@ public open class CfnIdMappingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty):
-          ProviderPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProviderPropertiesProperty
+          ProviderPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProviderPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProviderPropertiesProperty):
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty
@@ -1245,8 +1245,8 @@ public open class CfnIdMappingWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty):
-          IntermediateSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IntermediateSourceConfigurationProperty
+          IntermediateSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntermediateSourceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntermediateSourceConfigurationProperty):
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty

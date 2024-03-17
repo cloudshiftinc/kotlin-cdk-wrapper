@@ -1112,7 +1112,8 @@ public interface CfnGlobalTableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps):
-        CfnGlobalTableProps = CdkObjectWrappers.wrap(cdkObject) as CfnGlobalTableProps
+        CfnGlobalTableProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGlobalTableProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalTableProps):
         software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps = (wrapped as

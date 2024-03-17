@@ -548,8 +548,8 @@ public open class CfnSuiteDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty):
-          SuiteDefinitionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SuiteDefinitionConfigurationProperty
+          SuiteDefinitionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuiteDefinitionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SuiteDefinitionConfigurationProperty):
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty
@@ -660,7 +660,8 @@ public open class CfnSuiteDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty):
-          DeviceUnderTestProperty = CdkObjectWrappers.wrap(cdkObject) as DeviceUnderTestProperty
+          DeviceUnderTestProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceUnderTestProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceUnderTestProperty):
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty

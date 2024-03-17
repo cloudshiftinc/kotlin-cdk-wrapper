@@ -97,7 +97,8 @@ public interface GrpcConnectionPool {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool):
-        GrpcConnectionPool = CdkObjectWrappers.wrap(cdkObject) as GrpcConnectionPool
+        GrpcConnectionPool = CdkObjectWrappers.wrap(cdkObject) as? GrpcConnectionPool ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcConnectionPool):
         software.amazon.awscdk.services.appmesh.GrpcConnectionPool = (wrapped as

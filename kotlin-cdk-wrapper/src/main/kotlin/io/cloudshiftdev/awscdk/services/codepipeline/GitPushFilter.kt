@@ -188,7 +188,7 @@ public interface GitPushFilter {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.GitPushFilter):
-        GitPushFilter = CdkObjectWrappers.wrap(cdkObject) as GitPushFilter
+        GitPushFilter = CdkObjectWrappers.wrap(cdkObject) as? GitPushFilter ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitPushFilter):
         software.amazon.awscdk.services.codepipeline.GitPushFilter = (wrapped as

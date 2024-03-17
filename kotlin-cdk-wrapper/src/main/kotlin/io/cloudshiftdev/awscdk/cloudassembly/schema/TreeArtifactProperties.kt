@@ -72,7 +72,8 @@ public interface TreeArtifactProperties {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties):
-        TreeArtifactProperties = CdkObjectWrappers.wrap(cdkObject) as TreeArtifactProperties
+        TreeArtifactProperties = CdkObjectWrappers.wrap(cdkObject) as? TreeArtifactProperties ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TreeArtifactProperties):
         software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties = (wrapped as

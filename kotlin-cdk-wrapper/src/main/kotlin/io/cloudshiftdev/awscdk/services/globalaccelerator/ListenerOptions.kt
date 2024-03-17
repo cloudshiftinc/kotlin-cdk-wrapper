@@ -216,7 +216,8 @@ public interface ListenerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.ListenerOptions):
-        ListenerOptions = CdkObjectWrappers.wrap(cdkObject) as ListenerOptions
+        ListenerOptions = CdkObjectWrappers.wrap(cdkObject) as? ListenerOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ListenerOptions):
         software.amazon.awscdk.services.globalaccelerator.ListenerOptions = (wrapped as

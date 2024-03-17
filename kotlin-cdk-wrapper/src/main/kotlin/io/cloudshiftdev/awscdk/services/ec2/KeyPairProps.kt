@@ -288,7 +288,7 @@ public interface KeyPairProps : ResourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.KeyPairProps): KeyPairProps =
-        CdkObjectWrappers.wrap(cdkObject) as KeyPairProps
+        CdkObjectWrappers.wrap(cdkObject) as? KeyPairProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyPairProps): software.amazon.awscdk.services.ec2.KeyPairProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.KeyPairProps

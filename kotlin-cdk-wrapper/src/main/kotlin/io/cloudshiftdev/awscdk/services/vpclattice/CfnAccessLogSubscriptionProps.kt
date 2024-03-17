@@ -162,8 +162,8 @@ public interface CfnAccessLogSubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps):
-        CfnAccessLogSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAccessLogSubscriptionProps
+        CfnAccessLogSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAccessLogSubscriptionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessLogSubscriptionProps):
         software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps = (wrapped as

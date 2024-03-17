@@ -562,8 +562,8 @@ public open class CfnDeliveryChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty):
-          ConfigSnapshotDeliveryPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConfigSnapshotDeliveryPropertiesProperty
+          ConfigSnapshotDeliveryPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigSnapshotDeliveryPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigSnapshotDeliveryPropertiesProperty):
           software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty

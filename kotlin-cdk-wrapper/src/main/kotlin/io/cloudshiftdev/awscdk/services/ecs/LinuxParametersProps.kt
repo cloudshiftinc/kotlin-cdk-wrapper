@@ -223,7 +223,8 @@ public interface LinuxParametersProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.LinuxParametersProps):
-        LinuxParametersProps = CdkObjectWrappers.wrap(cdkObject) as LinuxParametersProps
+        LinuxParametersProps = CdkObjectWrappers.wrap(cdkObject) as? LinuxParametersProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LinuxParametersProps):
         software.amazon.awscdk.services.ecs.LinuxParametersProps = (wrapped as CdkObject).cdkObject

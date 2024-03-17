@@ -555,7 +555,8 @@ public interface SplunkLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.SplunkLogDriverProps):
-        SplunkLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as SplunkLogDriverProps
+        SplunkLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? SplunkLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SplunkLogDriverProps):
         software.amazon.awscdk.services.ecs.SplunkLogDriverProps = (wrapped as CdkObject).cdkObject

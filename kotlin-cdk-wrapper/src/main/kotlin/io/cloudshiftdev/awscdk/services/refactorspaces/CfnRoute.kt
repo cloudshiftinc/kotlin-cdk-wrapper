@@ -807,7 +807,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty):
-          UriPathRouteInputProperty = CdkObjectWrappers.wrap(cdkObject) as UriPathRouteInputProperty
+          UriPathRouteInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UriPathRouteInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UriPathRouteInputProperty):
           software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty =
@@ -892,7 +893,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty):
-          DefaultRouteInputProperty = CdkObjectWrappers.wrap(cdkObject) as DefaultRouteInputProperty
+          DefaultRouteInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultRouteInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultRouteInputProperty):
           software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty =

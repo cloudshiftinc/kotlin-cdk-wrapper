@@ -248,7 +248,8 @@ public interface TokenAuthorizerProps : LambdaAuthorizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.TokenAuthorizerProps):
-        TokenAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as TokenAuthorizerProps
+        TokenAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as? TokenAuthorizerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TokenAuthorizerProps):
         software.amazon.awscdk.services.apigateway.TokenAuthorizerProps = (wrapped as

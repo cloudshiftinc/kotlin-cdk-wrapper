@@ -29,6 +29,10 @@ public abstract class LambdaInsightsVersion internal constructor(
    */
   public open fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion,
+  ) : LambdaInsightsVersion(cdkObject)
+
   public companion object {
     public val VERSION_1_0_119_0: LambdaInsightsVersion =
         LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_119_0)
@@ -61,7 +65,8 @@ public abstract class LambdaInsightsVersion internal constructor(
         software.amazon.awscdk.services.lambda.LambdaInsightsVersion.fromInsightVersionArn(arn).let(LambdaInsightsVersion::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion):
-        LambdaInsightsVersion = CdkObjectWrappers.wrap(cdkObject) as LambdaInsightsVersion
+        LambdaInsightsVersion = CdkObjectWrappers.wrap(cdkObject) as? LambdaInsightsVersion ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaInsightsVersion):
         software.amazon.awscdk.services.lambda.LambdaInsightsVersion = (wrapped as

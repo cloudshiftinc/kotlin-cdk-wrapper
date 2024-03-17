@@ -1634,7 +1634,8 @@ public interface AutoScalingGroupProps : CommonAutoScalingGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.AutoScalingGroupProps):
-        AutoScalingGroupProps = CdkObjectWrappers.wrap(cdkObject) as AutoScalingGroupProps
+        AutoScalingGroupProps = CdkObjectWrappers.wrap(cdkObject) as? AutoScalingGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoScalingGroupProps):
         software.amazon.awscdk.services.autoscaling.AutoScalingGroupProps = (wrapped as

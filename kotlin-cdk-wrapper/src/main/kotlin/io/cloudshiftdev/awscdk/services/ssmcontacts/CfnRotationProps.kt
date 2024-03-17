@@ -338,7 +338,8 @@ public interface CfnRotationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotationProps):
-        CfnRotationProps = CdkObjectWrappers.wrap(cdkObject) as CfnRotationProps
+        CfnRotationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRotationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRotationProps):
         software.amazon.awscdk.services.ssmcontacts.CfnRotationProps = (wrapped as

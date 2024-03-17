@@ -305,7 +305,8 @@ public interface CfnVirtualMFADeviceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnVirtualMFADeviceProps):
-        CfnVirtualMFADeviceProps = CdkObjectWrappers.wrap(cdkObject) as CfnVirtualMFADeviceProps
+        CfnVirtualMFADeviceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVirtualMFADeviceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualMFADeviceProps):
         software.amazon.awscdk.services.iam.CfnVirtualMFADeviceProps = (wrapped as

@@ -163,9 +163,14 @@ public abstract class VpnConnectionBase internal constructor(
    */
   public override fun vpnId(): String = unwrap(this).getVpnId()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionBase,
+  ) : VpnConnectionBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionBase):
-        VpnConnectionBase = CdkObjectWrappers.wrap(cdkObject) as VpnConnectionBase
+        VpnConnectionBase = CdkObjectWrappers.wrap(cdkObject) as? VpnConnectionBase ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpnConnectionBase):
         software.amazon.awscdk.services.ec2.VpnConnectionBase = (wrapped as CdkObject).cdkObject as

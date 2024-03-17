@@ -154,7 +154,7 @@ public interface FileCopyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.FileCopyOptions): FileCopyOptions =
-        CdkObjectWrappers.wrap(cdkObject) as FileCopyOptions
+        CdkObjectWrappers.wrap(cdkObject) as? FileCopyOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileCopyOptions): software.amazon.awscdk.FileCopyOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.FileCopyOptions

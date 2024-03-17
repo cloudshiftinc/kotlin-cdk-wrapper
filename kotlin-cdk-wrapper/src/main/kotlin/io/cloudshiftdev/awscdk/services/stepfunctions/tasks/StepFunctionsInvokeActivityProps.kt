@@ -457,8 +457,8 @@ public interface StepFunctionsInvokeActivityProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivityProps):
-        StepFunctionsInvokeActivityProps = CdkObjectWrappers.wrap(cdkObject) as
-        StepFunctionsInvokeActivityProps
+        StepFunctionsInvokeActivityProps = CdkObjectWrappers.wrap(cdkObject) as?
+        StepFunctionsInvokeActivityProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StepFunctionsInvokeActivityProps):
         software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivityProps =

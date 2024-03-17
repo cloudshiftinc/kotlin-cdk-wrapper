@@ -80,7 +80,8 @@ public interface QueuePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.QueuePolicyProps):
-        QueuePolicyProps = CdkObjectWrappers.wrap(cdkObject) as QueuePolicyProps
+        QueuePolicyProps = CdkObjectWrappers.wrap(cdkObject) as? QueuePolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueuePolicyProps):
         software.amazon.awscdk.services.sqs.QueuePolicyProps = (wrapped as CdkObject).cdkObject as

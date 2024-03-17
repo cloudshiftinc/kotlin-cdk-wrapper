@@ -1033,7 +1033,7 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty):
-          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as LabelProperty
+          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as? LabelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LabelProperty):
           software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty = (wrapped as
@@ -1573,7 +1573,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty):
-          EventTypeProperty = CdkObjectWrappers.wrap(cdkObject) as EventTypeProperty
+          EventTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? EventTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventTypeProperty):
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty = (wrapped as
@@ -1927,7 +1928,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty):
-          OutcomeProperty = CdkObjectWrappers.wrap(cdkObject) as OutcomeProperty
+          OutcomeProperty = CdkObjectWrappers.wrap(cdkObject) as? OutcomeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutcomeProperty):
           software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty = (wrapped as
@@ -2359,7 +2361,7 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty):
-          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty = (wrapped as
@@ -2439,7 +2441,7 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty):
-          ModelProperty = CdkObjectWrappers.wrap(cdkObject) as ModelProperty
+          ModelProperty = CdkObjectWrappers.wrap(cdkObject) as? ModelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelProperty):
           software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty = (wrapped as
@@ -2794,7 +2796,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty):
-          EntityTypeProperty = CdkObjectWrappers.wrap(cdkObject) as EntityTypeProperty
+          EntityTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? EntityTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EntityTypeProperty):
           software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty = (wrapped as
@@ -3305,7 +3308,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty):
-          EventVariableProperty = CdkObjectWrappers.wrap(cdkObject) as EventVariableProperty
+          EventVariableProperty = CdkObjectWrappers.wrap(cdkObject) as? EventVariableProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventVariableProperty):
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty = (wrapped

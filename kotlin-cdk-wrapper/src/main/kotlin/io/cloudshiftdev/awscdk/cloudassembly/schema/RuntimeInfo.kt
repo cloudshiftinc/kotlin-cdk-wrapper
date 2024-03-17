@@ -73,7 +73,7 @@ public interface RuntimeInfo {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo):
-        RuntimeInfo = CdkObjectWrappers.wrap(cdkObject) as RuntimeInfo
+        RuntimeInfo = CdkObjectWrappers.wrap(cdkObject) as? RuntimeInfo ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuntimeInfo):
         software.amazon.awscdk.cloudassembly.schema.RuntimeInfo = (wrapped as CdkObject).cdkObject

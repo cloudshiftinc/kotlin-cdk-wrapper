@@ -492,7 +492,8 @@ public interface GitHubSourceProps : SourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.GitHubSourceProps):
-        GitHubSourceProps = CdkObjectWrappers.wrap(cdkObject) as GitHubSourceProps
+        GitHubSourceProps = CdkObjectWrappers.wrap(cdkObject) as? GitHubSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitHubSourceProps):
         software.amazon.awscdk.services.codebuild.GitHubSourceProps = (wrapped as

@@ -1092,8 +1092,8 @@ public open class CfnDocumentClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty):
-          DocumentReaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DocumentReaderConfigProperty
+          DocumentReaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentReaderConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentReaderConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty
@@ -1218,8 +1218,8 @@ public open class CfnDocumentClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierDocumentsProperty):
-          DocumentClassifierDocumentsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DocumentClassifierDocumentsProperty
+          DocumentClassifierDocumentsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentClassifierDocumentsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentClassifierDocumentsProperty):
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierDocumentsProperty
@@ -1751,8 +1751,8 @@ public open class CfnDocumentClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty):
-          DocumentClassifierInputDataConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DocumentClassifierInputDataConfigProperty
+          DocumentClassifierInputDataConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentClassifierInputDataConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentClassifierInputDataConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty
@@ -1931,8 +1931,8 @@ public open class CfnDocumentClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty):
-          DocumentClassifierOutputDataConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DocumentClassifierOutputDataConfigProperty
+          DocumentClassifierOutputDataConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentClassifierOutputDataConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentClassifierOutputDataConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty
@@ -2175,8 +2175,8 @@ public open class CfnDocumentClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty):
-          AugmentedManifestsListItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AugmentedManifestsListItemProperty
+          AugmentedManifestsListItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AugmentedManifestsListItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AugmentedManifestsListItemProperty):
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty
@@ -2372,7 +2372,8 @@ public open class CfnDocumentClassifier internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.VpcConfigProperty =

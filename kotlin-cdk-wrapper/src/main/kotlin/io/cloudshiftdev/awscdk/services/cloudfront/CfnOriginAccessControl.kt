@@ -487,8 +487,8 @@ public open class CfnOriginAccessControl internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.OriginAccessControlConfigProperty):
-          OriginAccessControlConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OriginAccessControlConfigProperty
+          OriginAccessControlConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OriginAccessControlConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OriginAccessControlConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.OriginAccessControlConfigProperty

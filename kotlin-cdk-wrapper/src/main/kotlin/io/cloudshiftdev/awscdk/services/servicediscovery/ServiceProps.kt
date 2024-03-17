@@ -360,7 +360,7 @@ public interface ServiceProps : DnsServiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceProps):
-        ServiceProps = CdkObjectWrappers.wrap(cdkObject) as ServiceProps
+        ServiceProps = CdkObjectWrappers.wrap(cdkObject) as? ServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceProps):
         software.amazon.awscdk.services.servicediscovery.ServiceProps = (wrapped as

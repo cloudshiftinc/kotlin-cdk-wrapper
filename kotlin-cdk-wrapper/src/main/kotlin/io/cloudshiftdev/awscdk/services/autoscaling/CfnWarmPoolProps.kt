@@ -329,7 +329,8 @@ public interface CfnWarmPoolProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnWarmPoolProps):
-        CfnWarmPoolProps = CdkObjectWrappers.wrap(cdkObject) as CfnWarmPoolProps
+        CfnWarmPoolProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWarmPoolProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWarmPoolProps):
         software.amazon.awscdk.services.autoscaling.CfnWarmPoolProps = (wrapped as

@@ -466,7 +466,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty):
-          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as TagFilterProperty
+          TagFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagFilterProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty =
@@ -909,8 +910,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty):
-          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TargetTrackingConfigurationProperty
+          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TargetTrackingConfigurationProperty
@@ -1023,7 +1024,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty):
-          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as MetricDimensionProperty
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDimensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricDimensionProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.MetricDimensionProperty =
@@ -1294,8 +1296,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty):
-          CustomizedLoadMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomizedLoadMetricSpecificationProperty
+          CustomizedLoadMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomizedLoadMetricSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomizedLoadMetricSpecificationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedLoadMetricSpecificationProperty
@@ -1586,8 +1588,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty):
-          CustomizedScalingMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomizedScalingMetricSpecificationProperty
+          CustomizedScalingMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomizedScalingMetricSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomizedScalingMetricSpecificationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.CustomizedScalingMetricSpecificationProperty
@@ -1821,7 +1823,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty):
-          ApplicationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as ApplicationSourceProperty
+          ApplicationSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationSourceProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
@@ -2037,8 +2040,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty):
-          PredefinedScalingMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PredefinedScalingMetricSpecificationProperty
+          PredefinedScalingMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredefinedScalingMetricSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PredefinedScalingMetricSpecificationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedScalingMetricSpecificationProperty
@@ -3031,8 +3034,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty):
-          ScalingInstructionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ScalingInstructionProperty
+          ScalingInstructionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScalingInstructionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScalingInstructionProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty
@@ -3240,8 +3243,8 @@ public open class CfnScalingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty):
-          PredefinedLoadMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PredefinedLoadMetricSpecificationProperty
+          PredefinedLoadMetricSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PredefinedLoadMetricSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PredefinedLoadMetricSpecificationProperty):
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.PredefinedLoadMetricSpecificationProperty

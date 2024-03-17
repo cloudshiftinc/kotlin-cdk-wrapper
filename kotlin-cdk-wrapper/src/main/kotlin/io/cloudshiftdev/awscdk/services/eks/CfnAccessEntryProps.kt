@@ -537,7 +537,8 @@ public interface CfnAccessEntryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntryProps):
-        CfnAccessEntryProps = CdkObjectWrappers.wrap(cdkObject) as CfnAccessEntryProps
+        CfnAccessEntryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAccessEntryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessEntryProps):
         software.amazon.awscdk.services.eks.CfnAccessEntryProps = (wrapped as CdkObject).cdkObject

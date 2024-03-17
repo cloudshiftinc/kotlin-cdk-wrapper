@@ -1060,7 +1060,8 @@ public open class CfnBranch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty):
-          BasicAuthConfigProperty = CdkObjectWrappers.wrap(cdkObject) as BasicAuthConfigProperty
+          BasicAuthConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BasicAuthConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BasicAuthConfigProperty):
           software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty = (wrapped as
@@ -1170,8 +1171,8 @@ public open class CfnBranch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty):
-          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnvironmentVariableProperty
+          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentVariableProperty):
           software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty = (wrapped
@@ -1250,7 +1251,8 @@ public open class CfnBranch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty):
-          BackendProperty = CdkObjectWrappers.wrap(cdkObject) as BackendProperty
+          BackendProperty = CdkObjectWrappers.wrap(cdkObject) as? BackendProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BackendProperty):
           software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty = (wrapped as

@@ -216,7 +216,7 @@ public interface ResourceConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ResourceConfig):
-        ResourceConfig = CdkObjectWrappers.wrap(cdkObject) as ResourceConfig
+        ResourceConfig = CdkObjectWrappers.wrap(cdkObject) as? ResourceConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourceConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.ResourceConfig = (wrapped as

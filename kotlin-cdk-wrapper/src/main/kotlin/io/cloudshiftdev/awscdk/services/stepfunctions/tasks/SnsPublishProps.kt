@@ -728,7 +728,8 @@ public interface SnsPublishProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SnsPublishProps):
-        SnsPublishProps = CdkObjectWrappers.wrap(cdkObject) as SnsPublishProps
+        SnsPublishProps = CdkObjectWrappers.wrap(cdkObject) as? SnsPublishProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SnsPublishProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SnsPublishProps = (wrapped as

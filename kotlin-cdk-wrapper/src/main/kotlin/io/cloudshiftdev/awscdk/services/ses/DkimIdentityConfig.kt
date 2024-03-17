@@ -141,7 +141,8 @@ public interface DkimIdentityConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.DkimIdentityConfig):
-        DkimIdentityConfig = CdkObjectWrappers.wrap(cdkObject) as DkimIdentityConfig
+        DkimIdentityConfig = CdkObjectWrappers.wrap(cdkObject) as? DkimIdentityConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DkimIdentityConfig):
         software.amazon.awscdk.services.ses.DkimIdentityConfig = (wrapped as CdkObject).cdkObject as

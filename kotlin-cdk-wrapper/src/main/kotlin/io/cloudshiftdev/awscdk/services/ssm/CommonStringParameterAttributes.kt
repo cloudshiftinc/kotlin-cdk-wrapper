@@ -144,8 +144,8 @@ public interface CommonStringParameterAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CommonStringParameterAttributes):
-        CommonStringParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        CommonStringParameterAttributes
+        CommonStringParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        CommonStringParameterAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonStringParameterAttributes):
         software.amazon.awscdk.services.ssm.CommonStringParameterAttributes = (wrapped as

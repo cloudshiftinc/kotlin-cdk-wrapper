@@ -120,8 +120,8 @@ public interface CfnSlackWorkspaceConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfigurationProps):
-        CfnSlackWorkspaceConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSlackWorkspaceConfigurationProps
+        CfnSlackWorkspaceConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSlackWorkspaceConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSlackWorkspaceConfigurationProps):
         software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfigurationProps = (wrapped as

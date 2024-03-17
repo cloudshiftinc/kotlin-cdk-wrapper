@@ -857,7 +857,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty):
-          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as VpcEndpointProperty
+          VpcEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcEndpointProperty):
           software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty = (wrapped as
@@ -950,8 +951,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty):
-          CloudWatchLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchLogDestinationProperty
+          CloudWatchLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogDestinationProperty):
           software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty =
@@ -1048,7 +1049,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty):
-          BufferOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as BufferOptionsProperty
+          BufferOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? BufferOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BufferOptionsProperty):
           software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty = (wrapped as
@@ -1222,8 +1224,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty):
-          LogPublishingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LogPublishingOptionsProperty
+          LogPublishingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogPublishingOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogPublishingOptionsProperty):
           software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty = (wrapped
@@ -1311,8 +1313,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty):
-          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EncryptionAtRestOptionsProperty
+          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionAtRestOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
           software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty =
@@ -1441,7 +1443,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty):
-          VpcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as VpcOptionsProperty
+          VpcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcOptionsProperty):
           software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty = (wrapped as

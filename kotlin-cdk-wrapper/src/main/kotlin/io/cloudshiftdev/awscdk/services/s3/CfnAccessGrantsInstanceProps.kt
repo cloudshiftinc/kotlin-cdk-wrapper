@@ -153,8 +153,8 @@ public interface CfnAccessGrantsInstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsInstanceProps):
-        CfnAccessGrantsInstanceProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAccessGrantsInstanceProps
+        CfnAccessGrantsInstanceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAccessGrantsInstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessGrantsInstanceProps):
         software.amazon.awscdk.services.s3.CfnAccessGrantsInstanceProps = (wrapped as

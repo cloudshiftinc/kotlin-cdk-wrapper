@@ -105,7 +105,8 @@ public interface AutoScalingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AutoScalingOptions):
-        AutoScalingOptions = CdkObjectWrappers.wrap(cdkObject) as AutoScalingOptions
+        AutoScalingOptions = CdkObjectWrappers.wrap(cdkObject) as? AutoScalingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoScalingOptions):
         software.amazon.awscdk.services.lambda.AutoScalingOptions = (wrapped as CdkObject).cdkObject

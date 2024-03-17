@@ -166,7 +166,8 @@ public interface CfnActivityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivityProps):
-        CfnActivityProps = CdkObjectWrappers.wrap(cdkObject) as CfnActivityProps
+        CfnActivityProps = CdkObjectWrappers.wrap(cdkObject) as? CfnActivityProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnActivityProps):
         software.amazon.awscdk.services.stepfunctions.CfnActivityProps = (wrapped as

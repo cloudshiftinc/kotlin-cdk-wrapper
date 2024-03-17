@@ -172,7 +172,7 @@ public interface StageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.StageOptions):
-        StageOptions = CdkObjectWrappers.wrap(cdkObject) as StageOptions
+        StageOptions = CdkObjectWrappers.wrap(cdkObject) as? StageOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StageOptions):
         software.amazon.awscdk.services.apigatewayv2.StageOptions = (wrapped as CdkObject).cdkObject

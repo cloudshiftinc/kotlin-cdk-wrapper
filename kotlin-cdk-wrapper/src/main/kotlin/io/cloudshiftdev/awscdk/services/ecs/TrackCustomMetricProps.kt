@@ -229,7 +229,8 @@ public interface TrackCustomMetricProps : BaseTargetTrackingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.TrackCustomMetricProps):
-        TrackCustomMetricProps = CdkObjectWrappers.wrap(cdkObject) as TrackCustomMetricProps
+        TrackCustomMetricProps = CdkObjectWrappers.wrap(cdkObject) as? TrackCustomMetricProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TrackCustomMetricProps):
         software.amazon.awscdk.services.ecs.TrackCustomMetricProps = (wrapped as

@@ -445,7 +445,8 @@ public interface CfnTrackerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnTrackerProps):
-        CfnTrackerProps = CdkObjectWrappers.wrap(cdkObject) as CfnTrackerProps
+        CfnTrackerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTrackerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrackerProps):
         software.amazon.awscdk.services.location.CfnTrackerProps = (wrapped as CdkObject).cdkObject

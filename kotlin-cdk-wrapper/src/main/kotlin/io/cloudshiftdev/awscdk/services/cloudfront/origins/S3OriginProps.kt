@@ -257,7 +257,7 @@ public interface S3OriginProps : OriginProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3OriginProps):
-        S3OriginProps = CdkObjectWrappers.wrap(cdkObject) as S3OriginProps
+        S3OriginProps = CdkObjectWrappers.wrap(cdkObject) as? S3OriginProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3OriginProps):
         software.amazon.awscdk.services.cloudfront.origins.S3OriginProps = (wrapped as

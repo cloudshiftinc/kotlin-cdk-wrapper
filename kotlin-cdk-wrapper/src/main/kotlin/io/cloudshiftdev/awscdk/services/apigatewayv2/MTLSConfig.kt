@@ -132,7 +132,7 @@ public interface MTLSConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.MTLSConfig):
-        MTLSConfig = CdkObjectWrappers.wrap(cdkObject) as MTLSConfig
+        MTLSConfig = CdkObjectWrappers.wrap(cdkObject) as? MTLSConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MTLSConfig):
         software.amazon.awscdk.services.apigatewayv2.MTLSConfig = (wrapped as CdkObject).cdkObject

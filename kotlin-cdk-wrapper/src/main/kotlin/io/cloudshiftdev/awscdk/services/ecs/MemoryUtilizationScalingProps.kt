@@ -198,8 +198,8 @@ public interface MemoryUtilizationScalingProps : BaseTargetTrackingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.MemoryUtilizationScalingProps):
-        MemoryUtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as
-        MemoryUtilizationScalingProps
+        MemoryUtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        MemoryUtilizationScalingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MemoryUtilizationScalingProps):
         software.amazon.awscdk.services.ecs.MemoryUtilizationScalingProps = (wrapped as

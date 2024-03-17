@@ -235,8 +235,8 @@ public interface ElasticBeanstalkDeployActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployActionProps):
-        ElasticBeanstalkDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        ElasticBeanstalkDeployActionProps
+        ElasticBeanstalkDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ElasticBeanstalkDeployActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ElasticBeanstalkDeployActionProps):
         software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployActionProps =

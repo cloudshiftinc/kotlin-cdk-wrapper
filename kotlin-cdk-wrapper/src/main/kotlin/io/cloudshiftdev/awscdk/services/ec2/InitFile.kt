@@ -42,6 +42,10 @@ public abstract class InitFile internal constructor(
    */
   public override fun elementType(): String = unwrap(this).getElementType()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.InitFile,
+  ) : InitFile(cdkObject)
+
   public companion object {
     public fun fromAsset(targetFileName: String, path: String): InitFile =
         software.amazon.awscdk.services.ec2.InitFile.fromAsset(targetFileName,
@@ -198,7 +202,7 @@ public abstract class InitFile internal constructor(
     ): InitFile = symlink(fileName, target, InitFileOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitFile): InitFile =
-        CdkObjectWrappers.wrap(cdkObject) as InitFile
+        CdkObjectWrappers.wrap(cdkObject) as? InitFile ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InitFile): software.amazon.awscdk.services.ec2.InitFile = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.InitFile

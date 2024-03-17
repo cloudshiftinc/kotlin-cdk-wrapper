@@ -600,7 +600,7 @@ public interface DestroyOptions : DefaultCdkOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DestroyOptions):
-        DestroyOptions = CdkObjectWrappers.wrap(cdkObject) as DestroyOptions
+        DestroyOptions = CdkObjectWrappers.wrap(cdkObject) as? DestroyOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DestroyOptions):
         software.amazon.awscdk.cloudassembly.schema.DestroyOptions = (wrapped as

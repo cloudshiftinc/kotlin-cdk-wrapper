@@ -240,7 +240,8 @@ public interface CfnResourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnResourceProps):
-        CfnResourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceProps
+        CfnResourceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceProps):
         software.amazon.awscdk.services.lakeformation.CfnResourceProps = (wrapped as

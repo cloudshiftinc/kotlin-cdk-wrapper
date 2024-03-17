@@ -144,7 +144,8 @@ public interface KeyContextQuery {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.KeyContextQuery):
-        KeyContextQuery = CdkObjectWrappers.wrap(cdkObject) as KeyContextQuery
+        KeyContextQuery = CdkObjectWrappers.wrap(cdkObject) as? KeyContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyContextQuery):
         software.amazon.awscdk.cloudassembly.schema.KeyContextQuery = (wrapped as

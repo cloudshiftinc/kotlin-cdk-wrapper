@@ -115,7 +115,8 @@ public interface MfaSecondFactor {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.MfaSecondFactor):
-        MfaSecondFactor = CdkObjectWrappers.wrap(cdkObject) as MfaSecondFactor
+        MfaSecondFactor = CdkObjectWrappers.wrap(cdkObject) as? MfaSecondFactor ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MfaSecondFactor):
         software.amazon.awscdk.services.cognito.MfaSecondFactor = (wrapped as CdkObject).cdkObject

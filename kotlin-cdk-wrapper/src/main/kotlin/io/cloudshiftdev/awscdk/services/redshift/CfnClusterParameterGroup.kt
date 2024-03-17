@@ -501,7 +501,8 @@ public open class CfnClusterParameterGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.ParameterProperty):
-          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as ParameterProperty
+          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterProperty):
           software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.ParameterProperty =

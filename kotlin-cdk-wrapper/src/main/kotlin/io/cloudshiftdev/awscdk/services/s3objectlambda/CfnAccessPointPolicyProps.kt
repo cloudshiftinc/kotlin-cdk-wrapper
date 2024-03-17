@@ -112,7 +112,8 @@ public interface CfnAccessPointPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicyProps):
-        CfnAccessPointPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnAccessPointPolicyProps
+        CfnAccessPointPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAccessPointPolicyProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessPointPolicyProps):
         software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicyProps = (wrapped as

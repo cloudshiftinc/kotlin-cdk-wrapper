@@ -638,8 +638,8 @@ public open class CfnRoute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRoute.ParameterConstraintsProperty):
-          ParameterConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ParameterConstraintsProperty
+          ParameterConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParameterConstraintsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterConstraintsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnRoute.ParameterConstraintsProperty =

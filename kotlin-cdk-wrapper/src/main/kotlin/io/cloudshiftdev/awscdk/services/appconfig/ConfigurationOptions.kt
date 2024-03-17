@@ -285,7 +285,8 @@ public interface ConfigurationOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationOptions):
-        ConfigurationOptions = CdkObjectWrappers.wrap(cdkObject) as ConfigurationOptions
+        ConfigurationOptions = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConfigurationOptions):
         software.amazon.awscdk.services.appconfig.ConfigurationOptions = (wrapped as

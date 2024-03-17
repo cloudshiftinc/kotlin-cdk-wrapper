@@ -332,7 +332,8 @@ public interface MethodDeploymentOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.MethodDeploymentOptions):
-        MethodDeploymentOptions = CdkObjectWrappers.wrap(cdkObject) as MethodDeploymentOptions
+        MethodDeploymentOptions = CdkObjectWrappers.wrap(cdkObject) as? MethodDeploymentOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MethodDeploymentOptions):
         software.amazon.awscdk.services.apigateway.MethodDeploymentOptions = (wrapped as

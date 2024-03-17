@@ -80,7 +80,8 @@ public interface Ec2HealthCheckOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions):
-        Ec2HealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as Ec2HealthCheckOptions
+        Ec2HealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as? Ec2HealthCheckOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Ec2HealthCheckOptions):
         software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions = (wrapped as

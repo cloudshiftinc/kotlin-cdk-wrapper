@@ -131,7 +131,8 @@ public interface SubscriptionFilterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.SubscriptionFilterOptions):
-        SubscriptionFilterOptions = CdkObjectWrappers.wrap(cdkObject) as SubscriptionFilterOptions
+        SubscriptionFilterOptions = CdkObjectWrappers.wrap(cdkObject) as? SubscriptionFilterOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubscriptionFilterOptions):
         software.amazon.awscdk.services.logs.SubscriptionFilterOptions = (wrapped as

@@ -182,7 +182,8 @@ public interface UtilizationScalingProps : BaseTargetTrackingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.UtilizationScalingProps):
-        UtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as UtilizationScalingProps
+        UtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as? UtilizationScalingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UtilizationScalingProps):
         software.amazon.awscdk.services.dynamodb.UtilizationScalingProps = (wrapped as

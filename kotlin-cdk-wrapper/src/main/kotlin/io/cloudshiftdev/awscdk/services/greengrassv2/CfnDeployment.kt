@@ -902,8 +902,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentDeploymentSpecificationProperty):
-          ComponentDeploymentSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ComponentDeploymentSpecificationProperty
+          ComponentDeploymentSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentDeploymentSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentDeploymentSpecificationProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentDeploymentSpecificationProperty
@@ -1085,8 +1085,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty):
-          IoTJobAbortCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IoTJobAbortCriteriaProperty
+          IoTJobAbortCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobAbortCriteriaProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IoTJobAbortCriteriaProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty =
@@ -1196,8 +1196,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty):
-          DeploymentConfigurationValidationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DeploymentConfigurationValidationPolicyProperty
+          DeploymentConfigurationValidationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentConfigurationValidationPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentConfigurationValidationPolicyProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty
@@ -1354,8 +1354,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty):
-          SystemResourceLimitsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SystemResourceLimitsProperty
+          SystemResourceLimitsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SystemResourceLimitsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SystemResourceLimitsProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty =
@@ -1461,8 +1461,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty):
-          IoTJobTimeoutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IoTJobTimeoutConfigProperty
+          IoTJobTimeoutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobTimeoutConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IoTJobTimeoutConfigProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty =
@@ -1664,8 +1664,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty):
-          ComponentConfigurationUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ComponentConfigurationUpdateProperty
+          ComponentConfigurationUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentConfigurationUpdateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentConfigurationUpdateProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty
@@ -1909,8 +1909,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty):
-          DeploymentPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DeploymentPoliciesProperty
+          DeploymentPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentPoliciesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentPoliciesProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty =
@@ -2026,7 +2026,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty):
-          IoTJobAbortConfigProperty = CdkObjectWrappers.wrap(cdkObject) as IoTJobAbortConfigProperty
+          IoTJobAbortConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobAbortConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IoTJobAbortConfigProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty =
@@ -2225,8 +2226,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty):
-          DeploymentComponentUpdatePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DeploymentComponentUpdatePolicyProperty
+          DeploymentComponentUpdatePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentComponentUpdatePolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentComponentUpdatePolicyProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty
@@ -2505,8 +2506,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentIoTJobConfigurationProperty):
-          DeploymentIoTJobConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DeploymentIoTJobConfigurationProperty
+          DeploymentIoTJobConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentIoTJobConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentIoTJobConfigurationProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentIoTJobConfigurationProperty
@@ -2665,8 +2666,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty):
-          IoTJobExponentialRolloutRateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IoTJobExponentialRolloutRateProperty
+          IoTJobExponentialRolloutRateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobExponentialRolloutRateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IoTJobExponentialRolloutRateProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty
@@ -2951,7 +2952,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty):
-          ComponentRunWithProperty = CdkObjectWrappers.wrap(cdkObject) as ComponentRunWithProperty
+          ComponentRunWithProperty = CdkObjectWrappers.wrap(cdkObject) as? ComponentRunWithProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentRunWithProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty =
@@ -3101,8 +3103,8 @@ public open class CfnDeployment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty):
-          IoTJobExecutionsRolloutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IoTJobExecutionsRolloutConfigProperty
+          IoTJobExecutionsRolloutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IoTJobExecutionsRolloutConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IoTJobExecutionsRolloutConfigProperty):
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty

@@ -355,7 +355,8 @@ public interface BaseNetworkListenerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseNetworkListenerProps):
-        BaseNetworkListenerProps = CdkObjectWrappers.wrap(cdkObject) as BaseNetworkListenerProps
+        BaseNetworkListenerProps = CdkObjectWrappers.wrap(cdkObject) as? BaseNetworkListenerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseNetworkListenerProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseNetworkListenerProps = (wrapped

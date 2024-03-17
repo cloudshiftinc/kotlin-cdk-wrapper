@@ -603,8 +603,8 @@ public open class CfnApplicationInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty):
-          ManifestOverridesPayloadProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ManifestOverridesPayloadProperty
+          ManifestOverridesPayloadProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManifestOverridesPayloadProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManifestOverridesPayloadProperty):
           software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty
@@ -690,7 +690,8 @@ public open class CfnApplicationInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty):
-          ManifestPayloadProperty = CdkObjectWrappers.wrap(cdkObject) as ManifestPayloadProperty
+          ManifestPayloadProperty = CdkObjectWrappers.wrap(cdkObject) as? ManifestPayloadProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManifestPayloadProperty):
           software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty =

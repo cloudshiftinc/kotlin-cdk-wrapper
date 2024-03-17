@@ -382,7 +382,7 @@ public interface CfnVolumeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnVolumeProps): CfnVolumeProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnVolumeProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnVolumeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVolumeProps): software.amazon.awscdk.services.fsx.CfnVolumeProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.fsx.CfnVolumeProps

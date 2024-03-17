@@ -313,7 +313,8 @@ public interface CfnDeploymentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDeploymentProps):
-        CfnDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as CfnDeploymentProps
+        CfnDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDeploymentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeploymentProps):
         software.amazon.awscdk.services.apigateway.CfnDeploymentProps = (wrapped as

@@ -197,8 +197,8 @@ public interface CfnRuleGroupsNamespaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.aps.CfnRuleGroupsNamespaceProps):
-        CfnRuleGroupsNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnRuleGroupsNamespaceProps
+        CfnRuleGroupsNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRuleGroupsNamespaceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleGroupsNamespaceProps):
         software.amazon.awscdk.services.aps.CfnRuleGroupsNamespaceProps = (wrapped as

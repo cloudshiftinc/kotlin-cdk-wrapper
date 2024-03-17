@@ -892,7 +892,7 @@ public interface RestApiProps : ResourceOptions, RestApiBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RestApiProps):
-        RestApiProps = CdkObjectWrappers.wrap(cdkObject) as RestApiProps
+        RestApiProps = CdkObjectWrappers.wrap(cdkObject) as? RestApiProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RestApiProps):
         software.amazon.awscdk.services.apigateway.RestApiProps = (wrapped as CdkObject).cdkObject

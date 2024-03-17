@@ -138,8 +138,8 @@ public interface ApplicationLoadBalancerEndpointOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpointOptions):
-        ApplicationLoadBalancerEndpointOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancerEndpointOptions
+        ApplicationLoadBalancerEndpointOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancerEndpointOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancerEndpointOptions):
         software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpointOptions

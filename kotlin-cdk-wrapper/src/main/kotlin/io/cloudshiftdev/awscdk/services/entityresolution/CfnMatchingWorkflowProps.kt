@@ -407,7 +407,8 @@ public interface CfnMatchingWorkflowProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflowProps):
-        CfnMatchingWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as CfnMatchingWorkflowProps
+        CfnMatchingWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMatchingWorkflowProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMatchingWorkflowProps):
         software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflowProps = (wrapped as

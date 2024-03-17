@@ -1375,8 +1375,8 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateServiceProps):
-        QueueProcessingFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as
-        QueueProcessingFargateServiceProps
+        QueueProcessingFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        QueueProcessingFargateServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueueProcessingFargateServiceProps):
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateServiceProps = (wrapped

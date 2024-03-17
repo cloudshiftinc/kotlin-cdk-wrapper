@@ -184,7 +184,8 @@ public interface TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.TargetBaseProps):
-        TargetBaseProps = CdkObjectWrappers.wrap(cdkObject) as TargetBaseProps
+        TargetBaseProps = CdkObjectWrappers.wrap(cdkObject) as? TargetBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TargetBaseProps):
         software.amazon.awscdk.services.events.targets.TargetBaseProps = (wrapped as

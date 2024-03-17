@@ -719,7 +719,7 @@ public interface CanaryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CanaryProps):
-        CanaryProps = CdkObjectWrappers.wrap(cdkObject) as CanaryProps
+        CanaryProps = CdkObjectWrappers.wrap(cdkObject) as? CanaryProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CanaryProps):
         software.amazon.awscdk.services.synthetics.CanaryProps = (wrapped as CdkObject).cdkObject as

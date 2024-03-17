@@ -220,7 +220,8 @@ public interface CfnServerlessClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnServerlessClusterProps):
-        CfnServerlessClusterProps = CdkObjectWrappers.wrap(cdkObject) as CfnServerlessClusterProps
+        CfnServerlessClusterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServerlessClusterProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServerlessClusterProps):
         software.amazon.awscdk.services.msk.CfnServerlessClusterProps = (wrapped as

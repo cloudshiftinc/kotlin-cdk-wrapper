@@ -397,8 +397,8 @@ public interface ResponseSecurityHeadersBehavior {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseSecurityHeadersBehavior):
-        ResponseSecurityHeadersBehavior = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseSecurityHeadersBehavior
+        ResponseSecurityHeadersBehavior = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseSecurityHeadersBehavior ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseSecurityHeadersBehavior):
         software.amazon.awscdk.services.cloudfront.ResponseSecurityHeadersBehavior = (wrapped as

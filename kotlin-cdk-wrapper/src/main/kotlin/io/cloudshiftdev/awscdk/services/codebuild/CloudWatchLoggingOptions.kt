@@ -131,7 +131,8 @@ public interface CloudWatchLoggingOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions):
-        CloudWatchLoggingOptions = CdkObjectWrappers.wrap(cdkObject) as CloudWatchLoggingOptions
+        CloudWatchLoggingOptions = CdkObjectWrappers.wrap(cdkObject) as? CloudWatchLoggingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudWatchLoggingOptions):
         software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions = (wrapped as

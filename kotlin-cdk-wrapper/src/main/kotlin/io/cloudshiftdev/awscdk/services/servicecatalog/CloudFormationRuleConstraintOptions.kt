@@ -141,8 +141,8 @@ public interface CloudFormationRuleConstraintOptions : CommonConstraintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationRuleConstraintOptions):
-        CloudFormationRuleConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationRuleConstraintOptions
+        CloudFormationRuleConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationRuleConstraintOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationRuleConstraintOptions):
         software.amazon.awscdk.services.servicecatalog.CloudFormationRuleConstraintOptions =

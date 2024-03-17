@@ -277,7 +277,8 @@ public interface ProxyResourceProps : ProxyResourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ProxyResourceProps):
-        ProxyResourceProps = CdkObjectWrappers.wrap(cdkObject) as ProxyResourceProps
+        ProxyResourceProps = CdkObjectWrappers.wrap(cdkObject) as? ProxyResourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProxyResourceProps):
         software.amazon.awscdk.services.apigateway.ProxyResourceProps = (wrapped as

@@ -91,7 +91,8 @@ public interface NotificationKeyFilter {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.NotificationKeyFilter):
-        NotificationKeyFilter = CdkObjectWrappers.wrap(cdkObject) as NotificationKeyFilter
+        NotificationKeyFilter = CdkObjectWrappers.wrap(cdkObject) as? NotificationKeyFilter ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NotificationKeyFilter):
         software.amazon.awscdk.services.s3.NotificationKeyFilter = (wrapped as CdkObject).cdkObject

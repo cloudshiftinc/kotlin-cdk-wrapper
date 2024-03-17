@@ -79,7 +79,7 @@ public interface StreamOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.StreamOptions): StreamOptions
-        = CdkObjectWrappers.wrap(cdkObject) as StreamOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? StreamOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamOptions): software.amazon.awscdk.services.logs.StreamOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.logs.StreamOptions

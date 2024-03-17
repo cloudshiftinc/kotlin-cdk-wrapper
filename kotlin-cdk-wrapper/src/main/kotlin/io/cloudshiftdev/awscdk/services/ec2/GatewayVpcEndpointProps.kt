@@ -154,7 +154,8 @@ public interface GatewayVpcEndpointProps : GatewayVpcEndpointOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointProps):
-        GatewayVpcEndpointProps = CdkObjectWrappers.wrap(cdkObject) as GatewayVpcEndpointProps
+        GatewayVpcEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? GatewayVpcEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayVpcEndpointProps):
         software.amazon.awscdk.services.ec2.GatewayVpcEndpointProps = (wrapped as

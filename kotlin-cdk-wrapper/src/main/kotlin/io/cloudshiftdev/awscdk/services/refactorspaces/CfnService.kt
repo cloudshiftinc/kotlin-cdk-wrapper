@@ -665,7 +665,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty):
-          UrlEndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as UrlEndpointInputProperty
+          UrlEndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as? UrlEndpointInputProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UrlEndpointInputProperty):
           software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty =
@@ -747,8 +748,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty):
-          LambdaEndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaEndpointInputProperty
+          LambdaEndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaEndpointInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaEndpointInputProperty):
           software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty =

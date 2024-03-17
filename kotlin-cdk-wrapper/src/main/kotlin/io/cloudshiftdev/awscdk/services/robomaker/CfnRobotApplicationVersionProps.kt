@@ -114,8 +114,8 @@ public interface CfnRobotApplicationVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersionProps):
-        CfnRobotApplicationVersionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnRobotApplicationVersionProps
+        CfnRobotApplicationVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRobotApplicationVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRobotApplicationVersionProps):
         software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersionProps = (wrapped as

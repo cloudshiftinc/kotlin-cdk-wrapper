@@ -304,7 +304,8 @@ public interface CfnIncludeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudformation.include.CfnIncludeProps):
-        CfnIncludeProps = CdkObjectWrappers.wrap(cdkObject) as CfnIncludeProps
+        CfnIncludeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIncludeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIncludeProps):
         software.amazon.awscdk.cloudformation.include.CfnIncludeProps = (wrapped as

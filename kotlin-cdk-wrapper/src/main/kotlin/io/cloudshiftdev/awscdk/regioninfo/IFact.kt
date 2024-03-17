@@ -27,9 +27,30 @@ public interface IFact {
    */
   public fun `value`(): String? = unwrap(this).getValue()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.regioninfo.IFact,
+  ) : CdkObject(cdkObject), IFact {
+    /**
+     * The name of this fact.
+     *
+     * Standardized values are provided by the `Facts` class.
+     */
+    override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The region for which this fact applies.
+     */
+    override fun region(): String = unwrap(this).getRegion()
+
+    /**
+     * The value of this fact.
+     */
+    override fun `value`(): String? = unwrap(this).getValue()
+  }
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.regioninfo.IFact): IFact =
-        CdkObjectWrappers.wrap(cdkObject) as IFact
+        CdkObjectWrappers.wrap(cdkObject) as? IFact ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IFact): software.amazon.awscdk.regioninfo.IFact = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.regioninfo.IFact

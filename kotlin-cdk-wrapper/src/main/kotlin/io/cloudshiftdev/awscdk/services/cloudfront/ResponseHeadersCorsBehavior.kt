@@ -369,8 +369,8 @@ public interface ResponseHeadersCorsBehavior {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersCorsBehavior):
-        ResponseHeadersCorsBehavior = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseHeadersCorsBehavior
+        ResponseHeadersCorsBehavior = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersCorsBehavior ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersCorsBehavior):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersCorsBehavior = (wrapped as

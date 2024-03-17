@@ -240,7 +240,8 @@ public interface CfnPrefixListProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixListProps):
-        CfnPrefixListProps = CdkObjectWrappers.wrap(cdkObject) as CfnPrefixListProps
+        CfnPrefixListProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPrefixListProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPrefixListProps):
         software.amazon.awscdk.services.ec2.CfnPrefixListProps = (wrapped as CdkObject).cdkObject as

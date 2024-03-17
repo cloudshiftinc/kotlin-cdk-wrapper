@@ -498,7 +498,8 @@ public open class CfnHealthCheck internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty):
-          HealthCheckTagProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckTagProperty
+          HealthCheckTagProperty = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckTagProperty):
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty = (wrapped
@@ -669,7 +670,8 @@ public open class CfnHealthCheck internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty):
-          AlarmIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as AlarmIdentifierProperty
+          AlarmIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as? AlarmIdentifierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AlarmIdentifierProperty):
           software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty = (wrapped
@@ -2257,7 +2259,8 @@ public open class CfnHealthCheck internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty):
-          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckConfigProperty
+          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthCheckConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckConfigProperty):
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty =

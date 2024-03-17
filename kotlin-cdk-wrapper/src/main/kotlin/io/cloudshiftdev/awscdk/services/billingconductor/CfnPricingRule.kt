@@ -653,7 +653,8 @@ public open class CfnPricingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty):
-          FreeTierProperty = CdkObjectWrappers.wrap(cdkObject) as FreeTierProperty
+          FreeTierProperty = CdkObjectWrappers.wrap(cdkObject) as? FreeTierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FreeTierProperty):
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty =
@@ -763,7 +764,8 @@ public open class CfnPricingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty):
-          TieringProperty = CdkObjectWrappers.wrap(cdkObject) as TieringProperty
+          TieringProperty = CdkObjectWrappers.wrap(cdkObject) as? TieringProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TieringProperty):
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty = (wrapped

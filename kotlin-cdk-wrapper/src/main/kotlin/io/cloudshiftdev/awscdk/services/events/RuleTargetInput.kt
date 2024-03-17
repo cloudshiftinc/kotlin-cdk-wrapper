@@ -44,6 +44,10 @@ public abstract class RuleTargetInput internal constructor(
   public open fun bind(rule: IRule): RuleTargetInputProperties =
       unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,
+  ) : RuleTargetInput(cdkObject)
+
   public companion object {
     public fun fromEventPath(path: String): RuleTargetInput =
         software.amazon.awscdk.services.events.RuleTargetInput.fromEventPath(path).let(RuleTargetInput::wrap)
@@ -58,7 +62,8 @@ public abstract class RuleTargetInput internal constructor(
         software.amazon.awscdk.services.events.RuleTargetInput.fromText(text).let(RuleTargetInput::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.RuleTargetInput):
-        RuleTargetInput = CdkObjectWrappers.wrap(cdkObject) as RuleTargetInput
+        RuleTargetInput = CdkObjectWrappers.wrap(cdkObject) as? RuleTargetInput ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuleTargetInput):
         software.amazon.awscdk.services.events.RuleTargetInput = (wrapped as CdkObject).cdkObject as

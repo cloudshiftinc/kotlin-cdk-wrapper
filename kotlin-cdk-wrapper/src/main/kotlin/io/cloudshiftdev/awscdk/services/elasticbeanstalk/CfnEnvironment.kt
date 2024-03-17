@@ -1000,7 +1000,7 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty):
-          TierProperty = CdkObjectWrappers.wrap(cdkObject) as TierProperty
+          TierProperty = CdkObjectWrappers.wrap(cdkObject) as? TierProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TierProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty = (wrapped as
@@ -1182,7 +1182,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty):
-          OptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as OptionSettingProperty
+          OptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? OptionSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OptionSettingProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty =

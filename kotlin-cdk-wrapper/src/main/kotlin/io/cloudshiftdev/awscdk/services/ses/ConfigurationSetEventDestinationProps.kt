@@ -175,8 +175,8 @@ public interface ConfigurationSetEventDestinationProps : ConfigurationSetEventDe
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationProps):
-        ConfigurationSetEventDestinationProps = CdkObjectWrappers.wrap(cdkObject) as
-        ConfigurationSetEventDestinationProps
+        ConfigurationSetEventDestinationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ConfigurationSetEventDestinationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConfigurationSetEventDestinationProps):
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationProps = (wrapped as

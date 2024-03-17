@@ -79,8 +79,8 @@ public interface SecretRotationApplicationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationApplicationOptions):
-        SecretRotationApplicationOptions = CdkObjectWrappers.wrap(cdkObject) as
-        SecretRotationApplicationOptions
+        SecretRotationApplicationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        SecretRotationApplicationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretRotationApplicationOptions):
         software.amazon.awscdk.services.secretsmanager.SecretRotationApplicationOptions = (wrapped

@@ -182,7 +182,8 @@ public interface CfnBillingGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroupProps):
-        CfnBillingGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnBillingGroupProps
+        CfnBillingGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBillingGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBillingGroupProps):
         software.amazon.awscdk.services.iot.CfnBillingGroupProps = (wrapped as CdkObject).cdkObject

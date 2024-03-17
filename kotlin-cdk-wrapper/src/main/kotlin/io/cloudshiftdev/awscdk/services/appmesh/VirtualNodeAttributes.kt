@@ -92,7 +92,8 @@ public interface VirtualNodeAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeAttributes):
-        VirtualNodeAttributes = CdkObjectWrappers.wrap(cdkObject) as VirtualNodeAttributes
+        VirtualNodeAttributes = CdkObjectWrappers.wrap(cdkObject) as? VirtualNodeAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualNodeAttributes):
         software.amazon.awscdk.services.appmesh.VirtualNodeAttributes = (wrapped as

@@ -127,7 +127,7 @@ public interface HttpTimeout {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpTimeout): HttpTimeout =
-        CdkObjectWrappers.wrap(cdkObject) as HttpTimeout
+        CdkObjectWrappers.wrap(cdkObject) as? HttpTimeout ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpTimeout): software.amazon.awscdk.services.appmesh.HttpTimeout =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.HttpTimeout

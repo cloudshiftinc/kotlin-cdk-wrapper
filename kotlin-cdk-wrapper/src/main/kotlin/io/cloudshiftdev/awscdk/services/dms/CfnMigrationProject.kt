@@ -934,8 +934,8 @@ public open class CfnMigrationProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty):
-          DataProviderDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataProviderDescriptorProperty
+          DataProviderDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataProviderDescriptorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataProviderDescriptorProperty):
           software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty =
@@ -1038,8 +1038,8 @@ public open class CfnMigrationProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty):
-          SchemaConversionApplicationAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SchemaConversionApplicationAttributesProperty
+          SchemaConversionApplicationAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SchemaConversionApplicationAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaConversionApplicationAttributesProperty):
           software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty

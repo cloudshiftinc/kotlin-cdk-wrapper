@@ -529,7 +529,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty):
-          WorkflowParameterProperty = CdkObjectWrappers.wrap(cdkObject) as WorkflowParameterProperty
+          WorkflowParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkflowParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkflowParameterProperty):
           software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty = (wrapped as

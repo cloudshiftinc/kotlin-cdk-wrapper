@@ -592,7 +592,8 @@ public open class CfnAnnotationStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty):
-          ReferenceItemProperty = CdkObjectWrappers.wrap(cdkObject) as ReferenceItemProperty
+          ReferenceItemProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceItemProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReferenceItemProperty):
           software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty = (wrapped
@@ -706,7 +707,8 @@ public open class CfnAnnotationStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty):
-          StoreOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as StoreOptionsProperty
+          StoreOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? StoreOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StoreOptionsProperty):
           software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty = (wrapped
@@ -814,7 +816,8 @@ public open class CfnAnnotationStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty):
-          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SseConfigProperty
+          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseConfigProperty):
           software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty = (wrapped as
@@ -963,7 +966,8 @@ public open class CfnAnnotationStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty):
-          TsvStoreOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as TsvStoreOptionsProperty
+          TsvStoreOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? TsvStoreOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TsvStoreOptionsProperty):
           software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty =

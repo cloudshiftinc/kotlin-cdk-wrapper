@@ -80,8 +80,8 @@ public interface LambdaDeploymentConfigImportProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps):
-        LambdaDeploymentConfigImportProps = CdkObjectWrappers.wrap(cdkObject) as
-        LambdaDeploymentConfigImportProps
+        LambdaDeploymentConfigImportProps = CdkObjectWrappers.wrap(cdkObject) as?
+        LambdaDeploymentConfigImportProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDeploymentConfigImportProps):
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps = (wrapped as

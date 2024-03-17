@@ -203,7 +203,8 @@ public interface CfnFirewallDomainListProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallDomainListProps):
-        CfnFirewallDomainListProps = CdkObjectWrappers.wrap(cdkObject) as CfnFirewallDomainListProps
+        CfnFirewallDomainListProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnFirewallDomainListProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFirewallDomainListProps):
         software.amazon.awscdk.services.route53resolver.CfnFirewallDomainListProps = (wrapped as

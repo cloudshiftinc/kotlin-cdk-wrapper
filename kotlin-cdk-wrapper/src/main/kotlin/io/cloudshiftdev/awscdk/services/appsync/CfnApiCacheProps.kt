@@ -418,7 +418,8 @@ public interface CfnApiCacheProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnApiCacheProps):
-        CfnApiCacheProps = CdkObjectWrappers.wrap(cdkObject) as CfnApiCacheProps
+        CfnApiCacheProps = CdkObjectWrappers.wrap(cdkObject) as? CfnApiCacheProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiCacheProps):
         software.amazon.awscdk.services.appsync.CfnApiCacheProps = (wrapped as CdkObject).cdkObject

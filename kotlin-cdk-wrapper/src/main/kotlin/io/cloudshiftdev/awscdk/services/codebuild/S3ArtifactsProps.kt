@@ -279,7 +279,8 @@ public interface S3ArtifactsProps : ArtifactsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.S3ArtifactsProps):
-        S3ArtifactsProps = CdkObjectWrappers.wrap(cdkObject) as S3ArtifactsProps
+        S3ArtifactsProps = CdkObjectWrappers.wrap(cdkObject) as? S3ArtifactsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3ArtifactsProps):
         software.amazon.awscdk.services.codebuild.S3ArtifactsProps = (wrapped as

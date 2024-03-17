@@ -731,7 +731,8 @@ public interface CfnUserPoolUserProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUserProps):
-        CfnUserPoolUserProps = CdkObjectWrappers.wrap(cdkObject) as CfnUserPoolUserProps
+        CfnUserPoolUserProps = CdkObjectWrappers.wrap(cdkObject) as? CfnUserPoolUserProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolUserProps):
         software.amazon.awscdk.services.cognito.CfnUserPoolUserProps = (wrapped as

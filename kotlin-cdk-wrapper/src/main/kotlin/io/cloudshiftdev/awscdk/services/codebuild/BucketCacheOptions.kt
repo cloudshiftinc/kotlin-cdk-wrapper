@@ -68,7 +68,8 @@ public interface BucketCacheOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions):
-        BucketCacheOptions = CdkObjectWrappers.wrap(cdkObject) as BucketCacheOptions
+        BucketCacheOptions = CdkObjectWrappers.wrap(cdkObject) as? BucketCacheOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketCacheOptions):
         software.amazon.awscdk.services.codebuild.BucketCacheOptions = (wrapped as

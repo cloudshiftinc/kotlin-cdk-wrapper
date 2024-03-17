@@ -176,7 +176,8 @@ public interface CfnRefreshScheduleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshScheduleProps):
-        CfnRefreshScheduleProps = CdkObjectWrappers.wrap(cdkObject) as CfnRefreshScheduleProps
+        CfnRefreshScheduleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRefreshScheduleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRefreshScheduleProps):
         software.amazon.awscdk.services.quicksight.CfnRefreshScheduleProps = (wrapped as

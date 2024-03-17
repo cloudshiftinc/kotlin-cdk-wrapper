@@ -227,7 +227,8 @@ public interface AutoScalingGroupOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.AutoScalingGroupOptions):
-        AutoScalingGroupOptions = CdkObjectWrappers.wrap(cdkObject) as AutoScalingGroupOptions
+        AutoScalingGroupOptions = CdkObjectWrappers.wrap(cdkObject) as? AutoScalingGroupOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoScalingGroupOptions):
         software.amazon.awscdk.services.eks.AutoScalingGroupOptions = (wrapped as

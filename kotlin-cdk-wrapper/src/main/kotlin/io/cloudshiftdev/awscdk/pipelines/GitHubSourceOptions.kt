@@ -199,7 +199,8 @@ public interface GitHubSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.GitHubSourceOptions):
-        GitHubSourceOptions = CdkObjectWrappers.wrap(cdkObject) as GitHubSourceOptions
+        GitHubSourceOptions = CdkObjectWrappers.wrap(cdkObject) as? GitHubSourceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitHubSourceOptions):
         software.amazon.awscdk.pipelines.GitHubSourceOptions = (wrapped as CdkObject).cdkObject as

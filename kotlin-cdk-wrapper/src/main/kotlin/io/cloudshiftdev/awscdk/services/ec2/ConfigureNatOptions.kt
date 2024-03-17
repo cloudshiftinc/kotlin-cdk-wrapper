@@ -149,7 +149,8 @@ public interface ConfigureNatOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ConfigureNatOptions):
-        ConfigureNatOptions = CdkObjectWrappers.wrap(cdkObject) as ConfigureNatOptions
+        ConfigureNatOptions = CdkObjectWrappers.wrap(cdkObject) as? ConfigureNatOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConfigureNatOptions):
         software.amazon.awscdk.services.ec2.ConfigureNatOptions = (wrapped as CdkObject).cdkObject

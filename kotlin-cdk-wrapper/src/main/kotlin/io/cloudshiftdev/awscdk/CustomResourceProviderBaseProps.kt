@@ -287,8 +287,8 @@ public interface CustomResourceProviderBaseProps : CustomResourceProviderOptions
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CustomResourceProviderBaseProps):
-        CustomResourceProviderBaseProps = CdkObjectWrappers.wrap(cdkObject) as
-        CustomResourceProviderBaseProps
+        CustomResourceProviderBaseProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CustomResourceProviderBaseProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomResourceProviderBaseProps):
         software.amazon.awscdk.CustomResourceProviderBaseProps = (wrapped as CdkObject).cdkObject as

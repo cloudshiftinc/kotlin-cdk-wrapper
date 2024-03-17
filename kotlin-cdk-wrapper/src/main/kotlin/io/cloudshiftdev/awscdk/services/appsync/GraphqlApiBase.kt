@@ -474,9 +474,13 @@ public abstract class GraphqlApiBase internal constructor(
   public override fun grantSubscription(grantee: IGrantable, fields: String): Grant =
       unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,
+  ) : GraphqlApiBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase):
-        GraphqlApiBase = CdkObjectWrappers.wrap(cdkObject) as GraphqlApiBase
+        GraphqlApiBase = CdkObjectWrappers.wrap(cdkObject) as? GraphqlApiBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GraphqlApiBase):
         software.amazon.awscdk.services.appsync.GraphqlApiBase = (wrapped as CdkObject).cdkObject as

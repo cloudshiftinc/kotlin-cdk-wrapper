@@ -269,7 +269,8 @@ public interface CfnHoursOfOperationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperationProps):
-        CfnHoursOfOperationProps = CdkObjectWrappers.wrap(cdkObject) as CfnHoursOfOperationProps
+        CfnHoursOfOperationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHoursOfOperationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHoursOfOperationProps):
         software.amazon.awscdk.services.connect.CfnHoursOfOperationProps = (wrapped as

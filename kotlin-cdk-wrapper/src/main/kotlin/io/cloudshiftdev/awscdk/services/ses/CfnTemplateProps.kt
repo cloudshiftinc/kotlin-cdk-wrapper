@@ -118,7 +118,8 @@ public interface CfnTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnTemplateProps):
-        CfnTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnTemplateProps
+        CfnTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTemplateProps):
         software.amazon.awscdk.services.ses.CfnTemplateProps = (wrapped as CdkObject).cdkObject as

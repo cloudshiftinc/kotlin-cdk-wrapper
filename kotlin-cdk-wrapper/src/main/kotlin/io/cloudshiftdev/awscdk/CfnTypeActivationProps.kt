@@ -494,7 +494,8 @@ public interface CfnTypeActivationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnTypeActivationProps):
-        CfnTypeActivationProps = CdkObjectWrappers.wrap(cdkObject) as CfnTypeActivationProps
+        CfnTypeActivationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTypeActivationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTypeActivationProps):
         software.amazon.awscdk.CfnTypeActivationProps = (wrapped as CdkObject).cdkObject as

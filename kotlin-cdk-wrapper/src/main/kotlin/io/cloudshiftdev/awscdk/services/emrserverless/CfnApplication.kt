@@ -1392,8 +1392,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty):
-          AutoStopConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AutoStopConfigurationProperty
+          AutoStopConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoStopConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoStopConfigurationProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty
@@ -1669,8 +1669,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty):
-          MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringConfigurationProperty
+          MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringConfigurationProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty
@@ -1810,8 +1810,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty):
-          MaximumAllowedResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MaximumAllowedResourcesProperty
+          MaximumAllowedResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaximumAllowedResourcesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaximumAllowedResourcesProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty
@@ -2052,8 +2052,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.CloudWatchLoggingConfigurationProperty):
-          CloudWatchLoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchLoggingConfigurationProperty
+          CloudWatchLoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLoggingConfigurationProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.CloudWatchLoggingConfigurationProperty
@@ -2185,8 +2185,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkConfigurationProperty
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty
@@ -2348,8 +2348,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty):
-          ConfigurationObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConfigurationObjectProperty
+          ConfigurationObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationObjectProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty =
@@ -2502,8 +2502,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty):
-          WorkerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          WorkerConfigurationProperty
+          WorkerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkerConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkerConfigurationProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty =
@@ -2596,8 +2596,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ImageConfigurationInputProperty):
-          ImageConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ImageConfigurationInputProperty
+          ImageConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImageConfigurationInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageConfigurationInputProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.ImageConfigurationInputProperty
@@ -2737,8 +2737,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigKeyValuePairProperty):
-          InitialCapacityConfigKeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InitialCapacityConfigKeyValuePairProperty
+          InitialCapacityConfigKeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InitialCapacityConfigKeyValuePairProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InitialCapacityConfigKeyValuePairProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigKeyValuePairProperty
@@ -2888,8 +2888,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty):
-          InitialCapacityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InitialCapacityConfigProperty
+          InitialCapacityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InitialCapacityConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InitialCapacityConfigProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty
@@ -3004,8 +3004,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty):
-          S3MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3MonitoringConfigurationProperty
+          S3MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3MonitoringConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3MonitoringConfigurationProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty
@@ -3120,8 +3120,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty):
-          WorkerTypeSpecificationInputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          WorkerTypeSpecificationInputProperty
+          WorkerTypeSpecificationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkerTypeSpecificationInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkerTypeSpecificationInputProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty
@@ -3228,8 +3228,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty):
-          AutoStartConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AutoStartConfigurationProperty
+          AutoStartConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoStartConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoStartConfigurationProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty
@@ -3367,8 +3367,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.ManagedPersistenceMonitoringConfigurationProperty):
-          ManagedPersistenceMonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ManagedPersistenceMonitoringConfigurationProperty
+          ManagedPersistenceMonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ManagedPersistenceMonitoringConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ManagedPersistenceMonitoringConfigurationProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.ManagedPersistenceMonitoringConfigurationProperty
@@ -3482,8 +3482,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty):
-          LogTypeMapKeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LogTypeMapKeyValuePairProperty
+          LogTypeMapKeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LogTypeMapKeyValuePairProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogTypeMapKeyValuePairProperty):
           software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty

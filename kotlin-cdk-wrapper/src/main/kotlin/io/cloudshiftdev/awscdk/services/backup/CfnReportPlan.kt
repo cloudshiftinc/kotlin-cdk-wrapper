@@ -482,8 +482,8 @@ public open class CfnReportPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty):
-          ReportDeliveryChannelProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ReportDeliveryChannelProperty
+          ReportDeliveryChannelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReportDeliveryChannelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReportDeliveryChannelProperty):
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty =
@@ -730,7 +730,8 @@ public open class CfnReportPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty):
-          ReportSettingProperty = CdkObjectWrappers.wrap(cdkObject) as ReportSettingProperty
+          ReportSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? ReportSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReportSettingProperty):
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty = (wrapped as

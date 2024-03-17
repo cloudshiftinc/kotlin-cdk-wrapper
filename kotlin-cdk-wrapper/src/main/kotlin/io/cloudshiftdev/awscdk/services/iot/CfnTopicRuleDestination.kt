@@ -510,8 +510,8 @@ public open class CfnTopicRuleDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty):
-          VpcDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VpcDestinationPropertiesProperty
+          VpcDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcDestinationPropertiesProperty):
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty
@@ -595,8 +595,8 @@ public open class CfnTopicRuleDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty):
-          HttpUrlDestinationSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HttpUrlDestinationSummaryProperty
+          HttpUrlDestinationSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpUrlDestinationSummaryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpUrlDestinationSummaryProperty):
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty

@@ -108,7 +108,8 @@ public interface NotificationConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.NotificationConfiguration):
-        NotificationConfiguration = CdkObjectWrappers.wrap(cdkObject) as NotificationConfiguration
+        NotificationConfiguration = CdkObjectWrappers.wrap(cdkObject) as? NotificationConfiguration
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NotificationConfiguration):
         software.amazon.awscdk.services.autoscaling.NotificationConfiguration = (wrapped as

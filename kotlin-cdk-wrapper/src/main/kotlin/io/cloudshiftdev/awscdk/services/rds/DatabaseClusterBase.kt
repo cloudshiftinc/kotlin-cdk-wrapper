@@ -602,9 +602,14 @@ public abstract class DatabaseClusterBase internal constructor(
   public override fun metricVolumeWriteIoPs(props: MetricOptions.Builder.() -> Unit): Metric =
       metricVolumeWriteIoPs(MetricOptions(props))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase,
+  ) : DatabaseClusterBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase):
-        DatabaseClusterBase = CdkObjectWrappers.wrap(cdkObject) as DatabaseClusterBase
+        DatabaseClusterBase = CdkObjectWrappers.wrap(cdkObject) as? DatabaseClusterBase ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseClusterBase):
         software.amazon.awscdk.services.rds.DatabaseClusterBase = (wrapped as CdkObject).cdkObject

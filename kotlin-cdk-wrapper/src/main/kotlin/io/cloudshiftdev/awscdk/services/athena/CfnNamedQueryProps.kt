@@ -185,7 +185,8 @@ public interface CfnNamedQueryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnNamedQueryProps):
-        CfnNamedQueryProps = CdkObjectWrappers.wrap(cdkObject) as CfnNamedQueryProps
+        CfnNamedQueryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnNamedQueryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNamedQueryProps):
         software.amazon.awscdk.services.athena.CfnNamedQueryProps = (wrapped as CdkObject).cdkObject

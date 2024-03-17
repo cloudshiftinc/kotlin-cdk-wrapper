@@ -204,7 +204,8 @@ public interface SecurityGroupContextQuery {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery):
-        SecurityGroupContextQuery = CdkObjectWrappers.wrap(cdkObject) as SecurityGroupContextQuery
+        SecurityGroupContextQuery = CdkObjectWrappers.wrap(cdkObject) as? SecurityGroupContextQuery
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecurityGroupContextQuery):
         software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery = (wrapped as

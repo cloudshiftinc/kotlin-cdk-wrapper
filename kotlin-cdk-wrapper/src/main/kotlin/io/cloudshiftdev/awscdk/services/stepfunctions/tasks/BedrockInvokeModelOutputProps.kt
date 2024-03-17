@@ -116,8 +116,8 @@ public interface BedrockInvokeModelOutputProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps):
-        BedrockInvokeModelOutputProps = CdkObjectWrappers.wrap(cdkObject) as
-        BedrockInvokeModelOutputProps
+        BedrockInvokeModelOutputProps = CdkObjectWrappers.wrap(cdkObject) as?
+        BedrockInvokeModelOutputProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BedrockInvokeModelOutputProps):
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps = (wrapped

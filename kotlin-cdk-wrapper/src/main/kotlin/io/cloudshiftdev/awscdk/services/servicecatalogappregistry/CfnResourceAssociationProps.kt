@@ -135,8 +135,8 @@ public interface CfnResourceAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnResourceAssociationProps):
-        CfnResourceAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnResourceAssociationProps
+        CfnResourceAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResourceAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceAssociationProps):
         software.amazon.awscdk.services.servicecatalogappregistry.CfnResourceAssociationProps =

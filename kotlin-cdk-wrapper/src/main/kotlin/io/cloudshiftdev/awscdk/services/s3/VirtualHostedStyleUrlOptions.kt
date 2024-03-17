@@ -73,8 +73,8 @@ public interface VirtualHostedStyleUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions):
-        VirtualHostedStyleUrlOptions = CdkObjectWrappers.wrap(cdkObject) as
-        VirtualHostedStyleUrlOptions
+        VirtualHostedStyleUrlOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        VirtualHostedStyleUrlOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualHostedStyleUrlOptions):
         software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions = (wrapped as

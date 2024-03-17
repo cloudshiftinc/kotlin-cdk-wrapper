@@ -103,7 +103,8 @@ public interface EcsDeploymentConfigProps : BaseDeploymentConfigOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentConfigProps):
-        EcsDeploymentConfigProps = CdkObjectWrappers.wrap(cdkObject) as EcsDeploymentConfigProps
+        EcsDeploymentConfigProps = CdkObjectWrappers.wrap(cdkObject) as? EcsDeploymentConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsDeploymentConfigProps):
         software.amazon.awscdk.services.codedeploy.EcsDeploymentConfigProps = (wrapped as

@@ -111,8 +111,8 @@ public interface LambdaDeploymentConfigProps : BaseDeploymentConfigOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigProps):
-        LambdaDeploymentConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        LambdaDeploymentConfigProps
+        LambdaDeploymentConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        LambdaDeploymentConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDeploymentConfigProps):
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigProps = (wrapped as

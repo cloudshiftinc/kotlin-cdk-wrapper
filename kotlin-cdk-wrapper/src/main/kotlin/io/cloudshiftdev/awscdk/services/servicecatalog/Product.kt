@@ -53,6 +53,10 @@ public abstract class Product internal constructor(
    */
   public override fun productId(): String = unwrap(this).getProductId()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.servicecatalog.Product,
+  ) : Product(cdkObject)
+
   public companion object {
     public fun fromProductArn(
       scope: Construct,
@@ -63,7 +67,7 @@ public abstract class Product internal constructor(
         id, productArn).let(IProduct::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.Product): Product =
-        CdkObjectWrappers.wrap(cdkObject) as Product
+        CdkObjectWrappers.wrap(cdkObject) as? Product ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Product): software.amazon.awscdk.services.servicecatalog.Product =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.servicecatalog.Product

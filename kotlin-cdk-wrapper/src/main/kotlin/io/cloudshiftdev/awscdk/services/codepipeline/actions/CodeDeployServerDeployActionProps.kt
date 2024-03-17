@@ -217,8 +217,8 @@ public interface CodeDeployServerDeployActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployActionProps):
-        CodeDeployServerDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CodeDeployServerDeployActionProps
+        CodeDeployServerDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CodeDeployServerDeployActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeDeployServerDeployActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployActionProps =

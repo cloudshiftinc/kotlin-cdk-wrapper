@@ -116,8 +116,8 @@ public interface CfnTrafficRoutingTimeBasedLinear {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear):
-        CfnTrafficRoutingTimeBasedLinear = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTrafficRoutingTimeBasedLinear
+        CfnTrafficRoutingTimeBasedLinear = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrafficRoutingTimeBasedLinear ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficRoutingTimeBasedLinear):
         software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear = (wrapped as CdkObject).cdkObject

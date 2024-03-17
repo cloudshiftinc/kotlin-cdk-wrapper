@@ -360,7 +360,8 @@ public interface CfnTaskDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinitionProps):
-        CfnTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnTaskDefinitionProps
+        CfnTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTaskDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskDefinitionProps):
         software.amazon.awscdk.services.iotwireless.CfnTaskDefinitionProps = (wrapped as

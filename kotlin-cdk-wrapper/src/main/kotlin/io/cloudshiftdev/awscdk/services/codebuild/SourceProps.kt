@@ -75,7 +75,7 @@ public interface SourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.SourceProps): SourceProps
-        = CdkObjectWrappers.wrap(cdkObject) as SourceProps
+        = CdkObjectWrappers.wrap(cdkObject) as? SourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceProps): software.amazon.awscdk.services.codebuild.SourceProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.SourceProps

@@ -137,7 +137,8 @@ public interface CfnDomainNameProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDomainNameProps):
-        CfnDomainNameProps = CdkObjectWrappers.wrap(cdkObject) as CfnDomainNameProps
+        CfnDomainNameProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDomainNameProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainNameProps):
         software.amazon.awscdk.services.appsync.CfnDomainNameProps = (wrapped as

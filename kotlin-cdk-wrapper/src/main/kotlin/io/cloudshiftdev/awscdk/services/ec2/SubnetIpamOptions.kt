@@ -85,7 +85,8 @@ public interface SubnetIpamOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SubnetIpamOptions):
-        SubnetIpamOptions = CdkObjectWrappers.wrap(cdkObject) as SubnetIpamOptions
+        SubnetIpamOptions = CdkObjectWrappers.wrap(cdkObject) as? SubnetIpamOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubnetIpamOptions):
         software.amazon.awscdk.services.ec2.SubnetIpamOptions = (wrapped as CdkObject).cdkObject as

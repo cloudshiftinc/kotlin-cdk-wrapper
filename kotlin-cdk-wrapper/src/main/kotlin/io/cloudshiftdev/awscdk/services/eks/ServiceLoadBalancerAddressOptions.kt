@@ -106,8 +106,8 @@ public interface ServiceLoadBalancerAddressOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions):
-        ServiceLoadBalancerAddressOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ServiceLoadBalancerAddressOptions
+        ServiceLoadBalancerAddressOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ServiceLoadBalancerAddressOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceLoadBalancerAddressOptions):
         software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions = (wrapped as

@@ -735,7 +735,8 @@ public open class CfnFlywheel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty):
-          TaskConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TaskConfigProperty
+          TaskConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty = (wrapped as
@@ -929,7 +930,8 @@ public open class CfnFlywheel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty = (wrapped as
@@ -1176,8 +1178,8 @@ public open class CfnFlywheel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty):
-          DataSecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataSecurityConfigProperty
+          DataSecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSecurityConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSecurityConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty =
@@ -1284,8 +1286,8 @@ public open class CfnFlywheel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty):
-          EntityRecognitionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EntityRecognitionConfigProperty
+          EntityRecognitionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EntityRecognitionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EntityRecognitionConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty =
@@ -1386,8 +1388,8 @@ public open class CfnFlywheel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty):
-          EntityTypesListItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EntityTypesListItemProperty
+          EntityTypesListItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EntityTypesListItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EntityTypesListItemProperty):
           software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty =
@@ -1511,8 +1513,8 @@ public open class CfnFlywheel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty):
-          DocumentClassificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DocumentClassificationConfigProperty
+          DocumentClassificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DocumentClassificationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DocumentClassificationConfigProperty):
           software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty

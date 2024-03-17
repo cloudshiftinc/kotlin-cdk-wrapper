@@ -708,8 +708,8 @@ public interface CfnModelBiasJobDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinitionProps):
-        CfnModelBiasJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnModelBiasJobDefinitionProps
+        CfnModelBiasJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnModelBiasJobDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnModelBiasJobDefinitionProps):
         software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinitionProps = (wrapped as

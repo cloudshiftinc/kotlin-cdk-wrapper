@@ -758,7 +758,7 @@ public interface CfnTaskProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTaskProps):
-        CfnTaskProps = CdkObjectWrappers.wrap(cdkObject) as CfnTaskProps
+        CfnTaskProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTaskProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskProps):
         software.amazon.awscdk.services.datasync.CfnTaskProps = (wrapped as CdkObject).cdkObject as

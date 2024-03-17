@@ -536,7 +536,8 @@ public interface DockerImageSource {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageSource):
-        DockerImageSource = CdkObjectWrappers.wrap(cdkObject) as DockerImageSource
+        DockerImageSource = CdkObjectWrappers.wrap(cdkObject) as? DockerImageSource ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageSource):
         software.amazon.awscdk.cloudassembly.schema.DockerImageSource = (wrapped as

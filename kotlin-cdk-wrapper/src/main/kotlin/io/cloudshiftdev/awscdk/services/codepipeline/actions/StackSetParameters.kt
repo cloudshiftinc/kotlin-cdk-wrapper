@@ -24,6 +24,10 @@ public abstract class StackSetParameters internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.StackSetParameters,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetParameters,
+  ) : StackSetParameters(cdkObject)
+
   public companion object {
     public fun fromArtifactPath(artifactPath: ArtifactPath): StackSetParameters =
         software.amazon.awscdk.services.codepipeline.actions.StackSetParameters.fromArtifactPath(artifactPath.let(ArtifactPath::unwrap)).let(StackSetParameters::wrap)
@@ -38,7 +42,8 @@ public abstract class StackSetParameters internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetParameters):
-        StackSetParameters = CdkObjectWrappers.wrap(cdkObject) as StackSetParameters
+        StackSetParameters = CdkObjectWrappers.wrap(cdkObject) as? StackSetParameters ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSetParameters):
         software.amazon.awscdk.services.codepipeline.actions.StackSetParameters = (wrapped as

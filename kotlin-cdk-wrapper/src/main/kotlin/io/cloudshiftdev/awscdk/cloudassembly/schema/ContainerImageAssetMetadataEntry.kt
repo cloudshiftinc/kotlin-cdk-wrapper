@@ -567,8 +567,8 @@ public interface ContainerImageAssetMetadataEntry {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry):
-        ContainerImageAssetMetadataEntry = CdkObjectWrappers.wrap(cdkObject) as
-        ContainerImageAssetMetadataEntry
+        ContainerImageAssetMetadataEntry = CdkObjectWrappers.wrap(cdkObject) as?
+        ContainerImageAssetMetadataEntry ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerImageAssetMetadataEntry):
         software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry = (wrapped as

@@ -277,7 +277,8 @@ public interface CfnDBProxyTargetGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroupProps):
-        CfnDBProxyTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBProxyTargetGroupProps
+        CfnDBProxyTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDBProxyTargetGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBProxyTargetGroupProps):
         software.amazon.awscdk.services.rds.CfnDBProxyTargetGroupProps = (wrapped as

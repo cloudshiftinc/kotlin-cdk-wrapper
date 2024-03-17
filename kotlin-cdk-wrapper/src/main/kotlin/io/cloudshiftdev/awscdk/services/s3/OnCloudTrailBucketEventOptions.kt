@@ -250,8 +250,8 @@ public interface OnCloudTrailBucketEventOptions : OnEventOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.OnCloudTrailBucketEventOptions):
-        OnCloudTrailBucketEventOptions = CdkObjectWrappers.wrap(cdkObject) as
-        OnCloudTrailBucketEventOptions
+        OnCloudTrailBucketEventOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        OnCloudTrailBucketEventOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OnCloudTrailBucketEventOptions):
         software.amazon.awscdk.services.s3.OnCloudTrailBucketEventOptions = (wrapped as

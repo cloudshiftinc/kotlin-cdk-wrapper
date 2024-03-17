@@ -141,7 +141,7 @@ public interface CfnMasterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnMasterProps):
-        CfnMasterProps = CdkObjectWrappers.wrap(cdkObject) as CfnMasterProps
+        CfnMasterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMasterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMasterProps):
         software.amazon.awscdk.services.guardduty.CfnMasterProps = (wrapped as CdkObject).cdkObject

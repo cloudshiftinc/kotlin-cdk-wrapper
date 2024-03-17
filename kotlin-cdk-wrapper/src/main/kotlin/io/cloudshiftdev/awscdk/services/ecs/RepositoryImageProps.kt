@@ -80,7 +80,8 @@ public interface RepositoryImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.RepositoryImageProps):
-        RepositoryImageProps = CdkObjectWrappers.wrap(cdkObject) as RepositoryImageProps
+        RepositoryImageProps = CdkObjectWrappers.wrap(cdkObject) as? RepositoryImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryImageProps):
         software.amazon.awscdk.services.ecs.RepositoryImageProps = (wrapped as CdkObject).cdkObject

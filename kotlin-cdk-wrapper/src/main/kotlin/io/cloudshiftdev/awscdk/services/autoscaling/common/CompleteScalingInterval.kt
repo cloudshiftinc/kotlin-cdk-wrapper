@@ -118,7 +118,8 @@ public interface CompleteScalingInterval {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.common.CompleteScalingInterval):
-        CompleteScalingInterval = CdkObjectWrappers.wrap(cdkObject) as CompleteScalingInterval
+        CompleteScalingInterval = CdkObjectWrappers.wrap(cdkObject) as? CompleteScalingInterval ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CompleteScalingInterval):
         software.amazon.awscdk.services.autoscaling.common.CompleteScalingInterval = (wrapped as

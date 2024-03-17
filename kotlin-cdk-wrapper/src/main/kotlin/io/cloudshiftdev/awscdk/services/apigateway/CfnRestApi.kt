@@ -1173,7 +1173,8 @@ public open class CfnRestApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty = (wrapped as
@@ -1344,8 +1345,8 @@ public open class CfnRestApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EndpointConfigurationProperty
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EndpointConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointConfigurationProperty):
           software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty =

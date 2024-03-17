@@ -845,7 +845,7 @@ public interface CfnRoleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnRoleProps): CfnRoleProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnRoleProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnRoleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoleProps): software.amazon.awscdk.services.iam.CfnRoleProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.CfnRoleProps

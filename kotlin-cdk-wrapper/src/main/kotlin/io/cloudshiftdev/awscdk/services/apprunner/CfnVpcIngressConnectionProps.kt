@@ -240,8 +240,8 @@ public interface CfnVpcIngressConnectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcIngressConnectionProps):
-        CfnVpcIngressConnectionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVpcIngressConnectionProps
+        CfnVpcIngressConnectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVpcIngressConnectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcIngressConnectionProps):
         software.amazon.awscdk.services.apprunner.CfnVpcIngressConnectionProps = (wrapped as

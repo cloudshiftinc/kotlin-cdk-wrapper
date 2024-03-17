@@ -523,8 +523,8 @@ public open class CfnStep internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty):
-          HadoopJarStepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HadoopJarStepConfigProperty
+          HadoopJarStepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HadoopJarStepConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HadoopJarStepConfigProperty):
           software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty = (wrapped as
@@ -630,7 +630,8 @@ public open class CfnStep internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty):
-          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as KeyValueProperty
+          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyValueProperty):
           software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty = (wrapped as

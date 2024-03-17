@@ -671,8 +671,8 @@ public open class CfnResourceDataSync internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty):
-          AwsOrganizationsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AwsOrganizationsSourceProperty
+          AwsOrganizationsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsOrganizationsSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsOrganizationsSourceProperty):
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty =
@@ -874,7 +874,8 @@ public open class CfnResourceDataSync internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty):
-          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as S3DestinationProperty
+          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DestinationProperty):
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty = (wrapped
@@ -1124,7 +1125,8 @@ public open class CfnResourceDataSync internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty):
-          SyncSourceProperty = CdkObjectWrappers.wrap(cdkObject) as SyncSourceProperty
+          SyncSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SyncSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SyncSourceProperty):
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty = (wrapped as

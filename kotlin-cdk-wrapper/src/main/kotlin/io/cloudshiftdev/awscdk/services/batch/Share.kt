@@ -159,7 +159,7 @@ public interface Share {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.Share): Share =
-        CdkObjectWrappers.wrap(cdkObject) as Share
+        CdkObjectWrappers.wrap(cdkObject) as? Share ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Share): software.amazon.awscdk.services.batch.Share = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.batch.Share

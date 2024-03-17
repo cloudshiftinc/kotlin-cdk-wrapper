@@ -1752,7 +1752,8 @@ public open class CfnAlarm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty):
-          MetricDataQueryProperty = CdkObjectWrappers.wrap(cdkObject) as MetricDataQueryProperty
+          MetricDataQueryProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricDataQueryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricDataQueryProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty = (wrapped as
@@ -1867,7 +1868,8 @@ public open class CfnAlarm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty):
-          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as DimensionProperty
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DimensionProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty = (wrapped as
@@ -2157,7 +2159,8 @@ public open class CfnAlarm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty):
-          MetricStatProperty = CdkObjectWrappers.wrap(cdkObject) as MetricStatProperty
+          MetricStatProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricStatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricStatProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty = (wrapped as
@@ -2331,7 +2334,8 @@ public open class CfnAlarm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty):
-          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as MetricProperty
+          MetricProperty = CdkObjectWrappers.wrap(cdkObject) as? MetricProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricProperty):
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty = (wrapped as

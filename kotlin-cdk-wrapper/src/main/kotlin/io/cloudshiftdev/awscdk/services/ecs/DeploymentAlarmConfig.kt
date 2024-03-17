@@ -117,7 +117,8 @@ public interface DeploymentAlarmConfig : DeploymentAlarmOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmConfig):
-        DeploymentAlarmConfig = CdkObjectWrappers.wrap(cdkObject) as DeploymentAlarmConfig
+        DeploymentAlarmConfig = CdkObjectWrappers.wrap(cdkObject) as? DeploymentAlarmConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentAlarmConfig):
         software.amazon.awscdk.services.ecs.DeploymentAlarmConfig = (wrapped as CdkObject).cdkObject

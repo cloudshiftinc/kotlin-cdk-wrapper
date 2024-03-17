@@ -199,8 +199,8 @@ public interface CfnReplicationSubnetGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnReplicationSubnetGroupProps):
-        CfnReplicationSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnReplicationSubnetGroupProps
+        CfnReplicationSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnReplicationSubnetGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationSubnetGroupProps):
         software.amazon.awscdk.services.dms.CfnReplicationSubnetGroupProps = (wrapped as

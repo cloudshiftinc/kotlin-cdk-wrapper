@@ -1050,7 +1050,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty):
-          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckConfigProperty
+          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthCheckConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckConfigProperty):
           software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty =
@@ -1405,7 +1406,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty):
-          DnsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DnsConfigProperty
+          DnsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DnsConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DnsConfigProperty):
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty = (wrapped
@@ -1566,8 +1568,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty):
-          HealthCheckCustomConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HealthCheckCustomConfigProperty
+          HealthCheckCustomConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HealthCheckCustomConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckCustomConfigProperty):
           software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty
@@ -1951,7 +1953,8 @@ public open class CfnService internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty):
-          DnsRecordProperty = CdkObjectWrappers.wrap(cdkObject) as DnsRecordProperty
+          DnsRecordProperty = CdkObjectWrappers.wrap(cdkObject) as? DnsRecordProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DnsRecordProperty):
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty = (wrapped

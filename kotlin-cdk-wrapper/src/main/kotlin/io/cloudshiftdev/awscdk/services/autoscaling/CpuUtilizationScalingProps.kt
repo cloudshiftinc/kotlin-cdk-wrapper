@@ -145,7 +145,8 @@ public interface CpuUtilizationScalingProps : BaseTargetTrackingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CpuUtilizationScalingProps):
-        CpuUtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as CpuUtilizationScalingProps
+        CpuUtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CpuUtilizationScalingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CpuUtilizationScalingProps):
         software.amazon.awscdk.services.autoscaling.CpuUtilizationScalingProps = (wrapped as

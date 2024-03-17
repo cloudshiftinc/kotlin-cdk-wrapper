@@ -336,7 +336,8 @@ public interface EndpointGroupProps : EndpointGroupOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.EndpointGroupProps):
-        EndpointGroupProps = CdkObjectWrappers.wrap(cdkObject) as EndpointGroupProps
+        EndpointGroupProps = CdkObjectWrappers.wrap(cdkObject) as? EndpointGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EndpointGroupProps):
         software.amazon.awscdk.services.globalaccelerator.EndpointGroupProps = (wrapped as

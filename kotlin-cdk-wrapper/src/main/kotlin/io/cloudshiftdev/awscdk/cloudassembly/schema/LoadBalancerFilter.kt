@@ -143,7 +143,8 @@ public interface LoadBalancerFilter {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter):
-        LoadBalancerFilter = CdkObjectWrappers.wrap(cdkObject) as LoadBalancerFilter
+        LoadBalancerFilter = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerFilter ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerFilter):
         software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter = (wrapped as

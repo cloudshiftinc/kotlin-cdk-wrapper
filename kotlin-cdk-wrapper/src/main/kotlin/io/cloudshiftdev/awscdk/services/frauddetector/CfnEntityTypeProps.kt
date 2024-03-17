@@ -152,7 +152,8 @@ public interface CfnEntityTypeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityTypeProps):
-        CfnEntityTypeProps = CdkObjectWrappers.wrap(cdkObject) as CfnEntityTypeProps
+        CfnEntityTypeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEntityTypeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEntityTypeProps):
         software.amazon.awscdk.services.frauddetector.CfnEntityTypeProps = (wrapped as

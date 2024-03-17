@@ -159,7 +159,8 @@ public interface CfnRecoveryGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroupProps):
-        CfnRecoveryGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnRecoveryGroupProps
+        CfnRecoveryGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRecoveryGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecoveryGroupProps):
         software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroupProps = (wrapped as

@@ -208,7 +208,8 @@ public interface CustomPolicyProps : RuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.CustomPolicyProps):
-        CustomPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CustomPolicyProps
+        CustomPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CustomPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomPolicyProps):
         software.amazon.awscdk.services.config.CustomPolicyProps = (wrapped as CdkObject).cdkObject

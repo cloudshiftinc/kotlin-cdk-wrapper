@@ -505,7 +505,8 @@ public open class CfnEventInvokeConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty):
-          OnFailureProperty = CdkObjectWrappers.wrap(cdkObject) as OnFailureProperty
+          OnFailureProperty = CdkObjectWrappers.wrap(cdkObject) as? OnFailureProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnFailureProperty):
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty = (wrapped
@@ -672,7 +673,8 @@ public open class CfnEventInvokeConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty):
-          DestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DestinationConfigProperty
+          DestinationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationConfigProperty):
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty =
@@ -753,7 +755,8 @@ public open class CfnEventInvokeConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty):
-          OnSuccessProperty = CdkObjectWrappers.wrap(cdkObject) as OnSuccessProperty
+          OnSuccessProperty = CdkObjectWrappers.wrap(cdkObject) as? OnSuccessProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnSuccessProperty):
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty = (wrapped

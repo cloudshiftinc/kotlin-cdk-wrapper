@@ -198,7 +198,8 @@ public interface LoadBalancerContextQuery : LoadBalancerFilter {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadBalancerContextQuery):
-        LoadBalancerContextQuery = CdkObjectWrappers.wrap(cdkObject) as LoadBalancerContextQuery
+        LoadBalancerContextQuery = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerContextQuery):
         software.amazon.awscdk.cloudassembly.schema.LoadBalancerContextQuery = (wrapped as

@@ -295,8 +295,8 @@ public interface CfnLoadBalancerTlsCertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificateProps):
-        CfnLoadBalancerTlsCertificateProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLoadBalancerTlsCertificateProps
+        CfnLoadBalancerTlsCertificateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLoadBalancerTlsCertificateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoadBalancerTlsCertificateProps):
         software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificateProps = (wrapped as

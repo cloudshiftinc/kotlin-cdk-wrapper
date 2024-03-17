@@ -138,8 +138,8 @@ public interface CfnResolverRuleAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociationProps):
-        CfnResolverRuleAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnResolverRuleAssociationProps
+        CfnResolverRuleAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResolverRuleAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverRuleAssociationProps):
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociationProps = (wrapped

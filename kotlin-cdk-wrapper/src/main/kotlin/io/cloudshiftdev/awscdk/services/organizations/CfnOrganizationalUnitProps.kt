@@ -275,7 +275,8 @@ public interface CfnOrganizationalUnitProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.organizations.CfnOrganizationalUnitProps):
-        CfnOrganizationalUnitProps = CdkObjectWrappers.wrap(cdkObject) as CfnOrganizationalUnitProps
+        CfnOrganizationalUnitProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnOrganizationalUnitProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOrganizationalUnitProps):
         software.amazon.awscdk.services.organizations.CfnOrganizationalUnitProps = (wrapped as

@@ -213,8 +213,8 @@ public interface UserPoolIdentityProviderAmazonProps : UserPoolIdentityProviderP
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderAmazonProps):
-        UserPoolIdentityProviderAmazonProps = CdkObjectWrappers.wrap(cdkObject) as
-        UserPoolIdentityProviderAmazonProps
+        UserPoolIdentityProviderAmazonProps = CdkObjectWrappers.wrap(cdkObject) as?
+        UserPoolIdentityProviderAmazonProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolIdentityProviderAmazonProps):
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderAmazonProps = (wrapped as

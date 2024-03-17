@@ -502,8 +502,8 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualClusterProps):
-        EmrContainersCreateVirtualClusterProps = CdkObjectWrappers.wrap(cdkObject) as
-        EmrContainersCreateVirtualClusterProps
+        EmrContainersCreateVirtualClusterProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EmrContainersCreateVirtualClusterProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrContainersCreateVirtualClusterProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualClusterProps =

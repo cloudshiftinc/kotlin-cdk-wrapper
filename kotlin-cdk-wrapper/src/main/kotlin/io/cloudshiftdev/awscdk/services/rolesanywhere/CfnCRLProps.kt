@@ -201,7 +201,7 @@ public interface CfnCRLProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnCRLProps):
-        CfnCRLProps = CdkObjectWrappers.wrap(cdkObject) as CfnCRLProps
+        CfnCRLProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCRLProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCRLProps):
         software.amazon.awscdk.services.rolesanywhere.CfnCRLProps = (wrapped as CdkObject).cdkObject

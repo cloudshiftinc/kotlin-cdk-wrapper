@@ -821,8 +821,8 @@ public interface CloudFormationDeleteStackActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackActionProps):
-        CloudFormationDeleteStackActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationDeleteStackActionProps
+        CloudFormationDeleteStackActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationDeleteStackActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationDeleteStackActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackActionProps =

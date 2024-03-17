@@ -208,7 +208,7 @@ public interface GroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.GroupProps): GroupProps =
-        CdkObjectWrappers.wrap(cdkObject) as GroupProps
+        CdkObjectWrappers.wrap(cdkObject) as? GroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GroupProps): software.amazon.awscdk.services.iam.GroupProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.GroupProps

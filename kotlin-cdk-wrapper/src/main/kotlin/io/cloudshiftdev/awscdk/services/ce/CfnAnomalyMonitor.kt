@@ -432,7 +432,8 @@ public open class CfnAnomalyMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitor.ResourceTagProperty):
-          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceTagProperty
+          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceTagProperty):
           software.amazon.awscdk.services.ce.CfnAnomalyMonitor.ResourceTagProperty = (wrapped as

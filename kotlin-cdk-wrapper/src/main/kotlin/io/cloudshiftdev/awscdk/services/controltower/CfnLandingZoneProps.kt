@@ -150,7 +150,8 @@ public interface CfnLandingZoneProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZoneProps):
-        CfnLandingZoneProps = CdkObjectWrappers.wrap(cdkObject) as CfnLandingZoneProps
+        CfnLandingZoneProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLandingZoneProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLandingZoneProps):
         software.amazon.awscdk.services.controltower.CfnLandingZoneProps = (wrapped as

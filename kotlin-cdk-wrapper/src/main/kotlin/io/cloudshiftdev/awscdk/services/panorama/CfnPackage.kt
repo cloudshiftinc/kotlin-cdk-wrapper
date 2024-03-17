@@ -492,7 +492,8 @@ public open class CfnPackage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.panorama.CfnPackage.StorageLocationProperty):
-          StorageLocationProperty = CdkObjectWrappers.wrap(cdkObject) as StorageLocationProperty
+          StorageLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? StorageLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageLocationProperty):
           software.amazon.awscdk.services.panorama.CfnPackage.StorageLocationProperty = (wrapped as

@@ -229,7 +229,8 @@ public interface CfnTestGridProjectProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProjectProps):
-        CfnTestGridProjectProps = CdkObjectWrappers.wrap(cdkObject) as CfnTestGridProjectProps
+        CfnTestGridProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTestGridProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTestGridProjectProps):
         software.amazon.awscdk.services.devicefarm.CfnTestGridProjectProps = (wrapped as

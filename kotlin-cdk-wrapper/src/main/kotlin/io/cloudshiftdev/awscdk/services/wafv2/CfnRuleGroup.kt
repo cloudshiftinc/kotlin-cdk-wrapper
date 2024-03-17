@@ -1704,7 +1704,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonBodyProperty):
-          JsonBodyProperty = CdkObjectWrappers.wrap(cdkObject) as JsonBodyProperty
+          JsonBodyProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonBodyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonBodyProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonBodyProperty = (wrapped as
@@ -1973,7 +1974,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseProperty):
-          CustomResponseProperty = CdkObjectWrappers.wrap(cdkObject) as CustomResponseProperty
+          CustomResponseProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomResponseProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomResponseProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseProperty = (wrapped as
@@ -2076,8 +2078,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ImmunityTimePropertyProperty):
-          ImmunityTimePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ImmunityTimePropertyProperty
+          ImmunityTimePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ImmunityTimePropertyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImmunityTimePropertyProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ImmunityTimePropertyProperty = (wrapped
@@ -2344,7 +2346,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleActionProperty):
-          RuleActionProperty = CdkObjectWrappers.wrap(cdkObject) as RuleActionProperty
+          RuleActionProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleActionProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleActionProperty = (wrapped as
@@ -3426,7 +3429,7 @@ public open class CfnRuleGroup internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleProperty):
-          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleProperty = (wrapped as
@@ -3697,7 +3700,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.GeoMatchStatementProperty):
-          GeoMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as GeoMatchStatementProperty
+          GeoMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GeoMatchStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GeoMatchStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.GeoMatchStatementProperty = (wrapped as
@@ -3869,8 +3873,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookieMatchPatternProperty):
-          CookieMatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CookieMatchPatternProperty
+          CookieMatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CookieMatchPatternProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookieMatchPatternProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookieMatchPatternProperty = (wrapped
@@ -4182,8 +4186,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.SizeConstraintStatementProperty):
-          SizeConstraintStatementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SizeConstraintStatementProperty
+          SizeConstraintStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SizeConstraintStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SizeConstraintStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SizeConstraintStatementProperty =
@@ -5039,7 +5043,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.FieldToMatchProperty):
-          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldToMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.FieldToMatchProperty = (wrapped as
@@ -5197,8 +5202,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelMatchStatementProperty):
-          LabelMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LabelMatchStatementProperty
+          LabelMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LabelMatchStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LabelMatchStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelMatchStatementProperty = (wrapped
@@ -5686,7 +5691,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.NotStatementProperty):
-          NotStatementProperty = CdkObjectWrappers.wrap(cdkObject) as NotStatementProperty
+          NotStatementProperty = CdkObjectWrappers.wrap(cdkObject) as? NotStatementProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.NotStatementProperty = (wrapped as
@@ -5937,7 +5943,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.VisibilityConfigProperty):
-          VisibilityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VisibilityConfigProperty
+          VisibilityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VisibilityConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VisibilityConfigProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.VisibilityConfigProperty = (wrapped as
@@ -6031,8 +6038,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitLabelNamespaceProperty):
-          RateLimitLabelNamespaceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RateLimitLabelNamespaceProperty
+          RateLimitLabelNamespaceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateLimitLabelNamespaceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateLimitLabelNamespaceProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitLabelNamespaceProperty =
@@ -8442,7 +8449,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.StatementProperty):
-          StatementProperty = CdkObjectWrappers.wrap(cdkObject) as StatementProperty
+          StatementProperty = CdkObjectWrappers.wrap(cdkObject) as? StatementProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.StatementProperty = (wrapped as
@@ -9185,8 +9193,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementCustomKeyProperty):
-          RateBasedStatementCustomKeyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RateBasedStatementCustomKeyProperty
+          RateBasedStatementCustomKeyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateBasedStatementCustomKeyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateBasedStatementCustomKeyProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementCustomKeyProperty =
@@ -9452,8 +9460,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetForwardedIPConfigurationProperty):
-          IPSetForwardedIPConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IPSetForwardedIPConfigurationProperty
+          IPSetForwardedIPConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IPSetForwardedIPConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IPSetForwardedIPConfigurationProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetForwardedIPConfigurationProperty =
@@ -9663,8 +9671,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetReferenceStatementProperty):
-          IPSetReferenceStatementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IPSetReferenceStatementProperty
+          IPSetReferenceStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IPSetReferenceStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IPSetReferenceStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetReferenceStatementProperty =
@@ -10147,7 +10155,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.OrStatementProperty):
-          OrStatementProperty = CdkObjectWrappers.wrap(cdkObject) as OrStatementProperty
+          OrStatementProperty = CdkObjectWrappers.wrap(cdkObject) as? OrStatementProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OrStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.OrStatementProperty = (wrapped as
@@ -10683,8 +10692,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ByteMatchStatementProperty):
-          ByteMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ByteMatchStatementProperty
+          ByteMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ByteMatchStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ByteMatchStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ByteMatchStatementProperty = (wrapped
@@ -10952,8 +10961,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexMatchStatementProperty):
-          RegexMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RegexMatchStatementProperty
+          RegexMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegexMatchStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegexMatchStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexMatchStatementProperty = (wrapped
@@ -11074,7 +11083,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeConfigProperty):
-          ChallengeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ChallengeConfigProperty
+          ChallengeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ChallengeConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ChallengeConfigProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeConfigProperty = (wrapped as
@@ -11205,8 +11215,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.TextTransformationProperty):
-          TextTransformationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TextTransformationProperty
+          TextTransformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TextTransformationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TextTransformationProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.TextTransformationProperty = (wrapped
@@ -11327,7 +11337,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaConfigProperty):
-          CaptchaConfigProperty = CdkObjectWrappers.wrap(cdkObject) as CaptchaConfigProperty
+          CaptchaConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? CaptchaConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptchaConfigProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaConfigProperty = (wrapped as
@@ -11440,7 +11451,7 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CountProperty):
-          CountProperty = CdkObjectWrappers.wrap(cdkObject) as CountProperty
+          CountProperty = CdkObjectWrappers.wrap(cdkObject) as? CountProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CountProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CountProperty = (wrapped as
@@ -11604,7 +11615,7 @@ public open class CfnRuleGroup internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.BodyProperty):
-          BodyProperty = CdkObjectWrappers.wrap(cdkObject) as BodyProperty
+          BodyProperty = CdkObjectWrappers.wrap(cdkObject) as? BodyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BodyProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.BodyProperty = (wrapped as
@@ -11758,8 +11769,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomRequestHandlingProperty):
-          CustomRequestHandlingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomRequestHandlingProperty
+          CustomRequestHandlingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomRequestHandlingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomRequestHandlingProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomRequestHandlingProperty =
@@ -11952,7 +11963,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitCookieProperty):
-          RateLimitCookieProperty = CdkObjectWrappers.wrap(cdkObject) as RateLimitCookieProperty
+          RateLimitCookieProperty = CdkObjectWrappers.wrap(cdkObject) as? RateLimitCookieProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateLimitCookieProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitCookieProperty = (wrapped as
@@ -12145,8 +12157,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ForwardedIPConfigurationProperty):
-          ForwardedIPConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ForwardedIPConfigurationProperty
+          ForwardedIPConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ForwardedIPConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ForwardedIPConfigurationProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ForwardedIPConfigurationProperty =
@@ -12260,7 +12272,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeProperty):
-          ChallengeProperty = CdkObjectWrappers.wrap(cdkObject) as ChallengeProperty
+          ChallengeProperty = CdkObjectWrappers.wrap(cdkObject) as? ChallengeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ChallengeProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeProperty = (wrapped as
@@ -12388,7 +12401,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomHTTPHeaderProperty):
-          CustomHTTPHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as CustomHTTPHeaderProperty
+          CustomHTTPHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomHTTPHeaderProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomHTTPHeaderProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomHTTPHeaderProperty = (wrapped as
@@ -12668,8 +12682,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexPatternSetReferenceStatementProperty):
-          RegexPatternSetReferenceStatementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RegexPatternSetReferenceStatementProperty
+          RegexPatternSetReferenceStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegexPatternSetReferenceStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegexPatternSetReferenceStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexPatternSetReferenceStatementProperty
@@ -12810,8 +12824,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseBodyProperty):
-          CustomResponseBodyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomResponseBodyProperty
+          CustomResponseBodyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomResponseBodyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomResponseBodyProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseBodyProperty = (wrapped
@@ -13054,7 +13068,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.XssMatchStatementProperty):
-          XssMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as XssMatchStatementProperty
+          XssMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          XssMatchStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: XssMatchStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.XssMatchStatementProperty = (wrapped as
@@ -13167,7 +13182,7 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.AllowProperty):
-          AllowProperty = CdkObjectWrappers.wrap(cdkObject) as AllowProperty
+          AllowProperty = CdkObjectWrappers.wrap(cdkObject) as? AllowProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AllowProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AllowProperty = (wrapped as
@@ -13256,7 +13271,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleHeaderProperty):
-          SingleHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as SingleHeaderProperty
+          SingleHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? SingleHeaderProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleHeaderProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleHeaderProperty = (wrapped as
@@ -13546,7 +13562,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookiesProperty):
-          CookiesProperty = CdkObjectWrappers.wrap(cdkObject) as CookiesProperty
+          CookiesProperty = CdkObjectWrappers.wrap(cdkObject) as? CookiesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookiesProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookiesProperty = (wrapped as
@@ -13634,8 +13651,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleQueryArgumentProperty):
-          SingleQueryArgumentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SingleQueryArgumentProperty
+          SingleQueryArgumentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingleQueryArgumentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingleQueryArgumentProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleQueryArgumentProperty = (wrapped
@@ -13832,7 +13849,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonMatchPatternProperty):
-          JsonMatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as JsonMatchPatternProperty
+          JsonMatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as? JsonMatchPatternProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JsonMatchPatternProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonMatchPatternProperty = (wrapped as
@@ -13999,7 +14017,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitUriPathProperty):
-          RateLimitUriPathProperty = CdkObjectWrappers.wrap(cdkObject) as RateLimitUriPathProperty
+          RateLimitUriPathProperty = CdkObjectWrappers.wrap(cdkObject) as? RateLimitUriPathProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateLimitUriPathProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitUriPathProperty = (wrapped as
@@ -14113,7 +14132,7 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.BlockProperty):
-          BlockProperty = CdkObjectWrappers.wrap(cdkObject) as BlockProperty
+          BlockProperty = CdkObjectWrappers.wrap(cdkObject) as? BlockProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlockProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.BlockProperty = (wrapped as
@@ -15106,8 +15125,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementProperty):
-          RateBasedStatementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RateBasedStatementProperty
+          RateBasedStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateBasedStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateBasedStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementProperty = (wrapped
@@ -15300,7 +15319,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty):
-          RateLimitHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as RateLimitHeaderProperty
+          RateLimitHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as? RateLimitHeaderProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateLimitHeaderProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty = (wrapped as
@@ -15593,7 +15613,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeadersProperty):
-          HeadersProperty = CdkObjectWrappers.wrap(cdkObject) as HeadersProperty
+          HeadersProperty = CdkObjectWrappers.wrap(cdkObject) as? HeadersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeadersProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeadersProperty = (wrapped as
@@ -15764,8 +15785,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeaderMatchPatternProperty):
-          HeaderMatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HeaderMatchPatternProperty
+          HeaderMatchPatternProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HeaderMatchPatternProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeaderMatchPatternProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeaderMatchPatternProperty = (wrapped
@@ -15852,7 +15873,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelSummaryProperty):
-          LabelSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as LabelSummaryProperty
+          LabelSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as? LabelSummaryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LabelSummaryProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelSummaryProperty = (wrapped as
@@ -15933,7 +15955,7 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelProperty):
-          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as LabelProperty
+          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as? LabelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LabelProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelProperty = (wrapped as
@@ -16415,7 +16437,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty):
-          AndStatementProperty = CdkObjectWrappers.wrap(cdkObject) as AndStatementProperty
+          AndStatementProperty = CdkObjectWrappers.wrap(cdkObject) as? AndStatementProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AndStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty = (wrapped as
@@ -16612,8 +16635,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryArgumentProperty):
-          RateLimitQueryArgumentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RateLimitQueryArgumentProperty
+          RateLimitQueryArgumentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateLimitQueryArgumentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateLimitQueryArgumentProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryArgumentProperty =
@@ -16781,8 +16804,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryStringProperty):
-          RateLimitQueryStringProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RateLimitQueryStringProperty
+          RateLimitQueryStringProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateLimitQueryStringProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateLimitQueryStringProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryStringProperty = (wrapped
@@ -17097,8 +17120,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.SqliMatchStatementProperty):
-          SqliMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SqliMatchStatementProperty
+          SqliMatchStatementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SqliMatchStatementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SqliMatchStatementProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SqliMatchStatementProperty = (wrapped
@@ -17211,7 +17234,8 @@ public open class CfnRuleGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaProperty):
-          CaptchaProperty = CdkObjectWrappers.wrap(cdkObject) as CaptchaProperty
+          CaptchaProperty = CdkObjectWrappers.wrap(cdkObject) as? CaptchaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptchaProperty):
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaProperty = (wrapped as

@@ -747,7 +747,7 @@ public interface NodegroupProps : NodegroupOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.NodegroupProps): NodegroupProps
-        = CdkObjectWrappers.wrap(cdkObject) as NodegroupProps
+        = CdkObjectWrappers.wrap(cdkObject) as? NodegroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NodegroupProps): software.amazon.awscdk.services.eks.NodegroupProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.NodegroupProps

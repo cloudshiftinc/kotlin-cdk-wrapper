@@ -144,7 +144,7 @@ public interface AddRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddRuleProps):
-        AddRuleProps = CdkObjectWrappers.wrap(cdkObject) as AddRuleProps
+        AddRuleProps = CdkObjectWrappers.wrap(cdkObject) as? AddRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddRuleProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.AddRuleProps = (wrapped as

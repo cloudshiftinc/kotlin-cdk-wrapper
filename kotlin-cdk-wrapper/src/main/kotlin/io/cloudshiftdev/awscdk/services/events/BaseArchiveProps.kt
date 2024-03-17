@@ -176,7 +176,8 @@ public interface BaseArchiveProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.BaseArchiveProps):
-        BaseArchiveProps = CdkObjectWrappers.wrap(cdkObject) as BaseArchiveProps
+        BaseArchiveProps = CdkObjectWrappers.wrap(cdkObject) as? BaseArchiveProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseArchiveProps):
         software.amazon.awscdk.services.events.BaseArchiveProps = (wrapped as CdkObject).cdkObject

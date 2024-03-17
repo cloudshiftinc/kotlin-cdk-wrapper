@@ -209,8 +209,8 @@ public interface CfnUserPoolResourceServerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolResourceServerProps):
-        CfnUserPoolResourceServerProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnUserPoolResourceServerProps
+        CfnUserPoolResourceServerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserPoolResourceServerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolResourceServerProps):
         software.amazon.awscdk.services.cognito.CfnUserPoolResourceServerProps = (wrapped as

@@ -215,7 +215,8 @@ public interface DynamoDbDataSourceProps : BackedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.DynamoDbDataSourceProps):
-        DynamoDbDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as DynamoDbDataSourceProps
+        DynamoDbDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? DynamoDbDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DynamoDbDataSourceProps):
         software.amazon.awscdk.services.appsync.DynamoDbDataSourceProps = (wrapped as

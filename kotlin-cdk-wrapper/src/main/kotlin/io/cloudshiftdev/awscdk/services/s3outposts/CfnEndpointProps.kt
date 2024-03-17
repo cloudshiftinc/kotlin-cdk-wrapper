@@ -287,7 +287,8 @@ public interface CfnEndpointProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpointProps):
-        CfnEndpointProps = CdkObjectWrappers.wrap(cdkObject) as CfnEndpointProps
+        CfnEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointProps):
         software.amazon.awscdk.services.s3outposts.CfnEndpointProps = (wrapped as

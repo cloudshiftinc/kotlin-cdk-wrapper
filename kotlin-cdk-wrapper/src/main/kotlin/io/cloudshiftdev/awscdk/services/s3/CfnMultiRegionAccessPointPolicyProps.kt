@@ -109,8 +109,8 @@ public interface CfnMultiRegionAccessPointPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicyProps):
-        CfnMultiRegionAccessPointPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnMultiRegionAccessPointPolicyProps
+        CfnMultiRegionAccessPointPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMultiRegionAccessPointPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMultiRegionAccessPointPolicyProps):
         software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicyProps = (wrapped as

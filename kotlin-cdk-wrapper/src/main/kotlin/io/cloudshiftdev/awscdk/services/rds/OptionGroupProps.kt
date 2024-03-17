@@ -186,7 +186,8 @@ public interface OptionGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.OptionGroupProps):
-        OptionGroupProps = CdkObjectWrappers.wrap(cdkObject) as OptionGroupProps
+        OptionGroupProps = CdkObjectWrappers.wrap(cdkObject) as? OptionGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OptionGroupProps):
         software.amazon.awscdk.services.rds.OptionGroupProps = (wrapped as CdkObject).cdkObject as

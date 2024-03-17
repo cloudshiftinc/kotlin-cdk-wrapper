@@ -145,8 +145,8 @@ public interface CfnLoggerDefinitionVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersionProps):
-        CfnLoggerDefinitionVersionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLoggerDefinitionVersionProps
+        CfnLoggerDefinitionVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLoggerDefinitionVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoggerDefinitionVersionProps):
         software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersionProps = (wrapped as

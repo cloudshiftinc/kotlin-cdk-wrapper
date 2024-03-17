@@ -293,7 +293,8 @@ public interface ManualApprovalActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.ManualApprovalActionProps):
-        ManualApprovalActionProps = CdkObjectWrappers.wrap(cdkObject) as ManualApprovalActionProps
+        ManualApprovalActionProps = CdkObjectWrappers.wrap(cdkObject) as? ManualApprovalActionProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ManualApprovalActionProps):
         software.amazon.awscdk.services.codepipeline.actions.ManualApprovalActionProps = (wrapped as

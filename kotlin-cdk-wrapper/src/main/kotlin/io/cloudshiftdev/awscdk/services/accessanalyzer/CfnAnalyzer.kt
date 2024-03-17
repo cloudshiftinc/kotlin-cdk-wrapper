@@ -656,7 +656,8 @@ public open class CfnAnalyzer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as FilterProperty
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty = (wrapped as
@@ -791,8 +792,8 @@ public open class CfnAnalyzer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty):
-          AnalyzerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AnalyzerConfigurationProperty
+          AnalyzerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalyzerConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalyzerConfigurationProperty):
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty =
@@ -929,7 +930,8 @@ public open class CfnAnalyzer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty):
-          ArchiveRuleProperty = CdkObjectWrappers.wrap(cdkObject) as ArchiveRuleProperty
+          ArchiveRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ArchiveRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArchiveRuleProperty):
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty = (wrapped
@@ -1029,8 +1031,8 @@ public open class CfnAnalyzer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty):
-          UnusedAccessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UnusedAccessConfigurationProperty
+          UnusedAccessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UnusedAccessConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UnusedAccessConfigurationProperty):
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty

@@ -255,7 +255,8 @@ public interface CfnSegmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnSegmentProps):
-        CfnSegmentProps = CdkObjectWrappers.wrap(cdkObject) as CfnSegmentProps
+        CfnSegmentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSegmentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSegmentProps):
         software.amazon.awscdk.services.evidently.CfnSegmentProps = (wrapped as CdkObject).cdkObject

@@ -175,7 +175,8 @@ public interface ReceiptRuleSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleSetProps):
-        ReceiptRuleSetProps = CdkObjectWrappers.wrap(cdkObject) as ReceiptRuleSetProps
+        ReceiptRuleSetProps = CdkObjectWrappers.wrap(cdkObject) as? ReceiptRuleSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReceiptRuleSetProps):
         software.amazon.awscdk.services.ses.ReceiptRuleSetProps = (wrapped as CdkObject).cdkObject

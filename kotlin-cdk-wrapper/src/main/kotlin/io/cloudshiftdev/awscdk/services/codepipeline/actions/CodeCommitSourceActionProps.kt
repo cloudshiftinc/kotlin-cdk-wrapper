@@ -413,8 +413,8 @@ public interface CodeCommitSourceActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceActionProps):
-        CodeCommitSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CodeCommitSourceActionProps
+        CodeCommitSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CodeCommitSourceActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeCommitSourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceActionProps = (wrapped

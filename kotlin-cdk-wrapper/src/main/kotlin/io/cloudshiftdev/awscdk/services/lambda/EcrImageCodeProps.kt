@@ -264,7 +264,8 @@ public interface EcrImageCodeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.EcrImageCodeProps):
-        EcrImageCodeProps = CdkObjectWrappers.wrap(cdkObject) as EcrImageCodeProps
+        EcrImageCodeProps = CdkObjectWrappers.wrap(cdkObject) as? EcrImageCodeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcrImageCodeProps):
         software.amazon.awscdk.services.lambda.EcrImageCodeProps = (wrapped as CdkObject).cdkObject

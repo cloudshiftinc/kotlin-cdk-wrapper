@@ -328,7 +328,8 @@ public interface LoadBalancerListener {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener):
-        LoadBalancerListener = CdkObjectWrappers.wrap(cdkObject) as LoadBalancerListener
+        LoadBalancerListener = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerListener ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerListener):
         software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener = (wrapped as

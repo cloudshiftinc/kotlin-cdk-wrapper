@@ -387,7 +387,7 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.assets.AssetOptions):
-        AssetOptions = CdkObjectWrappers.wrap(cdkObject) as AssetOptions
+        AssetOptions = CdkObjectWrappers.wrap(cdkObject) as? AssetOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetOptions):
         software.amazon.awscdk.services.s3.assets.AssetOptions = (wrapped as CdkObject).cdkObject as

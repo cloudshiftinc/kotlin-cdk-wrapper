@@ -173,7 +173,8 @@ public interface HttpIntegrationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.HttpIntegrationProps):
-        HttpIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as HttpIntegrationProps
+        HttpIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? HttpIntegrationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpIntegrationProps):
         software.amazon.awscdk.services.apigateway.HttpIntegrationProps = (wrapped as

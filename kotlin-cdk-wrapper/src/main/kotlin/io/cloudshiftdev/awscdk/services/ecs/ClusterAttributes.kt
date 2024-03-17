@@ -326,7 +326,8 @@ public interface ClusterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ClusterAttributes):
-        ClusterAttributes = CdkObjectWrappers.wrap(cdkObject) as ClusterAttributes
+        ClusterAttributes = CdkObjectWrappers.wrap(cdkObject) as? ClusterAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClusterAttributes):
         software.amazon.awscdk.services.ecs.ClusterAttributes = (wrapped as CdkObject).cdkObject as

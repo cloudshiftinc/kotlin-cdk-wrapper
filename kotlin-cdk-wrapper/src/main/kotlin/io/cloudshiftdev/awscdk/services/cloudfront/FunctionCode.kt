@@ -39,6 +39,10 @@ public abstract class FunctionCode internal constructor(
    */
   public open fun render(): String = unwrap(this).render()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode,
+  ) : FunctionCode(cdkObject)
+
   public companion object {
     public fun fromFile(options: FileCodeOptions): FunctionCode =
         software.amazon.awscdk.services.cloudfront.FunctionCode.fromFile(options.let(FileCodeOptions::unwrap)).let(FunctionCode::wrap)
@@ -52,7 +56,7 @@ public abstract class FunctionCode internal constructor(
         software.amazon.awscdk.services.cloudfront.FunctionCode.fromInline(code).let(FunctionCode::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode):
-        FunctionCode = CdkObjectWrappers.wrap(cdkObject) as FunctionCode
+        FunctionCode = CdkObjectWrappers.wrap(cdkObject) as? FunctionCode ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionCode):
         software.amazon.awscdk.services.cloudfront.FunctionCode = (wrapped as CdkObject).cdkObject

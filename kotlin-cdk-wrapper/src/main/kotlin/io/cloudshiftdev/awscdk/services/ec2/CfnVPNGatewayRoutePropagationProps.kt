@@ -142,8 +142,8 @@ public interface CfnVPNGatewayRoutePropagationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagationProps):
-        CfnVPNGatewayRoutePropagationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVPNGatewayRoutePropagationProps
+        CfnVPNGatewayRoutePropagationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPNGatewayRoutePropagationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPNGatewayRoutePropagationProps):
         software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagationProps = (wrapped as

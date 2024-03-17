@@ -103,7 +103,8 @@ public interface ZoneDelegationOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationOptions):
-        ZoneDelegationOptions = CdkObjectWrappers.wrap(cdkObject) as ZoneDelegationOptions
+        ZoneDelegationOptions = CdkObjectWrappers.wrap(cdkObject) as? ZoneDelegationOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ZoneDelegationOptions):
         software.amazon.awscdk.services.route53.ZoneDelegationOptions = (wrapped as

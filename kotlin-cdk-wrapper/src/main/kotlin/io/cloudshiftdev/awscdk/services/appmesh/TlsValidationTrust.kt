@@ -56,6 +56,10 @@ public abstract class TlsValidationTrust internal constructor(
   public open fun bind(scope: Construct): TlsValidationTrustConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(TlsValidationTrustConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,
+  ) : TlsValidationTrust(cdkObject)
+
   public companion object {
     public fun acm(certificateAuthorities: List<ICertificateAuthority>): TlsValidationTrust =
         software.amazon.awscdk.services.appmesh.TlsValidationTrust.acm(certificateAuthorities.map(ICertificateAuthority::unwrap)).let(TlsValidationTrust::wrap)
@@ -70,7 +74,8 @@ public abstract class TlsValidationTrust internal constructor(
         software.amazon.awscdk.services.appmesh.TlsValidationTrust.sds(secretName).let(MutualTlsValidationTrust::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust):
-        TlsValidationTrust = CdkObjectWrappers.wrap(cdkObject) as TlsValidationTrust
+        TlsValidationTrust = CdkObjectWrappers.wrap(cdkObject) as? TlsValidationTrust ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TlsValidationTrust):
         software.amazon.awscdk.services.appmesh.TlsValidationTrust = (wrapped as

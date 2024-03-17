@@ -93,7 +93,8 @@ public interface CredentialSpecConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CredentialSpecConfig):
-        CredentialSpecConfig = CdkObjectWrappers.wrap(cdkObject) as CredentialSpecConfig
+        CredentialSpecConfig = CdkObjectWrappers.wrap(cdkObject) as? CredentialSpecConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CredentialSpecConfig):
         software.amazon.awscdk.services.ecs.CredentialSpecConfig = (wrapped as CdkObject).cdkObject

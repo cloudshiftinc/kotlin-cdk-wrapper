@@ -465,7 +465,8 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.StreamEventSourceProps):
-        StreamEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as StreamEventSourceProps
+        StreamEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as? StreamEventSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.StreamEventSourceProps = (wrapped as

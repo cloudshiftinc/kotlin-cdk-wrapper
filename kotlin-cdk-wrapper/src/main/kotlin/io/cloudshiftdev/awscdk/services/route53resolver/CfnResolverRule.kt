@@ -692,7 +692,8 @@ public open class CfnResolverRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRule.TargetAddressProperty):
-          TargetAddressProperty = CdkObjectWrappers.wrap(cdkObject) as TargetAddressProperty
+          TargetAddressProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetAddressProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetAddressProperty):
           software.amazon.awscdk.services.route53resolver.CfnResolverRule.TargetAddressProperty =

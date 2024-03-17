@@ -152,7 +152,8 @@ public interface EfsFileSystemLocationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.EfsFileSystemLocationProps):
-        EfsFileSystemLocationProps = CdkObjectWrappers.wrap(cdkObject) as EfsFileSystemLocationProps
+        EfsFileSystemLocationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EfsFileSystemLocationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EfsFileSystemLocationProps):
         software.amazon.awscdk.services.codebuild.EfsFileSystemLocationProps = (wrapped as

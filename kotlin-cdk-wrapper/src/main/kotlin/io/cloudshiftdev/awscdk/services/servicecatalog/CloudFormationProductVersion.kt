@@ -169,8 +169,8 @@ public interface CloudFormationProductVersion {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion):
-        CloudFormationProductVersion = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationProductVersion
+        CloudFormationProductVersion = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationProductVersion ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationProductVersion):
         software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion = (wrapped as

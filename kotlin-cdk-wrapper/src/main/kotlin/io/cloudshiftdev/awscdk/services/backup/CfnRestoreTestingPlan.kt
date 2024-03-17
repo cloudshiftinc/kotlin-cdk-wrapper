@@ -671,8 +671,8 @@ public open class CfnRestoreTestingPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty):
-          RestoreTestingRecoveryPointSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RestoreTestingRecoveryPointSelectionProperty
+          RestoreTestingRecoveryPointSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RestoreTestingRecoveryPointSelectionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RestoreTestingRecoveryPointSelectionProperty):
           software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty

@@ -112,7 +112,8 @@ public interface EBSTagSpecification {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EBSTagSpecification):
-        EBSTagSpecification = CdkObjectWrappers.wrap(cdkObject) as EBSTagSpecification
+        EBSTagSpecification = CdkObjectWrappers.wrap(cdkObject) as? EBSTagSpecification ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EBSTagSpecification):
         software.amazon.awscdk.services.ecs.EBSTagSpecification = (wrapped as CdkObject).cdkObject

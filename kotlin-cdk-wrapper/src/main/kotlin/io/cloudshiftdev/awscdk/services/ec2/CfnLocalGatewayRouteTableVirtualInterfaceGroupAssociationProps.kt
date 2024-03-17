@@ -156,8 +156,8 @@ public interface CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps):
         CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps =
-        CdkObjectWrappers.wrap(cdkObject) as
-        CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps
+        CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps):
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps

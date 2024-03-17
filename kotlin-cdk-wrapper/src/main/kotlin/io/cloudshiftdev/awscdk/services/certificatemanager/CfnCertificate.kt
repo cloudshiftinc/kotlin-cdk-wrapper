@@ -919,8 +919,8 @@ public open class CfnCertificate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.CfnCertificate.DomainValidationOptionProperty):
-          DomainValidationOptionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DomainValidationOptionProperty
+          DomainValidationOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DomainValidationOptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DomainValidationOptionProperty):
           software.amazon.awscdk.services.certificatemanager.CfnCertificate.DomainValidationOptionProperty

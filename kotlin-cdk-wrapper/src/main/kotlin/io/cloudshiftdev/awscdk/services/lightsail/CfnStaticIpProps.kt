@@ -104,7 +104,8 @@ public interface CfnStaticIpProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnStaticIpProps):
-        CfnStaticIpProps = CdkObjectWrappers.wrap(cdkObject) as CfnStaticIpProps
+        CfnStaticIpProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStaticIpProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStaticIpProps):
         software.amazon.awscdk.services.lightsail.CfnStaticIpProps = (wrapped as

@@ -86,7 +86,8 @@ public interface NetworkForwardOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions):
-        NetworkForwardOptions = CdkObjectWrappers.wrap(cdkObject) as NetworkForwardOptions
+        NetworkForwardOptions = CdkObjectWrappers.wrap(cdkObject) as? NetworkForwardOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkForwardOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions = (wrapped as

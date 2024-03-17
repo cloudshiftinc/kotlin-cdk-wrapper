@@ -434,7 +434,8 @@ public interface CfnTaskTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplateProps):
-        CfnTaskTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnTaskTemplateProps
+        CfnTaskTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTaskTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskTemplateProps):
         software.amazon.awscdk.services.connect.CfnTaskTemplateProps = (wrapped as

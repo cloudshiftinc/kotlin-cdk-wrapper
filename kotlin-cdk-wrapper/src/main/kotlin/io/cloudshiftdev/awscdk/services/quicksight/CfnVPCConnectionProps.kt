@@ -352,7 +352,8 @@ public interface CfnVPCConnectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnectionProps):
-        CfnVPCConnectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnVPCConnectionProps
+        CfnVPCConnectionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVPCConnectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCConnectionProps):
         software.amazon.awscdk.services.quicksight.CfnVPCConnectionProps = (wrapped as

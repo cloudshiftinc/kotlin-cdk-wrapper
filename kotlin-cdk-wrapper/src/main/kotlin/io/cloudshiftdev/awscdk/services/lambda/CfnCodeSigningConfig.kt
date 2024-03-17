@@ -414,7 +414,8 @@ public open class CfnCodeSigningConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty):
-          AllowedPublishersProperty = CdkObjectWrappers.wrap(cdkObject) as AllowedPublishersProperty
+          AllowedPublishersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AllowedPublishersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AllowedPublishersProperty):
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty =
@@ -527,8 +528,8 @@ public open class CfnCodeSigningConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty):
-          CodeSigningPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CodeSigningPoliciesProperty
+          CodeSigningPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeSigningPoliciesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeSigningPoliciesProperty):
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty =

@@ -219,7 +219,8 @@ public interface MetadataEntryResult : MetadataEntry {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.MetadataEntryResult):
-        MetadataEntryResult = CdkObjectWrappers.wrap(cdkObject) as MetadataEntryResult
+        MetadataEntryResult = CdkObjectWrappers.wrap(cdkObject) as? MetadataEntryResult ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetadataEntryResult):
         software.amazon.awscdk.cxapi.MetadataEntryResult = (wrapped as CdkObject).cdkObject as

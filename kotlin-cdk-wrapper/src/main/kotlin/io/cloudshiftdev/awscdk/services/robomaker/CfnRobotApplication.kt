@@ -526,7 +526,8 @@ public open class CfnRobotApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty):
-          SourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SourceConfigProperty
+          SourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConfigProperty):
           software.amazon.awscdk.services.robomaker.CfnRobotApplication.SourceConfigProperty =
@@ -648,8 +649,8 @@ public open class CfnRobotApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty):
-          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RobotSoftwareSuiteProperty
+          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RobotSoftwareSuiteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RobotSoftwareSuiteProperty):
           software.amazon.awscdk.services.robomaker.CfnRobotApplication.RobotSoftwareSuiteProperty =

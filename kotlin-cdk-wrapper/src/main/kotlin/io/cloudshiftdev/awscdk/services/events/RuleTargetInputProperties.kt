@@ -160,7 +160,8 @@ public interface RuleTargetInputProperties {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.RuleTargetInputProperties):
-        RuleTargetInputProperties = CdkObjectWrappers.wrap(cdkObject) as RuleTargetInputProperties
+        RuleTargetInputProperties = CdkObjectWrappers.wrap(cdkObject) as? RuleTargetInputProperties
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuleTargetInputProperties):
         software.amazon.awscdk.services.events.RuleTargetInputProperties = (wrapped as

@@ -1084,8 +1084,8 @@ public open class CfnAPIKey internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty):
-          ApiKeyRestrictionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApiKeyRestrictionsProperty
+          ApiKeyRestrictionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApiKeyRestrictionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApiKeyRestrictionsProperty):
           software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty = (wrapped

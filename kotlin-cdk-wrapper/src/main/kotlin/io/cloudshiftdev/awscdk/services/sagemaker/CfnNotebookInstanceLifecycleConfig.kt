@@ -414,8 +414,8 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty):
-          NotebookInstanceLifecycleHookProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotebookInstanceLifecycleHookProperty
+          NotebookInstanceLifecycleHookProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotebookInstanceLifecycleHookProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotebookInstanceLifecycleHookProperty):
           software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty

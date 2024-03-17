@@ -389,7 +389,8 @@ public interface CfnWorkflowProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnWorkflowProps):
-        CfnWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as CfnWorkflowProps
+        CfnWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkflowProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkflowProps):
         software.amazon.awscdk.services.imagebuilder.CfnWorkflowProps = (wrapped as

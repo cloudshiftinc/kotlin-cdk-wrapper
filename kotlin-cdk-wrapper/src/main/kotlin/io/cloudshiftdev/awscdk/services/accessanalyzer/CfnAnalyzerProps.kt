@@ -298,7 +298,8 @@ public interface CfnAnalyzerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzerProps):
-        CfnAnalyzerProps = CdkObjectWrappers.wrap(cdkObject) as CfnAnalyzerProps
+        CfnAnalyzerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAnalyzerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnalyzerProps):
         software.amazon.awscdk.services.accessanalyzer.CfnAnalyzerProps = (wrapped as

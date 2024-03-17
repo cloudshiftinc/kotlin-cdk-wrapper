@@ -464,8 +464,8 @@ public interface FargateComputeEnvironmentProps : ManagedComputeEnvironmentProps
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironmentProps):
-        FargateComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        FargateComputeEnvironmentProps
+        FargateComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        FargateComputeEnvironmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.FargateComputeEnvironmentProps = (wrapped as

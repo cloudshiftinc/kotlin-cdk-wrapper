@@ -177,7 +177,8 @@ public interface CfnADMChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnADMChannelProps):
-        CfnADMChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnADMChannelProps
+        CfnADMChannelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnADMChannelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnADMChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnADMChannelProps = (wrapped as

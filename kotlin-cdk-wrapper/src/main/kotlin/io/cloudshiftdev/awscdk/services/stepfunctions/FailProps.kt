@@ -205,7 +205,7 @@ public interface FailProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.FailProps): FailProps
-        = CdkObjectWrappers.wrap(cdkObject) as FailProps
+        = CdkObjectWrappers.wrap(cdkObject) as? FailProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FailProps): software.amazon.awscdk.services.stepfunctions.FailProps
         = (wrapped as CdkObject).cdkObject as

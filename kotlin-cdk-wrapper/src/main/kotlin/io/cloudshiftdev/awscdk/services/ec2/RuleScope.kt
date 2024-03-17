@@ -93,7 +93,7 @@ public interface RuleScope {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.RuleScope): RuleScope =
-        CdkObjectWrappers.wrap(cdkObject) as RuleScope
+        CdkObjectWrappers.wrap(cdkObject) as? RuleScope ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuleScope): software.amazon.awscdk.services.ec2.RuleScope =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.RuleScope

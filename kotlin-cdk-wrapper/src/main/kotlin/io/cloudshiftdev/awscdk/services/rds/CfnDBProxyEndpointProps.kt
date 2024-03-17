@@ -295,7 +295,8 @@ public interface CfnDBProxyEndpointProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpointProps):
-        CfnDBProxyEndpointProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBProxyEndpointProps
+        CfnDBProxyEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDBProxyEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBProxyEndpointProps):
         software.amazon.awscdk.services.rds.CfnDBProxyEndpointProps = (wrapped as

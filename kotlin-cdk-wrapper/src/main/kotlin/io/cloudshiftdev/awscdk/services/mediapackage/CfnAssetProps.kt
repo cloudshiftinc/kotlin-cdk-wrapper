@@ -294,7 +294,7 @@ public interface CfnAssetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnAssetProps):
-        CfnAssetProps = CdkObjectWrappers.wrap(cdkObject) as CfnAssetProps
+        CfnAssetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAssetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssetProps):
         software.amazon.awscdk.services.mediapackage.CfnAssetProps = (wrapped as

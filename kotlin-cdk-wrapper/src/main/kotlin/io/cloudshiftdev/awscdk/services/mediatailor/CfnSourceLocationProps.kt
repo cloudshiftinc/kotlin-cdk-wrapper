@@ -397,7 +397,8 @@ public interface CfnSourceLocationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocationProps):
-        CfnSourceLocationProps = CdkObjectWrappers.wrap(cdkObject) as CfnSourceLocationProps
+        CfnSourceLocationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSourceLocationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSourceLocationProps):
         software.amazon.awscdk.services.mediatailor.CfnSourceLocationProps = (wrapped as

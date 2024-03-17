@@ -109,7 +109,7 @@ public interface EngineVersion {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.EngineVersion): EngineVersion =
-        CdkObjectWrappers.wrap(cdkObject) as EngineVersion
+        CdkObjectWrappers.wrap(cdkObject) as? EngineVersion ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EngineVersion): software.amazon.awscdk.services.rds.EngineVersion =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.rds.EngineVersion

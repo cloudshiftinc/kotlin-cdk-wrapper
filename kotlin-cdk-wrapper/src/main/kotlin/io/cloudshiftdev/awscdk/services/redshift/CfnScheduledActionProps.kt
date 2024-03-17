@@ -455,7 +455,8 @@ public interface CfnScheduledActionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledActionProps):
-        CfnScheduledActionProps = CdkObjectWrappers.wrap(cdkObject) as CfnScheduledActionProps
+        CfnScheduledActionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnScheduledActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduledActionProps):
         software.amazon.awscdk.services.redshift.CfnScheduledActionProps = (wrapped as

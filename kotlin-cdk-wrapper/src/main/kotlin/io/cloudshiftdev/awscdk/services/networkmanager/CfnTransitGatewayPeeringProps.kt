@@ -150,8 +150,8 @@ public interface CfnTransitGatewayPeeringProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeeringProps):
-        CfnTransitGatewayPeeringProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTransitGatewayPeeringProps
+        CfnTransitGatewayPeeringProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTransitGatewayPeeringProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransitGatewayPeeringProps):
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeeringProps = (wrapped as

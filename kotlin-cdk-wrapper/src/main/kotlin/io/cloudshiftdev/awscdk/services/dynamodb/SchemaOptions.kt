@@ -132,7 +132,7 @@ public interface SchemaOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.SchemaOptions):
-        SchemaOptions = CdkObjectWrappers.wrap(cdkObject) as SchemaOptions
+        SchemaOptions = CdkObjectWrappers.wrap(cdkObject) as? SchemaOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SchemaOptions):
         software.amazon.awscdk.services.dynamodb.SchemaOptions = (wrapped as CdkObject).cdkObject as

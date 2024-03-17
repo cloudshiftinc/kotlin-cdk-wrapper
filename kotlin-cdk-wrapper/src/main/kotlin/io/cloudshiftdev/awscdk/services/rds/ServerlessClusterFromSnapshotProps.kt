@@ -589,8 +589,8 @@ public interface ServerlessClusterFromSnapshotProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps):
-        ServerlessClusterFromSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as
-        ServerlessClusterFromSnapshotProps
+        ServerlessClusterFromSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerlessClusterFromSnapshotProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessClusterFromSnapshotProps):
         software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps = (wrapped as

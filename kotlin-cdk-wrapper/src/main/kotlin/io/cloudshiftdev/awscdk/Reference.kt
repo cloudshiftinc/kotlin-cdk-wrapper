@@ -27,11 +27,15 @@ public abstract class Reference internal constructor(
    */
   public open fun target(): IConstruct = unwrap(this).getTarget().let(IConstruct::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.Reference,
+  ) : Reference(cdkObject)
+
   public companion object {
     public fun isReference(x: Any): Boolean = software.amazon.awscdk.Reference.isReference(x)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Reference): Reference =
-        CdkObjectWrappers.wrap(cdkObject) as Reference
+        CdkObjectWrappers.wrap(cdkObject) as? Reference ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Reference): software.amazon.awscdk.Reference = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.Reference

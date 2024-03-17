@@ -1373,8 +1373,8 @@ public interface CommonAutoScalingGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CommonAutoScalingGroupProps):
-        CommonAutoScalingGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        CommonAutoScalingGroupProps
+        CommonAutoScalingGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CommonAutoScalingGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonAutoScalingGroupProps):
         software.amazon.awscdk.services.autoscaling.CommonAutoScalingGroupProps = (wrapped as

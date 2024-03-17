@@ -218,7 +218,7 @@ public interface CfnDomainProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.voiceid.CfnDomainProps):
-        CfnDomainProps = CdkObjectWrappers.wrap(cdkObject) as CfnDomainProps
+        CfnDomainProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDomainProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainProps):
         software.amazon.awscdk.services.voiceid.CfnDomainProps = (wrapped as CdkObject).cdkObject as

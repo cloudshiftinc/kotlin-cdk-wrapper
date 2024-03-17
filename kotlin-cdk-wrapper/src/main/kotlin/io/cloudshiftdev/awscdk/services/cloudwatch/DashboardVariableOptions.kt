@@ -264,7 +264,8 @@ public interface DashboardVariableOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardVariableOptions):
-        DashboardVariableOptions = CdkObjectWrappers.wrap(cdkObject) as DashboardVariableOptions
+        DashboardVariableOptions = CdkObjectWrappers.wrap(cdkObject) as? DashboardVariableOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DashboardVariableOptions):
         software.amazon.awscdk.services.cloudwatch.DashboardVariableOptions = (wrapped as

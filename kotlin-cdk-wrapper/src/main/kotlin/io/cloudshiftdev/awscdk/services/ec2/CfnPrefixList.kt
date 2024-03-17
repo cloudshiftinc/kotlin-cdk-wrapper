@@ -461,7 +461,7 @@ public open class CfnPrefixList internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixList.EntryProperty):
-          EntryProperty = CdkObjectWrappers.wrap(cdkObject) as EntryProperty
+          EntryProperty = CdkObjectWrappers.wrap(cdkObject) as? EntryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EntryProperty):
           software.amazon.awscdk.services.ec2.CfnPrefixList.EntryProperty = (wrapped as

@@ -227,7 +227,8 @@ public interface CfnEnabledControlProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControlProps):
-        CfnEnabledControlProps = CdkObjectWrappers.wrap(cdkObject) as CfnEnabledControlProps
+        CfnEnabledControlProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEnabledControlProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnabledControlProps):
         software.amazon.awscdk.services.controltower.CfnEnabledControlProps = (wrapped as

@@ -137,7 +137,8 @@ public interface UsagePlanPerApiStage {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage):
-        UsagePlanPerApiStage = CdkObjectWrappers.wrap(cdkObject) as UsagePlanPerApiStage
+        UsagePlanPerApiStage = CdkObjectWrappers.wrap(cdkObject) as? UsagePlanPerApiStage ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UsagePlanPerApiStage):
         software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage = (wrapped as

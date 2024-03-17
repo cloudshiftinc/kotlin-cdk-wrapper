@@ -276,7 +276,8 @@ public interface FunctionUrlCorsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions):
-        FunctionUrlCorsOptions = CdkObjectWrappers.wrap(cdkObject) as FunctionUrlCorsOptions
+        FunctionUrlCorsOptions = CdkObjectWrappers.wrap(cdkObject) as? FunctionUrlCorsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FunctionUrlCorsOptions):
         software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions = (wrapped as

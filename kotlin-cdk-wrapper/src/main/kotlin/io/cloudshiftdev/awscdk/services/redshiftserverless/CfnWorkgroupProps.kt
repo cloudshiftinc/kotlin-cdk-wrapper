@@ -492,7 +492,8 @@ public interface CfnWorkgroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroupProps):
-        CfnWorkgroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnWorkgroupProps
+        CfnWorkgroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkgroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkgroupProps):
         software.amazon.awscdk.services.redshiftserverless.CfnWorkgroupProps = (wrapped as

@@ -240,7 +240,7 @@ public interface CfnListProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnListProps):
-        CfnListProps = CdkObjectWrappers.wrap(cdkObject) as CfnListProps
+        CfnListProps = CdkObjectWrappers.wrap(cdkObject) as? CfnListProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnListProps):
         software.amazon.awscdk.services.frauddetector.CfnListProps = (wrapped as

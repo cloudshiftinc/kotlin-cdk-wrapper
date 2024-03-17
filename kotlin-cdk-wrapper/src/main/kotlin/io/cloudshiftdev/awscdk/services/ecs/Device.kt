@@ -146,7 +146,7 @@ public interface Device {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Device): Device =
-        CdkObjectWrappers.wrap(cdkObject) as Device
+        CdkObjectWrappers.wrap(cdkObject) as? Device ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Device): software.amazon.awscdk.services.ecs.Device = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ecs.Device

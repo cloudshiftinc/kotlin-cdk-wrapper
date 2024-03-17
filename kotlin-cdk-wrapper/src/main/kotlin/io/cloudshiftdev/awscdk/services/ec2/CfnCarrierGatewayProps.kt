@@ -119,7 +119,8 @@ public interface CfnCarrierGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCarrierGatewayProps):
-        CfnCarrierGatewayProps = CdkObjectWrappers.wrap(cdkObject) as CfnCarrierGatewayProps
+        CfnCarrierGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCarrierGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCarrierGatewayProps):
         software.amazon.awscdk.services.ec2.CfnCarrierGatewayProps = (wrapped as

@@ -379,7 +379,8 @@ public open class CfnLogDeliveryConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty):
-          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as LogConfigurationProperty
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty
@@ -501,8 +502,8 @@ public open class CfnLogDeliveryConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty):
-          CloudWatchLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchLogsConfigurationProperty
+          CloudWatchLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogsConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty

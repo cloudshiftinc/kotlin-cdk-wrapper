@@ -395,8 +395,8 @@ public interface UserPoolIdentityProviderOidcProps : UserPoolIdentityProviderPro
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidcProps):
-        UserPoolIdentityProviderOidcProps = CdkObjectWrappers.wrap(cdkObject) as
-        UserPoolIdentityProviderOidcProps
+        UserPoolIdentityProviderOidcProps = CdkObjectWrappers.wrap(cdkObject) as?
+        UserPoolIdentityProviderOidcProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolIdentityProviderOidcProps):
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidcProps = (wrapped as

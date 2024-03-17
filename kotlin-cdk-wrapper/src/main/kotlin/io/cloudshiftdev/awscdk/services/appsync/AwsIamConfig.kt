@@ -104,7 +104,7 @@ public interface AwsIamConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.AwsIamConfig): AwsIamConfig
-        = CdkObjectWrappers.wrap(cdkObject) as AwsIamConfig
+        = CdkObjectWrappers.wrap(cdkObject) as? AwsIamConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsIamConfig): software.amazon.awscdk.services.appsync.AwsIamConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.AwsIamConfig

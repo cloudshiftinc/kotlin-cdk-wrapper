@@ -364,8 +364,8 @@ public interface CfnAPNSVoipSandboxChannelProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannelProps):
-        CfnAPNSVoipSandboxChannelProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAPNSVoipSandboxChannelProps
+        CfnAPNSVoipSandboxChannelProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAPNSVoipSandboxChannelProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAPNSVoipSandboxChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannelProps = (wrapped as

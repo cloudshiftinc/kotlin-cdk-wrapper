@@ -457,7 +457,8 @@ public interface CfnNotificationRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarnotifications.CfnNotificationRuleProps):
-        CfnNotificationRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnNotificationRuleProps
+        CfnNotificationRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnNotificationRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotificationRuleProps):
         software.amazon.awscdk.services.codestarnotifications.CfnNotificationRuleProps = (wrapped as

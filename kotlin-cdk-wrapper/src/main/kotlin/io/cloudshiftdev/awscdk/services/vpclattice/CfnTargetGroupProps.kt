@@ -299,7 +299,8 @@ public interface CfnTargetGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroupProps):
-        CfnTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnTargetGroupProps
+        CfnTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTargetGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTargetGroupProps):
         software.amazon.awscdk.services.vpclattice.CfnTargetGroupProps = (wrapped as

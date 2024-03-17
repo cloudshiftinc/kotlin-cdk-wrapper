@@ -70,7 +70,8 @@ public interface FileCodeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.FileCodeOptions):
-        FileCodeOptions = CdkObjectWrappers.wrap(cdkObject) as FileCodeOptions
+        FileCodeOptions = CdkObjectWrappers.wrap(cdkObject) as? FileCodeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileCodeOptions):
         software.amazon.awscdk.services.cloudfront.FileCodeOptions = (wrapped as

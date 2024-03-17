@@ -397,7 +397,7 @@ public interface AssetProps : AssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.assets.AssetProps): AssetProps =
-        CdkObjectWrappers.wrap(cdkObject) as AssetProps
+        CdkObjectWrappers.wrap(cdkObject) as? AssetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetProps): software.amazon.awscdk.services.s3.assets.AssetProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.assets.AssetProps

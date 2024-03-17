@@ -637,7 +637,8 @@ public interface RuleTargetConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.RuleTargetConfig):
-        RuleTargetConfig = CdkObjectWrappers.wrap(cdkObject) as RuleTargetConfig
+        RuleTargetConfig = CdkObjectWrappers.wrap(cdkObject) as? RuleTargetConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuleTargetConfig):
         software.amazon.awscdk.services.events.RuleTargetConfig = (wrapped as CdkObject).cdkObject

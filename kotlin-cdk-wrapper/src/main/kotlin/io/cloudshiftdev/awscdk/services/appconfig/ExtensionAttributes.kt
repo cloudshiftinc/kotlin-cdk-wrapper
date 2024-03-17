@@ -216,7 +216,8 @@ public interface ExtensionAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ExtensionAttributes):
-        ExtensionAttributes = CdkObjectWrappers.wrap(cdkObject) as ExtensionAttributes
+        ExtensionAttributes = CdkObjectWrappers.wrap(cdkObject) as? ExtensionAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExtensionAttributes):
         software.amazon.awscdk.services.appconfig.ExtensionAttributes = (wrapped as

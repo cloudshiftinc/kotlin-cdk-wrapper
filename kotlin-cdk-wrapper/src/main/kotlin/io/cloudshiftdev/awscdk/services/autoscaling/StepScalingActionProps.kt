@@ -232,7 +232,8 @@ public interface StepScalingActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.StepScalingActionProps):
-        StepScalingActionProps = CdkObjectWrappers.wrap(cdkObject) as StepScalingActionProps
+        StepScalingActionProps = CdkObjectWrappers.wrap(cdkObject) as? StepScalingActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StepScalingActionProps):
         software.amazon.awscdk.services.autoscaling.StepScalingActionProps = (wrapped as

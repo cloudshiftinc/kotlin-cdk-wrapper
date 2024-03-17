@@ -408,8 +408,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.voiceid.CfnDomain.ServerSideEncryptionConfigurationProperty):
-          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServerSideEncryptionConfigurationProperty
+          ServerSideEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerSideEncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerSideEncryptionConfigurationProperty):
           software.amazon.awscdk.services.voiceid.CfnDomain.ServerSideEncryptionConfigurationProperty

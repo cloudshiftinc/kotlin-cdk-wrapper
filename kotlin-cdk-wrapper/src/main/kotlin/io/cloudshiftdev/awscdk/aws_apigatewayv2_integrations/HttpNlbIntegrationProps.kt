@@ -145,7 +145,8 @@ public interface HttpNlbIntegrationProps : HttpPrivateIntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegrationProps):
-        HttpNlbIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as HttpNlbIntegrationProps
+        HttpNlbIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? HttpNlbIntegrationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpNlbIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegrationProps = (wrapped as

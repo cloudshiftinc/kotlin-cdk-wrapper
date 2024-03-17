@@ -142,8 +142,8 @@ public interface NoncurrentVersionTransition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.NoncurrentVersionTransition):
-        NoncurrentVersionTransition = CdkObjectWrappers.wrap(cdkObject) as
-        NoncurrentVersionTransition
+        NoncurrentVersionTransition = CdkObjectWrappers.wrap(cdkObject) as?
+        NoncurrentVersionTransition ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NoncurrentVersionTransition):
         software.amazon.awscdk.services.s3.NoncurrentVersionTransition = (wrapped as

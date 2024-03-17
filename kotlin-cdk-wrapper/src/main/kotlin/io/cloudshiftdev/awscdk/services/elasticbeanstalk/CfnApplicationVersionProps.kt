@@ -199,7 +199,8 @@ public interface CfnApplicationVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersionProps):
-        CfnApplicationVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnApplicationVersionProps
+        CfnApplicationVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnApplicationVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationVersionProps):
         software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersionProps = (wrapped as

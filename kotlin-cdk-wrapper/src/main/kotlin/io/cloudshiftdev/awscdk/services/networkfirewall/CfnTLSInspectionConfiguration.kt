@@ -558,7 +558,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty):
-          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as PortRangeProperty
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortRangeProperty):
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty
@@ -712,8 +713,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty):
-          TLSInspectionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TLSInspectionConfigurationProperty
+          TLSInspectionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TLSInspectionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TLSInspectionConfigurationProperty):
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty
@@ -876,7 +877,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty):
-          AddressProperty = CdkObjectWrappers.wrap(cdkObject) as AddressProperty
+          AddressProperty = CdkObjectWrappers.wrap(cdkObject) as? AddressProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AddressProperty):
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty
@@ -974,7 +976,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty):
-          ServerCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as ServerCertificateProperty
+          ServerCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerCertificateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerCertificateProperty):
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty
@@ -1170,8 +1173,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty):
-          CheckCertificateRevocationStatusProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CheckCertificateRevocationStatusProperty
+          CheckCertificateRevocationStatusProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CheckCertificateRevocationStatusProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CheckCertificateRevocationStatusProperty):
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty
@@ -1634,8 +1637,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateScopeProperty):
-          ServerCertificateScopeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServerCertificateScopeProperty
+          ServerCertificateScopeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerCertificateScopeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerCertificateScopeProperty):
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateScopeProperty
@@ -2033,8 +2036,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty):
-          ServerCertificateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServerCertificateConfigurationProperty
+          ServerCertificateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerCertificateConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerCertificateConfigurationProperty):
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty

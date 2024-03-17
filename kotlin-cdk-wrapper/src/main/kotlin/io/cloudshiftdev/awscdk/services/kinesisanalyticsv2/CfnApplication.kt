@@ -909,8 +909,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MonitoringConfigurationProperty):
-          MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringConfigurationProperty
+          MonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MonitoringConfigurationProperty
@@ -1010,8 +1010,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSnapshotConfigurationProperty):
-          ApplicationSnapshotConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApplicationSnapshotConfigurationProperty
+          ApplicationSnapshotConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationSnapshotConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationSnapshotConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSnapshotConfigurationProperty
@@ -1202,7 +1202,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MappingParametersProperty):
-          MappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as MappingParametersProperty
+          MappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MappingParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MappingParametersProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MappingParametersProperty
@@ -1285,7 +1286,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputParallelismProperty):
-          InputParallelismProperty = CdkObjectWrappers.wrap(cdkObject) as InputParallelismProperty
+          InputParallelismProperty = CdkObjectWrappers.wrap(cdkObject) as? InputParallelismProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputParallelismProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputParallelismProperty
@@ -1370,8 +1372,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.GlueDataCatalogConfigurationProperty):
-          GlueDataCatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GlueDataCatalogConfigurationProperty
+          GlueDataCatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlueDataCatalogConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GlueDataCatalogConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.GlueDataCatalogConfigurationProperty
@@ -1524,7 +1526,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.VpcConfigurationProperty):
-          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigurationProperty
+          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.VpcConfigurationProperty
@@ -1834,8 +1837,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkApplicationConfigurationProperty):
-          FlinkApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FlinkApplicationConfigurationProperty
+          FlinkApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FlinkApplicationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FlinkApplicationConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkApplicationConfigurationProperty
@@ -2047,7 +2050,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputSchemaProperty):
-          InputSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as InputSchemaProperty
+          InputSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSchemaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputSchemaProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputSchemaProperty =
@@ -2131,8 +2135,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.JSONMappingParametersProperty):
-          JSONMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          JSONMappingParametersProperty
+          JSONMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JSONMappingParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JSONMappingParametersProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.JSONMappingParametersProperty
@@ -2271,7 +2275,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentLocationProperty):
-          S3ContentLocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3ContentLocationProperty
+          S3ContentLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3ContentLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3ContentLocationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentLocationProperty
@@ -2612,8 +2617,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CheckpointConfigurationProperty):
-          CheckpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CheckpointConfigurationProperty
+          CheckpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CheckpointConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CheckpointConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CheckpointConfigurationProperty
@@ -2760,8 +2765,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationCodeConfigurationProperty):
-          ApplicationCodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApplicationCodeConfigurationProperty
+          ApplicationCodeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationCodeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationCodeConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationCodeConfigurationProperty
@@ -2974,8 +2979,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CustomArtifactConfigurationProperty):
-          CustomArtifactConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomArtifactConfigurationProperty
+          CustomArtifactConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomArtifactConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomArtifactConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CustomArtifactConfigurationProperty
@@ -3086,8 +3091,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentBaseLocationProperty):
-          S3ContentBaseLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3ContentBaseLocationProperty
+          S3ContentBaseLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3ContentBaseLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3ContentBaseLocationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentBaseLocationProperty
@@ -3419,8 +3424,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinApplicationConfigurationProperty):
-          ZeppelinApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ZeppelinApplicationConfigurationProperty
+          ZeppelinApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZeppelinApplicationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZeppelinApplicationConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinApplicationConfigurationProperty
@@ -3504,8 +3509,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisStreamsInputProperty):
-          KinesisStreamsInputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KinesisStreamsInputProperty
+          KinesisStreamsInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamsInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisStreamsInputProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisStreamsInputProperty
@@ -3615,8 +3620,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.EnvironmentPropertiesProperty):
-          EnvironmentPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnvironmentPropertiesProperty
+          EnvironmentPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentPropertiesProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.EnvironmentPropertiesProperty
@@ -3759,8 +3764,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProcessingConfigurationProperty):
-          InputProcessingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InputProcessingConfigurationProperty
+          InputProcessingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputProcessingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputProcessingConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProcessingConfigurationProperty
@@ -3886,8 +3891,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationRestoreConfigurationProperty):
-          ApplicationRestoreConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApplicationRestoreConfigurationProperty
+          ApplicationRestoreConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationRestoreConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationRestoreConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationRestoreConfigurationProperty
@@ -4025,7 +4030,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MavenReferenceProperty):
-          MavenReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as MavenReferenceProperty
+          MavenReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? MavenReferenceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MavenReferenceProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MavenReferenceProperty =
@@ -4114,8 +4120,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationMaintenanceConfigurationProperty):
-          ApplicationMaintenanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApplicationMaintenanceConfigurationProperty
+          ApplicationMaintenanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationMaintenanceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationMaintenanceConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationMaintenanceConfigurationProperty
@@ -4276,8 +4282,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.SqlApplicationConfigurationProperty):
-          SqlApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SqlApplicationConfigurationProperty
+          SqlApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SqlApplicationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SqlApplicationConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.SqlApplicationConfigurationProperty
@@ -4371,8 +4377,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinMonitoringConfigurationProperty):
-          ZeppelinMonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ZeppelinMonitoringConfigurationProperty
+          ZeppelinMonitoringConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZeppelinMonitoringConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZeppelinMonitoringConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinMonitoringConfigurationProperty
@@ -4458,8 +4464,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisFirehoseInputProperty):
-          KinesisFirehoseInputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KinesisFirehoseInputProperty
+          KinesisFirehoseInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisFirehoseInputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisFirehoseInputProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisFirehoseInputProperty
@@ -5085,8 +5091,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationConfigurationProperty):
-          ApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApplicationConfigurationProperty
+          ApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationConfigurationProperty
@@ -5226,8 +5232,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.DeployAsApplicationConfigurationProperty):
-          DeployAsApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DeployAsApplicationConfigurationProperty
+          DeployAsApplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeployAsApplicationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeployAsApplicationConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.DeployAsApplicationConfigurationProperty
@@ -5351,7 +5357,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.PropertyGroupProperty):
-          PropertyGroupProperty = CdkObjectWrappers.wrap(cdkObject) as PropertyGroupProperty
+          PropertyGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertyGroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PropertyGroupProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.PropertyGroupProperty =
@@ -5528,8 +5535,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkRunConfigurationProperty):
-          FlinkRunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FlinkRunConfigurationProperty
+          FlinkRunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FlinkRunConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FlinkRunConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkRunConfigurationProperty
@@ -6031,7 +6038,7 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProperty):
-          InputProperty = CdkObjectWrappers.wrap(cdkObject) as InputProperty
+          InputProperty = CdkObjectWrappers.wrap(cdkObject) as? InputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProperty = (wrapped
@@ -6209,7 +6216,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CodeContentProperty):
-          CodeContentProperty = CdkObjectWrappers.wrap(cdkObject) as CodeContentProperty
+          CodeContentProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeContentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeContentProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CodeContentProperty =
@@ -6356,7 +6364,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordColumnProperty):
-          RecordColumnProperty = CdkObjectWrappers.wrap(cdkObject) as RecordColumnProperty
+          RecordColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordColumnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordColumnProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordColumnProperty =
@@ -6501,8 +6510,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CatalogConfigurationProperty):
-          CatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CatalogConfigurationProperty
+          CatalogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CatalogConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CatalogConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CatalogConfigurationProperty
@@ -6632,8 +6641,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CSVMappingParametersProperty):
-          CSVMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CSVMappingParametersProperty
+          CSVMappingParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CSVMappingParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CSVMappingParametersProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CSVMappingParametersProperty
@@ -6796,7 +6805,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordFormatProperty):
-          RecordFormatProperty = CdkObjectWrappers.wrap(cdkObject) as RecordFormatProperty
+          RecordFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? RecordFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecordFormatProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordFormatProperty =
@@ -6907,8 +6917,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputLambdaProcessorProperty):
-          InputLambdaProcessorProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InputLambdaProcessorProperty
+          InputLambdaProcessorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputLambdaProcessorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputLambdaProcessorProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputLambdaProcessorProperty
@@ -7146,8 +7156,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ParallelismConfigurationProperty):
-          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ParallelismConfigurationProperty
+          ParallelismConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParallelismConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParallelismConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ParallelismConfigurationProperty
@@ -7337,7 +7347,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RunConfigurationProperty):
-          RunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as RunConfigurationProperty
+          RunConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? RunConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RunConfigurationProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RunConfigurationProperty

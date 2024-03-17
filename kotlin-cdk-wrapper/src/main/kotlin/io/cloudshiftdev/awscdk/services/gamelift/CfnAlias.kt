@@ -425,7 +425,8 @@ public open class CfnAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty):
-          RoutingStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as RoutingStrategyProperty
+          RoutingStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as? RoutingStrategyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoutingStrategyProperty):
           software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty = (wrapped as

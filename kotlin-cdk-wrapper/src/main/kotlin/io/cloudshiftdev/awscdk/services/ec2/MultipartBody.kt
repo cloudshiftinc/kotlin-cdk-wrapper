@@ -33,6 +33,10 @@ public abstract class MultipartBody internal constructor(
    */
   public open fun renderBodyPart(): List<String> = unwrap(this).renderBodyPart()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.MultipartBody,
+  ) : MultipartBody(cdkObject)
+
   public companion object {
     public val CLOUD_BOOTHOOK: String =
         software.amazon.awscdk.services.ec2.MultipartBody.CLOUD_BOOTHOOK
@@ -55,7 +59,7 @@ public abstract class MultipartBody internal constructor(
         contentType).let(MultipartBody::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MultipartBody): MultipartBody =
-        CdkObjectWrappers.wrap(cdkObject) as MultipartBody
+        CdkObjectWrappers.wrap(cdkObject) as? MultipartBody ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MultipartBody): software.amazon.awscdk.services.ec2.MultipartBody =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.MultipartBody

@@ -73,7 +73,8 @@ public interface AuroraClusterEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.AuroraClusterEngineProps):
-        AuroraClusterEngineProps = CdkObjectWrappers.wrap(cdkObject) as AuroraClusterEngineProps
+        AuroraClusterEngineProps = CdkObjectWrappers.wrap(cdkObject) as? AuroraClusterEngineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuroraClusterEngineProps):
         software.amazon.awscdk.services.rds.AuroraClusterEngineProps = (wrapped as

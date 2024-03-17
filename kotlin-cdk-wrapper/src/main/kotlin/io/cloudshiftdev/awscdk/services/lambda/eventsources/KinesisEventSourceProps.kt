@@ -405,7 +405,8 @@ public interface KinesisEventSourceProps : StreamEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.KinesisEventSourceProps):
-        KinesisEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as KinesisEventSourceProps
+        KinesisEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as? KinesisEventSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KinesisEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.KinesisEventSourceProps = (wrapped as

@@ -99,6 +99,10 @@ public abstract class Step internal constructor(
   public override fun primaryOutput(): FileSet? =
       unwrap(this).getPrimaryOutput()?.let(FileSet::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.pipelines.Step,
+  ) : Step(cdkObject)
+
   public companion object {
     public fun sequence(steps: List<Step>): List<Step> =
         software.amazon.awscdk.pipelines.Step.sequence(steps.map(Step::unwrap)).map(Step::wrap)
@@ -106,7 +110,7 @@ public abstract class Step internal constructor(
     public fun sequence(vararg steps: Step): List<Step> = sequence(steps.toList())
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.Step): Step =
-        CdkObjectWrappers.wrap(cdkObject) as Step
+        CdkObjectWrappers.wrap(cdkObject) as? Step ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Step): software.amazon.awscdk.pipelines.Step = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.pipelines.Step

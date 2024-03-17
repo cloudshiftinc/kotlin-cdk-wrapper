@@ -1520,7 +1520,7 @@ public interface CfnServerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServerProps):
-        CfnServerProps = CdkObjectWrappers.wrap(cdkObject) as CfnServerProps
+        CfnServerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServerProps):
         software.amazon.awscdk.services.transfer.CfnServerProps = (wrapped as CdkObject).cdkObject

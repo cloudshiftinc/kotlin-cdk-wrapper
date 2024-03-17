@@ -364,7 +364,8 @@ public interface CfnRouteCalculatorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnRouteCalculatorProps):
-        CfnRouteCalculatorProps = CdkObjectWrappers.wrap(cdkObject) as CfnRouteCalculatorProps
+        CfnRouteCalculatorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRouteCalculatorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRouteCalculatorProps):
         software.amazon.awscdk.services.location.CfnRouteCalculatorProps = (wrapped as

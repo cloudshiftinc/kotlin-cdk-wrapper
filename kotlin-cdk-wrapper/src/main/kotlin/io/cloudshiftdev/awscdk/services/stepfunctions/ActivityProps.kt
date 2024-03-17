@@ -74,7 +74,7 @@ public interface ActivityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ActivityProps):
-        ActivityProps = CdkObjectWrappers.wrap(cdkObject) as ActivityProps
+        ActivityProps = CdkObjectWrappers.wrap(cdkObject) as? ActivityProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ActivityProps):
         software.amazon.awscdk.services.stepfunctions.ActivityProps = (wrapped as

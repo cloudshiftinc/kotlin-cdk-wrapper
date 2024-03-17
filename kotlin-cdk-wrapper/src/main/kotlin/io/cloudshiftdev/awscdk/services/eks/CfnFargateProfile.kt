@@ -566,7 +566,7 @@ public open class CfnFargateProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile.LabelProperty):
-          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as LabelProperty
+          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as? LabelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LabelProperty):
           software.amazon.awscdk.services.eks.CfnFargateProfile.LabelProperty = (wrapped as
@@ -717,7 +717,8 @@ public open class CfnFargateProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile.SelectorProperty):
-          SelectorProperty = CdkObjectWrappers.wrap(cdkObject) as SelectorProperty
+          SelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? SelectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelectorProperty):
           software.amazon.awscdk.services.eks.CfnFargateProfile.SelectorProperty = (wrapped as

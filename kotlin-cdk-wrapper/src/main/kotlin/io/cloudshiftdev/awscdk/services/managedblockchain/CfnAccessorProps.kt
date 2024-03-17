@@ -236,7 +236,8 @@ public interface CfnAccessorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnAccessorProps):
-        CfnAccessorProps = CdkObjectWrappers.wrap(cdkObject) as CfnAccessorProps
+        CfnAccessorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAccessorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccessorProps):
         software.amazon.awscdk.services.managedblockchain.CfnAccessorProps = (wrapped as

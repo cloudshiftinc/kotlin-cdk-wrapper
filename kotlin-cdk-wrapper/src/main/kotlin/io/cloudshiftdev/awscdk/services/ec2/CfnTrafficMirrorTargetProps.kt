@@ -204,8 +204,8 @@ public interface CfnTrafficMirrorTargetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorTargetProps):
-        CfnTrafficMirrorTargetProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTrafficMirrorTargetProps
+        CfnTrafficMirrorTargetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrafficMirrorTargetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficMirrorTargetProps):
         software.amazon.awscdk.services.ec2.CfnTrafficMirrorTargetProps = (wrapped as

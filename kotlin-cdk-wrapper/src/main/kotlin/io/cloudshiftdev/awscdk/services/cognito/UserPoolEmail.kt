@@ -26,6 +26,10 @@ import kotlin.jvm.JvmName
 public abstract class UserPoolEmail internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
+  ) : UserPoolEmail(cdkObject)
+
   public companion object {
     public fun withCognito(): UserPoolEmail =
         software.amazon.awscdk.services.cognito.UserPoolEmail.withCognito().let(UserPoolEmail::wrap)
@@ -42,7 +46,7 @@ public abstract class UserPoolEmail internal constructor(
         withSes(UserPoolSESOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail):
-        UserPoolEmail = CdkObjectWrappers.wrap(cdkObject) as UserPoolEmail
+        UserPoolEmail = CdkObjectWrappers.wrap(cdkObject) as? UserPoolEmail ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolEmail):
         software.amazon.awscdk.services.cognito.UserPoolEmail = (wrapped as CdkObject).cdkObject as

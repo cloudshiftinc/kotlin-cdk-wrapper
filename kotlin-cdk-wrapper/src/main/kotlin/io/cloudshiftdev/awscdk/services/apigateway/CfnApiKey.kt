@@ -632,7 +632,8 @@ public open class CfnApiKey internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKey.StageKeyProperty):
-          StageKeyProperty = CdkObjectWrappers.wrap(cdkObject) as StageKeyProperty
+          StageKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? StageKeyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StageKeyProperty):
           software.amazon.awscdk.services.apigateway.CfnApiKey.StageKeyProperty = (wrapped as

@@ -123,7 +123,8 @@ public interface HttpConnectionPool {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpConnectionPool):
-        HttpConnectionPool = CdkObjectWrappers.wrap(cdkObject) as HttpConnectionPool
+        HttpConnectionPool = CdkObjectWrappers.wrap(cdkObject) as? HttpConnectionPool ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpConnectionPool):
         software.amazon.awscdk.services.appmesh.HttpConnectionPool = (wrapped as

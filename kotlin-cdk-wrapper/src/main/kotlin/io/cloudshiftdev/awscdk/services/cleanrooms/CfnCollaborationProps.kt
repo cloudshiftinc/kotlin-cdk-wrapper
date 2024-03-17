@@ -487,7 +487,8 @@ public interface CfnCollaborationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaborationProps):
-        CfnCollaborationProps = CdkObjectWrappers.wrap(cdkObject) as CfnCollaborationProps
+        CfnCollaborationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCollaborationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCollaborationProps):
         software.amazon.awscdk.services.cleanrooms.CfnCollaborationProps = (wrapped as

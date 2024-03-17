@@ -165,7 +165,8 @@ public interface AccessLogConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.AccessLogConfig):
-        AccessLogConfig = CdkObjectWrappers.wrap(cdkObject) as AccessLogConfig
+        AccessLogConfig = CdkObjectWrappers.wrap(cdkObject) as? AccessLogConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AccessLogConfig):
         software.amazon.awscdk.services.appmesh.AccessLogConfig = (wrapped as CdkObject).cdkObject

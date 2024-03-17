@@ -232,8 +232,8 @@ public interface CfnSiteToSiteVpnAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachmentProps):
-        CfnSiteToSiteVpnAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSiteToSiteVpnAttachmentProps
+        CfnSiteToSiteVpnAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSiteToSiteVpnAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSiteToSiteVpnAttachmentProps):
         software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachmentProps = (wrapped as

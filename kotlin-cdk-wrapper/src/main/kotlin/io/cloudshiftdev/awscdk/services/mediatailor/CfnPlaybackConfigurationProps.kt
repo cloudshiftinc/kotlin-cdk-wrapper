@@ -936,8 +936,8 @@ public interface CfnPlaybackConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps):
-        CfnPlaybackConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnPlaybackConfigurationProps
+        CfnPlaybackConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPlaybackConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlaybackConfigurationProps):
         software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps = (wrapped as

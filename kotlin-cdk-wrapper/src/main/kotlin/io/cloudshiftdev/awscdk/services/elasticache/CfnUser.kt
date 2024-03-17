@@ -567,8 +567,8 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty):
-          AuthenticationModeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AuthenticationModeProperty
+          AuthenticationModeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthenticationModeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuthenticationModeProperty):
           software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty = (wrapped

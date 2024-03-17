@@ -318,7 +318,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty):
-          ClusterEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as ClusterEndpointProperty
+          ClusterEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? ClusterEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClusterEndpointProperty):
           software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty

@@ -190,7 +190,8 @@ public interface WebSocketRouteProps : WebSocketRouteOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteProps):
-        WebSocketRouteProps = CdkObjectWrappers.wrap(cdkObject) as WebSocketRouteProps
+        WebSocketRouteProps = CdkObjectWrappers.wrap(cdkObject) as? WebSocketRouteProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketRouteProps):
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteProps = (wrapped as

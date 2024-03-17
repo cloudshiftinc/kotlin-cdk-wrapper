@@ -112,7 +112,8 @@ public interface ResourceServerScopeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.ResourceServerScopeProps):
-        ResourceServerScopeProps = CdkObjectWrappers.wrap(cdkObject) as ResourceServerScopeProps
+        ResourceServerScopeProps = CdkObjectWrappers.wrap(cdkObject) as? ResourceServerScopeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourceServerScopeProps):
         software.amazon.awscdk.services.cognito.ResourceServerScopeProps = (wrapped as

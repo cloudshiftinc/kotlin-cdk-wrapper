@@ -424,7 +424,8 @@ public interface RepositoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.RepositoryProps):
-        RepositoryProps = CdkObjectWrappers.wrap(cdkObject) as RepositoryProps
+        RepositoryProps = CdkObjectWrappers.wrap(cdkObject) as? RepositoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryProps):
         software.amazon.awscdk.services.ecr.RepositoryProps = (wrapped as CdkObject).cdkObject as

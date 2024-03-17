@@ -211,7 +211,8 @@ public interface VpcEndpointServiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpcEndpointServiceProps):
-        VpcEndpointServiceProps = CdkObjectWrappers.wrap(cdkObject) as VpcEndpointServiceProps
+        VpcEndpointServiceProps = CdkObjectWrappers.wrap(cdkObject) as? VpcEndpointServiceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcEndpointServiceProps):
         software.amazon.awscdk.services.ec2.VpcEndpointServiceProps = (wrapped as

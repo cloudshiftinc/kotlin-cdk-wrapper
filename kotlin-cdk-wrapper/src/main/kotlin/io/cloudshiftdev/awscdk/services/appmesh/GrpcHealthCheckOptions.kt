@@ -165,7 +165,8 @@ public interface GrpcHealthCheckOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcHealthCheckOptions):
-        GrpcHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as GrpcHealthCheckOptions
+        GrpcHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as? GrpcHealthCheckOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcHealthCheckOptions):
         software.amazon.awscdk.services.appmesh.GrpcHealthCheckOptions = (wrapped as

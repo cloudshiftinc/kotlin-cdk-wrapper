@@ -963,7 +963,8 @@ public open class CfnTrigger internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty = (wrapped as
@@ -1083,8 +1084,8 @@ public open class CfnTrigger internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty):
-          EventBatchingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EventBatchingConditionProperty
+          EventBatchingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBatchingConditionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventBatchingConditionProperty):
           software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty = (wrapped
@@ -1170,8 +1171,8 @@ public open class CfnTrigger internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty):
-          NotificationPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationPropertyProperty
+          NotificationPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationPropertyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationPropertyProperty):
           software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty = (wrapped as
@@ -1311,7 +1312,8 @@ public open class CfnTrigger internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty):
-          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as PredicateProperty
+          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as? PredicateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PredicateProperty):
           software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty = (wrapped as
@@ -1507,7 +1509,8 @@ public open class CfnTrigger internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty):
-          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as ConditionProperty
+          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionProperty):
           software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty = (wrapped as

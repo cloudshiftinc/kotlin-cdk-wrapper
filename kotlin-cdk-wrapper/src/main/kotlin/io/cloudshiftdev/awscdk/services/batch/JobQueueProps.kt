@@ -334,7 +334,7 @@ public interface JobQueueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.JobQueueProps): JobQueueProps
-        = CdkObjectWrappers.wrap(cdkObject) as JobQueueProps
+        = CdkObjectWrappers.wrap(cdkObject) as? JobQueueProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JobQueueProps): software.amazon.awscdk.services.batch.JobQueueProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.batch.JobQueueProps

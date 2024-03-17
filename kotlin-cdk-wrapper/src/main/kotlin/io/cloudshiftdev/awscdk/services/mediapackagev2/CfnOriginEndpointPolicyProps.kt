@@ -167,8 +167,8 @@ public interface CfnOriginEndpointPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicyProps):
-        CfnOriginEndpointPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnOriginEndpointPolicyProps
+        CfnOriginEndpointPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnOriginEndpointPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginEndpointPolicyProps):
         software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicyProps = (wrapped as

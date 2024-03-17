@@ -458,7 +458,7 @@ public open class CfnContactList internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnContactList.TopicProperty):
-          TopicProperty = CdkObjectWrappers.wrap(cdkObject) as TopicProperty
+          TopicProperty = CdkObjectWrappers.wrap(cdkObject) as? TopicProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TopicProperty):
           software.amazon.awscdk.services.ses.CfnContactList.TopicProperty = (wrapped as

@@ -333,7 +333,8 @@ public interface CfnResourceVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnResourceVersionProps):
-        CfnResourceVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceVersionProps
+        CfnResourceVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceVersionProps):
         software.amazon.awscdk.services.cloudformation.CfnResourceVersionProps = (wrapped as

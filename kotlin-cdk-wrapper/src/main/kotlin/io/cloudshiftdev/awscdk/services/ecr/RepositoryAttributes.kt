@@ -91,7 +91,8 @@ public interface RepositoryAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.RepositoryAttributes):
-        RepositoryAttributes = CdkObjectWrappers.wrap(cdkObject) as RepositoryAttributes
+        RepositoryAttributes = CdkObjectWrappers.wrap(cdkObject) as? RepositoryAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryAttributes):
         software.amazon.awscdk.services.ecr.RepositoryAttributes = (wrapped as CdkObject).cdkObject

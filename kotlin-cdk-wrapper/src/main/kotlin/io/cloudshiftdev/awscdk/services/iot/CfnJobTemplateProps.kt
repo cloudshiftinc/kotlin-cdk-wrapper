@@ -594,7 +594,8 @@ public interface CfnJobTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplateProps):
-        CfnJobTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnJobTemplateProps
+        CfnJobTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnJobTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnJobTemplateProps):
         software.amazon.awscdk.services.iot.CfnJobTemplateProps = (wrapped as CdkObject).cdkObject

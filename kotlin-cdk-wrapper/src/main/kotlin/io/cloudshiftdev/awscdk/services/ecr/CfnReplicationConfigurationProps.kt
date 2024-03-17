@@ -125,8 +125,8 @@ public interface CfnReplicationConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps):
-        CfnReplicationConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnReplicationConfigurationProps
+        CfnReplicationConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnReplicationConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationConfigurationProps):
         software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps = (wrapped as

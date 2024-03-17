@@ -537,7 +537,8 @@ public interface TaskStateBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBaseProps):
-        TaskStateBaseProps = CdkObjectWrappers.wrap(cdkObject) as TaskStateBaseProps
+        TaskStateBaseProps = CdkObjectWrappers.wrap(cdkObject) as? TaskStateBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TaskStateBaseProps):
         software.amazon.awscdk.services.stepfunctions.TaskStateBaseProps = (wrapped as

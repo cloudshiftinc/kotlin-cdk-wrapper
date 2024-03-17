@@ -117,7 +117,8 @@ public interface HttpNamespaceAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes):
-        HttpNamespaceAttributes = CdkObjectWrappers.wrap(cdkObject) as HttpNamespaceAttributes
+        HttpNamespaceAttributes = CdkObjectWrappers.wrap(cdkObject) as? HttpNamespaceAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpNamespaceAttributes):
         software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes = (wrapped as

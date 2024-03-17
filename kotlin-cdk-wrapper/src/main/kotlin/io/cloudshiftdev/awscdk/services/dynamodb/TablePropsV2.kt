@@ -583,7 +583,7 @@ public interface TablePropsV2 : TableOptionsV2 {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TablePropsV2):
-        TablePropsV2 = CdkObjectWrappers.wrap(cdkObject) as TablePropsV2
+        TablePropsV2 = CdkObjectWrappers.wrap(cdkObject) as? TablePropsV2 ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TablePropsV2):
         software.amazon.awscdk.services.dynamodb.TablePropsV2 = (wrapped as CdkObject).cdkObject as

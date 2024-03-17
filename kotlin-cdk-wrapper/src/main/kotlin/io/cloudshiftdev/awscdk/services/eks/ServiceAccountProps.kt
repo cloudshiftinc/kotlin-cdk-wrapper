@@ -168,7 +168,8 @@ public interface ServiceAccountProps : ServiceAccountOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.ServiceAccountProps):
-        ServiceAccountProps = CdkObjectWrappers.wrap(cdkObject) as ServiceAccountProps
+        ServiceAccountProps = CdkObjectWrappers.wrap(cdkObject) as? ServiceAccountProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceAccountProps):
         software.amazon.awscdk.services.eks.ServiceAccountProps = (wrapped as CdkObject).cdkObject

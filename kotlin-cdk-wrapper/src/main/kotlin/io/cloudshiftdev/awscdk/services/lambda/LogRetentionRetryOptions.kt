@@ -98,7 +98,8 @@ public interface LogRetentionRetryOptions :
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.LogRetentionRetryOptions):
-        LogRetentionRetryOptions = CdkObjectWrappers.wrap(cdkObject) as LogRetentionRetryOptions
+        LogRetentionRetryOptions = CdkObjectWrappers.wrap(cdkObject) as? LogRetentionRetryOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogRetentionRetryOptions):
         software.amazon.awscdk.services.lambda.LogRetentionRetryOptions = (wrapped as

@@ -745,7 +745,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty):
-          ParameterObjectProperty = CdkObjectWrappers.wrap(cdkObject) as ParameterObjectProperty
+          ParameterObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterObjectProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterObjectProperty):
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty =
@@ -853,7 +854,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty):
-          ParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as ParameterValueProperty
+          ParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterValueProperty):
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty = (wrapped
@@ -1019,7 +1021,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty):
-          PipelineObjectProperty = CdkObjectWrappers.wrap(cdkObject) as PipelineObjectProperty
+          PipelineObjectProperty = CdkObjectWrappers.wrap(cdkObject) as? PipelineObjectProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipelineObjectProperty):
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty = (wrapped
@@ -1129,8 +1132,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty):
-          ParameterAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ParameterAttributeProperty
+          ParameterAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ParameterAttributeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterAttributeProperty):
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty =
@@ -1243,7 +1246,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty):
-          PipelineTagProperty = CdkObjectWrappers.wrap(cdkObject) as PipelineTagProperty
+          PipelineTagProperty = CdkObjectWrappers.wrap(cdkObject) as? PipelineTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PipelineTagProperty):
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty = (wrapped as
@@ -1470,7 +1474,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty):
-          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as FieldProperty
+          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldProperty):
           software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty = (wrapped as

@@ -1135,8 +1135,8 @@ public open class CfnSubnet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet.PrivateDnsNameOptionsOnLaunchProperty):
-          PrivateDnsNameOptionsOnLaunchProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PrivateDnsNameOptionsOnLaunchProperty
+          PrivateDnsNameOptionsOnLaunchProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateDnsNameOptionsOnLaunchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrivateDnsNameOptionsOnLaunchProperty):
           software.amazon.awscdk.services.ec2.CfnSubnet.PrivateDnsNameOptionsOnLaunchProperty =

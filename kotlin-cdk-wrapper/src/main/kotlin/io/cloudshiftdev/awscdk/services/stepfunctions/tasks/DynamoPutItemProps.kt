@@ -668,7 +668,8 @@ public interface DynamoPutItemProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItemProps):
-        DynamoPutItemProps = CdkObjectWrappers.wrap(cdkObject) as DynamoPutItemProps
+        DynamoPutItemProps = CdkObjectWrappers.wrap(cdkObject) as? DynamoPutItemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DynamoPutItemProps):
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItemProps = (wrapped as

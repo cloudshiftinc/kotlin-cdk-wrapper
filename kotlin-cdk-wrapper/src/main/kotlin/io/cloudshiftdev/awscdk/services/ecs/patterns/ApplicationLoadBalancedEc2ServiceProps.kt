@@ -1241,8 +1241,8 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2ServiceProps):
-        ApplicationLoadBalancedEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancedEc2ServiceProps
+        ApplicationLoadBalancedEc2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancedEc2ServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedEc2ServiceProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2ServiceProps =

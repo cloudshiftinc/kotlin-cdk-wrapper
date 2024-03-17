@@ -381,8 +381,8 @@ public interface SynthesizeStackArtifactOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.SynthesizeStackArtifactOptions):
-        SynthesizeStackArtifactOptions = CdkObjectWrappers.wrap(cdkObject) as
-        SynthesizeStackArtifactOptions
+        SynthesizeStackArtifactOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        SynthesizeStackArtifactOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SynthesizeStackArtifactOptions):
         software.amazon.awscdk.SynthesizeStackArtifactOptions = (wrapped as CdkObject).cdkObject as

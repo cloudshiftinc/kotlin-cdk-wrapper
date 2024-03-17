@@ -141,8 +141,8 @@ public interface ResponseHeadersReferrerPolicy {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy):
-        ResponseHeadersReferrerPolicy = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseHeadersReferrerPolicy
+        ResponseHeadersReferrerPolicy = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersReferrerPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersReferrerPolicy):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy = (wrapped as

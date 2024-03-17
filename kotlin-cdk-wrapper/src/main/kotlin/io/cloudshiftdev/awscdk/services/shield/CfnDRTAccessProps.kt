@@ -298,7 +298,8 @@ public interface CfnDRTAccessProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnDRTAccessProps):
-        CfnDRTAccessProps = CdkObjectWrappers.wrap(cdkObject) as CfnDRTAccessProps
+        CfnDRTAccessProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDRTAccessProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDRTAccessProps):
         software.amazon.awscdk.services.shield.CfnDRTAccessProps = (wrapped as CdkObject).cdkObject

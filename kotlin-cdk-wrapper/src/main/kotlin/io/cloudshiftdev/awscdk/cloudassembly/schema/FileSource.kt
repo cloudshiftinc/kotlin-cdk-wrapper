@@ -152,7 +152,7 @@ public interface FileSource {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.FileSource): FileSource
-        = CdkObjectWrappers.wrap(cdkObject) as FileSource
+        = CdkObjectWrappers.wrap(cdkObject) as? FileSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileSource): software.amazon.awscdk.cloudassembly.schema.FileSource
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.cloudassembly.schema.FileSource

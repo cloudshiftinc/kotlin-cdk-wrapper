@@ -399,7 +399,8 @@ public open class CfnApplicationVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion.SourceBundleProperty):
-          SourceBundleProperty = CdkObjectWrappers.wrap(cdkObject) as SourceBundleProperty
+          SourceBundleProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceBundleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceBundleProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion.SourceBundleProperty

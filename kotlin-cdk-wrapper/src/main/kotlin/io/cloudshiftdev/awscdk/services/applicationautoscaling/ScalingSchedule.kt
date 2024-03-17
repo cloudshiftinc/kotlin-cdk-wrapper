@@ -262,7 +262,8 @@ public interface ScalingSchedule {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.ScalingSchedule):
-        ScalingSchedule = CdkObjectWrappers.wrap(cdkObject) as ScalingSchedule
+        ScalingSchedule = CdkObjectWrappers.wrap(cdkObject) as? ScalingSchedule ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScalingSchedule):
         software.amazon.awscdk.services.applicationautoscaling.ScalingSchedule = (wrapped as

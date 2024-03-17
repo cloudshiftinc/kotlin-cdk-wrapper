@@ -887,8 +887,8 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackActionProps):
-        CloudFormationCreateUpdateStackActionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationCreateUpdateStackActionProps
+        CloudFormationCreateUpdateStackActionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationCreateUpdateStackActionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationCreateUpdateStackActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackActionProps

@@ -79,7 +79,7 @@ public interface CfnJsonProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnJsonProps): CfnJsonProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnJsonProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnJsonProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnJsonProps): software.amazon.awscdk.CfnJsonProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.CfnJsonProps

@@ -122,7 +122,8 @@ public interface LocationPackageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LocationPackageOptions):
-        LocationPackageOptions = CdkObjectWrappers.wrap(cdkObject) as LocationPackageOptions
+        LocationPackageOptions = CdkObjectWrappers.wrap(cdkObject) as? LocationPackageOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LocationPackageOptions):
         software.amazon.awscdk.services.ec2.LocationPackageOptions = (wrapped as

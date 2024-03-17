@@ -184,7 +184,8 @@ public interface AmiContextQuery {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AmiContextQuery):
-        AmiContextQuery = CdkObjectWrappers.wrap(cdkObject) as AmiContextQuery
+        AmiContextQuery = CdkObjectWrappers.wrap(cdkObject) as? AmiContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AmiContextQuery):
         software.amazon.awscdk.cloudassembly.schema.AmiContextQuery = (wrapped as

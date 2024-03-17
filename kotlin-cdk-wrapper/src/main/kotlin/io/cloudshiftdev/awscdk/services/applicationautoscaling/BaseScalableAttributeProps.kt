@@ -187,7 +187,8 @@ public interface BaseScalableAttributeProps : EnableScalingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttributeProps):
-        BaseScalableAttributeProps = CdkObjectWrappers.wrap(cdkObject) as BaseScalableAttributeProps
+        BaseScalableAttributeProps = CdkObjectWrappers.wrap(cdkObject) as?
+        BaseScalableAttributeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseScalableAttributeProps):
         software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttributeProps = (wrapped

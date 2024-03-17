@@ -149,8 +149,8 @@ public interface CfnSqlInjectionMatchSetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSetProps):
-        CfnSqlInjectionMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSqlInjectionMatchSetProps
+        CfnSqlInjectionMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSqlInjectionMatchSetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSqlInjectionMatchSetProps):
         software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSetProps = (wrapped as

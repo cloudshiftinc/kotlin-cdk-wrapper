@@ -3033,7 +3033,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.EndpointProperty):
-          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointProperty
+          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.redshift.CfnCluster.EndpointProperty = (wrapped as
@@ -3202,7 +3203,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.LoggingPropertiesProperty):
-          LoggingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingPropertiesProperty
+          LoggingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingPropertiesProperty):
           software.amazon.awscdk.services.redshift.CfnCluster.LoggingPropertiesProperty = (wrapped

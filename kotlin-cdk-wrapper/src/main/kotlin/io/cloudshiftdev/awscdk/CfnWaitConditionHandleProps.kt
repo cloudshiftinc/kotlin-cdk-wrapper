@@ -47,8 +47,8 @@ public interface CfnWaitConditionHandleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnWaitConditionHandleProps):
-        CfnWaitConditionHandleProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnWaitConditionHandleProps
+        CfnWaitConditionHandleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnWaitConditionHandleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWaitConditionHandleProps):
         software.amazon.awscdk.CfnWaitConditionHandleProps = (wrapped as CdkObject).cdkObject as

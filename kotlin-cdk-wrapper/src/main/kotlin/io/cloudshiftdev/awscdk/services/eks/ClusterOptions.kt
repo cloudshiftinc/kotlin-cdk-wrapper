@@ -1045,7 +1045,7 @@ public interface ClusterOptions : CommonClusterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.ClusterOptions): ClusterOptions
-        = CdkObjectWrappers.wrap(cdkObject) as ClusterOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? ClusterOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClusterOptions): software.amazon.awscdk.services.eks.ClusterOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.ClusterOptions

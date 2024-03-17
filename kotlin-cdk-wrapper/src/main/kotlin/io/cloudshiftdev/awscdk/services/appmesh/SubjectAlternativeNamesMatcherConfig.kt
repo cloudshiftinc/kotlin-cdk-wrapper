@@ -103,8 +103,8 @@ public interface SubjectAlternativeNamesMatcherConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.SubjectAlternativeNamesMatcherConfig):
-        SubjectAlternativeNamesMatcherConfig = CdkObjectWrappers.wrap(cdkObject) as
-        SubjectAlternativeNamesMatcherConfig
+        SubjectAlternativeNamesMatcherConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        SubjectAlternativeNamesMatcherConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SubjectAlternativeNamesMatcherConfig):
         software.amazon.awscdk.services.appmesh.SubjectAlternativeNamesMatcherConfig = (wrapped as

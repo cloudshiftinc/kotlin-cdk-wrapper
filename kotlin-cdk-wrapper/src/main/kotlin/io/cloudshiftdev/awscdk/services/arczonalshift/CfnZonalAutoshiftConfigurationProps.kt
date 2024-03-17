@@ -313,8 +313,8 @@ public interface CfnZonalAutoshiftConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfigurationProps):
-        CfnZonalAutoshiftConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnZonalAutoshiftConfigurationProps
+        CfnZonalAutoshiftConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnZonalAutoshiftConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnZonalAutoshiftConfigurationProps):
         software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfigurationProps = (wrapped

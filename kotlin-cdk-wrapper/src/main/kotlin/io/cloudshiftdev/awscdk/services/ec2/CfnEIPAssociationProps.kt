@@ -235,7 +235,8 @@ public interface CfnEIPAssociationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEIPAssociationProps):
-        CfnEIPAssociationProps = CdkObjectWrappers.wrap(cdkObject) as CfnEIPAssociationProps
+        CfnEIPAssociationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEIPAssociationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEIPAssociationProps):
         software.amazon.awscdk.services.ec2.CfnEIPAssociationProps = (wrapped as

@@ -744,7 +744,8 @@ public interface CfnResolverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnResolverProps):
-        CfnResolverProps = CdkObjectWrappers.wrap(cdkObject) as CfnResolverProps
+        CfnResolverProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResolverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverProps):
         software.amazon.awscdk.services.appsync.CfnResolverProps = (wrapped as CdkObject).cdkObject

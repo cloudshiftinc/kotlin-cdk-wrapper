@@ -185,7 +185,7 @@ public interface VpcLinkProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkProps):
-        VpcLinkProps = CdkObjectWrappers.wrap(cdkObject) as VpcLinkProps
+        VpcLinkProps = CdkObjectWrappers.wrap(cdkObject) as? VpcLinkProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcLinkProps):
         software.amazon.awscdk.services.apigatewayv2.VpcLinkProps = (wrapped as CdkObject).cdkObject

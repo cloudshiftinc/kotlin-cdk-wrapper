@@ -31,9 +31,13 @@ public abstract class InitElement internal constructor(
    */
   public open fun elementType(): String = unwrap(this).getElementType()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.InitElement,
+  ) : InitElement(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitElement): InitElement =
-        CdkObjectWrappers.wrap(cdkObject) as InitElement
+        CdkObjectWrappers.wrap(cdkObject) as? InitElement ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InitElement): software.amazon.awscdk.services.ec2.InitElement =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.InitElement

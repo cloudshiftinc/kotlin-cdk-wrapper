@@ -341,7 +341,8 @@ public interface NatInstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProps):
-        NatInstanceProps = CdkObjectWrappers.wrap(cdkObject) as NatInstanceProps
+        NatInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? NatInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NatInstanceProps):
         software.amazon.awscdk.services.ec2.NatInstanceProps = (wrapped as CdkObject).cdkObject as

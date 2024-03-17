@@ -516,7 +516,8 @@ public open class CfnWirelessGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.LoRaWANGatewayProperty):
-          LoRaWANGatewayProperty = CdkObjectWrappers.wrap(cdkObject) as LoRaWANGatewayProperty
+          LoRaWANGatewayProperty = CdkObjectWrappers.wrap(cdkObject) as? LoRaWANGatewayProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoRaWANGatewayProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.LoRaWANGatewayProperty =

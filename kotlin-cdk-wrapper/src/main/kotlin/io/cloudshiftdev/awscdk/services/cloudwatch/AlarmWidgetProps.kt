@@ -190,7 +190,8 @@ public interface AlarmWidgetProps : MetricWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmWidgetProps):
-        AlarmWidgetProps = CdkObjectWrappers.wrap(cdkObject) as AlarmWidgetProps
+        AlarmWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? AlarmWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AlarmWidgetProps):
         software.amazon.awscdk.services.cloudwatch.AlarmWidgetProps = (wrapped as

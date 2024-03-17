@@ -139,7 +139,8 @@ public interface AliasTargetInstanceProps : BaseInstanceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.AliasTargetInstanceProps):
-        AliasTargetInstanceProps = CdkObjectWrappers.wrap(cdkObject) as AliasTargetInstanceProps
+        AliasTargetInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? AliasTargetInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AliasTargetInstanceProps):
         software.amazon.awscdk.services.servicediscovery.AliasTargetInstanceProps = (wrapped as

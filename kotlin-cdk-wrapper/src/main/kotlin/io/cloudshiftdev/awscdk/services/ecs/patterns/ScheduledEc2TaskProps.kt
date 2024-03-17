@@ -482,7 +482,8 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskProps):
-        ScheduledEc2TaskProps = CdkObjectWrappers.wrap(cdkObject) as ScheduledEc2TaskProps
+        ScheduledEc2TaskProps = CdkObjectWrappers.wrap(cdkObject) as? ScheduledEc2TaskProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledEc2TaskProps):
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskProps = (wrapped as

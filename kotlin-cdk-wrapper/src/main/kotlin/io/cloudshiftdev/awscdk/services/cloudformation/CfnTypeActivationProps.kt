@@ -498,7 +498,8 @@ public interface CfnTypeActivationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnTypeActivationProps):
-        CfnTypeActivationProps = CdkObjectWrappers.wrap(cdkObject) as CfnTypeActivationProps
+        CfnTypeActivationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTypeActivationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTypeActivationProps):
         software.amazon.awscdk.services.cloudformation.CfnTypeActivationProps = (wrapped as

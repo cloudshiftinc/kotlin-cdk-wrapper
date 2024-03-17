@@ -202,7 +202,8 @@ public interface NetworkLoadBalancerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps):
-        NetworkLoadBalancerProps = CdkObjectWrappers.wrap(cdkObject) as NetworkLoadBalancerProps
+        NetworkLoadBalancerProps = CdkObjectWrappers.wrap(cdkObject) as? NetworkLoadBalancerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancerProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps = (wrapped as

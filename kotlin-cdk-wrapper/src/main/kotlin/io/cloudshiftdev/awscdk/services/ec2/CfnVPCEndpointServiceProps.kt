@@ -268,7 +268,8 @@ public interface CfnVPCEndpointServiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointServiceProps):
-        CfnVPCEndpointServiceProps = CdkObjectWrappers.wrap(cdkObject) as CfnVPCEndpointServiceProps
+        CfnVPCEndpointServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPCEndpointServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCEndpointServiceProps):
         software.amazon.awscdk.services.ec2.CfnVPCEndpointServiceProps = (wrapped as

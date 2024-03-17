@@ -453,8 +453,8 @@ public open class CfnCoreNetwork internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty):
-          CoreNetworkSegmentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CoreNetworkSegmentProperty
+          CoreNetworkSegmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CoreNetworkSegmentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoreNetworkSegmentProperty):
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty =
@@ -602,7 +602,8 @@ public open class CfnCoreNetwork internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty):
-          CoreNetworkEdgeProperty = CdkObjectWrappers.wrap(cdkObject) as CoreNetworkEdgeProperty
+          CoreNetworkEdgeProperty = CdkObjectWrappers.wrap(cdkObject) as? CoreNetworkEdgeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoreNetworkEdgeProperty):
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty =

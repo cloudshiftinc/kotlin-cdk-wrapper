@@ -123,7 +123,8 @@ public interface CfnApprovedOriginProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnApprovedOriginProps):
-        CfnApprovedOriginProps = CdkObjectWrappers.wrap(cdkObject) as CfnApprovedOriginProps
+        CfnApprovedOriginProps = CdkObjectWrappers.wrap(cdkObject) as? CfnApprovedOriginProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApprovedOriginProps):
         software.amazon.awscdk.services.connect.CfnApprovedOriginProps = (wrapped as

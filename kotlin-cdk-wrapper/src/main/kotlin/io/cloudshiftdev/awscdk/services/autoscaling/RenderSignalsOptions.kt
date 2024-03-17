@@ -101,7 +101,8 @@ public interface RenderSignalsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.RenderSignalsOptions):
-        RenderSignalsOptions = CdkObjectWrappers.wrap(cdkObject) as RenderSignalsOptions
+        RenderSignalsOptions = CdkObjectWrappers.wrap(cdkObject) as? RenderSignalsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RenderSignalsOptions):
         software.amazon.awscdk.services.autoscaling.RenderSignalsOptions = (wrapped as

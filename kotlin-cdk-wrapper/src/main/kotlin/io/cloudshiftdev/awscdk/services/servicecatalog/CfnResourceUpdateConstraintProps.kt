@@ -223,8 +223,8 @@ public interface CfnResourceUpdateConstraintProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraintProps):
-        CfnResourceUpdateConstraintProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnResourceUpdateConstraintProps
+        CfnResourceUpdateConstraintProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResourceUpdateConstraintProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceUpdateConstraintProps):
         software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraintProps = (wrapped

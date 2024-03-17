@@ -256,7 +256,7 @@ public interface RetryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.RetryProps):
-        RetryProps = CdkObjectWrappers.wrap(cdkObject) as RetryProps
+        RetryProps = CdkObjectWrappers.wrap(cdkObject) as? RetryProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RetryProps):
         software.amazon.awscdk.services.stepfunctions.RetryProps = (wrapped as CdkObject).cdkObject

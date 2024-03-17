@@ -219,7 +219,8 @@ public interface ProductStackHistoryProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStackHistoryProps):
-        ProductStackHistoryProps = CdkObjectWrappers.wrap(cdkObject) as ProductStackHistoryProps
+        ProductStackHistoryProps = CdkObjectWrappers.wrap(cdkObject) as? ProductStackHistoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProductStackHistoryProps):
         software.amazon.awscdk.services.servicecatalog.ProductStackHistoryProps = (wrapped as

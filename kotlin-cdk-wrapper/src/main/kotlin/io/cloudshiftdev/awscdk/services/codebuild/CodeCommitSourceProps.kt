@@ -207,7 +207,8 @@ public interface CodeCommitSourceProps : SourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CodeCommitSourceProps):
-        CodeCommitSourceProps = CdkObjectWrappers.wrap(cdkObject) as CodeCommitSourceProps
+        CodeCommitSourceProps = CdkObjectWrappers.wrap(cdkObject) as? CodeCommitSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeCommitSourceProps):
         software.amazon.awscdk.services.codebuild.CodeCommitSourceProps = (wrapped as

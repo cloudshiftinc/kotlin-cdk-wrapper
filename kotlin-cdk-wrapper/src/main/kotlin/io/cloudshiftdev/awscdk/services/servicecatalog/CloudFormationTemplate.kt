@@ -47,6 +47,10 @@ public abstract class CloudFormationTemplate internal constructor(
   public open fun bind(scope: Construct): CloudFormationTemplateConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(CloudFormationTemplateConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate,
+  ) : CloudFormationTemplate(cdkObject)
+
   public companion object {
     public fun fromAsset(path: String): CloudFormationTemplate =
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate.fromAsset(path).let(CloudFormationTemplate::wrap)
@@ -68,7 +72,8 @@ public abstract class CloudFormationTemplate internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate):
-        CloudFormationTemplate = CdkObjectWrappers.wrap(cdkObject) as CloudFormationTemplate
+        CloudFormationTemplate = CdkObjectWrappers.wrap(cdkObject) as? CloudFormationTemplate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationTemplate):
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate = (wrapped as

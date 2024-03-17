@@ -508,7 +508,8 @@ public interface CfnConnectorProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfileProps):
-        CfnConnectorProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnConnectorProfileProps
+        CfnConnectorProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConnectorProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectorProfileProps):
         software.amazon.awscdk.services.appflow.CfnConnectorProfileProps = (wrapped as

@@ -130,7 +130,7 @@ public interface ResourceEnvironment {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ResourceEnvironment): ResourceEnvironment =
-        CdkObjectWrappers.wrap(cdkObject) as ResourceEnvironment
+        CdkObjectWrappers.wrap(cdkObject) as? ResourceEnvironment ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourceEnvironment): software.amazon.awscdk.ResourceEnvironment =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.ResourceEnvironment

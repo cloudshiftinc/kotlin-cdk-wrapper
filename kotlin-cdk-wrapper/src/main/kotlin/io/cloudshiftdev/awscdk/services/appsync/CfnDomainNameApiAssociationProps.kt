@@ -107,8 +107,8 @@ public interface CfnDomainNameApiAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociationProps):
-        CfnDomainNameApiAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDomainNameApiAssociationProps
+        CfnDomainNameApiAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDomainNameApiAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainNameApiAssociationProps):
         software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociationProps = (wrapped as

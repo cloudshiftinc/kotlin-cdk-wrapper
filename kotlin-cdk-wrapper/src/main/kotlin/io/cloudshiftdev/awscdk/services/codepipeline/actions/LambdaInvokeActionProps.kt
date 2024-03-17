@@ -396,7 +396,8 @@ public interface LambdaInvokeActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeActionProps):
-        LambdaInvokeActionProps = CdkObjectWrappers.wrap(cdkObject) as LambdaInvokeActionProps
+        LambdaInvokeActionProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaInvokeActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaInvokeActionProps):
         software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeActionProps = (wrapped as

@@ -297,8 +297,8 @@ public open class CfnMonitoringSubscription internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty):
-          RealtimeMetricsSubscriptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RealtimeMetricsSubscriptionConfigProperty
+          RealtimeMetricsSubscriptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RealtimeMetricsSubscriptionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RealtimeMetricsSubscriptionConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty
@@ -427,8 +427,8 @@ public open class CfnMonitoringSubscription internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty):
-          MonitoringSubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MonitoringSubscriptionProperty
+          MonitoringSubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MonitoringSubscriptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitoringSubscriptionProperty):
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty

@@ -185,8 +185,8 @@ public interface CfnTrafficDistributionGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTrafficDistributionGroupProps):
-        CfnTrafficDistributionGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTrafficDistributionGroupProps
+        CfnTrafficDistributionGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrafficDistributionGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficDistributionGroupProps):
         software.amazon.awscdk.services.connect.CfnTrafficDistributionGroupProps = (wrapped as

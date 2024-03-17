@@ -522,8 +522,8 @@ public open class CfnEnvironmentProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.EnvironmentParameterProperty):
-          EnvironmentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnvironmentParameterProperty
+          EnvironmentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentParameterProperty):
           software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.EnvironmentParameterProperty

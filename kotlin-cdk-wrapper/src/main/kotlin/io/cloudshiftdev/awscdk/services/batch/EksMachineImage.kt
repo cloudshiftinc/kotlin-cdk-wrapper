@@ -104,7 +104,8 @@ public interface EksMachineImage {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EksMachineImage):
-        EksMachineImage = CdkObjectWrappers.wrap(cdkObject) as EksMachineImage
+        EksMachineImage = CdkObjectWrappers.wrap(cdkObject) as? EksMachineImage ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksMachineImage):
         software.amazon.awscdk.services.batch.EksMachineImage = (wrapped as CdkObject).cdkObject as

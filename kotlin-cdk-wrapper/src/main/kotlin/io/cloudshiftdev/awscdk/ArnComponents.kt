@@ -280,7 +280,7 @@ public interface ArnComponents {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ArnComponents): ArnComponents =
-        CdkObjectWrappers.wrap(cdkObject) as ArnComponents
+        CdkObjectWrappers.wrap(cdkObject) as? ArnComponents ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ArnComponents): software.amazon.awscdk.ArnComponents = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.ArnComponents

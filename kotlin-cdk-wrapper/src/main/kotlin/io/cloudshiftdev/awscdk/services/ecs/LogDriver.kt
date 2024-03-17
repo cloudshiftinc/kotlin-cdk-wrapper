@@ -40,6 +40,10 @@ public abstract class LogDriver internal constructor(
       = unwrap(this).bind(scope.let(Construct::unwrap),
       containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ecs.LogDriver,
+  ) : LogDriver(cdkObject)
+
   public companion object {
     public fun awsLogs(props: AwsLogDriverProps): LogDriver =
         software.amazon.awscdk.services.ecs.LogDriver.awsLogs(props.let(AwsLogDriverProps::unwrap)).let(LogDriver::wrap)
@@ -50,7 +54,7 @@ public abstract class LogDriver internal constructor(
         awsLogs(AwsLogDriverProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.LogDriver): LogDriver =
-        CdkObjectWrappers.wrap(cdkObject) as LogDriver
+        CdkObjectWrappers.wrap(cdkObject) as? LogDriver ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogDriver): software.amazon.awscdk.services.ecs.LogDriver =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.LogDriver

@@ -1280,8 +1280,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty):
-          TargetCapacitySpecificationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TargetCapacitySpecificationRequestProperty
+          TargetCapacitySpecificationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetCapacitySpecificationRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetCapacitySpecificationRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.TargetCapacitySpecificationRequestProperty
@@ -1409,8 +1409,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorCountRequestProperty):
-          AcceleratorCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AcceleratorCountRequestProperty
+          AcceleratorCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AcceleratorCountRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AcceleratorCountRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorCountRequestProperty = (wrapped
@@ -1534,7 +1534,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty):
-          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as TagSpecificationProperty
+          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? TagSpecificationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty = (wrapped as
@@ -2103,8 +2104,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateOverridesRequestProperty):
-          FleetLaunchTemplateOverridesRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FleetLaunchTemplateOverridesRequestProperty
+          FleetLaunchTemplateOverridesRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FleetLaunchTemplateOverridesRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FleetLaunchTemplateOverridesRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateOverridesRequestProperty
@@ -2655,8 +2656,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty):
-          SpotOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SpotOptionsRequestProperty
+          SpotOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotOptionsRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpotOptionsRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty = (wrapped as
@@ -4943,8 +4944,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.InstanceRequirementsRequestProperty):
-          InstanceRequirementsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceRequirementsRequestProperty
+          InstanceRequirementsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceRequirementsRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceRequirementsRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.InstanceRequirementsRequestProperty =
@@ -5066,8 +5067,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MaintenanceStrategiesProperty):
-          MaintenanceStrategiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MaintenanceStrategiesProperty
+          MaintenanceStrategiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceStrategiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaintenanceStrategiesProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.MaintenanceStrategiesProperty = (wrapped
@@ -5245,7 +5246,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty):
-          CapacityRebalanceProperty = CdkObjectWrappers.wrap(cdkObject) as CapacityRebalanceProperty
+          CapacityRebalanceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityRebalanceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityRebalanceProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityRebalanceProperty = (wrapped as
@@ -5368,8 +5370,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty):
-          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkInterfaceCountRequestProperty
+          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkInterfaceCountRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkInterfaceCountRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkInterfaceCountRequestProperty =
@@ -5765,7 +5767,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty):
-          PlacementProperty = CdkObjectWrappers.wrap(cdkObject) as PlacementProperty
+          PlacementProperty = CdkObjectWrappers.wrap(cdkObject) as? PlacementProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PlacementProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.PlacementProperty = (wrapped as
@@ -5896,8 +5899,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkBandwidthGbpsRequestProperty):
-          NetworkBandwidthGbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkBandwidthGbpsRequestProperty
+          NetworkBandwidthGbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkBandwidthGbpsRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkBandwidthGbpsRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.NetworkBandwidthGbpsRequestProperty =
@@ -6024,8 +6027,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty):
-          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BaselineEbsBandwidthMbpsRequestProperty
+          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselineEbsBandwidthMbpsRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.BaselineEbsBandwidthMbpsRequestProperty =
@@ -6444,8 +6447,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.OnDemandOptionsRequestProperty):
-          OnDemandOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OnDemandOptionsRequestProperty
+          OnDemandOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnDemandOptionsRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OnDemandOptionsRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.OnDemandOptionsRequestProperty = (wrapped
@@ -6633,8 +6636,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty):
-          FleetLaunchTemplateSpecificationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FleetLaunchTemplateSpecificationRequestProperty
+          FleetLaunchTemplateSpecificationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FleetLaunchTemplateSpecificationRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FleetLaunchTemplateSpecificationRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty
@@ -6753,7 +6756,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty):
-          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as MemoryMiBRequestProperty
+          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? MemoryMiBRequestProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemoryMiBRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryMiBRequestProperty = (wrapped as
@@ -6874,8 +6878,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty):
-          VCpuCountRangeRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VCpuCountRangeRequestProperty
+          VCpuCountRangeRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VCpuCountRangeRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VCpuCountRangeRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.VCpuCountRangeRequestProperty = (wrapped
@@ -6998,8 +7002,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty):
-          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AcceleratorTotalMemoryMiBRequestProperty
+          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AcceleratorTotalMemoryMiBRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.AcceleratorTotalMemoryMiBRequestProperty =
@@ -7135,8 +7139,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty):
-          CapacityReservationOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CapacityReservationOptionsRequestProperty
+          CapacityReservationOptionsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityReservationOptionsRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityReservationOptionsRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.CapacityReservationOptionsRequestProperty
@@ -7415,8 +7419,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty):
-          FleetLaunchTemplateConfigRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FleetLaunchTemplateConfigRequestProperty
+          FleetLaunchTemplateConfigRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FleetLaunchTemplateConfigRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FleetLaunchTemplateConfigRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty =
@@ -7537,8 +7541,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty):
-          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MemoryGiBPerVCpuRequestProperty
+          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MemoryGiBPerVCpuRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MemoryGiBPerVCpuRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.MemoryGiBPerVCpuRequestProperty = (wrapped
@@ -7661,8 +7665,8 @@ public open class CfnEC2Fleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEC2Fleet.TotalLocalStorageGBRequestProperty):
-          TotalLocalStorageGBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TotalLocalStorageGBRequestProperty
+          TotalLocalStorageGBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TotalLocalStorageGBRequestProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TotalLocalStorageGBRequestProperty):
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.TotalLocalStorageGBRequestProperty =

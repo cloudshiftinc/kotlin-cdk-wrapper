@@ -111,7 +111,8 @@ public interface PortfolioShareOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions):
-        PortfolioShareOptions = CdkObjectWrappers.wrap(cdkObject) as PortfolioShareOptions
+        PortfolioShareOptions = CdkObjectWrappers.wrap(cdkObject) as? PortfolioShareOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PortfolioShareOptions):
         software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions = (wrapped as

@@ -117,8 +117,8 @@ public interface EnvironmentPlaceholderValues {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.EnvironmentPlaceholderValues):
-        EnvironmentPlaceholderValues = CdkObjectWrappers.wrap(cdkObject) as
-        EnvironmentPlaceholderValues
+        EnvironmentPlaceholderValues = CdkObjectWrappers.wrap(cdkObject) as?
+        EnvironmentPlaceholderValues ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentPlaceholderValues):
         software.amazon.awscdk.cxapi.EnvironmentPlaceholderValues = (wrapped as CdkObject).cdkObject

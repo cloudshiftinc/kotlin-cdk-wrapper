@@ -157,7 +157,7 @@ public interface AccessKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.AccessKeyProps): AccessKeyProps
-        = CdkObjectWrappers.wrap(cdkObject) as AccessKeyProps
+        = CdkObjectWrappers.wrap(cdkObject) as? AccessKeyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AccessKeyProps): software.amazon.awscdk.services.iam.AccessKeyProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.AccessKeyProps

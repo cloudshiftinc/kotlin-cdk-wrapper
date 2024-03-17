@@ -132,7 +132,8 @@ public interface CfnCidrCollectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollectionProps):
-        CfnCidrCollectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnCidrCollectionProps
+        CfnCidrCollectionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCidrCollectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCidrCollectionProps):
         software.amazon.awscdk.services.route53.CfnCidrCollectionProps = (wrapped as

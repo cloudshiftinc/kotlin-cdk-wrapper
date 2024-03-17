@@ -131,8 +131,8 @@ public interface EcsDeploymentGroupAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupAttributes):
-        EcsDeploymentGroupAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        EcsDeploymentGroupAttributes
+        EcsDeploymentGroupAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        EcsDeploymentGroupAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsDeploymentGroupAttributes):
         software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupAttributes = (wrapped as

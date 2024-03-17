@@ -1306,7 +1306,8 @@ public open class CfnEventDataStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty):
-          InsightSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as InsightSelectorProperty
+          InsightSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? InsightSelectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InsightSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty =
@@ -3442,8 +3443,8 @@ public open class CfnEventDataStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty):
-          AdvancedFieldSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdvancedFieldSelectorProperty
+          AdvancedFieldSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedFieldSelectorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedFieldSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty
@@ -3619,8 +3620,8 @@ public open class CfnEventDataStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty):
-          AdvancedEventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdvancedEventSelectorProperty
+          AdvancedEventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdvancedEventSelectorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdvancedEventSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty

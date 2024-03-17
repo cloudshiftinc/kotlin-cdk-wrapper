@@ -53,6 +53,10 @@ public abstract class Backend internal constructor(
   public open fun bind(scope: Construct): BackendConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(BackendConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.Backend,
+  ) : Backend(cdkObject)
+
   public companion object {
     public fun virtualService(virtualService: IVirtualService): Backend =
         software.amazon.awscdk.services.appmesh.Backend.virtualService(virtualService.let(IVirtualService::unwrap)).let(Backend::wrap)
@@ -69,7 +73,7 @@ public abstract class Backend internal constructor(
         virtualService(virtualService, VirtualServiceBackendOptions(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.Backend): Backend =
-        CdkObjectWrappers.wrap(cdkObject) as Backend
+        CdkObjectWrappers.wrap(cdkObject) as? Backend ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Backend): software.amazon.awscdk.services.appmesh.Backend =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.Backend

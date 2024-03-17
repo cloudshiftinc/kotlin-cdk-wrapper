@@ -397,7 +397,8 @@ public interface CfnResourceDataSyncProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps):
-        CfnResourceDataSyncProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceDataSyncProps
+        CfnResourceDataSyncProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceDataSyncProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceDataSyncProps):
         software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps = (wrapped as

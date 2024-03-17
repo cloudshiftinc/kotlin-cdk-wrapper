@@ -177,7 +177,8 @@ public interface MetricExpressionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig):
-        MetricExpressionConfig = CdkObjectWrappers.wrap(cdkObject) as MetricExpressionConfig
+        MetricExpressionConfig = CdkObjectWrappers.wrap(cdkObject) as? MetricExpressionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetricExpressionConfig):
         software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig = (wrapped as

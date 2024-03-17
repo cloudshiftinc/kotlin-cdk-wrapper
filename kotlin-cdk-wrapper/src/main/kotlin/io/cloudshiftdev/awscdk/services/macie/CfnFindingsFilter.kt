@@ -553,8 +553,8 @@ public open class CfnFindingsFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingsFilterListItemProperty):
-          FindingsFilterListItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FindingsFilterListItemProperty
+          FindingsFilterListItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FindingsFilterListItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FindingsFilterListItemProperty):
           software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingsFilterListItemProperty =
@@ -668,7 +668,8 @@ public open class CfnFindingsFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingCriteriaProperty):
-          FindingCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as FindingCriteriaProperty
+          FindingCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? FindingCriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FindingCriteriaProperty):
           software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingCriteriaProperty = (wrapped
@@ -939,8 +940,8 @@ public open class CfnFindingsFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter.CriterionAdditionalPropertiesProperty):
-          CriterionAdditionalPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CriterionAdditionalPropertiesProperty
+          CriterionAdditionalPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CriterionAdditionalPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CriterionAdditionalPropertiesProperty):
           software.amazon.awscdk.services.macie.CfnFindingsFilter.CriterionAdditionalPropertiesProperty

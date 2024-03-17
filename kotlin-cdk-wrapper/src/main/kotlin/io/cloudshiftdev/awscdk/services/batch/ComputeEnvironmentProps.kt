@@ -182,7 +182,8 @@ public interface ComputeEnvironmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.ComputeEnvironmentProps):
-        ComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as ComputeEnvironmentProps
+        ComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as? ComputeEnvironmentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.ComputeEnvironmentProps = (wrapped as

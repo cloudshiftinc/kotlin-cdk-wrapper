@@ -22,9 +22,14 @@ public abstract class ProxyConfiguration internal constructor(
       CfnTaskDefinition.ProxyConfigurationProperty = unwrap(this).bind(scope.let(Construct::unwrap),
       taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration,
+  ) : ProxyConfiguration(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration):
-        ProxyConfiguration = CdkObjectWrappers.wrap(cdkObject) as ProxyConfiguration
+        ProxyConfiguration = CdkObjectWrappers.wrap(cdkObject) as? ProxyConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProxyConfiguration):
         software.amazon.awscdk.services.ecs.ProxyConfiguration = (wrapped as CdkObject).cdkObject as

@@ -678,7 +678,8 @@ public open class CfnNotificationRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule.TargetProperty):
-          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as TargetProperty
+          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule.TargetProperty =

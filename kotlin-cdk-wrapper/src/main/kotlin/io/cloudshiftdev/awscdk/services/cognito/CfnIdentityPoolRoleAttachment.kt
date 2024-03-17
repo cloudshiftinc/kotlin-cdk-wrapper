@@ -390,8 +390,8 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty):
-          RulesConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RulesConfigurationTypeProperty
+          RulesConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RulesConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RulesConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
@@ -576,7 +576,8 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty):
-          MappingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as MappingRuleProperty
+          MappingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MappingRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MappingRuleProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty
@@ -848,7 +849,8 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty):
-          RoleMappingProperty = CdkObjectWrappers.wrap(cdkObject) as RoleMappingProperty
+          RoleMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? RoleMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoleMappingProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty

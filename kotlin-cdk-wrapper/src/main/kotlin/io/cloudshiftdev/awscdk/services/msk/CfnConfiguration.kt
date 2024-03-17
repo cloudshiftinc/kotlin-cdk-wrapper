@@ -480,7 +480,8 @@ public open class CfnConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty):
-          LatestRevisionProperty = CdkObjectWrappers.wrap(cdkObject) as LatestRevisionProperty
+          LatestRevisionProperty = CdkObjectWrappers.wrap(cdkObject) as? LatestRevisionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LatestRevisionProperty):
           software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty = (wrapped as

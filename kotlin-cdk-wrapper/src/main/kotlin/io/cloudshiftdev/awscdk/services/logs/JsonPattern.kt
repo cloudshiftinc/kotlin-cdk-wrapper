@@ -33,9 +33,13 @@ public abstract class JsonPattern internal constructor(
    */
   public override fun logPatternString(): String = unwrap(this).getLogPatternString()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.logs.JsonPattern,
+  ) : JsonPattern(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.JsonPattern): JsonPattern =
-        CdkObjectWrappers.wrap(cdkObject) as JsonPattern
+        CdkObjectWrappers.wrap(cdkObject) as? JsonPattern ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JsonPattern): software.amazon.awscdk.services.logs.JsonPattern =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.logs.JsonPattern

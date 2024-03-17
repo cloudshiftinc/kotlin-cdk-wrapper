@@ -248,7 +248,8 @@ public interface CfnContactFlowModuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnContactFlowModuleProps):
-        CfnContactFlowModuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnContactFlowModuleProps
+        CfnContactFlowModuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnContactFlowModuleProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnContactFlowModuleProps):
         software.amazon.awscdk.services.connect.CfnContactFlowModuleProps = (wrapped as

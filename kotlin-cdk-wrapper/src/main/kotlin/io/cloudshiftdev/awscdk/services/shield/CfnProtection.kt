@@ -728,7 +728,7 @@ public open class CfnProtection internal constructor(
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty):
           ApplicationLayerAutomaticResponseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject)
-          as ApplicationLayerAutomaticResponseConfigurationProperty
+          as? ApplicationLayerAutomaticResponseConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationLayerAutomaticResponseConfigurationProperty):
           software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty
@@ -894,7 +894,8 @@ public open class CfnProtection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.shield.CfnProtection.ActionProperty = (wrapped as

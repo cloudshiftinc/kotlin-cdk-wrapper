@@ -123,7 +123,8 @@ public interface TagUpdateConstraintOptions : CommonConstraintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.TagUpdateConstraintOptions):
-        TagUpdateConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as TagUpdateConstraintOptions
+        TagUpdateConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        TagUpdateConstraintOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TagUpdateConstraintOptions):
         software.amazon.awscdk.services.servicecatalog.TagUpdateConstraintOptions = (wrapped as

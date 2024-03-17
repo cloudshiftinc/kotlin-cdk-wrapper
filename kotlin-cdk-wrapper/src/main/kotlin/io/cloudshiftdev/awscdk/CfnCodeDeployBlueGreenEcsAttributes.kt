@@ -178,8 +178,8 @@ public interface CfnCodeDeployBlueGreenEcsAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenEcsAttributes):
-        CfnCodeDeployBlueGreenEcsAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCodeDeployBlueGreenEcsAttributes
+        CfnCodeDeployBlueGreenEcsAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCodeDeployBlueGreenEcsAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeDeployBlueGreenEcsAttributes):
         software.amazon.awscdk.CfnCodeDeployBlueGreenEcsAttributes = (wrapped as

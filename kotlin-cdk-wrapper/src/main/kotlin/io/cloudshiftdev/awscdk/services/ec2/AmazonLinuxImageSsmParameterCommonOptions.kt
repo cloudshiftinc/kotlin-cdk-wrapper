@@ -193,8 +193,8 @@ public interface AmazonLinuxImageSsmParameterCommonOptions : AmazonLinuxImageSsm
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterCommonOptions):
-        AmazonLinuxImageSsmParameterCommonOptions = CdkObjectWrappers.wrap(cdkObject) as
-        AmazonLinuxImageSsmParameterCommonOptions
+        AmazonLinuxImageSsmParameterCommonOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        AmazonLinuxImageSsmParameterCommonOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinuxImageSsmParameterCommonOptions):
         software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterCommonOptions = (wrapped as

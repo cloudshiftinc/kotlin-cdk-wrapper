@@ -296,8 +296,8 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty):
-          CloudFrontOriginAccessIdentityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudFrontOriginAccessIdentityConfigProperty
+          CloudFrontOriginAccessIdentityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudFrontOriginAccessIdentityConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudFrontOriginAccessIdentityConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty

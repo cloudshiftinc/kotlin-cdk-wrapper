@@ -308,7 +308,7 @@ public interface CfnScriptProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnScriptProps):
-        CfnScriptProps = CdkObjectWrappers.wrap(cdkObject) as CfnScriptProps
+        CfnScriptProps = CdkObjectWrappers.wrap(cdkObject) as? CfnScriptProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnScriptProps):
         software.amazon.awscdk.services.gamelift.CfnScriptProps = (wrapped as CdkObject).cdkObject

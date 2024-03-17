@@ -458,7 +458,8 @@ public interface CfnMonitoringScheduleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringScheduleProps):
-        CfnMonitoringScheduleProps = CdkObjectWrappers.wrap(cdkObject) as CfnMonitoringScheduleProps
+        CfnMonitoringScheduleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMonitoringScheduleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMonitoringScheduleProps):
         software.amazon.awscdk.services.sagemaker.CfnMonitoringScheduleProps = (wrapped as

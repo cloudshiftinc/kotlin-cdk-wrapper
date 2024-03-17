@@ -467,8 +467,8 @@ public open class CfnPublicDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty):
-          PublicDnsPropertiesMutableProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PublicDnsPropertiesMutableProperty
+          PublicDnsPropertiesMutableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublicDnsPropertiesMutableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicDnsPropertiesMutableProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty
@@ -550,7 +550,7 @@ public open class CfnPublicDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty):
-          SOAProperty = CdkObjectWrappers.wrap(cdkObject) as SOAProperty
+          SOAProperty = CdkObjectWrappers.wrap(cdkObject) as? SOAProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SOAProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.SOAProperty =
@@ -664,7 +664,8 @@ public open class CfnPublicDnsNamespace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty):
-          PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as PropertiesProperty
+          PropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as? PropertiesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PropertiesProperty):
           software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace.PropertiesProperty

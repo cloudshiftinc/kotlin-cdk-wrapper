@@ -264,7 +264,8 @@ public interface CfnAssessmentTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTemplateProps):
-        CfnAssessmentTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnAssessmentTemplateProps
+        CfnAssessmentTemplateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAssessmentTemplateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssessmentTemplateProps):
         software.amazon.awscdk.services.inspector.CfnAssessmentTemplateProps = (wrapped as

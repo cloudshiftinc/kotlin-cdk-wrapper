@@ -421,8 +421,8 @@ public interface CfnTrafficMirrorFilterRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRuleProps):
-        CfnTrafficMirrorFilterRuleProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTrafficMirrorFilterRuleProps
+        CfnTrafficMirrorFilterRuleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrafficMirrorFilterRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficMirrorFilterRuleProps):
         software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRuleProps = (wrapped as

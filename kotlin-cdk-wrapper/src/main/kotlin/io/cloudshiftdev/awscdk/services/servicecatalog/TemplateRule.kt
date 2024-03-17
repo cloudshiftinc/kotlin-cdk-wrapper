@@ -142,7 +142,7 @@ public interface TemplateRule {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.TemplateRule):
-        TemplateRule = CdkObjectWrappers.wrap(cdkObject) as TemplateRule
+        TemplateRule = CdkObjectWrappers.wrap(cdkObject) as? TemplateRule ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TemplateRule):
         software.amazon.awscdk.services.servicecatalog.TemplateRule = (wrapped as

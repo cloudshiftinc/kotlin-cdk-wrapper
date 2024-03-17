@@ -142,8 +142,8 @@ public interface FargateTaskDefinitionAttributes : CommonTaskDefinitionAttribute
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinitionAttributes):
-        FargateTaskDefinitionAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        FargateTaskDefinitionAttributes
+        FargateTaskDefinitionAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        FargateTaskDefinitionAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateTaskDefinitionAttributes):
         software.amazon.awscdk.services.ecs.FargateTaskDefinitionAttributes = (wrapped as

@@ -424,7 +424,8 @@ public open class CfnListener internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty):
-          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as PortRangeProperty
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortRangeProperty):
           software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty = (wrapped

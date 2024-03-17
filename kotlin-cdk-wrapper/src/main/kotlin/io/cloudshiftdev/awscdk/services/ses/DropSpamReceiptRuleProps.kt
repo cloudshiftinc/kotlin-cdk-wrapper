@@ -238,7 +238,8 @@ public interface DropSpamReceiptRuleProps : ReceiptRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.DropSpamReceiptRuleProps):
-        DropSpamReceiptRuleProps = CdkObjectWrappers.wrap(cdkObject) as DropSpamReceiptRuleProps
+        DropSpamReceiptRuleProps = CdkObjectWrappers.wrap(cdkObject) as? DropSpamReceiptRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DropSpamReceiptRuleProps):
         software.amazon.awscdk.services.ses.DropSpamReceiptRuleProps = (wrapped as

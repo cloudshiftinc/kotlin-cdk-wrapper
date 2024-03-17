@@ -15,10 +15,21 @@ public interface IListenerCertificate {
    */
   public fun certificateArn(): String
 
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate,
+  ) : CdkObject(cdkObject), IListenerCertificate {
+    /**
+     * The ARN of the certificate to use.
+     */
+    override fun certificateArn(): String = unwrap(this).getCertificateArn()
+  }
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate):
-        IListenerCertificate = CdkObjectWrappers.wrap(cdkObject) as IListenerCertificate
+        IListenerCertificate = CdkObjectWrappers.wrap(cdkObject) as? IListenerCertificate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IListenerCertificate):
         software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate = (wrapped as

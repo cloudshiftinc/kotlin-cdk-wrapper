@@ -125,7 +125,7 @@ public interface WeightedTarget {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.WeightedTarget):
-        WeightedTarget = CdkObjectWrappers.wrap(cdkObject) as WeightedTarget
+        WeightedTarget = CdkObjectWrappers.wrap(cdkObject) as? WeightedTarget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WeightedTarget):
         software.amazon.awscdk.services.appmesh.WeightedTarget = (wrapped as CdkObject).cdkObject as

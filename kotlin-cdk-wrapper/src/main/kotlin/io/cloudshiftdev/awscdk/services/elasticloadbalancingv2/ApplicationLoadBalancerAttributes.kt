@@ -226,8 +226,8 @@ public interface ApplicationLoadBalancerAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerAttributes):
-        ApplicationLoadBalancerAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancerAttributes
+        ApplicationLoadBalancerAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancerAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancerAttributes):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerAttributes =

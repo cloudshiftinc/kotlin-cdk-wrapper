@@ -152,8 +152,8 @@ public interface CfnLocalGatewayRouteTableVPCAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociationProps):
-        CfnLocalGatewayRouteTableVPCAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLocalGatewayRouteTableVPCAssociationProps
+        CfnLocalGatewayRouteTableVPCAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLocalGatewayRouteTableVPCAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocalGatewayRouteTableVPCAssociationProps):
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociationProps = (wrapped

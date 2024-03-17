@@ -510,7 +510,8 @@ public interface ActionProperties {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.ActionProperties):
-        ActionProperties = CdkObjectWrappers.wrap(cdkObject) as ActionProperties
+        ActionProperties = CdkObjectWrappers.wrap(cdkObject) as? ActionProperties ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ActionProperties):
         software.amazon.awscdk.services.codepipeline.ActionProperties = (wrapped as

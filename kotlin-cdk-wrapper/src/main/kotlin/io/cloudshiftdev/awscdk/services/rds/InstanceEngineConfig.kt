@@ -127,7 +127,8 @@ public interface InstanceEngineConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.InstanceEngineConfig):
-        InstanceEngineConfig = CdkObjectWrappers.wrap(cdkObject) as InstanceEngineConfig
+        InstanceEngineConfig = CdkObjectWrappers.wrap(cdkObject) as? InstanceEngineConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceEngineConfig):
         software.amazon.awscdk.services.rds.InstanceEngineConfig = (wrapped as CdkObject).cdkObject

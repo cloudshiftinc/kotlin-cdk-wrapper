@@ -140,8 +140,8 @@ public interface CfnTransitGatewayMulticastGroupSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSourceProps):
-        CfnTransitGatewayMulticastGroupSourceProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTransitGatewayMulticastGroupSourceProps
+        CfnTransitGatewayMulticastGroupSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTransitGatewayMulticastGroupSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransitGatewayMulticastGroupSourceProps):
         software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSourceProps = (wrapped as

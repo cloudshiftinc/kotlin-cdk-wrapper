@@ -713,8 +713,8 @@ public open class CfnStreamingDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty):
-          StreamingDistributionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StreamingDistributionConfigProperty
+          StreamingDistributionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamingDistributionConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamingDistributionConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty
@@ -892,7 +892,8 @@ public open class CfnStreamingDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty):
-          S3OriginProperty = CdkObjectWrappers.wrap(cdkObject) as S3OriginProperty
+          S3OriginProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OriginProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3OriginProperty):
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty =
@@ -1088,7 +1089,8 @@ public open class CfnStreamingDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty):
-          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingProperty
+          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingProperty):
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty =
@@ -1258,7 +1260,8 @@ public open class CfnStreamingDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty):
-          TrustedSignersProperty = CdkObjectWrappers.wrap(cdkObject) as TrustedSignersProperty
+          TrustedSignersProperty = CdkObjectWrappers.wrap(cdkObject) as? TrustedSignersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrustedSignersProperty):
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty

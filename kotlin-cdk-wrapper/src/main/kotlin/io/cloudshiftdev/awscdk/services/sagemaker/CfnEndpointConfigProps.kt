@@ -842,7 +842,8 @@ public interface CfnEndpointConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfigProps):
-        CfnEndpointConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnEndpointConfigProps
+        CfnEndpointConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEndpointConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointConfigProps):
         software.amazon.awscdk.services.sagemaker.CfnEndpointConfigProps = (wrapped as

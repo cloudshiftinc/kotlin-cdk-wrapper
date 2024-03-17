@@ -1072,8 +1072,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty):
-          ResponseParameterListProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResponseParameterListProperty
+          ResponseParameterListProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResponseParameterListProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResponseParameterListProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty
@@ -1171,7 +1171,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty):
-          TlsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TlsConfigProperty
+          TlsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TlsConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TlsConfigProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty = (wrapped
@@ -1270,7 +1271,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty):
-          ResponseParameterProperty = CdkObjectWrappers.wrap(cdkObject) as ResponseParameterProperty
+          ResponseParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResponseParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResponseParameterProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty =

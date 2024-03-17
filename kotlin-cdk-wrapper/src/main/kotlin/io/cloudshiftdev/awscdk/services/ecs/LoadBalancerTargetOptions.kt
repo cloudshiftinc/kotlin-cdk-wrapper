@@ -142,7 +142,8 @@ public interface LoadBalancerTargetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.LoadBalancerTargetOptions):
-        LoadBalancerTargetOptions = CdkObjectWrappers.wrap(cdkObject) as LoadBalancerTargetOptions
+        LoadBalancerTargetOptions = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerTargetOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancerTargetOptions):
         software.amazon.awscdk.services.ecs.LoadBalancerTargetOptions = (wrapped as

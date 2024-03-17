@@ -264,8 +264,8 @@ public interface GrantOnPrincipalAndResourceOptions : CommonGrantOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iam.GrantOnPrincipalAndResourceOptions):
-        GrantOnPrincipalAndResourceOptions = CdkObjectWrappers.wrap(cdkObject) as
-        GrantOnPrincipalAndResourceOptions
+        GrantOnPrincipalAndResourceOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        GrantOnPrincipalAndResourceOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrantOnPrincipalAndResourceOptions):
         software.amazon.awscdk.services.iam.GrantOnPrincipalAndResourceOptions = (wrapped as

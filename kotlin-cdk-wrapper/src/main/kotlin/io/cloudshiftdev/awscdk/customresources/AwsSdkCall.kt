@@ -451,7 +451,7 @@ public interface AwsSdkCall {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.customresources.AwsSdkCall): AwsSdkCall =
-        CdkObjectWrappers.wrap(cdkObject) as AwsSdkCall
+        CdkObjectWrappers.wrap(cdkObject) as? AwsSdkCall ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsSdkCall): software.amazon.awscdk.customresources.AwsSdkCall =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.customresources.AwsSdkCall

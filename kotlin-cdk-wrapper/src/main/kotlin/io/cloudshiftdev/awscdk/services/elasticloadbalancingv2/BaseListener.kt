@@ -19,10 +19,14 @@ public abstract class BaseListener internal constructor(
    */
   public override fun listenerArn(): String = unwrap(this).getListenerArn()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
+  ) : BaseListener(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener):
-        BaseListener = CdkObjectWrappers.wrap(cdkObject) as BaseListener
+        BaseListener = CdkObjectWrappers.wrap(cdkObject) as? BaseListener ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseListener):
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener = (wrapped as

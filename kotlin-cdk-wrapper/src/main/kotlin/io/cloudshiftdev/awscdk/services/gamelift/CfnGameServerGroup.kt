@@ -1186,7 +1186,8 @@ public open class CfnGameServerGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty):
-          LaunchTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as LaunchTemplateProperty
+          LaunchTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LaunchTemplateProperty):
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty =
@@ -1278,8 +1279,8 @@ public open class CfnGameServerGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty):
-          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TargetTrackingConfigurationProperty
+          TargetTrackingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetTrackingConfigurationProperty):
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty
@@ -1482,7 +1483,8 @@ public open class CfnGameServerGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty):
-          AutoScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as AutoScalingPolicyProperty
+          AutoScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoScalingPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoScalingPolicyProperty):
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty =
@@ -1622,8 +1624,8 @@ public open class CfnGameServerGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty):
-          InstanceDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceDefinitionProperty
+          InstanceDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceDefinitionProperty):
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty =

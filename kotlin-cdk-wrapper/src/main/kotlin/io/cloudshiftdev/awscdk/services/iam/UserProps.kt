@@ -395,7 +395,7 @@ public interface UserProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.UserProps): UserProps =
-        CdkObjectWrappers.wrap(cdkObject) as UserProps
+        CdkObjectWrappers.wrap(cdkObject) as? UserProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserProps): software.amazon.awscdk.services.iam.UserProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.UserProps

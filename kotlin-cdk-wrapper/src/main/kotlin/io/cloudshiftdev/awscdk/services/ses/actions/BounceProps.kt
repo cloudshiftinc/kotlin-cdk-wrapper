@@ -150,7 +150,7 @@ public interface BounceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.BounceProps):
-        BounceProps = CdkObjectWrappers.wrap(cdkObject) as BounceProps
+        BounceProps = CdkObjectWrappers.wrap(cdkObject) as? BounceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BounceProps):
         software.amazon.awscdk.services.ses.actions.BounceProps = (wrapped as CdkObject).cdkObject

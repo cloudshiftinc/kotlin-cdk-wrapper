@@ -29,6 +29,10 @@ public abstract class AclTraffic internal constructor(
   public open fun toTrafficConfig(): AclTrafficConfig =
       unwrap(this).toTrafficConfig().let(AclTrafficConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.AclTraffic,
+  ) : AclTraffic(cdkObject)
+
   public companion object {
     public fun allTraffic(): AclTraffic =
         software.amazon.awscdk.services.ec2.AclTraffic.allTraffic().let(AclTraffic::wrap)
@@ -62,7 +66,7 @@ public abstract class AclTraffic internal constructor(
         endPort).let(AclTraffic::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclTraffic): AclTraffic =
-        CdkObjectWrappers.wrap(cdkObject) as AclTraffic
+        CdkObjectWrappers.wrap(cdkObject) as? AclTraffic ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AclTraffic): software.amazon.awscdk.services.ec2.AclTraffic =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.AclTraffic

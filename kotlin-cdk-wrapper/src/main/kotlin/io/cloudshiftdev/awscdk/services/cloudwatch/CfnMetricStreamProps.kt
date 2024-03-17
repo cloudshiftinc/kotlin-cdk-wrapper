@@ -707,7 +707,8 @@ public interface CfnMetricStreamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStreamProps):
-        CfnMetricStreamProps = CdkObjectWrappers.wrap(cdkObject) as CfnMetricStreamProps
+        CfnMetricStreamProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMetricStreamProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMetricStreamProps):
         software.amazon.awscdk.services.cloudwatch.CfnMetricStreamProps = (wrapped as

@@ -387,7 +387,8 @@ public interface SingleValueWidgetProps : MetricWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.SingleValueWidgetProps):
-        SingleValueWidgetProps = CdkObjectWrappers.wrap(cdkObject) as SingleValueWidgetProps
+        SingleValueWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? SingleValueWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SingleValueWidgetProps):
         software.amazon.awscdk.services.cloudwatch.SingleValueWidgetProps = (wrapped as

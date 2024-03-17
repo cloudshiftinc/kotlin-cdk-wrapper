@@ -121,7 +121,8 @@ public interface VirtualServiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProps):
-        VirtualServiceProps = CdkObjectWrappers.wrap(cdkObject) as VirtualServiceProps
+        VirtualServiceProps = CdkObjectWrappers.wrap(cdkObject) as? VirtualServiceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualServiceProps):
         software.amazon.awscdk.services.appmesh.VirtualServiceProps = (wrapped as

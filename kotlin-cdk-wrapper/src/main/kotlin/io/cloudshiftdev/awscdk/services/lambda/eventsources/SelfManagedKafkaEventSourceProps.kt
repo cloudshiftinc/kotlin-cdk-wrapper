@@ -548,8 +548,8 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps):
-        SelfManagedKafkaEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as
-        SelfManagedKafkaEventSourceProps
+        SelfManagedKafkaEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SelfManagedKafkaEventSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SelfManagedKafkaEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps =

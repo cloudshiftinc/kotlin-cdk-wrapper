@@ -321,7 +321,8 @@ public interface CfnVpcAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachmentProps):
-        CfnVpcAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as CfnVpcAttachmentProps
+        CfnVpcAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVpcAttachmentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcAttachmentProps):
         software.amazon.awscdk.services.networkmanager.CfnVpcAttachmentProps = (wrapped as

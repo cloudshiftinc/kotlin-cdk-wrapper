@@ -207,7 +207,8 @@ public interface IntegrationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.IntegrationProps):
-        IntegrationProps = CdkObjectWrappers.wrap(cdkObject) as IntegrationProps
+        IntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? IntegrationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IntegrationProps):
         software.amazon.awscdk.services.apigateway.IntegrationProps = (wrapped as

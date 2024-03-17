@@ -169,7 +169,8 @@ public interface CfnDestinationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnDestinationProps):
-        CfnDestinationProps = CdkObjectWrappers.wrap(cdkObject) as CfnDestinationProps
+        CfnDestinationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDestinationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDestinationProps):
         software.amazon.awscdk.services.logs.CfnDestinationProps = (wrapped as CdkObject).cdkObject

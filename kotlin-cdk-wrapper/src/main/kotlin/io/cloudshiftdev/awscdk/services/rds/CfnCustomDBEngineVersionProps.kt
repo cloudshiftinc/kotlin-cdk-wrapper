@@ -510,8 +510,8 @@ public interface CfnCustomDBEngineVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnCustomDBEngineVersionProps):
-        CfnCustomDBEngineVersionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCustomDBEngineVersionProps
+        CfnCustomDBEngineVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCustomDBEngineVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomDBEngineVersionProps):
         software.amazon.awscdk.services.rds.CfnCustomDBEngineVersionProps = (wrapped as

@@ -88,8 +88,8 @@ public interface TimeBasedCanaryTrafficRoutingProps : BaseTrafficShiftingConfigP
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps):
-        TimeBasedCanaryTrafficRoutingProps = CdkObjectWrappers.wrap(cdkObject) as
-        TimeBasedCanaryTrafficRoutingProps
+        TimeBasedCanaryTrafficRoutingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        TimeBasedCanaryTrafficRoutingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TimeBasedCanaryTrafficRoutingProps):
         software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps = (wrapped as

@@ -423,8 +423,8 @@ public open class CfnTableOptimizer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizer.TableOptimizerConfigurationProperty):
-          TableOptimizerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TableOptimizerConfigurationProperty
+          TableOptimizerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TableOptimizerConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TableOptimizerConfigurationProperty):
           software.amazon.awscdk.services.glue.CfnTableOptimizer.TableOptimizerConfigurationProperty

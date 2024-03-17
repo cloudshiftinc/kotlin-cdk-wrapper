@@ -455,8 +455,8 @@ public interface CfnSecurityGroupEgressProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupEgressProps):
-        CfnSecurityGroupEgressProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSecurityGroupEgressProps
+        CfnSecurityGroupEgressProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSecurityGroupEgressProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityGroupEgressProps):
         software.amazon.awscdk.services.ec2.CfnSecurityGroupEgressProps = (wrapped as

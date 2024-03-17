@@ -219,7 +219,8 @@ public interface CfnIPAMAllocationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMAllocationProps):
-        CfnIPAMAllocationProps = CdkObjectWrappers.wrap(cdkObject) as CfnIPAMAllocationProps
+        CfnIPAMAllocationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIPAMAllocationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMAllocationProps):
         software.amazon.awscdk.services.ec2.CfnIPAMAllocationProps = (wrapped as

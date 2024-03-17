@@ -211,7 +211,8 @@ public interface HostedZoneContextQuery {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.HostedZoneContextQuery):
-        HostedZoneContextQuery = CdkObjectWrappers.wrap(cdkObject) as HostedZoneContextQuery
+        HostedZoneContextQuery = CdkObjectWrappers.wrap(cdkObject) as? HostedZoneContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HostedZoneContextQuery):
         software.amazon.awscdk.cloudassembly.schema.HostedZoneContextQuery = (wrapped as

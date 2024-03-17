@@ -297,7 +297,7 @@ public interface BatchJobProps : TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.BatchJobProps):
-        BatchJobProps = CdkObjectWrappers.wrap(cdkObject) as BatchJobProps
+        BatchJobProps = CdkObjectWrappers.wrap(cdkObject) as? BatchJobProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BatchJobProps):
         software.amazon.awscdk.services.events.targets.BatchJobProps = (wrapped as

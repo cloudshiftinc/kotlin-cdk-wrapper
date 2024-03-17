@@ -382,7 +382,8 @@ public interface ReceiptRuleActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleActionConfig):
-        ReceiptRuleActionConfig = CdkObjectWrappers.wrap(cdkObject) as ReceiptRuleActionConfig
+        ReceiptRuleActionConfig = CdkObjectWrappers.wrap(cdkObject) as? ReceiptRuleActionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReceiptRuleActionConfig):
         software.amazon.awscdk.services.ses.ReceiptRuleActionConfig = (wrapped as

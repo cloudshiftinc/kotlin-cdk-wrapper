@@ -336,7 +336,8 @@ public interface CfnAnalysisTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplateProps):
-        CfnAnalysisTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnAnalysisTemplateProps
+        CfnAnalysisTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAnalysisTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnalysisTemplateProps):
         software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplateProps = (wrapped as

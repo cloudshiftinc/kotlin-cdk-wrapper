@@ -184,7 +184,8 @@ public interface ExtensionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ExtensionOptions):
-        ExtensionOptions = CdkObjectWrappers.wrap(cdkObject) as ExtensionOptions
+        ExtensionOptions = CdkObjectWrappers.wrap(cdkObject) as? ExtensionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExtensionOptions):
         software.amazon.awscdk.services.appconfig.ExtensionOptions = (wrapped as

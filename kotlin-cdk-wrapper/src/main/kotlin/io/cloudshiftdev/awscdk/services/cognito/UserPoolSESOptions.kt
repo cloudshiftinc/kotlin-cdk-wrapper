@@ -249,7 +249,8 @@ public interface UserPoolSESOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolSESOptions):
-        UserPoolSESOptions = CdkObjectWrappers.wrap(cdkObject) as UserPoolSESOptions
+        UserPoolSESOptions = CdkObjectWrappers.wrap(cdkObject) as? UserPoolSESOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolSESOptions):
         software.amazon.awscdk.services.cognito.UserPoolSESOptions = (wrapped as

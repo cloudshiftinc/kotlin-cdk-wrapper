@@ -1862,7 +1862,8 @@ public open class CfnLaunchConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty):
-          BlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as BlockDeviceProperty
+          BlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? BlockDeviceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlockDeviceProperty):
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty =
@@ -2150,8 +2151,8 @@ public open class CfnLaunchConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BlockDeviceMappingProperty
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlockDeviceMappingProperty):
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty
@@ -2376,7 +2377,8 @@ public open class CfnLaunchConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty):
-          MetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as MetadataOptionsProperty
+          MetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetadataOptionsProperty):
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty

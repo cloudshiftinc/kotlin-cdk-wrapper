@@ -343,8 +343,8 @@ public interface CfnVerifiedAccessInstanceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstanceProps):
-        CfnVerifiedAccessInstanceProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVerifiedAccessInstanceProps
+        CfnVerifiedAccessInstanceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVerifiedAccessInstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVerifiedAccessInstanceProps):
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstanceProps = (wrapped as

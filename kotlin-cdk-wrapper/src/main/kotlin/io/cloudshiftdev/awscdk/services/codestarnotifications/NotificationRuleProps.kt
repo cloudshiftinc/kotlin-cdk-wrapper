@@ -268,7 +268,8 @@ public interface NotificationRuleProps : NotificationRuleOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarnotifications.NotificationRuleProps):
-        NotificationRuleProps = CdkObjectWrappers.wrap(cdkObject) as NotificationRuleProps
+        NotificationRuleProps = CdkObjectWrappers.wrap(cdkObject) as? NotificationRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NotificationRuleProps):
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleProps = (wrapped as

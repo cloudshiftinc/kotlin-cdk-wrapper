@@ -612,8 +612,8 @@ public open class CfnSubscriptionTarget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.SubscriptionTargetFormProperty):
-          SubscriptionTargetFormProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SubscriptionTargetFormProperty
+          SubscriptionTargetFormProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubscriptionTargetFormProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriptionTargetFormProperty):
           software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.SubscriptionTargetFormProperty

@@ -614,7 +614,8 @@ public interface CfnPushTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplateProps):
-        CfnPushTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnPushTemplateProps
+        CfnPushTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPushTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPushTemplateProps):
         software.amazon.awscdk.services.pinpoint.CfnPushTemplateProps = (wrapped as

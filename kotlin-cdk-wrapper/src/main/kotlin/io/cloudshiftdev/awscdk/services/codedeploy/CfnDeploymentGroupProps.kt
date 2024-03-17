@@ -1611,7 +1611,8 @@ public interface CfnDeploymentGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroupProps):
-        CfnDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnDeploymentGroupProps
+        CfnDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDeploymentGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeploymentGroupProps):
         software.amazon.awscdk.services.codedeploy.CfnDeploymentGroupProps = (wrapped as

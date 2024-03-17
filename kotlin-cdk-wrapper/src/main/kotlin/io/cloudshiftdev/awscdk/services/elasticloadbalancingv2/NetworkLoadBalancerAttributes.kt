@@ -218,8 +218,8 @@ public interface NetworkLoadBalancerAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes):
-        NetworkLoadBalancerAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkLoadBalancerAttributes
+        NetworkLoadBalancerAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancerAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancerAttributes):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes =

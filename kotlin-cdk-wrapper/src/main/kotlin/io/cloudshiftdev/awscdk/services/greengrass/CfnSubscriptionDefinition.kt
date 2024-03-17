@@ -510,8 +510,8 @@ public open class CfnSubscriptionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty):
-          SubscriptionDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SubscriptionDefinitionVersionProperty
+          SubscriptionDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SubscriptionDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriptionDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty
@@ -714,7 +714,8 @@ public open class CfnSubscriptionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionProperty):
-          SubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as SubscriptionProperty
+          SubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriptionProperty):
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionProperty

@@ -227,7 +227,7 @@ public interface ModelOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ModelOptions):
-        ModelOptions = CdkObjectWrappers.wrap(cdkObject) as ModelOptions
+        ModelOptions = CdkObjectWrappers.wrap(cdkObject) as? ModelOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ModelOptions):
         software.amazon.awscdk.services.apigateway.ModelOptions = (wrapped as CdkObject).cdkObject

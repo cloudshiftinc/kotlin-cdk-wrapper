@@ -732,7 +732,8 @@ public interface CfnImageBuilderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilderProps):
-        CfnImageBuilderProps = CdkObjectWrappers.wrap(cdkObject) as CfnImageBuilderProps
+        CfnImageBuilderProps = CdkObjectWrappers.wrap(cdkObject) as? CfnImageBuilderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageBuilderProps):
         software.amazon.awscdk.services.appstream.CfnImageBuilderProps = (wrapped as

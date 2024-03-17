@@ -260,8 +260,8 @@ public interface CfnLaunchRoleConstraintProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraintProps):
-        CfnLaunchRoleConstraintProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLaunchRoleConstraintProps
+        CfnLaunchRoleConstraintProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLaunchRoleConstraintProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchRoleConstraintProps):
         software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraintProps = (wrapped as

@@ -42,6 +42,10 @@ public abstract class ContainerImage internal constructor(
       ContainerImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
       containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ecs.ContainerImage,
+  ) : ContainerImage(cdkObject)
+
   public companion object {
     public fun fromAsset(directory: String): AssetImage =
         software.amazon.awscdk.services.ecs.ContainerImage.fromAsset(directory).let(AssetImage::wrap)
@@ -81,7 +85,7 @@ public abstract class ContainerImage internal constructor(
         software.amazon.awscdk.services.ecs.ContainerImage.fromTarball(tarballFile).let(ContainerImage::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ContainerImage): ContainerImage
-        = CdkObjectWrappers.wrap(cdkObject) as ContainerImage
+        = CdkObjectWrappers.wrap(cdkObject) as? ContainerImage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerImage): software.amazon.awscdk.services.ecs.ContainerImage
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.ContainerImage

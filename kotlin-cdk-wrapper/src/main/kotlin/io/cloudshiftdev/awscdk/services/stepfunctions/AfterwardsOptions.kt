@@ -123,7 +123,8 @@ public interface AfterwardsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.AfterwardsOptions):
-        AfterwardsOptions = CdkObjectWrappers.wrap(cdkObject) as AfterwardsOptions
+        AfterwardsOptions = CdkObjectWrappers.wrap(cdkObject) as? AfterwardsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AfterwardsOptions):
         software.amazon.awscdk.services.stepfunctions.AfterwardsOptions = (wrapped as

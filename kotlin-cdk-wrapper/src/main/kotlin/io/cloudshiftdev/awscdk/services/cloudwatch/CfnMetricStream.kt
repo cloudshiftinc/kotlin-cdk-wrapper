@@ -1045,8 +1045,8 @@ public open class CfnMetricStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty):
-          MetricStreamStatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MetricStreamStatisticsConfigurationProperty
+          MetricStreamStatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricStreamStatisticsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricStreamStatisticsConfigurationProperty):
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
@@ -1158,8 +1158,8 @@ public open class CfnMetricStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty):
-          MetricStreamStatisticsMetricProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MetricStreamStatisticsMetricProperty
+          MetricStreamStatisticsMetricProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricStreamStatisticsMetricProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricStreamStatisticsMetricProperty):
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
@@ -1331,8 +1331,8 @@ public open class CfnMetricStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty):
-          MetricStreamFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MetricStreamFilterProperty
+          MetricStreamFilterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricStreamFilterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricStreamFilterProperty):
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty =

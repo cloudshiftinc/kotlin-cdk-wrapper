@@ -1116,7 +1116,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty):
-          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingConfigProperty
+          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigProperty):
           software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty = (wrapped as
@@ -1261,7 +1262,8 @@ public open class CfnTopic internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty):
-          SubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as SubscriptionProperty
+          SubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriptionProperty):
           software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty = (wrapped as

@@ -168,7 +168,8 @@ public interface OriginBindConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginBindConfig):
-        OriginBindConfig = CdkObjectWrappers.wrap(cdkObject) as OriginBindConfig
+        OriginBindConfig = CdkObjectWrappers.wrap(cdkObject) as? OriginBindConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginBindConfig):
         software.amazon.awscdk.services.cloudfront.OriginBindConfig = (wrapped as

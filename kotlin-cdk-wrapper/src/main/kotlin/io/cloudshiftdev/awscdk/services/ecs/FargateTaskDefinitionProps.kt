@@ -527,7 +527,8 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinitionProps):
-        FargateTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as FargateTaskDefinitionProps
+        FargateTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        FargateTaskDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateTaskDefinitionProps):
         software.amazon.awscdk.services.ecs.FargateTaskDefinitionProps = (wrapped as

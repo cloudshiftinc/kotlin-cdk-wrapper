@@ -281,7 +281,8 @@ public interface CfnOIDCProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnOIDCProviderProps):
-        CfnOIDCProviderProps = CdkObjectWrappers.wrap(cdkObject) as CfnOIDCProviderProps
+        CfnOIDCProviderProps = CdkObjectWrappers.wrap(cdkObject) as? CfnOIDCProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOIDCProviderProps):
         software.amazon.awscdk.services.iam.CfnOIDCProviderProps = (wrapped as CdkObject).cdkObject

@@ -610,7 +610,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty):
-          LastLaunchedProperty = CdkObjectWrappers.wrap(cdkObject) as LastLaunchedProperty
+          LastLaunchedProperty = CdkObjectWrappers.wrap(cdkObject) as? LastLaunchedProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LastLaunchedProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty =
@@ -792,7 +793,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty):
-          IncludeResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as IncludeResourcesProperty
+          IncludeResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as? IncludeResourcesProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IncludeResourcesProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty =
@@ -932,7 +934,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty = (wrapped
@@ -1045,7 +1048,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty):
-          RecipeSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as RecipeSelectionProperty
+          RecipeSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipeSelectionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecipeSelectionProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty =
@@ -1206,7 +1210,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty):
-          ResourceSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceSelectionProperty
+          ResourceSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceSelectionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceSelectionProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty
@@ -1419,7 +1424,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as FilterProperty
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty = (wrapped
@@ -1671,7 +1677,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty):
-          PolicyDetailProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyDetailProperty
+          PolicyDetailProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyDetailProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyDetailProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty =
@@ -1953,7 +1960,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.AmiExclusionRulesProperty):
-          AmiExclusionRulesProperty = CdkObjectWrappers.wrap(cdkObject) as AmiExclusionRulesProperty
+          AmiExclusionRulesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmiExclusionRulesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AmiExclusionRulesProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.AmiExclusionRulesProperty
@@ -2126,7 +2134,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ExclusionRulesProperty):
-          ExclusionRulesProperty = CdkObjectWrappers.wrap(cdkObject) as ExclusionRulesProperty
+          ExclusionRulesProperty = CdkObjectWrappers.wrap(cdkObject) as? ExclusionRulesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExclusionRulesProperty):
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ExclusionRulesProperty =

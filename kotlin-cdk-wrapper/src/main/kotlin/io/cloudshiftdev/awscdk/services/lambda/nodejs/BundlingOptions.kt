@@ -1577,7 +1577,8 @@ public interface BundlingOptions : DockerRunOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.nodejs.BundlingOptions):
-        BundlingOptions = CdkObjectWrappers.wrap(cdkObject) as BundlingOptions
+        BundlingOptions = CdkObjectWrappers.wrap(cdkObject) as? BundlingOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BundlingOptions):
         software.amazon.awscdk.services.lambda.nodejs.BundlingOptions = (wrapped as

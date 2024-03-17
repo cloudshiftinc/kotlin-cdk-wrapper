@@ -244,7 +244,8 @@ public interface EcrSourceActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcrSourceActionProps):
-        EcrSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as EcrSourceActionProps
+        EcrSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as? EcrSourceActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcrSourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.EcrSourceActionProps = (wrapped as

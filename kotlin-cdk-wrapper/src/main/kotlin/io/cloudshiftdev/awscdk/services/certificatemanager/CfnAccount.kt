@@ -303,8 +303,8 @@ public open class CfnAccount internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccount.ExpiryEventsConfigurationProperty):
-          ExpiryEventsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ExpiryEventsConfigurationProperty
+          ExpiryEventsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExpiryEventsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExpiryEventsConfigurationProperty):
           software.amazon.awscdk.services.certificatemanager.CfnAccount.ExpiryEventsConfigurationProperty

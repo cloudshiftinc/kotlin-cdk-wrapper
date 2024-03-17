@@ -109,7 +109,8 @@ public interface BetweenCondition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.BetweenCondition):
-        BetweenCondition = CdkObjectWrappers.wrap(cdkObject) as BetweenCondition
+        BetweenCondition = CdkObjectWrappers.wrap(cdkObject) as? BetweenCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BetweenCondition):
         software.amazon.awscdk.services.sns.BetweenCondition = (wrapped as CdkObject).cdkObject as

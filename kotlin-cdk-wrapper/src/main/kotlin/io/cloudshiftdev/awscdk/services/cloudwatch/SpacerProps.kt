@@ -100,7 +100,7 @@ public interface SpacerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.SpacerProps):
-        SpacerProps = CdkObjectWrappers.wrap(cdkObject) as SpacerProps
+        SpacerProps = CdkObjectWrappers.wrap(cdkObject) as? SpacerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SpacerProps):
         software.amazon.awscdk.services.cloudwatch.SpacerProps = (wrapped as CdkObject).cdkObject as

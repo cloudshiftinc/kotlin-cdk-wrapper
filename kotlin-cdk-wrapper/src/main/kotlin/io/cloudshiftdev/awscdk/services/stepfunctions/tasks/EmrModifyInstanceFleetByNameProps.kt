@@ -507,8 +507,8 @@ public interface EmrModifyInstanceFleetByNameProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByNameProps):
-        EmrModifyInstanceFleetByNameProps = CdkObjectWrappers.wrap(cdkObject) as
-        EmrModifyInstanceFleetByNameProps
+        EmrModifyInstanceFleetByNameProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EmrModifyInstanceFleetByNameProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrModifyInstanceFleetByNameProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByNameProps =

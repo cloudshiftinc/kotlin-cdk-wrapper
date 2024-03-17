@@ -370,7 +370,8 @@ public interface CfnIdentityProviderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIdentityProviderProps):
-        CfnIdentityProviderProps = CdkObjectWrappers.wrap(cdkObject) as CfnIdentityProviderProps
+        CfnIdentityProviderProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIdentityProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityProviderProps):
         software.amazon.awscdk.services.workspacesweb.CfnIdentityProviderProps = (wrapped as

@@ -845,8 +845,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty):
-          FederationParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FederationParametersProperty
+          FederationParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FederationParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FederationParametersProperty):
           software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty =
@@ -981,7 +981,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty):
-          AttributeMapItemsProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeMapItemsProperty
+          AttributeMapItemsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AttributeMapItemsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeMapItemsProperty):
           software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty =
@@ -1117,8 +1118,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty):
-          SuperuserParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SuperuserParametersProperty
+          SuperuserParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuperuserParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SuperuserParametersProperty):
           software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty =

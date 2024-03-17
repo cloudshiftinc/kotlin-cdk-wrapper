@@ -1369,8 +1369,8 @@ public interface ApplicationLoadBalancedFargateServiceProps :
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateServiceProps):
-        ApplicationLoadBalancedFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancedFargateServiceProps
+        ApplicationLoadBalancedFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancedFargateServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedFargateServiceProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateServiceProps =

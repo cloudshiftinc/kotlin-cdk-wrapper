@@ -367,7 +367,7 @@ public interface MetricProps : CommonMetricOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.MetricProps):
-        MetricProps = CdkObjectWrappers.wrap(cdkObject) as MetricProps
+        MetricProps = CdkObjectWrappers.wrap(cdkObject) as? MetricProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetricProps):
         software.amazon.awscdk.services.cloudwatch.MetricProps = (wrapped as CdkObject).cdkObject as

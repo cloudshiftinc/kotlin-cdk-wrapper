@@ -1127,7 +1127,8 @@ public interface CfnStreamProcessorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessorProps):
-        CfnStreamProcessorProps = CdkObjectWrappers.wrap(cdkObject) as CfnStreamProcessorProps
+        CfnStreamProcessorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStreamProcessorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamProcessorProps):
         software.amazon.awscdk.services.rekognition.CfnStreamProcessorProps = (wrapped as

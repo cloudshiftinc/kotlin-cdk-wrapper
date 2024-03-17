@@ -73,7 +73,8 @@ public interface PluginContextQuery {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.PluginContextQuery):
-        PluginContextQuery = CdkObjectWrappers.wrap(cdkObject) as PluginContextQuery
+        PluginContextQuery = CdkObjectWrappers.wrap(cdkObject) as? PluginContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PluginContextQuery):
         software.amazon.awscdk.cloudassembly.schema.PluginContextQuery = (wrapped as

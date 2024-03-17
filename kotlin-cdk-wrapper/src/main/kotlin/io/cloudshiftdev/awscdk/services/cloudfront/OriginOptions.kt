@@ -257,7 +257,7 @@ public interface OriginOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginOptions):
-        OriginOptions = CdkObjectWrappers.wrap(cdkObject) as OriginOptions
+        OriginOptions = CdkObjectWrappers.wrap(cdkObject) as? OriginOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginOptions):
         software.amazon.awscdk.services.cloudfront.OriginOptions = (wrapped as CdkObject).cdkObject

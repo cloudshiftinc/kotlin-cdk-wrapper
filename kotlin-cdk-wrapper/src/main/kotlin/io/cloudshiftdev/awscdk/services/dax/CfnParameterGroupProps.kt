@@ -164,7 +164,8 @@ public interface CfnParameterGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dax.CfnParameterGroupProps):
-        CfnParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnParameterGroupProps
+        CfnParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnParameterGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnParameterGroupProps):
         software.amazon.awscdk.services.dax.CfnParameterGroupProps = (wrapped as

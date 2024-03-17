@@ -1632,7 +1632,8 @@ public interface DatabaseInstanceNewProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceNewProps):
-        DatabaseInstanceNewProps = CdkObjectWrappers.wrap(cdkObject) as DatabaseInstanceNewProps
+        DatabaseInstanceNewProps = CdkObjectWrappers.wrap(cdkObject) as? DatabaseInstanceNewProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseInstanceNewProps):
         software.amazon.awscdk.services.rds.DatabaseInstanceNewProps = (wrapped as

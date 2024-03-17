@@ -182,7 +182,8 @@ public interface CfnSyncJobProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSyncJobProps):
-        CfnSyncJobProps = CdkObjectWrappers.wrap(cdkObject) as CfnSyncJobProps
+        CfnSyncJobProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSyncJobProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSyncJobProps):
         software.amazon.awscdk.services.iottwinmaker.CfnSyncJobProps = (wrapped as

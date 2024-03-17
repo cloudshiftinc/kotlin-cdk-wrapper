@@ -145,7 +145,8 @@ public interface CfnViewVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnViewVersionProps):
-        CfnViewVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnViewVersionProps
+        CfnViewVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnViewVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnViewVersionProps):
         software.amazon.awscdk.services.connect.CfnViewVersionProps = (wrapped as

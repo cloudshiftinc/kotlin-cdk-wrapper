@@ -351,7 +351,8 @@ public interface EksJobDefinitionProps : JobDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EksJobDefinitionProps):
-        EksJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as EksJobDefinitionProps
+        EksJobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? EksJobDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksJobDefinitionProps):
         software.amazon.awscdk.services.batch.EksJobDefinitionProps = (wrapped as

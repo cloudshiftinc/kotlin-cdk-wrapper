@@ -198,7 +198,8 @@ public interface RawEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.RawEndpointProps):
-        RawEndpointProps = CdkObjectWrappers.wrap(cdkObject) as RawEndpointProps
+        RawEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? RawEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RawEndpointProps):
         software.amazon.awscdk.services.globalaccelerator.RawEndpointProps = (wrapped as

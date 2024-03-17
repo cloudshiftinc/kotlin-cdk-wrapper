@@ -97,6 +97,10 @@ public abstract class UserData internal constructor(
    */
   public open fun render(): String = unwrap(this).render()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.UserData,
+  ) : UserData(cdkObject)
+
   public companion object {
     public fun custom(content: String): UserData =
         software.amazon.awscdk.services.ec2.UserData.custom(content).let(UserData::wrap)
@@ -127,7 +131,7 @@ public abstract class UserData internal constructor(
         forWindows(WindowsUserDataOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.UserData): UserData =
-        CdkObjectWrappers.wrap(cdkObject) as UserData
+        CdkObjectWrappers.wrap(cdkObject) as? UserData ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserData): software.amazon.awscdk.services.ec2.UserData = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.UserData

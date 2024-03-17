@@ -360,7 +360,8 @@ public interface CfnLocationEFSProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFSProps):
-        CfnLocationEFSProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationEFSProps
+        CfnLocationEFSProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationEFSProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationEFSProps):
         software.amazon.awscdk.services.datasync.CfnLocationEFSProps = (wrapped as

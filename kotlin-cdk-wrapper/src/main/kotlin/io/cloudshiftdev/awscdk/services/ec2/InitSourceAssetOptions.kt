@@ -429,7 +429,8 @@ public interface InitSourceAssetOptions : InitSourceOptions, AssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitSourceAssetOptions):
-        InitSourceAssetOptions = CdkObjectWrappers.wrap(cdkObject) as InitSourceAssetOptions
+        InitSourceAssetOptions = CdkObjectWrappers.wrap(cdkObject) as? InitSourceAssetOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InitSourceAssetOptions):
         software.amazon.awscdk.services.ec2.InitSourceAssetOptions = (wrapped as

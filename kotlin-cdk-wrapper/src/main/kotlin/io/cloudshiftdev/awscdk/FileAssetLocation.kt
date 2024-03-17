@@ -261,7 +261,7 @@ public interface FileAssetLocation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.FileAssetLocation): FileAssetLocation =
-        CdkObjectWrappers.wrap(cdkObject) as FileAssetLocation
+        CdkObjectWrappers.wrap(cdkObject) as? FileAssetLocation ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileAssetLocation): software.amazon.awscdk.FileAssetLocation =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.FileAssetLocation

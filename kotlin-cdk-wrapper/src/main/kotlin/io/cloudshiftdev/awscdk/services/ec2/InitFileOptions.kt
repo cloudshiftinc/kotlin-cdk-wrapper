@@ -241,7 +241,8 @@ public interface InitFileOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitFileOptions):
-        InitFileOptions = CdkObjectWrappers.wrap(cdkObject) as InitFileOptions
+        InitFileOptions = CdkObjectWrappers.wrap(cdkObject) as? InitFileOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InitFileOptions):
         software.amazon.awscdk.services.ec2.InitFileOptions = (wrapped as CdkObject).cdkObject as

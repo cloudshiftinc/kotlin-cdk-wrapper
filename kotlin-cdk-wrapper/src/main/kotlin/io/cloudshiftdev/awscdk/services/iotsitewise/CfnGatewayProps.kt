@@ -315,7 +315,8 @@ public interface CfnGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGatewayProps):
-        CfnGatewayProps = CdkObjectWrappers.wrap(cdkObject) as CfnGatewayProps
+        CfnGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGatewayProps):
         software.amazon.awscdk.services.iotsitewise.CfnGatewayProps = (wrapped as

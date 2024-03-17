@@ -128,7 +128,8 @@ public interface EksOptimizedImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.EksOptimizedImageProps):
-        EksOptimizedImageProps = CdkObjectWrappers.wrap(cdkObject) as EksOptimizedImageProps
+        EksOptimizedImageProps = CdkObjectWrappers.wrap(cdkObject) as? EksOptimizedImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksOptimizedImageProps):
         software.amazon.awscdk.services.eks.EksOptimizedImageProps = (wrapped as

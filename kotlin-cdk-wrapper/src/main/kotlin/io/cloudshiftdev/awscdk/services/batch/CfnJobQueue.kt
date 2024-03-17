@@ -582,8 +582,8 @@ public open class CfnJobQueue internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty):
-          ComputeEnvironmentOrderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ComputeEnvironmentOrderProperty
+          ComputeEnvironmentOrderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComputeEnvironmentOrderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComputeEnvironmentOrderProperty):
           software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty =

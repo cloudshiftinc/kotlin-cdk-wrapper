@@ -192,7 +192,7 @@ public interface S3DataSource {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource):
-        S3DataSource = CdkObjectWrappers.wrap(cdkObject) as S3DataSource
+        S3DataSource = CdkObjectWrappers.wrap(cdkObject) as? S3DataSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3DataSource):
         software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource = (wrapped as

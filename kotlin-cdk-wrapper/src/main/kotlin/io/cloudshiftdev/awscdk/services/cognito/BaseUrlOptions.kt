@@ -73,7 +73,7 @@ public interface BaseUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.BaseUrlOptions):
-        BaseUrlOptions = CdkObjectWrappers.wrap(cdkObject) as BaseUrlOptions
+        BaseUrlOptions = CdkObjectWrappers.wrap(cdkObject) as? BaseUrlOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseUrlOptions):
         software.amazon.awscdk.services.cognito.BaseUrlOptions = (wrapped as CdkObject).cdkObject as

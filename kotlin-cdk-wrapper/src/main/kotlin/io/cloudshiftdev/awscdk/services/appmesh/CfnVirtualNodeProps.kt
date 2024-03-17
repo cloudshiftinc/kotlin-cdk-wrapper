@@ -501,7 +501,8 @@ public interface CfnVirtualNodeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualNodeProps):
-        CfnVirtualNodeProps = CdkObjectWrappers.wrap(cdkObject) as CfnVirtualNodeProps
+        CfnVirtualNodeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVirtualNodeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualNodeProps):
         software.amazon.awscdk.services.appmesh.CfnVirtualNodeProps = (wrapped as

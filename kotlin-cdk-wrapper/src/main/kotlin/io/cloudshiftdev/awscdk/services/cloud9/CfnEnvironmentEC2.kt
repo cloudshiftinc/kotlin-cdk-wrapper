@@ -717,7 +717,8 @@ public open class CfnEnvironmentEC2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty):
-          RepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as RepositoryProperty
+          RepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as? RepositoryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RepositoryProperty):
           software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty = (wrapped as

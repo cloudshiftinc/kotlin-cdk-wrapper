@@ -272,7 +272,8 @@ public interface CfnLaunchTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplateProps):
-        CfnLaunchTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnLaunchTemplateProps
+        CfnLaunchTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLaunchTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchTemplateProps):
         software.amazon.awscdk.services.ec2.CfnLaunchTemplateProps = (wrapped as

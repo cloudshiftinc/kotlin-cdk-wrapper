@@ -496,8 +496,8 @@ public open class CfnWarmPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnWarmPool.InstanceReusePolicyProperty):
-          InstanceReusePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceReusePolicyProperty
+          InstanceReusePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceReusePolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceReusePolicyProperty):
           software.amazon.awscdk.services.autoscaling.CfnWarmPool.InstanceReusePolicyProperty =

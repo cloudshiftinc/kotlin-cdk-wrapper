@@ -355,7 +355,8 @@ public interface OperationsMetricOptions : SystemErrorsForOperationsMetricOption
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.OperationsMetricOptions):
-        OperationsMetricOptions = CdkObjectWrappers.wrap(cdkObject) as OperationsMetricOptions
+        OperationsMetricOptions = CdkObjectWrappers.wrap(cdkObject) as? OperationsMetricOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OperationsMetricOptions):
         software.amazon.awscdk.services.dynamodb.OperationsMetricOptions = (wrapped as

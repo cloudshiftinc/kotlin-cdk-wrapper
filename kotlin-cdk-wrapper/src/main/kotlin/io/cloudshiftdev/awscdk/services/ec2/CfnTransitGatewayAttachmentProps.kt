@@ -235,8 +235,8 @@ public interface CfnTransitGatewayAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachmentProps):
-        CfnTransitGatewayAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTransitGatewayAttachmentProps
+        CfnTransitGatewayAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTransitGatewayAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTransitGatewayAttachmentProps):
         software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachmentProps = (wrapped as

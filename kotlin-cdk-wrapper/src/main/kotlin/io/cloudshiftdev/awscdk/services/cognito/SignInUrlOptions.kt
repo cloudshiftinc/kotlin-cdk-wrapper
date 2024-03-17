@@ -124,7 +124,8 @@ public interface SignInUrlOptions : BaseUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.SignInUrlOptions):
-        SignInUrlOptions = CdkObjectWrappers.wrap(cdkObject) as SignInUrlOptions
+        SignInUrlOptions = CdkObjectWrappers.wrap(cdkObject) as? SignInUrlOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SignInUrlOptions):
         software.amazon.awscdk.services.cognito.SignInUrlOptions = (wrapped as CdkObject).cdkObject

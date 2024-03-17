@@ -223,7 +223,8 @@ public interface CfnDBSecurityGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroupProps):
-        CfnDBSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBSecurityGroupProps
+        CfnDBSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDBSecurityGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBSecurityGroupProps):
         software.amazon.awscdk.services.rds.CfnDBSecurityGroupProps = (wrapped as

@@ -411,7 +411,7 @@ public interface MissingContext {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.MissingContext):
-        MissingContext = CdkObjectWrappers.wrap(cdkObject) as MissingContext
+        MissingContext = CdkObjectWrappers.wrap(cdkObject) as? MissingContext ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MissingContext):
         software.amazon.awscdk.cloudassembly.schema.MissingContext = (wrapped as

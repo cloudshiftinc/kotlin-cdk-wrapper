@@ -256,7 +256,8 @@ public interface ConfigurationSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetProps):
-        ConfigurationSetProps = CdkObjectWrappers.wrap(cdkObject) as ConfigurationSetProps
+        ConfigurationSetProps = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConfigurationSetProps):
         software.amazon.awscdk.services.ses.ConfigurationSetProps = (wrapped as CdkObject).cdkObject

@@ -96,7 +96,8 @@ public interface AllocateVpcIpv6CidrRequest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest):
-        AllocateVpcIpv6CidrRequest = CdkObjectWrappers.wrap(cdkObject) as AllocateVpcIpv6CidrRequest
+        AllocateVpcIpv6CidrRequest = CdkObjectWrappers.wrap(cdkObject) as?
+        AllocateVpcIpv6CidrRequest ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AllocateVpcIpv6CidrRequest):
         software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest = (wrapped as

@@ -133,7 +133,8 @@ public interface SdkCallsPolicyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.customresources.SdkCallsPolicyOptions):
-        SdkCallsPolicyOptions = CdkObjectWrappers.wrap(cdkObject) as SdkCallsPolicyOptions
+        SdkCallsPolicyOptions = CdkObjectWrappers.wrap(cdkObject) as? SdkCallsPolicyOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SdkCallsPolicyOptions):
         software.amazon.awscdk.customresources.SdkCallsPolicyOptions = (wrapped as

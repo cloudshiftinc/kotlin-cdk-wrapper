@@ -108,8 +108,8 @@ public interface CodePipelineActionFactoryResult {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodePipelineActionFactoryResult):
-        CodePipelineActionFactoryResult = CdkObjectWrappers.wrap(cdkObject) as
-        CodePipelineActionFactoryResult
+        CodePipelineActionFactoryResult = CdkObjectWrappers.wrap(cdkObject) as?
+        CodePipelineActionFactoryResult ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodePipelineActionFactoryResult):
         software.amazon.awscdk.pipelines.CodePipelineActionFactoryResult = (wrapped as

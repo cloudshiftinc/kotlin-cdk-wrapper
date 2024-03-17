@@ -114,8 +114,8 @@ public interface CfnTrafficRoutingTimeBasedCanary {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedCanary):
-        CfnTrafficRoutingTimeBasedCanary = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTrafficRoutingTimeBasedCanary
+        CfnTrafficRoutingTimeBasedCanary = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTrafficRoutingTimeBasedCanary ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficRoutingTimeBasedCanary):
         software.amazon.awscdk.CfnTrafficRoutingTimeBasedCanary = (wrapped as CdkObject).cdkObject

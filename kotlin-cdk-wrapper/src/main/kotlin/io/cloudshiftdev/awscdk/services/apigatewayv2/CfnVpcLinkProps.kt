@@ -189,7 +189,8 @@ public interface CfnVpcLinkProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnVpcLinkProps):
-        CfnVpcLinkProps = CdkObjectWrappers.wrap(cdkObject) as CfnVpcLinkProps
+        CfnVpcLinkProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVpcLinkProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVpcLinkProps):
         software.amazon.awscdk.services.apigatewayv2.CfnVpcLinkProps = (wrapped as

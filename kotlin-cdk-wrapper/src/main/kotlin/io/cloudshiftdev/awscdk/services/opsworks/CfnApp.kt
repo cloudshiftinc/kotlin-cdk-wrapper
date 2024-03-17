@@ -1055,8 +1055,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty):
-          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnvironmentVariableProperty
+          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentVariableProperty):
           software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty = (wrapped as
@@ -1200,7 +1200,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty):
-          SslConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as SslConfigurationProperty
+          SslConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SslConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SslConfigurationProperty):
           software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty = (wrapped as
@@ -1484,7 +1485,8 @@ public open class CfnApp internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty):
-          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as SourceProperty
+          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceProperty):
           software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty = (wrapped as
@@ -1618,7 +1620,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty):
-          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as DataSourceProperty
+          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DataSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceProperty):
           software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty = (wrapped as

@@ -80,7 +80,8 @@ public interface MySqlInstanceEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.MySqlInstanceEngineProps):
-        MySqlInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as MySqlInstanceEngineProps
+        MySqlInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as? MySqlInstanceEngineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MySqlInstanceEngineProps):
         software.amazon.awscdk.services.rds.MySqlInstanceEngineProps = (wrapped as

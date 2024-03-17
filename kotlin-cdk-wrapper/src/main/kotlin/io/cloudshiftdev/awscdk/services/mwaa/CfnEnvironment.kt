@@ -1697,8 +1697,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty):
-          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoggingConfigurationProperty
+          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigurationProperty):
           software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty =
@@ -1879,8 +1879,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkConfigurationProperty
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty =
@@ -2074,8 +2074,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty):
-          ModuleLoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ModuleLoggingConfigurationProperty
+          ModuleLoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModuleLoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModuleLoggingConfigurationProperty):
           software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty =

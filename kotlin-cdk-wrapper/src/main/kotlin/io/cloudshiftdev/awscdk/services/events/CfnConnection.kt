@@ -454,8 +454,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty):
-          BasicAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BasicAuthParametersProperty
+          BasicAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BasicAuthParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BasicAuthParametersProperty):
           software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty =
@@ -565,7 +565,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty):
-          ClientParametersProperty = CdkObjectWrappers.wrap(cdkObject) as ClientParametersProperty
+          ClientParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? ClientParametersProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ClientParametersProperty):
           software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty = (wrapped
@@ -675,8 +676,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty):
-          ApiKeyAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApiKeyAuthParametersProperty
+          ApiKeyAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApiKeyAuthParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApiKeyAuthParametersProperty):
           software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty =
@@ -826,7 +827,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ParameterProperty):
-          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as ParameterProperty
+          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as? ParameterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParameterProperty):
           software.amazon.awscdk.services.events.CfnConnection.ParameterProperty = (wrapped as
@@ -1053,8 +1055,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty):
-          ConnectionHttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectionHttpParametersProperty
+          ConnectionHttpParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionHttpParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionHttpParametersProperty):
           software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty =
@@ -1394,7 +1396,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty):
-          AuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as AuthParametersProperty
+          AuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? AuthParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuthParametersProperty):
           software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty = (wrapped as
@@ -1653,7 +1656,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty):
-          OAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as OAuthParametersProperty
+          OAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuthParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OAuthParametersProperty):
           software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty = (wrapped as

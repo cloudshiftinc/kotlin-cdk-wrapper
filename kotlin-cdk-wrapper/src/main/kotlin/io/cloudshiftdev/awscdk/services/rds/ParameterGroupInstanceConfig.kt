@@ -71,8 +71,8 @@ public interface ParameterGroupInstanceConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig):
-        ParameterGroupInstanceConfig = CdkObjectWrappers.wrap(cdkObject) as
-        ParameterGroupInstanceConfig
+        ParameterGroupInstanceConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        ParameterGroupInstanceConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParameterGroupInstanceConfig):
         software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig = (wrapped as

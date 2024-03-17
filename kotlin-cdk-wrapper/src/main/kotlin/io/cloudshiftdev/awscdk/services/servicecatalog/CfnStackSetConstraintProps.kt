@@ -381,7 +381,8 @@ public interface CfnStackSetConstraintProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraintProps):
-        CfnStackSetConstraintProps = CdkObjectWrappers.wrap(cdkObject) as CfnStackSetConstraintProps
+        CfnStackSetConstraintProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnStackSetConstraintProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStackSetConstraintProps):
         software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraintProps = (wrapped as

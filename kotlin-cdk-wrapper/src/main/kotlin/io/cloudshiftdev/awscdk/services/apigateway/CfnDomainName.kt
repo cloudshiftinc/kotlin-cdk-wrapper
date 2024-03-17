@@ -724,8 +724,8 @@ public open class CfnDomainName internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty):
-          MutualTlsAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MutualTlsAuthenticationProperty
+          MutualTlsAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MutualTlsAuthenticationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MutualTlsAuthenticationProperty):
           software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty =
@@ -847,8 +847,8 @@ public open class CfnDomainName internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EndpointConfigurationProperty
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EndpointConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointConfigurationProperty):
           software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty =

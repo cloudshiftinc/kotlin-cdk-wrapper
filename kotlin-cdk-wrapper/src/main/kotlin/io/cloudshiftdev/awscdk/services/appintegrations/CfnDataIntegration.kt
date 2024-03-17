@@ -650,7 +650,8 @@ public open class CfnDataIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty):
-          ScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduleConfigProperty
+          ScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleConfigProperty):
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty
@@ -771,7 +772,8 @@ public open class CfnDataIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty):
-          FileConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as FileConfigurationProperty
+          FileConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FileConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FileConfigurationProperty):
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty

@@ -45,7 +45,8 @@ public interface BuildImageConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BuildImageConfig):
-        BuildImageConfig = CdkObjectWrappers.wrap(cdkObject) as BuildImageConfig
+        BuildImageConfig = CdkObjectWrappers.wrap(cdkObject) as? BuildImageConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BuildImageConfig):
         software.amazon.awscdk.services.codebuild.BuildImageConfig = (wrapped as

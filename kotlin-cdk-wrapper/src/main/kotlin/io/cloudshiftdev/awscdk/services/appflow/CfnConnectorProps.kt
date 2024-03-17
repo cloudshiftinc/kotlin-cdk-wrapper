@@ -197,7 +197,8 @@ public interface CfnConnectorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProps):
-        CfnConnectorProps = CdkObjectWrappers.wrap(cdkObject) as CfnConnectorProps
+        CfnConnectorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConnectorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectorProps):
         software.amazon.awscdk.services.appflow.CfnConnectorProps = (wrapped as CdkObject).cdkObject

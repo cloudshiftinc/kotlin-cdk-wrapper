@@ -508,7 +508,8 @@ public interface ClusterInstanceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceOptions):
-        ClusterInstanceOptions = CdkObjectWrappers.wrap(cdkObject) as ClusterInstanceOptions
+        ClusterInstanceOptions = CdkObjectWrappers.wrap(cdkObject) as? ClusterInstanceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClusterInstanceOptions):
         software.amazon.awscdk.services.rds.ClusterInstanceOptions = (wrapped as

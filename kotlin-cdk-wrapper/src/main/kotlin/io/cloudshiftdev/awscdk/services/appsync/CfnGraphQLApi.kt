@@ -1522,7 +1522,8 @@ public open class CfnGraphQLApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty):
-          LogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as LogConfigProperty
+          LogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogConfigProperty):
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty = (wrapped as
@@ -1800,8 +1801,8 @@ public open class CfnGraphQLApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.AdditionalAuthenticationProviderProperty):
-          AdditionalAuthenticationProviderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdditionalAuthenticationProviderProperty
+          AdditionalAuthenticationProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdditionalAuthenticationProviderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdditionalAuthenticationProviderProperty):
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.AdditionalAuthenticationProviderProperty
@@ -2000,8 +2001,8 @@ public open class CfnGraphQLApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty):
-          LambdaAuthorizerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaAuthorizerConfigProperty
+          LambdaAuthorizerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaAuthorizerConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaAuthorizerConfigProperty):
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty =
@@ -2190,8 +2191,8 @@ public open class CfnGraphQLApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty):
-          OpenIDConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OpenIDConnectConfigProperty
+          OpenIDConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenIDConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OpenIDConnectConfigProperty):
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty =
@@ -2336,8 +2337,8 @@ public open class CfnGraphQLApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty):
-          CognitoUserPoolConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CognitoUserPoolConfigProperty
+          CognitoUserPoolConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CognitoUserPoolConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CognitoUserPoolConfigProperty):
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty =
@@ -2524,7 +2525,8 @@ public open class CfnGraphQLApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty):
-          UserPoolConfigProperty = CdkObjectWrappers.wrap(cdkObject) as UserPoolConfigProperty
+          UserPoolConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? UserPoolConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserPoolConfigProperty):
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty = (wrapped as
@@ -2805,8 +2807,8 @@ public open class CfnGraphQLApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty):
-          EnhancedMetricsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnhancedMetricsConfigProperty
+          EnhancedMetricsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnhancedMetricsConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnhancedMetricsConfigProperty):
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty =

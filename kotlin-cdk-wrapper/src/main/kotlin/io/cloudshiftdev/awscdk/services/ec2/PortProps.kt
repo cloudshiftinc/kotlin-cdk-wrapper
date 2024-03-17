@@ -148,7 +148,7 @@ public interface PortProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PortProps): PortProps =
-        CdkObjectWrappers.wrap(cdkObject) as PortProps
+        CdkObjectWrappers.wrap(cdkObject) as? PortProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PortProps): software.amazon.awscdk.services.ec2.PortProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.PortProps

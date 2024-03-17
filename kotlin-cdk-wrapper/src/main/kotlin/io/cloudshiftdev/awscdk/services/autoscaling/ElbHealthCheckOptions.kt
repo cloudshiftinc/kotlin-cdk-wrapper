@@ -82,7 +82,8 @@ public interface ElbHealthCheckOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions):
-        ElbHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as ElbHealthCheckOptions
+        ElbHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as? ElbHealthCheckOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ElbHealthCheckOptions):
         software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions = (wrapped as

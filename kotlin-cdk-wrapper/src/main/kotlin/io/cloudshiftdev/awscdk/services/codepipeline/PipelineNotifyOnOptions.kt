@@ -189,7 +189,8 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions):
-        PipelineNotifyOnOptions = CdkObjectWrappers.wrap(cdkObject) as PipelineNotifyOnOptions
+        PipelineNotifyOnOptions = CdkObjectWrappers.wrap(cdkObject) as? PipelineNotifyOnOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PipelineNotifyOnOptions):
         software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions = (wrapped as

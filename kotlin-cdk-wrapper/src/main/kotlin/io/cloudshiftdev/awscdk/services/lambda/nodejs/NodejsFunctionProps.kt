@@ -1715,7 +1715,8 @@ public interface NodejsFunctionProps : FunctionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.nodejs.NodejsFunctionProps):
-        NodejsFunctionProps = CdkObjectWrappers.wrap(cdkObject) as NodejsFunctionProps
+        NodejsFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? NodejsFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NodejsFunctionProps):
         software.amazon.awscdk.services.lambda.nodejs.NodejsFunctionProps = (wrapped as

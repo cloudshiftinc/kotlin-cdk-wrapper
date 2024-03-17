@@ -212,7 +212,8 @@ public interface StringConditions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.StringConditions):
-        StringConditions = CdkObjectWrappers.wrap(cdkObject) as StringConditions
+        StringConditions = CdkObjectWrappers.wrap(cdkObject) as? StringConditions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StringConditions):
         software.amazon.awscdk.services.sns.StringConditions = (wrapped as CdkObject).cdkObject as

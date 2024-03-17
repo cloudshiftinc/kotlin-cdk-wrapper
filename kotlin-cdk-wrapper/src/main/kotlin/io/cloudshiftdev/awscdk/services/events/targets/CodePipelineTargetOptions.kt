@@ -187,7 +187,8 @@ public interface CodePipelineTargetOptions : TargetBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.CodePipelineTargetOptions):
-        CodePipelineTargetOptions = CdkObjectWrappers.wrap(cdkObject) as CodePipelineTargetOptions
+        CodePipelineTargetOptions = CdkObjectWrappers.wrap(cdkObject) as? CodePipelineTargetOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodePipelineTargetOptions):
         software.amazon.awscdk.services.events.targets.CodePipelineTargetOptions = (wrapped as

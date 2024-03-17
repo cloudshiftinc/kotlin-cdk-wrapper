@@ -194,7 +194,8 @@ public interface CfnReferenceStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnReferenceStoreProps):
-        CfnReferenceStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnReferenceStoreProps
+        CfnReferenceStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReferenceStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReferenceStoreProps):
         software.amazon.awscdk.services.omics.CfnReferenceStoreProps = (wrapped as

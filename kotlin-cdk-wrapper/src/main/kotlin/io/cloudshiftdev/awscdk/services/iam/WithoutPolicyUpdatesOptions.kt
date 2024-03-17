@@ -92,8 +92,8 @@ public interface WithoutPolicyUpdatesOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions):
-        WithoutPolicyUpdatesOptions = CdkObjectWrappers.wrap(cdkObject) as
-        WithoutPolicyUpdatesOptions
+        WithoutPolicyUpdatesOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        WithoutPolicyUpdatesOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WithoutPolicyUpdatesOptions):
         software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions = (wrapped as

@@ -1242,7 +1242,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetainRuleProperty):
-          RetainRuleProperty = CdkObjectWrappers.wrap(cdkObject) as RetainRuleProperty
+          RetainRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RetainRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetainRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetainRuleProperty = (wrapped as
@@ -1439,7 +1440,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventParametersProperty):
-          EventParametersProperty = CdkObjectWrappers.wrap(cdkObject) as EventParametersProperty
+          EventParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? EventParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventParametersProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventParametersProperty = (wrapped
@@ -1580,7 +1582,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ActionProperty = (wrapped as
@@ -1853,7 +1856,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ParametersProperty):
-          ParametersProperty = CdkObjectWrappers.wrap(cdkObject) as ParametersProperty
+          ParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? ParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ParametersProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ParametersProperty = (wrapped as
@@ -1999,7 +2003,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventSourceProperty):
-          EventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as EventSourceProperty
+          EventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? EventSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventSourceProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventSourceProperty = (wrapped as
@@ -2131,8 +2136,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyDeprecateRuleProperty):
-          CrossRegionCopyDeprecateRuleProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CrossRegionCopyDeprecateRuleProperty
+          CrossRegionCopyDeprecateRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CrossRegionCopyDeprecateRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CrossRegionCopyDeprecateRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyDeprecateRuleProperty
@@ -2281,7 +2286,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ShareRuleProperty):
-          ShareRuleProperty = CdkObjectWrappers.wrap(cdkObject) as ShareRuleProperty
+          ShareRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ShareRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ShareRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ShareRuleProperty = (wrapped as
@@ -2465,7 +2471,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.FastRestoreRuleProperty):
-          FastRestoreRuleProperty = CdkObjectWrappers.wrap(cdkObject) as FastRestoreRuleProperty
+          FastRestoreRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? FastRestoreRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FastRestoreRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.FastRestoreRuleProperty = (wrapped
@@ -2648,8 +2655,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetentionArchiveTierProperty):
-          RetentionArchiveTierProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RetentionArchiveTierProperty
+          RetentionArchiveTierProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RetentionArchiveTierProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetentionArchiveTierProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetentionArchiveTierProperty =
@@ -3475,7 +3482,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScheduleProperty):
-          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduleProperty
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScheduleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScheduleProperty = (wrapped as
@@ -3588,7 +3596,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRuleProperty):
-          ArchiveRuleProperty = CdkObjectWrappers.wrap(cdkObject) as ArchiveRuleProperty
+          ArchiveRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? ArchiveRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArchiveRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRuleProperty = (wrapped as
@@ -3986,7 +3995,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CreateRuleProperty):
-          CreateRuleProperty = CdkObjectWrappers.wrap(cdkObject) as CreateRuleProperty
+          CreateRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? CreateRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CreateRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CreateRuleProperty = (wrapped as
@@ -4495,7 +4505,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScriptProperty):
-          ScriptProperty = CdkObjectWrappers.wrap(cdkObject) as ScriptProperty
+          ScriptProperty = CdkObjectWrappers.wrap(cdkObject) as? ScriptProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScriptProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScriptProperty = (wrapped as
@@ -4920,8 +4931,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRuleProperty):
-          CrossRegionCopyRuleProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CrossRegionCopyRuleProperty
+          CrossRegionCopyRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CrossRegionCopyRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CrossRegionCopyRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRuleProperty =
@@ -6163,7 +6174,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.PolicyDetailsProperty):
-          PolicyDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyDetailsProperty
+          PolicyDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyDetailsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyDetailsProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.PolicyDetailsProperty = (wrapped as
@@ -6313,8 +6325,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EncryptionConfigurationProperty
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionConfigurationProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EncryptionConfigurationProperty =
@@ -6540,8 +6552,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyActionProperty):
-          CrossRegionCopyActionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CrossRegionCopyActionProperty
+          CrossRegionCopyActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CrossRegionCopyActionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CrossRegionCopyActionProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyActionProperty =
@@ -6725,7 +6737,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ExclusionsProperty):
-          ExclusionsProperty = CdkObjectWrappers.wrap(cdkObject) as ExclusionsProperty
+          ExclusionsProperty = CdkObjectWrappers.wrap(cdkObject) as? ExclusionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExclusionsProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ExclusionsProperty = (wrapped as
@@ -6864,7 +6877,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRetainRuleProperty):
-          ArchiveRetainRuleProperty = CdkObjectWrappers.wrap(cdkObject) as ArchiveRetainRuleProperty
+          ArchiveRetainRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ArchiveRetainRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArchiveRetainRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRetainRuleProperty =
@@ -6994,8 +7008,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRetainRuleProperty):
-          CrossRegionCopyRetainRuleProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CrossRegionCopyRetainRuleProperty
+          CrossRegionCopyRetainRuleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CrossRegionCopyRetainRuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CrossRegionCopyRetainRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRetainRuleProperty =
@@ -7162,7 +7176,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.DeprecateRuleProperty):
-          DeprecateRuleProperty = CdkObjectWrappers.wrap(cdkObject) as DeprecateRuleProperty
+          DeprecateRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? DeprecateRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeprecateRuleProperty):
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.DeprecateRuleProperty = (wrapped as

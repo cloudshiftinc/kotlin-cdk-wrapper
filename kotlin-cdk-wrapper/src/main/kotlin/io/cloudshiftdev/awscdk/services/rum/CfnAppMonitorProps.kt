@@ -539,7 +539,8 @@ public interface CfnAppMonitorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitorProps):
-        CfnAppMonitorProps = CdkObjectWrappers.wrap(cdkObject) as CfnAppMonitorProps
+        CfnAppMonitorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAppMonitorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAppMonitorProps):
         software.amazon.awscdk.services.rum.CfnAppMonitorProps = (wrapped as CdkObject).cdkObject as

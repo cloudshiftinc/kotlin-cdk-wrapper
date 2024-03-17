@@ -238,7 +238,8 @@ public interface UserVerificationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserVerificationConfig):
-        UserVerificationConfig = CdkObjectWrappers.wrap(cdkObject) as UserVerificationConfig
+        UserVerificationConfig = CdkObjectWrappers.wrap(cdkObject) as? UserVerificationConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserVerificationConfig):
         software.amazon.awscdk.services.cognito.UserVerificationConfig = (wrapped as

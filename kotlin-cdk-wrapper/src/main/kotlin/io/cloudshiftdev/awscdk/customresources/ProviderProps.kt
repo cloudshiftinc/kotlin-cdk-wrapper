@@ -561,7 +561,7 @@ public interface ProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.customresources.ProviderProps):
-        ProviderProps = CdkObjectWrappers.wrap(cdkObject) as ProviderProps
+        ProviderProps = CdkObjectWrappers.wrap(cdkObject) as? ProviderProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProviderProps):
         software.amazon.awscdk.customresources.ProviderProps = (wrapped as CdkObject).cdkObject as

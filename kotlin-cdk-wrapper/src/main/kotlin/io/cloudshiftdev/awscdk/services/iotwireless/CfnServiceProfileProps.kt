@@ -206,7 +206,8 @@ public interface CfnServiceProfileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfileProps):
-        CfnServiceProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnServiceProfileProps
+        CfnServiceProfileProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServiceProfileProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceProfileProps):
         software.amazon.awscdk.services.iotwireless.CfnServiceProfileProps = (wrapped as

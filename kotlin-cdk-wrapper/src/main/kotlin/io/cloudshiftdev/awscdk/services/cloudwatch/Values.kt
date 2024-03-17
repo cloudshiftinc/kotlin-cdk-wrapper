@@ -41,6 +41,10 @@ public abstract class Values internal constructor(
    */
   public open fun toJson(): Any = unwrap(this).toJson()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudwatch.Values,
+  ) : Values(cdkObject)
+
   public companion object {
     public fun fromSearch(expression: String, populateFrom: String): Values =
         software.amazon.awscdk.services.cloudwatch.Values.fromSearch(expression,
@@ -63,7 +67,7 @@ public abstract class Values internal constructor(
         fromValues(VariableValue(values))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.Values): Values =
-        CdkObjectWrappers.wrap(cdkObject) as Values
+        CdkObjectWrappers.wrap(cdkObject) as? Values ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Values): software.amazon.awscdk.services.cloudwatch.Values =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.Values

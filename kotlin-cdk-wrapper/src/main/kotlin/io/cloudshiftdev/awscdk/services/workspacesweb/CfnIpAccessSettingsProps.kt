@@ -285,7 +285,8 @@ public interface CfnIpAccessSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettingsProps):
-        CfnIpAccessSettingsProps = CdkObjectWrappers.wrap(cdkObject) as CfnIpAccessSettingsProps
+        CfnIpAccessSettingsProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIpAccessSettingsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIpAccessSettingsProps):
         software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettingsProps = (wrapped as

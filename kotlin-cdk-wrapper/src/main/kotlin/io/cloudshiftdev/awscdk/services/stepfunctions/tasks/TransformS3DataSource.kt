@@ -116,7 +116,8 @@ public interface TransformS3DataSource {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource):
-        TransformS3DataSource = CdkObjectWrappers.wrap(cdkObject) as TransformS3DataSource
+        TransformS3DataSource = CdkObjectWrappers.wrap(cdkObject) as? TransformS3DataSource ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TransformS3DataSource):
         software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource = (wrapped as

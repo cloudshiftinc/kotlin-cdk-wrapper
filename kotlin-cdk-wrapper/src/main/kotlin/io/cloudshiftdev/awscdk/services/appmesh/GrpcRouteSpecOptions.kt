@@ -246,7 +246,8 @@ public interface GrpcRouteSpecOptions : RouteSpecOptionsBase {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteSpecOptions):
-        GrpcRouteSpecOptions = CdkObjectWrappers.wrap(cdkObject) as GrpcRouteSpecOptions
+        GrpcRouteSpecOptions = CdkObjectWrappers.wrap(cdkObject) as? GrpcRouteSpecOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcRouteSpecOptions):
         software.amazon.awscdk.services.appmesh.GrpcRouteSpecOptions = (wrapped as

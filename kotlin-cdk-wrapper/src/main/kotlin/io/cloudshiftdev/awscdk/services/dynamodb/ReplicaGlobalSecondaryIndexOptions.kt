@@ -144,8 +144,8 @@ public interface ReplicaGlobalSecondaryIndexOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions):
-        ReplicaGlobalSecondaryIndexOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ReplicaGlobalSecondaryIndexOptions
+        ReplicaGlobalSecondaryIndexOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ReplicaGlobalSecondaryIndexOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReplicaGlobalSecondaryIndexOptions):
         software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions = (wrapped as

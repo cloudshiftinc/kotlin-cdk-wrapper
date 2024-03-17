@@ -70,7 +70,8 @@ public interface DestinationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.DestinationConfig):
-        DestinationConfig = CdkObjectWrappers.wrap(cdkObject) as DestinationConfig
+        DestinationConfig = CdkObjectWrappers.wrap(cdkObject) as? DestinationConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DestinationConfig):
         software.amazon.awscdk.services.lambda.DestinationConfig = (wrapped as CdkObject).cdkObject

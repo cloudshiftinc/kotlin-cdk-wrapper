@@ -56,6 +56,10 @@ public abstract class ListenerConfig internal constructor(
         service.let(BaseService::unwrap))
   }
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ecs.ListenerConfig,
+  ) : ListenerConfig(cdkObject)
+
   public companion object {
     public fun applicationListener(listener: ApplicationListener): ListenerConfig =
         software.amazon.awscdk.services.ecs.ListenerConfig.applicationListener(listener.let(ApplicationListener::unwrap)).let(ListenerConfig::wrap)
@@ -86,7 +90,7 @@ public abstract class ListenerConfig internal constructor(
         networkListener(listener, AddNetworkTargetsProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ListenerConfig): ListenerConfig
-        = CdkObjectWrappers.wrap(cdkObject) as ListenerConfig
+        = CdkObjectWrappers.wrap(cdkObject) as? ListenerConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ListenerConfig): software.amazon.awscdk.services.ecs.ListenerConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.ListenerConfig

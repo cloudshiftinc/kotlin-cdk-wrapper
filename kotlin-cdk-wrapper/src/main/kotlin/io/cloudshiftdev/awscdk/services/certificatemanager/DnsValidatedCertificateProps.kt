@@ -438,8 +438,8 @@ public interface DnsValidatedCertificateProps : CertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificateProps):
-        DnsValidatedCertificateProps = CdkObjectWrappers.wrap(cdkObject) as
-        DnsValidatedCertificateProps
+        DnsValidatedCertificateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DnsValidatedCertificateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DnsValidatedCertificateProps):
         software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificateProps = (wrapped

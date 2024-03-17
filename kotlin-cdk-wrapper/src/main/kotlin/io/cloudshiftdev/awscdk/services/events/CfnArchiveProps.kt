@@ -193,7 +193,8 @@ public interface CfnArchiveProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnArchiveProps):
-        CfnArchiveProps = CdkObjectWrappers.wrap(cdkObject) as CfnArchiveProps
+        CfnArchiveProps = CdkObjectWrappers.wrap(cdkObject) as? CfnArchiveProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnArchiveProps):
         software.amazon.awscdk.services.events.CfnArchiveProps = (wrapped as CdkObject).cdkObject as

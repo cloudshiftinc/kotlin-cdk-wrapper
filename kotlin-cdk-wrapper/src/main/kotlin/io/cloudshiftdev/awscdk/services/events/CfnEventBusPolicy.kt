@@ -618,7 +618,8 @@ public open class CfnEventBusPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicy.ConditionProperty):
-          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as ConditionProperty
+          ConditionProperty = CdkObjectWrappers.wrap(cdkObject) as? ConditionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConditionProperty):
           software.amazon.awscdk.services.events.CfnEventBusPolicy.ConditionProperty = (wrapped as

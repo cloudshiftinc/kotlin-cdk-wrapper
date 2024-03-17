@@ -413,8 +413,8 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty):
-          PeeringAttachmentStatusProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PeeringAttachmentStatusProperty
+          PeeringAttachmentStatusProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PeeringAttachmentStatusProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PeeringAttachmentStatusProperty):
           software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty

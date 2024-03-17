@@ -674,7 +674,8 @@ public open class CfnAppBlock internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.appstream.CfnAppBlock.S3LocationProperty = (wrapped as
@@ -868,7 +869,8 @@ public open class CfnAppBlock internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock.ScriptDetailsProperty):
-          ScriptDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as ScriptDetailsProperty
+          ScriptDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? ScriptDetailsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScriptDetailsProperty):
           software.amazon.awscdk.services.appstream.CfnAppBlock.ScriptDetailsProperty = (wrapped as

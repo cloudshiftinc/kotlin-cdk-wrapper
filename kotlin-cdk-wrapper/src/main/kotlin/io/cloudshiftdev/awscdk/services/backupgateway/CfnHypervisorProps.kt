@@ -265,7 +265,8 @@ public interface CfnHypervisorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backupgateway.CfnHypervisorProps):
-        CfnHypervisorProps = CdkObjectWrappers.wrap(cdkObject) as CfnHypervisorProps
+        CfnHypervisorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHypervisorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHypervisorProps):
         software.amazon.awscdk.services.backupgateway.CfnHypervisorProps = (wrapped as

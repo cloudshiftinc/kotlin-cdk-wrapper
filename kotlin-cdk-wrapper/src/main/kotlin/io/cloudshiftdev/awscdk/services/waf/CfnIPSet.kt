@@ -438,7 +438,8 @@ public open class CfnIPSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty):
-          IPSetDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as IPSetDescriptorProperty
+          IPSetDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as? IPSetDescriptorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IPSetDescriptorProperty):
           software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty = (wrapped as

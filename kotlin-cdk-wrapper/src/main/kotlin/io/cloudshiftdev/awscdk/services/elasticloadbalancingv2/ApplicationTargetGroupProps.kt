@@ -536,8 +536,8 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroupProps):
-        ApplicationTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationTargetGroupProps
+        ApplicationTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationTargetGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationTargetGroupProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroupProps =

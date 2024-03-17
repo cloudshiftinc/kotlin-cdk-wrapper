@@ -211,7 +211,8 @@ public interface ParameterGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ParameterGroupProps):
-        ParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as ParameterGroupProps
+        ParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as? ParameterGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParameterGroupProps):
         software.amazon.awscdk.services.rds.ParameterGroupProps = (wrapped as CdkObject).cdkObject

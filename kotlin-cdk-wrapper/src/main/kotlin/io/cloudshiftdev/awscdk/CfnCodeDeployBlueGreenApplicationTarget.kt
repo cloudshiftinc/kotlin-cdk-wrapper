@@ -101,8 +101,8 @@ public interface CfnCodeDeployBlueGreenApplicationTarget {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenApplicationTarget):
-        CfnCodeDeployBlueGreenApplicationTarget = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCodeDeployBlueGreenApplicationTarget
+        CfnCodeDeployBlueGreenApplicationTarget = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCodeDeployBlueGreenApplicationTarget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeDeployBlueGreenApplicationTarget):
         software.amazon.awscdk.CfnCodeDeployBlueGreenApplicationTarget = (wrapped as

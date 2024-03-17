@@ -446,8 +446,8 @@ public interface EmrSetClusterTerminationProtectionProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrSetClusterTerminationProtectionProps):
-        EmrSetClusterTerminationProtectionProps = CdkObjectWrappers.wrap(cdkObject) as
-        EmrSetClusterTerminationProtectionProps
+        EmrSetClusterTerminationProtectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EmrSetClusterTerminationProtectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrSetClusterTerminationProtectionProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrSetClusterTerminationProtectionProps

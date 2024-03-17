@@ -49,9 +49,54 @@ public interface IDestination {
     options: DestinationOptions.Builder.() -> Unit,
   ): DestinationConfig
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.lambda.IDestination,
+  ) : CdkObject(cdkObject), IDestination {
+    /**
+     * Binds this destination to the Lambda function.
+     *
+     * @param scope 
+     * @param fn 
+     * @param options
+     */
+    override fun bind(scope: Construct, fn: IFunction): DestinationConfig =
+        unwrap(this).bind(scope.let(Construct::unwrap),
+        fn.let(IFunction::unwrap)).let(DestinationConfig::wrap)
+
+    /**
+     * Binds this destination to the Lambda function.
+     *
+     * @param scope 
+     * @param fn 
+     * @param options
+     */
+    override fun bind(
+      scope: Construct,
+      fn: IFunction,
+      options: DestinationOptions,
+    ): DestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap),
+        fn.let(IFunction::unwrap),
+        options.let(DestinationOptions::unwrap)).let(DestinationConfig::wrap)
+
+    /**
+     * Binds this destination to the Lambda function.
+     *
+     * @param scope 
+     * @param fn 
+     * @param options
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2d6ad4acfbba31901bb8135560633af5578e09f84d84123fa0dbea6b67295dd3")
+    override fun bind(
+      scope: Construct,
+      fn: IFunction,
+      options: DestinationOptions.Builder.() -> Unit,
+    ): DestinationConfig = bind(scope, fn, DestinationOptions(options))
+  }
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.IDestination): IDestination
-        = CdkObjectWrappers.wrap(cdkObject) as IDestination
+        = CdkObjectWrappers.wrap(cdkObject) as? IDestination ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IDestination): software.amazon.awscdk.services.lambda.IDestination
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.IDestination

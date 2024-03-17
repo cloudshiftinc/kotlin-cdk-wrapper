@@ -422,7 +422,8 @@ public interface CfnMultiplexprogramProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogramProps):
-        CfnMultiplexprogramProps = CdkObjectWrappers.wrap(cdkObject) as CfnMultiplexprogramProps
+        CfnMultiplexprogramProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMultiplexprogramProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMultiplexprogramProps):
         software.amazon.awscdk.services.medialive.CfnMultiplexprogramProps = (wrapped as

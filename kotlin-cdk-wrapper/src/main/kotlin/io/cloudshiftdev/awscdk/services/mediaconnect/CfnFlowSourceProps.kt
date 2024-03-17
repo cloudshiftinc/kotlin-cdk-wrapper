@@ -741,7 +741,8 @@ public interface CfnFlowSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps):
-        CfnFlowSourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlowSourceProps
+        CfnFlowSourceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFlowSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowSourceProps):
         software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps = (wrapped as

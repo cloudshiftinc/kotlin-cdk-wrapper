@@ -120,7 +120,8 @@ public interface S3FileItemReaderProps : ItemReaderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.S3FileItemReaderProps):
-        S3FileItemReaderProps = CdkObjectWrappers.wrap(cdkObject) as S3FileItemReaderProps
+        S3FileItemReaderProps = CdkObjectWrappers.wrap(cdkObject) as? S3FileItemReaderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3FileItemReaderProps):
         software.amazon.awscdk.services.stepfunctions.S3FileItemReaderProps = (wrapped as

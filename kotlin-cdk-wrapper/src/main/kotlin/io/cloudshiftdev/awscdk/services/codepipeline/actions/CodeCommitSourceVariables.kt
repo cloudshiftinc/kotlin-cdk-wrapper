@@ -193,7 +193,8 @@ public interface CodeCommitSourceVariables {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceVariables):
-        CodeCommitSourceVariables = CdkObjectWrappers.wrap(cdkObject) as CodeCommitSourceVariables
+        CodeCommitSourceVariables = CdkObjectWrappers.wrap(cdkObject) as? CodeCommitSourceVariables
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeCommitSourceVariables):
         software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceVariables = (wrapped as

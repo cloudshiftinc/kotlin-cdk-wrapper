@@ -941,7 +941,8 @@ public open class CfnDBProxy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty):
-          AuthFormatProperty = CdkObjectWrappers.wrap(cdkObject) as AuthFormatProperty
+          AuthFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? AuthFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuthFormatProperty):
           software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty = (wrapped as
@@ -1074,7 +1075,8 @@ public open class CfnDBProxy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty):
-          TagFormatProperty = CdkObjectWrappers.wrap(cdkObject) as TagFormatProperty
+          TagFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagFormatProperty):
           software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty = (wrapped as

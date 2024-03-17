@@ -171,7 +171,8 @@ public interface CodeSigningConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CodeSigningConfigProps):
-        CodeSigningConfigProps = CdkObjectWrappers.wrap(cdkObject) as CodeSigningConfigProps
+        CodeSigningConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CodeSigningConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeSigningConfigProps):
         software.amazon.awscdk.services.lambda.CodeSigningConfigProps = (wrapped as

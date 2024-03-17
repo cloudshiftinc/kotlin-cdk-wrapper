@@ -375,7 +375,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty):
-          VpcInformationProperty = CdkObjectWrappers.wrap(cdkObject) as VpcInformationProperty
+          VpcInformationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcInformationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcInformationProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty =

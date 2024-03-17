@@ -232,7 +232,7 @@ public interface CfnBudgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetProps):
-        CfnBudgetProps = CdkObjectWrappers.wrap(cdkObject) as CfnBudgetProps
+        CfnBudgetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBudgetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBudgetProps):
         software.amazon.awscdk.services.budgets.CfnBudgetProps = (wrapped as CdkObject).cdkObject as

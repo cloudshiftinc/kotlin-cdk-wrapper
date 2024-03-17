@@ -215,8 +215,8 @@ public interface CommonCloudFormationStackSetOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CommonCloudFormationStackSetOptions):
-        CommonCloudFormationStackSetOptions = CdkObjectWrappers.wrap(cdkObject) as
-        CommonCloudFormationStackSetOptions
+        CommonCloudFormationStackSetOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        CommonCloudFormationStackSetOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonCloudFormationStackSetOptions):
         software.amazon.awscdk.services.codepipeline.actions.CommonCloudFormationStackSetOptions =

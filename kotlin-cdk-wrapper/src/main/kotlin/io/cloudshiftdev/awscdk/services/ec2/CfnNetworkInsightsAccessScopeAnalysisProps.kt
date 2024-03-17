@@ -126,8 +126,8 @@ public interface CfnNetworkInsightsAccessScopeAnalysisProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysisProps):
-        CfnNetworkInsightsAccessScopeAnalysisProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnNetworkInsightsAccessScopeAnalysisProps
+        CfnNetworkInsightsAccessScopeAnalysisProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNetworkInsightsAccessScopeAnalysisProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInsightsAccessScopeAnalysisProps):
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysisProps = (wrapped as

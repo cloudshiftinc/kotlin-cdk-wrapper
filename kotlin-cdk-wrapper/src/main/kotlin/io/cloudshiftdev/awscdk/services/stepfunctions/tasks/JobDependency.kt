@@ -102,7 +102,7 @@ public interface JobDependency {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.JobDependency):
-        JobDependency = CdkObjectWrappers.wrap(cdkObject) as JobDependency
+        JobDependency = CdkObjectWrappers.wrap(cdkObject) as? JobDependency ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JobDependency):
         software.amazon.awscdk.services.stepfunctions.tasks.JobDependency = (wrapped as

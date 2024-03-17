@@ -25,10 +25,29 @@ public interface IEnvironmentPlaceholderProvider {
    */
   public fun region(): String
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.cxapi.IEnvironmentPlaceholderProvider,
+  ) : CdkObject(cdkObject), IEnvironmentPlaceholderProvider {
+    /**
+     * Return the account.
+     */
+    override fun accountId(): String = unwrap(this).accountId()
+
+    /**
+     * Return the partition.
+     */
+    override fun partition(): String = unwrap(this).partition()
+
+    /**
+     * Return the region.
+     */
+    override fun region(): String = unwrap(this).region()
+  }
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.IEnvironmentPlaceholderProvider):
-        IEnvironmentPlaceholderProvider = CdkObjectWrappers.wrap(cdkObject) as
-        IEnvironmentPlaceholderProvider
+        IEnvironmentPlaceholderProvider = CdkObjectWrappers.wrap(cdkObject) as?
+        IEnvironmentPlaceholderProvider ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IEnvironmentPlaceholderProvider):
         software.amazon.awscdk.cxapi.IEnvironmentPlaceholderProvider = (wrapped as

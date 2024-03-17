@@ -120,7 +120,8 @@ public interface SecretVersionInfo {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.SecretVersionInfo):
-        SecretVersionInfo = CdkObjectWrappers.wrap(cdkObject) as SecretVersionInfo
+        SecretVersionInfo = CdkObjectWrappers.wrap(cdkObject) as? SecretVersionInfo ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretVersionInfo):
         software.amazon.awscdk.services.ecs.SecretVersionInfo = (wrapped as CdkObject).cdkObject as

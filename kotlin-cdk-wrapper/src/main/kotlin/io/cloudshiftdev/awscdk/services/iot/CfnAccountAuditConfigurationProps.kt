@@ -403,8 +403,8 @@ public interface CfnAccountAuditConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfigurationProps):
-        CfnAccountAuditConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAccountAuditConfigurationProps
+        CfnAccountAuditConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAccountAuditConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccountAuditConfigurationProps):
         software.amazon.awscdk.services.iot.CfnAccountAuditConfigurationProps = (wrapped as

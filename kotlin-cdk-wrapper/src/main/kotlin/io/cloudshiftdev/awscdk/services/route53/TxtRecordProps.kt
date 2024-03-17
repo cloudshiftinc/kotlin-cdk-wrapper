@@ -393,7 +393,7 @@ public interface TxtRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.TxtRecordProps):
-        TxtRecordProps = CdkObjectWrappers.wrap(cdkObject) as TxtRecordProps
+        TxtRecordProps = CdkObjectWrappers.wrap(cdkObject) as? TxtRecordProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TxtRecordProps):
         software.amazon.awscdk.services.route53.TxtRecordProps = (wrapped as CdkObject).cdkObject as

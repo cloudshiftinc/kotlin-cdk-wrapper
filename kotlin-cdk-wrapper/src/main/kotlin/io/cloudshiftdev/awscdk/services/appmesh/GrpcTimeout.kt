@@ -115,7 +115,7 @@ public interface GrpcTimeout {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcTimeout): GrpcTimeout =
-        CdkObjectWrappers.wrap(cdkObject) as GrpcTimeout
+        CdkObjectWrappers.wrap(cdkObject) as? GrpcTimeout ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrpcTimeout): software.amazon.awscdk.services.appmesh.GrpcTimeout =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.GrpcTimeout

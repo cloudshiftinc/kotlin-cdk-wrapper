@@ -460,7 +460,8 @@ public interface CfnDatastoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastoreProps):
-        CfnDatastoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnDatastoreProps
+        CfnDatastoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDatastoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatastoreProps):
         software.amazon.awscdk.services.iotanalytics.CfnDatastoreProps = (wrapped as

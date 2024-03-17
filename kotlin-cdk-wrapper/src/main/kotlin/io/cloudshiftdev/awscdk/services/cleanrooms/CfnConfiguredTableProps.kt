@@ -391,7 +391,8 @@ public interface CfnConfiguredTableProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableProps):
-        CfnConfiguredTableProps = CdkObjectWrappers.wrap(cdkObject) as CfnConfiguredTableProps
+        CfnConfiguredTableProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConfiguredTableProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfiguredTableProps):
         software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableProps = (wrapped as

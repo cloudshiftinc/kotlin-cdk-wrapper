@@ -491,7 +491,7 @@ public interface CfnPortalProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnPortalProps):
-        CfnPortalProps = CdkObjectWrappers.wrap(cdkObject) as CfnPortalProps
+        CfnPortalProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPortalProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPortalProps):
         software.amazon.awscdk.services.workspacesweb.CfnPortalProps = (wrapped as

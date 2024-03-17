@@ -120,7 +120,7 @@ public interface DeviceTracking {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.DeviceTracking):
-        DeviceTracking = CdkObjectWrappers.wrap(cdkObject) as DeviceTracking
+        DeviceTracking = CdkObjectWrappers.wrap(cdkObject) as? DeviceTracking ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeviceTracking):
         software.amazon.awscdk.services.cognito.DeviceTracking = (wrapped as CdkObject).cdkObject as

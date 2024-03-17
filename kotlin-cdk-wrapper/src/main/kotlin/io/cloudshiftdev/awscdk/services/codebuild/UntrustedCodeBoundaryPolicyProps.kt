@@ -122,8 +122,8 @@ public interface UntrustedCodeBoundaryPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps):
-        UntrustedCodeBoundaryPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
-        UntrustedCodeBoundaryPolicyProps
+        UntrustedCodeBoundaryPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        UntrustedCodeBoundaryPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UntrustedCodeBoundaryPolicyProps):
         software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps = (wrapped as

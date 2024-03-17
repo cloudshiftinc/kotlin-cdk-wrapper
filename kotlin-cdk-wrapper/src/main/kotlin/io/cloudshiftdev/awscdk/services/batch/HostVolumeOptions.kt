@@ -133,7 +133,8 @@ public interface HostVolumeOptions : EcsVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.HostVolumeOptions):
-        HostVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as HostVolumeOptions
+        HostVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as? HostVolumeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HostVolumeOptions):
         software.amazon.awscdk.services.batch.HostVolumeOptions = (wrapped as CdkObject).cdkObject

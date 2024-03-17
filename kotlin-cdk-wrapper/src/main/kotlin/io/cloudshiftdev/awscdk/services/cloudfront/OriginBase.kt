@@ -40,9 +40,13 @@ public abstract class OriginBase internal constructor(
   public override fun bind(scope: Construct, options: OriginBindOptions.Builder.() -> Unit):
       OriginBindConfig = bind(scope, OriginBindOptions(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase,
+  ) : OriginBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase): OriginBase
-        = CdkObjectWrappers.wrap(cdkObject) as OriginBase
+        = CdkObjectWrappers.wrap(cdkObject) as? OriginBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginBase): software.amazon.awscdk.services.cloudfront.OriginBase
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.OriginBase

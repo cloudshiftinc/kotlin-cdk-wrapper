@@ -462,7 +462,8 @@ public open class CfnThingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty):
-          AttributePayloadProperty = CdkObjectWrappers.wrap(cdkObject) as AttributePayloadProperty
+          AttributePayloadProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributePayloadProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributePayloadProperty):
           software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty = (wrapped as
@@ -601,8 +602,8 @@ public open class CfnThingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty):
-          ThingGroupPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ThingGroupPropertiesProperty
+          ThingGroupPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ThingGroupPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThingGroupPropertiesProperty):
           software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty = (wrapped

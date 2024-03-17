@@ -640,7 +640,7 @@ public interface CfnIndexProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnIndexProps):
-        CfnIndexProps = CdkObjectWrappers.wrap(cdkObject) as CfnIndexProps
+        CfnIndexProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIndexProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIndexProps):
         software.amazon.awscdk.services.kendra.CfnIndexProps = (wrapped as CdkObject).cdkObject as

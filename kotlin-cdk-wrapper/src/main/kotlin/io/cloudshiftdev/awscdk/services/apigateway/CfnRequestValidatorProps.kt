@@ -199,7 +199,8 @@ public interface CfnRequestValidatorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnRequestValidatorProps):
-        CfnRequestValidatorProps = CdkObjectWrappers.wrap(cdkObject) as CfnRequestValidatorProps
+        CfnRequestValidatorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRequestValidatorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRequestValidatorProps):
         software.amazon.awscdk.services.apigateway.CfnRequestValidatorProps = (wrapped as

@@ -368,7 +368,8 @@ public interface CfnGitHubRepositoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepositoryProps):
-        CfnGitHubRepositoryProps = CdkObjectWrappers.wrap(cdkObject) as CfnGitHubRepositoryProps
+        CfnGitHubRepositoryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGitHubRepositoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGitHubRepositoryProps):
         software.amazon.awscdk.services.codestar.CfnGitHubRepositoryProps = (wrapped as

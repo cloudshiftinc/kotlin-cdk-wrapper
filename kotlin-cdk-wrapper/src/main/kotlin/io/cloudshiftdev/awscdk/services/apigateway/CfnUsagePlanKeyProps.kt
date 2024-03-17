@@ -134,7 +134,8 @@ public interface CfnUsagePlanKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanKeyProps):
-        CfnUsagePlanKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnUsagePlanKeyProps
+        CfnUsagePlanKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnUsagePlanKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUsagePlanKeyProps):
         software.amazon.awscdk.services.apigateway.CfnUsagePlanKeyProps = (wrapped as

@@ -190,7 +190,8 @@ public interface RedriveAllowPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.RedriveAllowPolicy):
-        RedriveAllowPolicy = CdkObjectWrappers.wrap(cdkObject) as RedriveAllowPolicy
+        RedriveAllowPolicy = CdkObjectWrappers.wrap(cdkObject) as? RedriveAllowPolicy ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RedriveAllowPolicy):
         software.amazon.awscdk.services.sqs.RedriveAllowPolicy = (wrapped as CdkObject).cdkObject as

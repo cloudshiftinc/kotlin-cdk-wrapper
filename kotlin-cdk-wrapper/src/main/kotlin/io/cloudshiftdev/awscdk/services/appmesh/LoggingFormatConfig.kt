@@ -98,7 +98,8 @@ public interface LoggingFormatConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.LoggingFormatConfig):
-        LoggingFormatConfig = CdkObjectWrappers.wrap(cdkObject) as LoggingFormatConfig
+        LoggingFormatConfig = CdkObjectWrappers.wrap(cdkObject) as? LoggingFormatConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoggingFormatConfig):
         software.amazon.awscdk.services.appmesh.LoggingFormatConfig = (wrapped as

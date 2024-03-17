@@ -688,7 +688,7 @@ public interface CfnMethodProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethodProps):
-        CfnMethodProps = CdkObjectWrappers.wrap(cdkObject) as CfnMethodProps
+        CfnMethodProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMethodProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMethodProps):
         software.amazon.awscdk.services.apigateway.CfnMethodProps = (wrapped as CdkObject).cdkObject

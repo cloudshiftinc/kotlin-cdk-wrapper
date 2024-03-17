@@ -177,7 +177,8 @@ public interface CommonGrantOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CommonGrantOptions):
-        CommonGrantOptions = CdkObjectWrappers.wrap(cdkObject) as CommonGrantOptions
+        CommonGrantOptions = CdkObjectWrappers.wrap(cdkObject) as? CommonGrantOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonGrantOptions):
         software.amazon.awscdk.services.iam.CommonGrantOptions = (wrapped as CdkObject).cdkObject as

@@ -94,8 +94,8 @@ public interface GatewayRouteHostnameMatchConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig):
-        GatewayRouteHostnameMatchConfig = CdkObjectWrappers.wrap(cdkObject) as
-        GatewayRouteHostnameMatchConfig
+        GatewayRouteHostnameMatchConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        GatewayRouteHostnameMatchConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayRouteHostnameMatchConfig):
         software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig = (wrapped as

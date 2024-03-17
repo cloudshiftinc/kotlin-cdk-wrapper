@@ -491,7 +491,7 @@ public interface CfnInputProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInputProps):
-        CfnInputProps = CdkObjectWrappers.wrap(cdkObject) as CfnInputProps
+        CfnInputProps = CdkObjectWrappers.wrap(cdkObject) as? CfnInputProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInputProps):
         software.amazon.awscdk.services.medialive.CfnInputProps = (wrapped as CdkObject).cdkObject

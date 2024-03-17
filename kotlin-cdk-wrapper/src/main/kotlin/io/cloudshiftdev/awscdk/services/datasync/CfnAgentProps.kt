@@ -393,7 +393,7 @@ public interface CfnAgentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnAgentProps):
-        CfnAgentProps = CdkObjectWrappers.wrap(cdkObject) as CfnAgentProps
+        CfnAgentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAgentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAgentProps):
         software.amazon.awscdk.services.datasync.CfnAgentProps = (wrapped as CdkObject).cdkObject as

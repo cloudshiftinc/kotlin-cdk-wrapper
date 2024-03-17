@@ -139,7 +139,8 @@ public interface BackedDataSourceProps : BaseDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.BackedDataSourceProps):
-        BackedDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as BackedDataSourceProps
+        BackedDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? BackedDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BackedDataSourceProps):
         software.amazon.awscdk.services.appsync.BackedDataSourceProps = (wrapped as

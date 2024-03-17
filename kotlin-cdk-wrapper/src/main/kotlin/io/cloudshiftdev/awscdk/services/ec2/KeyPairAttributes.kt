@@ -93,7 +93,8 @@ public interface KeyPairAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.KeyPairAttributes):
-        KeyPairAttributes = CdkObjectWrappers.wrap(cdkObject) as KeyPairAttributes
+        KeyPairAttributes = CdkObjectWrappers.wrap(cdkObject) as? KeyPairAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyPairAttributes):
         software.amazon.awscdk.services.ec2.KeyPairAttributes = (wrapped as CdkObject).cdkObject as

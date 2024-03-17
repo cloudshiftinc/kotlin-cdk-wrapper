@@ -165,7 +165,8 @@ public interface CfnIPAMScopeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMScopeProps):
-        CfnIPAMScopeProps = CdkObjectWrappers.wrap(cdkObject) as CfnIPAMScopeProps
+        CfnIPAMScopeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIPAMScopeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMScopeProps):
         software.amazon.awscdk.services.ec2.CfnIPAMScopeProps = (wrapped as CdkObject).cdkObject as

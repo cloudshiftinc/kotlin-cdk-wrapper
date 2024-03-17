@@ -670,8 +670,8 @@ public open class CfnQueue internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty):
-          OutboundCallerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OutboundCallerConfigProperty
+          OutboundCallerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutboundCallerConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutboundCallerConfigProperty):
           software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty = (wrapped

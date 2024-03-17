@@ -706,7 +706,8 @@ public interface CfnJobTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplateProps):
-        CfnJobTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnJobTemplateProps
+        CfnJobTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnJobTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnJobTemplateProps):
         software.amazon.awscdk.services.mediaconvert.CfnJobTemplateProps = (wrapped as

@@ -694,7 +694,8 @@ public open class CfnSimpleAD internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.directoryservice.CfnSimpleAD.VpcSettingsProperty):
-          VpcSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as VpcSettingsProperty
+          VpcSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcSettingsProperty):
           software.amazon.awscdk.services.directoryservice.CfnSimpleAD.VpcSettingsProperty =

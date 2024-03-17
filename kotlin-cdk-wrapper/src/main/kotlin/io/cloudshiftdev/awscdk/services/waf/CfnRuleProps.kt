@@ -196,7 +196,7 @@ public interface CfnRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnRuleProps): CfnRuleProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnRuleProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRuleProps): software.amazon.awscdk.services.waf.CfnRuleProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.waf.CfnRuleProps

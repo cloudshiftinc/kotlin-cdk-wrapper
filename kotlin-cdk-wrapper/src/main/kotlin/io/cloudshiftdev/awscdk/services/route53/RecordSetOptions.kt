@@ -480,7 +480,8 @@ public interface RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.RecordSetOptions):
-        RecordSetOptions = CdkObjectWrappers.wrap(cdkObject) as RecordSetOptions
+        RecordSetOptions = CdkObjectWrappers.wrap(cdkObject) as? RecordSetOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RecordSetOptions):
         software.amazon.awscdk.services.route53.RecordSetOptions = (wrapped as CdkObject).cdkObject

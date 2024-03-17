@@ -49,9 +49,14 @@ public abstract class HttpRouteIntegration internal constructor(
   public open fun bind(options: HttpRouteIntegrationBindOptions.Builder.() -> Unit):
       HttpRouteIntegrationConfig = bind(HttpRouteIntegrationBindOptions(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration,
+  ) : HttpRouteIntegration(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration):
-        HttpRouteIntegration = CdkObjectWrappers.wrap(cdkObject) as HttpRouteIntegration
+        HttpRouteIntegration = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteIntegration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteIntegration):
         software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegration = (wrapped as

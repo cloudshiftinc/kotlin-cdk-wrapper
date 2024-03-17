@@ -441,7 +441,8 @@ public interface AuthenticateOidcOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AuthenticateOidcOptions):
-        AuthenticateOidcOptions = CdkObjectWrappers.wrap(cdkObject) as AuthenticateOidcOptions
+        AuthenticateOidcOptions = CdkObjectWrappers.wrap(cdkObject) as? AuthenticateOidcOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuthenticateOidcOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.AuthenticateOidcOptions = (wrapped as

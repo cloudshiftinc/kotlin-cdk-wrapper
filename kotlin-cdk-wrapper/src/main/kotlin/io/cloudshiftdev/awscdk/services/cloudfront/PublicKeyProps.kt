@@ -149,7 +149,7 @@ public interface PublicKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.PublicKeyProps):
-        PublicKeyProps = CdkObjectWrappers.wrap(cdkObject) as PublicKeyProps
+        PublicKeyProps = CdkObjectWrappers.wrap(cdkObject) as? PublicKeyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PublicKeyProps):
         software.amazon.awscdk.services.cloudfront.PublicKeyProps = (wrapped as CdkObject).cdkObject

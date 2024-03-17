@@ -116,7 +116,7 @@ public interface CaaRecordValue {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CaaRecordValue):
-        CaaRecordValue = CdkObjectWrappers.wrap(cdkObject) as CaaRecordValue
+        CaaRecordValue = CdkObjectWrappers.wrap(cdkObject) as? CaaRecordValue ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CaaRecordValue):
         software.amazon.awscdk.services.route53.CaaRecordValue = (wrapped as CdkObject).cdkObject as

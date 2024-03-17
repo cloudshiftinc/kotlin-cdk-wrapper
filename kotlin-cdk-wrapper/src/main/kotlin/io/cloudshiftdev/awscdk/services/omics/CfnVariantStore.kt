@@ -493,7 +493,8 @@ public open class CfnVariantStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty):
-          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SseConfigProperty
+          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseConfigProperty):
           software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty = (wrapped as
@@ -574,7 +575,8 @@ public open class CfnVariantStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty):
-          ReferenceItemProperty = CdkObjectWrappers.wrap(cdkObject) as ReferenceItemProperty
+          ReferenceItemProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceItemProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReferenceItemProperty):
           software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty = (wrapped as

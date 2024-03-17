@@ -206,7 +206,8 @@ public interface ApiDestinationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.ApiDestinationProps):
-        ApiDestinationProps = CdkObjectWrappers.wrap(cdkObject) as ApiDestinationProps
+        ApiDestinationProps = CdkObjectWrappers.wrap(cdkObject) as? ApiDestinationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiDestinationProps):
         software.amazon.awscdk.services.events.ApiDestinationProps = (wrapped as

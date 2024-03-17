@@ -354,7 +354,8 @@ public interface ArtifactManifest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.ArtifactManifest):
-        ArtifactManifest = CdkObjectWrappers.wrap(cdkObject) as ArtifactManifest
+        ArtifactManifest = CdkObjectWrappers.wrap(cdkObject) as? ArtifactManifest ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ArtifactManifest):
         software.amazon.awscdk.cloudassembly.schema.ArtifactManifest = (wrapped as

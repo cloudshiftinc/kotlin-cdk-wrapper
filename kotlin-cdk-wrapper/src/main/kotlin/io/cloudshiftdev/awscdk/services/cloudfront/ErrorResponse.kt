@@ -183,7 +183,7 @@ public interface ErrorResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ErrorResponse):
-        ErrorResponse = CdkObjectWrappers.wrap(cdkObject) as ErrorResponse
+        ErrorResponse = CdkObjectWrappers.wrap(cdkObject) as? ErrorResponse ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ErrorResponse):
         software.amazon.awscdk.services.cloudfront.ErrorResponse = (wrapped as CdkObject).cdkObject

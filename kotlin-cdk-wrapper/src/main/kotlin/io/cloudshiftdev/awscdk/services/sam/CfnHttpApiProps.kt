@@ -670,7 +670,8 @@ public interface CfnHttpApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnHttpApiProps):
-        CfnHttpApiProps = CdkObjectWrappers.wrap(cdkObject) as CfnHttpApiProps
+        CfnHttpApiProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHttpApiProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHttpApiProps):
         software.amazon.awscdk.services.sam.CfnHttpApiProps = (wrapped as CdkObject).cdkObject as

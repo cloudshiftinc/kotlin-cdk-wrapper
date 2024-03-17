@@ -105,7 +105,8 @@ public interface NetworkTargetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps):
-        NetworkTargetProps = CdkObjectWrappers.wrap(cdkObject) as NetworkTargetProps
+        NetworkTargetProps = CdkObjectWrappers.wrap(cdkObject) as? NetworkTargetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkTargetProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps = (wrapped as

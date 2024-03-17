@@ -79,7 +79,7 @@ public interface TagManagerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.TagManagerOptions): TagManagerOptions =
-        CdkObjectWrappers.wrap(cdkObject) as TagManagerOptions
+        CdkObjectWrappers.wrap(cdkObject) as? TagManagerOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TagManagerOptions): software.amazon.awscdk.TagManagerOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.TagManagerOptions

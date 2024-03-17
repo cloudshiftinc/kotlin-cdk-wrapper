@@ -103,7 +103,8 @@ public interface ItemReaderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ItemReaderProps):
-        ItemReaderProps = CdkObjectWrappers.wrap(cdkObject) as ItemReaderProps
+        ItemReaderProps = CdkObjectWrappers.wrap(cdkObject) as? ItemReaderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ItemReaderProps):
         software.amazon.awscdk.services.stepfunctions.ItemReaderProps = (wrapped as

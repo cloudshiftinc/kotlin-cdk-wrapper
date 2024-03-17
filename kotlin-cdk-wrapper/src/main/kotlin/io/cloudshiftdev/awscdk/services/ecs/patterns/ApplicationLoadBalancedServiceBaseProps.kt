@@ -1263,8 +1263,8 @@ public interface ApplicationLoadBalancedServiceBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBaseProps):
-        ApplicationLoadBalancedServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancedServiceBaseProps
+        ApplicationLoadBalancedServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancedServiceBaseProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedServiceBaseProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedServiceBaseProps =

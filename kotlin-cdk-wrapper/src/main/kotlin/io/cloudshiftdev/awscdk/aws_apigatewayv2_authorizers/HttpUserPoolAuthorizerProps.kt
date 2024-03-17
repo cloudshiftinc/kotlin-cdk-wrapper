@@ -191,8 +191,8 @@ public interface HttpUserPoolAuthorizerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizerProps):
-        HttpUserPoolAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as
-        HttpUserPoolAuthorizerProps
+        HttpUserPoolAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpUserPoolAuthorizerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpUserPoolAuthorizerProps):
         software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizerProps = (wrapped

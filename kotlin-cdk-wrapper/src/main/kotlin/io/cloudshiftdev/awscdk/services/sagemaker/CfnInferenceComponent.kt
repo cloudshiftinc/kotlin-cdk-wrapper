@@ -756,8 +756,8 @@ public open class CfnInferenceComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty):
-          InferenceComponentContainerSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InferenceComponentContainerSpecificationProperty
+          InferenceComponentContainerSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceComponentContainerSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceComponentContainerSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentContainerSpecificationProperty
@@ -902,8 +902,8 @@ public open class CfnInferenceComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty):
-          InferenceComponentStartupParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InferenceComponentStartupParametersProperty
+          InferenceComponentStartupParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceComponentStartupParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceComponentStartupParametersProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentStartupParametersProperty
@@ -1055,8 +1055,8 @@ public open class CfnInferenceComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRuntimeConfigProperty):
-          InferenceComponentRuntimeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InferenceComponentRuntimeConfigProperty
+          InferenceComponentRuntimeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceComponentRuntimeConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceComponentRuntimeConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentRuntimeConfigProperty
@@ -1351,8 +1351,8 @@ public open class CfnInferenceComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentSpecificationProperty):
-          InferenceComponentSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InferenceComponentSpecificationProperty
+          InferenceComponentSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceComponentSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceComponentSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentSpecificationProperty
@@ -1545,7 +1545,7 @@ public open class CfnInferenceComponent internal constructor(
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty):
           InferenceComponentComputeResourceRequirementsProperty = CdkObjectWrappers.wrap(cdkObject)
-          as InferenceComponentComputeResourceRequirementsProperty
+          as? InferenceComponentComputeResourceRequirementsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceComponentComputeResourceRequirementsProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentComputeResourceRequirementsProperty
@@ -1695,7 +1695,8 @@ public open class CfnInferenceComponent internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty):
-          DeployedImageProperty = CdkObjectWrappers.wrap(cdkObject) as DeployedImageProperty
+          DeployedImageProperty = CdkObjectWrappers.wrap(cdkObject) as? DeployedImageProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeployedImageProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.DeployedImageProperty =

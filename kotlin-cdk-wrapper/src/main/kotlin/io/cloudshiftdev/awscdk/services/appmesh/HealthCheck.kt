@@ -67,6 +67,10 @@ public abstract class HealthCheck internal constructor(
   public open fun bind(scope: Construct, options: HealthCheckBindOptions.Builder.() -> Unit):
       HealthCheckConfig = bind(scope, HealthCheckBindOptions(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck,
+  ) : HealthCheck(cdkObject)
+
   public companion object {
     public fun grpc(): HealthCheck =
         software.amazon.awscdk.services.appmesh.HealthCheck.grpc().let(HealthCheck::wrap)
@@ -113,7 +117,7 @@ public abstract class HealthCheck internal constructor(
         tcp(TcpHealthCheckOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck): HealthCheck =
-        CdkObjectWrappers.wrap(cdkObject) as HealthCheck
+        CdkObjectWrappers.wrap(cdkObject) as? HealthCheck ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HealthCheck): software.amazon.awscdk.services.appmesh.HealthCheck =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.HealthCheck

@@ -131,8 +131,8 @@ public interface CfnOriginRequestPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicyProps):
-        CfnOriginRequestPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnOriginRequestPolicyProps
+        CfnOriginRequestPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnOriginRequestPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOriginRequestPolicyProps):
         software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicyProps = (wrapped as

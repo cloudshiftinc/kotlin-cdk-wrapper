@@ -147,8 +147,8 @@ public interface CodeDeployEcsContainerImageInput {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsContainerImageInput):
-        CodeDeployEcsContainerImageInput = CdkObjectWrappers.wrap(cdkObject) as
-        CodeDeployEcsContainerImageInput
+        CodeDeployEcsContainerImageInput = CdkObjectWrappers.wrap(cdkObject) as?
+        CodeDeployEcsContainerImageInput ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeDeployEcsContainerImageInput):
         software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsContainerImageInput =

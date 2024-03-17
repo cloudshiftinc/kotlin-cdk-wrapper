@@ -263,7 +263,8 @@ public interface CompositeAlarmProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CompositeAlarmProps):
-        CompositeAlarmProps = CdkObjectWrappers.wrap(cdkObject) as CompositeAlarmProps
+        CompositeAlarmProps = CdkObjectWrappers.wrap(cdkObject) as? CompositeAlarmProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CompositeAlarmProps):
         software.amazon.awscdk.services.cloudwatch.CompositeAlarmProps = (wrapped as

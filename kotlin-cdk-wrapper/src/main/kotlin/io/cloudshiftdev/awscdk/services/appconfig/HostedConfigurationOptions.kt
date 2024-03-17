@@ -312,7 +312,8 @@ public interface HostedConfigurationOptions : ConfigurationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.HostedConfigurationOptions):
-        HostedConfigurationOptions = CdkObjectWrappers.wrap(cdkObject) as HostedConfigurationOptions
+        HostedConfigurationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        HostedConfigurationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HostedConfigurationOptions):
         software.amazon.awscdk.services.appconfig.HostedConfigurationOptions = (wrapped as

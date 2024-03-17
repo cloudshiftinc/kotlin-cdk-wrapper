@@ -320,7 +320,8 @@ public interface ServiceConnectService {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ServiceConnectService):
-        ServiceConnectService = CdkObjectWrappers.wrap(cdkObject) as ServiceConnectService
+        ServiceConnectService = CdkObjectWrappers.wrap(cdkObject) as? ServiceConnectService ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceConnectService):
         software.amazon.awscdk.services.ecs.ServiceConnectService = (wrapped as CdkObject).cdkObject

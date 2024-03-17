@@ -311,7 +311,8 @@ public interface CfnPublicTypeVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersionProps):
-        CfnPublicTypeVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnPublicTypeVersionProps
+        CfnPublicTypeVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPublicTypeVersionProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPublicTypeVersionProps):
         software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersionProps = (wrapped as

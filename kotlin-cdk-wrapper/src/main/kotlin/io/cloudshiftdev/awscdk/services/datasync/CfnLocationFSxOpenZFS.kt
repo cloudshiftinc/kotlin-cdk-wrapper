@@ -537,7 +537,8 @@ public open class CfnLocationFSxOpenZFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty):
-          MountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as MountOptionsProperty
+          MountOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? MountOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MountOptionsProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty =
@@ -657,7 +658,8 @@ public open class CfnLocationFSxOpenZFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty):
-          ProtocolProperty = CdkObjectWrappers.wrap(cdkObject) as ProtocolProperty
+          ProtocolProperty = CdkObjectWrappers.wrap(cdkObject) as? ProtocolProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProtocolProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty = (wrapped
@@ -773,7 +775,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty):
-          NFSProperty = CdkObjectWrappers.wrap(cdkObject) as NFSProperty
+          NFSProperty = CdkObjectWrappers.wrap(cdkObject) as? NFSProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NFSProperty):
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty = (wrapped as

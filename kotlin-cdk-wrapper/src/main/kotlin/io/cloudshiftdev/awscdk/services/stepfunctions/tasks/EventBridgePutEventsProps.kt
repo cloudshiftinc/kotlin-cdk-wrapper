@@ -469,7 +469,8 @@ public interface EventBridgePutEventsProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsProps):
-        EventBridgePutEventsProps = CdkObjectWrappers.wrap(cdkObject) as EventBridgePutEventsProps
+        EventBridgePutEventsProps = CdkObjectWrappers.wrap(cdkObject) as? EventBridgePutEventsProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventBridgePutEventsProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsProps = (wrapped as

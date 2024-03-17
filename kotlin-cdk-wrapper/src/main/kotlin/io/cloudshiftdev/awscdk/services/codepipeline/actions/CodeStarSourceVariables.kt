@@ -190,7 +190,8 @@ public interface CodeStarSourceVariables {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeStarSourceVariables):
-        CodeStarSourceVariables = CdkObjectWrappers.wrap(cdkObject) as CodeStarSourceVariables
+        CodeStarSourceVariables = CdkObjectWrappers.wrap(cdkObject) as? CodeStarSourceVariables ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeStarSourceVariables):
         software.amazon.awscdk.services.codepipeline.actions.CodeStarSourceVariables = (wrapped as

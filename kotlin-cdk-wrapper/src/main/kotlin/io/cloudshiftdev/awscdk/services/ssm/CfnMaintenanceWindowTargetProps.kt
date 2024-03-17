@@ -273,8 +273,8 @@ public interface CfnMaintenanceWindowTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTargetProps):
-        CfnMaintenanceWindowTargetProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnMaintenanceWindowTargetProps
+        CfnMaintenanceWindowTargetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMaintenanceWindowTargetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMaintenanceWindowTargetProps):
         software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTargetProps = (wrapped as

@@ -1208,8 +1208,8 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.eks.AutoScalingGroupCapacityOptions):
-        AutoScalingGroupCapacityOptions = CdkObjectWrappers.wrap(cdkObject) as
-        AutoScalingGroupCapacityOptions
+        AutoScalingGroupCapacityOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        AutoScalingGroupCapacityOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoScalingGroupCapacityOptions):
         software.amazon.awscdk.services.eks.AutoScalingGroupCapacityOptions = (wrapped as

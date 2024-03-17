@@ -518,7 +518,7 @@ public interface InstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.InstanceProps): InstanceProps =
-        CdkObjectWrappers.wrap(cdkObject) as InstanceProps
+        CdkObjectWrappers.wrap(cdkObject) as? InstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceProps): software.amazon.awscdk.services.rds.InstanceProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.rds.InstanceProps

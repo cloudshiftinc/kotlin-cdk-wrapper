@@ -149,7 +149,8 @@ public interface TextWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.TextWidgetProps):
-        TextWidgetProps = CdkObjectWrappers.wrap(cdkObject) as TextWidgetProps
+        TextWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? TextWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TextWidgetProps):
         software.amazon.awscdk.services.cloudwatch.TextWidgetProps = (wrapped as

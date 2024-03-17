@@ -457,7 +457,8 @@ public interface RouteSpecConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.RouteSpecConfig):
-        RouteSpecConfig = CdkObjectWrappers.wrap(cdkObject) as RouteSpecConfig
+        RouteSpecConfig = CdkObjectWrappers.wrap(cdkObject) as? RouteSpecConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RouteSpecConfig):
         software.amazon.awscdk.services.appmesh.RouteSpecConfig = (wrapped as CdkObject).cdkObject

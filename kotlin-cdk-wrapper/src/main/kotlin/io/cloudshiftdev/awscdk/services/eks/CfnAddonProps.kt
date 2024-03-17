@@ -444,7 +444,7 @@ public interface CfnAddonProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAddonProps): CfnAddonProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnAddonProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnAddonProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAddonProps): software.amazon.awscdk.services.eks.CfnAddonProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.CfnAddonProps

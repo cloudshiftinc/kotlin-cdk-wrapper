@@ -113,7 +113,8 @@ public interface CommonConstraintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions):
-        CommonConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as CommonConstraintOptions
+        CommonConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as? CommonConstraintOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonConstraintOptions):
         software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions = (wrapped as

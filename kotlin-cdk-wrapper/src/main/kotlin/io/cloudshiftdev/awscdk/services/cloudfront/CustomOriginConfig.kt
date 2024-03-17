@@ -350,7 +350,8 @@ public interface CustomOriginConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CustomOriginConfig):
-        CustomOriginConfig = CdkObjectWrappers.wrap(cdkObject) as CustomOriginConfig
+        CustomOriginConfig = CdkObjectWrappers.wrap(cdkObject) as? CustomOriginConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomOriginConfig):
         software.amazon.awscdk.services.cloudfront.CustomOriginConfig = (wrapped as

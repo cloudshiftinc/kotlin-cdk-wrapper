@@ -26,6 +26,10 @@ public abstract class DeploymentStrategyId internal constructor(
    */
   public open fun id(): String = unwrap(this).getId()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId,
+  ) : DeploymentStrategyId(cdkObject)
+
   public companion object {
     public val ALL_AT_ONCE: DeploymentStrategyId =
         DeploymentStrategyId.wrap(software.amazon.awscdk.services.appconfig.DeploymentStrategyId.ALL_AT_ONCE)
@@ -43,7 +47,8 @@ public abstract class DeploymentStrategyId internal constructor(
         software.amazon.awscdk.services.appconfig.DeploymentStrategyId.fromString(deploymentStrategyId).let(DeploymentStrategyId::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId):
-        DeploymentStrategyId = CdkObjectWrappers.wrap(cdkObject) as DeploymentStrategyId
+        DeploymentStrategyId = CdkObjectWrappers.wrap(cdkObject) as? DeploymentStrategyId ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentStrategyId):
         software.amazon.awscdk.services.appconfig.DeploymentStrategyId = (wrapped as

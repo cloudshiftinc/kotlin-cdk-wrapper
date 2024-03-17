@@ -217,8 +217,8 @@ public interface CfnNotebookInstanceLifecycleConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfigProps):
-        CfnNotebookInstanceLifecycleConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnNotebookInstanceLifecycleConfigProps
+        CfnNotebookInstanceLifecycleConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNotebookInstanceLifecycleConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNotebookInstanceLifecycleConfigProps):
         software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfigProps = (wrapped

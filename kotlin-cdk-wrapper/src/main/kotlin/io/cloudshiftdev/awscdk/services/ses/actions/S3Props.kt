@@ -172,7 +172,7 @@ public interface S3Props {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.S3Props): S3Props =
-        CdkObjectWrappers.wrap(cdkObject) as S3Props
+        CdkObjectWrappers.wrap(cdkObject) as? S3Props ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3Props): software.amazon.awscdk.services.ses.actions.S3Props =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.actions.S3Props

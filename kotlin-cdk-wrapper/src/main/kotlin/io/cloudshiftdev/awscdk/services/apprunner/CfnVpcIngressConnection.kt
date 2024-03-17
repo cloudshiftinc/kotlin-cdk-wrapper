@@ -472,8 +472,8 @@ public open class CfnVpcIngressConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection.IngressVpcConfigurationProperty):
-          IngressVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IngressVpcConfigurationProperty
+          IngressVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IngressVpcConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IngressVpcConfigurationProperty):
           software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection.IngressVpcConfigurationProperty

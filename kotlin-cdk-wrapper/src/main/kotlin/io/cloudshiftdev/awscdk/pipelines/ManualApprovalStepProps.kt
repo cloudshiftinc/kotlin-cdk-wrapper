@@ -74,7 +74,8 @@ public interface ManualApprovalStepProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ManualApprovalStepProps):
-        ManualApprovalStepProps = CdkObjectWrappers.wrap(cdkObject) as ManualApprovalStepProps
+        ManualApprovalStepProps = CdkObjectWrappers.wrap(cdkObject) as? ManualApprovalStepProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ManualApprovalStepProps):
         software.amazon.awscdk.pipelines.ManualApprovalStepProps = (wrapped as CdkObject).cdkObject

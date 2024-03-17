@@ -307,7 +307,8 @@ public interface CfnHookVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookVersionProps):
-        CfnHookVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnHookVersionProps
+        CfnHookVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHookVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHookVersionProps):
         software.amazon.awscdk.services.cloudformation.CfnHookVersionProps = (wrapped as

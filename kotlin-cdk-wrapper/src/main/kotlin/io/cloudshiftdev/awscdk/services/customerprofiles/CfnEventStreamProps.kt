@@ -181,7 +181,8 @@ public interface CfnEventStreamProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStreamProps):
-        CfnEventStreamProps = CdkObjectWrappers.wrap(cdkObject) as CfnEventStreamProps
+        CfnEventStreamProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventStreamProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventStreamProps):
         software.amazon.awscdk.services.customerprofiles.CfnEventStreamProps = (wrapped as

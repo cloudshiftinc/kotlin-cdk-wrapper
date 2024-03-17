@@ -130,7 +130,7 @@ public interface CachingConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CachingConfig):
-        CachingConfig = CdkObjectWrappers.wrap(cdkObject) as CachingConfig
+        CachingConfig = CdkObjectWrappers.wrap(cdkObject) as? CachingConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CachingConfig):
         software.amazon.awscdk.services.appsync.CachingConfig = (wrapped as CdkObject).cdkObject as

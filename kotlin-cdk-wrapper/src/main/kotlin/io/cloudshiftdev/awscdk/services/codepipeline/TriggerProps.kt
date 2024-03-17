@@ -130,7 +130,7 @@ public interface TriggerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.TriggerProps):
-        TriggerProps = CdkObjectWrappers.wrap(cdkObject) as TriggerProps
+        TriggerProps = CdkObjectWrappers.wrap(cdkObject) as? TriggerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TriggerProps):
         software.amazon.awscdk.services.codepipeline.TriggerProps = (wrapped as CdkObject).cdkObject

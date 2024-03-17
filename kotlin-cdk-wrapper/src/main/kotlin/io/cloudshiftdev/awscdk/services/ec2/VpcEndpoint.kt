@@ -48,9 +48,13 @@ public abstract class VpcEndpoint internal constructor(
    */
   public override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.VpcEndpoint,
+  ) : VpcEndpoint(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpcEndpoint): VpcEndpoint =
-        CdkObjectWrappers.wrap(cdkObject) as VpcEndpoint
+        CdkObjectWrappers.wrap(cdkObject) as? VpcEndpoint ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcEndpoint): software.amazon.awscdk.services.ec2.VpcEndpoint =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.VpcEndpoint

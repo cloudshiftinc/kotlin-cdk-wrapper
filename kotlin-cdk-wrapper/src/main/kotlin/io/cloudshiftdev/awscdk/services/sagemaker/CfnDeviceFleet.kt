@@ -467,7 +467,8 @@ public open class CfnDeviceFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleet.EdgeOutputConfigProperty):
-          EdgeOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as EdgeOutputConfigProperty
+          EdgeOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? EdgeOutputConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EdgeOutputConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnDeviceFleet.EdgeOutputConfigProperty =

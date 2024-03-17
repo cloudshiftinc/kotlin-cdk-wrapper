@@ -226,7 +226,8 @@ public interface CfnGatewayResponseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnGatewayResponseProps):
-        CfnGatewayResponseProps = CdkObjectWrappers.wrap(cdkObject) as CfnGatewayResponseProps
+        CfnGatewayResponseProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGatewayResponseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGatewayResponseProps):
         software.amazon.awscdk.services.apigateway.CfnGatewayResponseProps = (wrapped as

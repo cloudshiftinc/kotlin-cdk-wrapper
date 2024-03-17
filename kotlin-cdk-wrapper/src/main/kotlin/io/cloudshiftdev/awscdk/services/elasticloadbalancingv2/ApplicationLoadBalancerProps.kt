@@ -349,8 +349,8 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerProps):
-        ApplicationLoadBalancerProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancerProps
+        ApplicationLoadBalancerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancerProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerProps =

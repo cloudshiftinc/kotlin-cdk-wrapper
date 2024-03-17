@@ -184,8 +184,8 @@ public interface CfnResponseHeadersPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps):
-        CfnResponseHeadersPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnResponseHeadersPolicyProps
+        CfnResponseHeadersPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResponseHeadersPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResponseHeadersPolicyProps):
         software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps = (wrapped as

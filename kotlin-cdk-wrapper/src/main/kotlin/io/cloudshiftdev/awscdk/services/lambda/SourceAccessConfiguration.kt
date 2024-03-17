@@ -116,7 +116,8 @@ public interface SourceAccessConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.SourceAccessConfiguration):
-        SourceAccessConfiguration = CdkObjectWrappers.wrap(cdkObject) as SourceAccessConfiguration
+        SourceAccessConfiguration = CdkObjectWrappers.wrap(cdkObject) as? SourceAccessConfiguration
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceAccessConfiguration):
         software.amazon.awscdk.services.lambda.SourceAccessConfiguration = (wrapped as

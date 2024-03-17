@@ -403,7 +403,8 @@ public interface CnameRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CnameRecordProps):
-        CnameRecordProps = CdkObjectWrappers.wrap(cdkObject) as CnameRecordProps
+        CnameRecordProps = CdkObjectWrappers.wrap(cdkObject) as? CnameRecordProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CnameRecordProps):
         software.amazon.awscdk.services.route53.CnameRecordProps = (wrapped as CdkObject).cdkObject

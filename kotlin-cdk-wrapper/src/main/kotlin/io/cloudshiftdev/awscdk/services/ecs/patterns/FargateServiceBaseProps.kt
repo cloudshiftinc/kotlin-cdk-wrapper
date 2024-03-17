@@ -459,7 +459,8 @@ public interface FargateServiceBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps):
-        FargateServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as FargateServiceBaseProps
+        FargateServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as? FargateServiceBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateServiceBaseProps):
         software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps = (wrapped as

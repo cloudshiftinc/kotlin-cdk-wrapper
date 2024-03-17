@@ -1129,7 +1129,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty):
-          DataStorageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DataStorageConfigProperty
+          DataStorageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataStorageConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataStorageConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty
@@ -1287,8 +1288,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty):
-          ModelInfrastructureConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ModelInfrastructureConfigProperty
+          ModelInfrastructureConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelInfrastructureConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelInfrastructureConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty
@@ -1402,8 +1403,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty):
-          ShadowModelVariantConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ShadowModelVariantConfigProperty
+          ShadowModelVariantConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ShadowModelVariantConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ShadowModelVariantConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty
@@ -1545,7 +1546,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty):
-          ShadowModeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ShadowModeConfigProperty
+          ShadowModeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ShadowModeConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ShadowModeConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty
@@ -1655,8 +1657,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty):
-          RealTimeInferenceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RealTimeInferenceConfigProperty
+          RealTimeInferenceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RealTimeInferenceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RealTimeInferenceConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty
@@ -1833,8 +1835,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty):
-          ModelVariantConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ModelVariantConfigProperty
+          ModelVariantConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ModelVariantConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ModelVariantConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty
@@ -1947,8 +1949,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty):
-          InferenceExperimentScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InferenceExperimentScheduleProperty
+          InferenceExperimentScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceExperimentScheduleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceExperimentScheduleProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty
@@ -2097,8 +2099,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty):
-          CaptureContentTypeHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CaptureContentTypeHeaderProperty
+          CaptureContentTypeHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CaptureContentTypeHeaderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptureContentTypeHeaderProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty
@@ -2249,7 +2251,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty):
-          EndpointMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointMetadataProperty
+          EndpointMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointMetadataProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointMetadataProperty):
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty

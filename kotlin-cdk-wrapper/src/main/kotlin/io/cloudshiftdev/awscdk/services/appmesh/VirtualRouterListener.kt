@@ -33,6 +33,10 @@ public abstract class VirtualRouterListener internal constructor(
   public open fun bind(scope: Construct): VirtualRouterListenerConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualRouterListenerConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener,
+  ) : VirtualRouterListener(cdkObject)
+
   public companion object {
     public fun grpc(): VirtualRouterListener =
         software.amazon.awscdk.services.appmesh.VirtualRouterListener.grpc().let(VirtualRouterListener::wrap)
@@ -59,7 +63,8 @@ public abstract class VirtualRouterListener internal constructor(
         software.amazon.awscdk.services.appmesh.VirtualRouterListener.tcp(port).let(VirtualRouterListener::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener):
-        VirtualRouterListener = CdkObjectWrappers.wrap(cdkObject) as VirtualRouterListener
+        VirtualRouterListener = CdkObjectWrappers.wrap(cdkObject) as? VirtualRouterListener ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualRouterListener):
         software.amazon.awscdk.services.appmesh.VirtualRouterListener = (wrapped as

@@ -597,7 +597,7 @@ public interface CfnBotProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotProps): CfnBotProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnBotProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnBotProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBotProps): software.amazon.awscdk.services.lex.CfnBotProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lex.CfnBotProps

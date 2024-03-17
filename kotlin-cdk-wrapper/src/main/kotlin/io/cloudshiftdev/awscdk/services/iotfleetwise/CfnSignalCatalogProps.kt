@@ -310,7 +310,8 @@ public interface CfnSignalCatalogProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalogProps):
-        CfnSignalCatalogProps = CdkObjectWrappers.wrap(cdkObject) as CfnSignalCatalogProps
+        CfnSignalCatalogProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSignalCatalogProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSignalCatalogProps):
         software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalogProps = (wrapped as

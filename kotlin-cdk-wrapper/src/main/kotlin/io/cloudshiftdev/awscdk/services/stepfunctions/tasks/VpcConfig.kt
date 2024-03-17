@@ -126,7 +126,7 @@ public interface VpcConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig):
-        VpcConfig = CdkObjectWrappers.wrap(cdkObject) as VpcConfig
+        VpcConfig = CdkObjectWrappers.wrap(cdkObject) as? VpcConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig = (wrapped as

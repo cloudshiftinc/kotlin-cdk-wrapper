@@ -1022,7 +1022,8 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.AccessLogSettingProperty):
-          AccessLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as AccessLogSettingProperty
+          AccessLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessLogSettingProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessLogSettingProperty):
           software.amazon.awscdk.services.apigateway.CfnStage.AccessLogSettingProperty = (wrapped as
@@ -1232,7 +1233,8 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.CanarySettingProperty):
-          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as CanarySettingProperty
+          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as? CanarySettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CanarySettingProperty):
           software.amazon.awscdk.services.apigateway.CfnStage.CanarySettingProperty = (wrapped as
@@ -1707,7 +1709,8 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.MethodSettingProperty):
-          MethodSettingProperty = CdkObjectWrappers.wrap(cdkObject) as MethodSettingProperty
+          MethodSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? MethodSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MethodSettingProperty):
           software.amazon.awscdk.services.apigateway.CfnStage.MethodSettingProperty = (wrapped as

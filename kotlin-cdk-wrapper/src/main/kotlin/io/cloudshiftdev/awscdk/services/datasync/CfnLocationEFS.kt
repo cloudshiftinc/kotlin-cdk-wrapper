@@ -620,7 +620,8 @@ public open class CfnLocationEFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty):
-          Ec2ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as Ec2ConfigProperty
+          Ec2ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? Ec2ConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Ec2ConfigProperty):
           software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty = (wrapped as

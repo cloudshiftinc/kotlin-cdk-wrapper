@@ -602,7 +602,8 @@ public interface CfnDocumentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnDocumentProps):
-        CfnDocumentProps = CdkObjectWrappers.wrap(cdkObject) as CfnDocumentProps
+        CfnDocumentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDocumentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDocumentProps):
         software.amazon.awscdk.services.ssm.CfnDocumentProps = (wrapped as CdkObject).cdkObject as

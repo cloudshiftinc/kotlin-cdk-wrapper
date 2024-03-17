@@ -150,8 +150,8 @@ public interface HttpServiceDiscoveryIntegrationProps : HttpPrivateIntegrationOp
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegrationProps):
-        HttpServiceDiscoveryIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as
-        HttpServiceDiscoveryIntegrationProps
+        HttpServiceDiscoveryIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpServiceDiscoveryIntegrationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpServiceDiscoveryIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegrationProps =

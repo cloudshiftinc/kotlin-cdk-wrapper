@@ -480,7 +480,8 @@ public interface AddBehaviorOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.AddBehaviorOptions):
-        AddBehaviorOptions = CdkObjectWrappers.wrap(cdkObject) as AddBehaviorOptions
+        AddBehaviorOptions = CdkObjectWrappers.wrap(cdkObject) as? AddBehaviorOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddBehaviorOptions):
         software.amazon.awscdk.services.cloudfront.AddBehaviorOptions = (wrapped as

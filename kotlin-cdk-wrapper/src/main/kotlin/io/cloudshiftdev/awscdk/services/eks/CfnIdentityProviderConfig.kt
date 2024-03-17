@@ -686,8 +686,8 @@ public open class CfnIdentityProviderConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty):
-          OidcIdentityProviderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OidcIdentityProviderConfigProperty
+          OidcIdentityProviderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OidcIdentityProviderConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OidcIdentityProviderConfigProperty):
           software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty
@@ -798,7 +798,8 @@ public open class CfnIdentityProviderConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty):
-          RequiredClaimProperty = CdkObjectWrappers.wrap(cdkObject) as RequiredClaimProperty
+          RequiredClaimProperty = CdkObjectWrappers.wrap(cdkObject) as? RequiredClaimProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RequiredClaimProperty):
           software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty =

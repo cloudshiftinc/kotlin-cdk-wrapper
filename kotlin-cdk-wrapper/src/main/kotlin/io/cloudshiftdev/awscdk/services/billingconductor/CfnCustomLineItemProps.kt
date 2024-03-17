@@ -364,7 +364,8 @@ public interface CfnCustomLineItemProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItemProps):
-        CfnCustomLineItemProps = CdkObjectWrappers.wrap(cdkObject) as CfnCustomLineItemProps
+        CfnCustomLineItemProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCustomLineItemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomLineItemProps):
         software.amazon.awscdk.services.billingconductor.CfnCustomLineItemProps = (wrapped as

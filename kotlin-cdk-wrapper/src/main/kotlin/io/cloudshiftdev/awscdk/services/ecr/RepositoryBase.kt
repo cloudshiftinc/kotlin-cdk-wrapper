@@ -308,9 +308,13 @@ public abstract class RepositoryBase internal constructor(
   public override fun repositoryUriForTagOrDigest(tagOrDigest: String): String =
       unwrap(this).repositoryUriForTagOrDigest(tagOrDigest)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase,
+  ) : RepositoryBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase): RepositoryBase
-        = CdkObjectWrappers.wrap(cdkObject) as RepositoryBase
+        = CdkObjectWrappers.wrap(cdkObject) as? RepositoryBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryBase): software.amazon.awscdk.services.ecr.RepositoryBase
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecr.RepositoryBase

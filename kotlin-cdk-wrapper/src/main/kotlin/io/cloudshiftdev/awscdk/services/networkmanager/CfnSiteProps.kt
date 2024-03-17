@@ -263,7 +263,7 @@ public interface CfnSiteProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteProps):
-        CfnSiteProps = CdkObjectWrappers.wrap(cdkObject) as CfnSiteProps
+        CfnSiteProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSiteProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSiteProps):
         software.amazon.awscdk.services.networkmanager.CfnSiteProps = (wrapped as

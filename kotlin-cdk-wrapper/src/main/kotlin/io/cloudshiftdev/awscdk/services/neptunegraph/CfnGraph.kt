@@ -678,8 +678,8 @@ public open class CfnGraph internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty):
-          VectorSearchConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VectorSearchConfigurationProperty
+          VectorSearchConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VectorSearchConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VectorSearchConfigurationProperty):
           software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty =

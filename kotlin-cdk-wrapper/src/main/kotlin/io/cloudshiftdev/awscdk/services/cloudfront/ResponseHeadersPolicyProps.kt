@@ -357,7 +357,8 @@ public interface ResponseHeadersPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicyProps):
-        ResponseHeadersPolicyProps = CdkObjectWrappers.wrap(cdkObject) as ResponseHeadersPolicyProps
+        ResponseHeadersPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersPolicyProps):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicyProps = (wrapped as

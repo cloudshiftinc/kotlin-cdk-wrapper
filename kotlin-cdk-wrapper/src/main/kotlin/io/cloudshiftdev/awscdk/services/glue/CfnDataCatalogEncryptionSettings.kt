@@ -366,7 +366,8 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty):
-          EncryptionAtRestProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionAtRestProperty
+          EncryptionAtRestProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionAtRestProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionAtRestProperty):
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty
@@ -582,8 +583,8 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty):
-          DataCatalogEncryptionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataCatalogEncryptionSettingsProperty
+          DataCatalogEncryptionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCatalogEncryptionSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataCatalogEncryptionSettingsProperty):
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty
@@ -757,8 +758,8 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty):
-          ConnectionPasswordEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectionPasswordEncryptionProperty
+          ConnectionPasswordEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionPasswordEncryptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionPasswordEncryptionProperty):
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty

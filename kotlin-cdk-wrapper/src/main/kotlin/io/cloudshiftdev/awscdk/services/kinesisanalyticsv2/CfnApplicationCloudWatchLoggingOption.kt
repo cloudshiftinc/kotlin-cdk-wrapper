@@ -311,8 +311,8 @@ public open class CfnApplicationCloudWatchLoggingOption internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty):
-          CloudWatchLoggingOptionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchLoggingOptionProperty
+          CloudWatchLoggingOptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLoggingOptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLoggingOptionProperty):
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty

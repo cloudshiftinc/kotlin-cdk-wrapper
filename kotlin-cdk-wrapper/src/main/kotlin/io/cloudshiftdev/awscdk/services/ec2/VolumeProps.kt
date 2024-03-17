@@ -621,7 +621,7 @@ public interface VolumeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VolumeProps): VolumeProps =
-        CdkObjectWrappers.wrap(cdkObject) as VolumeProps
+        CdkObjectWrappers.wrap(cdkObject) as? VolumeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VolumeProps): software.amazon.awscdk.services.ec2.VolumeProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.VolumeProps

@@ -68,7 +68,8 @@ public interface GetContextValueResult {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.GetContextValueResult):
-        GetContextValueResult = CdkObjectWrappers.wrap(cdkObject) as GetContextValueResult
+        GetContextValueResult = CdkObjectWrappers.wrap(cdkObject) as? GetContextValueResult ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GetContextValueResult):
         software.amazon.awscdk.GetContextValueResult = (wrapped as CdkObject).cdkObject as

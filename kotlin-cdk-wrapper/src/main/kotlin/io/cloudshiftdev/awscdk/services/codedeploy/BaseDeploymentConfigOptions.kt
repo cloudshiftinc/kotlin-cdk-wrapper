@@ -78,8 +78,8 @@ public interface BaseDeploymentConfigOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions):
-        BaseDeploymentConfigOptions = CdkObjectWrappers.wrap(cdkObject) as
-        BaseDeploymentConfigOptions
+        BaseDeploymentConfigOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        BaseDeploymentConfigOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseDeploymentConfigOptions):
         software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions = (wrapped as

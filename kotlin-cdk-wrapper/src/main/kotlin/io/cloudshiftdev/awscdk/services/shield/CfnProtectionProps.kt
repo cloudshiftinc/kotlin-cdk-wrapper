@@ -416,7 +416,8 @@ public interface CfnProtectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProtectionProps):
-        CfnProtectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnProtectionProps
+        CfnProtectionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnProtectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnProtectionProps):
         software.amazon.awscdk.services.shield.CfnProtectionProps = (wrapped as CdkObject).cdkObject

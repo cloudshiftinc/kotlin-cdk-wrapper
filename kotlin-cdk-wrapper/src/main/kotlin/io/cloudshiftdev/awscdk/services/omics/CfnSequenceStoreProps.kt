@@ -223,7 +223,8 @@ public interface CfnSequenceStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStoreProps):
-        CfnSequenceStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnSequenceStoreProps
+        CfnSequenceStoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSequenceStoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSequenceStoreProps):
         software.amazon.awscdk.services.omics.CfnSequenceStoreProps = (wrapped as

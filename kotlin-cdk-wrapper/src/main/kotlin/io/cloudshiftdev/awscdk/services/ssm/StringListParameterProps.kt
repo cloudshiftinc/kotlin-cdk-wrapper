@@ -227,7 +227,8 @@ public interface StringListParameterProps : ParameterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.StringListParameterProps):
-        StringListParameterProps = CdkObjectWrappers.wrap(cdkObject) as StringListParameterProps
+        StringListParameterProps = CdkObjectWrappers.wrap(cdkObject) as? StringListParameterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StringListParameterProps):
         software.amazon.awscdk.services.ssm.StringListParameterProps = (wrapped as

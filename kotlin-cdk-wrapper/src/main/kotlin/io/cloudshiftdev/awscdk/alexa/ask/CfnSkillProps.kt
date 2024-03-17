@@ -265,7 +265,7 @@ public interface CfnSkillProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkillProps): CfnSkillProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnSkillProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnSkillProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSkillProps): software.amazon.awscdk.alexa.ask.CfnSkillProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.alexa.ask.CfnSkillProps

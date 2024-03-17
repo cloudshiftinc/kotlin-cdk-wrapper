@@ -780,7 +780,8 @@ public interface ScheduledFargateTaskProps : ScheduledTaskBaseProps, FargateServ
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskProps):
-        ScheduledFargateTaskProps = CdkObjectWrappers.wrap(cdkObject) as ScheduledFargateTaskProps
+        ScheduledFargateTaskProps = CdkObjectWrappers.wrap(cdkObject) as? ScheduledFargateTaskProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledFargateTaskProps):
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskProps = (wrapped as

@@ -145,7 +145,7 @@ public interface VpcSubnet {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.VpcSubnet): VpcSubnet =
-        CdkObjectWrappers.wrap(cdkObject) as VpcSubnet
+        CdkObjectWrappers.wrap(cdkObject) as? VpcSubnet ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcSubnet): software.amazon.awscdk.cxapi.VpcSubnet = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.cxapi.VpcSubnet

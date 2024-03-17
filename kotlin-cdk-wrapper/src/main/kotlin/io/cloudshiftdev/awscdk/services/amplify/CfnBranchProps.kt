@@ -738,7 +738,7 @@ public interface CfnBranchProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnBranchProps):
-        CfnBranchProps = CdkObjectWrappers.wrap(cdkObject) as CfnBranchProps
+        CfnBranchProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBranchProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBranchProps):
         software.amazon.awscdk.services.amplify.CfnBranchProps = (wrapped as CdkObject).cdkObject as

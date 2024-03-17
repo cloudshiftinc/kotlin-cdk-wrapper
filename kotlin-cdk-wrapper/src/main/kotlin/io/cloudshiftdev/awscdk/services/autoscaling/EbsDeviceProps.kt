@@ -204,7 +204,7 @@ public interface EbsDeviceProps : EbsDeviceSnapshotOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.EbsDeviceProps):
-        EbsDeviceProps = CdkObjectWrappers.wrap(cdkObject) as EbsDeviceProps
+        EbsDeviceProps = CdkObjectWrappers.wrap(cdkObject) as? EbsDeviceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EbsDeviceProps):
         software.amazon.awscdk.services.autoscaling.EbsDeviceProps = (wrapped as

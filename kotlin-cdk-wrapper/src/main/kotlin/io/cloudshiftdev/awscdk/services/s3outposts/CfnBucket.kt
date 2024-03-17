@@ -617,8 +617,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty):
-          LifecycleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LifecycleConfigurationProperty
+          LifecycleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LifecycleConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LifecycleConfigurationProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty =
@@ -715,7 +715,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty):
-          FilterTagProperty = CdkObjectWrappers.wrap(cdkObject) as FilterTagProperty
+          FilterTagProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterTagProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty = (wrapped as
@@ -981,7 +982,7 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty):
-          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty = (wrapped as
@@ -1073,8 +1074,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty):
-          AbortIncompleteMultipartUploadProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AbortIncompleteMultipartUploadProperty
+          AbortIncompleteMultipartUploadProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AbortIncompleteMultipartUploadProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AbortIncompleteMultipartUploadProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty
@@ -1257,7 +1258,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as FilterProperty
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty = (wrapped as
@@ -1370,7 +1372,8 @@ public open class CfnBucket internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty):
-          FilterAndOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as FilterAndOperatorProperty
+          FilterAndOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FilterAndOperatorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterAndOperatorProperty):
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty = (wrapped

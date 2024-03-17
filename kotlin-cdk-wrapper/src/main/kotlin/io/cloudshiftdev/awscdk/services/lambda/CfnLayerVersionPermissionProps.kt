@@ -184,8 +184,8 @@ public interface CfnLayerVersionPermissionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionPermissionProps):
-        CfnLayerVersionPermissionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLayerVersionPermissionProps
+        CfnLayerVersionPermissionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLayerVersionPermissionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayerVersionPermissionProps):
         software.amazon.awscdk.services.lambda.CfnLayerVersionPermissionProps = (wrapped as

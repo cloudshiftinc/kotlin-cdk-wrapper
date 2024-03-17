@@ -105,8 +105,8 @@ public interface CloudFormationTemplateConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig):
-        CloudFormationTemplateConfig = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationTemplateConfig
+        CloudFormationTemplateConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationTemplateConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationTemplateConfig):
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig = (wrapped as

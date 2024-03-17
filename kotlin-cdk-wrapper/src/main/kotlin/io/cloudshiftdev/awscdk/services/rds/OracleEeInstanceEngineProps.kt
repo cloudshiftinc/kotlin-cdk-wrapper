@@ -73,8 +73,8 @@ public interface OracleEeInstanceEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.OracleEeInstanceEngineProps):
-        OracleEeInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as
-        OracleEeInstanceEngineProps
+        OracleEeInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        OracleEeInstanceEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OracleEeInstanceEngineProps):
         software.amazon.awscdk.services.rds.OracleEeInstanceEngineProps = (wrapped as

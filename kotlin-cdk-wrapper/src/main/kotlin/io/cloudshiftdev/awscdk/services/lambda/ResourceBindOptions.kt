@@ -78,7 +78,8 @@ public interface ResourceBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.ResourceBindOptions):
-        ResourceBindOptions = CdkObjectWrappers.wrap(cdkObject) as ResourceBindOptions
+        ResourceBindOptions = CdkObjectWrappers.wrap(cdkObject) as? ResourceBindOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourceBindOptions):
         software.amazon.awscdk.services.lambda.ResourceBindOptions = (wrapped as

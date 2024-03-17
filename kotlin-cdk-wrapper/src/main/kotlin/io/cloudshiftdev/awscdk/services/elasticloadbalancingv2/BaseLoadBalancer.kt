@@ -127,10 +127,15 @@ public abstract class BaseLoadBalancer internal constructor(
    */
   public open fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancer,
+  ) : BaseLoadBalancer(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancer):
-        BaseLoadBalancer = CdkObjectWrappers.wrap(cdkObject) as BaseLoadBalancer
+        BaseLoadBalancer = CdkObjectWrappers.wrap(cdkObject) as? BaseLoadBalancer ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseLoadBalancer):
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancer = (wrapped as

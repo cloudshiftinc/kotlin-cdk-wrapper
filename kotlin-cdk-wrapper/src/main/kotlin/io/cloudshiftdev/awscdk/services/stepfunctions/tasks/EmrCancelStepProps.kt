@@ -441,7 +441,8 @@ public interface EmrCancelStepProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStepProps):
-        EmrCancelStepProps = CdkObjectWrappers.wrap(cdkObject) as EmrCancelStepProps
+        EmrCancelStepProps = CdkObjectWrappers.wrap(cdkObject) as? EmrCancelStepProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrCancelStepProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStepProps = (wrapped as

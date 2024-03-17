@@ -892,7 +892,8 @@ public open class CfnUserPoolUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty):
-          AttributeTypeProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeTypeProperty
+          AttributeTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributeTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributeTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty = (wrapped

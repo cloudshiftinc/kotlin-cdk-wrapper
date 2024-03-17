@@ -1652,7 +1652,7 @@ public interface CfnBucketProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnBucketProps): CfnBucketProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnBucketProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnBucketProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBucketProps): software.amazon.awscdk.services.s3.CfnBucketProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.CfnBucketProps

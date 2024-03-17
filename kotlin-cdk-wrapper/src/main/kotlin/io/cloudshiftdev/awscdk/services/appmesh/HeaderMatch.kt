@@ -44,6 +44,10 @@ public abstract class HeaderMatch internal constructor(
   public open fun bind(scope: Construct): HeaderMatchConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(HeaderMatchConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatch,
+  ) : HeaderMatch(cdkObject)
+
   public companion object {
     public fun valueDoesNotEndWith(headerName: String, suffix: String): HeaderMatch =
         software.amazon.awscdk.services.appmesh.HeaderMatch.valueDoesNotEndWith(headerName,
@@ -93,7 +97,7 @@ public abstract class HeaderMatch internal constructor(
         end).let(HeaderMatch::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatch): HeaderMatch =
-        CdkObjectWrappers.wrap(cdkObject) as HeaderMatch
+        CdkObjectWrappers.wrap(cdkObject) as? HeaderMatch ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HeaderMatch): software.amazon.awscdk.services.appmesh.HeaderMatch =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.HeaderMatch

@@ -386,7 +386,8 @@ public interface CfnVirtualGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGatewayProps):
-        CfnVirtualGatewayProps = CdkObjectWrappers.wrap(cdkObject) as CfnVirtualGatewayProps
+        CfnVirtualGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVirtualGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVirtualGatewayProps):
         software.amazon.awscdk.services.appmesh.CfnVirtualGatewayProps = (wrapped as

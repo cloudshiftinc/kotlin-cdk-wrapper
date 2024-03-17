@@ -98,7 +98,8 @@ public interface MetricDefinition {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition):
-        MetricDefinition = CdkObjectWrappers.wrap(cdkObject) as MetricDefinition
+        MetricDefinition = CdkObjectWrappers.wrap(cdkObject) as? MetricDefinition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetricDefinition):
         software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition = (wrapped as

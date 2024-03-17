@@ -159,7 +159,8 @@ public interface OpenSearchDataSourceProps : BackedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.OpenSearchDataSourceProps):
-        OpenSearchDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as OpenSearchDataSourceProps
+        OpenSearchDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? OpenSearchDataSourceProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OpenSearchDataSourceProps):
         software.amazon.awscdk.services.appsync.OpenSearchDataSourceProps = (wrapped as

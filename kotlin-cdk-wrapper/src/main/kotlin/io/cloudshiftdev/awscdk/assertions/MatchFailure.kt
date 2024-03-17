@@ -176,7 +176,7 @@ public interface MatchFailure {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.MatchFailure): MatchFailure =
-        CdkObjectWrappers.wrap(cdkObject) as MatchFailure
+        CdkObjectWrappers.wrap(cdkObject) as? MatchFailure ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MatchFailure): software.amazon.awscdk.assertions.MatchFailure =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.assertions.MatchFailure

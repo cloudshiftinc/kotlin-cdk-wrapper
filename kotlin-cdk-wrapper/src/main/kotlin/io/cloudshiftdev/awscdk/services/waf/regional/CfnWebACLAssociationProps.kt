@@ -107,7 +107,8 @@ public interface CfnWebACLAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACLAssociationProps):
-        CfnWebACLAssociationProps = CdkObjectWrappers.wrap(cdkObject) as CfnWebACLAssociationProps
+        CfnWebACLAssociationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWebACLAssociationProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebACLAssociationProps):
         software.amazon.awscdk.services.waf.regional.CfnWebACLAssociationProps = (wrapped as

@@ -290,8 +290,8 @@ public interface CfnNetworkAnalyzerConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfigurationProps):
-        CfnNetworkAnalyzerConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnNetworkAnalyzerConfigurationProps
+        CfnNetworkAnalyzerConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNetworkAnalyzerConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkAnalyzerConfigurationProps):
         software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfigurationProps = (wrapped

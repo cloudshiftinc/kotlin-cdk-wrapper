@@ -532,7 +532,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.m2.CfnApplication.DefinitionProperty):
-          DefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as DefinitionProperty
+          DefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as? DefinitionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefinitionProperty):
           software.amazon.awscdk.services.m2.CfnApplication.DefinitionProperty = (wrapped as

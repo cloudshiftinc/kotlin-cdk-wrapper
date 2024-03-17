@@ -1717,8 +1717,8 @@ public interface DatabaseClusterFromSnapshotProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshotProps):
-        DatabaseClusterFromSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as
-        DatabaseClusterFromSnapshotProps
+        DatabaseClusterFromSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DatabaseClusterFromSnapshotProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseClusterFromSnapshotProps):
         software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshotProps = (wrapped as

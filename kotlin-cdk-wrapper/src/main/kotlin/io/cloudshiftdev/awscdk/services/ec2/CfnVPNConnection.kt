@@ -624,8 +624,8 @@ public open class CfnVPNConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty):
-          VpnTunnelOptionsSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VpnTunnelOptionsSpecificationProperty
+          VpnTunnelOptionsSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpnTunnelOptionsSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpnTunnelOptionsSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty

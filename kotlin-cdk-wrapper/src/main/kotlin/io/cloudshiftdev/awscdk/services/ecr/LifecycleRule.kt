@@ -371,7 +371,7 @@ public interface LifecycleRule {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.LifecycleRule): LifecycleRule =
-        CdkObjectWrappers.wrap(cdkObject) as LifecycleRule
+        CdkObjectWrappers.wrap(cdkObject) as? LifecycleRule ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LifecycleRule): software.amazon.awscdk.services.ecr.LifecycleRule =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecr.LifecycleRule

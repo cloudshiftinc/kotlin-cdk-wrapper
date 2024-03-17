@@ -302,8 +302,8 @@ public interface ScheduledEc2TaskImageOptions : ScheduledTaskImageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskImageOptions):
-        ScheduledEc2TaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ScheduledEc2TaskImageOptions
+        ScheduledEc2TaskImageOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ScheduledEc2TaskImageOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledEc2TaskImageOptions):
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskImageOptions = (wrapped as

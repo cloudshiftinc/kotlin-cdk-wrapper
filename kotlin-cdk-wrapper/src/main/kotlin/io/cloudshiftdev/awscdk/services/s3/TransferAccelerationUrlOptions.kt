@@ -76,8 +76,8 @@ public interface TransferAccelerationUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions):
-        TransferAccelerationUrlOptions = CdkObjectWrappers.wrap(cdkObject) as
-        TransferAccelerationUrlOptions
+        TransferAccelerationUrlOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        TransferAccelerationUrlOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TransferAccelerationUrlOptions):
         software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions = (wrapped as

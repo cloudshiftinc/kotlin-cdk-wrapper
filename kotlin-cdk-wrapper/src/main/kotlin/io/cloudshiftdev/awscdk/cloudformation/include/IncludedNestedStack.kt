@@ -97,7 +97,8 @@ public interface IncludedNestedStack {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudformation.include.IncludedNestedStack):
-        IncludedNestedStack = CdkObjectWrappers.wrap(cdkObject) as IncludedNestedStack
+        IncludedNestedStack = CdkObjectWrappers.wrap(cdkObject) as? IncludedNestedStack ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IncludedNestedStack):
         software.amazon.awscdk.cloudformation.include.IncludedNestedStack = (wrapped as

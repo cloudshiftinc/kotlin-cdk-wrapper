@@ -252,7 +252,8 @@ public interface CfnDeviceFleetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleetProps):
-        CfnDeviceFleetProps = CdkObjectWrappers.wrap(cdkObject) as CfnDeviceFleetProps
+        CfnDeviceFleetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDeviceFleetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceFleetProps):
         software.amazon.awscdk.services.sagemaker.CfnDeviceFleetProps = (wrapped as

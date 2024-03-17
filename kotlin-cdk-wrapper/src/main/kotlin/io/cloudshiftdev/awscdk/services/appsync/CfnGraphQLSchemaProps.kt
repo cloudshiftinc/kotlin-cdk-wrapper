@@ -155,7 +155,8 @@ public interface CfnGraphQLSchemaProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps):
-        CfnGraphQLSchemaProps = CdkObjectWrappers.wrap(cdkObject) as CfnGraphQLSchemaProps
+        CfnGraphQLSchemaProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGraphQLSchemaProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGraphQLSchemaProps):
         software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps = (wrapped as

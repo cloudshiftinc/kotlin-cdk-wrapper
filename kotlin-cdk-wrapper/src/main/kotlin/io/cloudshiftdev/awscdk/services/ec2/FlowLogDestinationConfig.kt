@@ -271,7 +271,8 @@ public interface FlowLogDestinationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestinationConfig):
-        FlowLogDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as FlowLogDestinationConfig
+        FlowLogDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as? FlowLogDestinationConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FlowLogDestinationConfig):
         software.amazon.awscdk.services.ec2.FlowLogDestinationConfig = (wrapped as

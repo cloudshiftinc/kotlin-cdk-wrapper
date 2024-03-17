@@ -180,7 +180,8 @@ public interface AutoscaledCapacityOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.AutoscaledCapacityOptions):
-        AutoscaledCapacityOptions = CdkObjectWrappers.wrap(cdkObject) as AutoscaledCapacityOptions
+        AutoscaledCapacityOptions = CdkObjectWrappers.wrap(cdkObject) as? AutoscaledCapacityOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoscaledCapacityOptions):
         software.amazon.awscdk.services.dynamodb.AutoscaledCapacityOptions = (wrapped as

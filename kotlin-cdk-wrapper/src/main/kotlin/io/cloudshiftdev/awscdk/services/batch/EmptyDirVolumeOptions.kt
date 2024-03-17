@@ -176,7 +176,8 @@ public interface EmptyDirVolumeOptions : EksVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolumeOptions):
-        EmptyDirVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as EmptyDirVolumeOptions
+        EmptyDirVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as? EmptyDirVolumeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmptyDirVolumeOptions):
         software.amazon.awscdk.services.batch.EmptyDirVolumeOptions = (wrapped as

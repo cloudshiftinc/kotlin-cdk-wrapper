@@ -142,7 +142,7 @@ public interface TagCondition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.TagCondition): TagCondition
-        = CdkObjectWrappers.wrap(cdkObject) as TagCondition
+        = CdkObjectWrappers.wrap(cdkObject) as? TagCondition ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TagCondition): software.amazon.awscdk.services.backup.TagCondition
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.backup.TagCondition

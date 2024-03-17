@@ -389,7 +389,7 @@ public interface DockerRunOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.DockerRunOptions): DockerRunOptions =
-        CdkObjectWrappers.wrap(cdkObject) as DockerRunOptions
+        CdkObjectWrappers.wrap(cdkObject) as? DockerRunOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerRunOptions): software.amazon.awscdk.DockerRunOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.DockerRunOptions

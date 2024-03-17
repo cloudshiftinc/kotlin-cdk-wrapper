@@ -77,7 +77,8 @@ public interface TimeConversionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.TimeConversionOptions):
-        TimeConversionOptions = CdkObjectWrappers.wrap(cdkObject) as TimeConversionOptions
+        TimeConversionOptions = CdkObjectWrappers.wrap(cdkObject) as? TimeConversionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TimeConversionOptions):
         software.amazon.awscdk.TimeConversionOptions = (wrapped as CdkObject).cdkObject as

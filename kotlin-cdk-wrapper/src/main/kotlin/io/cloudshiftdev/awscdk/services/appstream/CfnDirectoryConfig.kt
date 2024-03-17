@@ -566,8 +566,8 @@ public open class CfnDirectoryConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty):
-          ServiceAccountCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServiceAccountCredentialsProperty
+          ServiceAccountCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceAccountCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceAccountCredentialsProperty):
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty
@@ -705,8 +705,8 @@ public open class CfnDirectoryConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty):
-          CertificateBasedAuthPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CertificateBasedAuthPropertiesProperty
+          CertificateBasedAuthPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateBasedAuthPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateBasedAuthPropertiesProperty):
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty

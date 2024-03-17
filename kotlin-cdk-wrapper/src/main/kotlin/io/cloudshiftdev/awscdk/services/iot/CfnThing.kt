@@ -333,7 +333,8 @@ public open class CfnThing internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty):
-          AttributePayloadProperty = CdkObjectWrappers.wrap(cdkObject) as AttributePayloadProperty
+          AttributePayloadProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributePayloadProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributePayloadProperty):
           software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty = (wrapped as

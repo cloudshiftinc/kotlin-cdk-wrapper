@@ -152,8 +152,8 @@ public interface CfnMonitoringSubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscriptionProps):
-        CfnMonitoringSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnMonitoringSubscriptionProps
+        CfnMonitoringSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMonitoringSubscriptionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMonitoringSubscriptionProps):
         software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscriptionProps = (wrapped as

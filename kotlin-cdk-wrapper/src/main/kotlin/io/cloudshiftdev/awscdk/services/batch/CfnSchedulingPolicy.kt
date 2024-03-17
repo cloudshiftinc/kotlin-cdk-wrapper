@@ -447,7 +447,8 @@ public open class CfnSchedulingPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty):
-          ShareAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as ShareAttributesProperty
+          ShareAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? ShareAttributesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ShareAttributesProperty):
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty =
@@ -695,7 +696,8 @@ public open class CfnSchedulingPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty):
-          FairsharePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as FairsharePolicyProperty
+          FairsharePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? FairsharePolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FairsharePolicyProperty):
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty =

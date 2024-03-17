@@ -112,7 +112,8 @@ public interface CustomAttributeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CustomAttributeProps):
-        CustomAttributeProps = CdkObjectWrappers.wrap(cdkObject) as CustomAttributeProps
+        CustomAttributeProps = CdkObjectWrappers.wrap(cdkObject) as? CustomAttributeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomAttributeProps):
         software.amazon.awscdk.services.cognito.CustomAttributeProps = (wrapped as

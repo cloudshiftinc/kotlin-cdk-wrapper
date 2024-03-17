@@ -436,7 +436,8 @@ public open class CfnPublicKey internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty):
-          PublicKeyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as PublicKeyConfigProperty
+          PublicKeyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? PublicKeyConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicKeyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty = (wrapped

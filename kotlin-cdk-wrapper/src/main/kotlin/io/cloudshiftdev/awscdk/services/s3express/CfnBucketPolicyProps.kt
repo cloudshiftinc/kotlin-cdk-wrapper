@@ -137,7 +137,8 @@ public interface CfnBucketPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3express.CfnBucketPolicyProps):
-        CfnBucketPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnBucketPolicyProps
+        CfnBucketPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBucketPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBucketPolicyProps):
         software.amazon.awscdk.services.s3express.CfnBucketPolicyProps = (wrapped as

@@ -145,8 +145,8 @@ public interface BucketNotificationDestinationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig):
-        BucketNotificationDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as
-        BucketNotificationDestinationConfig
+        BucketNotificationDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        BucketNotificationDestinationConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketNotificationDestinationConfig):
         software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig = (wrapped as

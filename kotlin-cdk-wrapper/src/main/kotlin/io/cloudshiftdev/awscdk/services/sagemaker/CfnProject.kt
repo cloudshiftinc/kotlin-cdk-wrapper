@@ -620,8 +620,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty):
-          ServiceCatalogProvisioningDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServiceCatalogProvisioningDetailsProperty
+          ServiceCatalogProvisioningDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceCatalogProvisioningDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceCatalogProvisioningDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
@@ -734,8 +734,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty):
-          ProvisioningParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProvisioningParameterProperty
+          ProvisioningParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisioningParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisioningParameterProperty):
           software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty =
@@ -905,8 +905,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty):
-          ServiceCatalogProvisionedProductDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServiceCatalogProvisionedProductDetailsProperty
+          ServiceCatalogProvisionedProductDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceCatalogProvisionedProductDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceCatalogProvisionedProductDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty

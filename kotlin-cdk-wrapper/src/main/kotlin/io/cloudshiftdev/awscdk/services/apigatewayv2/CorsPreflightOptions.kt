@@ -257,7 +257,8 @@ public interface CorsPreflightOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions):
-        CorsPreflightOptions = CdkObjectWrappers.wrap(cdkObject) as CorsPreflightOptions
+        CorsPreflightOptions = CdkObjectWrappers.wrap(cdkObject) as? CorsPreflightOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CorsPreflightOptions):
         software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions = (wrapped as

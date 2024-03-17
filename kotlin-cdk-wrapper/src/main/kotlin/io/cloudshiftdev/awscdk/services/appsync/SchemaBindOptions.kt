@@ -48,7 +48,8 @@ public interface SchemaBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.SchemaBindOptions):
-        SchemaBindOptions = CdkObjectWrappers.wrap(cdkObject) as SchemaBindOptions
+        SchemaBindOptions = CdkObjectWrappers.wrap(cdkObject) as? SchemaBindOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SchemaBindOptions):
         software.amazon.awscdk.services.appsync.SchemaBindOptions = (wrapped as CdkObject).cdkObject

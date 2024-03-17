@@ -166,7 +166,8 @@ public interface AutoRollbackConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.AutoRollbackConfig):
-        AutoRollbackConfig = CdkObjectWrappers.wrap(cdkObject) as AutoRollbackConfig
+        AutoRollbackConfig = CdkObjectWrappers.wrap(cdkObject) as? AutoRollbackConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AutoRollbackConfig):
         software.amazon.awscdk.services.codedeploy.AutoRollbackConfig = (wrapped as

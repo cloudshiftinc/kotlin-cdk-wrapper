@@ -190,7 +190,8 @@ public interface ServicePrincipalOpts {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.ServicePrincipalOpts):
-        ServicePrincipalOpts = CdkObjectWrappers.wrap(cdkObject) as ServicePrincipalOpts
+        ServicePrincipalOpts = CdkObjectWrappers.wrap(cdkObject) as? ServicePrincipalOpts ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServicePrincipalOpts):
         software.amazon.awscdk.services.iam.ServicePrincipalOpts = (wrapped as CdkObject).cdkObject

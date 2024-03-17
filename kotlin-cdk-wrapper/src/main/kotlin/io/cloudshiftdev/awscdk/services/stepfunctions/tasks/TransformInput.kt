@@ -186,7 +186,7 @@ public interface TransformInput {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformInput):
-        TransformInput = CdkObjectWrappers.wrap(cdkObject) as TransformInput
+        TransformInput = CdkObjectWrappers.wrap(cdkObject) as? TransformInput ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TransformInput):
         software.amazon.awscdk.services.stepfunctions.tasks.TransformInput = (wrapped as

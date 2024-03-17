@@ -136,7 +136,8 @@ public interface AssetManifestProperties : AssetManifestOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties):
-        AssetManifestProperties = CdkObjectWrappers.wrap(cdkObject) as AssetManifestProperties
+        AssetManifestProperties = CdkObjectWrappers.wrap(cdkObject) as? AssetManifestProperties ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetManifestProperties):
         software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties = (wrapped as

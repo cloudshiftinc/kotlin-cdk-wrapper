@@ -134,7 +134,7 @@ public interface CfnResourceSignal {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnResourceSignal): CfnResourceSignal =
-        CdkObjectWrappers.wrap(cdkObject) as CfnResourceSignal
+        CdkObjectWrappers.wrap(cdkObject) as? CfnResourceSignal ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceSignal): software.amazon.awscdk.CfnResourceSignal =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.CfnResourceSignal

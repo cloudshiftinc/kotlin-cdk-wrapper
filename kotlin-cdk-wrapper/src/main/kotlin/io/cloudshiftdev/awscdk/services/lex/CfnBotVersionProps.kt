@@ -194,7 +194,8 @@ public interface CfnBotVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotVersionProps):
-        CfnBotVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnBotVersionProps
+        CfnBotVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBotVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBotVersionProps):
         software.amazon.awscdk.services.lex.CfnBotVersionProps = (wrapped as CdkObject).cdkObject as

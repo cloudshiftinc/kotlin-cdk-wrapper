@@ -183,7 +183,8 @@ public interface CfnVdmAttributesProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributesProps):
-        CfnVdmAttributesProps = CdkObjectWrappers.wrap(cdkObject) as CfnVdmAttributesProps
+        CfnVdmAttributesProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVdmAttributesProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVdmAttributesProps):
         software.amazon.awscdk.services.ses.CfnVdmAttributesProps = (wrapped as CdkObject).cdkObject

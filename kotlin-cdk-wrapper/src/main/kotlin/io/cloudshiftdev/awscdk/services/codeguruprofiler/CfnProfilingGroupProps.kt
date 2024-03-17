@@ -321,7 +321,8 @@ public interface CfnProfilingGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroupProps):
-        CfnProfilingGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnProfilingGroupProps
+        CfnProfilingGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnProfilingGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnProfilingGroupProps):
         software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroupProps = (wrapped as

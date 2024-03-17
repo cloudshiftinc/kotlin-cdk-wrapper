@@ -684,8 +684,8 @@ public open class EmrModifyInstanceGroupByName internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty):
-          InstanceResizePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceResizePolicyProperty
+          InstanceResizePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceResizePolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceResizePolicyProperty):
           software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty
@@ -834,7 +834,8 @@ public open class EmrModifyInstanceGroupByName internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty):
-          ShrinkPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as ShrinkPolicyProperty
+          ShrinkPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ShrinkPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ShrinkPolicyProperty):
           software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.ShrinkPolicyProperty
@@ -1063,8 +1064,8 @@ public open class EmrModifyInstanceGroupByName internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty):
-          InstanceGroupModifyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceGroupModifyConfigProperty
+          InstanceGroupModifyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceGroupModifyConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceGroupModifyConfigProperty):
           software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty

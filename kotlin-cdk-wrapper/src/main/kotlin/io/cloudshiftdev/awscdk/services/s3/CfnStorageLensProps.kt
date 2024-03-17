@@ -239,7 +239,8 @@ public interface CfnStorageLensProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensProps):
-        CfnStorageLensProps = CdkObjectWrappers.wrap(cdkObject) as CfnStorageLensProps
+        CfnStorageLensProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStorageLensProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageLensProps):
         software.amazon.awscdk.services.s3.CfnStorageLensProps = (wrapped as CdkObject).cdkObject as

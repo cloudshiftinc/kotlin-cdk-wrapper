@@ -138,7 +138,7 @@ public interface OidcEndpoints {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.OidcEndpoints):
-        OidcEndpoints = CdkObjectWrappers.wrap(cdkObject) as OidcEndpoints
+        OidcEndpoints = CdkObjectWrappers.wrap(cdkObject) as? OidcEndpoints ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OidcEndpoints):
         software.amazon.awscdk.services.cognito.OidcEndpoints = (wrapped as CdkObject).cdkObject as

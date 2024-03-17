@@ -125,7 +125,8 @@ public interface DockerImageAssetLocation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.DockerImageAssetLocation):
-        DockerImageAssetLocation = CdkObjectWrappers.wrap(cdkObject) as DockerImageAssetLocation
+        DockerImageAssetLocation = CdkObjectWrappers.wrap(cdkObject) as? DockerImageAssetLocation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageAssetLocation):
         software.amazon.awscdk.DockerImageAssetLocation = (wrapped as CdkObject).cdkObject as

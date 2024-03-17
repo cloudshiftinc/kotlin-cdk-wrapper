@@ -114,7 +114,8 @@ public interface LambdaDestinationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOptions):
-        LambdaDestinationOptions = CdkObjectWrappers.wrap(cdkObject) as LambdaDestinationOptions
+        LambdaDestinationOptions = CdkObjectWrappers.wrap(cdkObject) as? LambdaDestinationOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDestinationOptions):
         software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOptions = (wrapped as

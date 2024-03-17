@@ -328,7 +328,8 @@ public interface CfnAnomalyDetectorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetectorProps):
-        CfnAnomalyDetectorProps = CdkObjectWrappers.wrap(cdkObject) as CfnAnomalyDetectorProps
+        CfnAnomalyDetectorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAnomalyDetectorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnomalyDetectorProps):
         software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetectorProps = (wrapped as

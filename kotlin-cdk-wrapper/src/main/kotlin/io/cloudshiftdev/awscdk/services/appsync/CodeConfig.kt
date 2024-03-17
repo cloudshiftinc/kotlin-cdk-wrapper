@@ -100,7 +100,7 @@ public interface CodeConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CodeConfig): CodeConfig =
-        CdkObjectWrappers.wrap(cdkObject) as CodeConfig
+        CdkObjectWrappers.wrap(cdkObject) as? CodeConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeConfig): software.amazon.awscdk.services.appsync.CodeConfig =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.CodeConfig

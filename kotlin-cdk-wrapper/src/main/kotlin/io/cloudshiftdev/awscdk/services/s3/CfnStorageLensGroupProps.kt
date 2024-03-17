@@ -241,7 +241,8 @@ public interface CfnStorageLensGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroupProps):
-        CfnStorageLensGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnStorageLensGroupProps
+        CfnStorageLensGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStorageLensGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageLensGroupProps):
         software.amazon.awscdk.services.s3.CfnStorageLensGroupProps = (wrapped as

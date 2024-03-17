@@ -730,7 +730,8 @@ public interface DefaultCdkOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DefaultCdkOptions):
-        DefaultCdkOptions = CdkObjectWrappers.wrap(cdkObject) as DefaultCdkOptions
+        DefaultCdkOptions = CdkObjectWrappers.wrap(cdkObject) as? DefaultCdkOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DefaultCdkOptions):
         software.amazon.awscdk.cloudassembly.schema.DefaultCdkOptions = (wrapped as

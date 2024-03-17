@@ -126,7 +126,8 @@ public interface DomainNameAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.DomainNameAttributes):
-        DomainNameAttributes = CdkObjectWrappers.wrap(cdkObject) as DomainNameAttributes
+        DomainNameAttributes = CdkObjectWrappers.wrap(cdkObject) as? DomainNameAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DomainNameAttributes):
         software.amazon.awscdk.services.apigateway.DomainNameAttributes = (wrapped as

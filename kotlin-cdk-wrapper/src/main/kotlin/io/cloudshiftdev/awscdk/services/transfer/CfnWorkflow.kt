@@ -592,7 +592,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty):
-          InputFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as InputFileLocationProperty
+          InputFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputFileLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputFileLocationProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty = (wrapped
@@ -702,8 +703,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty):
-          EfsInputFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EfsInputFileLocationProperty
+          EfsInputFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EfsInputFileLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EfsInputFileLocationProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty =
@@ -1102,8 +1103,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty):
-          DecryptStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DecryptStepDetailsProperty
+          DecryptStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DecryptStepDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DecryptStepDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty = (wrapped
@@ -1237,7 +1238,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty):
-          DeleteStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as DeleteStepDetailsProperty
+          DeleteStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeleteStepDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeleteStepDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty = (wrapped
@@ -1596,7 +1598,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty):
-          CopyStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as CopyStepDetailsProperty
+          CopyStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? CopyStepDetailsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CopyStepDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty = (wrapped as
@@ -1786,7 +1789,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty):
-          CustomStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as CustomStepDetailsProperty
+          CustomStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomStepDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomStepDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty = (wrapped
@@ -2183,7 +2187,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty):
-          WorkflowStepProperty = CdkObjectWrappers.wrap(cdkObject) as WorkflowStepProperty
+          WorkflowStepProperty = CdkObjectWrappers.wrap(cdkObject) as? WorkflowStepProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkflowStepProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty = (wrapped as
@@ -2297,8 +2302,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty):
-          S3InputFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3InputFileLocationProperty
+          S3InputFileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3InputFileLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3InputFileLocationProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty =
@@ -2405,7 +2410,7 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty):
-          S3TagProperty = CdkObjectWrappers.wrap(cdkObject) as S3TagProperty
+          S3TagProperty = CdkObjectWrappers.wrap(cdkObject) as? S3TagProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3TagProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty = (wrapped as
@@ -2582,7 +2587,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty):
-          TagStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as TagStepDetailsProperty
+          TagStepDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? TagStepDetailsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagStepDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty = (wrapped as
@@ -2709,7 +2715,8 @@ public open class CfnWorkflow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty):
-          S3FileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3FileLocationProperty
+          S3FileLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3FileLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3FileLocationProperty):
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty = (wrapped as

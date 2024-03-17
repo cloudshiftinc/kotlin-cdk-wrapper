@@ -105,7 +105,8 @@ public interface CfnVPNConnectionRouteProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnectionRouteProps):
-        CfnVPNConnectionRouteProps = CdkObjectWrappers.wrap(cdkObject) as CfnVPNConnectionRouteProps
+        CfnVPNConnectionRouteProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPNConnectionRouteProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPNConnectionRouteProps):
         software.amazon.awscdk.services.ec2.CfnVPNConnectionRouteProps = (wrapped as

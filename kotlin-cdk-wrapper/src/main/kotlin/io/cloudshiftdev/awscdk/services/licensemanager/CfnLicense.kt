@@ -807,8 +807,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty):
-          ProvisionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProvisionalConfigurationProperty
+          ProvisionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisionalConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisionalConfigurationProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty
@@ -915,7 +915,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty):
-          MetadataProperty = CdkObjectWrappers.wrap(cdkObject) as MetadataProperty
+          MetadataProperty = CdkObjectWrappers.wrap(cdkObject) as? MetadataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetadataProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty = (wrapped as
@@ -1168,7 +1169,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty):
-          EntitlementProperty = CdkObjectWrappers.wrap(cdkObject) as EntitlementProperty
+          EntitlementProperty = CdkObjectWrappers.wrap(cdkObject) as? EntitlementProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EntitlementProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty = (wrapped
@@ -1277,8 +1279,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty):
-          ValidityDateFormatProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ValidityDateFormatProperty
+          ValidityDateFormatProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValidityDateFormatProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValidityDateFormatProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty =
@@ -1397,7 +1399,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty):
-          IssuerDataProperty = CdkObjectWrappers.wrap(cdkObject) as IssuerDataProperty
+          IssuerDataProperty = CdkObjectWrappers.wrap(cdkObject) as? IssuerDataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IssuerDataProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty = (wrapped as
@@ -1518,8 +1521,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty):
-          BorrowConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BorrowConfigurationProperty
+          BorrowConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BorrowConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BorrowConfigurationProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty =
@@ -1722,8 +1725,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty):
-          ConsumptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConsumptionConfigurationProperty
+          ConsumptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConsumptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConsumptionConfigurationProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty

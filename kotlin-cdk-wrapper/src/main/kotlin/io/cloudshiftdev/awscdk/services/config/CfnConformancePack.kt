@@ -547,8 +547,8 @@ public open class CfnConformancePack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty):
-          TemplateSSMDocumentDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TemplateSSMDocumentDetailsProperty
+          TemplateSSMDocumentDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemplateSSMDocumentDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TemplateSSMDocumentDetailsProperty):
           software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty
@@ -663,8 +663,8 @@ public open class CfnConformancePack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty):
-          ConformancePackInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConformancePackInputParameterProperty
+          ConformancePackInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConformancePackInputParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConformancePackInputParameterProperty):
           software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty

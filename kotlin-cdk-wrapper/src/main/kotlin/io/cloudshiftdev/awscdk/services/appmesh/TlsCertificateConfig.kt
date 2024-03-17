@@ -99,7 +99,8 @@ public interface TlsCertificateConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificateConfig):
-        TlsCertificateConfig = CdkObjectWrappers.wrap(cdkObject) as TlsCertificateConfig
+        TlsCertificateConfig = CdkObjectWrappers.wrap(cdkObject) as? TlsCertificateConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TlsCertificateConfig):
         software.amazon.awscdk.services.appmesh.TlsCertificateConfig = (wrapped as

@@ -342,7 +342,8 @@ public interface CfnVariableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnVariableProps):
-        CfnVariableProps = CdkObjectWrappers.wrap(cdkObject) as CfnVariableProps
+        CfnVariableProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVariableProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVariableProps):
         software.amazon.awscdk.services.frauddetector.CfnVariableProps = (wrapped as

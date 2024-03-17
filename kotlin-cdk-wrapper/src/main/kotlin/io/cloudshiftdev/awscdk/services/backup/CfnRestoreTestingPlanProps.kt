@@ -325,7 +325,8 @@ public interface CfnRestoreTestingPlanProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlanProps):
-        CfnRestoreTestingPlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnRestoreTestingPlanProps
+        CfnRestoreTestingPlanProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRestoreTestingPlanProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRestoreTestingPlanProps):
         software.amazon.awscdk.services.backup.CfnRestoreTestingPlanProps = (wrapped as

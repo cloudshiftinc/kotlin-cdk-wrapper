@@ -79,7 +79,7 @@ public interface ReverseOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ReverseOptions): ReverseOptions =
-        CdkObjectWrappers.wrap(cdkObject) as ReverseOptions
+        CdkObjectWrappers.wrap(cdkObject) as? ReverseOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReverseOptions): software.amazon.awscdk.ReverseOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.ReverseOptions

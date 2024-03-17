@@ -140,7 +140,7 @@ public interface S3SourceProps : SourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.S3SourceProps):
-        S3SourceProps = CdkObjectWrappers.wrap(cdkObject) as S3SourceProps
+        S3SourceProps = CdkObjectWrappers.wrap(cdkObject) as? S3SourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3SourceProps):
         software.amazon.awscdk.services.codebuild.S3SourceProps = (wrapped as CdkObject).cdkObject

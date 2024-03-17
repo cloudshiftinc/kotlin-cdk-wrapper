@@ -208,7 +208,8 @@ public interface CfnBrowserSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnBrowserSettingsProps):
-        CfnBrowserSettingsProps = CdkObjectWrappers.wrap(cdkObject) as CfnBrowserSettingsProps
+        CfnBrowserSettingsProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBrowserSettingsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBrowserSettingsProps):
         software.amazon.awscdk.services.workspacesweb.CfnBrowserSettingsProps = (wrapped as

@@ -151,7 +151,8 @@ public interface CfnHookDefaultVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps):
-        CfnHookDefaultVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnHookDefaultVersionProps
+        CfnHookDefaultVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnHookDefaultVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHookDefaultVersionProps):
         software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps = (wrapped as

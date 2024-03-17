@@ -675,7 +675,8 @@ public open class CfnTaskTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty):
-          RequiredFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as RequiredFieldInfoProperty
+          RequiredFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RequiredFieldInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RequiredFieldInfoProperty):
           software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty =
@@ -891,7 +892,8 @@ public open class CfnTaskTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty):
-          ConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as ConstraintsProperty
+          ConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as? ConstraintsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConstraintsProperty):
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty = (wrapped as
@@ -1002,7 +1004,8 @@ public open class CfnTaskTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty):
-          ReadOnlyFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as ReadOnlyFieldInfoProperty
+          ReadOnlyFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReadOnlyFieldInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReadOnlyFieldInfoProperty):
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty =
@@ -1113,8 +1116,8 @@ public open class CfnTaskTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty):
-          InvisibleFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InvisibleFieldInfoProperty
+          InvisibleFieldInfoProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InvisibleFieldInfoProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InvisibleFieldInfoProperty):
           software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty =
@@ -1252,7 +1255,8 @@ public open class CfnTaskTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty):
-          DefaultFieldValueProperty = CdkObjectWrappers.wrap(cdkObject) as DefaultFieldValueProperty
+          DefaultFieldValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DefaultFieldValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultFieldValueProperty):
           software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty =
@@ -1333,7 +1337,8 @@ public open class CfnTaskTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty):
-          FieldIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as FieldIdentifierProperty
+          FieldIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldIdentifierProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldIdentifierProperty):
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty = (wrapped
@@ -1550,7 +1555,7 @@ public open class CfnTaskTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty):
-          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as FieldProperty
+          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldProperty):
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty = (wrapped as

@@ -774,8 +774,8 @@ public open class CfnStorageVirtualMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty):
-          SelfManagedActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SelfManagedActiveDirectoryConfigurationProperty
+          SelfManagedActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SelfManagedActiveDirectoryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SelfManagedActiveDirectoryConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty
@@ -948,8 +948,8 @@ public open class CfnStorageVirtualMachine internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty):
-          ActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ActiveDirectoryConfigurationProperty
+          ActiveDirectoryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ActiveDirectoryConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActiveDirectoryConfigurationProperty):
           software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty

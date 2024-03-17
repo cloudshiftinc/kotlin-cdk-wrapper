@@ -52,9 +52,14 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 public abstract class MutualTlsCertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsCertificate,
 ) : TlsCertificate(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsCertificate,
+  ) : MutualTlsCertificate(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsCertificate):
-        MutualTlsCertificate = CdkObjectWrappers.wrap(cdkObject) as MutualTlsCertificate
+        MutualTlsCertificate = CdkObjectWrappers.wrap(cdkObject) as? MutualTlsCertificate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MutualTlsCertificate):
         software.amazon.awscdk.services.appmesh.MutualTlsCertificate = (wrapped as

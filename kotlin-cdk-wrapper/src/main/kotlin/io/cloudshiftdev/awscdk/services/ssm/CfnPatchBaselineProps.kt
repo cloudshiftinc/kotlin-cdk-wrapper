@@ -788,7 +788,8 @@ public interface CfnPatchBaselineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaselineProps):
-        CfnPatchBaselineProps = CdkObjectWrappers.wrap(cdkObject) as CfnPatchBaselineProps
+        CfnPatchBaselineProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPatchBaselineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPatchBaselineProps):
         software.amazon.awscdk.services.ssm.CfnPatchBaselineProps = (wrapped as CdkObject).cdkObject

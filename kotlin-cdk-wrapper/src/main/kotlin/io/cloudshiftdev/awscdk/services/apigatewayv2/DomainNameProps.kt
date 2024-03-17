@@ -246,7 +246,8 @@ public interface DomainNameProps : EndpointOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameProps):
-        DomainNameProps = CdkObjectWrappers.wrap(cdkObject) as DomainNameProps
+        DomainNameProps = CdkObjectWrappers.wrap(cdkObject) as? DomainNameProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DomainNameProps):
         software.amazon.awscdk.services.apigatewayv2.DomainNameProps = (wrapped as

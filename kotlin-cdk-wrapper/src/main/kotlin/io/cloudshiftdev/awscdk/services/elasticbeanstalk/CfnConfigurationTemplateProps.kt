@@ -542,8 +542,8 @@ public interface CfnConfigurationTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplateProps):
-        CfnConfigurationTemplateProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnConfigurationTemplateProps
+        CfnConfigurationTemplateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnConfigurationTemplateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationTemplateProps):
         software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplateProps = (wrapped as

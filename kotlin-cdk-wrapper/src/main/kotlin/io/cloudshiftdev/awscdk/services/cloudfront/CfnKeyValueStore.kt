@@ -350,7 +350,8 @@ public open class CfnKeyValueStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.ImportSourceProperty):
-          ImportSourceProperty = CdkObjectWrappers.wrap(cdkObject) as ImportSourceProperty
+          ImportSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? ImportSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImportSourceProperty):
           software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.ImportSourceProperty =

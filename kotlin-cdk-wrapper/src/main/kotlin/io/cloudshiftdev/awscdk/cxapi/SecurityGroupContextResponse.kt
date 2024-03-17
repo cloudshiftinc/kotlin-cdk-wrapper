@@ -109,8 +109,8 @@ public interface SecurityGroupContextResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.SecurityGroupContextResponse):
-        SecurityGroupContextResponse = CdkObjectWrappers.wrap(cdkObject) as
-        SecurityGroupContextResponse
+        SecurityGroupContextResponse = CdkObjectWrappers.wrap(cdkObject) as?
+        SecurityGroupContextResponse ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecurityGroupContextResponse):
         software.amazon.awscdk.cxapi.SecurityGroupContextResponse = (wrapped as CdkObject).cdkObject

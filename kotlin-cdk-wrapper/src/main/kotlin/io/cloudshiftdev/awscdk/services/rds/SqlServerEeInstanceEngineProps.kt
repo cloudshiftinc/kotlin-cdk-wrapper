@@ -81,8 +81,8 @@ public interface SqlServerEeInstanceEngineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.SqlServerEeInstanceEngineProps):
-        SqlServerEeInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as
-        SqlServerEeInstanceEngineProps
+        SqlServerEeInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SqlServerEeInstanceEngineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SqlServerEeInstanceEngineProps):
         software.amazon.awscdk.services.rds.SqlServerEeInstanceEngineProps = (wrapped as

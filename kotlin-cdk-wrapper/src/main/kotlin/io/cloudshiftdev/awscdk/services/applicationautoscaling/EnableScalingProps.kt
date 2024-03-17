@@ -115,7 +115,8 @@ public interface EnableScalingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.EnableScalingProps):
-        EnableScalingProps = CdkObjectWrappers.wrap(cdkObject) as EnableScalingProps
+        EnableScalingProps = CdkObjectWrappers.wrap(cdkObject) as? EnableScalingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnableScalingProps):
         software.amazon.awscdk.services.applicationautoscaling.EnableScalingProps = (wrapped as

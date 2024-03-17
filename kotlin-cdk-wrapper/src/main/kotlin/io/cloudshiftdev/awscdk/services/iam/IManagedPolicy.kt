@@ -15,9 +15,18 @@ public interface IManagedPolicy {
    */
   public fun managedPolicyArn(): String
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.iam.IManagedPolicy,
+  ) : CdkObject(cdkObject), IManagedPolicy {
+    /**
+     * The ARN of the managed policy.
+     */
+    override fun managedPolicyArn(): String = unwrap(this).getManagedPolicyArn()
+  }
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.IManagedPolicy): IManagedPolicy
-        = CdkObjectWrappers.wrap(cdkObject) as IManagedPolicy
+        = CdkObjectWrappers.wrap(cdkObject) as? IManagedPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IManagedPolicy): software.amazon.awscdk.services.iam.IManagedPolicy
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.IManagedPolicy

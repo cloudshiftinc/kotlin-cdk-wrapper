@@ -257,7 +257,7 @@ public interface CfnConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnConfigProps):
-        CfnConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnConfigProps
+        CfnConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigProps):
         software.amazon.awscdk.services.groundstation.CfnConfigProps = (wrapped as

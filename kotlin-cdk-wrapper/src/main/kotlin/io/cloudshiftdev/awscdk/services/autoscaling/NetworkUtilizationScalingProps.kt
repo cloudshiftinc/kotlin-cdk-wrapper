@@ -151,8 +151,8 @@ public interface NetworkUtilizationScalingProps : BaseTargetTrackingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.NetworkUtilizationScalingProps):
-        NetworkUtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkUtilizationScalingProps
+        NetworkUtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkUtilizationScalingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkUtilizationScalingProps):
         software.amazon.awscdk.services.autoscaling.NetworkUtilizationScalingProps = (wrapped as

@@ -362,7 +362,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty):
-          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigurationProperty
+          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigurationProperty):
           software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty =

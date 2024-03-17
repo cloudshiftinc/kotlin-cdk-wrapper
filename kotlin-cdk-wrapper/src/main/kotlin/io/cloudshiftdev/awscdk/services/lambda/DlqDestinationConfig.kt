@@ -70,7 +70,8 @@ public interface DlqDestinationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.DlqDestinationConfig):
-        DlqDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as DlqDestinationConfig
+        DlqDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as? DlqDestinationConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DlqDestinationConfig):
         software.amazon.awscdk.services.lambda.DlqDestinationConfig = (wrapped as

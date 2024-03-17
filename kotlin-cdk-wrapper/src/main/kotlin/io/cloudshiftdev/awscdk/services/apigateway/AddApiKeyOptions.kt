@@ -75,7 +75,8 @@ public interface AddApiKeyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.AddApiKeyOptions):
-        AddApiKeyOptions = CdkObjectWrappers.wrap(cdkObject) as AddApiKeyOptions
+        AddApiKeyOptions = CdkObjectWrappers.wrap(cdkObject) as? AddApiKeyOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddApiKeyOptions):
         software.amazon.awscdk.services.apigateway.AddApiKeyOptions = (wrapped as

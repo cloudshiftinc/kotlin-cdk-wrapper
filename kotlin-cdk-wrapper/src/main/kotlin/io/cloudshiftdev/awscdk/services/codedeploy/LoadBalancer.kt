@@ -42,6 +42,10 @@ public abstract class LoadBalancer internal constructor(
    */
   public open fun name(): String = unwrap(this).getName()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codedeploy.LoadBalancer,
+  ) : LoadBalancer(cdkObject)
+
   public companion object {
     public fun application(albTargetGroup: IApplicationTargetGroup): LoadBalancer =
         software.amazon.awscdk.services.codedeploy.LoadBalancer.application(albTargetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancer::wrap)
@@ -55,7 +59,7 @@ public abstract class LoadBalancer internal constructor(
         software.amazon.awscdk.services.codedeploy.LoadBalancer.network(nlbTargetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancer::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LoadBalancer):
-        LoadBalancer = CdkObjectWrappers.wrap(cdkObject) as LoadBalancer
+        LoadBalancer = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancer ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LoadBalancer):
         software.amazon.awscdk.services.codedeploy.LoadBalancer = (wrapped as CdkObject).cdkObject

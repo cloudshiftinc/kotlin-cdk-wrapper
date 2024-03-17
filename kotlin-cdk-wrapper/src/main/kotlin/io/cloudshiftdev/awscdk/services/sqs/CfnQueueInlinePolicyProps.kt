@@ -147,7 +147,8 @@ public interface CfnQueueInlinePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.CfnQueueInlinePolicyProps):
-        CfnQueueInlinePolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnQueueInlinePolicyProps
+        CfnQueueInlinePolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnQueueInlinePolicyProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnQueueInlinePolicyProps):
         software.amazon.awscdk.services.sqs.CfnQueueInlinePolicyProps = (wrapped as

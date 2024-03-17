@@ -65,9 +65,14 @@ public abstract class ScheduledTaskBase internal constructor(
    */
   public open fun tags(): List<Tag> = unwrap(this).getTags()?.map(Tag::wrap) ?: emptyList()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBase,
+  ) : ScheduledTaskBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBase):
-        ScheduledTaskBase = CdkObjectWrappers.wrap(cdkObject) as ScheduledTaskBase
+        ScheduledTaskBase = CdkObjectWrappers.wrap(cdkObject) as? ScheduledTaskBase ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledTaskBase):
         software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBase = (wrapped as

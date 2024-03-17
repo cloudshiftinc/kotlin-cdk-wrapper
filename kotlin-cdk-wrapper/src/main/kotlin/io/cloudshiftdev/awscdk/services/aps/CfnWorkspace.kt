@@ -486,8 +486,8 @@ public open class CfnWorkspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.aps.CfnWorkspace.LoggingConfigurationProperty):
-          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoggingConfigurationProperty
+          LoggingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoggingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigurationProperty):
           software.amazon.awscdk.services.aps.CfnWorkspace.LoggingConfigurationProperty = (wrapped

@@ -104,7 +104,8 @@ public interface TemplateRuleAssertion {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion):
-        TemplateRuleAssertion = CdkObjectWrappers.wrap(cdkObject) as TemplateRuleAssertion
+        TemplateRuleAssertion = CdkObjectWrappers.wrap(cdkObject) as? TemplateRuleAssertion ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TemplateRuleAssertion):
         software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion = (wrapped as

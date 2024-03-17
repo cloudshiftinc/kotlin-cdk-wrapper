@@ -181,8 +181,8 @@ public interface VirtualServiceProviderConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig):
-        VirtualServiceProviderConfig = CdkObjectWrappers.wrap(cdkObject) as
-        VirtualServiceProviderConfig
+        VirtualServiceProviderConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        VirtualServiceProviderConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualServiceProviderConfig):
         software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig = (wrapped as

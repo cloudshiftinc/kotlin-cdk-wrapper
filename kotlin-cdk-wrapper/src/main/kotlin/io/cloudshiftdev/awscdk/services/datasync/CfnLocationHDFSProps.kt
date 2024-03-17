@@ -647,7 +647,8 @@ public interface CfnLocationHDFSProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFSProps):
-        CfnLocationHDFSProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationHDFSProps
+        CfnLocationHDFSProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationHDFSProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationHDFSProps):
         software.amazon.awscdk.services.datasync.CfnLocationHDFSProps = (wrapped as

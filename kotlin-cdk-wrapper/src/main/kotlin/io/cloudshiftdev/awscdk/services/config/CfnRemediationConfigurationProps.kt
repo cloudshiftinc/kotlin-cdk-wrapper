@@ -472,8 +472,8 @@ public interface CfnRemediationConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfigurationProps):
-        CfnRemediationConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnRemediationConfigurationProps
+        CfnRemediationConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRemediationConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRemediationConfigurationProps):
         software.amazon.awscdk.services.config.CfnRemediationConfigurationProps = (wrapped as

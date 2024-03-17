@@ -116,7 +116,8 @@ public interface QueryExecutionContext {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext):
-        QueryExecutionContext = CdkObjectWrappers.wrap(cdkObject) as QueryExecutionContext
+        QueryExecutionContext = CdkObjectWrappers.wrap(cdkObject) as? QueryExecutionContext ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueryExecutionContext):
         software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext = (wrapped as

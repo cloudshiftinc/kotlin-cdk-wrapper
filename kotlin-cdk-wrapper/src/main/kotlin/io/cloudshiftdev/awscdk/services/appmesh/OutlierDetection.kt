@@ -163,7 +163,8 @@ public interface OutlierDetection {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.OutlierDetection):
-        OutlierDetection = CdkObjectWrappers.wrap(cdkObject) as OutlierDetection
+        OutlierDetection = CdkObjectWrappers.wrap(cdkObject) as? OutlierDetection ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OutlierDetection):
         software.amazon.awscdk.services.appmesh.OutlierDetection = (wrapped as CdkObject).cdkObject

@@ -163,8 +163,8 @@ public interface CfnCustomerGatewayAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociationProps):
-        CfnCustomerGatewayAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCustomerGatewayAssociationProps
+        CfnCustomerGatewayAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCustomerGatewayAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomerGatewayAssociationProps):
         software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociationProps = (wrapped

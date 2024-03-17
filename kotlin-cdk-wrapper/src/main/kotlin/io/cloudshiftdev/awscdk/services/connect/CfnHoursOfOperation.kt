@@ -560,8 +560,8 @@ public open class CfnHoursOfOperation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationConfigProperty):
-          HoursOfOperationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HoursOfOperationConfigProperty
+          HoursOfOperationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HoursOfOperationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HoursOfOperationConfigProperty):
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationConfigProperty
@@ -672,8 +672,8 @@ public open class CfnHoursOfOperation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty):
-          HoursOfOperationTimeSliceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HoursOfOperationTimeSliceProperty
+          HoursOfOperationTimeSliceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HoursOfOperationTimeSliceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HoursOfOperationTimeSliceProperty):
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty

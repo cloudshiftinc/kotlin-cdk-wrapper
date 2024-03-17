@@ -310,8 +310,8 @@ public interface CfnSubscriptionDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionProps):
-        CfnSubscriptionDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSubscriptionDefinitionProps
+        CfnSubscriptionDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSubscriptionDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubscriptionDefinitionProps):
         software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionProps = (wrapped as

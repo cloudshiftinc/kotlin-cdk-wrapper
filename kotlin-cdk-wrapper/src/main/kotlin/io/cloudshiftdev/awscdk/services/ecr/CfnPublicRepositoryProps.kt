@@ -251,7 +251,8 @@ public interface CfnPublicRepositoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepositoryProps):
-        CfnPublicRepositoryProps = CdkObjectWrappers.wrap(cdkObject) as CfnPublicRepositoryProps
+        CfnPublicRepositoryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPublicRepositoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPublicRepositoryProps):
         software.amazon.awscdk.services.ecr.CfnPublicRepositoryProps = (wrapped as

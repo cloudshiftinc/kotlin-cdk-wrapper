@@ -1263,7 +1263,8 @@ public interface BucketDeploymentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.BucketDeploymentProps):
-        BucketDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as BucketDeploymentProps
+        BucketDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as? BucketDeploymentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketDeploymentProps):
         software.amazon.awscdk.services.s3.deployment.BucketDeploymentProps = (wrapped as

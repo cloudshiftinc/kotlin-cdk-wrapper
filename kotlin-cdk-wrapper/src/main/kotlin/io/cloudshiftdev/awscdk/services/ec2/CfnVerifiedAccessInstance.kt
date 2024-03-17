@@ -803,8 +803,8 @@ public open class CfnVerifiedAccessInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty):
-          VerifiedAccessLogsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VerifiedAccessLogsProperty
+          VerifiedAccessLogsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VerifiedAccessLogsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VerifiedAccessLogsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty =
@@ -977,7 +977,7 @@ public open class CfnVerifiedAccessInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property):
-          S3Property = CdkObjectWrappers.wrap(cdkObject) as S3Property
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property = (wrapped as
@@ -1098,7 +1098,8 @@ public open class CfnVerifiedAccessInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty):
-          CloudWatchLogsProperty = CdkObjectWrappers.wrap(cdkObject) as CloudWatchLogsProperty
+          CloudWatchLogsProperty = CdkObjectWrappers.wrap(cdkObject) as? CloudWatchLogsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty =
@@ -1219,8 +1220,8 @@ public open class CfnVerifiedAccessInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty):
-          KinesisDataFirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KinesisDataFirehoseProperty
+          KinesisDataFirehoseProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisDataFirehoseProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisDataFirehoseProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty
@@ -1418,8 +1419,8 @@ public open class CfnVerifiedAccessInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty):
-          VerifiedAccessTrustProviderProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VerifiedAccessTrustProviderProperty
+          VerifiedAccessTrustProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VerifiedAccessTrustProviderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VerifiedAccessTrustProviderProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty

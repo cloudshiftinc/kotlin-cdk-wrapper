@@ -232,7 +232,8 @@ public interface CfnResourceSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnResourceSetProps):
-        CfnResourceSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceSetProps
+        CfnResourceSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnResourceSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceSetProps):
         software.amazon.awscdk.services.fms.CfnResourceSetProps = (wrapped as CdkObject).cdkObject

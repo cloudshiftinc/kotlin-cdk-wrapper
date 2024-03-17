@@ -572,7 +572,8 @@ public open class CfnFaq internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty):
-          S3PathProperty = CdkObjectWrappers.wrap(cdkObject) as S3PathProperty
+          S3PathProperty = CdkObjectWrappers.wrap(cdkObject) as? S3PathProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3PathProperty):
           software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty = (wrapped as

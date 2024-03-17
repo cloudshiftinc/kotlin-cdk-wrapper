@@ -1038,7 +1038,7 @@ public interface CfnJobProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnJobProps): CfnJobProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnJobProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnJobProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnJobProps): software.amazon.awscdk.services.glue.CfnJobProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnJobProps

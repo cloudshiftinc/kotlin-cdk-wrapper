@@ -251,7 +251,7 @@ public interface CfnStreamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnStreamProps):
-        CfnStreamProps = CdkObjectWrappers.wrap(cdkObject) as CfnStreamProps
+        CfnStreamProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStreamProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamProps):
         software.amazon.awscdk.services.kinesisvideo.CfnStreamProps = (wrapped as

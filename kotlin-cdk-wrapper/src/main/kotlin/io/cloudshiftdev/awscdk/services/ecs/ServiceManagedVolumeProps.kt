@@ -153,7 +153,8 @@ public interface ServiceManagedVolumeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedVolumeProps):
-        ServiceManagedVolumeProps = CdkObjectWrappers.wrap(cdkObject) as ServiceManagedVolumeProps
+        ServiceManagedVolumeProps = CdkObjectWrappers.wrap(cdkObject) as? ServiceManagedVolumeProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceManagedVolumeProps):
         software.amazon.awscdk.services.ecs.ServiceManagedVolumeProps = (wrapped as

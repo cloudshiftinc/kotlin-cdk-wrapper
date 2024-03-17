@@ -118,7 +118,8 @@ public interface OpenIdConnectProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.OpenIdConnectProviderProps):
-        OpenIdConnectProviderProps = CdkObjectWrappers.wrap(cdkObject) as OpenIdConnectProviderProps
+        OpenIdConnectProviderProps = CdkObjectWrappers.wrap(cdkObject) as?
+        OpenIdConnectProviderProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OpenIdConnectProviderProps):
         software.amazon.awscdk.services.eks.OpenIdConnectProviderProps = (wrapped as

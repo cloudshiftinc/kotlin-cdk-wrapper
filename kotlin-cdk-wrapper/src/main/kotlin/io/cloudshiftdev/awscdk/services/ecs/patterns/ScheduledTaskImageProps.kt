@@ -220,7 +220,8 @@ public interface ScheduledTaskImageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledTaskImageProps):
-        ScheduledTaskImageProps = CdkObjectWrappers.wrap(cdkObject) as ScheduledTaskImageProps
+        ScheduledTaskImageProps = CdkObjectWrappers.wrap(cdkObject) as? ScheduledTaskImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScheduledTaskImageProps):
         software.amazon.awscdk.services.ecs.patterns.ScheduledTaskImageProps = (wrapped as

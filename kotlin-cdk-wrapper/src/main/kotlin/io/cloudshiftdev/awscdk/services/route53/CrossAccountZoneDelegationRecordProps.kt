@@ -220,8 +220,8 @@ public interface CrossAccountZoneDelegationRecordProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps):
-        CrossAccountZoneDelegationRecordProps = CdkObjectWrappers.wrap(cdkObject) as
-        CrossAccountZoneDelegationRecordProps
+        CrossAccountZoneDelegationRecordProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CrossAccountZoneDelegationRecordProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CrossAccountZoneDelegationRecordProps):
         software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps = (wrapped as

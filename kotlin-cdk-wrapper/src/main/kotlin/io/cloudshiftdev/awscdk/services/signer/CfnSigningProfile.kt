@@ -412,8 +412,8 @@ public open class CfnSigningProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty):
-          SignatureValidityPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SignatureValidityPeriodProperty
+          SignatureValidityPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SignatureValidityPeriodProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SignatureValidityPeriodProperty):
           software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty =

@@ -661,7 +661,8 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModelProps):
-        SageMakerCreateModelProps = CdkObjectWrappers.wrap(cdkObject) as SageMakerCreateModelProps
+        SageMakerCreateModelProps = CdkObjectWrappers.wrap(cdkObject) as? SageMakerCreateModelProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SageMakerCreateModelProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModelProps = (wrapped as

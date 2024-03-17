@@ -28,6 +28,10 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 public abstract class AdotLayerVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
+  ) : AdotLayerVersion(cdkObject)
+
   public companion object {
     public fun fromGenericLayerVersion(version: AdotLambdaLayerGenericVersion): AdotLayerVersion =
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromGenericLayerVersion(version.let(AdotLambdaLayerGenericVersion::unwrap)).let(AdotLayerVersion::wrap)
@@ -49,7 +53,8 @@ public abstract class AdotLayerVersion internal constructor(
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromPythonSdkLayerVersion(version.let(AdotLambdaLayerPythonSdkVersion::unwrap)).let(AdotLayerVersion::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion):
-        AdotLayerVersion = CdkObjectWrappers.wrap(cdkObject) as AdotLayerVersion
+        AdotLayerVersion = CdkObjectWrappers.wrap(cdkObject) as? AdotLayerVersion ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AdotLayerVersion):
         software.amazon.awscdk.services.lambda.AdotLayerVersion = (wrapped as CdkObject).cdkObject

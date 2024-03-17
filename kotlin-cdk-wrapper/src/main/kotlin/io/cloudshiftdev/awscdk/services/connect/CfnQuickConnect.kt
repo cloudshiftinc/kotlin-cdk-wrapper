@@ -434,8 +434,8 @@ public open class CfnQuickConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty):
-          PhoneNumberQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PhoneNumberQuickConnectConfigProperty
+          PhoneNumberQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PhoneNumberQuickConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PhoneNumberQuickConnectConfigProperty):
           software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty
@@ -729,8 +729,8 @@ public open class CfnQuickConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty):
-          QuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          QuickConnectConfigProperty
+          QuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QuickConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QuickConnectConfigProperty):
           software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty =
@@ -842,8 +842,8 @@ public open class CfnQuickConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty):
-          UserQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UserQuickConnectConfigProperty
+          UserQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserQuickConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserQuickConnectConfigProperty):
           software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty =
@@ -955,8 +955,8 @@ public open class CfnQuickConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty):
-          QueueQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          QueueQuickConnectConfigProperty
+          QueueQuickConnectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QueueQuickConnectConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: QueueQuickConnectConfigProperty):
           software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty =

@@ -526,7 +526,7 @@ public interface EksCallProps : TaskStateBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EksCallProps):
-        EksCallProps = CdkObjectWrappers.wrap(cdkObject) as EksCallProps
+        EksCallProps = CdkObjectWrappers.wrap(cdkObject) as? EksCallProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksCallProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EksCallProps = (wrapped as

@@ -197,7 +197,8 @@ public interface CfnScheduleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnScheduleProps):
-        CfnScheduleProps = CdkObjectWrappers.wrap(cdkObject) as CfnScheduleProps
+        CfnScheduleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnScheduleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduleProps):
         software.amazon.awscdk.services.databrew.CfnScheduleProps = (wrapped as CdkObject).cdkObject

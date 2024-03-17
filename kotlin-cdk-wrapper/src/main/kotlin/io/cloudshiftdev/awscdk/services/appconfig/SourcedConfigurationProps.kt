@@ -326,7 +326,8 @@ public interface SourcedConfigurationProps : ConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfigurationProps):
-        SourcedConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as SourcedConfigurationProps
+        SourcedConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as? SourcedConfigurationProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourcedConfigurationProps):
         software.amazon.awscdk.services.appconfig.SourcedConfigurationProps = (wrapped as

@@ -504,8 +504,8 @@ public open class CfnStudio internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudio.StudioEncryptionConfigurationProperty):
-          StudioEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StudioEncryptionConfigurationProperty
+          StudioEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StudioEncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StudioEncryptionConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStudio.StudioEncryptionConfigurationProperty

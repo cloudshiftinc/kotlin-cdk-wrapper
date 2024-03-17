@@ -637,7 +637,7 @@ public interface StackProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.StackProps): StackProps =
-        CdkObjectWrappers.wrap(cdkObject) as StackProps
+        CdkObjectWrappers.wrap(cdkObject) as? StackProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackProps): software.amazon.awscdk.StackProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.StackProps

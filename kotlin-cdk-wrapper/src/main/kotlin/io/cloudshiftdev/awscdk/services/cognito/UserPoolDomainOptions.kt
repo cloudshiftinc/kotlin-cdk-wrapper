@@ -163,7 +163,8 @@ public interface UserPoolDomainOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolDomainOptions):
-        UserPoolDomainOptions = CdkObjectWrappers.wrap(cdkObject) as UserPoolDomainOptions
+        UserPoolDomainOptions = CdkObjectWrappers.wrap(cdkObject) as? UserPoolDomainOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolDomainOptions):
         software.amazon.awscdk.services.cognito.UserPoolDomainOptions = (wrapped as

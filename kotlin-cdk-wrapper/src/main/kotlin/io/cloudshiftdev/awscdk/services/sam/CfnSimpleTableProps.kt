@@ -266,7 +266,8 @@ public interface CfnSimpleTableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTableProps):
-        CfnSimpleTableProps = CdkObjectWrappers.wrap(cdkObject) as CfnSimpleTableProps
+        CfnSimpleTableProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSimpleTableProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimpleTableProps):
         software.amazon.awscdk.services.sam.CfnSimpleTableProps = (wrapped as CdkObject).cdkObject

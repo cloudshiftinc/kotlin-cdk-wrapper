@@ -100,8 +100,8 @@ public interface HttpRouteAuthorizerBindOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerBindOptions):
-        HttpRouteAuthorizerBindOptions = CdkObjectWrappers.wrap(cdkObject) as
-        HttpRouteAuthorizerBindOptions
+        HttpRouteAuthorizerBindOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpRouteAuthorizerBindOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteAuthorizerBindOptions):
         software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerBindOptions = (wrapped as

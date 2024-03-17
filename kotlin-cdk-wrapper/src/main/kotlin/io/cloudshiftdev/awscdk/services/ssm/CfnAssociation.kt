@@ -1217,7 +1217,8 @@ public open class CfnAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty):
-          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as TargetProperty
+          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty = (wrapped as
@@ -1354,7 +1355,8 @@ public open class CfnAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty):
-          S3OutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3OutputLocationProperty
+          S3OutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3OutputLocationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3OutputLocationProperty):
           software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty = (wrapped as
@@ -1500,8 +1502,8 @@ public open class CfnAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty):
-          InstanceAssociationOutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceAssociationOutputLocationProperty
+          InstanceAssociationOutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceAssociationOutputLocationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceAssociationOutputLocationProperty):
           software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty

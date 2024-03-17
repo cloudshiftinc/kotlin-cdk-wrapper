@@ -161,7 +161,8 @@ public interface CustomEndpointOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions):
-        CustomEndpointOptions = CdkObjectWrappers.wrap(cdkObject) as CustomEndpointOptions
+        CustomEndpointOptions = CdkObjectWrappers.wrap(cdkObject) as? CustomEndpointOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomEndpointOptions):
         software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions = (wrapped as

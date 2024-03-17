@@ -166,7 +166,8 @@ public interface CfnOutcomeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnOutcomeProps):
-        CfnOutcomeProps = CdkObjectWrappers.wrap(cdkObject) as CfnOutcomeProps
+        CfnOutcomeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnOutcomeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOutcomeProps):
         software.amazon.awscdk.services.frauddetector.CfnOutcomeProps = (wrapped as

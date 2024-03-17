@@ -381,8 +381,8 @@ public open class CfnReplicationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty):
-          RegionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RegionConfigurationProperty
+          RegionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegionConfigurationProperty):
           software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty
@@ -523,7 +523,8 @@ public open class CfnReplicationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty):
-          ReplicationRegionProperty = CdkObjectWrappers.wrap(cdkObject) as ReplicationRegionProperty
+          ReplicationRegionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationRegionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationRegionProperty):
           software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty =

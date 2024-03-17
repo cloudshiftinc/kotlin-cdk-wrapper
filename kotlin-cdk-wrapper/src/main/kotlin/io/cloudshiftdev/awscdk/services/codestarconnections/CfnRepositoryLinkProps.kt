@@ -213,7 +213,8 @@ public interface CfnRepositoryLinkProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarconnections.CfnRepositoryLinkProps):
-        CfnRepositoryLinkProps = CdkObjectWrappers.wrap(cdkObject) as CfnRepositoryLinkProps
+        CfnRepositoryLinkProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRepositoryLinkProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepositoryLinkProps):
         software.amazon.awscdk.services.codestarconnections.CfnRepositoryLinkProps = (wrapped as

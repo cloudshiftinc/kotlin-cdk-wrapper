@@ -396,7 +396,8 @@ public interface LaunchTemplateOverrides {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides):
-        LaunchTemplateOverrides = CdkObjectWrappers.wrap(cdkObject) as LaunchTemplateOverrides
+        LaunchTemplateOverrides = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateOverrides ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateOverrides):
         software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides = (wrapped as

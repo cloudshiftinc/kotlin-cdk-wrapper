@@ -72,7 +72,8 @@ public interface UnknownPrincipalProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipalProps):
-        UnknownPrincipalProps = CdkObjectWrappers.wrap(cdkObject) as UnknownPrincipalProps
+        UnknownPrincipalProps = CdkObjectWrappers.wrap(cdkObject) as? UnknownPrincipalProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UnknownPrincipalProps):
         software.amazon.awscdk.services.iam.UnknownPrincipalProps = (wrapped as CdkObject).cdkObject

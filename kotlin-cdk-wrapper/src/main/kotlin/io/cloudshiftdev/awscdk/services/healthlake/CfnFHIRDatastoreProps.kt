@@ -385,7 +385,8 @@ public interface CfnFHIRDatastoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastoreProps):
-        CfnFHIRDatastoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnFHIRDatastoreProps
+        CfnFHIRDatastoreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFHIRDatastoreProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFHIRDatastoreProps):
         software.amazon.awscdk.services.healthlake.CfnFHIRDatastoreProps = (wrapped as

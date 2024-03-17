@@ -597,8 +597,8 @@ public interface CfnConfigurationRecorderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorderProps):
-        CfnConfigurationRecorderProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnConfigurationRecorderProps
+        CfnConfigurationRecorderProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnConfigurationRecorderProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConfigurationRecorderProps):
         software.amazon.awscdk.services.config.CfnConfigurationRecorderProps = (wrapped as

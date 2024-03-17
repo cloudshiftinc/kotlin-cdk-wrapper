@@ -423,8 +423,8 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps):
-        ServerlessV2ClusterInstanceProps = CdkObjectWrappers.wrap(cdkObject) as
-        ServerlessV2ClusterInstanceProps
+        ServerlessV2ClusterInstanceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerlessV2ClusterInstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessV2ClusterInstanceProps):
         software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps = (wrapped as

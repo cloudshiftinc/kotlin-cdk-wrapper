@@ -250,7 +250,8 @@ public interface CfnAssignmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnAssignmentProps):
-        CfnAssignmentProps = CdkObjectWrappers.wrap(cdkObject) as CfnAssignmentProps
+        CfnAssignmentProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAssignmentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAssignmentProps):
         software.amazon.awscdk.services.sso.CfnAssignmentProps = (wrapped as CdkObject).cdkObject as

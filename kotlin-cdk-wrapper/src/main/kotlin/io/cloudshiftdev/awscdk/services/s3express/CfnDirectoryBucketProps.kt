@@ -200,7 +200,8 @@ public interface CfnDirectoryBucketProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3express.CfnDirectoryBucketProps):
-        CfnDirectoryBucketProps = CdkObjectWrappers.wrap(cdkObject) as CfnDirectoryBucketProps
+        CfnDirectoryBucketProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDirectoryBucketProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDirectoryBucketProps):
         software.amazon.awscdk.services.s3express.CfnDirectoryBucketProps = (wrapped as

@@ -742,7 +742,8 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTaskProps):
-        EcsRunTaskProps = CdkObjectWrappers.wrap(cdkObject) as EcsRunTaskProps
+        EcsRunTaskProps = CdkObjectWrappers.wrap(cdkObject) as? EcsRunTaskProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsRunTaskProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTaskProps = (wrapped as

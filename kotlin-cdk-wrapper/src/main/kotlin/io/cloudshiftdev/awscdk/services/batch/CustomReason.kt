@@ -156,7 +156,7 @@ public interface CustomReason {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.CustomReason): CustomReason =
-        CdkObjectWrappers.wrap(cdkObject) as CustomReason
+        CdkObjectWrappers.wrap(cdkObject) as? CustomReason ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomReason): software.amazon.awscdk.services.batch.CustomReason =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.batch.CustomReason

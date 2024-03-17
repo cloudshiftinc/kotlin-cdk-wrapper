@@ -181,7 +181,8 @@ public interface CfnDeliverySourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnDeliverySourceProps):
-        CfnDeliverySourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnDeliverySourceProps
+        CfnDeliverySourceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDeliverySourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeliverySourceProps):
         software.amazon.awscdk.services.logs.CfnDeliverySourceProps = (wrapped as

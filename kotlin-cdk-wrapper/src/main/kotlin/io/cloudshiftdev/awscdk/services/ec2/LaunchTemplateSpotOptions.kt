@@ -246,7 +246,8 @@ public interface LaunchTemplateSpotOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions):
-        LaunchTemplateSpotOptions = CdkObjectWrappers.wrap(cdkObject) as LaunchTemplateSpotOptions
+        LaunchTemplateSpotOptions = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateSpotOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateSpotOptions):
         software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions = (wrapped as

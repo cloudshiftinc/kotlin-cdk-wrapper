@@ -95,8 +95,8 @@ public interface BitBucketSourceCredentialsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps):
-        BitBucketSourceCredentialsProps = CdkObjectWrappers.wrap(cdkObject) as
-        BitBucketSourceCredentialsProps
+        BitBucketSourceCredentialsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        BitBucketSourceCredentialsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BitBucketSourceCredentialsProps):
         software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps = (wrapped as

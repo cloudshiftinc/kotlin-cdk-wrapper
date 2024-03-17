@@ -392,7 +392,8 @@ public interface InstancesDistribution {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.InstancesDistribution):
-        InstancesDistribution = CdkObjectWrappers.wrap(cdkObject) as InstancesDistribution
+        InstancesDistribution = CdkObjectWrappers.wrap(cdkObject) as? InstancesDistribution ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstancesDistribution):
         software.amazon.awscdk.services.autoscaling.InstancesDistribution = (wrapped as

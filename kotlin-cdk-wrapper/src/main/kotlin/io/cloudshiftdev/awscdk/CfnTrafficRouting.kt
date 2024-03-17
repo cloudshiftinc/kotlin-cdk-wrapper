@@ -180,7 +180,7 @@ public interface CfnTrafficRouting {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnTrafficRouting): CfnTrafficRouting =
-        CdkObjectWrappers.wrap(cdkObject) as CfnTrafficRouting
+        CdkObjectWrappers.wrap(cdkObject) as? CfnTrafficRouting ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrafficRouting): software.amazon.awscdk.CfnTrafficRouting =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.CfnTrafficRouting

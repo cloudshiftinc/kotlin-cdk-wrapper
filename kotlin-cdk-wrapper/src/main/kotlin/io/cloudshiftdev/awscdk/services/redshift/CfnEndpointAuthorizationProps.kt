@@ -207,8 +207,8 @@ public interface CfnEndpointAuthorizationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAuthorizationProps):
-        CfnEndpointAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnEndpointAuthorizationProps
+        CfnEndpointAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnEndpointAuthorizationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEndpointAuthorizationProps):
         software.amazon.awscdk.services.redshift.CfnEndpointAuthorizationProps = (wrapped as

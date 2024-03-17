@@ -133,7 +133,7 @@ public interface QuotaSettings {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.QuotaSettings):
-        QuotaSettings = CdkObjectWrappers.wrap(cdkObject) as QuotaSettings
+        QuotaSettings = CdkObjectWrappers.wrap(cdkObject) as? QuotaSettings ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QuotaSettings):
         software.amazon.awscdk.services.apigateway.QuotaSettings = (wrapped as CdkObject).cdkObject

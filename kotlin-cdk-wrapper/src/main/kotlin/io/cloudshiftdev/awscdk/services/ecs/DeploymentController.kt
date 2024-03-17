@@ -91,7 +91,8 @@ public interface DeploymentController {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DeploymentController):
-        DeploymentController = CdkObjectWrappers.wrap(cdkObject) as DeploymentController
+        DeploymentController = CdkObjectWrappers.wrap(cdkObject) as? DeploymentController ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentController):
         software.amazon.awscdk.services.ecs.DeploymentController = (wrapped as CdkObject).cdkObject

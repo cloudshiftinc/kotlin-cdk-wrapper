@@ -598,8 +598,8 @@ public interface ApplicationMultipleTargetGroupsServiceBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBaseProps):
-        ApplicationMultipleTargetGroupsServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationMultipleTargetGroupsServiceBaseProps
+        ApplicationMultipleTargetGroupsServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationMultipleTargetGroupsServiceBaseProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationMultipleTargetGroupsServiceBaseProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBaseProps

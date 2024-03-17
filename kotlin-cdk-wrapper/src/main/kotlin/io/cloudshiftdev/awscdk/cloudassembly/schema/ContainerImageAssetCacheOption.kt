@@ -150,8 +150,8 @@ public interface ContainerImageAssetCacheOption {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption):
-        ContainerImageAssetCacheOption = CdkObjectWrappers.wrap(cdkObject) as
-        ContainerImageAssetCacheOption
+        ContainerImageAssetCacheOption = CdkObjectWrappers.wrap(cdkObject) as?
+        ContainerImageAssetCacheOption ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerImageAssetCacheOption):
         software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption = (wrapped as

@@ -426,7 +426,8 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty):
-          AccessRightsProperty = CdkObjectWrappers.wrap(cdkObject) as AccessRightsProperty
+          AccessRightsProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessRightsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessRightsProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty

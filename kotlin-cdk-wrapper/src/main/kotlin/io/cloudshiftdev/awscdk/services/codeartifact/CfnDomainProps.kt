@@ -179,7 +179,7 @@ public interface CfnDomainProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codeartifact.CfnDomainProps):
-        CfnDomainProps = CdkObjectWrappers.wrap(cdkObject) as CfnDomainProps
+        CfnDomainProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDomainProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainProps):
         software.amazon.awscdk.services.codeartifact.CfnDomainProps = (wrapped as

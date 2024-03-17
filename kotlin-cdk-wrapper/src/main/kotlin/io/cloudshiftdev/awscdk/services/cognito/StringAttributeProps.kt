@@ -137,7 +137,8 @@ public interface StringAttributeProps : StringAttributeConstraints, CustomAttrib
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.StringAttributeProps):
-        StringAttributeProps = CdkObjectWrappers.wrap(cdkObject) as StringAttributeProps
+        StringAttributeProps = CdkObjectWrappers.wrap(cdkObject) as? StringAttributeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StringAttributeProps):
         software.amazon.awscdk.services.cognito.StringAttributeProps = (wrapped as

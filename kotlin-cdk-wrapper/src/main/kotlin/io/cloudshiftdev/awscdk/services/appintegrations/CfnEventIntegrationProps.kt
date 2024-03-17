@@ -256,7 +256,8 @@ public interface CfnEventIntegrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnEventIntegrationProps):
-        CfnEventIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as CfnEventIntegrationProps
+        CfnEventIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventIntegrationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventIntegrationProps):
         software.amazon.awscdk.services.appintegrations.CfnEventIntegrationProps = (wrapped as

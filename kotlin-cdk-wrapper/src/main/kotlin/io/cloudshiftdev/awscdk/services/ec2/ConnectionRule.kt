@@ -206,7 +206,7 @@ public interface ConnectionRule {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ConnectionRule): ConnectionRule
-        = CdkObjectWrappers.wrap(cdkObject) as ConnectionRule
+        = CdkObjectWrappers.wrap(cdkObject) as? ConnectionRule ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConnectionRule): software.amazon.awscdk.services.ec2.ConnectionRule
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.ConnectionRule

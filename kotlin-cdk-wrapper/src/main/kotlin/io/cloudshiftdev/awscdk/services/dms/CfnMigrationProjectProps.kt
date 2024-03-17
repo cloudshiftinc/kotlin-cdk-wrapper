@@ -556,7 +556,8 @@ public interface CfnMigrationProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProjectProps):
-        CfnMigrationProjectProps = CdkObjectWrappers.wrap(cdkObject) as CfnMigrationProjectProps
+        CfnMigrationProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMigrationProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMigrationProjectProps):
         software.amazon.awscdk.services.dms.CfnMigrationProjectProps = (wrapped as

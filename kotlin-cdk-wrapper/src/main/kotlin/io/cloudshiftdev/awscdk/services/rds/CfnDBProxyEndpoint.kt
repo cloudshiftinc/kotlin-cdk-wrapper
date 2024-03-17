@@ -533,7 +533,8 @@ public open class CfnDBProxyEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty):
-          TagFormatProperty = CdkObjectWrappers.wrap(cdkObject) as TagFormatProperty
+          TagFormatProperty = CdkObjectWrappers.wrap(cdkObject) as? TagFormatProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagFormatProperty):
           software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty = (wrapped as

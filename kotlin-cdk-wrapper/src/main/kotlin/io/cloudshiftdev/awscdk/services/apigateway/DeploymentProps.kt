@@ -153,7 +153,8 @@ public interface DeploymentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.DeploymentProps):
-        DeploymentProps = CdkObjectWrappers.wrap(cdkObject) as DeploymentProps
+        DeploymentProps = CdkObjectWrappers.wrap(cdkObject) as? DeploymentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeploymentProps):
         software.amazon.awscdk.services.apigateway.DeploymentProps = (wrapped as

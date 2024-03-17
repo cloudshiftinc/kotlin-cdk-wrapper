@@ -13,6 +13,10 @@ public abstract class Dependable internal constructor(
   public open fun dependencyRoots(): List<IConstruct> =
       unwrap(this).getDependencyRoots().map(IConstruct::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.constructs.Dependable,
+  ) : Dependable(cdkObject)
+
   public companion object {
     @Deprecated(message = "deprecated in CDK")
     public fun `get`(instance: IDependable): Dependable =
@@ -27,7 +31,7 @@ public abstract class Dependable internal constructor(
         software.constructs.Dependable.of(instance.let(IDependable::unwrap)).let(Dependable::wrap)
 
     internal fun wrap(cdkObject: software.constructs.Dependable): Dependable =
-        CdkObjectWrappers.wrap(cdkObject) as Dependable
+        CdkObjectWrappers.wrap(cdkObject) as? Dependable ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Dependable): software.constructs.Dependable = (wrapped as
         CdkObject).cdkObject as software.constructs.Dependable

@@ -955,7 +955,8 @@ public open class CfnPartition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty):
-          StorageDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as StorageDescriptorProperty
+          StorageDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageDescriptorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageDescriptorProperty):
           software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty = (wrapped as
@@ -1107,7 +1108,8 @@ public open class CfnPartition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty):
-          SchemaIdProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaIdProperty
+          SchemaIdProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaIdProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaIdProperty):
           software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty = (wrapped as
@@ -1240,7 +1242,8 @@ public open class CfnPartition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty):
-          ColumnProperty = CdkObjectWrappers.wrap(cdkObject) as ColumnProperty
+          ColumnProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnProperty):
           software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty = (wrapped as
@@ -1428,7 +1431,8 @@ public open class CfnPartition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty):
-          SchemaReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaReferenceProperty
+          SchemaReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaReferenceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaReferenceProperty):
           software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty = (wrapped as
@@ -1686,7 +1690,8 @@ public open class CfnPartition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty):
-          PartitionInputProperty = CdkObjectWrappers.wrap(cdkObject) as PartitionInputProperty
+          PartitionInputProperty = CdkObjectWrappers.wrap(cdkObject) as? PartitionInputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PartitionInputProperty):
           software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty = (wrapped as
@@ -1856,7 +1861,8 @@ public open class CfnPartition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty):
-          SkewedInfoProperty = CdkObjectWrappers.wrap(cdkObject) as SkewedInfoProperty
+          SkewedInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? SkewedInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SkewedInfoProperty):
           software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty = (wrapped as
@@ -1997,7 +2003,8 @@ public open class CfnPartition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty):
-          SerdeInfoProperty = CdkObjectWrappers.wrap(cdkObject) as SerdeInfoProperty
+          SerdeInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? SerdeInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SerdeInfoProperty):
           software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty = (wrapped as
@@ -2107,7 +2114,7 @@ public open class CfnPartition internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty):
-          OrderProperty = CdkObjectWrappers.wrap(cdkObject) as OrderProperty
+          OrderProperty = CdkObjectWrappers.wrap(cdkObject) as? OrderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OrderProperty):
           software.amazon.awscdk.services.glue.CfnPartition.OrderProperty = (wrapped as

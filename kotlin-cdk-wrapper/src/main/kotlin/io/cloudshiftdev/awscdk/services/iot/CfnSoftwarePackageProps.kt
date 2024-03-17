@@ -137,7 +137,8 @@ public interface CfnSoftwarePackageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackageProps):
-        CfnSoftwarePackageProps = CdkObjectWrappers.wrap(cdkObject) as CfnSoftwarePackageProps
+        CfnSoftwarePackageProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSoftwarePackageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSoftwarePackageProps):
         software.amazon.awscdk.services.iot.CfnSoftwarePackageProps = (wrapped as

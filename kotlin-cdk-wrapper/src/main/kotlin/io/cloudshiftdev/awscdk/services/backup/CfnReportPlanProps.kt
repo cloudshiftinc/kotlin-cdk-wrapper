@@ -250,7 +250,8 @@ public interface CfnReportPlanProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnReportPlanProps):
-        CfnReportPlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnReportPlanProps
+        CfnReportPlanProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReportPlanProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReportPlanProps):
         software.amazon.awscdk.services.backup.CfnReportPlanProps = (wrapped as CdkObject).cdkObject

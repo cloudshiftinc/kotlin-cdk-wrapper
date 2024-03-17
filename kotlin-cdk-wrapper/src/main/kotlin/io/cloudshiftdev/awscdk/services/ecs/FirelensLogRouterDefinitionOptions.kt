@@ -1146,8 +1146,8 @@ public interface FirelensLogRouterDefinitionOptions : ContainerDefinitionOptions
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FirelensLogRouterDefinitionOptions):
-        FirelensLogRouterDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as
-        FirelensLogRouterDefinitionOptions
+        FirelensLogRouterDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        FirelensLogRouterDefinitionOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FirelensLogRouterDefinitionOptions):
         software.amazon.awscdk.services.ecs.FirelensLogRouterDefinitionOptions = (wrapped as

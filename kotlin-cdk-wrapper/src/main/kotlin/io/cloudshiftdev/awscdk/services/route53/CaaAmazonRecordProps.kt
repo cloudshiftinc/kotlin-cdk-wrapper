@@ -370,7 +370,8 @@ public interface CaaAmazonRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CaaAmazonRecordProps):
-        CaaAmazonRecordProps = CdkObjectWrappers.wrap(cdkObject) as CaaAmazonRecordProps
+        CaaAmazonRecordProps = CdkObjectWrappers.wrap(cdkObject) as? CaaAmazonRecordProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CaaAmazonRecordProps):
         software.amazon.awscdk.services.route53.CaaAmazonRecordProps = (wrapped as

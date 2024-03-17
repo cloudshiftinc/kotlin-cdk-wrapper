@@ -101,7 +101,8 @@ public interface CanaryTrafficRoutingConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig):
-        CanaryTrafficRoutingConfig = CdkObjectWrappers.wrap(cdkObject) as CanaryTrafficRoutingConfig
+        CanaryTrafficRoutingConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        CanaryTrafficRoutingConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CanaryTrafficRoutingConfig):
         software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig = (wrapped as

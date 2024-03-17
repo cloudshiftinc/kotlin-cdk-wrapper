@@ -833,8 +833,8 @@ public open class CfnDBProxyTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty):
-          ConnectionPoolConfigurationInfoFormatProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectionPoolConfigurationInfoFormatProperty
+          ConnectionPoolConfigurationInfoFormatProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionPoolConfigurationInfoFormatProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionPoolConfigurationInfoFormatProperty):
           software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty

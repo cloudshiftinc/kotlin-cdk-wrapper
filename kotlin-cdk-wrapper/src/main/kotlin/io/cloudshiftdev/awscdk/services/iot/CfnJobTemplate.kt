@@ -912,8 +912,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty):
-          JobExecutionsRolloutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          JobExecutionsRolloutConfigProperty
+          JobExecutionsRolloutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JobExecutionsRolloutConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JobExecutionsRolloutConfigProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty =
@@ -1090,7 +1090,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty):
-          AbortCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as AbortCriteriaProperty
+          AbortCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? AbortCriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AbortCriteriaProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty = (wrapped as
@@ -1195,7 +1196,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty):
-          TimeoutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TimeoutConfigProperty
+          TimeoutConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TimeoutConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeoutConfigProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty = (wrapped as
@@ -1350,8 +1352,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty):
-          PresignedUrlConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PresignedUrlConfigProperty
+          PresignedUrlConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PresignedUrlConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PresignedUrlConfigProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty = (wrapped
@@ -1468,8 +1470,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty):
-          JobExecutionsRetryConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          JobExecutionsRetryConfigProperty
+          JobExecutionsRetryConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JobExecutionsRetryConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JobExecutionsRetryConfigProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty =
@@ -1586,8 +1588,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty):
-          RateIncreaseCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RateIncreaseCriteriaProperty
+          RateIncreaseCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RateIncreaseCriteriaProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RateIncreaseCriteriaProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty = (wrapped
@@ -1697,7 +1699,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty):
-          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as MaintenanceWindowProperty
+          MaintenanceWindowProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceWindowProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaintenanceWindowProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty = (wrapped as
@@ -1805,7 +1808,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty):
-          AbortConfigProperty = CdkObjectWrappers.wrap(cdkObject) as AbortConfigProperty
+          AbortConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AbortConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AbortConfigProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty = (wrapped as
@@ -1996,8 +2000,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty):
-          ExponentialRolloutRateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ExponentialRolloutRateProperty
+          ExponentialRolloutRateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExponentialRolloutRateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExponentialRolloutRateProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty =
@@ -2104,7 +2108,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty):
-          RetryCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as RetryCriteriaProperty
+          RetryCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as? RetryCriteriaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RetryCriteriaProperty):
           software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty = (wrapped as

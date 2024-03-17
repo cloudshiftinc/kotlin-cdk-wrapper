@@ -274,8 +274,8 @@ public interface WebSocketRouteIntegrationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig):
-        WebSocketRouteIntegrationConfig = CdkObjectWrappers.wrap(cdkObject) as
-        WebSocketRouteIntegrationConfig
+        WebSocketRouteIntegrationConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        WebSocketRouteIntegrationConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketRouteIntegrationConfig):
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig = (wrapped as

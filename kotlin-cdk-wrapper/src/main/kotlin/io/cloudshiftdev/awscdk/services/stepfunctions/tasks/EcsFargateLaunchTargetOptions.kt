@@ -89,8 +89,8 @@ public interface EcsFargateLaunchTargetOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTargetOptions):
-        EcsFargateLaunchTargetOptions = CdkObjectWrappers.wrap(cdkObject) as
-        EcsFargateLaunchTargetOptions
+        EcsFargateLaunchTargetOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        EcsFargateLaunchTargetOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsFargateLaunchTargetOptions):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTargetOptions = (wrapped

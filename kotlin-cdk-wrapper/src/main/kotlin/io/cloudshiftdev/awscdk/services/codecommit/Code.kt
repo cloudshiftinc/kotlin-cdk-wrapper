@@ -32,6 +32,10 @@ public abstract class Code internal constructor(
   public open fun bind(scope: Construct): CodeConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codecommit.Code,
+  ) : Code(cdkObject)
+
   public companion object {
     public fun fromAsset(asset: Asset): Code =
         software.amazon.awscdk.services.codecommit.Code.fromAsset(asset.let(Asset::unwrap)).let(Code::wrap)
@@ -55,7 +59,7 @@ public abstract class Code internal constructor(
         branch).let(Code::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.Code): Code =
-        CdkObjectWrappers.wrap(cdkObject) as Code
+        CdkObjectWrappers.wrap(cdkObject) as? Code ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Code): software.amazon.awscdk.services.codecommit.Code = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.codecommit.Code

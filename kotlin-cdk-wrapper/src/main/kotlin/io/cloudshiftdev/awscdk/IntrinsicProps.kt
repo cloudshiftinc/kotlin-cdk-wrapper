@@ -102,7 +102,7 @@ public interface IntrinsicProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.IntrinsicProps): IntrinsicProps =
-        CdkObjectWrappers.wrap(cdkObject) as IntrinsicProps
+        CdkObjectWrappers.wrap(cdkObject) as? IntrinsicProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IntrinsicProps): software.amazon.awscdk.IntrinsicProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.IntrinsicProps

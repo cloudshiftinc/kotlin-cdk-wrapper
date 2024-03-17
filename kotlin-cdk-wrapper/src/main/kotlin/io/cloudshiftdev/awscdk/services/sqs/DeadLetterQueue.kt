@@ -101,7 +101,8 @@ public interface DeadLetterQueue {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.DeadLetterQueue):
-        DeadLetterQueue = CdkObjectWrappers.wrap(cdkObject) as DeadLetterQueue
+        DeadLetterQueue = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterQueue ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DeadLetterQueue):
         software.amazon.awscdk.services.sqs.DeadLetterQueue = (wrapped as CdkObject).cdkObject as

@@ -724,8 +724,8 @@ public open class CfnMultiRegionAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty):
-          PublicAccessBlockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PublicAccessBlockConfigurationProperty
+          PublicAccessBlockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublicAccessBlockConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicAccessBlockConfigurationProperty):
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty
@@ -838,7 +838,8 @@ public open class CfnMultiRegionAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty):
-          RegionProperty = CdkObjectWrappers.wrap(cdkObject) as RegionProperty
+          RegionProperty = CdkObjectWrappers.wrap(cdkObject) as? RegionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegionProperty):
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty = (wrapped as

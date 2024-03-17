@@ -557,7 +557,7 @@ public interface EventPattern {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.EventPattern): EventPattern
-        = CdkObjectWrappers.wrap(cdkObject) as EventPattern
+        = CdkObjectWrappers.wrap(cdkObject) as? EventPattern ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventPattern): software.amazon.awscdk.services.events.EventPattern
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.events.EventPattern

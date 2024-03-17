@@ -675,8 +675,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionTypeProperty):
-          AccountTakeoverActionTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccountTakeoverActionTypeProperty
+          AccountTakeoverActionTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountTakeoverActionTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountTakeoverActionTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionTypeProperty
@@ -813,7 +813,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty):
-          NotifyEmailTypeProperty = CdkObjectWrappers.wrap(cdkObject) as NotifyEmailTypeProperty
+          NotifyEmailTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? NotifyEmailTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotifyEmailTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty
@@ -897,8 +898,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty):
-          CompromisedCredentialsActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CompromisedCredentialsActionsTypeProperty
+          CompromisedCredentialsActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CompromisedCredentialsActionsTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CompromisedCredentialsActionsTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsActionsTypeProperty
@@ -1103,8 +1104,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty):
-          AccountTakeoverRiskConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccountTakeoverRiskConfigurationTypeProperty
+          AccountTakeoverRiskConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountTakeoverRiskConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountTakeoverRiskConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty
@@ -1451,8 +1452,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty):
-          NotifyConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotifyConfigurationTypeProperty
+          NotifyConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotifyConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotifyConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.NotifyConfigurationTypeProperty
@@ -1680,8 +1681,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty):
-          AccountTakeoverActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccountTakeoverActionsTypeProperty
+          AccountTakeoverActionsTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountTakeoverActionsTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountTakeoverActionsTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.AccountTakeoverActionsTypeProperty
@@ -1848,8 +1849,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty):
-          RiskExceptionConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RiskExceptionConfigurationTypeProperty
+          RiskExceptionConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RiskExceptionConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RiskExceptionConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty
@@ -2009,8 +2010,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty):
-          CompromisedCredentialsRiskConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CompromisedCredentialsRiskConfigurationTypeProperty
+          CompromisedCredentialsRiskConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject)
+          as? CompromisedCredentialsRiskConfigurationTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CompromisedCredentialsRiskConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty

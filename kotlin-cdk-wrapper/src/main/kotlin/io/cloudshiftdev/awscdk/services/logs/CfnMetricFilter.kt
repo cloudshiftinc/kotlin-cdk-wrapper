@@ -420,7 +420,8 @@ public open class CfnMetricFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty):
-          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as DimensionProperty
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as? DimensionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DimensionProperty):
           software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty = (wrapped as
@@ -835,8 +836,8 @@ public open class CfnMetricFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty):
-          MetricTransformationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MetricTransformationProperty
+          MetricTransformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetricTransformationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetricTransformationProperty):
           software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty =

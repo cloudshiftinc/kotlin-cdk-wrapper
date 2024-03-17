@@ -288,7 +288,7 @@ public interface CapacityConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CapacityConfig):
-        CapacityConfig = CdkObjectWrappers.wrap(cdkObject) as CapacityConfig
+        CapacityConfig = CdkObjectWrappers.wrap(cdkObject) as? CapacityConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CapacityConfig):
         software.amazon.awscdk.services.opensearchservice.CapacityConfig = (wrapped as

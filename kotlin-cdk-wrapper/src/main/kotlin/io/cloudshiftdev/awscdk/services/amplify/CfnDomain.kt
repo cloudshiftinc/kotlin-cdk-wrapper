@@ -843,7 +843,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty):
-          SubDomainSettingProperty = CdkObjectWrappers.wrap(cdkObject) as SubDomainSettingProperty
+          SubDomainSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? SubDomainSettingProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubDomainSettingProperty):
           software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty = (wrapped as
@@ -1029,7 +1030,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty):
-          CertificateProperty = CdkObjectWrappers.wrap(cdkObject) as CertificateProperty
+          CertificateProperty = CdkObjectWrappers.wrap(cdkObject) as? CertificateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateProperty):
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty = (wrapped as
@@ -1183,8 +1185,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty):
-          CertificateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CertificateSettingsProperty
+          CertificateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CertificateSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CertificateSettingsProperty):
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty = (wrapped

@@ -117,7 +117,8 @@ public interface ResourceAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ResourceAttributes):
-        ResourceAttributes = CdkObjectWrappers.wrap(cdkObject) as ResourceAttributes
+        ResourceAttributes = CdkObjectWrappers.wrap(cdkObject) as? ResourceAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourceAttributes):
         software.amazon.awscdk.services.apigateway.ResourceAttributes = (wrapped as

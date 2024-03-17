@@ -506,8 +506,8 @@ public interface EmrModifyInstanceGroupByNameProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByNameProps):
-        EmrModifyInstanceGroupByNameProps = CdkObjectWrappers.wrap(cdkObject) as
-        EmrModifyInstanceGroupByNameProps
+        EmrModifyInstanceGroupByNameProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EmrModifyInstanceGroupByNameProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrModifyInstanceGroupByNameProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByNameProps =

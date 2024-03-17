@@ -127,8 +127,8 @@ public interface CfnCloudFrontOriginAccessIdentityProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentityProps):
-        CfnCloudFrontOriginAccessIdentityProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCloudFrontOriginAccessIdentityProps
+        CfnCloudFrontOriginAccessIdentityProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCloudFrontOriginAccessIdentityProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCloudFrontOriginAccessIdentityProps):
         software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentityProps = (wrapped

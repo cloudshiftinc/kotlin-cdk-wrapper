@@ -86,7 +86,8 @@ public interface CfnEipEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpointProps):
-        CfnEipEndpointProps = CdkObjectWrappers.wrap(cdkObject) as CfnEipEndpointProps
+        CfnEipEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEipEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEipEndpointProps):
         software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpointProps = (wrapped

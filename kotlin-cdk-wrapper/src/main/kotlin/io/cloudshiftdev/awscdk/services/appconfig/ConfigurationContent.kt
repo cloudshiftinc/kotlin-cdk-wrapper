@@ -33,6 +33,10 @@ public abstract class ConfigurationContent internal constructor(
    */
   public open fun contentType(): String = unwrap(this).getContentType()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationContent,
+  ) : ConfigurationContent(cdkObject)
+
   public companion object {
     public fun fromFile(inputPath: String): ConfigurationContent =
         software.amazon.awscdk.services.appconfig.ConfigurationContent.fromFile(inputPath).let(ConfigurationContent::wrap)
@@ -62,7 +66,8 @@ public abstract class ConfigurationContent internal constructor(
         software.amazon.awscdk.services.appconfig.ConfigurationContent.fromInlineYaml(content).let(ConfigurationContent::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationContent):
-        ConfigurationContent = CdkObjectWrappers.wrap(cdkObject) as ConfigurationContent
+        ConfigurationContent = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationContent ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConfigurationContent):
         software.amazon.awscdk.services.appconfig.ConfigurationContent = (wrapped as

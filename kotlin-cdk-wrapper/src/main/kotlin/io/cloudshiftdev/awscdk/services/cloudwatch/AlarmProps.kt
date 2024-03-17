@@ -295,7 +295,7 @@ public interface AlarmProps : CreateAlarmOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmProps): AlarmProps
-        = CdkObjectWrappers.wrap(cdkObject) as AlarmProps
+        = CdkObjectWrappers.wrap(cdkObject) as? AlarmProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AlarmProps): software.amazon.awscdk.services.cloudwatch.AlarmProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.AlarmProps

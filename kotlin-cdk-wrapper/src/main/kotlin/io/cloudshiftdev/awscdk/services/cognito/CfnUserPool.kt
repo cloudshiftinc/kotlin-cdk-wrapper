@@ -2390,7 +2390,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty):
-          CustomEmailSenderProperty = CdkObjectWrappers.wrap(cdkObject) as CustomEmailSenderProperty
+          CustomEmailSenderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomEmailSenderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomEmailSenderProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty = (wrapped
@@ -2656,8 +2657,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty):
-          AdminCreateUserConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AdminCreateUserConfigProperty
+          AdminCreateUserConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AdminCreateUserConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AdminCreateUserConfigProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty =
@@ -2986,7 +2987,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty):
-          PasswordPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as PasswordPolicyProperty
+          PasswordPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? PasswordPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PasswordPolicyProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty = (wrapped as
@@ -3102,8 +3104,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty):
-          StringAttributeConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StringAttributeConstraintsProperty
+          StringAttributeConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StringAttributeConstraintsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StringAttributeConstraintsProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty =
@@ -3349,8 +3351,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty):
-          DeviceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DeviceConfigurationProperty
+          DeviceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeviceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty = (wrapped
@@ -3463,7 +3465,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty):
-          PoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as PoliciesProperty
+          PoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as? PoliciesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PoliciesProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty = (wrapped as
@@ -3966,7 +3969,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty):
-          SchemaAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaAttributeProperty
+          SchemaAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaAttributeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaAttributeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty = (wrapped as
@@ -4081,8 +4085,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty):
-          AccountRecoverySettingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccountRecoverySettingProperty
+          AccountRecoverySettingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccountRecoverySettingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccountRecoverySettingProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty =
@@ -4193,8 +4197,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty):
-          NumberAttributeConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NumberAttributeConstraintsProperty
+          NumberAttributeConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NumberAttributeConstraintsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NumberAttributeConstraintsProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty =
@@ -4410,7 +4414,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty):
-          SmsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as SmsConfigurationProperty
+          SmsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? SmsConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SmsConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty = (wrapped as
@@ -4532,7 +4537,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty):
-          CustomSMSSenderProperty = CdkObjectWrappers.wrap(cdkObject) as CustomSMSSenderProperty
+          CustomSMSSenderProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomSMSSenderProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomSMSSenderProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty = (wrapped as
@@ -4846,8 +4852,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty):
-          VerificationMessageTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VerificationMessageTemplateProperty
+          VerificationMessageTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VerificationMessageTemplateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VerificationMessageTemplateProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty =
@@ -5307,8 +5313,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty):
-          EmailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EmailConfigurationProperty
+          EmailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EmailConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EmailConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty = (wrapped
@@ -5490,8 +5496,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty):
-          UsernameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UsernameConfigurationProperty
+          UsernameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UsernameConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UsernameConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty =
@@ -5600,7 +5606,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty):
-          RecoveryOptionProperty = CdkObjectWrappers.wrap(cdkObject) as RecoveryOptionProperty
+          RecoveryOptionProperty = CdkObjectWrappers.wrap(cdkObject) as? RecoveryOptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecoveryOptionProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty = (wrapped as
@@ -6192,7 +6199,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty):
-          LambdaConfigProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaConfigProperty
+          LambdaConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaConfigProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty = (wrapped as
@@ -6326,8 +6334,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PreTokenGenerationConfigProperty):
-          PreTokenGenerationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PreTokenGenerationConfigProperty
+          PreTokenGenerationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PreTokenGenerationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PreTokenGenerationConfigProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.PreTokenGenerationConfigProperty =
@@ -6496,8 +6504,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty):
-          InviteMessageTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InviteMessageTemplateProperty
+          InviteMessageTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InviteMessageTemplateProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InviteMessageTemplateProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty =
@@ -6706,8 +6714,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty):
-          UserAttributeUpdateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UserAttributeUpdateSettingsProperty
+          UserAttributeUpdateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UserAttributeUpdateSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserAttributeUpdateSettingsProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty =
@@ -6797,7 +6805,8 @@ public open class CfnUserPool internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty):
-          UserPoolAddOnsProperty = CdkObjectWrappers.wrap(cdkObject) as UserPoolAddOnsProperty
+          UserPoolAddOnsProperty = CdkObjectWrappers.wrap(cdkObject) as? UserPoolAddOnsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UserPoolAddOnsProperty):
           software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty = (wrapped as

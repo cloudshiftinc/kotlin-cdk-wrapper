@@ -309,8 +309,8 @@ public open class CfnInputSecurityGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.InputWhitelistRuleCidrProperty):
-          InputWhitelistRuleCidrProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InputWhitelistRuleCidrProperty
+          InputWhitelistRuleCidrProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputWhitelistRuleCidrProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputWhitelistRuleCidrProperty):
           software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.InputWhitelistRuleCidrProperty

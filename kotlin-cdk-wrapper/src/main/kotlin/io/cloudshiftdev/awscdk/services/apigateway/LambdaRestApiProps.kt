@@ -937,7 +937,8 @@ public interface LambdaRestApiProps : RestApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.LambdaRestApiProps):
-        LambdaRestApiProps = CdkObjectWrappers.wrap(cdkObject) as LambdaRestApiProps
+        LambdaRestApiProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaRestApiProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaRestApiProps):
         software.amazon.awscdk.services.apigateway.LambdaRestApiProps = (wrapped as

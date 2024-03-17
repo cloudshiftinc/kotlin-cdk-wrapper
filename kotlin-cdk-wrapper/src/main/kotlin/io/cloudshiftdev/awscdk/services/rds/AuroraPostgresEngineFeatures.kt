@@ -108,8 +108,8 @@ public interface AuroraPostgresEngineFeatures {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresEngineFeatures):
-        AuroraPostgresEngineFeatures = CdkObjectWrappers.wrap(cdkObject) as
-        AuroraPostgresEngineFeatures
+        AuroraPostgresEngineFeatures = CdkObjectWrappers.wrap(cdkObject) as?
+        AuroraPostgresEngineFeatures ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuroraPostgresEngineFeatures):
         software.amazon.awscdk.services.rds.AuroraPostgresEngineFeatures = (wrapped as

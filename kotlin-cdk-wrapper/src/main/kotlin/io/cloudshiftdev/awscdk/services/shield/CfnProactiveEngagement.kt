@@ -480,7 +480,8 @@ public open class CfnProactiveEngagement internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagement.EmergencyContactProperty):
-          EmergencyContactProperty = CdkObjectWrappers.wrap(cdkObject) as EmergencyContactProperty
+          EmergencyContactProperty = CdkObjectWrappers.wrap(cdkObject) as? EmergencyContactProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EmergencyContactProperty):
           software.amazon.awscdk.services.shield.CfnProactiveEngagement.EmergencyContactProperty =

@@ -356,7 +356,8 @@ public interface CfnFlowEntitlementProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlementProps):
-        CfnFlowEntitlementProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlowEntitlementProps
+        CfnFlowEntitlementProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFlowEntitlementProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowEntitlementProps):
         software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlementProps = (wrapped as

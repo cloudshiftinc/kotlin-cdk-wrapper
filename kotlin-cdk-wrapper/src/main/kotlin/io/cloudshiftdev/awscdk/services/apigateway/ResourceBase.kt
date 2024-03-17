@@ -228,9 +228,13 @@ public abstract class ResourceBase internal constructor(
    */
   public override fun resourceId(): String = unwrap(this).getResourceId()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigateway.ResourceBase,
+  ) : ResourceBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ResourceBase):
-        ResourceBase = CdkObjectWrappers.wrap(cdkObject) as ResourceBase
+        ResourceBase = CdkObjectWrappers.wrap(cdkObject) as? ResourceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourceBase):
         software.amazon.awscdk.services.apigateway.ResourceBase = (wrapped as CdkObject).cdkObject

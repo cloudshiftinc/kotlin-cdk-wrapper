@@ -214,8 +214,8 @@ public interface CfnLaunchNotificationConstraintProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraintProps):
-        CfnLaunchNotificationConstraintProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLaunchNotificationConstraintProps
+        CfnLaunchNotificationConstraintProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLaunchNotificationConstraintProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchNotificationConstraintProps):
         software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraintProps =

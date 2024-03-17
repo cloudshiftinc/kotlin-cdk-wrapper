@@ -564,8 +564,8 @@ public interface CallApiGatewayRestApiEndpointProps : CallApiGatewayEndpointBase
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpointProps):
-        CallApiGatewayRestApiEndpointProps = CdkObjectWrappers.wrap(cdkObject) as
-        CallApiGatewayRestApiEndpointProps
+        CallApiGatewayRestApiEndpointProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CallApiGatewayRestApiEndpointProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CallApiGatewayRestApiEndpointProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpointProps =

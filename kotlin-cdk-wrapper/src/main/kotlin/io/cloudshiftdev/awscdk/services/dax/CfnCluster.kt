@@ -885,7 +885,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty):
-          SSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as SSESpecificationProperty
+          SSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? SSESpecificationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SSESpecificationProperty):
           software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty = (wrapped as

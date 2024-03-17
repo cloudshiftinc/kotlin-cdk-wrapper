@@ -158,7 +158,7 @@ public interface FingerprintOptions : CopyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.FingerprintOptions): FingerprintOptions =
-        CdkObjectWrappers.wrap(cdkObject) as FingerprintOptions
+        CdkObjectWrappers.wrap(cdkObject) as? FingerprintOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FingerprintOptions): software.amazon.awscdk.FingerprintOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.FingerprintOptions

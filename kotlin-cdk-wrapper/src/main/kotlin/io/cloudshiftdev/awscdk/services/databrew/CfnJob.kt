@@ -1491,7 +1491,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.databrew.CfnJob.S3LocationProperty = (wrapped as
@@ -1621,7 +1622,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.OutputLocationProperty):
-          OutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as OutputLocationProperty
+          OutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputLocationProperty):
           software.amazon.awscdk.services.databrew.CfnJob.OutputLocationProperty = (wrapped as
@@ -1954,7 +1956,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.DataCatalogOutputProperty):
-          DataCatalogOutputProperty = CdkObjectWrappers.wrap(cdkObject) as DataCatalogOutputProperty
+          DataCatalogOutputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCatalogOutputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataCatalogOutputProperty):
           software.amazon.awscdk.services.databrew.CfnJob.DataCatalogOutputProperty = (wrapped as
@@ -2051,7 +2054,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty):
-          AllowedStatisticsProperty = CdkObjectWrappers.wrap(cdkObject) as AllowedStatisticsProperty
+          AllowedStatisticsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AllowedStatisticsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AllowedStatisticsProperty):
           software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty = (wrapped as
@@ -2171,7 +2175,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.StatisticOverrideProperty):
-          StatisticOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as StatisticOverrideProperty
+          StatisticOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatisticOverrideProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StatisticOverrideProperty):
           software.amazon.awscdk.services.databrew.CfnJob.StatisticOverrideProperty = (wrapped as
@@ -2254,7 +2259,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.CsvOutputOptionsProperty):
-          CsvOutputOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as CsvOutputOptionsProperty
+          CsvOutputOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? CsvOutputOptionsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CsvOutputOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnJob.CsvOutputOptionsProperty = (wrapped as
@@ -2596,7 +2602,8 @@ public open class CfnJob internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.OutputProperty):
-          OutputProperty = CdkObjectWrappers.wrap(cdkObject) as OutputProperty
+          OutputProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputProperty):
           software.amazon.awscdk.services.databrew.CfnJob.OutputProperty = (wrapped as
@@ -2748,8 +2755,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.DatabaseTableOutputOptionsProperty):
-          DatabaseTableOutputOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DatabaseTableOutputOptionsProperty
+          DatabaseTableOutputOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabaseTableOutputOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatabaseTableOutputOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnJob.DatabaseTableOutputOptionsProperty =
@@ -2858,7 +2865,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.ColumnSelectorProperty):
-          ColumnSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as ColumnSelectorProperty
+          ColumnSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnSelectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnSelectorProperty):
           software.amazon.awscdk.services.databrew.CfnJob.ColumnSelectorProperty = (wrapped as
@@ -3164,8 +3172,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.EntityDetectorConfigurationProperty):
-          EntityDetectorConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EntityDetectorConfigurationProperty
+          EntityDetectorConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EntityDetectorConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EntityDetectorConfigurationProperty):
           software.amazon.awscdk.services.databrew.CfnJob.EntityDetectorConfigurationProperty =
@@ -3367,8 +3375,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.ColumnStatisticsConfigurationProperty):
-          ColumnStatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ColumnStatisticsConfigurationProperty
+          ColumnStatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColumnStatisticsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnStatisticsConfigurationProperty):
           software.amazon.awscdk.services.databrew.CfnJob.ColumnStatisticsConfigurationProperty =
@@ -3499,8 +3507,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.ValidationConfigurationProperty):
-          ValidationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ValidationConfigurationProperty
+          ValidationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ValidationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValidationConfigurationProperty):
           software.amazon.awscdk.services.databrew.CfnJob.ValidationConfigurationProperty = (wrapped
@@ -3605,7 +3613,8 @@ public open class CfnJob internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.RecipeProperty):
-          RecipeProperty = CdkObjectWrappers.wrap(cdkObject) as RecipeProperty
+          RecipeProperty = CdkObjectWrappers.wrap(cdkObject) as? RecipeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RecipeProperty):
           software.amazon.awscdk.services.databrew.CfnJob.RecipeProperty = (wrapped as
@@ -3763,8 +3772,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.StatisticsConfigurationProperty):
-          StatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StatisticsConfigurationProperty
+          StatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StatisticsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StatisticsConfigurationProperty):
           software.amazon.awscdk.services.databrew.CfnJob.StatisticsConfigurationProperty = (wrapped
@@ -4155,8 +4164,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.ProfileConfigurationProperty):
-          ProfileConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProfileConfigurationProperty
+          ProfileConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProfileConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProfileConfigurationProperty):
           software.amazon.awscdk.services.databrew.CfnJob.ProfileConfigurationProperty = (wrapped as
@@ -4274,8 +4283,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.OutputFormatOptionsProperty):
-          OutputFormatOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OutputFormatOptionsProperty
+          OutputFormatOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputFormatOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputFormatOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnJob.OutputFormatOptionsProperty = (wrapped as
@@ -4398,8 +4407,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.S3TableOutputOptionsProperty):
-          S3TableOutputOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3TableOutputOptionsProperty
+          S3TableOutputOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3TableOutputOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3TableOutputOptionsProperty):
           software.amazon.awscdk.services.databrew.CfnJob.S3TableOutputOptionsProperty = (wrapped as
@@ -4589,7 +4598,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.DatabaseOutputProperty):
-          DatabaseOutputProperty = CdkObjectWrappers.wrap(cdkObject) as DatabaseOutputProperty
+          DatabaseOutputProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseOutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatabaseOutputProperty):
           software.amazon.awscdk.services.databrew.CfnJob.DatabaseOutputProperty = (wrapped as
@@ -4743,7 +4753,8 @@ public open class CfnJob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnJob.JobSampleProperty):
-          JobSampleProperty = CdkObjectWrappers.wrap(cdkObject) as JobSampleProperty
+          JobSampleProperty = CdkObjectWrappers.wrap(cdkObject) as? JobSampleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: JobSampleProperty):
           software.amazon.awscdk.services.databrew.CfnJob.JobSampleProperty = (wrapped as

@@ -470,7 +470,8 @@ public interface CfnSafetyRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRuleProps):
-        CfnSafetyRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnSafetyRuleProps
+        CfnSafetyRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSafetyRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSafetyRuleProps):
         software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRuleProps = (wrapped as

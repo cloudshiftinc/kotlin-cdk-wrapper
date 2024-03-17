@@ -652,7 +652,8 @@ public open class CfnAnomalySubscription internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty):
-          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceTagProperty
+          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceTagProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceTagProperty):
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty = (wrapped
@@ -790,7 +791,8 @@ public open class CfnAnomalySubscription internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty):
-          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as SubscriberProperty
+          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriberProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriberProperty):
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty = (wrapped as

@@ -403,7 +403,8 @@ public interface CfnLogGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnLogGroupProps):
-        CfnLogGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnLogGroupProps
+        CfnLogGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLogGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogGroupProps):
         software.amazon.awscdk.services.logs.CfnLogGroupProps = (wrapped as CdkObject).cdkObject as

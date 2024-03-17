@@ -970,7 +970,8 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty):
-          LoginProfileProperty = CdkObjectWrappers.wrap(cdkObject) as LoginProfileProperty
+          LoginProfileProperty = CdkObjectWrappers.wrap(cdkObject) as? LoginProfileProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoginProfileProperty):
           software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty = (wrapped as
@@ -1094,7 +1095,8 @@ public open class CfnUser internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnUser.PolicyProperty):
-          PolicyProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyProperty
+          PolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyProperty):
           software.amazon.awscdk.services.iam.CfnUser.PolicyProperty = (wrapped as

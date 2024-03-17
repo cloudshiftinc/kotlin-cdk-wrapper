@@ -190,7 +190,8 @@ public interface EnvironmentAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentAttributes):
-        EnvironmentAttributes = CdkObjectWrappers.wrap(cdkObject) as EnvironmentAttributes
+        EnvironmentAttributes = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentAttributes):
         software.amazon.awscdk.services.appconfig.EnvironmentAttributes = (wrapped as

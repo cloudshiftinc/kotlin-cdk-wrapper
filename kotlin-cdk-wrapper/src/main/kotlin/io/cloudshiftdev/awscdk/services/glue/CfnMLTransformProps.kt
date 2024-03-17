@@ -809,7 +809,8 @@ public interface CfnMLTransformProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransformProps):
-        CfnMLTransformProps = CdkObjectWrappers.wrap(cdkObject) as CfnMLTransformProps
+        CfnMLTransformProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMLTransformProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMLTransformProps):
         software.amazon.awscdk.services.glue.CfnMLTransformProps = (wrapped as CdkObject).cdkObject

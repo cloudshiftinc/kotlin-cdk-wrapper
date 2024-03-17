@@ -109,8 +109,8 @@ public interface CfnResourceAutoScalingCreationPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy):
-        CfnResourceAutoScalingCreationPolicy = CdkObjectWrappers.wrap(cdkObject) as
-        CfnResourceAutoScalingCreationPolicy
+        CfnResourceAutoScalingCreationPolicy = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResourceAutoScalingCreationPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResourceAutoScalingCreationPolicy):
         software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy = (wrapped as

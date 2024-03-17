@@ -103,7 +103,7 @@ public interface BaseMountPoint {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.BaseMountPoint): BaseMountPoint
-        = CdkObjectWrappers.wrap(cdkObject) as BaseMountPoint
+        = CdkObjectWrappers.wrap(cdkObject) as? BaseMountPoint ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseMountPoint): software.amazon.awscdk.services.ecs.BaseMountPoint
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.BaseMountPoint

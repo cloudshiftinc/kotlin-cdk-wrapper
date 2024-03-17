@@ -104,8 +104,8 @@ public interface LogSubscriptionDestinationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig):
-        LogSubscriptionDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as
-        LogSubscriptionDestinationConfig
+        LogSubscriptionDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        LogSubscriptionDestinationConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogSubscriptionDestinationConfig):
         software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig = (wrapped as

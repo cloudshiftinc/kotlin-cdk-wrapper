@@ -1178,7 +1178,8 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty):
-          BodyS3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as BodyS3LocationProperty
+          BodyS3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? BodyS3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BodyS3LocationProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty = (wrapped as
@@ -1500,7 +1501,7 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty):
-          CorsProperty = CdkObjectWrappers.wrap(cdkObject) as CorsProperty
+          CorsProperty = CdkObjectWrappers.wrap(cdkObject) as? CorsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CorsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty = (wrapped as

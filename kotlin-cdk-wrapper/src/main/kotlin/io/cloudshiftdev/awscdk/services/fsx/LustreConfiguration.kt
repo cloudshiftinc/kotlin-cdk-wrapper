@@ -451,7 +451,8 @@ public interface LustreConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.LustreConfiguration):
-        LustreConfiguration = CdkObjectWrappers.wrap(cdkObject) as LustreConfiguration
+        LustreConfiguration = CdkObjectWrappers.wrap(cdkObject) as? LustreConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LustreConfiguration):
         software.amazon.awscdk.services.fsx.LustreConfiguration = (wrapped as CdkObject).cdkObject

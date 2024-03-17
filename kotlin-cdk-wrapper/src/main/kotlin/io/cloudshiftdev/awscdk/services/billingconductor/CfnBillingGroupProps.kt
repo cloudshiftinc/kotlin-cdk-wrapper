@@ -316,7 +316,8 @@ public interface CfnBillingGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps):
-        CfnBillingGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnBillingGroupProps
+        CfnBillingGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBillingGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBillingGroupProps):
         software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps = (wrapped as

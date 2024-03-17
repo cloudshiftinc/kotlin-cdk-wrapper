@@ -160,8 +160,8 @@ public interface CfnDataCatalogEncryptionSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettingsProps):
-        CfnDataCatalogEncryptionSettingsProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDataCatalogEncryptionSettingsProps
+        CfnDataCatalogEncryptionSettingsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDataCatalogEncryptionSettingsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataCatalogEncryptionSettingsProps):
         software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettingsProps = (wrapped as

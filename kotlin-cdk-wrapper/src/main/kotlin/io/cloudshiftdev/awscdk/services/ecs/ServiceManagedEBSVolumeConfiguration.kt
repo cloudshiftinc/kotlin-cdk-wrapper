@@ -493,8 +493,8 @@ public interface ServiceManagedEBSVolumeConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedEBSVolumeConfiguration):
-        ServiceManagedEBSVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as
-        ServiceManagedEBSVolumeConfiguration
+        ServiceManagedEBSVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as?
+        ServiceManagedEBSVolumeConfiguration ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceManagedEBSVolumeConfiguration):
         software.amazon.awscdk.services.ecs.ServiceManagedEBSVolumeConfiguration = (wrapped as

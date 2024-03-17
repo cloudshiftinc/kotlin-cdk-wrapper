@@ -448,7 +448,7 @@ public interface AppProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.AppProps): AppProps =
-        CdkObjectWrappers.wrap(cdkObject) as AppProps
+        CdkObjectWrappers.wrap(cdkObject) as? AppProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AppProps): software.amazon.awscdk.AppProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.AppProps

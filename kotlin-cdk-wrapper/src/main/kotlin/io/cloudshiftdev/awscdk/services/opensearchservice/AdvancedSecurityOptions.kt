@@ -257,7 +257,8 @@ public interface AdvancedSecurityOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions):
-        AdvancedSecurityOptions = CdkObjectWrappers.wrap(cdkObject) as AdvancedSecurityOptions
+        AdvancedSecurityOptions = CdkObjectWrappers.wrap(cdkObject) as? AdvancedSecurityOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AdvancedSecurityOptions):
         software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions = (wrapped as

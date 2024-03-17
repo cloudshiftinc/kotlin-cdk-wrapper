@@ -75,7 +75,8 @@ public interface BatchHttpRouteOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions):
-        BatchHttpRouteOptions = CdkObjectWrappers.wrap(cdkObject) as BatchHttpRouteOptions
+        BatchHttpRouteOptions = CdkObjectWrappers.wrap(cdkObject) as? BatchHttpRouteOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BatchHttpRouteOptions):
         software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions = (wrapped as

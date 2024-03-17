@@ -730,7 +730,7 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty):
-          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as CodeProperty
+          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeProperty):
           software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty = (wrapped as
@@ -911,7 +911,7 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property):
-          S3Property = CdkObjectWrappers.wrap(cdkObject) as S3Property
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as? S3Property ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.codecommit.CfnRepository.S3Property = (wrapped as
@@ -1186,7 +1186,8 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty):
-          RepositoryTriggerProperty = CdkObjectWrappers.wrap(cdkObject) as RepositoryTriggerProperty
+          RepositoryTriggerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RepositoryTriggerProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RepositoryTriggerProperty):
           software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty =

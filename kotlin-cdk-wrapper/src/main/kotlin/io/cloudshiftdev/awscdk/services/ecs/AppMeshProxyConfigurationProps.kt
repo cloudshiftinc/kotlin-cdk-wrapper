@@ -317,8 +317,8 @@ public interface AppMeshProxyConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationProps):
-        AppMeshProxyConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        AppMeshProxyConfigurationProps
+        AppMeshProxyConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AppMeshProxyConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AppMeshProxyConfigurationProps):
         software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationProps = (wrapped as

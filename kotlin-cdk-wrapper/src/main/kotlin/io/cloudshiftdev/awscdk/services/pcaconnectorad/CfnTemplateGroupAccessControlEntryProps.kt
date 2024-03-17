@@ -231,8 +231,8 @@ public interface CfnTemplateGroupAccessControlEntryProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntryProps):
-        CfnTemplateGroupAccessControlEntryProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTemplateGroupAccessControlEntryProps
+        CfnTemplateGroupAccessControlEntryProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTemplateGroupAccessControlEntryProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTemplateGroupAccessControlEntryProps):
         software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntryProps =

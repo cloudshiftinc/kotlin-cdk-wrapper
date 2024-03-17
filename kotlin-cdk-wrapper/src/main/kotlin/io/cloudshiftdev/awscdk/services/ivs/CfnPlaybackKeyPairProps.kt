@@ -171,7 +171,8 @@ public interface CfnPlaybackKeyPairProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnPlaybackKeyPairProps):
-        CfnPlaybackKeyPairProps = CdkObjectWrappers.wrap(cdkObject) as CfnPlaybackKeyPairProps
+        CfnPlaybackKeyPairProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPlaybackKeyPairProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlaybackKeyPairProps):
         software.amazon.awscdk.services.ivs.CfnPlaybackKeyPairProps = (wrapped as

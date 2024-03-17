@@ -74,7 +74,8 @@ public interface GenericWindowsImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.GenericWindowsImageProps):
-        GenericWindowsImageProps = CdkObjectWrappers.wrap(cdkObject) as GenericWindowsImageProps
+        GenericWindowsImageProps = CdkObjectWrappers.wrap(cdkObject) as? GenericWindowsImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GenericWindowsImageProps):
         software.amazon.awscdk.services.ec2.GenericWindowsImageProps = (wrapped as

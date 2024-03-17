@@ -237,7 +237,8 @@ public interface CfnKeySigningKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnKeySigningKeyProps):
-        CfnKeySigningKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnKeySigningKeyProps
+        CfnKeySigningKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnKeySigningKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeySigningKeyProps):
         software.amazon.awscdk.services.route53.CfnKeySigningKeyProps = (wrapped as

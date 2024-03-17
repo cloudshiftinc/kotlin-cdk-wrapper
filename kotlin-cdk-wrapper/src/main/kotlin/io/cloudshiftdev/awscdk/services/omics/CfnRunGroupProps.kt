@@ -213,7 +213,8 @@ public interface CfnRunGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnRunGroupProps):
-        CfnRunGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnRunGroupProps
+        CfnRunGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRunGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRunGroupProps):
         software.amazon.awscdk.services.omics.CfnRunGroupProps = (wrapped as CdkObject).cdkObject as

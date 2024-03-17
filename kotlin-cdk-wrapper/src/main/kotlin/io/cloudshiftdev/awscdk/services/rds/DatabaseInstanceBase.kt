@@ -396,6 +396,10 @@ public abstract class DatabaseInstanceBase internal constructor(
   public override fun onEvent(id: String, options: OnEventOptions.Builder.() -> Unit): Rule =
       onEvent(id, OnEventOptions(options))
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase,
+  ) : DatabaseInstanceBase(cdkObject)
+
   public companion object {
     public fun fromDatabaseInstanceAttributes(
       scope: Construct,
@@ -415,7 +419,8 @@ public abstract class DatabaseInstanceBase internal constructor(
         DatabaseInstanceAttributes(attrs))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase):
-        DatabaseInstanceBase = CdkObjectWrappers.wrap(cdkObject) as DatabaseInstanceBase
+        DatabaseInstanceBase = CdkObjectWrappers.wrap(cdkObject) as? DatabaseInstanceBase ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseInstanceBase):
         software.amazon.awscdk.services.rds.DatabaseInstanceBase = (wrapped as CdkObject).cdkObject

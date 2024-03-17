@@ -112,8 +112,8 @@ public interface WebSocketRouteIntegrationBindOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBindOptions):
-        WebSocketRouteIntegrationBindOptions = CdkObjectWrappers.wrap(cdkObject) as
-        WebSocketRouteIntegrationBindOptions
+        WebSocketRouteIntegrationBindOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        WebSocketRouteIntegrationBindOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: WebSocketRouteIntegrationBindOptions):
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBindOptions = (wrapped

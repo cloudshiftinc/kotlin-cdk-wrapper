@@ -198,8 +198,8 @@ public interface CfnWirelessDeviceImportTaskProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTaskProps):
-        CfnWirelessDeviceImportTaskProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnWirelessDeviceImportTaskProps
+        CfnWirelessDeviceImportTaskProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnWirelessDeviceImportTaskProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWirelessDeviceImportTaskProps):
         software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTaskProps = (wrapped as

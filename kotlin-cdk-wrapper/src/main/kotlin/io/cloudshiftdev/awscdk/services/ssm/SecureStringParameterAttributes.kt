@@ -193,8 +193,8 @@ public interface SecureStringParameterAttributes : CommonStringParameterAttribut
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ssm.SecureStringParameterAttributes):
-        SecureStringParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        SecureStringParameterAttributes
+        SecureStringParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        SecureStringParameterAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecureStringParameterAttributes):
         software.amazon.awscdk.services.ssm.SecureStringParameterAttributes = (wrapped as

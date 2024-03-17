@@ -418,7 +418,8 @@ public open class CfnSequenceStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty):
-          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SseConfigProperty
+          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseConfigProperty):
           software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty = (wrapped as

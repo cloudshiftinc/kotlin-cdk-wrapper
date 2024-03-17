@@ -1118,8 +1118,8 @@ public open class CfnNotebookInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty):
-          InstanceMetadataServiceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceMetadataServiceConfigurationProperty
+          InstanceMetadataServiceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceMetadataServiceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceMetadataServiceConfigurationProperty):
           software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty

@@ -160,7 +160,8 @@ public interface CfnLocalGatewayRouteProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteProps):
-        CfnLocalGatewayRouteProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocalGatewayRouteProps
+        CfnLocalGatewayRouteProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocalGatewayRouteProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocalGatewayRouteProps):
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteProps = (wrapped as

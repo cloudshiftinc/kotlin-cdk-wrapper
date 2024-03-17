@@ -579,8 +579,8 @@ public interface CfnCapacityReservationFleetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleetProps):
-        CfnCapacityReservationFleetProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCapacityReservationFleetProps
+        CfnCapacityReservationFleetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCapacityReservationFleetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapacityReservationFleetProps):
         software.amazon.awscdk.services.ec2.CfnCapacityReservationFleetProps = (wrapped as

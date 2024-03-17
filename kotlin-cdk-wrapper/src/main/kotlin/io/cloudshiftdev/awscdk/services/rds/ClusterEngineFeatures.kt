@@ -109,7 +109,8 @@ public interface ClusterEngineFeatures {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ClusterEngineFeatures):
-        ClusterEngineFeatures = CdkObjectWrappers.wrap(cdkObject) as ClusterEngineFeatures
+        ClusterEngineFeatures = CdkObjectWrappers.wrap(cdkObject) as? ClusterEngineFeatures ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClusterEngineFeatures):
         software.amazon.awscdk.services.rds.ClusterEngineFeatures = (wrapped as CdkObject).cdkObject

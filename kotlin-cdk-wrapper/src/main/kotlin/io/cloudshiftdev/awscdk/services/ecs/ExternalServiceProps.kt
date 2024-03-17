@@ -660,7 +660,8 @@ public interface ExternalServiceProps : BaseServiceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExternalServiceProps):
-        ExternalServiceProps = CdkObjectWrappers.wrap(cdkObject) as ExternalServiceProps
+        ExternalServiceProps = CdkObjectWrappers.wrap(cdkObject) as? ExternalServiceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExternalServiceProps):
         software.amazon.awscdk.services.ecs.ExternalServiceProps = (wrapped as CdkObject).cdkObject

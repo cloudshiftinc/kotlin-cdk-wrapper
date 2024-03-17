@@ -171,7 +171,8 @@ public interface ProxyTargetConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ProxyTargetConfig):
-        ProxyTargetConfig = CdkObjectWrappers.wrap(cdkObject) as ProxyTargetConfig
+        ProxyTargetConfig = CdkObjectWrappers.wrap(cdkObject) as? ProxyTargetConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProxyTargetConfig):
         software.amazon.awscdk.services.rds.ProxyTargetConfig = (wrapped as CdkObject).cdkObject as

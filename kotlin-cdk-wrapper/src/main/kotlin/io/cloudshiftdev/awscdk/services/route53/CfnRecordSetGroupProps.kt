@@ -281,7 +281,8 @@ public interface CfnRecordSetGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroupProps):
-        CfnRecordSetGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnRecordSetGroupProps
+        CfnRecordSetGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRecordSetGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecordSetGroupProps):
         software.amazon.awscdk.services.route53.CfnRecordSetGroupProps = (wrapped as

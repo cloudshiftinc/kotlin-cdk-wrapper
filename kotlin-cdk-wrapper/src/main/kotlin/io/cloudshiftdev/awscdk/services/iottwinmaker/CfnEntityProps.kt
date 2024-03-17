@@ -400,7 +400,7 @@ public interface CfnEntityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntityProps):
-        CfnEntityProps = CdkObjectWrappers.wrap(cdkObject) as CfnEntityProps
+        CfnEntityProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEntityProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEntityProps):
         software.amazon.awscdk.services.iottwinmaker.CfnEntityProps = (wrapped as

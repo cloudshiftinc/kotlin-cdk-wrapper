@@ -143,7 +143,7 @@ public interface CfnPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnPolicyProps): CfnPolicyProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnPolicyProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyProps): software.amazon.awscdk.services.iot.CfnPolicyProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iot.CfnPolicyProps

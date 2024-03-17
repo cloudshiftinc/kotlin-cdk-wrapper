@@ -101,7 +101,8 @@ public interface ApplicationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ApplicationProps):
-        ApplicationProps = CdkObjectWrappers.wrap(cdkObject) as ApplicationProps
+        ApplicationProps = CdkObjectWrappers.wrap(cdkObject) as? ApplicationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationProps):
         software.amazon.awscdk.services.appconfig.ApplicationProps = (wrapped as

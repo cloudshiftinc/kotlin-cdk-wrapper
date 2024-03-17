@@ -419,7 +419,8 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroupProps):
-        NetworkTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as NetworkTargetGroupProps
+        NetworkTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as? NetworkTargetGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkTargetGroupProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroupProps = (wrapped as

@@ -213,7 +213,8 @@ public interface LogDriverConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.LogDriverConfig):
-        LogDriverConfig = CdkObjectWrappers.wrap(cdkObject) as LogDriverConfig
+        LogDriverConfig = CdkObjectWrappers.wrap(cdkObject) as? LogDriverConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogDriverConfig):
         software.amazon.awscdk.services.ecs.LogDriverConfig = (wrapped as CdkObject).cdkObject as

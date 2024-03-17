@@ -709,8 +709,8 @@ public open class CfnInferenceScheduler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty):
-          DataInputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataInputConfigurationProperty
+          DataInputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataInputConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataInputConfigurationProperty):
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty
@@ -827,8 +827,8 @@ public open class CfnInferenceScheduler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty):
-          InputNameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InputNameConfigurationProperty
+          InputNameConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputNameConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputNameConfigurationProperty):
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty
@@ -932,8 +932,8 @@ public open class CfnInferenceScheduler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty):
-          S3InputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3InputConfigurationProperty
+          S3InputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3InputConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3InputConfigurationProperty):
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty
@@ -1086,8 +1086,8 @@ public open class CfnInferenceScheduler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty):
-          DataOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataOutputConfigurationProperty
+          DataOutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataOutputConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataOutputConfigurationProperty):
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty
@@ -1191,8 +1191,8 @@ public open class CfnInferenceScheduler internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty):
-          S3OutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3OutputConfigurationProperty
+          S3OutputConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3OutputConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3OutputConfigurationProperty):
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty

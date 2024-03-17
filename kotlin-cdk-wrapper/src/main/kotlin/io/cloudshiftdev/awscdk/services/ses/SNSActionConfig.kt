@@ -100,7 +100,8 @@ public interface SNSActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.SNSActionConfig):
-        SNSActionConfig = CdkObjectWrappers.wrap(cdkObject) as SNSActionConfig
+        SNSActionConfig = CdkObjectWrappers.wrap(cdkObject) as? SNSActionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SNSActionConfig):
         software.amazon.awscdk.services.ses.SNSActionConfig = (wrapped as CdkObject).cdkObject as

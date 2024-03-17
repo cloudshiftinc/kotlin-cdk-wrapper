@@ -119,7 +119,8 @@ public interface CfnCollectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnCollectionProps):
-        CfnCollectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnCollectionProps
+        CfnCollectionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCollectionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCollectionProps):
         software.amazon.awscdk.services.rekognition.CfnCollectionProps = (wrapped as

@@ -200,7 +200,8 @@ public interface RepositoryTriggerOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.RepositoryTriggerOptions):
-        RepositoryTriggerOptions = CdkObjectWrappers.wrap(cdkObject) as RepositoryTriggerOptions
+        RepositoryTriggerOptions = CdkObjectWrappers.wrap(cdkObject) as? RepositoryTriggerOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryTriggerOptions):
         software.amazon.awscdk.services.codecommit.RepositoryTriggerOptions = (wrapped as

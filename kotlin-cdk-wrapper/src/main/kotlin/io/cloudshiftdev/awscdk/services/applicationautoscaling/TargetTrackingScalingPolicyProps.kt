@@ -315,8 +315,8 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicyProps):
-        TargetTrackingScalingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
-        TargetTrackingScalingPolicyProps
+        TargetTrackingScalingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as?
+        TargetTrackingScalingPolicyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TargetTrackingScalingPolicyProps):
         software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicyProps =

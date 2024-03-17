@@ -944,8 +944,8 @@ public open class CfnDeviceProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnDeviceProfile.LoRaWANDeviceProfileProperty):
-          LoRaWANDeviceProfileProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoRaWANDeviceProfileProperty
+          LoRaWANDeviceProfileProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoRaWANDeviceProfileProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoRaWANDeviceProfileProperty):
           software.amazon.awscdk.services.iotwireless.CfnDeviceProfile.LoRaWANDeviceProfileProperty

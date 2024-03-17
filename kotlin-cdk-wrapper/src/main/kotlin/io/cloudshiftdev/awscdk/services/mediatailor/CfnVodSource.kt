@@ -463,8 +463,8 @@ public open class CfnVodSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnVodSource.HttpPackageConfigurationProperty):
-          HttpPackageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HttpPackageConfigurationProperty
+          HttpPackageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HttpPackageConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpPackageConfigurationProperty):
           software.amazon.awscdk.services.mediatailor.CfnVodSource.HttpPackageConfigurationProperty

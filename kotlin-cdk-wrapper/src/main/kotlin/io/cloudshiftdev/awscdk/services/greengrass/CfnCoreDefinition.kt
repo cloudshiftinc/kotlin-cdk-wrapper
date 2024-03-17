@@ -591,7 +591,7 @@ public open class CfnCoreDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty):
-          CoreProperty = CdkObjectWrappers.wrap(cdkObject) as CoreProperty
+          CoreProperty = CdkObjectWrappers.wrap(cdkObject) as? CoreProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoreProperty):
           software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreProperty = (wrapped as
@@ -726,8 +726,8 @@ public open class CfnCoreDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty):
-          CoreDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CoreDefinitionVersionProperty
+          CoreDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CoreDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CoreDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty

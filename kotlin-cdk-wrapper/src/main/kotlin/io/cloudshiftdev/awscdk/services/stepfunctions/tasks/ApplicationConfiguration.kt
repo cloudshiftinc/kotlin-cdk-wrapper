@@ -178,7 +178,8 @@ public interface ApplicationConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration):
-        ApplicationConfiguration = CdkObjectWrappers.wrap(cdkObject) as ApplicationConfiguration
+        ApplicationConfiguration = CdkObjectWrappers.wrap(cdkObject) as? ApplicationConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationConfiguration):
         software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration = (wrapped as

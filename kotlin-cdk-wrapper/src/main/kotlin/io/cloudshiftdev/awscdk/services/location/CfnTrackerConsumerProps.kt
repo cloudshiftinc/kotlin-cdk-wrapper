@@ -151,7 +151,8 @@ public interface CfnTrackerConsumerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnTrackerConsumerProps):
-        CfnTrackerConsumerProps = CdkObjectWrappers.wrap(cdkObject) as CfnTrackerConsumerProps
+        CfnTrackerConsumerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTrackerConsumerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrackerConsumerProps):
         software.amazon.awscdk.services.location.CfnTrackerConsumerProps = (wrapped as

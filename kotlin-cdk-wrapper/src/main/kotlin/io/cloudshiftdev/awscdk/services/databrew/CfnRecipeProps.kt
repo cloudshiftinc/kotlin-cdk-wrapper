@@ -210,7 +210,7 @@ public interface CfnRecipeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipeProps):
-        CfnRecipeProps = CdkObjectWrappers.wrap(cdkObject) as CfnRecipeProps
+        CfnRecipeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRecipeProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecipeProps):
         software.amazon.awscdk.services.databrew.CfnRecipeProps = (wrapped as CdkObject).cdkObject

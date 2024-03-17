@@ -117,7 +117,8 @@ public interface MachineImageConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MachineImageConfig):
-        MachineImageConfig = CdkObjectWrappers.wrap(cdkObject) as MachineImageConfig
+        MachineImageConfig = CdkObjectWrappers.wrap(cdkObject) as? MachineImageConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MachineImageConfig):
         software.amazon.awscdk.services.ec2.MachineImageConfig = (wrapped as CdkObject).cdkObject as

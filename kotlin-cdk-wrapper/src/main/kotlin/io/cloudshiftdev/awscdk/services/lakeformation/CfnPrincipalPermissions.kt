@@ -1046,7 +1046,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ResourceProperty):
-          ResourceProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceProperty
+          ResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ResourceProperty =
@@ -1162,8 +1163,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty):
-          DataLocationResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataLocationResourceProperty
+          DataLocationResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataLocationResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataLocationResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLocationResourceProperty
@@ -1327,8 +1328,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty):
-          DataCellsFilterResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataCellsFilterResourceProperty
+          DataCellsFilterResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataCellsFilterResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataCellsFilterResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataCellsFilterResourceProperty
@@ -1605,8 +1606,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableWithColumnsResourceProperty):
-          TableWithColumnsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TableWithColumnsResourceProperty
+          TableWithColumnsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TableWithColumnsResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TableWithColumnsResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableWithColumnsResourceProperty
@@ -1690,7 +1691,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty):
-          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as DataLakePrincipalProperty
+          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataLakePrincipalProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataLakePrincipalProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DataLakePrincipalProperty
@@ -1842,7 +1844,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty):
-          LFTagKeyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as LFTagKeyResourceProperty
+          LFTagKeyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagKeyResourceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LFTagKeyResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty
@@ -2017,8 +2020,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty):
-          LFTagPolicyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LFTagPolicyResourceProperty
+          LFTagPolicyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LFTagPolicyResourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LFTagPolicyResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagPolicyResourceProperty
@@ -2121,7 +2124,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty):
-          ColumnWildcardProperty = CdkObjectWrappers.wrap(cdkObject) as ColumnWildcardProperty
+          ColumnWildcardProperty = CdkObjectWrappers.wrap(cdkObject) as? ColumnWildcardProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColumnWildcardProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty
@@ -2311,7 +2315,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty):
-          TableResourceProperty = CdkObjectWrappers.wrap(cdkObject) as TableResourceProperty
+          TableResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? TableResourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TableResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.TableResourceProperty
@@ -2432,7 +2437,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty):
-          DatabaseResourceProperty = CdkObjectWrappers.wrap(cdkObject) as DatabaseResourceProperty
+          DatabaseResourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseResourceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatabaseResourceProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.DatabaseResourceProperty
@@ -2555,7 +2561,7 @@ public open class CfnPrincipalPermissions internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty):
-          LFTagProperty = CdkObjectWrappers.wrap(cdkObject) as LFTagProperty
+          LFTagProperty = CdkObjectWrappers.wrap(cdkObject) as? LFTagProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LFTagProperty):
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty =

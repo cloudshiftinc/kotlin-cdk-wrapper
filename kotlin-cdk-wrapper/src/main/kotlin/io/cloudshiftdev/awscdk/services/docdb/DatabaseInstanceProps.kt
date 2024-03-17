@@ -307,7 +307,8 @@ public interface DatabaseInstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.DatabaseInstanceProps):
-        DatabaseInstanceProps = CdkObjectWrappers.wrap(cdkObject) as DatabaseInstanceProps
+        DatabaseInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? DatabaseInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseInstanceProps):
         software.amazon.awscdk.services.docdb.DatabaseInstanceProps = (wrapped as

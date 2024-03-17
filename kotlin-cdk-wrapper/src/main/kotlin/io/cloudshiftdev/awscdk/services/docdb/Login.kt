@@ -187,7 +187,7 @@ public interface Login {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.Login): Login =
-        CdkObjectWrappers.wrap(cdkObject) as Login
+        CdkObjectWrappers.wrap(cdkObject) as? Login ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Login): software.amazon.awscdk.services.docdb.Login = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.docdb.Login

@@ -620,7 +620,8 @@ public open class CfnFuotaTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTask.LoRaWANProperty):
-          LoRaWANProperty = CdkObjectWrappers.wrap(cdkObject) as LoRaWANProperty
+          LoRaWANProperty = CdkObjectWrappers.wrap(cdkObject) as? LoRaWANProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoRaWANProperty):
           software.amazon.awscdk.services.iotwireless.CfnFuotaTask.LoRaWANProperty = (wrapped as

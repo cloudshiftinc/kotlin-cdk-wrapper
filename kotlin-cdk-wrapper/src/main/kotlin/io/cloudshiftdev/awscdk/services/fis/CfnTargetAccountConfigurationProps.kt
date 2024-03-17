@@ -161,8 +161,8 @@ public interface CfnTargetAccountConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnTargetAccountConfigurationProps):
-        CfnTargetAccountConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTargetAccountConfigurationProps
+        CfnTargetAccountConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTargetAccountConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTargetAccountConfigurationProps):
         software.amazon.awscdk.services.fis.CfnTargetAccountConfigurationProps = (wrapped as

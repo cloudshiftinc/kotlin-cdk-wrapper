@@ -261,7 +261,8 @@ public interface BasicLifecycleHookProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps):
-        BasicLifecycleHookProps = CdkObjectWrappers.wrap(cdkObject) as BasicLifecycleHookProps
+        BasicLifecycleHookProps = CdkObjectWrappers.wrap(cdkObject) as? BasicLifecycleHookProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BasicLifecycleHookProps):
         software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps = (wrapped as

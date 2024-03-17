@@ -365,7 +365,7 @@ public interface CfnMapProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnMapProps): CfnMapProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnMapProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnMapProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMapProps): software.amazon.awscdk.services.location.CfnMapProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.location.CfnMapProps

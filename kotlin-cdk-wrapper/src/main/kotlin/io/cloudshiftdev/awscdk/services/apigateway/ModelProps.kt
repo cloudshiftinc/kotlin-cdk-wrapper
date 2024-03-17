@@ -256,7 +256,7 @@ public interface ModelProps : ModelOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ModelProps): ModelProps
-        = CdkObjectWrappers.wrap(cdkObject) as ModelProps
+        = CdkObjectWrappers.wrap(cdkObject) as? ModelProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ModelProps): software.amazon.awscdk.services.apigateway.ModelProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.ModelProps

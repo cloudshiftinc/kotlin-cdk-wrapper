@@ -456,8 +456,8 @@ public interface SagemakerIntegrationOptions : IntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions):
-        SagemakerIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as
-        SagemakerIntegrationOptions
+        SagemakerIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        SagemakerIntegrationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SagemakerIntegrationOptions):
         software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions = (wrapped as

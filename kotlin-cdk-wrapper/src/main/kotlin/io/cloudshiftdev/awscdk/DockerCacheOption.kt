@@ -145,7 +145,7 @@ public interface DockerCacheOption {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.DockerCacheOption): DockerCacheOption =
-        CdkObjectWrappers.wrap(cdkObject) as DockerCacheOption
+        CdkObjectWrappers.wrap(cdkObject) as? DockerCacheOption ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerCacheOption): software.amazon.awscdk.DockerCacheOption =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.DockerCacheOption

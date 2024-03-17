@@ -166,7 +166,8 @@ public interface SecurityGroupImportOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SecurityGroupImportOptions):
-        SecurityGroupImportOptions = CdkObjectWrappers.wrap(cdkObject) as SecurityGroupImportOptions
+        SecurityGroupImportOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        SecurityGroupImportOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecurityGroupImportOptions):
         software.amazon.awscdk.services.ec2.SecurityGroupImportOptions = (wrapped as

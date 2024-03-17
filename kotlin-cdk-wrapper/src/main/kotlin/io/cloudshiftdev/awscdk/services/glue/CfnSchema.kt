@@ -637,7 +637,8 @@ public open class CfnSchema internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty):
-          SchemaVersionProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaVersionProperty
+          SchemaVersionProperty = CdkObjectWrappers.wrap(cdkObject) as? SchemaVersionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SchemaVersionProperty):
           software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty = (wrapped as
@@ -742,7 +743,8 @@ public open class CfnSchema internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty):
-          RegistryProperty = CdkObjectWrappers.wrap(cdkObject) as RegistryProperty
+          RegistryProperty = CdkObjectWrappers.wrap(cdkObject) as? RegistryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegistryProperty):
           software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty = (wrapped as

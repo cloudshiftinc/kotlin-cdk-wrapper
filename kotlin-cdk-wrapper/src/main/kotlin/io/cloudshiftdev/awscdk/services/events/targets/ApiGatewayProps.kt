@@ -412,7 +412,8 @@ public interface ApiGatewayProps : TargetBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.ApiGatewayProps):
-        ApiGatewayProps = CdkObjectWrappers.wrap(cdkObject) as ApiGatewayProps
+        ApiGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? ApiGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiGatewayProps):
         software.amazon.awscdk.services.events.targets.ApiGatewayProps = (wrapped as

@@ -477,7 +477,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnProject.SampleProperty):
-          SampleProperty = CdkObjectWrappers.wrap(cdkObject) as SampleProperty
+          SampleProperty = CdkObjectWrappers.wrap(cdkObject) as? SampleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SampleProperty):
           software.amazon.awscdk.services.databrew.CfnProject.SampleProperty = (wrapped as

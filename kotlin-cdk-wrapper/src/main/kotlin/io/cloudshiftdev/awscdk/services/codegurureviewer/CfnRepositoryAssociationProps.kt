@@ -363,8 +363,8 @@ public interface CfnRepositoryAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociationProps):
-        CfnRepositoryAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnRepositoryAssociationProps
+        CfnRepositoryAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRepositoryAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRepositoryAssociationProps):
         software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociationProps = (wrapped as

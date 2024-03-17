@@ -266,7 +266,8 @@ public interface CfnAllowListProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnAllowListProps):
-        CfnAllowListProps = CdkObjectWrappers.wrap(cdkObject) as CfnAllowListProps
+        CfnAllowListProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAllowListProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAllowListProps):
         software.amazon.awscdk.services.macie.CfnAllowListProps = (wrapped as CdkObject).cdkObject

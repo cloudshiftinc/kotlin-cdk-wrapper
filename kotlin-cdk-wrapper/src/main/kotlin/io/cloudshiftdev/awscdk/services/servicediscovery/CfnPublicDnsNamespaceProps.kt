@@ -249,7 +249,8 @@ public interface CfnPublicDnsNamespaceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespaceProps):
-        CfnPublicDnsNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as CfnPublicDnsNamespaceProps
+        CfnPublicDnsNamespaceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPublicDnsNamespaceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPublicDnsNamespaceProps):
         software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespaceProps = (wrapped as

@@ -371,7 +371,8 @@ public interface HttpAuthorizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerProps):
-        HttpAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as HttpAuthorizerProps
+        HttpAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as? HttpAuthorizerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpAuthorizerProps):
         software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerProps = (wrapped as

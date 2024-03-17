@@ -372,8 +372,8 @@ public open class CfnUserPoolDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomain.CustomDomainConfigTypeProperty):
-          CustomDomainConfigTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomDomainConfigTypeProperty
+          CustomDomainConfigTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomDomainConfigTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomDomainConfigTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolDomain.CustomDomainConfigTypeProperty =

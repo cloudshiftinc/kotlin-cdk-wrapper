@@ -166,7 +166,8 @@ public interface SearchComponents {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.SearchComponents):
-        SearchComponents = CdkObjectWrappers.wrap(cdkObject) as SearchComponents
+        SearchComponents = CdkObjectWrappers.wrap(cdkObject) as? SearchComponents ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SearchComponents):
         software.amazon.awscdk.services.cloudwatch.SearchComponents = (wrapped as

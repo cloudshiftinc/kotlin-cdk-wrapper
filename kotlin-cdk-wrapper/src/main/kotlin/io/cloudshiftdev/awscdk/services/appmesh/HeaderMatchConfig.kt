@@ -100,7 +100,8 @@ public interface HeaderMatchConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatchConfig):
-        HeaderMatchConfig = CdkObjectWrappers.wrap(cdkObject) as HeaderMatchConfig
+        HeaderMatchConfig = CdkObjectWrappers.wrap(cdkObject) as? HeaderMatchConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HeaderMatchConfig):
         software.amazon.awscdk.services.appmesh.HeaderMatchConfig = (wrapped as CdkObject).cdkObject

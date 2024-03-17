@@ -140,7 +140,7 @@ public interface CognitoOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions):
-        CognitoOptions = CdkObjectWrappers.wrap(cdkObject) as CognitoOptions
+        CognitoOptions = CdkObjectWrappers.wrap(cdkObject) as? CognitoOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CognitoOptions):
         software.amazon.awscdk.services.opensearchservice.CognitoOptions = (wrapped as

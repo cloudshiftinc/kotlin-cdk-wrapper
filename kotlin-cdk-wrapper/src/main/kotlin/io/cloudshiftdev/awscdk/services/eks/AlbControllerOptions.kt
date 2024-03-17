@@ -160,7 +160,8 @@ public interface AlbControllerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.AlbControllerOptions):
-        AlbControllerOptions = CdkObjectWrappers.wrap(cdkObject) as AlbControllerOptions
+        AlbControllerOptions = CdkObjectWrappers.wrap(cdkObject) as? AlbControllerOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AlbControllerOptions):
         software.amazon.awscdk.services.eks.AlbControllerOptions = (wrapped as CdkObject).cdkObject

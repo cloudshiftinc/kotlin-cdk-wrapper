@@ -781,8 +781,8 @@ public open class CfnUserSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty):
-          CookieSynchronizationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CookieSynchronizationConfigurationProperty
+          CookieSynchronizationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CookieSynchronizationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookieSynchronizationConfigurationProperty):
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty
@@ -919,8 +919,8 @@ public open class CfnUserSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty):
-          CookieSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CookieSpecificationProperty
+          CookieSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CookieSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CookieSpecificationProperty):
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty

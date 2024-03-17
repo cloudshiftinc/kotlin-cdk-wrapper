@@ -397,7 +397,8 @@ public open class CfnVirtualCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty):
-          EksInfoProperty = CdkObjectWrappers.wrap(cdkObject) as EksInfoProperty
+          EksInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? EksInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EksInfoProperty):
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty = (wrapped
@@ -592,7 +593,8 @@ public open class CfnVirtualCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty):
-          ContainerProviderProperty = CdkObjectWrappers.wrap(cdkObject) as ContainerProviderProperty
+          ContainerProviderProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContainerProviderProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerProviderProperty):
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty
@@ -703,7 +705,8 @@ public open class CfnVirtualCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty):
-          ContainerInfoProperty = CdkObjectWrappers.wrap(cdkObject) as ContainerInfoProperty
+          ContainerInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? ContainerInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerInfoProperty):
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty =

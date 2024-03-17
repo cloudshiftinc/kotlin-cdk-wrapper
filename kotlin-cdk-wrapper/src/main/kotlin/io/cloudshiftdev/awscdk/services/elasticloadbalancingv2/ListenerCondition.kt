@@ -34,6 +34,11 @@ public abstract class ListenerCondition internal constructor(
    */
   public open fun renderRawCondition(): Any = unwrap(this).renderRawCondition()
 
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition,
+  ) : ListenerCondition(cdkObject)
+
   public companion object {
     public fun hostHeaders(values: List<String>): ListenerCondition =
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition.hostHeaders(values).let(ListenerCondition::wrap)
@@ -69,7 +74,8 @@ public abstract class ListenerCondition internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition):
-        ListenerCondition = CdkObjectWrappers.wrap(cdkObject) as ListenerCondition
+        ListenerCondition = CdkObjectWrappers.wrap(cdkObject) as? ListenerCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ListenerCondition):
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition = (wrapped as

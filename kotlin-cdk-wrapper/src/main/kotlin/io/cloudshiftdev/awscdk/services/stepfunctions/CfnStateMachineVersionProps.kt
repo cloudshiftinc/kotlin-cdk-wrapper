@@ -160,8 +160,8 @@ public interface CfnStateMachineVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersionProps):
-        CfnStateMachineVersionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnStateMachineVersionProps
+        CfnStateMachineVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnStateMachineVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStateMachineVersionProps):
         software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersionProps = (wrapped as

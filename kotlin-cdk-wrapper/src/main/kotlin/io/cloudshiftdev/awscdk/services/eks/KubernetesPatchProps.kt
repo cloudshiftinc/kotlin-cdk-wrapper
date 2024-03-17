@@ -205,7 +205,8 @@ public interface KubernetesPatchProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubernetesPatchProps):
-        KubernetesPatchProps = CdkObjectWrappers.wrap(cdkObject) as KubernetesPatchProps
+        KubernetesPatchProps = CdkObjectWrappers.wrap(cdkObject) as? KubernetesPatchProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesPatchProps):
         software.amazon.awscdk.services.eks.KubernetesPatchProps = (wrapped as CdkObject).cdkObject

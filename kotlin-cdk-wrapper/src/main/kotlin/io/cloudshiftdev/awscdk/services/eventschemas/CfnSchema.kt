@@ -423,7 +423,8 @@ public open class CfnSchema internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eventschemas.CfnSchema.TagsEntryProperty):
-          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as TagsEntryProperty
+          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? TagsEntryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TagsEntryProperty):
           software.amazon.awscdk.services.eventschemas.CfnSchema.TagsEntryProperty = (wrapped as

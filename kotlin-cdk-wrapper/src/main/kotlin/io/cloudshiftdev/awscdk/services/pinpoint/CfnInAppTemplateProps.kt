@@ -356,7 +356,8 @@ public interface CfnInAppTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps):
-        CfnInAppTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnInAppTemplateProps
+        CfnInAppTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnInAppTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInAppTemplateProps):
         software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps = (wrapped as

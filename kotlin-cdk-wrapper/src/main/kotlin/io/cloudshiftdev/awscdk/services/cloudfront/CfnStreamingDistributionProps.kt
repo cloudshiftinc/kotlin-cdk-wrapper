@@ -183,8 +183,8 @@ public interface CfnStreamingDistributionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnStreamingDistributionProps):
-        CfnStreamingDistributionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnStreamingDistributionProps
+        CfnStreamingDistributionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnStreamingDistributionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStreamingDistributionProps):
         software.amazon.awscdk.services.cloudfront.CfnStreamingDistributionProps = (wrapped as

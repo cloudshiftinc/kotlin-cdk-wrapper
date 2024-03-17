@@ -94,7 +94,8 @@ public interface VirtualGatewayAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes):
-        VirtualGatewayAttributes = CdkObjectWrappers.wrap(cdkObject) as VirtualGatewayAttributes
+        VirtualGatewayAttributes = CdkObjectWrappers.wrap(cdkObject) as? VirtualGatewayAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualGatewayAttributes):
         software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes = (wrapped as

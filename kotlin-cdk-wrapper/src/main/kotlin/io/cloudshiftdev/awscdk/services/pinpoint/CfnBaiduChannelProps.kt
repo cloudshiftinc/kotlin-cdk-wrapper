@@ -185,7 +185,8 @@ public interface CfnBaiduChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnBaiduChannelProps):
-        CfnBaiduChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnBaiduChannelProps
+        CfnBaiduChannelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBaiduChannelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBaiduChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnBaiduChannelProps = (wrapped as

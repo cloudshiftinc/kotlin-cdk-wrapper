@@ -708,8 +708,8 @@ public interface DefaultStackSynthesizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.DefaultStackSynthesizerProps):
-        DefaultStackSynthesizerProps = CdkObjectWrappers.wrap(cdkObject) as
-        DefaultStackSynthesizerProps
+        DefaultStackSynthesizerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DefaultStackSynthesizerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DefaultStackSynthesizerProps):
         software.amazon.awscdk.DefaultStackSynthesizerProps = (wrapped as CdkObject).cdkObject as

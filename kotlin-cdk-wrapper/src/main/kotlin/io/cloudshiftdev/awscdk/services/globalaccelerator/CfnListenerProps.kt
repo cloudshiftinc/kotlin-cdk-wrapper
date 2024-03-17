@@ -277,7 +277,8 @@ public interface CfnListenerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListenerProps):
-        CfnListenerProps = CdkObjectWrappers.wrap(cdkObject) as CfnListenerProps
+        CfnListenerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnListenerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnListenerProps):
         software.amazon.awscdk.services.globalaccelerator.CfnListenerProps = (wrapped as

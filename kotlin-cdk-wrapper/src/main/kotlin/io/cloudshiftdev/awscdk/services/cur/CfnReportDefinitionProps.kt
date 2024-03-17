@@ -464,7 +464,8 @@ public interface CfnReportDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cur.CfnReportDefinitionProps):
-        CfnReportDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnReportDefinitionProps
+        CfnReportDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReportDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReportDefinitionProps):
         software.amazon.awscdk.services.cur.CfnReportDefinitionProps = (wrapped as

@@ -334,7 +334,7 @@ public interface RuleProps : EventCommonOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.RuleProps): RuleProps =
-        CdkObjectWrappers.wrap(cdkObject) as RuleProps
+        CdkObjectWrappers.wrap(cdkObject) as? RuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RuleProps): software.amazon.awscdk.services.events.RuleProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.events.RuleProps

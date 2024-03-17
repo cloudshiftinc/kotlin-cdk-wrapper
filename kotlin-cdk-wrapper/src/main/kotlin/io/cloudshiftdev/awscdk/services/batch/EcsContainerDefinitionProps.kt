@@ -510,8 +510,8 @@ public interface EcsContainerDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EcsContainerDefinitionProps):
-        EcsContainerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as
-        EcsContainerDefinitionProps
+        EcsContainerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EcsContainerDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsContainerDefinitionProps):
         software.amazon.awscdk.services.batch.EcsContainerDefinitionProps = (wrapped as

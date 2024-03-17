@@ -272,8 +272,8 @@ public interface CfnHostedConfigurationVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersionProps):
-        CfnHostedConfigurationVersionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnHostedConfigurationVersionProps
+        CfnHostedConfigurationVersionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnHostedConfigurationVersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHostedConfigurationVersionProps):
         software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersionProps = (wrapped as

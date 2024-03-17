@@ -297,7 +297,8 @@ public interface CfnCoreDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnCoreDefinitionProps):
-        CfnCoreDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnCoreDefinitionProps
+        CfnCoreDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCoreDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCoreDefinitionProps):
         software.amazon.awscdk.services.greengrass.CfnCoreDefinitionProps = (wrapped as

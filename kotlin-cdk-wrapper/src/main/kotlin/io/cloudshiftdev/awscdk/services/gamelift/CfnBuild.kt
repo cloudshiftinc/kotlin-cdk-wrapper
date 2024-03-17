@@ -574,7 +574,8 @@ public open class CfnBuild internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty):
-          StorageLocationProperty = CdkObjectWrappers.wrap(cdkObject) as StorageLocationProperty
+          StorageLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? StorageLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StorageLocationProperty):
           software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty = (wrapped as

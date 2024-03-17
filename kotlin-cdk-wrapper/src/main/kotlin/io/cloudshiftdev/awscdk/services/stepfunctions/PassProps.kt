@@ -281,7 +281,7 @@ public interface PassProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.PassProps): PassProps
-        = CdkObjectWrappers.wrap(cdkObject) as PassProps
+        = CdkObjectWrappers.wrap(cdkObject) as? PassProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PassProps): software.amazon.awscdk.services.stepfunctions.PassProps
         = (wrapped as CdkObject).cdkObject as

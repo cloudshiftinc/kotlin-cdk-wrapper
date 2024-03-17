@@ -1190,7 +1190,7 @@ public interface BucketProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.BucketProps): BucketProps =
-        CdkObjectWrappers.wrap(cdkObject) as BucketProps
+        CdkObjectWrappers.wrap(cdkObject) as? BucketProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BucketProps): software.amazon.awscdk.services.s3.BucketProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.BucketProps

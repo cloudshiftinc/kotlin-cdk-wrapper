@@ -402,8 +402,8 @@ public open class CfnStreamingImage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty):
-          StreamingImageEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StreamingImageEncryptionConfigurationProperty
+          StreamingImageEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StreamingImageEncryptionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StreamingImageEncryptionConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty

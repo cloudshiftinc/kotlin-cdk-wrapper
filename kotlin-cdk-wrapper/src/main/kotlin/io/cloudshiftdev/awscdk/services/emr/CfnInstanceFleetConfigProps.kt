@@ -503,8 +503,8 @@ public interface CfnInstanceFleetConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfigProps):
-        CfnInstanceFleetConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnInstanceFleetConfigProps
+        CfnInstanceFleetConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInstanceFleetConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceFleetConfigProps):
         software.amazon.awscdk.services.emr.CfnInstanceFleetConfigProps = (wrapped as

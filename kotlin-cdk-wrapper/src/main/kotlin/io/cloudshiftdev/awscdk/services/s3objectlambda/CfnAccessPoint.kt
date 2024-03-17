@@ -399,8 +399,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ContentTransformationProperty):
-          ContentTransformationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ContentTransformationProperty
+          ContentTransformationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContentTransformationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContentTransformationProperty):
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ContentTransformationProperty
@@ -500,7 +500,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PolicyStatusProperty):
-          PolicyStatusProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyStatusProperty
+          PolicyStatusProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyStatusProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyStatusProperty):
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PolicyStatusProperty =
@@ -599,7 +600,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty):
-          AwsLambdaProperty = CdkObjectWrappers.wrap(cdkObject) as AwsLambdaProperty
+          AwsLambdaProperty = CdkObjectWrappers.wrap(cdkObject) as? AwsLambdaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsLambdaProperty):
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty = (wrapped
@@ -1028,8 +1030,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PublicAccessBlockConfigurationProperty):
-          PublicAccessBlockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PublicAccessBlockConfigurationProperty
+          PublicAccessBlockConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PublicAccessBlockConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PublicAccessBlockConfigurationProperty):
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PublicAccessBlockConfigurationProperty
@@ -1175,8 +1177,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.TransformationConfigurationProperty):
-          TransformationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TransformationConfigurationProperty
+          TransformationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransformationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformationConfigurationProperty):
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.TransformationConfigurationProperty
@@ -1420,8 +1422,8 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty):
-          ObjectLambdaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ObjectLambdaConfigurationProperty
+          ObjectLambdaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ObjectLambdaConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ObjectLambdaConfigurationProperty):
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty
@@ -1549,7 +1551,7 @@ public open class CfnAccessPoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty):
-          AliasProperty = CdkObjectWrappers.wrap(cdkObject) as AliasProperty
+          AliasProperty = CdkObjectWrappers.wrap(cdkObject) as? AliasProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AliasProperty):
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty = (wrapped as

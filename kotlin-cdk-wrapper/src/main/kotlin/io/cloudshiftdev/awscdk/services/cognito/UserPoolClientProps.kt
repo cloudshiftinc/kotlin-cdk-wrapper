@@ -460,7 +460,8 @@ public interface UserPoolClientProps : UserPoolClientOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolClientProps):
-        UserPoolClientProps = CdkObjectWrappers.wrap(cdkObject) as UserPoolClientProps
+        UserPoolClientProps = CdkObjectWrappers.wrap(cdkObject) as? UserPoolClientProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolClientProps):
         software.amazon.awscdk.services.cognito.UserPoolClientProps = (wrapped as

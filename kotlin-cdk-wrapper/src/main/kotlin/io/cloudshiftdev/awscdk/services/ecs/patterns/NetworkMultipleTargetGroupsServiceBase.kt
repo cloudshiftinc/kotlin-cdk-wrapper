@@ -70,11 +70,16 @@ public abstract class NetworkMultipleTargetGroupsServiceBase internal constructo
   public open fun targetGroups(): List<NetworkTargetGroup> =
       unwrap(this).getTargetGroups().map(NetworkTargetGroup::wrap)
 
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBase,
+  ) : NetworkMultipleTargetGroupsServiceBase(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBase):
-        NetworkMultipleTargetGroupsServiceBase = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkMultipleTargetGroupsServiceBase
+        NetworkMultipleTargetGroupsServiceBase = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkMultipleTargetGroupsServiceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkMultipleTargetGroupsServiceBase):
         software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBase =

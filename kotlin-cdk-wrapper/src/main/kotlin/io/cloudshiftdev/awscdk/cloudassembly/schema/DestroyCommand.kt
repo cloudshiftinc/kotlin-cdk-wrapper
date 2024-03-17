@@ -177,7 +177,7 @@ public interface DestroyCommand : CdkCommand {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DestroyCommand):
-        DestroyCommand = CdkObjectWrappers.wrap(cdkObject) as DestroyCommand
+        DestroyCommand = CdkObjectWrappers.wrap(cdkObject) as? DestroyCommand ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DestroyCommand):
         software.amazon.awscdk.cloudassembly.schema.DestroyCommand = (wrapped as

@@ -86,8 +86,8 @@ public interface CfnAutoScalingScheduledAction {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnAutoScalingScheduledAction):
-        CfnAutoScalingScheduledAction = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAutoScalingScheduledAction
+        CfnAutoScalingScheduledAction = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAutoScalingScheduledAction ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutoScalingScheduledAction):
         software.amazon.awscdk.CfnAutoScalingScheduledAction = (wrapped as CdkObject).cdkObject as

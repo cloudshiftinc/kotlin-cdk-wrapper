@@ -110,7 +110,8 @@ public interface ArbitraryIntervals {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.common.ArbitraryIntervals):
-        ArbitraryIntervals = CdkObjectWrappers.wrap(cdkObject) as ArbitraryIntervals
+        ArbitraryIntervals = CdkObjectWrappers.wrap(cdkObject) as? ArbitraryIntervals ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ArbitraryIntervals):
         software.amazon.awscdk.services.autoscaling.common.ArbitraryIntervals = (wrapped as

@@ -140,8 +140,8 @@ public interface CfnLogDeliveryConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps):
-        CfnLogDeliveryConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLogDeliveryConfigurationProps
+        CfnLogDeliveryConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLogDeliveryConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLogDeliveryConfigurationProps):
         software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps = (wrapped as

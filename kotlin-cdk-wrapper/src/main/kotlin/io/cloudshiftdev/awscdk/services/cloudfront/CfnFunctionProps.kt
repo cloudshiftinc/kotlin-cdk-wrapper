@@ -299,7 +299,8 @@ public interface CfnFunctionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunctionProps):
-        CfnFunctionProps = CdkObjectWrappers.wrap(cdkObject) as CfnFunctionProps
+        CfnFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunctionProps):
         software.amazon.awscdk.services.cloudfront.CfnFunctionProps = (wrapped as

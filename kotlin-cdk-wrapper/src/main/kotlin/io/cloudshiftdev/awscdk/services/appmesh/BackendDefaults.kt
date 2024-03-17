@@ -112,7 +112,8 @@ public interface BackendDefaults {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.BackendDefaults):
-        BackendDefaults = CdkObjectWrappers.wrap(cdkObject) as BackendDefaults
+        BackendDefaults = CdkObjectWrappers.wrap(cdkObject) as? BackendDefaults ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BackendDefaults):
         software.amazon.awscdk.services.appmesh.BackendDefaults = (wrapped as CdkObject).cdkObject

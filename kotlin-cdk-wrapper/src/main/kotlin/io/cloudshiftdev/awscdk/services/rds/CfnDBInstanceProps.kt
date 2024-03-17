@@ -7150,7 +7150,8 @@ public interface CfnDBInstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBInstanceProps):
-        CfnDBInstanceProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBInstanceProps
+        CfnDBInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDBInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDBInstanceProps):
         software.amazon.awscdk.services.rds.CfnDBInstanceProps = (wrapped as CdkObject).cdkObject as

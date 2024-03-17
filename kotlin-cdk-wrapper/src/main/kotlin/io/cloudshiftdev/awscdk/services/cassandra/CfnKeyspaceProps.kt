@@ -289,7 +289,8 @@ public interface CfnKeyspaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspaceProps):
-        CfnKeyspaceProps = CdkObjectWrappers.wrap(cdkObject) as CfnKeyspaceProps
+        CfnKeyspaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnKeyspaceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnKeyspaceProps):
         software.amazon.awscdk.services.cassandra.CfnKeyspaceProps = (wrapped as

@@ -247,7 +247,7 @@ public interface TagProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.TagProps): TagProps =
-        CdkObjectWrappers.wrap(cdkObject) as TagProps
+        CdkObjectWrappers.wrap(cdkObject) as? TagProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TagProps): software.amazon.awscdk.TagProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.TagProps

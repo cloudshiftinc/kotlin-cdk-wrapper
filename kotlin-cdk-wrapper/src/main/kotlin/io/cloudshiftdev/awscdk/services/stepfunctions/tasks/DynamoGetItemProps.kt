@@ -634,7 +634,8 @@ public interface DynamoGetItemProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItemProps):
-        DynamoGetItemProps = CdkObjectWrappers.wrap(cdkObject) as DynamoGetItemProps
+        DynamoGetItemProps = CdkObjectWrappers.wrap(cdkObject) as? DynamoGetItemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DynamoGetItemProps):
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItemProps = (wrapped as

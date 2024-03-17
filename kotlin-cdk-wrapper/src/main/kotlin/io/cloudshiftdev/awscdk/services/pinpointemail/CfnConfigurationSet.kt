@@ -689,7 +689,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty):
-          DeliveryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as DeliveryOptionsProperty
+          DeliveryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? DeliveryOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeliveryOptionsProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty
@@ -792,7 +793,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty):
-          SendingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as SendingOptionsProperty
+          SendingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SendingOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SendingOptionsProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty =
@@ -883,7 +885,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty):
-          TrackingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as TrackingOptionsProperty
+          TrackingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? TrackingOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrackingOptionsProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty
@@ -990,7 +993,8 @@ public open class CfnConfigurationSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty):
-          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as ReputationOptionsProperty
+          ReputationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReputationOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReputationOptionsProperty):
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty

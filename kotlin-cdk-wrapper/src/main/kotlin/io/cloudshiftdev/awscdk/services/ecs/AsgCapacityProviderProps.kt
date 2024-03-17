@@ -570,7 +570,8 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AsgCapacityProviderProps):
-        AsgCapacityProviderProps = CdkObjectWrappers.wrap(cdkObject) as AsgCapacityProviderProps
+        AsgCapacityProviderProps = CdkObjectWrappers.wrap(cdkObject) as? AsgCapacityProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AsgCapacityProviderProps):
         software.amazon.awscdk.services.ecs.AsgCapacityProviderProps = (wrapped as

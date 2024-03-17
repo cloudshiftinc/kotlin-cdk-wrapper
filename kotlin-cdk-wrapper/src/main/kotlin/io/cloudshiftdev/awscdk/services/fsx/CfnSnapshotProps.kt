@@ -145,7 +145,8 @@ public interface CfnSnapshotProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshotProps):
-        CfnSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as CfnSnapshotProps
+        CfnSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSnapshotProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSnapshotProps):
         software.amazon.awscdk.services.fsx.CfnSnapshotProps = (wrapped as CdkObject).cdkObject as

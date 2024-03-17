@@ -439,7 +439,7 @@ public interface CfnTopicProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTopicProps):
-        CfnTopicProps = CdkObjectWrappers.wrap(cdkObject) as CfnTopicProps
+        CfnTopicProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTopicProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTopicProps):
         software.amazon.awscdk.services.quicksight.CfnTopicProps = (wrapped as CdkObject).cdkObject

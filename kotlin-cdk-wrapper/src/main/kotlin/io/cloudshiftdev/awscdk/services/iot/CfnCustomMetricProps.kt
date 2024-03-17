@@ -213,7 +213,8 @@ public interface CfnCustomMetricProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnCustomMetricProps):
-        CfnCustomMetricProps = CdkObjectWrappers.wrap(cdkObject) as CfnCustomMetricProps
+        CfnCustomMetricProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCustomMetricProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomMetricProps):
         software.amazon.awscdk.services.iot.CfnCustomMetricProps = (wrapped as CdkObject).cdkObject

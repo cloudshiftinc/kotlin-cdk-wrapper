@@ -171,7 +171,7 @@ public interface CfnCellProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnCellProps):
-        CfnCellProps = CdkObjectWrappers.wrap(cdkObject) as CfnCellProps
+        CfnCellProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCellProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCellProps):
         software.amazon.awscdk.services.route53recoveryreadiness.CfnCellProps = (wrapped as

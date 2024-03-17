@@ -376,7 +376,8 @@ public interface GelfLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.GelfLogDriverProps):
-        GelfLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as GelfLogDriverProps
+        GelfLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? GelfLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GelfLogDriverProps):
         software.amazon.awscdk.services.ecs.GelfLogDriverProps = (wrapped as CdkObject).cdkObject as

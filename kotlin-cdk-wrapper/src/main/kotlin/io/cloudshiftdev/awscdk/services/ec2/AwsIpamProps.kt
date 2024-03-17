@@ -133,7 +133,7 @@ public interface AwsIpamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AwsIpamProps): AwsIpamProps =
-        CdkObjectWrappers.wrap(cdkObject) as AwsIpamProps
+        CdkObjectWrappers.wrap(cdkObject) as? AwsIpamProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsIpamProps): software.amazon.awscdk.services.ec2.AwsIpamProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.AwsIpamProps

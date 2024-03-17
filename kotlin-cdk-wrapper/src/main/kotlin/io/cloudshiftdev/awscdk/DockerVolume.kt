@@ -132,7 +132,7 @@ public interface DockerVolume {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.DockerVolume): DockerVolume =
-        CdkObjectWrappers.wrap(cdkObject) as DockerVolume
+        CdkObjectWrappers.wrap(cdkObject) as? DockerVolume ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerVolume): software.amazon.awscdk.DockerVolume = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.DockerVolume

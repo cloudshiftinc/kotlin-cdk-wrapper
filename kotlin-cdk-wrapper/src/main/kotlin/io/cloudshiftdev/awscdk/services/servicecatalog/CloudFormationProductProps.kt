@@ -361,7 +361,8 @@ public interface CloudFormationProductProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationProductProps):
-        CloudFormationProductProps = CdkObjectWrappers.wrap(cdkObject) as CloudFormationProductProps
+        CloudFormationProductProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationProductProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationProductProps):
         software.amazon.awscdk.services.servicecatalog.CloudFormationProductProps = (wrapped as

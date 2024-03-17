@@ -706,7 +706,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty):
-          LineItemFilterProperty = CdkObjectWrappers.wrap(cdkObject) as LineItemFilterProperty
+          LineItemFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? LineItemFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LineItemFilterProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
@@ -792,8 +793,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty):
-          CustomLineItemFlatChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomLineItemFlatChargeDetailsProperty
+          CustomLineItemFlatChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomLineItemFlatChargeDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomLineItemFlatChargeDetailsProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty
@@ -1068,8 +1069,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty):
-          CustomLineItemChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomLineItemChargeDetailsProperty
+          CustomLineItemChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomLineItemChargeDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomLineItemChargeDetailsProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty
@@ -1189,8 +1190,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty):
-          BillingPeriodRangeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BillingPeriodRangeProperty
+          BillingPeriodRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BillingPeriodRangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BillingPeriodRangeProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty
@@ -1329,8 +1330,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty):
-          CustomLineItemPercentageChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomLineItemPercentageChargeDetailsProperty
+          CustomLineItemPercentageChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomLineItemPercentageChargeDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomLineItemPercentageChargeDetailsProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty

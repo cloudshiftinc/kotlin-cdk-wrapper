@@ -144,8 +144,8 @@ public interface AssetManifestFileDestination {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.AssetManifestFileDestination):
-        AssetManifestFileDestination = CdkObjectWrappers.wrap(cdkObject) as
-        AssetManifestFileDestination
+        AssetManifestFileDestination = CdkObjectWrappers.wrap(cdkObject) as?
+        AssetManifestFileDestination ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssetManifestFileDestination):
         software.amazon.awscdk.AssetManifestFileDestination = (wrapped as CdkObject).cdkObject as

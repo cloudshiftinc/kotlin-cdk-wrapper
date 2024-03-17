@@ -286,7 +286,7 @@ public interface LogGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.LogGroupProps): LogGroupProps
-        = CdkObjectWrappers.wrap(cdkObject) as LogGroupProps
+        = CdkObjectWrappers.wrap(cdkObject) as? LogGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogGroupProps): software.amazon.awscdk.services.logs.LogGroupProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.logs.LogGroupProps

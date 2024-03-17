@@ -79,7 +79,7 @@ public interface Credentials {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Credentials):
-        Credentials = CdkObjectWrappers.wrap(cdkObject) as Credentials
+        Credentials = CdkObjectWrappers.wrap(cdkObject) as? Credentials ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Credentials):
         software.amazon.awscdk.services.stepfunctions.Credentials = (wrapped as CdkObject).cdkObject

@@ -132,8 +132,8 @@ public interface CfnUserToGroupAdditionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps):
-        CfnUserToGroupAdditionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnUserToGroupAdditionProps
+        CfnUserToGroupAdditionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserToGroupAdditionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserToGroupAdditionProps):
         software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps = (wrapped as

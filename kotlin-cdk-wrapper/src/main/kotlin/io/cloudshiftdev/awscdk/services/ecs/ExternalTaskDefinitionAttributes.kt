@@ -142,8 +142,8 @@ public interface ExternalTaskDefinitionAttributes : CommonTaskDefinitionAttribut
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinitionAttributes):
-        ExternalTaskDefinitionAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        ExternalTaskDefinitionAttributes
+        ExternalTaskDefinitionAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        ExternalTaskDefinitionAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExternalTaskDefinitionAttributes):
         software.amazon.awscdk.services.ecs.ExternalTaskDefinitionAttributes = (wrapped as

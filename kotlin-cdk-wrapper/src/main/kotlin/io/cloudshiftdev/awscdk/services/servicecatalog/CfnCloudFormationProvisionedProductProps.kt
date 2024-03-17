@@ -694,8 +694,8 @@ public interface CfnCloudFormationProvisionedProductProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProductProps):
-        CfnCloudFormationProvisionedProductProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCloudFormationProvisionedProductProps
+        CfnCloudFormationProvisionedProductProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCloudFormationProvisionedProductProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCloudFormationProvisionedProductProps):
         software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProductProps =

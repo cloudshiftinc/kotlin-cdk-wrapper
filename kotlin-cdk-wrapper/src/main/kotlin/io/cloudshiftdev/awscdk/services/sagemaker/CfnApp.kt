@@ -549,7 +549,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnApp.ResourceSpecProperty):
-          ResourceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceSpecProperty
+          ResourceSpecProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceSpecProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceSpecProperty):
           software.amazon.awscdk.services.sagemaker.CfnApp.ResourceSpecProperty = (wrapped as

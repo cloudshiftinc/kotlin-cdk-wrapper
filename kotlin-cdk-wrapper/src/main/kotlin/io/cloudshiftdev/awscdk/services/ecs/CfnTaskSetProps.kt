@@ -670,7 +670,8 @@ public interface CfnTaskSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSetProps):
-        CfnTaskSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnTaskSetProps
+        CfnTaskSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTaskSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTaskSetProps):
         software.amazon.awscdk.services.ecs.CfnTaskSetProps = (wrapped as CdkObject).cdkObject as

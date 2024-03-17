@@ -187,7 +187,8 @@ public interface CfnBasePathMappingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnBasePathMappingProps):
-        CfnBasePathMappingProps = CdkObjectWrappers.wrap(cdkObject) as CfnBasePathMappingProps
+        CfnBasePathMappingProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBasePathMappingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBasePathMappingProps):
         software.amazon.awscdk.services.apigateway.CfnBasePathMappingProps = (wrapped as

@@ -376,7 +376,8 @@ public interface CfnScheduledAuditProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnScheduledAuditProps):
-        CfnScheduledAuditProps = CdkObjectWrappers.wrap(cdkObject) as CfnScheduledAuditProps
+        CfnScheduledAuditProps = CdkObjectWrappers.wrap(cdkObject) as? CfnScheduledAuditProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduledAuditProps):
         software.amazon.awscdk.services.iot.CfnScheduledAuditProps = (wrapped as

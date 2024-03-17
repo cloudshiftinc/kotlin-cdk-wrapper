@@ -680,7 +680,8 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.EventSourceMappingProps):
-        EventSourceMappingProps = CdkObjectWrappers.wrap(cdkObject) as EventSourceMappingProps
+        EventSourceMappingProps = CdkObjectWrappers.wrap(cdkObject) as? EventSourceMappingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EventSourceMappingProps):
         software.amazon.awscdk.services.lambda.EventSourceMappingProps = (wrapped as

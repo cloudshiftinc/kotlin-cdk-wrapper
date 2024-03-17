@@ -460,8 +460,8 @@ public open class CfnSourceApiAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.SourceApiAssociationConfigProperty):
-          SourceApiAssociationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SourceApiAssociationConfigProperty
+          SourceApiAssociationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceApiAssociationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceApiAssociationConfigProperty):
           software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.SourceApiAssociationConfigProperty

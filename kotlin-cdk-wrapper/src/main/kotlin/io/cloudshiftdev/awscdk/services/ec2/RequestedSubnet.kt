@@ -140,7 +140,8 @@ public interface RequestedSubnet {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.RequestedSubnet):
-        RequestedSubnet = CdkObjectWrappers.wrap(cdkObject) as RequestedSubnet
+        RequestedSubnet = CdkObjectWrappers.wrap(cdkObject) as? RequestedSubnet ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RequestedSubnet):
         software.amazon.awscdk.services.ec2.RequestedSubnet = (wrapped as CdkObject).cdkObject as

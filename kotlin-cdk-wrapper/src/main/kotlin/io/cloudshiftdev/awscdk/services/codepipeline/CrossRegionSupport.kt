@@ -112,7 +112,8 @@ public interface CrossRegionSupport {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CrossRegionSupport):
-        CrossRegionSupport = CdkObjectWrappers.wrap(cdkObject) as CrossRegionSupport
+        CrossRegionSupport = CdkObjectWrappers.wrap(cdkObject) as? CrossRegionSupport ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CrossRegionSupport):
         software.amazon.awscdk.services.codepipeline.CrossRegionSupport = (wrapped as

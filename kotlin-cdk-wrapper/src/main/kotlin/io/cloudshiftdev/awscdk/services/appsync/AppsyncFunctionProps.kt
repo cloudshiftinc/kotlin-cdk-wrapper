@@ -209,7 +209,8 @@ public interface AppsyncFunctionProps : BaseAppsyncFunctionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionProps):
-        AppsyncFunctionProps = CdkObjectWrappers.wrap(cdkObject) as AppsyncFunctionProps
+        AppsyncFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? AppsyncFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AppsyncFunctionProps):
         software.amazon.awscdk.services.appsync.AppsyncFunctionProps = (wrapped as

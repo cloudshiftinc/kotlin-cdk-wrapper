@@ -157,7 +157,7 @@ public interface ScratchSpace {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ScratchSpace): ScratchSpace =
-        CdkObjectWrappers.wrap(cdkObject) as ScratchSpace
+        CdkObjectWrappers.wrap(cdkObject) as? ScratchSpace ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ScratchSpace): software.amazon.awscdk.services.ecs.ScratchSpace =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.ScratchSpace

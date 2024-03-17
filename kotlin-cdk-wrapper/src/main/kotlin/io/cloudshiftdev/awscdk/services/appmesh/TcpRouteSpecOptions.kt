@@ -170,7 +170,8 @@ public interface TcpRouteSpecOptions : RouteSpecOptionsBase {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TcpRouteSpecOptions):
-        TcpRouteSpecOptions = CdkObjectWrappers.wrap(cdkObject) as TcpRouteSpecOptions
+        TcpRouteSpecOptions = CdkObjectWrappers.wrap(cdkObject) as? TcpRouteSpecOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TcpRouteSpecOptions):
         software.amazon.awscdk.services.appmesh.TcpRouteSpecOptions = (wrapped as

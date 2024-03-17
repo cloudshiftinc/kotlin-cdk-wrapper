@@ -295,7 +295,7 @@ public interface ResolverProps : ExtendedResolverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.ResolverProps):
-        ResolverProps = CdkObjectWrappers.wrap(cdkObject) as ResolverProps
+        ResolverProps = CdkObjectWrappers.wrap(cdkObject) as? ResolverProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResolverProps):
         software.amazon.awscdk.services.appsync.ResolverProps = (wrapped as CdkObject).cdkObject as

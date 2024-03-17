@@ -155,8 +155,8 @@ public interface CfnApplicationCloudWatchLoggingOptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOptionProps):
-        CfnApplicationCloudWatchLoggingOptionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnApplicationCloudWatchLoggingOptionProps
+        CfnApplicationCloudWatchLoggingOptionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnApplicationCloudWatchLoggingOptionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApplicationCloudWatchLoggingOptionProps):
         software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOptionProps

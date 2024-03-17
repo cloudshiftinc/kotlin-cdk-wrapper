@@ -279,7 +279,8 @@ public interface BatchContainerOverrides {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides):
-        BatchContainerOverrides = CdkObjectWrappers.wrap(cdkObject) as BatchContainerOverrides
+        BatchContainerOverrides = CdkObjectWrappers.wrap(cdkObject) as? BatchContainerOverrides ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BatchContainerOverrides):
         software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides = (wrapped as

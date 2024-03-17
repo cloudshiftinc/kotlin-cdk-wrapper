@@ -340,7 +340,8 @@ public interface DatabaseClusterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterAttributes):
-        DatabaseClusterAttributes = CdkObjectWrappers.wrap(cdkObject) as DatabaseClusterAttributes
+        DatabaseClusterAttributes = CdkObjectWrappers.wrap(cdkObject) as? DatabaseClusterAttributes
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseClusterAttributes):
         software.amazon.awscdk.services.rds.DatabaseClusterAttributes = (wrapped as

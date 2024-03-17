@@ -96,7 +96,8 @@ public interface ActionBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.ActionBindOptions):
-        ActionBindOptions = CdkObjectWrappers.wrap(cdkObject) as ActionBindOptions
+        ActionBindOptions = CdkObjectWrappers.wrap(cdkObject) as? ActionBindOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ActionBindOptions):
         software.amazon.awscdk.services.codepipeline.ActionBindOptions = (wrapped as

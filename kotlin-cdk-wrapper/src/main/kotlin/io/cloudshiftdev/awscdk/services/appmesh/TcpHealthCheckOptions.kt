@@ -165,7 +165,8 @@ public interface TcpHealthCheckOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions):
-        TcpHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as TcpHealthCheckOptions
+        TcpHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as? TcpHealthCheckOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TcpHealthCheckOptions):
         software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions = (wrapped as

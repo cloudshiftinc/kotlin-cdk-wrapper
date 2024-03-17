@@ -316,8 +316,8 @@ public interface DockerImageAssetInvalidationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions):
-        DockerImageAssetInvalidationOptions = CdkObjectWrappers.wrap(cdkObject) as
-        DockerImageAssetInvalidationOptions
+        DockerImageAssetInvalidationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        DockerImageAssetInvalidationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageAssetInvalidationOptions):
         software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions = (wrapped as

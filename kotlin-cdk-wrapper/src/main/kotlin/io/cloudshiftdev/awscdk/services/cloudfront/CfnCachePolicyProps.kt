@@ -134,7 +134,8 @@ public interface CfnCachePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps):
-        CfnCachePolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnCachePolicyProps
+        CfnCachePolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCachePolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCachePolicyProps):
         software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps = (wrapped as

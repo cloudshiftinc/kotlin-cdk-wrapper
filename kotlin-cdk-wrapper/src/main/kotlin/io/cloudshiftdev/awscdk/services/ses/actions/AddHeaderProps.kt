@@ -135,7 +135,7 @@ public interface AddHeaderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.AddHeaderProps):
-        AddHeaderProps = CdkObjectWrappers.wrap(cdkObject) as AddHeaderProps
+        AddHeaderProps = CdkObjectWrappers.wrap(cdkObject) as? AddHeaderProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddHeaderProps):
         software.amazon.awscdk.services.ses.actions.AddHeaderProps = (wrapped as

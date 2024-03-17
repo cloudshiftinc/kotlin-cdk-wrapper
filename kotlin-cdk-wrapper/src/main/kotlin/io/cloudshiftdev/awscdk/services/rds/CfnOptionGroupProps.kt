@@ -376,7 +376,8 @@ public interface CfnOptionGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroupProps):
-        CfnOptionGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnOptionGroupProps
+        CfnOptionGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnOptionGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnOptionGroupProps):
         software.amazon.awscdk.services.rds.CfnOptionGroupProps = (wrapped as CdkObject).cdkObject

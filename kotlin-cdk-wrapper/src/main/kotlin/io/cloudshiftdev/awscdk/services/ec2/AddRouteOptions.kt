@@ -195,7 +195,8 @@ public interface AddRouteOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AddRouteOptions):
-        AddRouteOptions = CdkObjectWrappers.wrap(cdkObject) as AddRouteOptions
+        AddRouteOptions = CdkObjectWrappers.wrap(cdkObject) as? AddRouteOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddRouteOptions):
         software.amazon.awscdk.services.ec2.AddRouteOptions = (wrapped as CdkObject).cdkObject as

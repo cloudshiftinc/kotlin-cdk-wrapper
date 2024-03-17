@@ -668,7 +668,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty):
-          FieldValueProperty = CdkObjectWrappers.wrap(cdkObject) as FieldValueProperty
+          FieldValueProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldValueProperty):
           software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty = (wrapped as
@@ -778,7 +779,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty):
-          UpdateCaseActionProperty = CdkObjectWrappers.wrap(cdkObject) as UpdateCaseActionProperty
+          UpdateCaseActionProperty = CdkObjectWrappers.wrap(cdkObject) as? UpdateCaseActionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UpdateCaseActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty = (wrapped as
@@ -915,7 +917,7 @@ public open class CfnRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldProperty):
-          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as FieldProperty
+          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldProperty):
           software.amazon.awscdk.services.connect.CfnRule.FieldProperty = (wrapped as
@@ -1052,7 +1054,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty):
-          CreateCaseActionProperty = CdkObjectWrappers.wrap(cdkObject) as CreateCaseActionProperty
+          CreateCaseActionProperty = CdkObjectWrappers.wrap(cdkObject) as? CreateCaseActionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CreateCaseActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty = (wrapped as
@@ -1175,8 +1178,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty):
-          RuleTriggerEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RuleTriggerEventSourceProperty
+          RuleTriggerEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RuleTriggerEventSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleTriggerEventSourceProperty):
           software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty = (wrapped
@@ -1398,7 +1401,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty):
-          TaskActionProperty = CdkObjectWrappers.wrap(cdkObject) as TaskActionProperty
+          TaskActionProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty = (wrapped as
@@ -1659,8 +1663,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty):
-          SendNotificationActionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SendNotificationActionProperty
+          SendNotificationActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SendNotificationActionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SendNotificationActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty = (wrapped
@@ -1740,7 +1744,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty):
-          EventBridgeActionProperty = CdkObjectWrappers.wrap(cdkObject) as EventBridgeActionProperty
+          EventBridgeActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeActionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventBridgeActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty = (wrapped as
@@ -1864,7 +1869,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty):
-          ReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as ReferenceProperty
+          ReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReferenceProperty):
           software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty = (wrapped as
@@ -2011,8 +2017,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty):
-          NotificationRecipientTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationRecipientTypeProperty
+          NotificationRecipientTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationRecipientTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationRecipientTypeProperty):
           software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty =
@@ -2494,7 +2500,8 @@ public open class CfnRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.ActionsProperty):
-          ActionsProperty = CdkObjectWrappers.wrap(cdkObject) as ActionsProperty
+          ActionsProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionsProperty):
           software.amazon.awscdk.services.connect.CfnRule.ActionsProperty = (wrapped as

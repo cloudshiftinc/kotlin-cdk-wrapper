@@ -1028,8 +1028,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TemporalFilterSettingsProperty):
-          TemporalFilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TemporalFilterSettingsProperty
+          TemporalFilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TemporalFilterSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TemporalFilterSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.TemporalFilterSettingsProperty =
@@ -1287,8 +1287,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FailoverConditionSettingsProperty):
-          FailoverConditionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FailoverConditionSettingsProperty
+          FailoverConditionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FailoverConditionSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FailoverConditionSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FailoverConditionSettingsProperty =
@@ -1377,8 +1377,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TtmlDestinationSettingsProperty):
-          TtmlDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TtmlDestinationSettingsProperty
+          TtmlDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TtmlDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TtmlDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.TtmlDestinationSettingsProperty =
@@ -1480,8 +1480,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageOutputDestinationSettingsProperty):
-          MediaPackageOutputDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MediaPackageOutputDestinationSettingsProperty
+          MediaPackageOutputDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MediaPackageOutputDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MediaPackageOutputDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageOutputDestinationSettingsProperty
@@ -2281,7 +2281,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EncoderSettingsProperty):
-          EncoderSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as EncoderSettingsProperty
+          EncoderSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? EncoderSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncoderSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.EncoderSettingsProperty = (wrapped as
@@ -2333,8 +2334,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AribSourceSettingsProperty):
-          AribSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AribSourceSettingsProperty
+          AribSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AribSourceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AribSourceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AribSourceSettingsProperty = (wrapped
@@ -2425,8 +2426,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureS3SettingsProperty):
-          FrameCaptureS3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FrameCaptureS3SettingsProperty
+          FrameCaptureS3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FrameCaptureS3SettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrameCaptureS3SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureS3SettingsProperty =
@@ -2725,8 +2726,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioSelectorSettingsProperty):
-          AudioSelectorSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioSelectorSettingsProperty
+          AudioSelectorSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioSelectorSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioSelectorSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioSelectorSettingsProperty =
@@ -2834,8 +2835,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AncillarySourceSettingsProperty):
-          AncillarySourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AncillarySourceSettingsProperty
+          AncillarySourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AncillarySourceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AncillarySourceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AncillarySourceSettingsProperty =
@@ -2994,8 +2995,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioTrackSelectionProperty):
-          AudioTrackSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioTrackSelectionProperty
+          AudioTrackSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioTrackSelectionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioTrackSelectionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioTrackSelectionProperty =
@@ -3117,8 +3118,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MsSmoothOutputSettingsProperty):
-          MsSmoothOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MsSmoothOutputSettingsProperty
+          MsSmoothOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MsSmoothOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MsSmoothOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MsSmoothOutputSettingsProperty =
@@ -3241,8 +3242,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TimecodeBurninSettingsProperty):
-          TimecodeBurninSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TimecodeBurninSettingsProperty
+          TimecodeBurninSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimecodeBurninSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimecodeBurninSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.TimecodeBurninSettingsProperty =
@@ -3562,7 +3563,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsSettingsProperty):
-          HlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as HlsSettingsProperty
+          HlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsSettingsProperty = (wrapped as
@@ -3832,7 +3834,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorProperty):
-          VideoSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as VideoSelectorProperty
+          VideoSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? VideoSelectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VideoSelectorProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorProperty = (wrapped as
@@ -3927,8 +3930,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorProgramIdProperty):
-          VideoSelectorProgramIdProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VideoSelectorProgramIdProperty
+          VideoSelectorProgramIdProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VideoSelectorProgramIdProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VideoSelectorProgramIdProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorProgramIdProperty =
@@ -5747,7 +5750,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsGroupSettingsProperty):
-          HlsGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as HlsGroupSettingsProperty
+          HlsGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsGroupSettingsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsGroupSettingsProperty = (wrapped
@@ -6519,8 +6523,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.BurnInDestinationSettingsProperty):
-          BurnInDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BurnInDestinationSettingsProperty
+          BurnInDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BurnInDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BurnInDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.BurnInDestinationSettingsProperty =
@@ -6746,8 +6750,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveContainerSettingsProperty):
-          ArchiveContainerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ArchiveContainerSettingsProperty
+          ArchiveContainerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ArchiveContainerSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArchiveContainerSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ArchiveContainerSettingsProperty =
@@ -7022,7 +7026,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionRectangleProperty):
-          CaptionRectangleProperty = CdkObjectWrappers.wrap(cdkObject) as CaptionRectangleProperty
+          CaptionRectangleProperty = CdkObjectWrappers.wrap(cdkObject) as? CaptionRectangleProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptionRectangleProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.CaptionRectangleProperty = (wrapped
@@ -7105,7 +7110,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorPidProperty):
-          VideoSelectorPidProperty = CdkObjectWrappers.wrap(cdkObject) as VideoSelectorPidProperty
+          VideoSelectorPidProperty = CdkObjectWrappers.wrap(cdkObject) as? VideoSelectorPidProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VideoSelectorPidProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorPidProperty = (wrapped
@@ -7317,7 +7323,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionSelectorProperty):
-          CaptionSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as CaptionSelectorProperty
+          CaptionSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? CaptionSelectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptionSelectorProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.CaptionSelectorProperty = (wrapped as
@@ -7559,8 +7566,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AutomaticInputFailoverSettingsProperty):
-          AutomaticInputFailoverSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AutomaticInputFailoverSettingsProperty
+          AutomaticInputFailoverSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutomaticInputFailoverSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutomaticInputFailoverSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AutomaticInputFailoverSettingsProperty
@@ -7747,8 +7754,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationSettingsProperty):
-          OutputDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OutputDestinationSettingsProperty
+          OutputDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationSettingsProperty =
@@ -7917,8 +7924,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.StandardHlsSettingsProperty):
-          StandardHlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          StandardHlsSettingsProperty
+          StandardHlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StandardHlsSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StandardHlsSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.StandardHlsSettingsProperty =
@@ -8038,7 +8045,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Hdr10SettingsProperty):
-          Hdr10SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Hdr10SettingsProperty
+          Hdr10SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Hdr10SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Hdr10SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Hdr10SettingsProperty = (wrapped as
@@ -8166,7 +8174,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FailoverConditionProperty):
-          FailoverConditionProperty = CdkObjectWrappers.wrap(cdkObject) as FailoverConditionProperty
+          FailoverConditionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FailoverConditionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FailoverConditionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FailoverConditionProperty = (wrapped
@@ -8317,8 +8326,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoBlackFailoverSettingsProperty):
-          VideoBlackFailoverSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VideoBlackFailoverSettingsProperty
+          VideoBlackFailoverSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VideoBlackFailoverSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VideoBlackFailoverSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VideoBlackFailoverSettingsProperty =
@@ -8476,7 +8485,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioSelectorProperty):
-          AudioSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as AudioSelectorProperty
+          AudioSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as? AudioSelectorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioSelectorProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioSelectorProperty = (wrapped as
@@ -9237,7 +9247,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputSettingsProperty):
-          OutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as OutputSettingsProperty
+          OutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.OutputSettingsProperty = (wrapped as
@@ -9349,8 +9360,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NielsenConfigurationProperty):
-          NielsenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NielsenConfigurationProperty
+          NielsenConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NielsenConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NielsenConfigurationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.NielsenConfigurationProperty =
@@ -9403,8 +9414,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DolbyVision81SettingsProperty):
-          DolbyVision81SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DolbyVision81SettingsProperty
+          DolbyVision81SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DolbyVision81SettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DolbyVision81SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.DolbyVision81SettingsProperty =
@@ -9610,7 +9621,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbSdtSettingsProperty):
-          DvbSdtSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as DvbSdtSettingsProperty
+          DvbSdtSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DvbSdtSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DvbSdtSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.DvbSdtSettingsProperty = (wrapped as
@@ -10405,8 +10417,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbSubDestinationSettingsProperty):
-          DvbSubDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DvbSubDestinationSettingsProperty
+          DvbSubDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DvbSubDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DvbSubDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.DvbSubDestinationSettingsProperty =
@@ -10537,8 +10549,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbSubSourceSettingsProperty):
-          DvbSubSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DvbSubSourceSettingsProperty
+          DvbSubSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DvbSubSourceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DvbSubSourceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.DvbSubSourceSettingsProperty =
@@ -10592,8 +10604,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TeletextDestinationSettingsProperty):
-          TeletextDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TeletextDestinationSettingsProperty
+          TeletextDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TeletextDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TeletextDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.TeletextDestinationSettingsProperty =
@@ -10765,8 +10777,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.UdpContainerSettingsProperty):
-          UdpContainerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UdpContainerSettingsProperty
+          UdpContainerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UdpContainerSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UdpContainerSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.UdpContainerSettingsProperty =
@@ -10861,8 +10873,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputLossFailoverSettingsProperty):
-          InputLossFailoverSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InputLossFailoverSettingsProperty
+          InputLossFailoverSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputLossFailoverSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputLossFailoverSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.InputLossFailoverSettingsProperty =
@@ -11123,8 +11135,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EbuTtDDestinationSettingsProperty):
-          EbuTtDDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EbuTtDDestinationSettingsProperty
+          EbuTtDDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EbuTtDDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbuTtDDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.EbuTtDDestinationSettingsProperty =
@@ -11224,8 +11236,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EpochLockingSettingsProperty):
-          EpochLockingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EpochLockingSettingsProperty
+          EpochLockingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EpochLockingSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EpochLockingSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.EpochLockingSettingsProperty =
@@ -11462,7 +11474,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsInputSettingsProperty):
-          HlsInputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as HlsInputSettingsProperty
+          HlsInputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsInputSettingsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsInputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsInputSettingsProperty = (wrapped
@@ -11642,8 +11655,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsBasicPutSettingsProperty):
-          HlsBasicPutSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HlsBasicPutSettingsProperty
+          HlsBasicPutSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HlsBasicPutSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsBasicPutSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsBasicPutSettingsProperty =
@@ -11726,7 +11739,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioPidSelectionProperty):
-          AudioPidSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as AudioPidSelectionProperty
+          AudioPidSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioPidSelectionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioPidSelectionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioPidSelectionProperty = (wrapped
@@ -11914,7 +11928,7 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EsamProperty):
-          EsamProperty = CdkObjectWrappers.wrap(cdkObject) as EsamProperty
+          EsamProperty = CdkObjectWrappers.wrap(cdkObject) as? EsamProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EsamProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.EsamProperty = (wrapped as
@@ -12156,8 +12170,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveOutputSettingsProperty):
-          ArchiveOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ArchiveOutputSettingsProperty
+          ArchiveOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ArchiveOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArchiveOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ArchiveOutputSettingsProperty =
@@ -12368,8 +12382,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsMediaStoreSettingsProperty):
-          HlsMediaStoreSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HlsMediaStoreSettingsProperty
+          HlsMediaStoreSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HlsMediaStoreSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsMediaStoreSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsMediaStoreSettingsProperty =
@@ -12423,8 +12437,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RtmpCaptionInfoDestinationSettingsProperty):
-          RtmpCaptionInfoDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RtmpCaptionInfoDestinationSettingsProperty
+          RtmpCaptionInfoDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RtmpCaptionInfoDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RtmpCaptionInfoDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.RtmpCaptionInfoDestinationSettingsProperty
@@ -12559,8 +12573,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioWatermarkSettingsProperty):
-          AudioWatermarkSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioWatermarkSettingsProperty
+          AudioWatermarkSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioWatermarkSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioWatermarkSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioWatermarkSettingsProperty =
@@ -12929,7 +12943,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsCdnSettingsProperty):
-          HlsCdnSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as HlsCdnSettingsProperty
+          HlsCdnSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsCdnSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsCdnSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsCdnSettingsProperty = (wrapped as
@@ -13134,7 +13149,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsWebdavSettingsProperty):
-          HlsWebdavSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as HlsWebdavSettingsProperty
+          HlsWebdavSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HlsWebdavSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsWebdavSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsWebdavSettingsProperty = (wrapped
@@ -13285,7 +13301,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Fmp4HlsSettingsProperty):
-          Fmp4HlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Fmp4HlsSettingsProperty
+          Fmp4HlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Fmp4HlsSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Fmp4HlsSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Fmp4HlsSettingsProperty = (wrapped as
@@ -13639,7 +13656,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.UdpOutputSettingsProperty):
-          UdpOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as UdpOutputSettingsProperty
+          UdpOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UdpOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UdpOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.UdpOutputSettingsProperty = (wrapped
@@ -13724,7 +13742,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbTdtSettingsProperty):
-          DvbTdtSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as DvbTdtSettingsProperty
+          DvbTdtSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DvbTdtSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DvbTdtSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.DvbTdtSettingsProperty = (wrapped as
@@ -13799,7 +13818,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioDolbyEDecodeProperty):
-          AudioDolbyEDecodeProperty = CdkObjectWrappers.wrap(cdkObject) as AudioDolbyEDecodeProperty
+          AudioDolbyEDecodeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioDolbyEDecodeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioDolbyEDecodeProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioDolbyEDecodeProperty = (wrapped
@@ -14310,8 +14330,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionSelectorSettingsProperty):
-          CaptionSelectorSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CaptionSelectorSettingsProperty
+          CaptionSelectorSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CaptionSelectorSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptionSelectorSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.CaptionSelectorSettingsProperty =
@@ -14400,7 +14420,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveS3SettingsProperty):
-          ArchiveS3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as ArchiveS3SettingsProperty
+          ArchiveS3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ArchiveS3SettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArchiveS3SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ArchiveS3SettingsProperty = (wrapped
@@ -14758,7 +14779,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AacSettingsProperty):
-          AacSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as AacSettingsProperty
+          AacSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? AacSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AacSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AacSettingsProperty = (wrapped as
@@ -15943,7 +15965,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H265SettingsProperty):
-          H265SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as H265SettingsProperty
+          H265SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? H265SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: H265SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.H265SettingsProperty = (wrapped as
@@ -15996,8 +16019,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexGroupSettingsProperty):
-          MultiplexGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexGroupSettingsProperty
+          MultiplexGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexGroupSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MultiplexGroupSettingsProperty =
@@ -16151,7 +16174,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AvailBlankingProperty):
-          AvailBlankingProperty = CdkObjectWrappers.wrap(cdkObject) as AvailBlankingProperty
+          AvailBlankingProperty = CdkObjectWrappers.wrap(cdkObject) as? AvailBlankingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AvailBlankingProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AvailBlankingProperty = (wrapped as
@@ -16287,8 +16311,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioLanguageSelectionProperty):
-          AudioLanguageSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioLanguageSelectionProperty
+          AudioLanguageSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioLanguageSelectionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioLanguageSelectionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioLanguageSelectionProperty =
@@ -16404,7 +16428,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputChannelLevelProperty):
-          InputChannelLevelProperty = CdkObjectWrappers.wrap(cdkObject) as InputChannelLevelProperty
+          InputChannelLevelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputChannelLevelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputChannelLevelProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.InputChannelLevelProperty = (wrapped
@@ -18254,7 +18279,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.M2tsSettingsProperty):
-          M2tsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as M2tsSettingsProperty
+          M2tsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? M2tsSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: M2tsSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.M2tsSettingsProperty = (wrapped as
@@ -18462,7 +18488,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VpcOutputSettingsProperty):
-          VpcOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as VpcOutputSettingsProperty
+          VpcOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VpcOutputSettingsProperty = (wrapped
@@ -18600,8 +18627,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioSilenceFailoverSettingsProperty):
-          AudioSilenceFailoverSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioSilenceFailoverSettingsProperty
+          AudioSilenceFailoverSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioSilenceFailoverSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioSilenceFailoverSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioSilenceFailoverSettingsProperty
@@ -18678,8 +18705,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ThumbnailConfigurationProperty):
-          ThumbnailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ThumbnailConfigurationProperty
+          ThumbnailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ThumbnailConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ThumbnailConfigurationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ThumbnailConfigurationProperty =
@@ -19031,7 +19058,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RtmpGroupSettingsProperty):
-          RtmpGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as RtmpGroupSettingsProperty
+          RtmpGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RtmpGroupSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RtmpGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.RtmpGroupSettingsProperty = (wrapped
@@ -19082,7 +19110,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Rec709SettingsProperty):
-          Rec709SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Rec709SettingsProperty
+          Rec709SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Rec709SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Rec709SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Rec709SettingsProperty = (wrapped as
@@ -20030,8 +20059,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionDestinationSettingsProperty):
-          CaptionDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CaptionDestinationSettingsProperty
+          CaptionDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CaptionDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptionDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.CaptionDestinationSettingsProperty =
@@ -20262,7 +20291,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AvailSettingsProperty):
-          AvailSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as AvailSettingsProperty
+          AvailSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? AvailSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AvailSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AvailSettingsProperty = (wrapped as
@@ -20316,8 +20346,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedPlusScte20DestinationSettingsProperty):
-          EmbeddedPlusScte20DestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EmbeddedPlusScte20DestinationSettingsProperty
+          EmbeddedPlusScte20DestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EmbeddedPlusScte20DestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EmbeddedPlusScte20DestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedPlusScte20DestinationSettingsProperty
@@ -20578,7 +20608,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationProperty):
-          OutputDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as OutputDestinationProperty
+          OutputDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputDestinationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationProperty = (wrapped
@@ -20849,7 +20880,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputLossBehaviorProperty):
-          InputLossBehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as InputLossBehaviorProperty
+          InputLossBehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputLossBehaviorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputLossBehaviorProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.InputLossBehaviorProperty = (wrapped
@@ -20900,7 +20932,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Rec601SettingsProperty):
-          Rec601SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Rec601SettingsProperty
+          Rec601SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Rec601SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Rec601SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Rec601SettingsProperty = (wrapped as
@@ -21113,8 +21146,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RtmpOutputSettingsProperty):
-          RtmpOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RtmpOutputSettingsProperty
+          RtmpOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RtmpOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RtmpOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.RtmpOutputSettingsProperty = (wrapped
@@ -21168,8 +21201,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte27DestinationSettingsProperty):
-          Scte27DestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Scte27DestinationSettingsProperty
+          Scte27DestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Scte27DestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Scte27DestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Scte27DestinationSettingsProperty =
@@ -21322,8 +21355,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte35SpliceInsertProperty):
-          Scte35SpliceInsertProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Scte35SpliceInsertProperty
+          Scte35SpliceInsertProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Scte35SpliceInsertProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Scte35SpliceInsertProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Scte35SpliceInsertProperty = (wrapped
@@ -21411,7 +21444,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsS3SettingsProperty):
-          HlsS3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as HlsS3SettingsProperty
+          HlsS3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? HlsS3SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsS3SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsS3SettingsProperty = (wrapped as
@@ -21515,8 +21549,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ColorCorrectionSettingsProperty):
-          ColorCorrectionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ColorCorrectionSettingsProperty
+          ColorCorrectionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColorCorrectionSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColorCorrectionSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ColorCorrectionSettingsProperty =
@@ -21570,8 +21604,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageOutputSettingsProperty):
-          MediaPackageOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MediaPackageOutputSettingsProperty
+          MediaPackageOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MediaPackageOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MediaPackageOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageOutputSettingsProperty =
@@ -21743,8 +21777,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioNormalizationSettingsProperty):
-          AudioNormalizationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioNormalizationSettingsProperty
+          AudioNormalizationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioNormalizationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioNormalizationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioNormalizationSettingsProperty =
@@ -22464,8 +22498,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MsSmoothGroupSettingsProperty):
-          MsSmoothGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MsSmoothGroupSettingsProperty
+          MsSmoothGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MsSmoothGroupSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MsSmoothGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MsSmoothGroupSettingsProperty =
@@ -22586,7 +22620,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ColorCorrectionProperty):
-          ColorCorrectionProperty = CdkObjectWrappers.wrap(cdkObject) as ColorCorrectionProperty
+          ColorCorrectionProperty = CdkObjectWrappers.wrap(cdkObject) as? ColorCorrectionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColorCorrectionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ColorCorrectionProperty = (wrapped as
@@ -22818,8 +22853,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureGroupSettingsProperty):
-          FrameCaptureGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FrameCaptureGroupSettingsProperty
+          FrameCaptureGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FrameCaptureGroupSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrameCaptureGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureGroupSettingsProperty =
@@ -22982,7 +23017,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.UdpGroupSettingsProperty):
-          UdpGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as UdpGroupSettingsProperty
+          UdpGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? UdpGroupSettingsProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UdpGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.UdpGroupSettingsProperty = (wrapped
@@ -23159,7 +23195,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RemixSettingsProperty):
-          RemixSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as RemixSettingsProperty
+          RemixSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RemixSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RemixSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.RemixSettingsProperty = (wrapped as
@@ -23213,8 +23250,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ColorSpacePassthroughSettingsProperty):
-          ColorSpacePassthroughSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ColorSpacePassthroughSettingsProperty
+          ColorSpacePassthroughSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ColorSpacePassthroughSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ColorSpacePassthroughSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ColorSpacePassthroughSettingsProperty
@@ -23377,8 +23414,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NetworkInputSettingsProperty):
-          NetworkInputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkInputSettingsProperty
+          NetworkInputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkInputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkInputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.NetworkInputSettingsProperty =
@@ -23493,8 +23530,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageGroupSettingsProperty):
-          MediaPackageGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MediaPackageGroupSettingsProperty
+          MediaPackageGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MediaPackageGroupSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MediaPackageGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MediaPackageGroupSettingsProperty =
@@ -23635,7 +23672,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.StaticKeySettingsProperty):
-          StaticKeySettingsProperty = CdkObjectWrappers.wrap(cdkObject) as StaticKeySettingsProperty
+          StaticKeySettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StaticKeySettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StaticKeySettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.StaticKeySettingsProperty = (wrapped
@@ -23787,8 +23825,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MotionGraphicsConfigurationProperty):
-          MotionGraphicsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MotionGraphicsConfigurationProperty
+          MotionGraphicsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MotionGraphicsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MotionGraphicsConfigurationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MotionGraphicsConfigurationProperty =
@@ -23841,8 +23879,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureHlsSettingsProperty):
-          FrameCaptureHlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FrameCaptureHlsSettingsProperty
+          FrameCaptureHlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FrameCaptureHlsSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrameCaptureHlsSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureHlsSettingsProperty =
@@ -24002,7 +24040,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputLocationProperty):
-          InputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as InputLocationProperty
+          InputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as? InputLocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputLocationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.InputLocationProperty = (wrapped as
@@ -24416,8 +24455,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoCodecSettingsProperty):
-          VideoCodecSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VideoCodecSettingsProperty
+          VideoCodecSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VideoCodecSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VideoCodecSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VideoCodecSettingsProperty = (wrapped
@@ -24541,8 +24580,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte20SourceSettingsProperty):
-          Scte20SourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Scte20SourceSettingsProperty
+          Scte20SourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Scte20SourceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Scte20SourceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Scte20SourceSettingsProperty =
@@ -24671,8 +24710,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AvailConfigurationProperty):
-          AvailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AvailConfigurationProperty
+          AvailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AvailConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AvailConfigurationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AvailConfigurationProperty = (wrapped
@@ -24756,7 +24795,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputLocationRefProperty):
-          OutputLocationRefProperty = CdkObjectWrappers.wrap(cdkObject) as OutputLocationRefProperty
+          OutputLocationRefProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputLocationRefProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputLocationRefProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.OutputLocationRefProperty = (wrapped
@@ -24810,8 +24850,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.SmpteTtDestinationSettingsProperty):
-          SmpteTtDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SmpteTtDestinationSettingsProperty
+          SmpteTtDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SmpteTtDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SmpteTtDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.SmpteTtDestinationSettingsProperty =
@@ -24893,7 +24933,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioTrackProperty):
-          AudioTrackProperty = CdkObjectWrappers.wrap(cdkObject) as AudioTrackProperty
+          AudioTrackProperty = CdkObjectWrappers.wrap(cdkObject) as? AudioTrackProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioTrackProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioTrackProperty = (wrapped as
@@ -25145,7 +25186,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsOutputSettingsProperty):
-          HlsOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as HlsOutputSettingsProperty
+          HlsOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HlsOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsOutputSettingsProperty = (wrapped
@@ -25289,8 +25331,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioChannelMappingProperty):
-          AudioChannelMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioChannelMappingProperty
+          AudioChannelMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioChannelMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioChannelMappingProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioChannelMappingProperty =
@@ -25342,8 +25384,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.PassThroughSettingsProperty):
-          PassThroughSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PassThroughSettingsProperty
+          PassThroughSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PassThroughSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PassThroughSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.PassThroughSettingsProperty =
@@ -25397,8 +25439,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HtmlMotionGraphicsSettingsProperty):
-          HtmlMotionGraphicsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HtmlMotionGraphicsSettingsProperty
+          HtmlMotionGraphicsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HtmlMotionGraphicsSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HtmlMotionGraphicsSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HtmlMotionGraphicsSettingsProperty =
@@ -25611,7 +25653,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Eac3AtmosSettingsProperty):
-          Eac3AtmosSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Eac3AtmosSettingsProperty
+          Eac3AtmosSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Eac3AtmosSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Eac3AtmosSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Eac3AtmosSettingsProperty = (wrapped
@@ -25833,8 +25876,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NielsenWatermarksSettingsProperty):
-          NielsenWatermarksSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NielsenWatermarksSettingsProperty
+          NielsenWatermarksSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NielsenWatermarksSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NielsenWatermarksSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.NielsenWatermarksSettingsProperty =
@@ -26180,8 +26223,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionDescriptionProperty):
-          CaptionDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CaptionDescriptionProperty
+          CaptionDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CaptionDescriptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptionDescriptionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.CaptionDescriptionProperty = (wrapped
@@ -26331,8 +26374,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CaptionLanguageMappingProperty):
-          CaptionLanguageMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CaptionLanguageMappingProperty
+          CaptionLanguageMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CaptionLanguageMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CaptionLanguageMappingProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.CaptionLanguageMappingProperty =
@@ -26424,8 +26467,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureOutputSettingsProperty):
-          FrameCaptureOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FrameCaptureOutputSettingsProperty
+          FrameCaptureOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FrameCaptureOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrameCaptureOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureOutputSettingsProperty =
@@ -28027,7 +28070,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H264SettingsProperty):
-          H264SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as H264SettingsProperty
+          H264SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? H264SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: H264SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.H264SettingsProperty = (wrapped as
@@ -28170,7 +28214,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TimecodeConfigProperty):
-          TimecodeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TimecodeConfigProperty
+          TimecodeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TimecodeConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimecodeConfigProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.TimecodeConfigProperty = (wrapped as
@@ -28483,7 +28528,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Ac3SettingsProperty):
-          Ac3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Ac3SettingsProperty
+          Ac3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Ac3SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Ac3SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Ac3SettingsProperty = (wrapped as
@@ -28606,8 +28652,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MotionGraphicsSettingsProperty):
-          MotionGraphicsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MotionGraphicsSettingsProperty
+          MotionGraphicsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MotionGraphicsSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MotionGraphicsSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MotionGraphicsSettingsProperty =
@@ -28722,8 +28768,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H265FilterSettingsProperty):
-          H265FilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          H265FilterSettingsProperty
+          H265FilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          H265FilterSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: H265FilterSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.H265FilterSettingsProperty = (wrapped
@@ -28892,7 +28938,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FecOutputSettingsProperty):
-          FecOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as FecOutputSettingsProperty
+          FecOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FecOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FecOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FecOutputSettingsProperty = (wrapped
@@ -29381,8 +29428,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioCodecSettingsProperty):
-          AudioCodecSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioCodecSettingsProperty
+          AudioCodecSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioCodecSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioCodecSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioCodecSettingsProperty = (wrapped
@@ -29497,8 +29544,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Mpeg2FilterSettingsProperty):
-          Mpeg2FilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Mpeg2FilterSettingsProperty
+          Mpeg2FilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Mpeg2FilterSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Mpeg2FilterSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Mpeg2FilterSettingsProperty =
@@ -29552,8 +29599,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedDestinationSettingsProperty):
-          EmbeddedDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EmbeddedDestinationSettingsProperty
+          EmbeddedDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EmbeddedDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EmbeddedDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedDestinationSettingsProperty =
@@ -29683,8 +29730,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexProgramChannelDestinationSettingsProperty):
-          MultiplexProgramChannelDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexProgramChannelDestinationSettingsProperty
+          MultiplexProgramChannelDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexProgramChannelDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexProgramChannelDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MultiplexProgramChannelDestinationSettingsProperty
@@ -30349,8 +30396,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputGroupSettingsProperty):
-          OutputGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OutputGroupSettingsProperty
+          OutputGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputGroupSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.OutputGroupSettingsProperty =
@@ -31066,7 +31113,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Eac3SettingsProperty):
-          Eac3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Eac3SettingsProperty
+          Eac3SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Eac3SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Eac3SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Eac3SettingsProperty = (wrapped as
@@ -31181,8 +31229,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H264FilterSettingsProperty):
-          H264FilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          H264FilterSettingsProperty
+          H264FilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          H264FilterSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: H264FilterSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.H264FilterSettingsProperty = (wrapped
@@ -31300,8 +31348,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.KeyProviderSettingsProperty):
-          KeyProviderSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KeyProviderSettingsProperty
+          KeyProviderSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KeyProviderSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyProviderSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.KeyProviderSettingsProperty =
@@ -31425,8 +31473,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MaintenanceUpdateSettingsProperty):
-          MaintenanceUpdateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MaintenanceUpdateSettingsProperty
+          MaintenanceUpdateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceUpdateSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaintenanceUpdateSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MaintenanceUpdateSettingsProperty =
@@ -31568,7 +31616,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.WavSettingsProperty):
-          WavSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as WavSettingsProperty
+          WavSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? WavSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WavSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.WavSettingsProperty = (wrapped as
@@ -31689,8 +31738,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MaintenanceCreateSettingsProperty):
-          MaintenanceCreateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MaintenanceCreateSettingsProperty
+          MaintenanceCreateSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MaintenanceCreateSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaintenanceCreateSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MaintenanceCreateSettingsProperty =
@@ -31743,8 +31792,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AribDestinationSettingsProperty):
-          AribDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AribDestinationSettingsProperty
+          AribDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AribDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AribDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AribDestinationSettingsProperty =
@@ -31871,8 +31920,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FeatureActivationsProperty):
-          FeatureActivationsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FeatureActivationsProperty
+          FeatureActivationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FeatureActivationsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FeatureActivationsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FeatureActivationsProperty = (wrapped
@@ -32075,8 +32124,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveGroupSettingsProperty):
-          ArchiveGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ArchiveGroupSettingsProperty
+          ArchiveGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ArchiveGroupSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArchiveGroupSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ArchiveGroupSettingsProperty =
@@ -32210,7 +32259,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NielsenNaesIiNwProperty):
-          NielsenNaesIiNwProperty = CdkObjectWrappers.wrap(cdkObject) as NielsenNaesIiNwProperty
+          NielsenNaesIiNwProperty = CdkObjectWrappers.wrap(cdkObject) as? NielsenNaesIiNwProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NielsenNaesIiNwProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.NielsenNaesIiNwProperty = (wrapped as
@@ -32350,7 +32400,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.NielsenCBETProperty):
-          NielsenCBETProperty = CdkObjectWrappers.wrap(cdkObject) as NielsenCBETProperty
+          NielsenCBETProperty = CdkObjectWrappers.wrap(cdkObject) as? NielsenCBETProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NielsenCBETProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.NielsenCBETProperty = (wrapped as
@@ -32499,7 +32550,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.DvbNitSettingsProperty):
-          DvbNitSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as DvbNitSettingsProperty
+          DvbNitSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? DvbNitSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DvbNitSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.DvbNitSettingsProperty = (wrapped as
@@ -32841,8 +32893,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H265ColorSpaceSettingsProperty):
-          H265ColorSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          H265ColorSpaceSettingsProperty
+          H265ColorSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          H265ColorSpaceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: H265ColorSpaceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.H265ColorSpaceSettingsProperty =
@@ -32997,8 +33049,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte35TimeSignalAposProperty):
-          Scte35TimeSignalAposProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Scte35TimeSignalAposProperty
+          Scte35TimeSignalAposProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Scte35TimeSignalAposProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Scte35TimeSignalAposProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Scte35TimeSignalAposProperty =
@@ -33308,7 +33360,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.BlackoutSlateProperty):
-          BlackoutSlateProperty = CdkObjectWrappers.wrap(cdkObject) as BlackoutSlateProperty
+          BlackoutSlateProperty = CdkObjectWrappers.wrap(cdkObject) as? BlackoutSlateProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlackoutSlateProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.BlackoutSlateProperty = (wrapped as
@@ -33449,8 +33502,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte27SourceSettingsProperty):
-          Scte27SourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Scte27SourceSettingsProperty
+          Scte27SourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Scte27SourceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Scte27SourceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Scte27SourceSettingsProperty =
@@ -33722,7 +33775,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.HlsAkamaiSettingsProperty):
-          HlsAkamaiSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as HlsAkamaiSettingsProperty
+          HlsAkamaiSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HlsAkamaiSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HlsAkamaiSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.HlsAkamaiSettingsProperty = (wrapped
@@ -33772,7 +33826,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.RawSettingsProperty):
-          RawSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as RawSettingsProperty
+          RawSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? RawSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RawSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.RawSettingsProperty = (wrapped as
@@ -33936,8 +33991,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.TeletextSourceSettingsProperty):
-          TeletextSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TeletextSourceSettingsProperty
+          TeletextSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TeletextSourceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TeletextSourceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.TeletextSourceSettingsProperty =
@@ -34307,8 +34362,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.GlobalConfigurationProperty):
-          GlobalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GlobalConfigurationProperty
+          GlobalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GlobalConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GlobalConfigurationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.GlobalConfigurationProperty =
@@ -34441,8 +34496,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputLockingSettingsProperty):
-          OutputLockingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OutputLockingSettingsProperty
+          OutputLockingSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OutputLockingSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputLockingSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.OutputLockingSettingsProperty =
@@ -34630,8 +34685,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedSourceSettingsProperty):
-          EmbeddedSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EmbeddedSourceSettingsProperty
+          EmbeddedSourceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EmbeddedSourceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EmbeddedSourceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.EmbeddedSourceSettingsProperty =
@@ -34803,8 +34858,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorSettingsProperty):
-          VideoSelectorSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VideoSelectorSettingsProperty
+          VideoSelectorSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VideoSelectorSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VideoSelectorSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorSettingsProperty =
@@ -35640,7 +35695,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Mpeg2SettingsProperty):
-          Mpeg2SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Mpeg2SettingsProperty
+          Mpeg2SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Mpeg2SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Mpeg2SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Mpeg2SettingsProperty = (wrapped as
@@ -35755,8 +35811,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioHlsRenditionSelectionProperty):
-          AudioHlsRenditionSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioHlsRenditionSelectionProperty
+          AudioHlsRenditionSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioHlsRenditionSelectionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioHlsRenditionSelectionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioHlsRenditionSelectionProperty =
@@ -35898,7 +35954,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Mp2SettingsProperty):
-          Mp2SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as Mp2SettingsProperty
+          Mp2SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Mp2SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Mp2SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Mp2SettingsProperty = (wrapped as
@@ -36014,8 +36071,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorColorSpaceSettingsProperty):
-          VideoSelectorColorSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VideoSelectorColorSpaceSettingsProperty
+          VideoSelectorColorSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VideoSelectorColorSpaceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VideoSelectorColorSpaceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VideoSelectorColorSpaceSettingsProperty
@@ -36069,8 +36126,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Scte20PlusEmbeddedDestinationSettingsProperty):
-          Scte20PlusEmbeddedDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Scte20PlusEmbeddedDestinationSettingsProperty
+          Scte20PlusEmbeddedDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Scte20PlusEmbeddedDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Scte20PlusEmbeddedDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.Scte20PlusEmbeddedDestinationSettingsProperty
@@ -36210,8 +36267,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputSpecificationProperty):
-          InputSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InputSpecificationProperty
+          InputSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputSpecificationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.InputSpecificationProperty = (wrapped
@@ -36486,8 +36543,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioOnlyHlsSettingsProperty):
-          AudioOnlyHlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioOnlyHlsSettingsProperty
+          AudioOnlyHlsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioOnlyHlsSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioOnlyHlsSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioOnlyHlsSettingsProperty =
@@ -36663,8 +36720,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureSettingsProperty):
-          FrameCaptureSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FrameCaptureSettingsProperty
+          FrameCaptureSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FrameCaptureSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrameCaptureSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureSettingsProperty =
@@ -37025,7 +37082,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputAttachmentProperty):
-          InputAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as InputAttachmentProperty
+          InputAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as? InputAttachmentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputAttachmentProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.InputAttachmentProperty = (wrapped as
@@ -37128,8 +37186,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.WebvttDestinationSettingsProperty):
-          WebvttDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          WebvttDestinationSettingsProperty
+          WebvttDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WebvttDestinationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WebvttDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.WebvttDestinationSettingsProperty =
@@ -37633,7 +37691,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.VideoDescriptionProperty):
-          VideoDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as VideoDescriptionProperty
+          VideoDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as? VideoDescriptionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VideoDescriptionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.VideoDescriptionProperty = (wrapped
@@ -37755,8 +37814,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureCdnSettingsProperty):
-          FrameCaptureCdnSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FrameCaptureCdnSettingsProperty
+          FrameCaptureCdnSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FrameCaptureCdnSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FrameCaptureCdnSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.FrameCaptureCdnSettingsProperty =
@@ -38219,7 +38278,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputProperty):
-          OutputProperty = CdkObjectWrappers.wrap(cdkObject) as OutputProperty
+          OutputProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.OutputProperty = (wrapped as
@@ -38863,7 +38923,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioDescriptionProperty):
-          AudioDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as AudioDescriptionProperty
+          AudioDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as? AudioDescriptionProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioDescriptionProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.AudioDescriptionProperty = (wrapped
@@ -38976,8 +39037,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.ArchiveCdnSettingsProperty):
-          ArchiveCdnSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ArchiveCdnSettingsProperty
+          ArchiveCdnSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ArchiveCdnSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ArchiveCdnSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.ArchiveCdnSettingsProperty = (wrapped
@@ -39629,7 +39690,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.M3u8SettingsProperty):
-          M3u8SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as M3u8SettingsProperty
+          M3u8SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? M3u8SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: M3u8SettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.M3u8SettingsProperty = (wrapped as
@@ -39743,8 +39805,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexOutputSettingsProperty):
-          MultiplexOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MultiplexOutputSettingsProperty
+          MultiplexOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexOutputSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MultiplexOutputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.MultiplexOutputSettingsProperty =
@@ -40317,7 +40379,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.OutputGroupProperty):
-          OutputGroupProperty = CdkObjectWrappers.wrap(cdkObject) as OutputGroupProperty
+          OutputGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputGroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OutputGroupProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.OutputGroupProperty = (wrapped as
@@ -40550,8 +40613,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H264ColorSpaceSettingsProperty):
-          H264ColorSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          H264ColorSpaceSettingsProperty
+          H264ColorSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          H264ColorSpaceSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: H264ColorSpaceSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.H264ColorSpaceSettingsProperty =
@@ -40639,8 +40702,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CdiInputSpecificationProperty):
-          CdiInputSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CdiInputSpecificationProperty
+          CdiInputSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CdiInputSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CdiInputSpecificationProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.CdiInputSpecificationProperty =
@@ -41225,7 +41288,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.InputSettingsProperty):
-          InputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as InputSettingsProperty
+          InputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? InputSettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnChannel.InputSettingsProperty = (wrapped as

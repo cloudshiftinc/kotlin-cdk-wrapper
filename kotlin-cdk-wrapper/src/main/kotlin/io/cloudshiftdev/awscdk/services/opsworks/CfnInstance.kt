@@ -1607,8 +1607,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty):
-          TimeBasedAutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TimeBasedAutoScalingProperty
+          TimeBasedAutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TimeBasedAutoScalingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimeBasedAutoScalingProperty):
           software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty =
@@ -1868,7 +1868,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty):
-          EbsBlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as EbsBlockDeviceProperty
+          EbsBlockDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? EbsBlockDeviceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsBlockDeviceProperty):
           software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty = (wrapped as
@@ -2103,8 +2104,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BlockDeviceMappingProperty
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BlockDeviceMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BlockDeviceMappingProperty):
           software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty = (wrapped

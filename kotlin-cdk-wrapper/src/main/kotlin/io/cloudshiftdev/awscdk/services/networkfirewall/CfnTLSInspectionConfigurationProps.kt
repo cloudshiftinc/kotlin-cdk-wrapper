@@ -339,8 +339,8 @@ public interface CfnTLSInspectionConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfigurationProps):
-        CfnTLSInspectionConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnTLSInspectionConfigurationProps
+        CfnTLSInspectionConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnTLSInspectionConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTLSInspectionConfigurationProps):
         software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfigurationProps =

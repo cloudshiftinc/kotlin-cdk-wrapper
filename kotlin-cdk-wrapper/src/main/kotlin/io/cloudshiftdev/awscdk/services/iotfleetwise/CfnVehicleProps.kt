@@ -261,7 +261,8 @@ public interface CfnVehicleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnVehicleProps):
-        CfnVehicleProps = CdkObjectWrappers.wrap(cdkObject) as CfnVehicleProps
+        CfnVehicleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVehicleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVehicleProps):
         software.amazon.awscdk.services.iotfleetwise.CfnVehicleProps = (wrapped as

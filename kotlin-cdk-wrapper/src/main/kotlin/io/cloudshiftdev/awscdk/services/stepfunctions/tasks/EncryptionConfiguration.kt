@@ -119,7 +119,8 @@ public interface EncryptionConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration):
-        EncryptionConfiguration = CdkObjectWrappers.wrap(cdkObject) as EncryptionConfiguration
+        EncryptionConfiguration = CdkObjectWrappers.wrap(cdkObject) as? EncryptionConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EncryptionConfiguration):
         software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration = (wrapped as

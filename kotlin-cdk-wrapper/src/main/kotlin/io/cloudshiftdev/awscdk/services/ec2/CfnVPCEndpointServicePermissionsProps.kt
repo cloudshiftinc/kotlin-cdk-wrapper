@@ -148,8 +148,8 @@ public interface CfnVPCEndpointServicePermissionsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissionsProps):
-        CfnVPCEndpointServicePermissionsProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVPCEndpointServicePermissionsProps
+        CfnVPCEndpointServicePermissionsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVPCEndpointServicePermissionsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPCEndpointServicePermissionsProps):
         software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissionsProps = (wrapped as

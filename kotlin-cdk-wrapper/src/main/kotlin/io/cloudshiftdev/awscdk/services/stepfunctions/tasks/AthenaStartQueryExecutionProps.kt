@@ -628,8 +628,8 @@ public interface AthenaStartQueryExecutionProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecutionProps):
-        AthenaStartQueryExecutionProps = CdkObjectWrappers.wrap(cdkObject) as
-        AthenaStartQueryExecutionProps
+        AthenaStartQueryExecutionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AthenaStartQueryExecutionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AthenaStartQueryExecutionProps):
         software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecutionProps =

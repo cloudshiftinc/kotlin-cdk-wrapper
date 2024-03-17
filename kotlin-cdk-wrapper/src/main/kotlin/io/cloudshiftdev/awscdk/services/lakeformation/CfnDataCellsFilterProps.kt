@@ -401,7 +401,8 @@ public interface CfnDataCellsFilterProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilterProps):
-        CfnDataCellsFilterProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataCellsFilterProps
+        CfnDataCellsFilterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDataCellsFilterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataCellsFilterProps):
         software.amazon.awscdk.services.lakeformation.CfnDataCellsFilterProps = (wrapped as

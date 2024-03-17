@@ -82,7 +82,8 @@ public interface ContainerDefinitionConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionConfig):
-        ContainerDefinitionConfig = CdkObjectWrappers.wrap(cdkObject) as ContainerDefinitionConfig
+        ContainerDefinitionConfig = CdkObjectWrappers.wrap(cdkObject) as? ContainerDefinitionConfig
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerDefinitionConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionConfig = (wrapped as

@@ -87,7 +87,8 @@ public interface GrantInvokeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions):
-        GrantInvokeOptions = CdkObjectWrappers.wrap(cdkObject) as GrantInvokeOptions
+        GrantInvokeOptions = CdkObjectWrappers.wrap(cdkObject) as? GrantInvokeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GrantInvokeOptions):
         software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions = (wrapped as

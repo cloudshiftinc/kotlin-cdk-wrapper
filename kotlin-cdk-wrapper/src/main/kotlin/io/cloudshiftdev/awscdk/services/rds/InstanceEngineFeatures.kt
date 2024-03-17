@@ -109,7 +109,8 @@ public interface InstanceEngineFeatures {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.InstanceEngineFeatures):
-        InstanceEngineFeatures = CdkObjectWrappers.wrap(cdkObject) as InstanceEngineFeatures
+        InstanceEngineFeatures = CdkObjectWrappers.wrap(cdkObject) as? InstanceEngineFeatures ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceEngineFeatures):
         software.amazon.awscdk.services.rds.InstanceEngineFeatures = (wrapped as

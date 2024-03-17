@@ -127,7 +127,8 @@ public interface AccessPointAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.AccessPointAttributes):
-        AccessPointAttributes = CdkObjectWrappers.wrap(cdkObject) as AccessPointAttributes
+        AccessPointAttributes = CdkObjectWrappers.wrap(cdkObject) as? AccessPointAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AccessPointAttributes):
         software.amazon.awscdk.services.efs.AccessPointAttributes = (wrapped as CdkObject).cdkObject

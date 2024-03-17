@@ -204,8 +204,8 @@ public interface CfnIdentityPoolPrincipalTagProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTagProps):
-        CfnIdentityPoolPrincipalTagProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnIdentityPoolPrincipalTagProps
+        CfnIdentityPoolPrincipalTagProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnIdentityPoolPrincipalTagProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdentityPoolPrincipalTagProps):
         software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTagProps = (wrapped as

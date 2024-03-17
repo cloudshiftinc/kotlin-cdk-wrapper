@@ -230,7 +230,8 @@ public interface CfnSMSChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSMSChannelProps):
-        CfnSMSChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnSMSChannelProps
+        CfnSMSChannelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSMSChannelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSMSChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnSMSChannelProps = (wrapped as

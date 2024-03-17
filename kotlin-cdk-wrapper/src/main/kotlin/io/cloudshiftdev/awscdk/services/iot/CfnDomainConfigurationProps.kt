@@ -573,8 +573,8 @@ public interface CfnDomainConfigurationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfigurationProps):
-        CfnDomainConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDomainConfigurationProps
+        CfnDomainConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDomainConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainConfigurationProps):
         software.amazon.awscdk.services.iot.CfnDomainConfigurationProps = (wrapped as

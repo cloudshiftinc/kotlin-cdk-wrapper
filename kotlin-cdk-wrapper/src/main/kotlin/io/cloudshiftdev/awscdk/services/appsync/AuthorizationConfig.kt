@@ -141,7 +141,8 @@ public interface AuthorizationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.AuthorizationConfig):
-        AuthorizationConfig = CdkObjectWrappers.wrap(cdkObject) as AuthorizationConfig
+        AuthorizationConfig = CdkObjectWrappers.wrap(cdkObject) as? AuthorizationConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuthorizationConfig):
         software.amazon.awscdk.services.appsync.AuthorizationConfig = (wrapped as

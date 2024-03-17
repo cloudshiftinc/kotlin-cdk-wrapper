@@ -319,7 +319,8 @@ public interface CfnCapabilityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnCapabilityProps):
-        CfnCapabilityProps = CdkObjectWrappers.wrap(cdkObject) as CfnCapabilityProps
+        CfnCapabilityProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCapabilityProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapabilityProps):
         software.amazon.awscdk.services.b2bi.CfnCapabilityProps = (wrapped as CdkObject).cdkObject

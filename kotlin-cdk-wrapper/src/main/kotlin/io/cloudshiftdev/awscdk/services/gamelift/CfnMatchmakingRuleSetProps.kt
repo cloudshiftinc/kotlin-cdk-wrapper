@@ -202,7 +202,8 @@ public interface CfnMatchmakingRuleSetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps):
-        CfnMatchmakingRuleSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnMatchmakingRuleSetProps
+        CfnMatchmakingRuleSetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnMatchmakingRuleSetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMatchmakingRuleSetProps):
         software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps = (wrapped as

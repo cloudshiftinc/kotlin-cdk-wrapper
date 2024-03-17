@@ -201,7 +201,7 @@ public interface CfnCreationPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnCreationPolicy): CfnCreationPolicy =
-        CdkObjectWrappers.wrap(cdkObject) as CfnCreationPolicy
+        CdkObjectWrappers.wrap(cdkObject) as? CfnCreationPolicy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCreationPolicy): software.amazon.awscdk.CfnCreationPolicy =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.CfnCreationPolicy

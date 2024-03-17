@@ -1585,7 +1585,8 @@ public interface EdgeFunctionProps : FunctionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.experimental.EdgeFunctionProps):
-        EdgeFunctionProps = CdkObjectWrappers.wrap(cdkObject) as EdgeFunctionProps
+        EdgeFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? EdgeFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EdgeFunctionProps):
         software.amazon.awscdk.services.cloudfront.experimental.EdgeFunctionProps = (wrapped as

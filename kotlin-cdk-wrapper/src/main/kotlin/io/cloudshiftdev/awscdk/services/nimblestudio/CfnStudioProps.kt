@@ -280,7 +280,7 @@ public interface CfnStudioProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioProps):
-        CfnStudioProps = CdkObjectWrappers.wrap(cdkObject) as CfnStudioProps
+        CfnStudioProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStudioProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStudioProps):
         software.amazon.awscdk.services.nimblestudio.CfnStudioProps = (wrapped as

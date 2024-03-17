@@ -1943,8 +1943,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty):
-          HostVolumePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          HostVolumePropertiesProperty
+          HostVolumePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HostVolumePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HostVolumePropertiesProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostVolumePropertiesProperty =
@@ -2117,7 +2117,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty):
-          SystemControlProperty = CdkObjectWrappers.wrap(cdkObject) as SystemControlProperty
+          SystemControlProperty = CdkObjectWrappers.wrap(cdkObject) as? SystemControlProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SystemControlProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.SystemControlProperty = (wrapped as
@@ -2301,8 +2302,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty):
-          FirelensConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FirelensConfigurationProperty
+          FirelensConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FirelensConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FirelensConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.FirelensConfigurationProperty =
@@ -2479,7 +2480,7 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty):
-          TmpfsProperty = CdkObjectWrappers.wrap(cdkObject) as TmpfsProperty
+          TmpfsProperty = CdkObjectWrappers.wrap(cdkObject) as? TmpfsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TmpfsProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.TmpfsProperty = (wrapped as
@@ -2588,7 +2589,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty):
-          HostEntryProperty = CdkObjectWrappers.wrap(cdkObject) as HostEntryProperty
+          HostEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? HostEntryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HostEntryProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.HostEntryProperty = (wrapped as
@@ -2729,7 +2731,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty):
-          EnvironmentFileProperty = CdkObjectWrappers.wrap(cdkObject) as EnvironmentFileProperty
+          EnvironmentFileProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentFileProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentFileProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.EnvironmentFileProperty = (wrapped
@@ -2870,7 +2873,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty):
-          UlimitProperty = CdkObjectWrappers.wrap(cdkObject) as UlimitProperty
+          UlimitProperty = CdkObjectWrappers.wrap(cdkObject) as? UlimitProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UlimitProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.UlimitProperty = (wrapped as
@@ -3005,7 +3009,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty):
-          VolumeFromProperty = CdkObjectWrappers.wrap(cdkObject) as VolumeFromProperty
+          VolumeFromProperty = CdkObjectWrappers.wrap(cdkObject) as? VolumeFromProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VolumeFromProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeFromProperty = (wrapped as
@@ -3415,8 +3420,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty):
-          DockerVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DockerVolumeConfigurationProperty
+          DockerVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DockerVolumeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DockerVolumeConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.DockerVolumeConfigurationProperty =
@@ -3735,8 +3740,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty):
-          EFSVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EFSVolumeConfigurationProperty
+          EFSVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EFSVolumeConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EFSVolumeConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.EFSVolumeConfigurationProperty =
@@ -3902,7 +3907,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty):
-          MountPointProperty = CdkObjectWrappers.wrap(cdkObject) as MountPointProperty
+          MountPointProperty = CdkObjectWrappers.wrap(cdkObject) as? MountPointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MountPointProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.MountPointProperty = (wrapped as
@@ -4063,8 +4069,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty):
-          AuthorizationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AuthorizationConfigProperty
+          AuthorizationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AuthorizationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AuthorizationConfigProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.AuthorizationConfigProperty =
@@ -4192,8 +4198,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty):
-          InferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InferenceAcceleratorProperty
+          InferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InferenceAcceleratorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InferenceAcceleratorProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.InferenceAcceleratorProperty =
@@ -4333,8 +4339,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty):
-          TaskDefinitionPlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TaskDefinitionPlacementConstraintProperty
+          TaskDefinitionPlacementConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TaskDefinitionPlacementConstraintProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskDefinitionPlacementConstraintProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty
@@ -4460,7 +4466,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty):
-          RuntimePlatformProperty = CdkObjectWrappers.wrap(cdkObject) as RuntimePlatformProperty
+          RuntimePlatformProperty = CdkObjectWrappers.wrap(cdkObject) as? RuntimePlatformProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuntimePlatformProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.RuntimePlatformProperty = (wrapped
@@ -4639,8 +4646,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty):
-          ContainerDependencyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ContainerDependencyProperty
+          ContainerDependencyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContainerDependencyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerDependencyProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDependencyProperty =
@@ -4759,7 +4766,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty):
-          KeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as KeyValuePairProperty
+          KeyValuePairProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValuePairProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyValuePairProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.KeyValuePairProperty = (wrapped as
@@ -4915,7 +4923,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty):
-          DeviceProperty = CdkObjectWrappers.wrap(cdkObject) as DeviceProperty
+          DeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty = (wrapped as
@@ -5633,7 +5642,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty):
-          LinuxParametersProperty = CdkObjectWrappers.wrap(cdkObject) as LinuxParametersProperty
+          LinuxParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? LinuxParametersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LinuxParametersProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty = (wrapped
@@ -11194,8 +11204,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDefinitionProperty):
-          ContainerDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ContainerDefinitionProperty
+          ContainerDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContainerDefinitionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContainerDefinitionProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.ContainerDefinitionProperty =
@@ -11509,8 +11519,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty):
-          ProxyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProxyConfigurationProperty
+          ProxyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProxyConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProxyConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.ProxyConfigurationProperty =
@@ -11618,8 +11628,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty):
-          RepositoryCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RepositoryCredentialsProperty
+          RepositoryCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RepositoryCredentialsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RepositoryCredentialsProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.RepositoryCredentialsProperty =
@@ -11800,7 +11810,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty):
-          SecretProperty = CdkObjectWrappers.wrap(cdkObject) as SecretProperty
+          SecretProperty = CdkObjectWrappers.wrap(cdkObject) as? SecretProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SecretProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.SecretProperty = (wrapped as
@@ -12119,7 +12130,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty):
-          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as LogConfigurationProperty
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? LogConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LogConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty = (wrapped
@@ -12774,7 +12786,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.PortMappingProperty):
-          PortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as PortMappingProperty
+          PortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? PortMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortMappingProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.PortMappingProperty = (wrapped as
@@ -13163,7 +13176,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty):
-          HealthCheckProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckProperty
+          HealthCheckProperty = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HealthCheckProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.HealthCheckProperty = (wrapped as
@@ -13319,8 +13333,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty):
-          ResourceRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResourceRequirementProperty
+          ResourceRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceRequirementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceRequirementProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.ResourceRequirementProperty =
@@ -13419,7 +13433,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty):
-          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as EphemeralStorageProperty
+          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? EphemeralStorageProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EphemeralStorageProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty = (wrapped
@@ -13942,7 +13957,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty):
-          VolumeProperty = CdkObjectWrappers.wrap(cdkObject) as VolumeProperty
+          VolumeProperty = CdkObjectWrappers.wrap(cdkObject) as? VolumeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VolumeProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.VolumeProperty = (wrapped as
@@ -14297,8 +14313,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty):
-          KernelCapabilitiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KernelCapabilitiesProperty
+          KernelCapabilitiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KernelCapabilitiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KernelCapabilitiesProperty):
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty =

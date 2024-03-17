@@ -449,7 +449,8 @@ public interface CfnKnowledgeBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBaseProps):
-        CfnKnowledgeBaseProps = CdkObjectWrappers.wrap(cdkObject) as CfnKnowledgeBaseProps
+        CfnKnowledgeBaseProps = CdkObjectWrappers.wrap(cdkObject) as? CfnKnowledgeBaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnKnowledgeBaseProps):
         software.amazon.awscdk.services.wisdom.CfnKnowledgeBaseProps = (wrapped as

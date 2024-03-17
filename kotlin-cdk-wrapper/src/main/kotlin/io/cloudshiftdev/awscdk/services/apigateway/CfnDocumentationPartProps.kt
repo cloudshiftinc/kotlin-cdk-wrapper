@@ -184,7 +184,8 @@ public interface CfnDocumentationPartProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPartProps):
-        CfnDocumentationPartProps = CdkObjectWrappers.wrap(cdkObject) as CfnDocumentationPartProps
+        CfnDocumentationPartProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDocumentationPartProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDocumentationPartProps):
         software.amazon.awscdk.services.apigateway.CfnDocumentationPartProps = (wrapped as

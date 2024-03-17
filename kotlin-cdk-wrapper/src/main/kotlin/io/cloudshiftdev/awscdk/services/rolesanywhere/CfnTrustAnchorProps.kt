@@ -285,7 +285,8 @@ public interface CfnTrustAnchorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps):
-        CfnTrustAnchorProps = CdkObjectWrappers.wrap(cdkObject) as CfnTrustAnchorProps
+        CfnTrustAnchorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTrustAnchorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrustAnchorProps):
         software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchorProps = (wrapped as

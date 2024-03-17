@@ -98,7 +98,8 @@ public interface VirtualServiceAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceAttributes):
-        VirtualServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as VirtualServiceAttributes
+        VirtualServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as? VirtualServiceAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualServiceAttributes):
         software.amazon.awscdk.services.appmesh.VirtualServiceAttributes = (wrapped as

@@ -126,7 +126,8 @@ public interface FargateServiceAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FargateServiceAttributes):
-        FargateServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as FargateServiceAttributes
+        FargateServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as? FargateServiceAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FargateServiceAttributes):
         software.amazon.awscdk.services.ecs.FargateServiceAttributes = (wrapped as

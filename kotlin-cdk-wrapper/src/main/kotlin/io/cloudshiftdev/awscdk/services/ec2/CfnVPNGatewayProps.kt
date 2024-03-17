@@ -148,7 +148,8 @@ public interface CfnVPNGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGatewayProps):
-        CfnVPNGatewayProps = CdkObjectWrappers.wrap(cdkObject) as CfnVPNGatewayProps
+        CfnVPNGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? CfnVPNGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVPNGatewayProps):
         software.amazon.awscdk.services.ec2.CfnVPNGatewayProps = (wrapped as CdkObject).cdkObject as

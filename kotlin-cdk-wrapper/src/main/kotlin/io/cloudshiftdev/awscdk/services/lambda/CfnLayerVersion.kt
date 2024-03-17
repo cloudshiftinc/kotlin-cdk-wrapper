@@ -577,7 +577,8 @@ public open class CfnLayerVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty):
-          ContentProperty = CdkObjectWrappers.wrap(cdkObject) as ContentProperty
+          ContentProperty = CdkObjectWrappers.wrap(cdkObject) as? ContentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContentProperty):
           software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty = (wrapped as

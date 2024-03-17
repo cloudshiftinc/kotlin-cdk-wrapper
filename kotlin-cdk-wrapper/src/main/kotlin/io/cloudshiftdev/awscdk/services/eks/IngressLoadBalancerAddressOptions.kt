@@ -92,8 +92,8 @@ public interface IngressLoadBalancerAddressOptions : ServiceLoadBalancerAddressO
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions):
-        IngressLoadBalancerAddressOptions = CdkObjectWrappers.wrap(cdkObject) as
-        IngressLoadBalancerAddressOptions
+        IngressLoadBalancerAddressOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        IngressLoadBalancerAddressOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IngressLoadBalancerAddressOptions):
         software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions = (wrapped as

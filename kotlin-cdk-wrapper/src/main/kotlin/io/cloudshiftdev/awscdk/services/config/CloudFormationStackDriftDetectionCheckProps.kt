@@ -232,8 +232,8 @@ public interface CloudFormationStackDriftDetectionCheckProps : RuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheckProps):
-        CloudFormationStackDriftDetectionCheckProps = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationStackDriftDetectionCheckProps
+        CloudFormationStackDriftDetectionCheckProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationStackDriftDetectionCheckProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationStackDriftDetectionCheckProps):
         software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheckProps =

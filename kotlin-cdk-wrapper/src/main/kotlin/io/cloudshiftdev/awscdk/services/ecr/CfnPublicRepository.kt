@@ -516,8 +516,8 @@ public open class CfnPublicRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepository.RepositoryCatalogDataProperty):
-          RepositoryCatalogDataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RepositoryCatalogDataProperty
+          RepositoryCatalogDataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RepositoryCatalogDataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RepositoryCatalogDataProperty):
           software.amazon.awscdk.services.ecr.CfnPublicRepository.RepositoryCatalogDataProperty =

@@ -77,7 +77,8 @@ public interface CfnRegistryPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnRegistryPolicyProps):
-        CfnRegistryPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnRegistryPolicyProps
+        CfnRegistryPolicyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRegistryPolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRegistryPolicyProps):
         software.amazon.awscdk.services.ecr.CfnRegistryPolicyProps = (wrapped as

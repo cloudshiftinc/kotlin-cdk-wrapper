@@ -141,7 +141,8 @@ public interface EksVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EksVolumeOptions):
-        EksVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as EksVolumeOptions
+        EksVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as? EksVolumeOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksVolumeOptions):
         software.amazon.awscdk.services.batch.EksVolumeOptions = (wrapped as CdkObject).cdkObject as

@@ -92,7 +92,8 @@ public interface VersionAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.VersionAttributes):
-        VersionAttributes = CdkObjectWrappers.wrap(cdkObject) as VersionAttributes
+        VersionAttributes = CdkObjectWrappers.wrap(cdkObject) as? VersionAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VersionAttributes):
         software.amazon.awscdk.services.lambda.VersionAttributes = (wrapped as CdkObject).cdkObject

@@ -406,7 +406,8 @@ public open class CfnGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty):
-          GatewayNetworkProperty = CdkObjectWrappers.wrap(cdkObject) as GatewayNetworkProperty
+          GatewayNetworkProperty = CdkObjectWrappers.wrap(cdkObject) as? GatewayNetworkProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayNetworkProperty):
           software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty = (wrapped

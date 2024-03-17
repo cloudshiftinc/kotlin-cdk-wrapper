@@ -455,7 +455,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty):
-          MaxCountRuleProperty = CdkObjectWrappers.wrap(cdkObject) as MaxCountRuleProperty
+          MaxCountRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MaxCountRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaxCountRuleProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxCountRuleProperty =
@@ -640,8 +641,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationResourceLifecycleConfigProperty):
-          ApplicationResourceLifecycleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApplicationResourceLifecycleConfigProperty
+          ApplicationResourceLifecycleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationResourceLifecycleConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationResourceLifecycleConfigProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationResourceLifecycleConfigProperty
@@ -815,7 +816,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty):
-          MaxAgeRuleProperty = CdkObjectWrappers.wrap(cdkObject) as MaxAgeRuleProperty
+          MaxAgeRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? MaxAgeRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MaxAgeRuleProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.MaxAgeRuleProperty =
@@ -1018,8 +1020,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationVersionLifecycleConfigProperty):
-          ApplicationVersionLifecycleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ApplicationVersionLifecycleConfigProperty
+          ApplicationVersionLifecycleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ApplicationVersionLifecycleConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ApplicationVersionLifecycleConfigProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplication.ApplicationVersionLifecycleConfigProperty

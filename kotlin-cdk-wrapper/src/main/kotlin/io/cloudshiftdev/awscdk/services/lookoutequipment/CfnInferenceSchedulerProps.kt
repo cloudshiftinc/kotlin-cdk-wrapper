@@ -399,7 +399,8 @@ public interface CfnInferenceSchedulerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceSchedulerProps):
-        CfnInferenceSchedulerProps = CdkObjectWrappers.wrap(cdkObject) as CfnInferenceSchedulerProps
+        CfnInferenceSchedulerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInferenceSchedulerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInferenceSchedulerProps):
         software.amazon.awscdk.services.lookoutequipment.CfnInferenceSchedulerProps = (wrapped as

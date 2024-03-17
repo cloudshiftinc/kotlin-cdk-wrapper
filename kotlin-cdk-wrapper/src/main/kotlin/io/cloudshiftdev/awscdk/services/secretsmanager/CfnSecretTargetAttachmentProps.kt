@@ -185,8 +185,8 @@ public interface CfnSecretTargetAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachmentProps):
-        CfnSecretTargetAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSecretTargetAttachmentProps
+        CfnSecretTargetAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSecretTargetAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecretTargetAttachmentProps):
         software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachmentProps = (wrapped as

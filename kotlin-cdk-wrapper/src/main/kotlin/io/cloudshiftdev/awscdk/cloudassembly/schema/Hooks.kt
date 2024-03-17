@@ -199,7 +199,7 @@ public interface Hooks {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.Hooks): Hooks =
-        CdkObjectWrappers.wrap(cdkObject) as Hooks
+        CdkObjectWrappers.wrap(cdkObject) as? Hooks ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Hooks): software.amazon.awscdk.cloudassembly.schema.Hooks =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.cloudassembly.schema.Hooks

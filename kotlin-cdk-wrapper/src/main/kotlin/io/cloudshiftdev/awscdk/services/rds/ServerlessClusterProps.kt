@@ -597,7 +597,8 @@ public interface ServerlessClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterProps):
-        ServerlessClusterProps = CdkObjectWrappers.wrap(cdkObject) as ServerlessClusterProps
+        ServerlessClusterProps = CdkObjectWrappers.wrap(cdkObject) as? ServerlessClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessClusterProps):
         software.amazon.awscdk.services.rds.ServerlessClusterProps = (wrapped as

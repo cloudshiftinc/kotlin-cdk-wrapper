@@ -286,8 +286,8 @@ public interface HttpVirtualNodeListenerOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpVirtualNodeListenerOptions):
-        HttpVirtualNodeListenerOptions = CdkObjectWrappers.wrap(cdkObject) as
-        HttpVirtualNodeListenerOptions
+        HttpVirtualNodeListenerOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpVirtualNodeListenerOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpVirtualNodeListenerOptions):
         software.amazon.awscdk.services.appmesh.HttpVirtualNodeListenerOptions = (wrapped as

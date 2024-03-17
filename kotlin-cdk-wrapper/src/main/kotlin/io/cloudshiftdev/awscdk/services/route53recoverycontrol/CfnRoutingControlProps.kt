@@ -145,7 +145,8 @@ public interface CfnRoutingControlProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControlProps):
-        CfnRoutingControlProps = CdkObjectWrappers.wrap(cdkObject) as CfnRoutingControlProps
+        CfnRoutingControlProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRoutingControlProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRoutingControlProps):
         software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControlProps = (wrapped as

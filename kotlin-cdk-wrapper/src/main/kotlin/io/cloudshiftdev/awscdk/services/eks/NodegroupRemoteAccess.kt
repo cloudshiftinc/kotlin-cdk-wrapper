@@ -151,7 +151,8 @@ public interface NodegroupRemoteAccess {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.NodegroupRemoteAccess):
-        NodegroupRemoteAccess = CdkObjectWrappers.wrap(cdkObject) as NodegroupRemoteAccess
+        NodegroupRemoteAccess = CdkObjectWrappers.wrap(cdkObject) as? NodegroupRemoteAccess ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NodegroupRemoteAccess):
         software.amazon.awscdk.services.eks.NodegroupRemoteAccess = (wrapped as CdkObject).cdkObject

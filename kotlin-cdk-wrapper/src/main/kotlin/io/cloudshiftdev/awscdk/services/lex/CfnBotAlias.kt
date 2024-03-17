@@ -771,7 +771,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty):
-          AudioLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as AudioLogSettingProperty
+          AudioLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? AudioLogSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioLogSettingProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty = (wrapped as
@@ -943,8 +944,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsProperty):
-          BotAliasLocaleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BotAliasLocaleSettingsProperty
+          BotAliasLocaleSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BotAliasLocaleSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BotAliasLocaleSettingsProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsProperty = (wrapped
@@ -1045,8 +1046,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty):
-          SentimentAnalysisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SentimentAnalysisSettingsProperty
+          SentimentAnalysisSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SentimentAnalysisSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SentimentAnalysisSettingsProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty =
@@ -1166,8 +1167,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty):
-          CodeHookSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CodeHookSpecificationProperty
+          CodeHookSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeHookSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeHookSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty = (wrapped
@@ -1279,7 +1280,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty):
-          LambdaCodeHookProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaCodeHookProperty
+          LambdaCodeHookProperty = CdkObjectWrappers.wrap(cdkObject) as? LambdaCodeHookProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaCodeHookProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty = (wrapped as
@@ -1430,8 +1432,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty):
-          BotAliasLocaleSettingsItemProperty = CdkObjectWrappers.wrap(cdkObject) as
-          BotAliasLocaleSettingsItemProperty
+          BotAliasLocaleSettingsItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BotAliasLocaleSettingsItemProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BotAliasLocaleSettingsItemProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty =
@@ -1574,8 +1576,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.S3BucketLogDestinationProperty):
-          S3BucketLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3BucketLogDestinationProperty
+          S3BucketLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3BucketLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3BucketLogDestinationProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.S3BucketLogDestinationProperty = (wrapped
@@ -1688,8 +1690,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty):
-          AudioLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AudioLogDestinationProperty
+          AudioLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AudioLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AudioLogDestinationProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty = (wrapped as
@@ -1806,8 +1808,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.TextLogDestinationProperty):
-          TextLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TextLogDestinationProperty
+          TextLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TextLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TextLogDestinationProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogDestinationProperty = (wrapped as
@@ -1964,7 +1966,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty):
-          TextLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as TextLogSettingProperty
+          TextLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as? TextLogSettingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TextLogSettingProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty = (wrapped as
@@ -2081,8 +2084,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty):
-          CloudWatchLogGroupLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CloudWatchLogGroupLogDestinationProperty
+          CloudWatchLogGroupLogDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchLogGroupLogDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CloudWatchLogGroupLogDestinationProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty =
@@ -2256,8 +2259,8 @@ public open class CfnBotAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty):
-          ConversationLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConversationLogSettingsProperty
+          ConversationLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConversationLogSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConversationLogSettingsProperty):
           software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty = (wrapped

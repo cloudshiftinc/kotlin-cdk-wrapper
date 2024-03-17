@@ -106,7 +106,8 @@ public interface LaunchTemplateSpec {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.LaunchTemplateSpec):
-        LaunchTemplateSpec = CdkObjectWrappers.wrap(cdkObject) as LaunchTemplateSpec
+        LaunchTemplateSpec = CdkObjectWrappers.wrap(cdkObject) as? LaunchTemplateSpec ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateSpec):
         software.amazon.awscdk.services.eks.LaunchTemplateSpec = (wrapped as CdkObject).cdkObject as

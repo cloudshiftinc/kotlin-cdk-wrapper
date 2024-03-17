@@ -526,8 +526,8 @@ public open class CfnOrganizationConformancePack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConformancePack.ConformancePackInputParameterProperty):
-          ConformancePackInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConformancePackInputParameterProperty
+          ConformancePackInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConformancePackInputParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConformancePackInputParameterProperty):
           software.amazon.awscdk.services.config.CfnOrganizationConformancePack.ConformancePackInputParameterProperty

@@ -21,9 +21,14 @@ public abstract class BackedDataSource internal constructor(
   public override fun grantPrincipal(): IPrincipal =
       unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appsync.BackedDataSource,
+  ) : BackedDataSource(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.BackedDataSource):
-        BackedDataSource = CdkObjectWrappers.wrap(cdkObject) as BackedDataSource
+        BackedDataSource = CdkObjectWrappers.wrap(cdkObject) as? BackedDataSource ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BackedDataSource):
         software.amazon.awscdk.services.appsync.BackedDataSource = (wrapped as CdkObject).cdkObject

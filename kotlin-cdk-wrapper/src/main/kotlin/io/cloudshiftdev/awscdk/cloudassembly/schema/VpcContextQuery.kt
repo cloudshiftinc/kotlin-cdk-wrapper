@@ -274,7 +274,8 @@ public interface VpcContextQuery {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.VpcContextQuery):
-        VpcContextQuery = CdkObjectWrappers.wrap(cdkObject) as VpcContextQuery
+        VpcContextQuery = CdkObjectWrappers.wrap(cdkObject) as? VpcContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpcContextQuery):
         software.amazon.awscdk.cloudassembly.schema.VpcContextQuery = (wrapped as

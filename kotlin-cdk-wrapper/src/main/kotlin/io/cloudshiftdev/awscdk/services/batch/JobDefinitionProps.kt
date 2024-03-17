@@ -269,7 +269,8 @@ public interface JobDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.JobDefinitionProps):
-        JobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as JobDefinitionProps
+        JobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? JobDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JobDefinitionProps):
         software.amazon.awscdk.services.batch.JobDefinitionProps = (wrapped as CdkObject).cdkObject

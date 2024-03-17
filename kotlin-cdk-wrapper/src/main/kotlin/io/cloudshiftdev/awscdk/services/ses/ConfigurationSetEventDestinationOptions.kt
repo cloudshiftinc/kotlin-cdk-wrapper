@@ -171,8 +171,8 @@ public interface ConfigurationSetEventDestinationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions):
-        ConfigurationSetEventDestinationOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ConfigurationSetEventDestinationOptions
+        ConfigurationSetEventDestinationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ConfigurationSetEventDestinationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConfigurationSetEventDestinationOptions):
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions = (wrapped as

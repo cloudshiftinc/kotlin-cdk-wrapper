@@ -390,7 +390,7 @@ public interface NsRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.NsRecordProps):
-        NsRecordProps = CdkObjectWrappers.wrap(cdkObject) as NsRecordProps
+        NsRecordProps = CdkObjectWrappers.wrap(cdkObject) as? NsRecordProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NsRecordProps):
         software.amazon.awscdk.services.route53.NsRecordProps = (wrapped as CdkObject).cdkObject as

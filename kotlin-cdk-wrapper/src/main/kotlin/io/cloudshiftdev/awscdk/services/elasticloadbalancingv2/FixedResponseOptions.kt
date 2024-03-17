@@ -112,7 +112,8 @@ public interface FixedResponseOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions):
-        FixedResponseOptions = CdkObjectWrappers.wrap(cdkObject) as FixedResponseOptions
+        FixedResponseOptions = CdkObjectWrappers.wrap(cdkObject) as? FixedResponseOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FixedResponseOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions = (wrapped as

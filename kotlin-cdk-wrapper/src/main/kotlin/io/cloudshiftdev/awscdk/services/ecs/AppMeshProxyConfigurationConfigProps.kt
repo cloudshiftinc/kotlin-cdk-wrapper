@@ -130,8 +130,8 @@ public interface AppMeshProxyConfigurationConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationConfigProps):
-        AppMeshProxyConfigurationConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        AppMeshProxyConfigurationConfigProps
+        AppMeshProxyConfigurationConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AppMeshProxyConfigurationConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AppMeshProxyConfigurationConfigProps):
         software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationConfigProps = (wrapped as

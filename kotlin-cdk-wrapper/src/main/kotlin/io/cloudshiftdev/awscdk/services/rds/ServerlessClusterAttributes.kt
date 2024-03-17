@@ -227,8 +227,8 @@ public interface ServerlessClusterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes):
-        ServerlessClusterAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        ServerlessClusterAttributes
+        ServerlessClusterAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerlessClusterAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerlessClusterAttributes):
         software.amazon.awscdk.services.rds.ServerlessClusterAttributes = (wrapped as

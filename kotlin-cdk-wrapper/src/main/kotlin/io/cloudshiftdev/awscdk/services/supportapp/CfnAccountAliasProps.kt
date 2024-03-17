@@ -76,7 +76,8 @@ public interface CfnAccountAliasProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAliasProps):
-        CfnAccountAliasProps = CdkObjectWrappers.wrap(cdkObject) as CfnAccountAliasProps
+        CfnAccountAliasProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAccountAliasProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAccountAliasProps):
         software.amazon.awscdk.services.supportapp.CfnAccountAliasProps = (wrapped as

@@ -40,9 +40,13 @@ public abstract class MapBase internal constructor(
    */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase,
+  ) : MapBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.MapBase): MapBase =
-        CdkObjectWrappers.wrap(cdkObject) as MapBase
+        CdkObjectWrappers.wrap(cdkObject) as? MapBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MapBase): software.amazon.awscdk.services.stepfunctions.MapBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.stepfunctions.MapBase

@@ -237,7 +237,8 @@ public interface CfnMitigationActionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnMitigationActionProps):
-        CfnMitigationActionProps = CdkObjectWrappers.wrap(cdkObject) as CfnMitigationActionProps
+        CfnMitigationActionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMitigationActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMitigationActionProps):
         software.amazon.awscdk.services.iot.CfnMitigationActionProps = (wrapped as

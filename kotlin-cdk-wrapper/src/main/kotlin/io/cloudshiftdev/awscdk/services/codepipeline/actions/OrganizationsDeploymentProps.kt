@@ -94,8 +94,8 @@ public interface OrganizationsDeploymentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.OrganizationsDeploymentProps):
-        OrganizationsDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as
-        OrganizationsDeploymentProps
+        OrganizationsDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        OrganizationsDeploymentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OrganizationsDeploymentProps):
         software.amazon.awscdk.services.codepipeline.actions.OrganizationsDeploymentProps = (wrapped

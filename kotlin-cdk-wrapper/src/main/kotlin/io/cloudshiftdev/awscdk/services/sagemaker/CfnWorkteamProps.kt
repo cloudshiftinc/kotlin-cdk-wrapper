@@ -335,7 +335,8 @@ public interface CfnWorkteamProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteamProps):
-        CfnWorkteamProps = CdkObjectWrappers.wrap(cdkObject) as CfnWorkteamProps
+        CfnWorkteamProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWorkteamProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWorkteamProps):
         software.amazon.awscdk.services.sagemaker.CfnWorkteamProps = (wrapped as

@@ -130,7 +130,8 @@ public interface UniqueResourceNameOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.UniqueResourceNameOptions):
-        UniqueResourceNameOptions = CdkObjectWrappers.wrap(cdkObject) as UniqueResourceNameOptions
+        UniqueResourceNameOptions = CdkObjectWrappers.wrap(cdkObject) as? UniqueResourceNameOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UniqueResourceNameOptions):
         software.amazon.awscdk.UniqueResourceNameOptions = (wrapped as CdkObject).cdkObject as

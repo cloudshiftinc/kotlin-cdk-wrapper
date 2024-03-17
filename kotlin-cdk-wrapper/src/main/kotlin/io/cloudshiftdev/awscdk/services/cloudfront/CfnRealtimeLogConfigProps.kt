@@ -257,7 +257,8 @@ public interface CfnRealtimeLogConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfigProps):
-        CfnRealtimeLogConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnRealtimeLogConfigProps
+        CfnRealtimeLogConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRealtimeLogConfigProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRealtimeLogConfigProps):
         software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfigProps = (wrapped as

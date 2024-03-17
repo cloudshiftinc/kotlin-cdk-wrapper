@@ -620,7 +620,8 @@ public open class CfnFleetMetric internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty):
-          AggregationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as AggregationTypeProperty
+          AggregationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? AggregationTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AggregationTypeProperty):
           software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty = (wrapped as

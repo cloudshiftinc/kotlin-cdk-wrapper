@@ -71,7 +71,8 @@ public interface ApiMappingAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes):
-        ApiMappingAttributes = CdkObjectWrappers.wrap(cdkObject) as ApiMappingAttributes
+        ApiMappingAttributes = CdkObjectWrappers.wrap(cdkObject) as? ApiMappingAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiMappingAttributes):
         software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes = (wrapped as

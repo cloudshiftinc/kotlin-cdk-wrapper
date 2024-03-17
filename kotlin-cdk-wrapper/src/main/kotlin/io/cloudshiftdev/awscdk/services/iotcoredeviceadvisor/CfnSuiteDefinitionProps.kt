@@ -262,7 +262,8 @@ public interface CfnSuiteDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinitionProps):
-        CfnSuiteDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnSuiteDefinitionProps
+        CfnSuiteDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSuiteDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSuiteDefinitionProps):
         software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinitionProps = (wrapped as

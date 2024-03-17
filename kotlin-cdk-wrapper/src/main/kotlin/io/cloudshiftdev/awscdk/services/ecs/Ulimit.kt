@@ -127,7 +127,7 @@ public interface Ulimit {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Ulimit): Ulimit =
-        CdkObjectWrappers.wrap(cdkObject) as Ulimit
+        CdkObjectWrappers.wrap(cdkObject) as? Ulimit ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Ulimit): software.amazon.awscdk.services.ecs.Ulimit = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ecs.Ulimit

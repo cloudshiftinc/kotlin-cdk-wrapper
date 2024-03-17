@@ -453,7 +453,8 @@ public interface SecretRotationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationProps):
-        SecretRotationProps = CdkObjectWrappers.wrap(cdkObject) as SecretRotationProps
+        SecretRotationProps = CdkObjectWrappers.wrap(cdkObject) as? SecretRotationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretRotationProps):
         software.amazon.awscdk.services.secretsmanager.SecretRotationProps = (wrapped as

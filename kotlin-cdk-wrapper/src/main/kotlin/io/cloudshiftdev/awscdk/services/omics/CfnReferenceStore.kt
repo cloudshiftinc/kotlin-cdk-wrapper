@@ -386,7 +386,8 @@ public open class CfnReferenceStore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnReferenceStore.SseConfigProperty):
-          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SseConfigProperty
+          SseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SseConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseConfigProperty):
           software.amazon.awscdk.services.omics.CfnReferenceStore.SseConfigProperty = (wrapped as

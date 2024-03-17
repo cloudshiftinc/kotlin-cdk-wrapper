@@ -459,8 +459,8 @@ public open class CfnExecutionPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kendraranking.CfnExecutionPlan.CapacityUnitsConfigurationProperty):
-          CapacityUnitsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CapacityUnitsConfigurationProperty
+          CapacityUnitsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityUnitsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapacityUnitsConfigurationProperty):
           software.amazon.awscdk.services.kendraranking.CfnExecutionPlan.CapacityUnitsConfigurationProperty

@@ -703,8 +703,8 @@ public open class CfnSimulationApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty):
-          SimulationSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SimulationSoftwareSuiteProperty
+          SimulationSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SimulationSoftwareSuiteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SimulationSoftwareSuiteProperty):
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty
@@ -813,7 +813,8 @@ public open class CfnSimulationApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty):
-          RenderingEngineProperty = CdkObjectWrappers.wrap(cdkObject) as RenderingEngineProperty
+          RenderingEngineProperty = CdkObjectWrappers.wrap(cdkObject) as? RenderingEngineProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RenderingEngineProperty):
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty
@@ -949,7 +950,8 @@ public open class CfnSimulationApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty):
-          SourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SourceConfigProperty
+          SourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConfigProperty):
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty =
@@ -1071,8 +1073,8 @@ public open class CfnSimulationApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty):
-          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RobotSoftwareSuiteProperty
+          RobotSoftwareSuiteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RobotSoftwareSuiteProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RobotSoftwareSuiteProperty):
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty

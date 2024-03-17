@@ -74,7 +74,8 @@ public interface GenericLinuxImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.GenericLinuxImageProps):
-        GenericLinuxImageProps = CdkObjectWrappers.wrap(cdkObject) as GenericLinuxImageProps
+        GenericLinuxImageProps = CdkObjectWrappers.wrap(cdkObject) as? GenericLinuxImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GenericLinuxImageProps):
         software.amazon.awscdk.services.ec2.GenericLinuxImageProps = (wrapped as

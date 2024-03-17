@@ -274,7 +274,8 @@ public interface JenkinsActionProps : CommonActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsActionProps):
-        JenkinsActionProps = CdkObjectWrappers.wrap(cdkObject) as JenkinsActionProps
+        JenkinsActionProps = CdkObjectWrappers.wrap(cdkObject) as? JenkinsActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JenkinsActionProps):
         software.amazon.awscdk.services.codepipeline.actions.JenkinsActionProps = (wrapped as

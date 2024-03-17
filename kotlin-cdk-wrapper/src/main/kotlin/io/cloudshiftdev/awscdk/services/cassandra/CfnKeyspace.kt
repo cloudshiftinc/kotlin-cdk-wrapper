@@ -515,8 +515,8 @@ public open class CfnKeyspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspace.ReplicationSpecificationProperty):
-          ReplicationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ReplicationSpecificationProperty
+          ReplicationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationSpecificationProperty):
           software.amazon.awscdk.services.cassandra.CfnKeyspace.ReplicationSpecificationProperty =

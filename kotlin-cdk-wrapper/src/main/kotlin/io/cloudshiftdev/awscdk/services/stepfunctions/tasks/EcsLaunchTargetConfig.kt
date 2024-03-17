@@ -81,7 +81,8 @@ public interface EcsLaunchTargetConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig):
-        EcsLaunchTargetConfig = CdkObjectWrappers.wrap(cdkObject) as EcsLaunchTargetConfig
+        EcsLaunchTargetConfig = CdkObjectWrappers.wrap(cdkObject) as? EcsLaunchTargetConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcsLaunchTargetConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig = (wrapped as

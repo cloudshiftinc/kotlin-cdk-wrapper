@@ -1554,8 +1554,8 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty):
-          DataSharingPreferenceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataSharingPreferenceProperty
+          DataSharingPreferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataSharingPreferenceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSharingPreferenceProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.DataSharingPreferenceProperty
@@ -1644,8 +1644,8 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty):
-          NotificationChannelProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationChannelProperty
+          NotificationChannelProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationChannelProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationChannelProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.NotificationChannelProperty
@@ -1827,7 +1827,8 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.BoundingBoxProperty):
-          BoundingBoxProperty = CdkObjectWrappers.wrap(cdkObject) as BoundingBoxProperty
+          BoundingBoxProperty = CdkObjectWrappers.wrap(cdkObject) as? BoundingBoxProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BoundingBoxProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.BoundingBoxProperty =
@@ -1979,8 +1980,8 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.ConnectedHomeSettingsProperty):
-          ConnectedHomeSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectedHomeSettingsProperty
+          ConnectedHomeSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectedHomeSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectedHomeSettingsProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.ConnectedHomeSettingsProperty
@@ -2068,7 +2069,8 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty):
-          KinesisDataStreamProperty = CdkObjectWrappers.wrap(cdkObject) as KinesisDataStreamProperty
+          KinesisDataStreamProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisDataStreamProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisDataStreamProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisDataStreamProperty =
@@ -2192,7 +2194,8 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty):
-          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as S3DestinationProperty
+          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DestinationProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.S3DestinationProperty =
@@ -2279,8 +2282,8 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty):
-          KinesisVideoStreamProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KinesisVideoStreamProperty
+          KinesisVideoStreamProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisVideoStreamProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisVideoStreamProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.KinesisVideoStreamProperty
@@ -2413,8 +2416,8 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.FaceSearchSettingsProperty):
-          FaceSearchSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FaceSearchSettingsProperty
+          FaceSearchSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FaceSearchSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FaceSearchSettingsProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.FaceSearchSettingsProperty
@@ -2534,7 +2537,7 @@ public open class CfnStreamProcessor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor.PointProperty):
-          PointProperty = CdkObjectWrappers.wrap(cdkObject) as PointProperty
+          PointProperty = CdkObjectWrappers.wrap(cdkObject) as? PointProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PointProperty):
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.PointProperty = (wrapped as

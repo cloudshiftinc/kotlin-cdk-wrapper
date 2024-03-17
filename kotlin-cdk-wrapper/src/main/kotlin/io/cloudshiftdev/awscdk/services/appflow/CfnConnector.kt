@@ -392,8 +392,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty):
-          ConnectorProvisioningConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectorProvisioningConfigProperty
+          ConnectorProvisioningConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorProvisioningConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorProvisioningConfigProperty):
           software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty =
@@ -478,8 +478,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty):
-          LambdaConnectorProvisioningConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaConnectorProvisioningConfigProperty
+          LambdaConnectorProvisioningConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaConnectorProvisioningConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaConnectorProvisioningConfigProperty):
           software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty

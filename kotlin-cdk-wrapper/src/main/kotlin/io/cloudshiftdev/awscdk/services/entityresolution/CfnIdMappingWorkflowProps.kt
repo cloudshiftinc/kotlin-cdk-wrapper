@@ -392,7 +392,8 @@ public interface CfnIdMappingWorkflowProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflowProps):
-        CfnIdMappingWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as CfnIdMappingWorkflowProps
+        CfnIdMappingWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIdMappingWorkflowProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIdMappingWorkflowProps):
         software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflowProps = (wrapped as

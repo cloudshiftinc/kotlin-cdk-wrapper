@@ -387,7 +387,8 @@ public interface CfnImageVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageVersionProps):
-        CfnImageVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnImageVersionProps
+        CfnImageVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnImageVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageVersionProps):
         software.amazon.awscdk.services.sagemaker.CfnImageVersionProps = (wrapped as

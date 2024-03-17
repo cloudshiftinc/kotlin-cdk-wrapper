@@ -447,7 +447,8 @@ public open class CfnSizeConstraintSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet.FieldToMatchProperty):
-          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? FieldToMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.waf.CfnSizeConstraintSet.FieldToMatchProperty = (wrapped
@@ -1008,7 +1009,8 @@ public open class CfnSizeConstraintSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet.SizeConstraintProperty):
-          SizeConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as SizeConstraintProperty
+          SizeConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as? SizeConstraintProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SizeConstraintProperty):
           software.amazon.awscdk.services.waf.CfnSizeConstraintSet.SizeConstraintProperty = (wrapped

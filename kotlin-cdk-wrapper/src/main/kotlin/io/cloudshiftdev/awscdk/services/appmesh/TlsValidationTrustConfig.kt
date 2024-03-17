@@ -105,7 +105,8 @@ public interface TlsValidationTrustConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig):
-        TlsValidationTrustConfig = CdkObjectWrappers.wrap(cdkObject) as TlsValidationTrustConfig
+        TlsValidationTrustConfig = CdkObjectWrappers.wrap(cdkObject) as? TlsValidationTrustConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TlsValidationTrustConfig):
         software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig = (wrapped as

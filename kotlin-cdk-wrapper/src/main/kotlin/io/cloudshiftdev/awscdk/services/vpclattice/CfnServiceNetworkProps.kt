@@ -186,7 +186,8 @@ public interface CfnServiceNetworkProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkProps):
-        CfnServiceNetworkProps = CdkObjectWrappers.wrap(cdkObject) as CfnServiceNetworkProps
+        CfnServiceNetworkProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServiceNetworkProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceNetworkProps):
         software.amazon.awscdk.services.vpclattice.CfnServiceNetworkProps = (wrapped as

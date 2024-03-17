@@ -216,7 +216,8 @@ public interface CfnHealthCheckProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheckProps):
-        CfnHealthCheckProps = CdkObjectWrappers.wrap(cdkObject) as CfnHealthCheckProps
+        CfnHealthCheckProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHealthCheckProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHealthCheckProps):
         software.amazon.awscdk.services.route53.CfnHealthCheckProps = (wrapped as

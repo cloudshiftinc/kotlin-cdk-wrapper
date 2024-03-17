@@ -253,7 +253,7 @@ public interface CfnImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageProps):
-        CfnImageProps = CdkObjectWrappers.wrap(cdkObject) as CfnImageProps
+        CfnImageProps = CdkObjectWrappers.wrap(cdkObject) as? CfnImageProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageProps):
         software.amazon.awscdk.services.sagemaker.CfnImageProps = (wrapped as CdkObject).cdkObject

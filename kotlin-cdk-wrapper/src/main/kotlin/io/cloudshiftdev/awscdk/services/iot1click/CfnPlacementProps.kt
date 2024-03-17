@@ -165,7 +165,8 @@ public interface CfnPlacementProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnPlacementProps):
-        CfnPlacementProps = CdkObjectWrappers.wrap(cdkObject) as CfnPlacementProps
+        CfnPlacementProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPlacementProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlacementProps):
         software.amazon.awscdk.services.iot1click.CfnPlacementProps = (wrapped as

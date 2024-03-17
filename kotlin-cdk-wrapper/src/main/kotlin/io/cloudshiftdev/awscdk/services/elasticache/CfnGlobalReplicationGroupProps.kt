@@ -407,8 +407,8 @@ public interface CfnGlobalReplicationGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroupProps):
-        CfnGlobalReplicationGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnGlobalReplicationGroupProps
+        CfnGlobalReplicationGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnGlobalReplicationGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGlobalReplicationGroupProps):
         software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroupProps = (wrapped as

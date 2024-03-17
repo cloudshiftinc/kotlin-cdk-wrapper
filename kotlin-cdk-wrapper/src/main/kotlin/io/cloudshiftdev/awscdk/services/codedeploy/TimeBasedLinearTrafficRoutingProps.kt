@@ -90,8 +90,8 @@ public interface TimeBasedLinearTrafficRoutingProps : BaseTrafficShiftingConfigP
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRoutingProps):
-        TimeBasedLinearTrafficRoutingProps = CdkObjectWrappers.wrap(cdkObject) as
-        TimeBasedLinearTrafficRoutingProps
+        TimeBasedLinearTrafficRoutingProps = CdkObjectWrappers.wrap(cdkObject) as?
+        TimeBasedLinearTrafficRoutingProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TimeBasedLinearTrafficRoutingProps):
         software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRoutingProps = (wrapped as

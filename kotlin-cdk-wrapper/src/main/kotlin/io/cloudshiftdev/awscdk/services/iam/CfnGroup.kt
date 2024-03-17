@@ -584,7 +584,8 @@ public open class CfnGroup internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnGroup.PolicyProperty):
-          PolicyProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyProperty
+          PolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyProperty):
           software.amazon.awscdk.services.iam.CfnGroup.PolicyProperty = (wrapped as

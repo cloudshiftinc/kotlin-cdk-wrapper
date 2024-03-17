@@ -640,7 +640,8 @@ public interface CfnImagePipelineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps):
-        CfnImagePipelineProps = CdkObjectWrappers.wrap(cdkObject) as CfnImagePipelineProps
+        CfnImagePipelineProps = CdkObjectWrappers.wrap(cdkObject) as? CfnImagePipelineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnImagePipelineProps):
         software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps = (wrapped as

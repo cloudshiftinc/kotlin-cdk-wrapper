@@ -979,8 +979,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty):
-          NetworkInterfaceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkInterfaceOptionsProperty
+          NetworkInterfaceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkInterfaceOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkInterfaceOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty
@@ -1117,7 +1117,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty):
-          SseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as SseSpecificationProperty
+          SseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? SseSpecificationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SseSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty =
@@ -1291,8 +1292,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty):
-          LoadBalancerOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LoadBalancerOptionsProperty
+          LoadBalancerOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LoadBalancerOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoadBalancerOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty

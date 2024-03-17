@@ -36,6 +36,10 @@ public abstract class MappingTemplate internal constructor(
    */
   public open fun renderTemplate(): String = unwrap(this).renderTemplate()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate,
+  ) : MappingTemplate(cdkObject)
+
   public companion object {
     public fun dynamoDbDeleteItem(keyName: String, idArg: String): MappingTemplate =
         software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbDeleteItem(keyName,
@@ -104,7 +108,8 @@ public abstract class MappingTemplate internal constructor(
         software.amazon.awscdk.services.appsync.MappingTemplate.lambdaResult().let(MappingTemplate::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate):
-        MappingTemplate = CdkObjectWrappers.wrap(cdkObject) as MappingTemplate
+        MappingTemplate = CdkObjectWrappers.wrap(cdkObject) as? MappingTemplate ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MappingTemplate):
         software.amazon.awscdk.services.appsync.MappingTemplate = (wrapped as CdkObject).cdkObject

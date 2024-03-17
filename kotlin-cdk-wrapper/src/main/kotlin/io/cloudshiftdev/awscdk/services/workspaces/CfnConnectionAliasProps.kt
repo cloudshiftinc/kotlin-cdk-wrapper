@@ -131,7 +131,8 @@ public interface CfnConnectionAliasProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAliasProps):
-        CfnConnectionAliasProps = CdkObjectWrappers.wrap(cdkObject) as CfnConnectionAliasProps
+        CfnConnectionAliasProps = CdkObjectWrappers.wrap(cdkObject) as? CfnConnectionAliasProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConnectionAliasProps):
         software.amazon.awscdk.services.workspaces.CfnConnectionAliasProps = (wrapped as

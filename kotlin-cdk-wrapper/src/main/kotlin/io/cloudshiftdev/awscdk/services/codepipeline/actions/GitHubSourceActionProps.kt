@@ -353,7 +353,8 @@ public interface GitHubSourceActionProps : CommonActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.GitHubSourceActionProps):
-        GitHubSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as GitHubSourceActionProps
+        GitHubSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as? GitHubSourceActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GitHubSourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.GitHubSourceActionProps = (wrapped as

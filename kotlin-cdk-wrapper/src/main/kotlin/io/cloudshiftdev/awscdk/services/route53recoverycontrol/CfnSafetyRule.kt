@@ -831,7 +831,8 @@ public open class CfnSafetyRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty):
-          RuleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as RuleConfigProperty
+          RuleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleConfigProperty):
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty =
@@ -1063,7 +1064,8 @@ public open class CfnSafetyRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty):
-          GatingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as GatingRuleProperty
+          GatingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? GatingRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatingRuleProperty):
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty =
@@ -1217,7 +1219,8 @@ public open class CfnSafetyRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty):
-          AssertionRuleProperty = CdkObjectWrappers.wrap(cdkObject) as AssertionRuleProperty
+          AssertionRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? AssertionRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AssertionRuleProperty):
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty

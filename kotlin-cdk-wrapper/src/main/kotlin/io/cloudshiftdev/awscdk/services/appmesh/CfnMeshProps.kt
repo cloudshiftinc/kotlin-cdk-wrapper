@@ -207,7 +207,7 @@ public interface CfnMeshProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMeshProps): CfnMeshProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnMeshProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnMeshProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMeshProps): software.amazon.awscdk.services.appmesh.CfnMeshProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.CfnMeshProps

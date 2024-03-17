@@ -184,7 +184,8 @@ public interface CfnPackageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.panorama.CfnPackageProps):
-        CfnPackageProps = CdkObjectWrappers.wrap(cdkObject) as CfnPackageProps
+        CfnPackageProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPackageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPackageProps):
         software.amazon.awscdk.services.panorama.CfnPackageProps = (wrapped as CdkObject).cdkObject

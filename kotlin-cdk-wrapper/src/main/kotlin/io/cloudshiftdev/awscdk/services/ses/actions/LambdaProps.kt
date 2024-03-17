@@ -131,7 +131,7 @@ public interface LambdaProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.LambdaProps):
-        LambdaProps = CdkObjectWrappers.wrap(cdkObject) as LambdaProps
+        LambdaProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaProps):
         software.amazon.awscdk.services.ses.actions.LambdaProps = (wrapped as CdkObject).cdkObject

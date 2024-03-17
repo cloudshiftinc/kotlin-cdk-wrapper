@@ -187,8 +187,8 @@ public interface CredentialsFromUsernameOptions : CredentialsBaseOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions):
-        CredentialsFromUsernameOptions = CdkObjectWrappers.wrap(cdkObject) as
-        CredentialsFromUsernameOptions
+        CredentialsFromUsernameOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        CredentialsFromUsernameOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CredentialsFromUsernameOptions):
         software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions = (wrapped as

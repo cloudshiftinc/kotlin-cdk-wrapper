@@ -344,7 +344,8 @@ public open class CfnStandard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnStandard.StandardsControlProperty):
-          StandardsControlProperty = CdkObjectWrappers.wrap(cdkObject) as StandardsControlProperty
+          StandardsControlProperty = CdkObjectWrappers.wrap(cdkObject) as? StandardsControlProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StandardsControlProperty):
           software.amazon.awscdk.services.securityhub.CfnStandard.StandardsControlProperty =

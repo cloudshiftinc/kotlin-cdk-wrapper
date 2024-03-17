@@ -178,7 +178,8 @@ public interface CfnClusterSubnetGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSubnetGroupProps):
-        CfnClusterSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnClusterSubnetGroupProps
+        CfnClusterSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnClusterSubnetGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterSubnetGroupProps):
         software.amazon.awscdk.services.redshift.CfnClusterSubnetGroupProps = (wrapped as

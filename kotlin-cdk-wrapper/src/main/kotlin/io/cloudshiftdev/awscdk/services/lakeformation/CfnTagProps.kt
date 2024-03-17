@@ -246,7 +246,7 @@ public interface CfnTagProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagProps):
-        CfnTagProps = CdkObjectWrappers.wrap(cdkObject) as CfnTagProps
+        CfnTagProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTagProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTagProps):
         software.amazon.awscdk.services.lakeformation.CfnTagProps = (wrapped as CdkObject).cdkObject

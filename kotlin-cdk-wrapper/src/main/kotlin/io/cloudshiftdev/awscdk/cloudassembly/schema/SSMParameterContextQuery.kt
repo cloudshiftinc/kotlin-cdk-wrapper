@@ -146,7 +146,8 @@ public interface SSMParameterContextQuery {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery):
-        SSMParameterContextQuery = CdkObjectWrappers.wrap(cdkObject) as SSMParameterContextQuery
+        SSMParameterContextQuery = CdkObjectWrappers.wrap(cdkObject) as? SSMParameterContextQuery ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SSMParameterContextQuery):
         software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery = (wrapped as

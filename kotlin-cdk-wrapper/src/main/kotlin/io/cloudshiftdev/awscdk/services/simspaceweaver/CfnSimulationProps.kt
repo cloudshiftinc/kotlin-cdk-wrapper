@@ -409,7 +409,8 @@ public interface CfnSimulationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulationProps):
-        CfnSimulationProps = CdkObjectWrappers.wrap(cdkObject) as CfnSimulationProps
+        CfnSimulationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSimulationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimulationProps):
         software.amazon.awscdk.services.simspaceweaver.CfnSimulationProps = (wrapped as

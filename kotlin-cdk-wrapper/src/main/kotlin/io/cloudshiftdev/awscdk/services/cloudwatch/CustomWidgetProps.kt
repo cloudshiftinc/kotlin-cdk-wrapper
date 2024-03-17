@@ -259,7 +259,8 @@ public interface CustomWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CustomWidgetProps):
-        CustomWidgetProps = CdkObjectWrappers.wrap(cdkObject) as CustomWidgetProps
+        CustomWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? CustomWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomWidgetProps):
         software.amazon.awscdk.services.cloudwatch.CustomWidgetProps = (wrapped as

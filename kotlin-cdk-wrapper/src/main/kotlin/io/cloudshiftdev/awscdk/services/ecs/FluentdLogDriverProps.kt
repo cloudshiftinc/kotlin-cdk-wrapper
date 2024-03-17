@@ -391,7 +391,8 @@ public interface FluentdLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FluentdLogDriverProps):
-        FluentdLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as FluentdLogDriverProps
+        FluentdLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? FluentdLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FluentdLogDriverProps):
         software.amazon.awscdk.services.ecs.FluentdLogDriverProps = (wrapped as CdkObject).cdkObject

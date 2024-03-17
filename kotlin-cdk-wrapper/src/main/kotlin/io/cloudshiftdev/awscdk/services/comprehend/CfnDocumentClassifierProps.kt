@@ -720,7 +720,8 @@ public interface CfnDocumentClassifierProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.comprehend.CfnDocumentClassifierProps):
-        CfnDocumentClassifierProps = CdkObjectWrappers.wrap(cdkObject) as CfnDocumentClassifierProps
+        CfnDocumentClassifierProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDocumentClassifierProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDocumentClassifierProps):
         software.amazon.awscdk.services.comprehend.CfnDocumentClassifierProps = (wrapped as

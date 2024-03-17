@@ -129,7 +129,8 @@ public interface ApiDefinitionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionConfig):
-        ApiDefinitionConfig = CdkObjectWrappers.wrap(cdkObject) as ApiDefinitionConfig
+        ApiDefinitionConfig = CdkObjectWrappers.wrap(cdkObject) as? ApiDefinitionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiDefinitionConfig):
         software.amazon.awscdk.services.apigateway.ApiDefinitionConfig = (wrapped as

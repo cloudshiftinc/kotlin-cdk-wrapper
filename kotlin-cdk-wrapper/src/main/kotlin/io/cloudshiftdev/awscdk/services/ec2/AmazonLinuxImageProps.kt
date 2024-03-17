@@ -327,7 +327,8 @@ public interface AmazonLinuxImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageProps):
-        AmazonLinuxImageProps = CdkObjectWrappers.wrap(cdkObject) as AmazonLinuxImageProps
+        AmazonLinuxImageProps = CdkObjectWrappers.wrap(cdkObject) as? AmazonLinuxImageProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinuxImageProps):
         software.amazon.awscdk.services.ec2.AmazonLinuxImageProps = (wrapped as CdkObject).cdkObject

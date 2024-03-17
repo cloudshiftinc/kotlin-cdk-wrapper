@@ -214,7 +214,7 @@ public interface MetadataEntry {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.MetadataEntry):
-        MetadataEntry = CdkObjectWrappers.wrap(cdkObject) as MetadataEntry
+        MetadataEntry = CdkObjectWrappers.wrap(cdkObject) as? MetadataEntry ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetadataEntry):
         software.amazon.awscdk.cloudassembly.schema.MetadataEntry = (wrapped as CdkObject).cdkObject

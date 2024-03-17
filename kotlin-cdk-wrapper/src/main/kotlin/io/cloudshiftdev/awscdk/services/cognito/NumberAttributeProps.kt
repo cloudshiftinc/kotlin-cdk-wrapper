@@ -137,7 +137,8 @@ public interface NumberAttributeProps : NumberAttributeConstraints, CustomAttrib
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.NumberAttributeProps):
-        NumberAttributeProps = CdkObjectWrappers.wrap(cdkObject) as NumberAttributeProps
+        NumberAttributeProps = CdkObjectWrappers.wrap(cdkObject) as? NumberAttributeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NumberAttributeProps):
         software.amazon.awscdk.services.cognito.NumberAttributeProps = (wrapped as

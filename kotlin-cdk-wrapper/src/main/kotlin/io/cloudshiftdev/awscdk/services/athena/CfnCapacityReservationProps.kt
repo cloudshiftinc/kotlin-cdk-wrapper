@@ -277,8 +277,8 @@ public interface CfnCapacityReservationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservationProps):
-        CfnCapacityReservationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCapacityReservationProps
+        CfnCapacityReservationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCapacityReservationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCapacityReservationProps):
         software.amazon.awscdk.services.athena.CfnCapacityReservationProps = (wrapped as

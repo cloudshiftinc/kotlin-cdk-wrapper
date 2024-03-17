@@ -222,8 +222,8 @@ public interface ExecuteCommandLogConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration):
-        ExecuteCommandLogConfiguration = CdkObjectWrappers.wrap(cdkObject) as
-        ExecuteCommandLogConfiguration
+        ExecuteCommandLogConfiguration = CdkObjectWrappers.wrap(cdkObject) as?
+        ExecuteCommandLogConfiguration ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ExecuteCommandLogConfiguration):
         software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration = (wrapped as

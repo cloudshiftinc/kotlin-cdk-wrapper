@@ -131,7 +131,8 @@ public interface SourceApiOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.SourceApiOptions):
-        SourceApiOptions = CdkObjectWrappers.wrap(cdkObject) as SourceApiOptions
+        SourceApiOptions = CdkObjectWrappers.wrap(cdkObject) as? SourceApiOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SourceApiOptions):
         software.amazon.awscdk.services.appsync.SourceApiOptions = (wrapped as CdkObject).cdkObject

@@ -559,7 +559,8 @@ public interface AttributeMapping {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.AttributeMapping):
-        AttributeMapping = CdkObjectWrappers.wrap(cdkObject) as AttributeMapping
+        AttributeMapping = CdkObjectWrappers.wrap(cdkObject) as? AttributeMapping ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AttributeMapping):
         software.amazon.awscdk.services.cognito.AttributeMapping = (wrapped as CdkObject).cdkObject

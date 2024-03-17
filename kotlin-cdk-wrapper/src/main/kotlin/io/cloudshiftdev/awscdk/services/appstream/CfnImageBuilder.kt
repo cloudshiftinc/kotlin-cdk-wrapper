@@ -970,7 +970,8 @@ public open class CfnImageBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty):
-          DomainJoinInfoProperty = CdkObjectWrappers.wrap(cdkObject) as DomainJoinInfoProperty
+          DomainJoinInfoProperty = CdkObjectWrappers.wrap(cdkObject) as? DomainJoinInfoProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DomainJoinInfoProperty):
           software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty =
@@ -1082,7 +1083,8 @@ public open class CfnImageBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty):
-          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as AccessEndpointProperty
+          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessEndpointProperty):
           software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty =
@@ -1226,7 +1228,8 @@ public open class CfnImageBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty = (wrapped as

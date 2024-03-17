@@ -57,6 +57,10 @@ public abstract class Source internal constructor(
    */
   public override fun type(): String = unwrap(this).getType()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codebuild.Source,
+  ) : Source(cdkObject)
+
   public companion object {
     public fun bitBucket(props: BitBucketSourceProps): ISource =
         software.amazon.awscdk.services.codebuild.Source.bitBucket(props.let(BitBucketSourceProps::unwrap)).let(ISource::wrap)
@@ -98,7 +102,7 @@ public abstract class Source internal constructor(
     public fun s3(props: S3SourceProps.Builder.() -> Unit): ISource = s3(S3SourceProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.Source): Source =
-        CdkObjectWrappers.wrap(cdkObject) as Source
+        CdkObjectWrappers.wrap(cdkObject) as? Source ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Source): software.amazon.awscdk.services.codebuild.Source =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.Source

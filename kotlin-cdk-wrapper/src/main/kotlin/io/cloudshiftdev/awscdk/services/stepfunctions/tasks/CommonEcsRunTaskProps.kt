@@ -226,7 +226,8 @@ public interface CommonEcsRunTaskProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CommonEcsRunTaskProps):
-        CommonEcsRunTaskProps = CdkObjectWrappers.wrap(cdkObject) as CommonEcsRunTaskProps
+        CommonEcsRunTaskProps = CdkObjectWrappers.wrap(cdkObject) as? CommonEcsRunTaskProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonEcsRunTaskProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CommonEcsRunTaskProps = (wrapped as

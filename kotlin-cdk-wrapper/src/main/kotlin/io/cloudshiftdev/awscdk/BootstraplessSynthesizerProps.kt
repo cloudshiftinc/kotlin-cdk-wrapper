@@ -103,8 +103,8 @@ public interface BootstraplessSynthesizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.BootstraplessSynthesizerProps):
-        BootstraplessSynthesizerProps = CdkObjectWrappers.wrap(cdkObject) as
-        BootstraplessSynthesizerProps
+        BootstraplessSynthesizerProps = CdkObjectWrappers.wrap(cdkObject) as?
+        BootstraplessSynthesizerProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BootstraplessSynthesizerProps):
         software.amazon.awscdk.BootstraplessSynthesizerProps = (wrapped as CdkObject).cdkObject as

@@ -289,7 +289,8 @@ public interface CertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.CertificateProps):
-        CertificateProps = CdkObjectWrappers.wrap(cdkObject) as CertificateProps
+        CertificateProps = CdkObjectWrappers.wrap(cdkObject) as? CertificateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CertificateProps):
         software.amazon.awscdk.services.certificatemanager.CertificateProps = (wrapped as

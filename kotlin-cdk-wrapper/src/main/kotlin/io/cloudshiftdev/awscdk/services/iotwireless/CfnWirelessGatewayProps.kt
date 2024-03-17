@@ -309,7 +309,8 @@ public interface CfnWirelessGatewayProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps):
-        CfnWirelessGatewayProps = CdkObjectWrappers.wrap(cdkObject) as CfnWirelessGatewayProps
+        CfnWirelessGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWirelessGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWirelessGatewayProps):
         software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps = (wrapped as

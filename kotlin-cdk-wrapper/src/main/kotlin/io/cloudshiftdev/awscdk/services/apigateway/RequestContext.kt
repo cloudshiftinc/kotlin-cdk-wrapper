@@ -724,7 +724,7 @@ public interface RequestContext {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RequestContext):
-        RequestContext = CdkObjectWrappers.wrap(cdkObject) as RequestContext
+        RequestContext = CdkObjectWrappers.wrap(cdkObject) as? RequestContext ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RequestContext):
         software.amazon.awscdk.services.apigateway.RequestContext = (wrapped as CdkObject).cdkObject

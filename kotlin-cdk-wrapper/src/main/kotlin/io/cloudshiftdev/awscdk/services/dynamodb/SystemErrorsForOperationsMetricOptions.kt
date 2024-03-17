@@ -370,8 +370,8 @@ public interface SystemErrorsForOperationsMetricOptions : MetricOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.SystemErrorsForOperationsMetricOptions):
-        SystemErrorsForOperationsMetricOptions = CdkObjectWrappers.wrap(cdkObject) as
-        SystemErrorsForOperationsMetricOptions
+        SystemErrorsForOperationsMetricOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        SystemErrorsForOperationsMetricOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SystemErrorsForOperationsMetricOptions):
         software.amazon.awscdk.services.dynamodb.SystemErrorsForOperationsMetricOptions = (wrapped

@@ -535,7 +535,8 @@ public open class CfnDBSecurityGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty):
-          IngressProperty = CdkObjectWrappers.wrap(cdkObject) as IngressProperty
+          IngressProperty = CdkObjectWrappers.wrap(cdkObject) as? IngressProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IngressProperty):
           software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty = (wrapped as

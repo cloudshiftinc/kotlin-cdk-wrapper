@@ -182,7 +182,7 @@ public interface CsvOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CsvOptions): CsvOptions =
-        CdkObjectWrappers.wrap(cdkObject) as CsvOptions
+        CdkObjectWrappers.wrap(cdkObject) as? CsvOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CsvOptions): software.amazon.awscdk.services.dynamodb.CsvOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.CsvOptions

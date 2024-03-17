@@ -130,7 +130,8 @@ public interface MessageAttribute {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute):
-        MessageAttribute = CdkObjectWrappers.wrap(cdkObject) as MessageAttribute
+        MessageAttribute = CdkObjectWrappers.wrap(cdkObject) as? MessageAttribute ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MessageAttribute):
         software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute = (wrapped as

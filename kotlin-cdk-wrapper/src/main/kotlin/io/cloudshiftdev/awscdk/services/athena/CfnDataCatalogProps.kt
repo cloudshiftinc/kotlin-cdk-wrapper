@@ -392,7 +392,8 @@ public interface CfnDataCatalogProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnDataCatalogProps):
-        CfnDataCatalogProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataCatalogProps
+        CfnDataCatalogProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDataCatalogProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataCatalogProps):
         software.amazon.awscdk.services.athena.CfnDataCatalogProps = (wrapped as

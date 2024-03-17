@@ -593,8 +593,8 @@ public open class CfnCapability internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty):
-          CapabilityConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CapabilityConfigurationProperty
+          CapabilityConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapabilityConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CapabilityConfigurationProperty):
           software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty =
@@ -712,7 +712,8 @@ public open class CfnCapability internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty):
-          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as X12DetailsProperty
+          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as? X12DetailsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: X12DetailsProperty):
           software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty = (wrapped as
@@ -992,7 +993,8 @@ public open class CfnCapability internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty):
-          EdiConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as EdiConfigurationProperty
+          EdiConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? EdiConfigurationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EdiConfigurationProperty):
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty = (wrapped as
@@ -1128,7 +1130,8 @@ public open class CfnCapability internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty):
-          EdiTypeProperty = CdkObjectWrappers.wrap(cdkObject) as EdiTypeProperty
+          EdiTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? EdiTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EdiTypeProperty):
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty = (wrapped as
@@ -1236,7 +1239,8 @@ public open class CfnCapability internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty):
-          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3LocationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty = (wrapped as

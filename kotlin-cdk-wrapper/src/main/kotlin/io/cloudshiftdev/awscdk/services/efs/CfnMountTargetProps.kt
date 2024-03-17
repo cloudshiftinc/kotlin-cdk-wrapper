@@ -187,7 +187,8 @@ public interface CfnMountTargetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnMountTargetProps):
-        CfnMountTargetProps = CdkObjectWrappers.wrap(cdkObject) as CfnMountTargetProps
+        CfnMountTargetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMountTargetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMountTargetProps):
         software.amazon.awscdk.services.efs.CfnMountTargetProps = (wrapped as CdkObject).cdkObject

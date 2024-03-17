@@ -480,7 +480,8 @@ public interface AthenaGetQueryResultsProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryResultsProps):
-        AthenaGetQueryResultsProps = CdkObjectWrappers.wrap(cdkObject) as AthenaGetQueryResultsProps
+        AthenaGetQueryResultsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AthenaGetQueryResultsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AthenaGetQueryResultsProps):
         software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryResultsProps = (wrapped as

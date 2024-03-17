@@ -645,7 +645,8 @@ public interface CfnScheduledQueryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQueryProps):
-        CfnScheduledQueryProps = CdkObjectWrappers.wrap(cdkObject) as CfnScheduledQueryProps
+        CfnScheduledQueryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnScheduledQueryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnScheduledQueryProps):
         software.amazon.awscdk.services.timestream.CfnScheduledQueryProps = (wrapped as

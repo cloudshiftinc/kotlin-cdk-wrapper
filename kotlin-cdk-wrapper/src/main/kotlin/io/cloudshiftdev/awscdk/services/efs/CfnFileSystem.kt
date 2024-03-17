@@ -1262,8 +1262,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty):
-          FileSystemProtectionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FileSystemProtectionProperty
+          FileSystemProtectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FileSystemProtectionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FileSystemProtectionProperty):
           software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty = (wrapped
@@ -1381,8 +1381,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty):
-          ElasticFileSystemTagProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ElasticFileSystemTagProperty
+          ElasticFileSystemTagProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticFileSystemTagProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ElasticFileSystemTagProperty):
           software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty = (wrapped
@@ -1603,8 +1603,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty):
-          ReplicationDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ReplicationDestinationProperty
+          ReplicationDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationDestinationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationDestinationProperty):
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty =
@@ -1795,7 +1795,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty):
-          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as LifecyclePolicyProperty
+          LifecyclePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? LifecyclePolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LifecyclePolicyProperty):
           software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty = (wrapped as
@@ -1916,8 +1917,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty):
-          ReplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ReplicationConfigurationProperty
+          ReplicationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReplicationConfigurationProperty):
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty =
@@ -2007,7 +2008,8 @@ public open class CfnFileSystem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty):
-          BackupPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as BackupPolicyProperty
+          BackupPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? BackupPolicyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BackupPolicyProperty):
           software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty = (wrapped as

@@ -175,7 +175,8 @@ public interface CfnUserHierarchyGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUserHierarchyGroupProps):
-        CfnUserHierarchyGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnUserHierarchyGroupProps
+        CfnUserHierarchyGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserHierarchyGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserHierarchyGroupProps):
         software.amazon.awscdk.services.connect.CfnUserHierarchyGroupProps = (wrapped as

@@ -484,7 +484,8 @@ public interface CfnCustomActionTypeProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnCustomActionTypeProps):
-        CfnCustomActionTypeProps = CdkObjectWrappers.wrap(cdkObject) as CfnCustomActionTypeProps
+        CfnCustomActionTypeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCustomActionTypeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomActionTypeProps):
         software.amazon.awscdk.services.codepipeline.CfnCustomActionTypeProps = (wrapped as

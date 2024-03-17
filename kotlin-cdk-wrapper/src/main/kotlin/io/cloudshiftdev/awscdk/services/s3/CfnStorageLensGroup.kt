@@ -671,7 +671,7 @@ public open class CfnStorageLensGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.AndProperty):
-          AndProperty = CdkObjectWrappers.wrap(cdkObject) as AndProperty
+          AndProperty = CdkObjectWrappers.wrap(cdkObject) as? AndProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AndProperty):
           software.amazon.awscdk.services.s3.CfnStorageLensGroup.AndProperty = (wrapped as
@@ -793,7 +793,8 @@ public open class CfnStorageLensGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectSizeProperty):
-          MatchObjectSizeProperty = CdkObjectWrappers.wrap(cdkObject) as MatchObjectSizeProperty
+          MatchObjectSizeProperty = CdkObjectWrappers.wrap(cdkObject) as? MatchObjectSizeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MatchObjectSizeProperty):
           software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectSizeProperty = (wrapped
@@ -1319,7 +1320,8 @@ public open class CfnStorageLensGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.FilterProperty):
-          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as FilterProperty
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as? FilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.s3.CfnStorageLensGroup.FilterProperty = (wrapped as
@@ -1657,7 +1659,7 @@ public open class CfnStorageLensGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.OrProperty):
-          OrProperty = CdkObjectWrappers.wrap(cdkObject) as OrProperty
+          OrProperty = CdkObjectWrappers.wrap(cdkObject) as? OrProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OrProperty):
           software.amazon.awscdk.services.s3.CfnStorageLensGroup.OrProperty = (wrapped as
@@ -1765,7 +1767,8 @@ public open class CfnStorageLensGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectAgeProperty):
-          MatchObjectAgeProperty = CdkObjectWrappers.wrap(cdkObject) as MatchObjectAgeProperty
+          MatchObjectAgeProperty = CdkObjectWrappers.wrap(cdkObject) as? MatchObjectAgeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MatchObjectAgeProperty):
           software.amazon.awscdk.services.s3.CfnStorageLensGroup.MatchObjectAgeProperty = (wrapped

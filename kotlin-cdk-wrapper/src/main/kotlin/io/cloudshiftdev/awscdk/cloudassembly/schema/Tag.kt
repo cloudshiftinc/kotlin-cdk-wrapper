@@ -120,7 +120,7 @@ public interface Tag {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.Tag): Tag =
-        CdkObjectWrappers.wrap(cdkObject) as Tag
+        CdkObjectWrappers.wrap(cdkObject) as? Tag ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Tag): software.amazon.awscdk.cloudassembly.schema.Tag = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.cloudassembly.schema.Tag

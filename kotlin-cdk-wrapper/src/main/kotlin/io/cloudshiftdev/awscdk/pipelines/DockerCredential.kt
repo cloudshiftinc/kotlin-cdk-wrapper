@@ -53,6 +53,10 @@ public abstract class DockerCredential internal constructor(
         usage.let(DockerCredentialUsage::unwrap))
   }
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.pipelines.DockerCredential,
+  ) : DockerCredential(cdkObject)
+
   public companion object {
     public fun customRegistry(registryDomain: String, secret: ISecret): DockerCredential =
         software.amazon.awscdk.pipelines.DockerCredential.customRegistry(registryDomain,
@@ -105,7 +109,8 @@ public abstract class DockerCredential internal constructor(
         EcrDockerCredentialOptions(opts))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.DockerCredential):
-        DockerCredential = CdkObjectWrappers.wrap(cdkObject) as DockerCredential
+        DockerCredential = CdkObjectWrappers.wrap(cdkObject) as? DockerCredential ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerCredential):
         software.amazon.awscdk.pipelines.DockerCredential = (wrapped as CdkObject).cdkObject as

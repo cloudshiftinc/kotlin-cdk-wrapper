@@ -185,7 +185,8 @@ public interface HorizontalAnnotation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation):
-        HorizontalAnnotation = CdkObjectWrappers.wrap(cdkObject) as HorizontalAnnotation
+        HorizontalAnnotation = CdkObjectWrappers.wrap(cdkObject) as? HorizontalAnnotation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HorizontalAnnotation):
         software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation = (wrapped as

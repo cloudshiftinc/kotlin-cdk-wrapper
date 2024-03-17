@@ -228,7 +228,7 @@ public interface CfnStepProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnStepProps): CfnStepProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnStepProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnStepProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStepProps): software.amazon.awscdk.services.emr.CfnStepProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnStepProps

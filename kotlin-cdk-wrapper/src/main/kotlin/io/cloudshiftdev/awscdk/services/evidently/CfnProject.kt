@@ -693,8 +693,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty):
-          AppConfigResourceObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AppConfigResourceObjectProperty
+          AppConfigResourceObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AppConfigResourceObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AppConfigResourceObjectProperty):
           software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty =
@@ -846,8 +846,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty):
-          DataDeliveryObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DataDeliveryObjectProperty
+          DataDeliveryObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataDeliveryObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataDeliveryObjectProperty):
           software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty = (wrapped
@@ -956,7 +956,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty):
-          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as S3DestinationProperty
+          S3DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? S3DestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DestinationProperty):
           software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty = (wrapped as

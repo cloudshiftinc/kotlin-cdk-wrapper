@@ -1043,7 +1043,8 @@ public open class CfnMLTransform internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty):
-          GlueTablesProperty = CdkObjectWrappers.wrap(cdkObject) as GlueTablesProperty
+          GlueTablesProperty = CdkObjectWrappers.wrap(cdkObject) as? GlueTablesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GlueTablesProperty):
           software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty = (wrapped as
@@ -1199,8 +1200,8 @@ public open class CfnMLTransform internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty):
-          TransformEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TransformEncryptionProperty
+          TransformEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransformEncryptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformEncryptionProperty):
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty = (wrapped
@@ -1511,8 +1512,8 @@ public open class CfnMLTransform internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.FindMatchesParametersProperty):
-          FindMatchesParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FindMatchesParametersProperty
+          FindMatchesParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FindMatchesParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FindMatchesParametersProperty):
           software.amazon.awscdk.services.glue.CfnMLTransform.FindMatchesParametersProperty =
@@ -1676,8 +1677,8 @@ public open class CfnMLTransform internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.TransformParametersProperty):
-          TransformParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TransformParametersProperty
+          TransformParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransformParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransformParametersProperty):
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformParametersProperty = (wrapped
@@ -1807,8 +1808,8 @@ public open class CfnMLTransform internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty):
-          MLUserDataEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MLUserDataEncryptionProperty
+          MLUserDataEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MLUserDataEncryptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MLUserDataEncryptionProperty):
           software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty =
@@ -1923,7 +1924,8 @@ public open class CfnMLTransform internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty):
-          InputRecordTablesProperty = CdkObjectWrappers.wrap(cdkObject) as InputRecordTablesProperty
+          InputRecordTablesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputRecordTablesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InputRecordTablesProperty):
           software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty = (wrapped

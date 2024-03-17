@@ -148,7 +148,8 @@ public interface CfnChannelGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelGroupProps):
-        CfnChannelGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnChannelGroupProps
+        CfnChannelGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnChannelGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnChannelGroupProps):
         software.amazon.awscdk.services.mediapackagev2.CfnChannelGroupProps = (wrapped as

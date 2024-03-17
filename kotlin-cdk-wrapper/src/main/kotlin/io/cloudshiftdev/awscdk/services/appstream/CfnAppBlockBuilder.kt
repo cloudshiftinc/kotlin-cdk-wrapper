@@ -743,7 +743,8 @@ public open class CfnAppBlockBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.AccessEndpointProperty):
-          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as AccessEndpointProperty
+          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? AccessEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccessEndpointProperty):
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.AccessEndpointProperty =
@@ -891,7 +892,8 @@ public open class CfnAppBlockBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty = (wrapped

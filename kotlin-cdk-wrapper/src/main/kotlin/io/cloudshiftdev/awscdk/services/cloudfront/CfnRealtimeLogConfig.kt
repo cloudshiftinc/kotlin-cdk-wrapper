@@ -461,8 +461,8 @@ public open class CfnRealtimeLogConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty):
-          KinesisStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KinesisStreamConfigProperty
+          KinesisStreamConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisStreamConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisStreamConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty
@@ -617,7 +617,8 @@ public open class CfnRealtimeLogConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty):
-          EndPointProperty = CdkObjectWrappers.wrap(cdkObject) as EndPointProperty
+          EndPointProperty = CdkObjectWrappers.wrap(cdkObject) as? EndPointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndPointProperty):
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty =

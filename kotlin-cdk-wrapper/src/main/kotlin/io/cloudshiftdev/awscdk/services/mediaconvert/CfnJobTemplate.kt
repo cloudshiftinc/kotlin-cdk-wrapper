@@ -818,8 +818,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty):
-          AccelerationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AccelerationSettingsProperty
+          AccelerationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AccelerationSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AccelerationSettingsProperty):
           software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty =
@@ -1002,7 +1002,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty):
-          HopDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as HopDestinationProperty
+          HopDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as? HopDestinationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HopDestinationProperty):
           software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty =

@@ -238,7 +238,8 @@ public interface CfnScalingPlanProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlanProps):
-        CfnScalingPlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnScalingPlanProps
+        CfnScalingPlanProps = CdkObjectWrappers.wrap(cdkObject) as? CfnScalingPlanProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnScalingPlanProps):
         software.amazon.awscdk.services.autoscalingplans.CfnScalingPlanProps = (wrapped as

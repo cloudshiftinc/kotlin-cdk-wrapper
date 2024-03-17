@@ -372,7 +372,8 @@ public interface CfnLocationFSxONTAPProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAPProps):
-        CfnLocationFSxONTAPProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationFSxONTAPProps
+        CfnLocationFSxONTAPProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationFSxONTAPProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxONTAPProps):
         software.amazon.awscdk.services.datasync.CfnLocationFSxONTAPProps = (wrapped as

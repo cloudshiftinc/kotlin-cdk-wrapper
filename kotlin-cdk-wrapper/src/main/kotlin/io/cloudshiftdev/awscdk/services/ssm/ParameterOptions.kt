@@ -224,7 +224,8 @@ public interface ParameterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.ParameterOptions):
-        ParameterOptions = CdkObjectWrappers.wrap(cdkObject) as ParameterOptions
+        ParameterOptions = CdkObjectWrappers.wrap(cdkObject) as? ParameterOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParameterOptions):
         software.amazon.awscdk.services.ssm.ParameterOptions = (wrapped as CdkObject).cdkObject as

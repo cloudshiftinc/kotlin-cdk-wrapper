@@ -102,7 +102,8 @@ public interface StoppingCondition {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition):
-        StoppingCondition = CdkObjectWrappers.wrap(cdkObject) as StoppingCondition
+        StoppingCondition = CdkObjectWrappers.wrap(cdkObject) as? StoppingCondition ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StoppingCondition):
         software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition = (wrapped as

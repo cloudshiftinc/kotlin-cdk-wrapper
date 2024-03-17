@@ -185,8 +185,8 @@ public interface CfnPrivateGraphEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpointProps):
-        CfnPrivateGraphEndpointProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnPrivateGraphEndpointProps
+        CfnPrivateGraphEndpointProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPrivateGraphEndpointProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPrivateGraphEndpointProps):
         software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpointProps = (wrapped as

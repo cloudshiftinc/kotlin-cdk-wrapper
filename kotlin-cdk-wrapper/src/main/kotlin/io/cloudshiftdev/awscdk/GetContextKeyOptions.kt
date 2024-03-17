@@ -123,7 +123,7 @@ public interface GetContextKeyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.GetContextKeyOptions): GetContextKeyOptions
-        = CdkObjectWrappers.wrap(cdkObject) as GetContextKeyOptions
+        = CdkObjectWrappers.wrap(cdkObject) as? GetContextKeyOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GetContextKeyOptions): software.amazon.awscdk.GetContextKeyOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.GetContextKeyOptions

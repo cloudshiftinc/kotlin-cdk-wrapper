@@ -763,8 +763,8 @@ public open class CfnWorkspace internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspace.WorkspacePropertiesProperty):
-          WorkspacePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          WorkspacePropertiesProperty
+          WorkspacePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WorkspacePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WorkspacePropertiesProperty):
           software.amazon.awscdk.services.workspaces.CfnWorkspace.WorkspacePropertiesProperty =

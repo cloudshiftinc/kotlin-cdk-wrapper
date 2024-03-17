@@ -791,8 +791,8 @@ public open class CfnStateMachineAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty):
-          RoutingConfigurationVersionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RoutingConfigurationVersionProperty
+          RoutingConfigurationVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RoutingConfigurationVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RoutingConfigurationVersionProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty
@@ -1107,8 +1107,8 @@ public open class CfnStateMachineAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty):
-          DeploymentPreferenceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DeploymentPreferenceProperty
+          DeploymentPreferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DeploymentPreferenceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeploymentPreferenceProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty

@@ -679,7 +679,8 @@ public interface DockerImageAssetOptions : FileFingerprintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetOptions):
-        DockerImageAssetOptions = CdkObjectWrappers.wrap(cdkObject) as DockerImageAssetOptions
+        DockerImageAssetOptions = CdkObjectWrappers.wrap(cdkObject) as? DockerImageAssetOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageAssetOptions):
         software.amazon.awscdk.services.ecr.assets.DockerImageAssetOptions = (wrapped as

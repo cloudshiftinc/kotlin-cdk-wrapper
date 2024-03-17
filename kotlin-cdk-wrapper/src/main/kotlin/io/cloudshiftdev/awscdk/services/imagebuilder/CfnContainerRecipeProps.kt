@@ -693,7 +693,8 @@ public interface CfnContainerRecipeProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipeProps):
-        CfnContainerRecipeProps = CdkObjectWrappers.wrap(cdkObject) as CfnContainerRecipeProps
+        CfnContainerRecipeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnContainerRecipeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnContainerRecipeProps):
         software.amazon.awscdk.services.imagebuilder.CfnContainerRecipeProps = (wrapped as

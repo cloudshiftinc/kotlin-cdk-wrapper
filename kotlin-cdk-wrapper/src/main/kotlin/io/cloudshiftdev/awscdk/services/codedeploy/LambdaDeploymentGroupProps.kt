@@ -429,7 +429,8 @@ public interface LambdaDeploymentGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupProps):
-        LambdaDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as LambdaDeploymentGroupProps
+        LambdaDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        LambdaDeploymentGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaDeploymentGroupProps):
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupProps = (wrapped as

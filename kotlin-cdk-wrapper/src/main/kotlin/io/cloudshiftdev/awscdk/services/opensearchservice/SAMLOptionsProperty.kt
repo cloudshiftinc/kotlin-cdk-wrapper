@@ -259,7 +259,8 @@ public interface SAMLOptionsProperty {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty):
-        SAMLOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as SAMLOptionsProperty
+        SAMLOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? SAMLOptionsProperty ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SAMLOptionsProperty):
         software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty = (wrapped as

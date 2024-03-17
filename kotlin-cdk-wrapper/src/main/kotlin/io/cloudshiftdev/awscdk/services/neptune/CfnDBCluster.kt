@@ -1679,7 +1679,8 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster.DBClusterRoleProperty):
-          DBClusterRoleProperty = CdkObjectWrappers.wrap(cdkObject) as DBClusterRoleProperty
+          DBClusterRoleProperty = CdkObjectWrappers.wrap(cdkObject) as? DBClusterRoleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DBClusterRoleProperty):
           software.amazon.awscdk.services.neptune.CfnDBCluster.DBClusterRoleProperty = (wrapped as
@@ -1810,8 +1811,8 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster.ServerlessScalingConfigurationProperty):
-          ServerlessScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServerlessScalingConfigurationProperty
+          ServerlessScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerlessScalingConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServerlessScalingConfigurationProperty):
           software.amazon.awscdk.services.neptune.CfnDBCluster.ServerlessScalingConfigurationProperty

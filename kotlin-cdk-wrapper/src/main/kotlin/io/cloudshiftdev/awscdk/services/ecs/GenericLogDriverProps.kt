@@ -176,7 +176,8 @@ public interface GenericLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.GenericLogDriverProps):
-        GenericLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as GenericLogDriverProps
+        GenericLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as? GenericLogDriverProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GenericLogDriverProps):
         software.amazon.awscdk.services.ecs.GenericLogDriverProps = (wrapped as CdkObject).cdkObject

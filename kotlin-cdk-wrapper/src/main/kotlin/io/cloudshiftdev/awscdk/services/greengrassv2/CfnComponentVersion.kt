@@ -739,8 +739,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty):
-          LambdaFunctionRecipeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaFunctionRecipeSourceProperty
+          LambdaFunctionRecipeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaFunctionRecipeSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaFunctionRecipeSourceProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaFunctionRecipeSourceProperty
@@ -988,8 +988,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaContainerParamsProperty):
-          LambdaContainerParamsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaContainerParamsProperty
+          LambdaContainerParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaContainerParamsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaContainerParamsProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaContainerParamsProperty
@@ -1157,7 +1157,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaDeviceMountProperty):
-          LambdaDeviceMountProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaDeviceMountProperty
+          LambdaDeviceMountProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaDeviceMountProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaDeviceMountProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaDeviceMountProperty
@@ -1296,8 +1297,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty):
-          ComponentDependencyRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ComponentDependencyRequirementProperty
+          ComponentDependencyRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentDependencyRequirementProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentDependencyRequirementProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentDependencyRequirementProperty
@@ -1461,7 +1462,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty):
-          ComponentPlatformProperty = CdkObjectWrappers.wrap(cdkObject) as ComponentPlatformProperty
+          ComponentPlatformProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentPlatformProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentPlatformProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.ComponentPlatformProperty
@@ -2030,8 +2032,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaExecutionParametersProperty):
-          LambdaExecutionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaExecutionParametersProperty
+          LambdaExecutionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaExecutionParametersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaExecutionParametersProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaExecutionParametersProperty
@@ -2161,7 +2163,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty):
-          LambdaEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaEventSourceProperty
+          LambdaEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaEventSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaEventSourceProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaEventSourceProperty
@@ -2359,7 +2362,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaVolumeMountProperty):
-          LambdaVolumeMountProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaVolumeMountProperty
+          LambdaVolumeMountProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaVolumeMountProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaVolumeMountProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaVolumeMountProperty
@@ -2529,8 +2533,8 @@ public open class CfnComponentVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty):
-          LambdaLinuxProcessParamsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaLinuxProcessParamsProperty
+          LambdaLinuxProcessParamsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaLinuxProcessParamsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaLinuxProcessParamsProperty):
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaLinuxProcessParamsProperty

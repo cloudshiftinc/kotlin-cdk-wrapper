@@ -1129,7 +1129,8 @@ public interface ContainerDefinitionProps : ContainerDefinitionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ContainerDefinitionProps):
-        ContainerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as ContainerDefinitionProps
+        ContainerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as? ContainerDefinitionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ContainerDefinitionProps):
         software.amazon.awscdk.services.ecs.ContainerDefinitionProps = (wrapped as

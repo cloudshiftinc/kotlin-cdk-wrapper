@@ -146,7 +146,7 @@ public interface CfnIPSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnIPSetProps):
-        CfnIPSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnIPSetProps
+        CfnIPSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnIPSetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPSetProps):
         software.amazon.awscdk.services.waf.regional.CfnIPSetProps = (wrapped as

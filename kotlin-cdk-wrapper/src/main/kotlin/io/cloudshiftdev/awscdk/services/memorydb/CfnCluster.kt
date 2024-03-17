@@ -1289,7 +1289,8 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.memorydb.CfnCluster.EndpointProperty):
-          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointProperty
+          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? EndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.memorydb.CfnCluster.EndpointProperty = (wrapped as

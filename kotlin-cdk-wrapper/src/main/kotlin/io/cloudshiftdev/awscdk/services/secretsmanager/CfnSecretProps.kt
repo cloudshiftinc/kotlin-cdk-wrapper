@@ -710,7 +710,7 @@ public interface CfnSecretProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecretProps):
-        CfnSecretProps = CdkObjectWrappers.wrap(cdkObject) as CfnSecretProps
+        CfnSecretProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSecretProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecretProps):
         software.amazon.awscdk.services.secretsmanager.CfnSecretProps = (wrapped as

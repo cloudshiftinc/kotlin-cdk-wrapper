@@ -151,7 +151,8 @@ public interface ClusterParameterGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.ClusterParameterGroupProps):
-        ClusterParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as ClusterParameterGroupProps
+        ClusterParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ClusterParameterGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClusterParameterGroupProps):
         software.amazon.awscdk.services.docdb.ClusterParameterGroupProps = (wrapped as

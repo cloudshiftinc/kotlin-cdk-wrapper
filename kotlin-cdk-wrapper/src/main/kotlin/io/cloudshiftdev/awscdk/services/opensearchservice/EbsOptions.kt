@@ -243,7 +243,7 @@ public interface EbsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.EbsOptions):
-        EbsOptions = CdkObjectWrappers.wrap(cdkObject) as EbsOptions
+        EbsOptions = CdkObjectWrappers.wrap(cdkObject) as? EbsOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EbsOptions):
         software.amazon.awscdk.services.opensearchservice.EbsOptions = (wrapped as

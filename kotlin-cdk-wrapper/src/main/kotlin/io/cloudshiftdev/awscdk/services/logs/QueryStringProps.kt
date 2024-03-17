@@ -409,7 +409,8 @@ public interface QueryStringProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.QueryStringProps):
-        QueryStringProps = CdkObjectWrappers.wrap(cdkObject) as QueryStringProps
+        QueryStringProps = CdkObjectWrappers.wrap(cdkObject) as? QueryStringProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueryStringProps):
         software.amazon.awscdk.services.logs.QueryStringProps = (wrapped as CdkObject).cdkObject as

@@ -158,7 +158,8 @@ public interface CfnApiMappingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiMappingProps):
-        CfnApiMappingProps = CdkObjectWrappers.wrap(cdkObject) as CfnApiMappingProps
+        CfnApiMappingProps = CdkObjectWrappers.wrap(cdkObject) as? CfnApiMappingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiMappingProps):
         software.amazon.awscdk.services.apigatewayv2.CfnApiMappingProps = (wrapped as

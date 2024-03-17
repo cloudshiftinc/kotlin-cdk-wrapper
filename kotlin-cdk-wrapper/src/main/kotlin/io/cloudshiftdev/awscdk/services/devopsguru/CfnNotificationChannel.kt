@@ -377,8 +377,8 @@ public open class CfnNotificationChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty):
-          NotificationFilterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationFilterConfigProperty
+          NotificationFilterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationFilterConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationFilterConfigProperty):
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty
@@ -672,8 +672,8 @@ public open class CfnNotificationChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty):
-          NotificationChannelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationChannelConfigProperty
+          NotificationChannelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationChannelConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationChannelConfigProperty):
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty
@@ -768,7 +768,8 @@ public open class CfnNotificationChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty):
-          SnsChannelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SnsChannelConfigProperty
+          SnsChannelConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SnsChannelConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnsChannelConfigProperty):
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty

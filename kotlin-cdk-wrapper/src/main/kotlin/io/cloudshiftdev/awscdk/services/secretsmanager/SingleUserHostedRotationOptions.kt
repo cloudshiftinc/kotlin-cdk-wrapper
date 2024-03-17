@@ -221,8 +221,8 @@ public interface SingleUserHostedRotationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions):
-        SingleUserHostedRotationOptions = CdkObjectWrappers.wrap(cdkObject) as
-        SingleUserHostedRotationOptions
+        SingleUserHostedRotationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        SingleUserHostedRotationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SingleUserHostedRotationOptions):
         software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions = (wrapped as

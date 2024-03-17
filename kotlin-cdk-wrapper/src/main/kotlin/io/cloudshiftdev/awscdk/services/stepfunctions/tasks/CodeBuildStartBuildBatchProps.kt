@@ -474,8 +474,8 @@ public interface CodeBuildStartBuildBatchProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatchProps):
-        CodeBuildStartBuildBatchProps = CdkObjectWrappers.wrap(cdkObject) as
-        CodeBuildStartBuildBatchProps
+        CodeBuildStartBuildBatchProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CodeBuildStartBuildBatchProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildStartBuildBatchProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatchProps = (wrapped

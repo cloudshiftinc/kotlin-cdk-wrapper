@@ -159,12 +159,16 @@ public abstract class PipelineBase internal constructor(
    */
   public open fun waves(): List<Wave> = unwrap(this).getWaves().map(Wave::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.pipelines.PipelineBase,
+  ) : PipelineBase(cdkObject)
+
   public companion object {
     public fun isPipeline(x: Any): Boolean =
         software.amazon.awscdk.pipelines.PipelineBase.isPipeline(x)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.PipelineBase): PipelineBase =
-        CdkObjectWrappers.wrap(cdkObject) as PipelineBase
+        CdkObjectWrappers.wrap(cdkObject) as? PipelineBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PipelineBase): software.amazon.awscdk.pipelines.PipelineBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.pipelines.PipelineBase

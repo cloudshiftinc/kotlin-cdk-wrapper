@@ -617,7 +617,7 @@ public interface Behavior {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.Behavior): Behavior =
-        CdkObjectWrappers.wrap(cdkObject) as Behavior
+        CdkObjectWrappers.wrap(cdkObject) as? Behavior ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Behavior): software.amazon.awscdk.services.cloudfront.Behavior =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.Behavior

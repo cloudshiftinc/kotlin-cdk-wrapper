@@ -698,7 +698,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty):
-          AttributesProperty = CdkObjectWrappers.wrap(cdkObject) as AttributesProperty
+          AttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? AttributesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AttributesProperty):
           software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty = (wrapped as

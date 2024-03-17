@@ -104,7 +104,7 @@ public interface CfnFleetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnFleetProps):
-        CfnFleetProps = CdkObjectWrappers.wrap(cdkObject) as CfnFleetProps
+        CfnFleetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFleetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFleetProps):
         software.amazon.awscdk.services.robomaker.CfnFleetProps = (wrapped as CdkObject).cdkObject

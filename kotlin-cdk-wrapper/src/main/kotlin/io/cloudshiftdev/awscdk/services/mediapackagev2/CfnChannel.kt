@@ -363,7 +363,8 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty):
-          IngestEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as IngestEndpointProperty
+          IngestEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as? IngestEndpointProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IngestEndpointProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty =

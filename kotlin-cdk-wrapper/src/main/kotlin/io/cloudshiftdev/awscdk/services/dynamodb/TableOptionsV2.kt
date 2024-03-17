@@ -226,7 +226,7 @@ public interface TableOptionsV2 {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TableOptionsV2):
-        TableOptionsV2 = CdkObjectWrappers.wrap(cdkObject) as TableOptionsV2
+        TableOptionsV2 = CdkObjectWrappers.wrap(cdkObject) as? TableOptionsV2 ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TableOptionsV2):
         software.amazon.awscdk.services.dynamodb.TableOptionsV2 = (wrapped as CdkObject).cdkObject

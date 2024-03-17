@@ -633,7 +633,8 @@ public interface CfnDatasetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatasetProps):
-        CfnDatasetProps = CdkObjectWrappers.wrap(cdkObject) as CfnDatasetProps
+        CfnDatasetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDatasetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatasetProps):
         software.amazon.awscdk.services.iotanalytics.CfnDatasetProps = (wrapped as

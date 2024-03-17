@@ -91,7 +91,7 @@ public interface Alarms {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.common.Alarms): Alarms
-        = CdkObjectWrappers.wrap(cdkObject) as Alarms
+        = CdkObjectWrappers.wrap(cdkObject) as? Alarms ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Alarms): software.amazon.awscdk.services.autoscaling.common.Alarms
         = (wrapped as CdkObject).cdkObject as

@@ -185,8 +185,8 @@ public interface CfnClusterCapacityProviderAssociationsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociationsProps):
-        CfnClusterCapacityProviderAssociationsProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnClusterCapacityProviderAssociationsProps
+        CfnClusterCapacityProviderAssociationsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnClusterCapacityProviderAssociationsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClusterCapacityProviderAssociationsProps):
         software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociationsProps = (wrapped

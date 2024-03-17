@@ -1174,7 +1174,8 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty):
-          PatchFilterProperty = CdkObjectWrappers.wrap(cdkObject) as PatchFilterProperty
+          PatchFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? PatchFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PatchFilterProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty = (wrapped as
@@ -1288,7 +1289,8 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty):
-          PatchFilterGroupProperty = CdkObjectWrappers.wrap(cdkObject) as PatchFilterGroupProperty
+          PatchFilterGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? PatchFilterGroupProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PatchFilterGroupProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty = (wrapped
@@ -1513,7 +1515,8 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty):
-          PatchSourceProperty = CdkObjectWrappers.wrap(cdkObject) as PatchSourceProperty
+          PatchSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? PatchSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PatchSourceProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty = (wrapped as
@@ -1826,7 +1829,7 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty):
-          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty = (wrapped as
@@ -1943,7 +1946,8 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty):
-          RuleGroupProperty = CdkObjectWrappers.wrap(cdkObject) as RuleGroupProperty
+          RuleGroupProperty = CdkObjectWrappers.wrap(cdkObject) as? RuleGroupProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuleGroupProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty = (wrapped as

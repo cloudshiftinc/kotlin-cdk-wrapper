@@ -72,7 +72,7 @@ public interface UserAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.UserAttributes): UserAttributes
-        = CdkObjectWrappers.wrap(cdkObject) as UserAttributes
+        = CdkObjectWrappers.wrap(cdkObject) as? UserAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserAttributes): software.amazon.awscdk.services.iam.UserAttributes
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.UserAttributes

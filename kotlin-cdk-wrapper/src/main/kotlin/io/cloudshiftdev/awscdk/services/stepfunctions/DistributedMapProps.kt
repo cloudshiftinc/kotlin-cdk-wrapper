@@ -612,7 +612,8 @@ public interface DistributedMapProps : MapBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.DistributedMapProps):
-        DistributedMapProps = CdkObjectWrappers.wrap(cdkObject) as DistributedMapProps
+        DistributedMapProps = CdkObjectWrappers.wrap(cdkObject) as? DistributedMapProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DistributedMapProps):
         software.amazon.awscdk.services.stepfunctions.DistributedMapProps = (wrapped as

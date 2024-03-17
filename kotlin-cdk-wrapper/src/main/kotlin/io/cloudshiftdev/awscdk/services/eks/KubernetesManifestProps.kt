@@ -364,7 +364,8 @@ public interface KubernetesManifestProps : KubernetesManifestOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestProps):
-        KubernetesManifestProps = CdkObjectWrappers.wrap(cdkObject) as KubernetesManifestProps
+        KubernetesManifestProps = CdkObjectWrappers.wrap(cdkObject) as? KubernetesManifestProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KubernetesManifestProps):
         software.amazon.awscdk.services.eks.KubernetesManifestProps = (wrapped as

@@ -290,7 +290,8 @@ public interface CfnCampaignProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaignProps):
-        CfnCampaignProps = CdkObjectWrappers.wrap(cdkObject) as CfnCampaignProps
+        CfnCampaignProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCampaignProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCampaignProps):
         software.amazon.awscdk.services.connectcampaigns.CfnCampaignProps = (wrapped as

@@ -161,8 +161,8 @@ public interface AmazonLinuxImageSsmParameterBaseOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseOptions):
-        AmazonLinuxImageSsmParameterBaseOptions = CdkObjectWrappers.wrap(cdkObject) as
-        AmazonLinuxImageSsmParameterBaseOptions
+        AmazonLinuxImageSsmParameterBaseOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        AmazonLinuxImageSsmParameterBaseOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AmazonLinuxImageSsmParameterBaseOptions):
         software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseOptions = (wrapped as

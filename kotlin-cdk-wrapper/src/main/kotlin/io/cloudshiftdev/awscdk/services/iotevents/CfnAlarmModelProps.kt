@@ -576,7 +576,8 @@ public interface CfnAlarmModelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModelProps):
-        CfnAlarmModelProps = CdkObjectWrappers.wrap(cdkObject) as CfnAlarmModelProps
+        CfnAlarmModelProps = CdkObjectWrappers.wrap(cdkObject) as? CfnAlarmModelProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAlarmModelProps):
         software.amazon.awscdk.services.iotevents.CfnAlarmModelProps = (wrapped as

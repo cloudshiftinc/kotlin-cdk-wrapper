@@ -392,8 +392,8 @@ public interface ApplyCloudFormationInitOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ApplyCloudFormationInitOptions):
-        ApplyCloudFormationInitOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ApplyCloudFormationInitOptions
+        ApplyCloudFormationInitOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplyCloudFormationInitOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplyCloudFormationInitOptions):
         software.amazon.awscdk.services.ec2.ApplyCloudFormationInitOptions = (wrapped as

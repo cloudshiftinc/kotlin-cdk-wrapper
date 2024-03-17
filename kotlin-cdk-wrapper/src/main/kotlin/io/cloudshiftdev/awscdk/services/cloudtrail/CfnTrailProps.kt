@@ -1182,7 +1182,7 @@ public interface CfnTrailProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrailProps):
-        CfnTrailProps = CdkObjectWrappers.wrap(cdkObject) as CfnTrailProps
+        CfnTrailProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTrailProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTrailProps):
         software.amazon.awscdk.services.cloudtrail.CfnTrailProps = (wrapped as CdkObject).cdkObject

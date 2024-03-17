@@ -144,8 +144,8 @@ public interface CfnListenerCertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificateProps):
-        CfnListenerCertificateProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnListenerCertificateProps
+        CfnListenerCertificateProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnListenerCertificateProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnListenerCertificateProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificateProps =

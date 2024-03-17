@@ -577,8 +577,8 @@ public interface CfnInstanceGroupConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps):
-        CfnInstanceGroupConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnInstanceGroupConfigProps
+        CfnInstanceGroupConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnInstanceGroupConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceGroupConfigProps):
         software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps = (wrapped as

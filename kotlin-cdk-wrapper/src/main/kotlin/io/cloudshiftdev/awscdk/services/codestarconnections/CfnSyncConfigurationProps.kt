@@ -229,7 +229,8 @@ public interface CfnSyncConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codestarconnections.CfnSyncConfigurationProps):
-        CfnSyncConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as CfnSyncConfigurationProps
+        CfnSyncConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSyncConfigurationProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSyncConfigurationProps):
         software.amazon.awscdk.services.codestarconnections.CfnSyncConfigurationProps = (wrapped as

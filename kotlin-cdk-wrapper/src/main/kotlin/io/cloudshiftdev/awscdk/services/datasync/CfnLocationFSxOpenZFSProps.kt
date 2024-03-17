@@ -303,7 +303,8 @@ public interface CfnLocationFSxOpenZFSProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFSProps):
-        CfnLocationFSxOpenZFSProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationFSxOpenZFSProps
+        CfnLocationFSxOpenZFSProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLocationFSxOpenZFSProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxOpenZFSProps):
         software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFSProps = (wrapped as

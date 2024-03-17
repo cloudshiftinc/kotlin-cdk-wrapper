@@ -243,7 +243,8 @@ public interface CfnLayerVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersionProps):
-        CfnLayerVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnLayerVersionProps
+        CfnLayerVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLayerVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLayerVersionProps):
         software.amazon.awscdk.services.sam.CfnLayerVersionProps = (wrapped as CdkObject).cdkObject

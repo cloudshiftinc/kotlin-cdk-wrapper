@@ -632,7 +632,8 @@ public open class CfnView internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty):
-          SearchFilterProperty = CdkObjectWrappers.wrap(cdkObject) as SearchFilterProperty
+          SearchFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? SearchFilterProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SearchFilterProperty):
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty = (wrapped
@@ -715,7 +716,8 @@ public open class CfnView internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty):
-          IncludedPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as IncludedPropertyProperty
+          IncludedPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as? IncludedPropertyProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IncludedPropertyProperty):
           software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty =
@@ -789,7 +791,8 @@ public open class CfnView internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty):
-          FiltersProperty = CdkObjectWrappers.wrap(cdkObject) as FiltersProperty
+          FiltersProperty = CdkObjectWrappers.wrap(cdkObject) as? FiltersProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FiltersProperty):
           software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty = (wrapped as

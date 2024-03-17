@@ -80,7 +80,7 @@ public interface TcpTimeout {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TcpTimeout): TcpTimeout =
-        CdkObjectWrappers.wrap(cdkObject) as TcpTimeout
+        CdkObjectWrappers.wrap(cdkObject) as? TcpTimeout ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TcpTimeout): software.amazon.awscdk.services.appmesh.TcpTimeout =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.TcpTimeout

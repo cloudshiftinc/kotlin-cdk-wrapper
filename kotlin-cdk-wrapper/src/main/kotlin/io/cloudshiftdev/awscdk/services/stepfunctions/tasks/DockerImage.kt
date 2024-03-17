@@ -39,6 +39,10 @@ public abstract class DockerImage internal constructor(
   public open fun bind(task: ISageMakerTask): DockerImageConfig =
       unwrap(this).bind(task.let(ISageMakerTask::unwrap)).let(DockerImageConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage,
+  ) : DockerImage(cdkObject)
+
   public companion object {
     public fun fromAsset(
       scope: Construct,
@@ -74,7 +78,7 @@ public abstract class DockerImage internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromRegistry(imageUri).let(DockerImage::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage):
-        DockerImage = CdkObjectWrappers.wrap(cdkObject) as DockerImage
+        DockerImage = CdkObjectWrappers.wrap(cdkObject) as? DockerImage ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImage):
         software.amazon.awscdk.services.stepfunctions.tasks.DockerImage = (wrapped as

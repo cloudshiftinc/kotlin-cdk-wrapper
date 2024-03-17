@@ -34,6 +34,10 @@ public abstract class TrafficRouting internal constructor(
   public open fun bind(scope: Construct): TrafficRoutingConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting,
+  ) : TrafficRouting(cdkObject)
+
   public companion object {
     public fun allAtOnce(): TrafficRouting =
         software.amazon.awscdk.services.codedeploy.TrafficRouting.allAtOnce().let(TrafficRouting::wrap)
@@ -55,7 +59,7 @@ public abstract class TrafficRouting internal constructor(
         TrafficRouting = timeBasedLinear(TimeBasedLinearTrafficRoutingProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting):
-        TrafficRouting = CdkObjectWrappers.wrap(cdkObject) as TrafficRouting
+        TrafficRouting = CdkObjectWrappers.wrap(cdkObject) as? TrafficRouting ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TrafficRouting):
         software.amazon.awscdk.services.codedeploy.TrafficRouting = (wrapped as CdkObject).cdkObject

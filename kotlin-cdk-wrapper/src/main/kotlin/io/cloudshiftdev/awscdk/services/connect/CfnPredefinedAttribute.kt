@@ -313,7 +313,8 @@ public open class CfnPredefinedAttribute internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty):
-          ValuesProperty = CdkObjectWrappers.wrap(cdkObject) as ValuesProperty
+          ValuesProperty = CdkObjectWrappers.wrap(cdkObject) as? ValuesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ValuesProperty):
           software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty = (wrapped

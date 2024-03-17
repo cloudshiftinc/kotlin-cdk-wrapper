@@ -208,8 +208,8 @@ public interface ResponseHeadersStrictTransportSecurity {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity):
-        ResponseHeadersStrictTransportSecurity = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseHeadersStrictTransportSecurity
+        ResponseHeadersStrictTransportSecurity = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersStrictTransportSecurity ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersStrictTransportSecurity):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity = (wrapped

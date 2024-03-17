@@ -917,7 +917,8 @@ public interface DatabaseClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterProps):
-        DatabaseClusterProps = CdkObjectWrappers.wrap(cdkObject) as DatabaseClusterProps
+        DatabaseClusterProps = CdkObjectWrappers.wrap(cdkObject) as? DatabaseClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseClusterProps):
         software.amazon.awscdk.services.docdb.DatabaseClusterProps = (wrapped as

@@ -476,8 +476,8 @@ public open class CfnGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty):
-          InsightsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InsightsConfigurationProperty
+          InsightsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InsightsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InsightsConfigurationProperty):
           software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty = (wrapped as

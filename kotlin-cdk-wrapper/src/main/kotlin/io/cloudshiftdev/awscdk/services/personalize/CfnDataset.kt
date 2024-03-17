@@ -467,7 +467,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty):
-          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as DataSourceProperty
+          DataSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? DataSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataSourceProperty):
           software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty = (wrapped as
@@ -669,7 +670,8 @@ public open class CfnDataset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnDataset.DatasetImportJobProperty):
-          DatasetImportJobProperty = CdkObjectWrappers.wrap(cdkObject) as DatasetImportJobProperty
+          DatasetImportJobProperty = CdkObjectWrappers.wrap(cdkObject) as? DatasetImportJobProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatasetImportJobProperty):
           software.amazon.awscdk.services.personalize.CfnDataset.DatasetImportJobProperty = (wrapped

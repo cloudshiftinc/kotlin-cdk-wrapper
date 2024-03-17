@@ -467,7 +467,7 @@ public interface ApiKeyProps : ApiKeyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiKeyProps):
-        ApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as ApiKeyProps
+        ApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as? ApiKeyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApiKeyProps):
         software.amazon.awscdk.services.apigateway.ApiKeyProps = (wrapped as CdkObject).cdkObject as

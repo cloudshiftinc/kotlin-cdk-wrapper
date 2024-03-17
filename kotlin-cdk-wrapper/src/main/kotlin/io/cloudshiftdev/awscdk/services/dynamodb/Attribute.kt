@@ -96,7 +96,7 @@ public interface Attribute {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.Attribute): Attribute =
-        CdkObjectWrappers.wrap(cdkObject) as Attribute
+        CdkObjectWrappers.wrap(cdkObject) as? Attribute ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Attribute): software.amazon.awscdk.services.dynamodb.Attribute =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.Attribute

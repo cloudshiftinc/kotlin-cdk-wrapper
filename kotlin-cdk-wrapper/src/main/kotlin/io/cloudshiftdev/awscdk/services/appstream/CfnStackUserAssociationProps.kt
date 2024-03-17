@@ -201,8 +201,8 @@ public interface CfnStackUserAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnStackUserAssociationProps):
-        CfnStackUserAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnStackUserAssociationProps
+        CfnStackUserAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnStackUserAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStackUserAssociationProps):
         software.amazon.awscdk.services.appstream.CfnStackUserAssociationProps = (wrapped as

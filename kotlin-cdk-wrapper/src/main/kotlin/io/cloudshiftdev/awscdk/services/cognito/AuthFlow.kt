@@ -154,7 +154,7 @@ public interface AuthFlow {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.AuthFlow): AuthFlow =
-        CdkObjectWrappers.wrap(cdkObject) as AuthFlow
+        CdkObjectWrappers.wrap(cdkObject) as? AuthFlow ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AuthFlow): software.amazon.awscdk.services.cognito.AuthFlow =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cognito.AuthFlow

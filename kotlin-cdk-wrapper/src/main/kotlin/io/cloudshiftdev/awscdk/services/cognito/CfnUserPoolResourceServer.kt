@@ -386,8 +386,8 @@ public open class CfnUserPoolResourceServer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.ResourceServerScopeTypeProperty):
-          ResourceServerScopeTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResourceServerScopeTypeProperty
+          ResourceServerScopeTypeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceServerScopeTypeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceServerScopeTypeProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.ResourceServerScopeTypeProperty

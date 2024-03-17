@@ -242,7 +242,8 @@ public interface CfnEnabledBaselineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaselineProps):
-        CfnEnabledBaselineProps = CdkObjectWrappers.wrap(cdkObject) as CfnEnabledBaselineProps
+        CfnEnabledBaselineProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEnabledBaselineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEnabledBaselineProps):
         software.amazon.awscdk.services.controltower.CfnEnabledBaselineProps = (wrapped as

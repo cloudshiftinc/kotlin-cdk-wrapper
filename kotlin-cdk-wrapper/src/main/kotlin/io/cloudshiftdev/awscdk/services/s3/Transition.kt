@@ -139,7 +139,7 @@ public interface Transition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.Transition): Transition =
-        CdkObjectWrappers.wrap(cdkObject) as Transition
+        CdkObjectWrappers.wrap(cdkObject) as? Transition ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Transition): software.amazon.awscdk.services.s3.Transition =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.Transition

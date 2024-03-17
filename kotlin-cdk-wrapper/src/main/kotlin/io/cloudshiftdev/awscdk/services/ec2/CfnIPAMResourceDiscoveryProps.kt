@@ -206,8 +206,8 @@ public interface CfnIPAMResourceDiscoveryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryProps):
-        CfnIPAMResourceDiscoveryProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnIPAMResourceDiscoveryProps
+        CfnIPAMResourceDiscoveryProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnIPAMResourceDiscoveryProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnIPAMResourceDiscoveryProps):
         software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryProps = (wrapped as

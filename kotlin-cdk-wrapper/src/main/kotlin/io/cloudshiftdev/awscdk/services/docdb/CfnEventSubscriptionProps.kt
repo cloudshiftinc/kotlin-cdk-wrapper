@@ -371,7 +371,8 @@ public interface CfnEventSubscriptionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps):
-        CfnEventSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as CfnEventSubscriptionProps
+        CfnEventSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEventSubscriptionProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEventSubscriptionProps):
         software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps = (wrapped as

@@ -145,7 +145,8 @@ public interface CfnLocationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnLocationProps):
-        CfnLocationProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationProps
+        CfnLocationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationProps):
         software.amazon.awscdk.services.gamelift.CfnLocationProps = (wrapped as CdkObject).cdkObject

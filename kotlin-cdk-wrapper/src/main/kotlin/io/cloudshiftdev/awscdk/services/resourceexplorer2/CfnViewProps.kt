@@ -407,7 +407,7 @@ public interface CfnViewProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnViewProps):
-        CfnViewProps = CdkObjectWrappers.wrap(cdkObject) as CfnViewProps
+        CfnViewProps = CdkObjectWrappers.wrap(cdkObject) as? CfnViewProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnViewProps):
         software.amazon.awscdk.services.resourceexplorer2.CfnViewProps = (wrapped as

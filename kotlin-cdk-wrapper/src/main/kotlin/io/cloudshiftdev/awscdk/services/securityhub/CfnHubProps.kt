@@ -306,7 +306,7 @@ public interface CfnHubProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnHubProps):
-        CfnHubProps = CdkObjectWrappers.wrap(cdkObject) as CfnHubProps
+        CfnHubProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHubProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHubProps):
         software.amazon.awscdk.services.securityhub.CfnHubProps = (wrapped as CdkObject).cdkObject

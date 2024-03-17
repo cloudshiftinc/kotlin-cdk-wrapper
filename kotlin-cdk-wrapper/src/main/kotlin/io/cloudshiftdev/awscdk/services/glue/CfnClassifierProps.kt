@@ -297,7 +297,8 @@ public interface CfnClassifierProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnClassifierProps):
-        CfnClassifierProps = CdkObjectWrappers.wrap(cdkObject) as CfnClassifierProps
+        CfnClassifierProps = CdkObjectWrappers.wrap(cdkObject) as? CfnClassifierProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnClassifierProps):
         software.amazon.awscdk.services.glue.CfnClassifierProps = (wrapped as CdkObject).cdkObject

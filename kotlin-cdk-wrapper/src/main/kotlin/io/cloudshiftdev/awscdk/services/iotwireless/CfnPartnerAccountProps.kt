@@ -376,7 +376,8 @@ public interface CfnPartnerAccountProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccountProps):
-        CfnPartnerAccountProps = CdkObjectWrappers.wrap(cdkObject) as CfnPartnerAccountProps
+        CfnPartnerAccountProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPartnerAccountProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPartnerAccountProps):
         software.amazon.awscdk.services.iotwireless.CfnPartnerAccountProps = (wrapped as

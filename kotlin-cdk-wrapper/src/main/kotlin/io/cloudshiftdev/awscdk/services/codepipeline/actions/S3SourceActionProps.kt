@@ -304,7 +304,8 @@ public interface S3SourceActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3SourceActionProps):
-        S3SourceActionProps = CdkObjectWrappers.wrap(cdkObject) as S3SourceActionProps
+        S3SourceActionProps = CdkObjectWrappers.wrap(cdkObject) as? S3SourceActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3SourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.S3SourceActionProps = (wrapped as

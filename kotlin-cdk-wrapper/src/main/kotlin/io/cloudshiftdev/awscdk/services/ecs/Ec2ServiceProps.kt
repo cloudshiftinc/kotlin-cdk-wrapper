@@ -937,7 +937,8 @@ public interface Ec2ServiceProps : BaseServiceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Ec2ServiceProps):
-        Ec2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as Ec2ServiceProps
+        Ec2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as? Ec2ServiceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Ec2ServiceProps):
         software.amazon.awscdk.services.ecs.Ec2ServiceProps = (wrapped as CdkObject).cdkObject as

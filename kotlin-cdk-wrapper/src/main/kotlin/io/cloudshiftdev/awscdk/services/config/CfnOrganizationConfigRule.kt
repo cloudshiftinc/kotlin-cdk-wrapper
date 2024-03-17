@@ -1001,8 +1001,8 @@ public open class CfnOrganizationConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty):
-          OrganizationCustomRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OrganizationCustomRuleMetadataProperty
+          OrganizationCustomRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OrganizationCustomRuleMetadataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OrganizationCustomRuleMetadataProperty):
           software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty
@@ -1523,8 +1523,8 @@ public open class CfnOrganizationConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty):
-          OrganizationCustomPolicyRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OrganizationCustomPolicyRuleMetadataProperty
+          OrganizationCustomPolicyRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OrganizationCustomPolicyRuleMetadataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OrganizationCustomPolicyRuleMetadataProperty):
           software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty
@@ -1878,8 +1878,8 @@ public open class CfnOrganizationConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty):
-          OrganizationManagedRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as
-          OrganizationManagedRuleMetadataProperty
+          OrganizationManagedRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OrganizationManagedRuleMetadataProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: OrganizationManagedRuleMetadataProperty):
           software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty

@@ -808,8 +808,8 @@ public interface CfnReplicationInstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnReplicationInstanceProps):
-        CfnReplicationInstanceProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnReplicationInstanceProps
+        CfnReplicationInstanceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnReplicationInstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicationInstanceProps):
         software.amazon.awscdk.services.dms.CfnReplicationInstanceProps = (wrapped as

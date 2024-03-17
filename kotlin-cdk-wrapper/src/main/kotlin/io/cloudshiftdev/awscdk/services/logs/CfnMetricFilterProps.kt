@@ -207,7 +207,8 @@ public interface CfnMetricFilterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilterProps):
-        CfnMetricFilterProps = CdkObjectWrappers.wrap(cdkObject) as CfnMetricFilterProps
+        CfnMetricFilterProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMetricFilterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMetricFilterProps):
         software.amazon.awscdk.services.logs.CfnMetricFilterProps = (wrapped as CdkObject).cdkObject

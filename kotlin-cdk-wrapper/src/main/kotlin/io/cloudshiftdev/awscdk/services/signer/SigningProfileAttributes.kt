@@ -93,7 +93,8 @@ public interface SigningProfileAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.signer.SigningProfileAttributes):
-        SigningProfileAttributes = CdkObjectWrappers.wrap(cdkObject) as SigningProfileAttributes
+        SigningProfileAttributes = CdkObjectWrappers.wrap(cdkObject) as? SigningProfileAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SigningProfileAttributes):
         software.amazon.awscdk.services.signer.SigningProfileAttributes = (wrapped as

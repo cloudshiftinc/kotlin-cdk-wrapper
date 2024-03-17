@@ -133,8 +133,8 @@ public interface CfnNetworkInterfacePermissionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermissionProps):
-        CfnNetworkInterfacePermissionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnNetworkInterfacePermissionProps
+        CfnNetworkInterfacePermissionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNetworkInterfacePermissionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInterfacePermissionProps):
         software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermissionProps = (wrapped as

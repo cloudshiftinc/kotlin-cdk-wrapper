@@ -130,7 +130,8 @@ public interface SnsEventSourceProps : LambdaSubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsEventSourceProps):
-        SnsEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as SnsEventSourceProps
+        SnsEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as? SnsEventSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SnsEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.SnsEventSourceProps = (wrapped as

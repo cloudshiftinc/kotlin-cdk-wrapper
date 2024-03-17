@@ -509,7 +509,8 @@ public interface CodeBuildOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodeBuildOptions):
-        CodeBuildOptions = CdkObjectWrappers.wrap(cdkObject) as CodeBuildOptions
+        CodeBuildOptions = CdkObjectWrappers.wrap(cdkObject) as? CodeBuildOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildOptions):
         software.amazon.awscdk.pipelines.CodeBuildOptions = (wrapped as CdkObject).cdkObject as

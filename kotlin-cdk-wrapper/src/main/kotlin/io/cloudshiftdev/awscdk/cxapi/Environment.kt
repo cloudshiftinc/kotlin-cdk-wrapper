@@ -115,7 +115,7 @@ public interface Environment {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.Environment): Environment =
-        CdkObjectWrappers.wrap(cdkObject) as Environment
+        CdkObjectWrappers.wrap(cdkObject) as? Environment ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Environment): software.amazon.awscdk.cxapi.Environment = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.cxapi.Environment

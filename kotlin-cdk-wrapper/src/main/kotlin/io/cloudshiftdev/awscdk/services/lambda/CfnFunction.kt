@@ -2120,7 +2120,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty):
-          TracingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TracingConfigProperty
+          TracingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TracingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TracingConfigProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.TracingConfigProperty = (wrapped as
@@ -2307,7 +2308,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty = (wrapped as
@@ -2391,7 +2393,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty):
-          SnapStartProperty = CdkObjectWrappers.wrap(cdkObject) as SnapStartProperty
+          SnapStartProperty = CdkObjectWrappers.wrap(cdkObject) as? SnapStartProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnapStartProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.SnapStartProperty = (wrapped as
@@ -2474,7 +2477,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty):
-          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as EphemeralStorageProperty
+          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? EphemeralStorageProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EphemeralStorageProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.EphemeralStorageProperty = (wrapped as
@@ -2676,8 +2680,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty):
-          RuntimeManagementConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RuntimeManagementConfigProperty
+          RuntimeManagementConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RuntimeManagementConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RuntimeManagementConfigProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.RuntimeManagementConfigProperty =
@@ -2888,7 +2892,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty):
-          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingConfigProperty
+          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? LoggingConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoggingConfigProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.LoggingConfigProperty = (wrapped as
@@ -2970,7 +2975,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty):
-          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DeadLetterConfigProperty
+          DeadLetterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DeadLetterConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeadLetterConfigProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.DeadLetterConfigProperty = (wrapped as
@@ -3155,7 +3161,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty):
-          ImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ImageConfigProperty
+          ImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ImageConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ImageConfigProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.ImageConfigProperty = (wrapped as
@@ -3266,7 +3273,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty):
-          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as EnvironmentProperty
+          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.EnvironmentProperty = (wrapped as
@@ -3381,7 +3389,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty):
-          FileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as FileSystemConfigProperty
+          FileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? FileSystemConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FileSystemConfigProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.FileSystemConfigProperty = (wrapped as
@@ -3506,7 +3515,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty):
-          SnapStartResponseProperty = CdkObjectWrappers.wrap(cdkObject) as SnapStartResponseProperty
+          SnapStartResponseProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnapStartResponseProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnapStartResponseProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.SnapStartResponseProperty = (wrapped as
@@ -3777,7 +3787,7 @@ public open class CfnFunction internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnFunction.CodeProperty):
-          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as CodeProperty
+          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as? CodeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CodeProperty):
           software.amazon.awscdk.services.lambda.CfnFunction.CodeProperty = (wrapped as

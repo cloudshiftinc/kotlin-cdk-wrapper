@@ -220,7 +220,8 @@ public interface HttpsRedirectProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps):
-        HttpsRedirectProps = CdkObjectWrappers.wrap(cdkObject) as HttpsRedirectProps
+        HttpsRedirectProps = CdkObjectWrappers.wrap(cdkObject) as? HttpsRedirectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpsRedirectProps):
         software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps = (wrapped as

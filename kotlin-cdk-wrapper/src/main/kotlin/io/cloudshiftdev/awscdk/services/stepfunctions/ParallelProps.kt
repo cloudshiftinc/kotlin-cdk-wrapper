@@ -265,7 +265,7 @@ public interface ParallelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ParallelProps):
-        ParallelProps = CdkObjectWrappers.wrap(cdkObject) as ParallelProps
+        ParallelProps = CdkObjectWrappers.wrap(cdkObject) as? ParallelProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParallelProps):
         software.amazon.awscdk.services.stepfunctions.ParallelProps = (wrapped as

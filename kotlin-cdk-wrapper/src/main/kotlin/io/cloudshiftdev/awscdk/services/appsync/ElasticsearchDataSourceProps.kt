@@ -169,8 +169,8 @@ public interface ElasticsearchDataSourceProps : BackedDataSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appsync.ElasticsearchDataSourceProps):
-        ElasticsearchDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as
-        ElasticsearchDataSourceProps
+        ElasticsearchDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ElasticsearchDataSourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ElasticsearchDataSourceProps):
         software.amazon.awscdk.services.appsync.ElasticsearchDataSourceProps = (wrapped as

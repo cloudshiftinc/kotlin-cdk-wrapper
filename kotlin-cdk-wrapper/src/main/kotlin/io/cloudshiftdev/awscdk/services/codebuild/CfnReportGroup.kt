@@ -581,8 +581,8 @@ public open class CfnReportGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty):
-          ReportExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ReportExportConfigProperty
+          ReportExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReportExportConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ReportExportConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty =
@@ -841,8 +841,8 @@ public open class CfnReportGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty):
-          S3ReportExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3ReportExportConfigProperty
+          S3ReportExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3ReportExportConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3ReportExportConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty =

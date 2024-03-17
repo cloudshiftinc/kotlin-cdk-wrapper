@@ -1068,7 +1068,8 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateClusterProps):
-        EmrCreateClusterProps = CdkObjectWrappers.wrap(cdkObject) as EmrCreateClusterProps
+        EmrCreateClusterProps = CdkObjectWrappers.wrap(cdkObject) as? EmrCreateClusterProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrCreateClusterProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateClusterProps = (wrapped as

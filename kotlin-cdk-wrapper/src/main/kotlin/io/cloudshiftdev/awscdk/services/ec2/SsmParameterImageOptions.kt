@@ -233,7 +233,8 @@ public interface SsmParameterImageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SsmParameterImageOptions):
-        SsmParameterImageOptions = CdkObjectWrappers.wrap(cdkObject) as SsmParameterImageOptions
+        SsmParameterImageOptions = CdkObjectWrappers.wrap(cdkObject) as? SsmParameterImageOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SsmParameterImageOptions):
         software.amazon.awscdk.services.ec2.SsmParameterImageOptions = (wrapped as

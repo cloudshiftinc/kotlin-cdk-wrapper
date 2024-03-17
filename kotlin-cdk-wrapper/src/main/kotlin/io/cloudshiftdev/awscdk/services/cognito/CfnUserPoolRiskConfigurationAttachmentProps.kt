@@ -378,8 +378,8 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachmentProps):
-        CfnUserPoolRiskConfigurationAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnUserPoolRiskConfigurationAttachmentProps
+        CfnUserPoolRiskConfigurationAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserPoolRiskConfigurationAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolRiskConfigurationAttachmentProps):
         software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachmentProps =

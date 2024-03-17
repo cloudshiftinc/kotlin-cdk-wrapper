@@ -1135,8 +1135,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty):
-          IncrementalPullConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IncrementalPullConfigProperty
+          IncrementalPullConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IncrementalPullConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IncrementalPullConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty = (wrapped
@@ -1220,8 +1220,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty):
-          LookoutMetricsDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LookoutMetricsDestinationPropertiesProperty
+          LookoutMetricsDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LookoutMetricsDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LookoutMetricsDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty
@@ -1420,8 +1420,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty):
-          SAPODataSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SAPODataSourcePropertiesProperty
+          SAPODataSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SAPODataSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty =
@@ -1505,8 +1505,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty):
-          TrendmicroSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TrendmicroSourcePropertiesProperty
+          TrendmicroSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrendmicroSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TrendmicroSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty =
@@ -1590,8 +1590,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty):
-          ServiceNowSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ServiceNowSourcePropertiesProperty
+          ServiceNowSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServiceNowSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceNowSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty =
@@ -1886,7 +1886,7 @@ public open class CfnFlow internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty):
-          TaskProperty = CdkObjectWrappers.wrap(cdkObject) as TaskProperty
+          TaskProperty = CdkObjectWrappers.wrap(cdkObject) as? TaskProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty = (wrapped as
@@ -2124,8 +2124,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty):
-          VeevaSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VeevaSourcePropertiesProperty
+          VeevaSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VeevaSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VeevaSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty = (wrapped
@@ -2207,8 +2207,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty):
-          MarketoSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MarketoSourcePropertiesProperty
+          MarketoSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MarketoSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty = (wrapped
@@ -2288,8 +2288,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty):
-          SAPODataParallelismConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SAPODataParallelismConfigProperty
+          SAPODataParallelismConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataParallelismConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SAPODataParallelismConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty =
@@ -2373,8 +2373,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.AmplitudeSourcePropertiesProperty):
-          AmplitudeSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AmplitudeSourcePropertiesProperty
+          AmplitudeSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AmplitudeSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AmplitudeSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.AmplitudeSourcePropertiesProperty =
@@ -2577,7 +2577,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty):
-          PrefixConfigProperty = CdkObjectWrappers.wrap(cdkObject) as PrefixConfigProperty
+          PrefixConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? PrefixConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrefixConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty = (wrapped as
@@ -2659,8 +2660,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty):
-          ZendeskSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ZendeskSourcePropertiesProperty
+          ZendeskSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZendeskSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty = (wrapped
@@ -2897,8 +2898,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty):
-          SnowflakeDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SnowflakeDestinationPropertiesProperty
+          SnowflakeDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SnowflakeDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SnowflakeDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty =
@@ -3043,8 +3044,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty):
-          EventBridgeDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EventBridgeDestinationPropertiesProperty
+          EventBridgeDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventBridgeDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventBridgeDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty =
@@ -3128,8 +3129,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty):
-          DynatraceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DynatraceSourcePropertiesProperty
+          DynatraceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DynatraceSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DynatraceSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty =
@@ -3321,8 +3322,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty):
-          CustomConnectorSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomConnectorSourcePropertiesProperty
+          CustomConnectorSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomConnectorSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomConnectorSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty =
@@ -3598,8 +3599,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorDestinationPropertiesProperty):
-          CustomConnectorDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomConnectorDestinationPropertiesProperty
+          CustomConnectorDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomConnectorDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomConnectorDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorDestinationPropertiesProperty
@@ -3778,8 +3779,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty):
-          MarketoDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MarketoDestinationPropertiesProperty
+          MarketoDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MarketoDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MarketoDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty =
@@ -4126,8 +4127,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty):
-          ScheduledTriggerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ScheduledTriggerPropertiesProperty
+          ScheduledTriggerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduledTriggerPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduledTriggerPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty =
@@ -4209,8 +4210,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty):
-          PardotSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PardotSourcePropertiesProperty
+          PardotSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PardotSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PardotSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty = (wrapped
@@ -4447,8 +4448,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty):
-          RedshiftDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RedshiftDestinationPropertiesProperty
+          RedshiftDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RedshiftDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RedshiftDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty =
@@ -4581,7 +4582,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DataTransferApiProperty):
-          DataTransferApiProperty = CdkObjectWrappers.wrap(cdkObject) as DataTransferApiProperty
+          DataTransferApiProperty = CdkObjectWrappers.wrap(cdkObject) as? DataTransferApiProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataTransferApiProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.DataTransferApiProperty = (wrapped as
@@ -4710,7 +4712,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty):
-          AggregationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as AggregationConfigProperty
+          AggregationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AggregationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AggregationConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty = (wrapped as
@@ -5487,8 +5490,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty):
-          DestinationConnectorPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DestinationConnectorPropertiesProperty
+          DestinationConnectorPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationConnectorPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationConnectorPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty =
@@ -5887,8 +5890,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty):
-          SalesforceDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SalesforceDestinationPropertiesProperty
+          SalesforceDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty =
@@ -5972,8 +5975,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty):
-          GoogleAnalyticsSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GoogleAnalyticsSourcePropertiesProperty
+          GoogleAnalyticsSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GoogleAnalyticsSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GoogleAnalyticsSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty =
@@ -6341,7 +6344,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty):
-          SourceFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SourceFlowConfigProperty
+          SourceFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceFlowConfigProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceFlowConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty = (wrapped as
@@ -6655,8 +6659,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SalesforceSourcePropertiesProperty):
-          SalesforceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SalesforceSourcePropertiesProperty
+          SalesforceSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SalesforceSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SalesforceSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SalesforceSourcePropertiesProperty =
@@ -6824,7 +6828,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty):
-          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TriggerConfigProperty
+          TriggerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? TriggerConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TriggerConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty = (wrapped as
@@ -6939,8 +6944,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty):
-          SuccessResponseHandlingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SuccessResponseHandlingConfigProperty
+          SuccessResponseHandlingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SuccessResponseHandlingConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SuccessResponseHandlingConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty =
@@ -7456,7 +7461,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty):
-          ConnectorOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as ConnectorOperatorProperty
+          ConnectorOperatorProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectorOperatorProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectorOperatorProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty = (wrapped as
@@ -8509,8 +8515,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty):
-          SourceConnectorPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SourceConnectorPropertiesProperty
+          SourceConnectorPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SourceConnectorPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SourceConnectorPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty =
@@ -8705,8 +8711,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.UpsolverDestinationPropertiesProperty):
-          UpsolverDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UpsolverDestinationPropertiesProperty
+          UpsolverDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UpsolverDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UpsolverDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.UpsolverDestinationPropertiesProperty =
@@ -8784,8 +8790,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty):
-          SAPODataPaginationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SAPODataPaginationConfigProperty
+          SAPODataPaginationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataPaginationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SAPODataPaginationConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty =
@@ -8908,8 +8914,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty):
-          MetadataCatalogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MetadataCatalogConfigProperty
+          MetadataCatalogConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MetadataCatalogConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MetadataCatalogConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty = (wrapped
@@ -9163,8 +9169,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ZendeskDestinationPropertiesProperty):
-          ZendeskDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ZendeskDestinationPropertiesProperty
+          ZendeskDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ZendeskDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ZendeskDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.ZendeskDestinationPropertiesProperty =
@@ -9340,8 +9346,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty):
-          S3SourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3SourcePropertiesProperty
+          S3SourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3SourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3SourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty = (wrapped as
@@ -9685,8 +9691,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty):
-          SAPODataDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SAPODataDestinationPropertiesProperty
+          SAPODataDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SAPODataDestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SAPODataDestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty =
@@ -9844,8 +9850,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty):
-          ErrorHandlingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ErrorHandlingConfigProperty
+          ErrorHandlingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ErrorHandlingConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ErrorHandlingConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty = (wrapped as
@@ -9927,8 +9933,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty):
-          SlackSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SlackSourcePropertiesProperty
+          SlackSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SlackSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SlackSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty = (wrapped
@@ -10012,8 +10018,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty):
-          InforNexusSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InforNexusSourcePropertiesProperty
+          InforNexusSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InforNexusSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InforNexusSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty =
@@ -10316,8 +10322,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty):
-          S3OutputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3OutputFormatConfigProperty
+          S3OutputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3OutputFormatConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3OutputFormatConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty = (wrapped as
@@ -10535,8 +10541,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty):
-          UpsolverS3OutputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          UpsolverS3OutputFormatConfigProperty
+          UpsolverS3OutputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          UpsolverS3OutputFormatConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: UpsolverS3OutputFormatConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty =
@@ -10618,8 +10624,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty):
-          S3InputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3InputFormatConfigProperty
+          S3InputFormatConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3InputFormatConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3InputFormatConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty = (wrapped as
@@ -10701,8 +10707,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty):
-          DatadogSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DatadogSourcePropertiesProperty
+          DatadogSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatadogSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DatadogSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty = (wrapped
@@ -10784,8 +10790,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty):
-          SingularSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          SingularSourcePropertiesProperty
+          SingularSourcePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SingularSourcePropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SingularSourcePropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty =
@@ -11127,8 +11133,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty):
-          DestinationFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DestinationFlowConfigProperty
+          DestinationFlowConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationFlowConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationFlowConfigProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty = (wrapped
@@ -11262,7 +11268,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty):
-          GlueDataCatalogProperty = CdkObjectWrappers.wrap(cdkObject) as GlueDataCatalogProperty
+          GlueDataCatalogProperty = CdkObjectWrappers.wrap(cdkObject) as? GlueDataCatalogProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GlueDataCatalogProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty = (wrapped as
@@ -11452,8 +11459,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty):
-          S3DestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          S3DestinationPropertiesProperty
+          S3DestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          S3DestinationPropertiesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: S3DestinationPropertiesProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty = (wrapped
@@ -11564,8 +11571,8 @@ public open class CfnFlow internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty):
-          TaskPropertiesObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TaskPropertiesObjectProperty
+          TaskPropertiesObjectProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TaskPropertiesObjectProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TaskPropertiesObjectProperty):
           software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty = (wrapped as

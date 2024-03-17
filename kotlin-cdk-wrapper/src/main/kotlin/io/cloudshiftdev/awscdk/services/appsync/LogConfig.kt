@@ -187,7 +187,7 @@ public interface LogConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.LogConfig): LogConfig =
-        CdkObjectWrappers.wrap(cdkObject) as LogConfig
+        CdkObjectWrappers.wrap(cdkObject) as? LogConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LogConfig): software.amazon.awscdk.services.appsync.LogConfig =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.LogConfig

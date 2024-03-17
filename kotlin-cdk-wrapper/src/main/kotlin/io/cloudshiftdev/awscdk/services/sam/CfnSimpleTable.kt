@@ -469,8 +469,8 @@ public open class CfnSimpleTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty):
-          ProvisionedThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProvisionedThroughputProperty
+          ProvisionedThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProvisionedThroughputProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProvisionedThroughputProperty):
           software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty =
@@ -567,7 +567,8 @@ public open class CfnSimpleTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty):
-          PrimaryKeyProperty = CdkObjectWrappers.wrap(cdkObject) as PrimaryKeyProperty
+          PrimaryKeyProperty = CdkObjectWrappers.wrap(cdkObject) as? PrimaryKeyProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrimaryKeyProperty):
           software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty = (wrapped as
@@ -654,7 +655,8 @@ public open class CfnSimpleTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty):
-          SSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as SSESpecificationProperty
+          SSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as? SSESpecificationProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SSESpecificationProperty):
           software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty = (wrapped as

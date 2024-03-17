@@ -1271,8 +1271,8 @@ public interface CfnLaunchConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnLaunchConfigurationProps):
-        CfnLaunchConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLaunchConfigurationProps
+        CfnLaunchConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLaunchConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLaunchConfigurationProps):
         software.amazon.awscdk.services.autoscaling.CfnLaunchConfigurationProps = (wrapped as

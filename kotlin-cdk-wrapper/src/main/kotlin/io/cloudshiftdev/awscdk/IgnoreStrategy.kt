@@ -45,6 +45,10 @@ public abstract class IgnoreStrategy internal constructor(
   public open fun ignores(absoluteFilePath: String): Boolean =
       unwrap(this).ignores(absoluteFilePath)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.IgnoreStrategy,
+  ) : IgnoreStrategy(cdkObject)
+
   public companion object {
     public fun docker(absoluteRootPath: String, patterns: List<String>): DockerIgnoreStrategy =
         software.amazon.awscdk.IgnoreStrategy.docker(absoluteRootPath,
@@ -63,7 +67,7 @@ public abstract class IgnoreStrategy internal constructor(
         patterns).let(GlobIgnoreStrategy::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.IgnoreStrategy): IgnoreStrategy =
-        CdkObjectWrappers.wrap(cdkObject) as IgnoreStrategy
+        CdkObjectWrappers.wrap(cdkObject) as? IgnoreStrategy ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IgnoreStrategy): software.amazon.awscdk.IgnoreStrategy = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.IgnoreStrategy

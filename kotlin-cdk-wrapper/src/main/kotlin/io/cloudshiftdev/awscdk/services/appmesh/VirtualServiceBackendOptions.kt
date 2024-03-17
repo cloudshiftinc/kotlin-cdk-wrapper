@@ -107,8 +107,8 @@ public interface VirtualServiceBackendOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceBackendOptions):
-        VirtualServiceBackendOptions = CdkObjectWrappers.wrap(cdkObject) as
-        VirtualServiceBackendOptions
+        VirtualServiceBackendOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        VirtualServiceBackendOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VirtualServiceBackendOptions):
         software.amazon.awscdk.services.appmesh.VirtualServiceBackendOptions = (wrapped as

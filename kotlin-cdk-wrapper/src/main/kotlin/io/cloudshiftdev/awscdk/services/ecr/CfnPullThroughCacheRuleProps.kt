@@ -166,8 +166,8 @@ public interface CfnPullThroughCacheRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRuleProps):
-        CfnPullThroughCacheRuleProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnPullThroughCacheRuleProps
+        CfnPullThroughCacheRuleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPullThroughCacheRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPullThroughCacheRuleProps):
         software.amazon.awscdk.services.ecr.CfnPullThroughCacheRuleProps = (wrapped as

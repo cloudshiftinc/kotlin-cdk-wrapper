@@ -204,7 +204,8 @@ public interface CfnCostCategoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnCostCategoryProps):
-        CfnCostCategoryProps = CdkObjectWrappers.wrap(cdkObject) as CfnCostCategoryProps
+        CfnCostCategoryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCostCategoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCostCategoryProps):
         software.amazon.awscdk.services.ce.CfnCostCategoryProps = (wrapped as CdkObject).cdkObject

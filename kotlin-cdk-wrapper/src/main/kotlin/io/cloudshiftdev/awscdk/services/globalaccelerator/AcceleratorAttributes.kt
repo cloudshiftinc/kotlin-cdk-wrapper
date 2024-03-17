@@ -204,7 +204,8 @@ public interface AcceleratorAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes):
-        AcceleratorAttributes = CdkObjectWrappers.wrap(cdkObject) as AcceleratorAttributes
+        AcceleratorAttributes = CdkObjectWrappers.wrap(cdkObject) as? AcceleratorAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AcceleratorAttributes):
         software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes = (wrapped as

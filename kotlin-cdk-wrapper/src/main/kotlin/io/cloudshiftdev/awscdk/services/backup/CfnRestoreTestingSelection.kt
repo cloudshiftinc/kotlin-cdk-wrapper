@@ -765,8 +765,8 @@ public open class CfnRestoreTestingSelection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty):
-          ProtectedResourceConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProtectedResourceConditionsProperty
+          ProtectedResourceConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProtectedResourceConditionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProtectedResourceConditionsProperty):
           software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty
@@ -906,7 +906,8 @@ public open class CfnRestoreTestingSelection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty):
-          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as KeyValueProperty
+          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as? KeyValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KeyValueProperty):
           software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty =

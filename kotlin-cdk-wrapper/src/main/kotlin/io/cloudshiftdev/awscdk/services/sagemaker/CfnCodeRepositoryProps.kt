@@ -196,7 +196,8 @@ public interface CfnCodeRepositoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepositoryProps):
-        CfnCodeRepositoryProps = CdkObjectWrappers.wrap(cdkObject) as CfnCodeRepositoryProps
+        CfnCodeRepositoryProps = CdkObjectWrappers.wrap(cdkObject) as? CfnCodeRepositoryProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeRepositoryProps):
         software.amazon.awscdk.services.sagemaker.CfnCodeRepositoryProps = (wrapped as

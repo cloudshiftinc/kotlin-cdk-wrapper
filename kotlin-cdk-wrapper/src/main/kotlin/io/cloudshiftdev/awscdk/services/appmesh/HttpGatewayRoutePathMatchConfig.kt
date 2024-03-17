@@ -244,8 +244,8 @@ public interface HttpGatewayRoutePathMatchConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatchConfig):
-        HttpGatewayRoutePathMatchConfig = CdkObjectWrappers.wrap(cdkObject) as
-        HttpGatewayRoutePathMatchConfig
+        HttpGatewayRoutePathMatchConfig = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpGatewayRoutePathMatchConfig ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpGatewayRoutePathMatchConfig):
         software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatchConfig = (wrapped as

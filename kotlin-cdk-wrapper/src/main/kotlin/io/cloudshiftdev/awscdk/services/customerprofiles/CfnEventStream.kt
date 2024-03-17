@@ -379,8 +379,8 @@ public open class CfnEventStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty):
-          DestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DestinationDetailsProperty
+          DestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DestinationDetailsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DestinationDetailsProperty):
           software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty

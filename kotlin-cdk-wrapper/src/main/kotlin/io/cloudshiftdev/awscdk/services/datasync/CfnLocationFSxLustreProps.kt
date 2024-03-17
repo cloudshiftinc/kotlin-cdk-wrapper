@@ -240,7 +240,8 @@ public interface CfnLocationFSxLustreProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxLustreProps):
-        CfnLocationFSxLustreProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationFSxLustreProps
+        CfnLocationFSxLustreProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationFSxLustreProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxLustreProps):
         software.amazon.awscdk.services.datasync.CfnLocationFSxLustreProps = (wrapped as

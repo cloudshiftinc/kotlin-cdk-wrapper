@@ -114,7 +114,8 @@ public interface OriginFailoverConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginFailoverConfig):
-        OriginFailoverConfig = CdkObjectWrappers.wrap(cdkObject) as OriginFailoverConfig
+        OriginFailoverConfig = CdkObjectWrappers.wrap(cdkObject) as? OriginFailoverConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginFailoverConfig):
         software.amazon.awscdk.services.cloudfront.OriginFailoverConfig = (wrapped as

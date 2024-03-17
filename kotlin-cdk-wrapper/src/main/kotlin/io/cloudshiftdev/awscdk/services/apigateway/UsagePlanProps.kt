@@ -230,7 +230,7 @@ public interface UsagePlanProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.UsagePlanProps):
-        UsagePlanProps = CdkObjectWrappers.wrap(cdkObject) as UsagePlanProps
+        UsagePlanProps = CdkObjectWrappers.wrap(cdkObject) as? UsagePlanProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UsagePlanProps):
         software.amazon.awscdk.services.apigateway.UsagePlanProps = (wrapped as CdkObject).cdkObject

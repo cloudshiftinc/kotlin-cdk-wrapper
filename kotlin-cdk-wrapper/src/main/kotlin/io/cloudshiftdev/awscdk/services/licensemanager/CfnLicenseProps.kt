@@ -515,7 +515,8 @@ public interface CfnLicenseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicenseProps):
-        CfnLicenseProps = CdkObjectWrappers.wrap(cdkObject) as CfnLicenseProps
+        CfnLicenseProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLicenseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLicenseProps):
         software.amazon.awscdk.services.licensemanager.CfnLicenseProps = (wrapped as

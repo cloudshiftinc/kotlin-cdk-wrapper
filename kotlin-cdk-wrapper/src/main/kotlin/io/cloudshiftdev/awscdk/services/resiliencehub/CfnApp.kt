@@ -1327,8 +1327,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty):
-          PhysicalResourceIdProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PhysicalResourceIdProperty
+          PhysicalResourceIdProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PhysicalResourceIdProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PhysicalResourceIdProperty):
           software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty = (wrapped
@@ -1578,7 +1578,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty):
-          PermissionModelProperty = CdkObjectWrappers.wrap(cdkObject) as PermissionModelProperty
+          PermissionModelProperty = CdkObjectWrappers.wrap(cdkObject) as? PermissionModelProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PermissionModelProperty):
           software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty = (wrapped as
@@ -1856,7 +1857,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty):
-          ResourceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceMappingProperty
+          ResourceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceMappingProperty):
           software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty = (wrapped as
@@ -2025,7 +2027,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty):
-          EventSubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as EventSubscriptionProperty
+          EventSubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EventSubscriptionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EventSubscriptionProperty):
           software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty = (wrapped

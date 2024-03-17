@@ -202,7 +202,7 @@ public interface ResourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ResourceProps): ResourceProps =
-        CdkObjectWrappers.wrap(cdkObject) as ResourceProps
+        CdkObjectWrappers.wrap(cdkObject) as? ResourceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourceProps): software.amazon.awscdk.ResourceProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.ResourceProps

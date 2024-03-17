@@ -819,8 +819,8 @@ public open class CfnEmailIdentity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty):
-          FeedbackAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FeedbackAttributesProperty
+          FeedbackAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FeedbackAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FeedbackAttributesProperty):
           software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty = (wrapped
@@ -992,8 +992,8 @@ public open class CfnEmailIdentity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty):
-          MailFromAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          MailFromAttributesProperty
+          MailFromAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MailFromAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MailFromAttributesProperty):
           software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty = (wrapped
@@ -1213,8 +1213,8 @@ public open class CfnEmailIdentity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty):
-          DkimSigningAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          DkimSigningAttributesProperty
+          DkimSigningAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DkimSigningAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DkimSigningAttributesProperty):
           software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty =
@@ -1298,8 +1298,8 @@ public open class CfnEmailIdentity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty):
-          ConfigurationSetAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConfigurationSetAttributesProperty
+          ConfigurationSetAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConfigurationSetAttributesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConfigurationSetAttributesProperty):
           software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty =
@@ -1411,7 +1411,8 @@ public open class CfnEmailIdentity internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty):
-          DkimAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as DkimAttributesProperty
+          DkimAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as? DkimAttributesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DkimAttributesProperty):
           software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty = (wrapped as

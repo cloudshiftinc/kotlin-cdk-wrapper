@@ -345,8 +345,8 @@ public interface CfnStorageVirtualMachineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachineProps):
-        CfnStorageVirtualMachineProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnStorageVirtualMachineProps
+        CfnStorageVirtualMachineProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnStorageVirtualMachineProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStorageVirtualMachineProps):
         software.amazon.awscdk.services.fsx.CfnStorageVirtualMachineProps = (wrapped as

@@ -139,7 +139,8 @@ public interface StageSynthesisOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.StageSynthesisOptions):
-        StageSynthesisOptions = CdkObjectWrappers.wrap(cdkObject) as StageSynthesisOptions
+        StageSynthesisOptions = CdkObjectWrappers.wrap(cdkObject) as? StageSynthesisOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StageSynthesisOptions):
         software.amazon.awscdk.StageSynthesisOptions = (wrapped as CdkObject).cdkObject as

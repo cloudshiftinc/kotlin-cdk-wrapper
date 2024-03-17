@@ -120,7 +120,8 @@ public interface EcrDockerCredentialOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.EcrDockerCredentialOptions):
-        EcrDockerCredentialOptions = CdkObjectWrappers.wrap(cdkObject) as EcrDockerCredentialOptions
+        EcrDockerCredentialOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        EcrDockerCredentialOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EcrDockerCredentialOptions):
         software.amazon.awscdk.pipelines.EcrDockerCredentialOptions = (wrapped as

@@ -353,7 +353,8 @@ public interface CfnBackupVaultProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnBackupVaultProps):
-        CfnBackupVaultProps = CdkObjectWrappers.wrap(cdkObject) as CfnBackupVaultProps
+        CfnBackupVaultProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBackupVaultProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBackupVaultProps):
         software.amazon.awscdk.services.backup.CfnBackupVaultProps = (wrapped as

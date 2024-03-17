@@ -55,9 +55,14 @@ public abstract class CustomResourceProviderBase internal constructor(
    */
   public open fun serviceToken(): String = unwrap(this).getServiceToken()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.CustomResourceProviderBase,
+  ) : CustomResourceProviderBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.CustomResourceProviderBase):
-        CustomResourceProviderBase = CdkObjectWrappers.wrap(cdkObject) as CustomResourceProviderBase
+        CustomResourceProviderBase = CdkObjectWrappers.wrap(cdkObject) as?
+        CustomResourceProviderBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomResourceProviderBase):
         software.amazon.awscdk.CustomResourceProviderBase = (wrapped as CdkObject).cdkObject as

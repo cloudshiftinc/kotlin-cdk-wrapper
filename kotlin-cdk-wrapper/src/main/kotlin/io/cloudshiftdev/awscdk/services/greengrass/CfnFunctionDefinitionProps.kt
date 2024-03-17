@@ -340,7 +340,8 @@ public interface CfnFunctionDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionProps):
-        CfnFunctionDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnFunctionDefinitionProps
+        CfnFunctionDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnFunctionDefinitionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFunctionDefinitionProps):
         software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionProps = (wrapped as

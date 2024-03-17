@@ -106,7 +106,8 @@ public interface StopActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.StopActionConfig):
-        StopActionConfig = CdkObjectWrappers.wrap(cdkObject) as StopActionConfig
+        StopActionConfig = CdkObjectWrappers.wrap(cdkObject) as? StopActionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StopActionConfig):
         software.amazon.awscdk.services.ses.StopActionConfig = (wrapped as CdkObject).cdkObject as

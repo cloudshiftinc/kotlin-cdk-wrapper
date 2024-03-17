@@ -211,7 +211,8 @@ public interface JenkinsProviderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps):
-        JenkinsProviderProps = CdkObjectWrappers.wrap(cdkObject) as JenkinsProviderProps
+        JenkinsProviderProps = CdkObjectWrappers.wrap(cdkObject) as? JenkinsProviderProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: JenkinsProviderProps):
         software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps = (wrapped as

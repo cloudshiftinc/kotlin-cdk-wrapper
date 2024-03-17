@@ -145,7 +145,8 @@ public interface LambdaSubscriptionProps : SubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sns.subscriptions.LambdaSubscriptionProps):
-        LambdaSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as LambdaSubscriptionProps
+        LambdaSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as? LambdaSubscriptionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaSubscriptionProps):
         software.amazon.awscdk.services.sns.subscriptions.LambdaSubscriptionProps = (wrapped as

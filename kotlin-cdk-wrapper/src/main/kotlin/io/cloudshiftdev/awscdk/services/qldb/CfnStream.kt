@@ -669,8 +669,8 @@ public open class CfnStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty):
-          KinesisConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          KinesisConfigurationProperty
+          KinesisConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          KinesisConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: KinesisConfigurationProperty):
           software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty = (wrapped as

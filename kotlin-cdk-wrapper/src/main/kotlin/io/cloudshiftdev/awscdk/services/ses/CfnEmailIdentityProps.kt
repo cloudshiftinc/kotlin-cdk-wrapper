@@ -422,7 +422,8 @@ public interface CfnEmailIdentityProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnEmailIdentityProps):
-        CfnEmailIdentityProps = CdkObjectWrappers.wrap(cdkObject) as CfnEmailIdentityProps
+        CfnEmailIdentityProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEmailIdentityProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEmailIdentityProps):
         software.amazon.awscdk.services.ses.CfnEmailIdentityProps = (wrapped as CdkObject).cdkObject

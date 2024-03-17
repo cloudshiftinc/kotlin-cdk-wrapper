@@ -86,7 +86,8 @@ public interface EnvironmentOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.EnvironmentOptions):
-        EnvironmentOptions = CdkObjectWrappers.wrap(cdkObject) as EnvironmentOptions
+        EnvironmentOptions = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EnvironmentOptions):
         software.amazon.awscdk.services.lambda.EnvironmentOptions = (wrapped as CdkObject).cdkObject

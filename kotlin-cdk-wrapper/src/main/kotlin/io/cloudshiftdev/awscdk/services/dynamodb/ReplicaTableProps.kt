@@ -268,7 +268,8 @@ public interface ReplicaTableProps : TableOptionsV2 {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.ReplicaTableProps):
-        ReplicaTableProps = CdkObjectWrappers.wrap(cdkObject) as ReplicaTableProps
+        ReplicaTableProps = CdkObjectWrappers.wrap(cdkObject) as? ReplicaTableProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ReplicaTableProps):
         software.amazon.awscdk.services.dynamodb.ReplicaTableProps = (wrapped as

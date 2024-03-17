@@ -221,7 +221,8 @@ public interface CodeBuildProjectProps : TargetBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.CodeBuildProjectProps):
-        CodeBuildProjectProps = CdkObjectWrappers.wrap(cdkObject) as CodeBuildProjectProps
+        CodeBuildProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CodeBuildProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildProjectProps):
         software.amazon.awscdk.services.events.targets.CodeBuildProjectProps = (wrapped as

@@ -132,8 +132,8 @@ public interface CrossAccountDestinationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.CrossAccountDestinationProps):
-        CrossAccountDestinationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CrossAccountDestinationProps
+        CrossAccountDestinationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CrossAccountDestinationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CrossAccountDestinationProps):
         software.amazon.awscdk.services.logs.CrossAccountDestinationProps = (wrapped as

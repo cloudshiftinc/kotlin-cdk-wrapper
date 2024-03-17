@@ -158,7 +158,7 @@ public interface PosixUser {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.PosixUser): PosixUser =
-        CdkObjectWrappers.wrap(cdkObject) as PosixUser
+        CdkObjectWrappers.wrap(cdkObject) as? PosixUser ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PosixUser): software.amazon.awscdk.services.efs.PosixUser =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.efs.PosixUser

@@ -57,6 +57,10 @@ public abstract class EksVolume internal constructor(
    */
   public open fun readonly(): Boolean? = unwrap(this).getReadonly()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.batch.EksVolume,
+  ) : EksVolume(cdkObject)
+
   public companion object {
     public fun emptyDir(options: EmptyDirVolumeOptions): EmptyDirVolume =
         software.amazon.awscdk.services.batch.EksVolume.emptyDir(options.let(EmptyDirVolumeOptions::unwrap)).let(EmptyDirVolume::wrap)
@@ -83,7 +87,7 @@ public abstract class EksVolume internal constructor(
         secret(SecretPathVolumeOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EksVolume): EksVolume =
-        CdkObjectWrappers.wrap(cdkObject) as EksVolume
+        CdkObjectWrappers.wrap(cdkObject) as? EksVolume ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EksVolume): software.amazon.awscdk.services.batch.EksVolume =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.batch.EksVolume

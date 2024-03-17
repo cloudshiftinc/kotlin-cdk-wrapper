@@ -71,7 +71,8 @@ public interface AppsyncFunctionAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes):
-        AppsyncFunctionAttributes = CdkObjectWrappers.wrap(cdkObject) as AppsyncFunctionAttributes
+        AppsyncFunctionAttributes = CdkObjectWrappers.wrap(cdkObject) as? AppsyncFunctionAttributes
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AppsyncFunctionAttributes):
         software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes = (wrapped as

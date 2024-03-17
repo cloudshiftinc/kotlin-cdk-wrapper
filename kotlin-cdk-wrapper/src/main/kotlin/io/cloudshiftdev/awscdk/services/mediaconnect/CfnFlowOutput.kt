@@ -903,7 +903,8 @@ public open class CfnFlowOutput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty):
-          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionProperty
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty = (wrapped
@@ -986,8 +987,8 @@ public open class CfnFlowOutput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.VpcInterfaceAttachmentProperty):
-          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VpcInterfaceAttachmentProperty
+          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.VpcInterfaceAttachmentProperty

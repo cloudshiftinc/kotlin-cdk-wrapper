@@ -1050,8 +1050,8 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateServiceProps):
-        NetworkLoadBalancedFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkLoadBalancedFargateServiceProps
+        NetworkLoadBalancedFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancedFargateServiceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancedFargateServiceProps):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateServiceProps =

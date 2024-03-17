@@ -93,7 +93,7 @@ public interface VersionWeight {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.VersionWeight):
-        VersionWeight = CdkObjectWrappers.wrap(cdkObject) as VersionWeight
+        VersionWeight = CdkObjectWrappers.wrap(cdkObject) as? VersionWeight ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VersionWeight):
         software.amazon.awscdk.services.lambda.VersionWeight = (wrapped as CdkObject).cdkObject as

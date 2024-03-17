@@ -201,8 +201,8 @@ public interface CfnLoggingConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps):
-        CfnLoggingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLoggingConfigurationProps
+        CfnLoggingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLoggingConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLoggingConfigurationProps):
         software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps = (wrapped as

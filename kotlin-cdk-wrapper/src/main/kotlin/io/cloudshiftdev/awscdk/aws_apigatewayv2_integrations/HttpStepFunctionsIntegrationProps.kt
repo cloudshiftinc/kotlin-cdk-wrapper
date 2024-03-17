@@ -185,8 +185,8 @@ public interface HttpStepFunctionsIntegrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegrationProps):
-        HttpStepFunctionsIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as
-        HttpStepFunctionsIntegrationProps
+        HttpStepFunctionsIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpStepFunctionsIntegrationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpStepFunctionsIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegrationProps =

@@ -96,7 +96,7 @@ public interface Dimension {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.Dimension): Dimension =
-        CdkObjectWrappers.wrap(cdkObject) as Dimension
+        CdkObjectWrappers.wrap(cdkObject) as? Dimension ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Dimension): software.amazon.awscdk.services.cloudwatch.Dimension =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.Dimension

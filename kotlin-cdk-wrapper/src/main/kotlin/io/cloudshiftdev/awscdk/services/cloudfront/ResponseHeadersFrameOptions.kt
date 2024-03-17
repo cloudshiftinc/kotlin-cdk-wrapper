@@ -140,8 +140,8 @@ public interface ResponseHeadersFrameOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions):
-        ResponseHeadersFrameOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseHeadersFrameOptions
+        ResponseHeadersFrameOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersFrameOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersFrameOptions):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions = (wrapped as

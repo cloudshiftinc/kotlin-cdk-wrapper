@@ -142,7 +142,8 @@ public interface LambdaFunctionAssociation {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation):
-        LambdaFunctionAssociation = CdkObjectWrappers.wrap(cdkObject) as LambdaFunctionAssociation
+        LambdaFunctionAssociation = CdkObjectWrappers.wrap(cdkObject) as? LambdaFunctionAssociation
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LambdaFunctionAssociation):
         software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation = (wrapped as

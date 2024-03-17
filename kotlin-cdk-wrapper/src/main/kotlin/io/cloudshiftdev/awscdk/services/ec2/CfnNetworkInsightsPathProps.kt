@@ -452,8 +452,8 @@ public interface CfnNetworkInsightsPathProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPathProps):
-        CfnNetworkInsightsPathProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnNetworkInsightsPathProps
+        CfnNetworkInsightsPathProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnNetworkInsightsPathProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnNetworkInsightsPathProps):
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsPathProps = (wrapped as

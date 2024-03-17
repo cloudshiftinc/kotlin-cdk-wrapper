@@ -110,7 +110,8 @@ public interface InferenceAccelerator {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.InferenceAccelerator):
-        InferenceAccelerator = CdkObjectWrappers.wrap(cdkObject) as InferenceAccelerator
+        InferenceAccelerator = CdkObjectWrappers.wrap(cdkObject) as? InferenceAccelerator ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InferenceAccelerator):
         software.amazon.awscdk.services.ecs.InferenceAccelerator = (wrapped as CdkObject).cdkObject

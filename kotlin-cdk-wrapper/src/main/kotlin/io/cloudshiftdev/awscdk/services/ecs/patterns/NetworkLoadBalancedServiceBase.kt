@@ -49,11 +49,16 @@ public abstract class NetworkLoadBalancedServiceBase internal constructor(
   public open fun targetGroup(): NetworkTargetGroup =
       unwrap(this).getTargetGroup().let(NetworkTargetGroup::wrap)
 
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase,
+  ) : NetworkLoadBalancedServiceBase(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase):
-        NetworkLoadBalancedServiceBase = CdkObjectWrappers.wrap(cdkObject) as
-        NetworkLoadBalancedServiceBase
+        NetworkLoadBalancedServiceBase = CdkObjectWrappers.wrap(cdkObject) as?
+        NetworkLoadBalancedServiceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NetworkLoadBalancedServiceBase):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase = (wrapped as

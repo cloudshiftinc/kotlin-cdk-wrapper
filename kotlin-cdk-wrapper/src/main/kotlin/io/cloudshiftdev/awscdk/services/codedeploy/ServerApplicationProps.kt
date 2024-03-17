@@ -72,7 +72,8 @@ public interface ServerApplicationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.ServerApplicationProps):
-        ServerApplicationProps = CdkObjectWrappers.wrap(cdkObject) as ServerApplicationProps
+        ServerApplicationProps = CdkObjectWrappers.wrap(cdkObject) as? ServerApplicationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerApplicationProps):
         software.amazon.awscdk.services.codedeploy.ServerApplicationProps = (wrapped as

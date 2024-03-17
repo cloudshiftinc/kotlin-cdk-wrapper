@@ -118,7 +118,8 @@ public interface ResourcePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.ResourcePolicyProps):
-        ResourcePolicyProps = CdkObjectWrappers.wrap(cdkObject) as ResourcePolicyProps
+        ResourcePolicyProps = CdkObjectWrappers.wrap(cdkObject) as? ResourcePolicyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResourcePolicyProps):
         software.amazon.awscdk.services.logs.ResourcePolicyProps = (wrapped as CdkObject).cdkObject

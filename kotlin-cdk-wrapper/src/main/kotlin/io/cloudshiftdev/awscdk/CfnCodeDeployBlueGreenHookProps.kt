@@ -320,8 +320,8 @@ public interface CfnCodeDeployBlueGreenHookProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenHookProps):
-        CfnCodeDeployBlueGreenHookProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCodeDeployBlueGreenHookProps
+        CfnCodeDeployBlueGreenHookProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCodeDeployBlueGreenHookProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeDeployBlueGreenHookProps):
         software.amazon.awscdk.CfnCodeDeployBlueGreenHookProps = (wrapped as CdkObject).cdkObject as

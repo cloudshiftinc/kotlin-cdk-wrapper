@@ -495,7 +495,8 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.RegionalParameterProperty):
-          RegionalParameterProperty = CdkObjectWrappers.wrap(cdkObject) as RegionalParameterProperty
+          RegionalParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RegionalParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RegionalParameterProperty):
           software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.RegionalParameterProperty

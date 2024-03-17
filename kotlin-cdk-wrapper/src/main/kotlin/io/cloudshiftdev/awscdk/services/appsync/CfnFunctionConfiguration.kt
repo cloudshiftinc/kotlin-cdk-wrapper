@@ -948,7 +948,8 @@ public open class CfnFunctionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty):
-          SyncConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SyncConfigProperty
+          SyncConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SyncConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SyncConfigProperty):
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty =
@@ -1034,8 +1035,8 @@ public open class CfnFunctionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty):
-          LambdaConflictHandlerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          LambdaConflictHandlerConfigProperty
+          LambdaConflictHandlerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LambdaConflictHandlerConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LambdaConflictHandlerConfigProperty):
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
@@ -1159,7 +1160,8 @@ public open class CfnFunctionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty):
-          AppSyncRuntimeProperty = CdkObjectWrappers.wrap(cdkObject) as AppSyncRuntimeProperty
+          AppSyncRuntimeProperty = CdkObjectWrappers.wrap(cdkObject) as? AppSyncRuntimeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AppSyncRuntimeProperty):
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty =

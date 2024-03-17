@@ -353,7 +353,8 @@ public interface StackDeploymentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.StackDeploymentProps):
-        StackDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as StackDeploymentProps
+        StackDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as? StackDeploymentProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackDeploymentProps):
         software.amazon.awscdk.pipelines.StackDeploymentProps = (wrapped as CdkObject).cdkObject as

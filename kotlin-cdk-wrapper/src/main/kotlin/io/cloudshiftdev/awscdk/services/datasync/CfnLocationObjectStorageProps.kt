@@ -447,8 +447,8 @@ public interface CfnLocationObjectStorageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationObjectStorageProps):
-        CfnLocationObjectStorageProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnLocationObjectStorageProps
+        CfnLocationObjectStorageProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLocationObjectStorageProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationObjectStorageProps):
         software.amazon.awscdk.services.datasync.CfnLocationObjectStorageProps = (wrapped as

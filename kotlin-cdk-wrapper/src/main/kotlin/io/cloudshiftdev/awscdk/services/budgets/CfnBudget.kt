@@ -1099,7 +1099,8 @@ public open class CfnBudget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.BudgetDataProperty):
-          BudgetDataProperty = CdkObjectWrappers.wrap(cdkObject) as BudgetDataProperty
+          BudgetDataProperty = CdkObjectWrappers.wrap(cdkObject) as? BudgetDataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BudgetDataProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.BudgetDataProperty = (wrapped as
@@ -1249,7 +1250,8 @@ public open class CfnBudget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty):
-          AutoAdjustDataProperty = CdkObjectWrappers.wrap(cdkObject) as AutoAdjustDataProperty
+          AutoAdjustDataProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoAdjustDataProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoAdjustDataProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.AutoAdjustDataProperty = (wrapped as
@@ -1438,7 +1440,8 @@ public open class CfnBudget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty):
-          TimePeriodProperty = CdkObjectWrappers.wrap(cdkObject) as TimePeriodProperty
+          TimePeriodProperty = CdkObjectWrappers.wrap(cdkObject) as? TimePeriodProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TimePeriodProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.TimePeriodProperty = (wrapped as
@@ -1561,7 +1564,7 @@ public open class CfnBudget internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty):
-          SpendProperty = CdkObjectWrappers.wrap(cdkObject) as SpendProperty
+          SpendProperty = CdkObjectWrappers.wrap(cdkObject) as? SpendProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SpendProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.SpendProperty = (wrapped as
@@ -1672,7 +1675,8 @@ public open class CfnBudget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty):
-          HistoricalOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as HistoricalOptionsProperty
+          HistoricalOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HistoricalOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HistoricalOptionsProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.HistoricalOptionsProperty = (wrapped as
@@ -1795,7 +1799,8 @@ public open class CfnBudget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty):
-          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as SubscriberProperty
+          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as? SubscriberProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SubscriberProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.SubscriberProperty = (wrapped as
@@ -1967,8 +1972,8 @@ public open class CfnBudget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty):
-          NotificationWithSubscribersProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NotificationWithSubscribersProperty
+          NotificationWithSubscribersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NotificationWithSubscribersProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationWithSubscribersProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty =
@@ -2181,7 +2186,8 @@ public open class CfnBudget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty):
-          NotificationProperty = CdkObjectWrappers.wrap(cdkObject) as NotificationProperty
+          NotificationProperty = CdkObjectWrappers.wrap(cdkObject) as? NotificationProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NotificationProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.NotificationProperty = (wrapped as
@@ -2761,7 +2767,8 @@ public open class CfnBudget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty):
-          CostTypesProperty = CdkObjectWrappers.wrap(cdkObject) as CostTypesProperty
+          CostTypesProperty = CdkObjectWrappers.wrap(cdkObject) as? CostTypesProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CostTypesProperty):
           software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty = (wrapped as

@@ -103,7 +103,8 @@ public interface StringAttributeConstraints {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.StringAttributeConstraints):
-        StringAttributeConstraints = CdkObjectWrappers.wrap(cdkObject) as StringAttributeConstraints
+        StringAttributeConstraints = CdkObjectWrappers.wrap(cdkObject) as?
+        StringAttributeConstraints ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StringAttributeConstraints):
         software.amazon.awscdk.services.cognito.StringAttributeConstraints = (wrapped as

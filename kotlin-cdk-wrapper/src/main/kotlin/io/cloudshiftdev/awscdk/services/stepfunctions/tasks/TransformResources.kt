@@ -145,7 +145,8 @@ public interface TransformResources {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformResources):
-        TransformResources = CdkObjectWrappers.wrap(cdkObject) as TransformResources
+        TransformResources = CdkObjectWrappers.wrap(cdkObject) as? TransformResources ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TransformResources):
         software.amazon.awscdk.services.stepfunctions.tasks.TransformResources = (wrapped as

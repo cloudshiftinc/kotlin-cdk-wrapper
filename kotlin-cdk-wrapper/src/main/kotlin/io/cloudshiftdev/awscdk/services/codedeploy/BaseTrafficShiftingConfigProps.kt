@@ -99,8 +99,8 @@ public interface BaseTrafficShiftingConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps):
-        BaseTrafficShiftingConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        BaseTrafficShiftingConfigProps
+        BaseTrafficShiftingConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        BaseTrafficShiftingConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseTrafficShiftingConfigProps):
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps = (wrapped as

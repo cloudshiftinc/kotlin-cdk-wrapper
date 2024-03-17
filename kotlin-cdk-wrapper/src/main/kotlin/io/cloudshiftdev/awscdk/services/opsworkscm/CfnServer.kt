@@ -1617,7 +1617,8 @@ public open class CfnServer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServer.EngineAttributeProperty):
-          EngineAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as EngineAttributeProperty
+          EngineAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as? EngineAttributeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EngineAttributeProperty):
           software.amazon.awscdk.services.opsworkscm.CfnServer.EngineAttributeProperty = (wrapped as

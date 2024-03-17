@@ -205,7 +205,8 @@ public interface FileAssetMetadataEntry {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.FileAssetMetadataEntry):
-        FileAssetMetadataEntry = CdkObjectWrappers.wrap(cdkObject) as FileAssetMetadataEntry
+        FileAssetMetadataEntry = CdkObjectWrappers.wrap(cdkObject) as? FileAssetMetadataEntry ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FileAssetMetadataEntry):
         software.amazon.awscdk.cloudassembly.schema.FileAssetMetadataEntry = (wrapped as

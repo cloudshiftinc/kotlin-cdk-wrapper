@@ -93,7 +93,8 @@ public interface AddHeaderActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.AddHeaderActionConfig):
-        AddHeaderActionConfig = CdkObjectWrappers.wrap(cdkObject) as AddHeaderActionConfig
+        AddHeaderActionConfig = CdkObjectWrappers.wrap(cdkObject) as? AddHeaderActionConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddHeaderActionConfig):
         software.amazon.awscdk.services.ses.AddHeaderActionConfig = (wrapped as CdkObject).cdkObject

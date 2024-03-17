@@ -138,7 +138,8 @@ public interface S3EventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3EventSourceProps):
-        S3EventSourceProps = CdkObjectWrappers.wrap(cdkObject) as S3EventSourceProps
+        S3EventSourceProps = CdkObjectWrappers.wrap(cdkObject) as? S3EventSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3EventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.S3EventSourceProps = (wrapped as

@@ -303,7 +303,8 @@ public interface CfnDHCPOptionsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptionsProps):
-        CfnDHCPOptionsProps = CdkObjectWrappers.wrap(cdkObject) as CfnDHCPOptionsProps
+        CfnDHCPOptionsProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDHCPOptionsProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDHCPOptionsProps):
         software.amazon.awscdk.services.ec2.CfnDHCPOptionsProps = (wrapped as CdkObject).cdkObject

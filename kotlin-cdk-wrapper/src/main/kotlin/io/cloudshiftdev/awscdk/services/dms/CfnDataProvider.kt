@@ -562,7 +562,8 @@ public open class CfnDataProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty):
-          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as SettingsProperty
+          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SettingsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SettingsProperty):
           software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty = (wrapped as
@@ -787,8 +788,8 @@ public open class CfnDataProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty):
-          PostgreSqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PostgreSqlSettingsProperty
+          PostgreSqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PostgreSqlSettingsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PostgreSqlSettingsProperty):
           software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty = (wrapped

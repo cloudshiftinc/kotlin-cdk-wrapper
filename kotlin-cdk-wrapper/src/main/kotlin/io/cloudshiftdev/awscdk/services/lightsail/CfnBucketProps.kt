@@ -422,7 +422,7 @@ public interface CfnBucketProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnBucketProps):
-        CfnBucketProps = CdkObjectWrappers.wrap(cdkObject) as CfnBucketProps
+        CfnBucketProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBucketProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBucketProps):
         software.amazon.awscdk.services.lightsail.CfnBucketProps = (wrapped as CdkObject).cdkObject

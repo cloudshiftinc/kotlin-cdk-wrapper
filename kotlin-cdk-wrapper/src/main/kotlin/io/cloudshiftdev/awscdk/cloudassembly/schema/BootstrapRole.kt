@@ -157,7 +157,7 @@ public interface BootstrapRole {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.BootstrapRole):
-        BootstrapRole = CdkObjectWrappers.wrap(cdkObject) as BootstrapRole
+        BootstrapRole = CdkObjectWrappers.wrap(cdkObject) as? BootstrapRole ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BootstrapRole):
         software.amazon.awscdk.cloudassembly.schema.BootstrapRole = (wrapped as CdkObject).cdkObject

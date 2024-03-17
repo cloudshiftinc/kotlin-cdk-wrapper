@@ -140,7 +140,8 @@ public interface FromRoleNameOptions : FromRoleArnOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.FromRoleNameOptions):
-        FromRoleNameOptions = CdkObjectWrappers.wrap(cdkObject) as FromRoleNameOptions
+        FromRoleNameOptions = CdkObjectWrappers.wrap(cdkObject) as? FromRoleNameOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FromRoleNameOptions):
         software.amazon.awscdk.services.iam.FromRoleNameOptions = (wrapped as CdkObject).cdkObject

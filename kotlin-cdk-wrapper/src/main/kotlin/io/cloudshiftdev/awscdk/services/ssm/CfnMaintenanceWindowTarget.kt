@@ -506,7 +506,8 @@ public open class CfnMaintenanceWindowTarget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget.TargetsProperty):
-          TargetsProperty = CdkObjectWrappers.wrap(cdkObject) as TargetsProperty
+          TargetsProperty = CdkObjectWrappers.wrap(cdkObject) as? TargetsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetsProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget.TargetsProperty = (wrapped

@@ -352,7 +352,8 @@ public interface CfnSubscriptionTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTargetProps):
-        CfnSubscriptionTargetProps = CdkObjectWrappers.wrap(cdkObject) as CfnSubscriptionTargetProps
+        CfnSubscriptionTargetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSubscriptionTargetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubscriptionTargetProps):
         software.amazon.awscdk.services.datazone.CfnSubscriptionTargetProps = (wrapped as

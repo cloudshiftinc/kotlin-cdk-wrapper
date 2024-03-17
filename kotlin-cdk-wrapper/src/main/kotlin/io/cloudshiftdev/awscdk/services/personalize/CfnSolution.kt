@@ -589,7 +589,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty):
-          AutoMLConfigProperty = CdkObjectWrappers.wrap(cdkObject) as AutoMLConfigProperty
+          AutoMLConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? AutoMLConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoMLConfigProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty = (wrapped as
@@ -832,8 +833,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.AlgorithmHyperParameterRangesProperty):
-          AlgorithmHyperParameterRangesProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AlgorithmHyperParameterRangesProperty
+          AlgorithmHyperParameterRangesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AlgorithmHyperParameterRangesProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AlgorithmHyperParameterRangesProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.AlgorithmHyperParameterRangesProperty
@@ -971,8 +972,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty):
-          IntegerHyperParameterRangeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          IntegerHyperParameterRangeProperty
+          IntegerHyperParameterRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IntegerHyperParameterRangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IntegerHyperParameterRangeProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.IntegerHyperParameterRangeProperty
@@ -1093,8 +1094,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.CategoricalHyperParameterRangeProperty):
-          CategoricalHyperParameterRangeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CategoricalHyperParameterRangeProperty
+          CategoricalHyperParameterRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CategoricalHyperParameterRangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CategoricalHyperParameterRangeProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.CategoricalHyperParameterRangeProperty
@@ -1325,7 +1326,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty):
-          SolutionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SolutionConfigProperty
+          SolutionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SolutionConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SolutionConfigProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.SolutionConfigProperty = (wrapped
@@ -1463,8 +1465,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.ContinuousHyperParameterRangeProperty):
-          ContinuousHyperParameterRangeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ContinuousHyperParameterRangeProperty
+          ContinuousHyperParameterRangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ContinuousHyperParameterRangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ContinuousHyperParameterRangeProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.ContinuousHyperParameterRangeProperty
@@ -1729,7 +1731,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoConfigProperty):
-          HpoConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HpoConfigProperty
+          HpoConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? HpoConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HpoConfigProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.HpoConfigProperty = (wrapped as
@@ -1854,7 +1857,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty):
-          HpoResourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HpoResourceConfigProperty
+          HpoResourceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HpoResourceConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HpoResourceConfigProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.HpoResourceConfigProperty =
@@ -1999,7 +2003,8 @@ public open class CfnSolution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.personalize.CfnSolution.HpoObjectiveProperty):
-          HpoObjectiveProperty = CdkObjectWrappers.wrap(cdkObject) as HpoObjectiveProperty
+          HpoObjectiveProperty = CdkObjectWrappers.wrap(cdkObject) as? HpoObjectiveProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HpoObjectiveProperty):
           software.amazon.awscdk.services.personalize.CfnSolution.HpoObjectiveProperty = (wrapped as

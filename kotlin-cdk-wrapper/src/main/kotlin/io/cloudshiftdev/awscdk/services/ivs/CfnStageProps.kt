@@ -137,7 +137,7 @@ public interface CfnStageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnStageProps): CfnStageProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnStageProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnStageProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStageProps): software.amazon.awscdk.services.ivs.CfnStageProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ivs.CfnStageProps

@@ -75,7 +75,7 @@ public interface AwsAuthProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.AwsAuthProps): AwsAuthProps =
-        CdkObjectWrappers.wrap(cdkObject) as AwsAuthProps
+        CdkObjectWrappers.wrap(cdkObject) as? AwsAuthProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsAuthProps): software.amazon.awscdk.services.eks.AwsAuthProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.AwsAuthProps

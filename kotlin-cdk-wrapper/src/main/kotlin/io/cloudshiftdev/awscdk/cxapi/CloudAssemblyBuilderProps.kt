@@ -103,7 +103,8 @@ public interface CloudAssemblyBuilderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps):
-        CloudAssemblyBuilderProps = CdkObjectWrappers.wrap(cdkObject) as CloudAssemblyBuilderProps
+        CloudAssemblyBuilderProps = CdkObjectWrappers.wrap(cdkObject) as? CloudAssemblyBuilderProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudAssemblyBuilderProps):
         software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps = (wrapped as CdkObject).cdkObject as

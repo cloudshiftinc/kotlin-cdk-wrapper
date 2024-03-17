@@ -339,7 +339,8 @@ public interface CommonClusterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CommonClusterOptions):
-        CommonClusterOptions = CdkObjectWrappers.wrap(cdkObject) as CommonClusterOptions
+        CommonClusterOptions = CdkObjectWrappers.wrap(cdkObject) as? CommonClusterOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CommonClusterOptions):
         software.amazon.awscdk.services.eks.CommonClusterOptions = (wrapped as CdkObject).cdkObject

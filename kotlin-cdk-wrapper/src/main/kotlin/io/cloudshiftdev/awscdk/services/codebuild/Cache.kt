@@ -40,6 +40,10 @@ import kotlin.jvm.JvmName
 public abstract class Cache internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.Cache,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.codebuild.Cache,
+  ) : Cache(cdkObject)
+
   public companion object {
     public fun bucket(bucket: IBucket): Cache =
         software.amazon.awscdk.services.codebuild.Cache.bucket(bucket.let(IBucket::unwrap)).let(Cache::wrap)
@@ -60,7 +64,7 @@ public abstract class Cache internal constructor(
         software.amazon.awscdk.services.codebuild.Cache.none().let(Cache::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.Cache): Cache =
-        CdkObjectWrappers.wrap(cdkObject) as Cache
+        CdkObjectWrappers.wrap(cdkObject) as? Cache ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Cache): software.amazon.awscdk.services.codebuild.Cache = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.Cache

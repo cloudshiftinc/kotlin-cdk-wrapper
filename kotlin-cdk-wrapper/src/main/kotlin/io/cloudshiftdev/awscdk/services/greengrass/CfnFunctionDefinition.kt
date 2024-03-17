@@ -551,7 +551,7 @@ public open class CfnFunctionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.RunAsProperty):
-          RunAsProperty = CdkObjectWrappers.wrap(cdkObject) as RunAsProperty
+          RunAsProperty = CdkObjectWrappers.wrap(cdkObject) as? RunAsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RunAsProperty):
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.RunAsProperty = (wrapped
@@ -857,7 +857,8 @@ public open class CfnFunctionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.EnvironmentProperty):
-          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as EnvironmentProperty
+          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as? EnvironmentProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentProperty):
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.EnvironmentProperty =
@@ -1082,8 +1083,8 @@ public open class CfnFunctionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionDefinitionVersionProperty):
-          FunctionDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FunctionDefinitionVersionProperty
+          FunctionDefinitionVersionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FunctionDefinitionVersionProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FunctionDefinitionVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionDefinitionVersionProperty
@@ -1211,7 +1212,8 @@ public open class CfnFunctionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.DefaultConfigProperty):
-          DefaultConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DefaultConfigProperty
+          DefaultConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? DefaultConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DefaultConfigProperty):
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.DefaultConfigProperty =
@@ -1347,8 +1349,8 @@ public open class CfnFunctionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.ResourceAccessPolicyProperty):
-          ResourceAccessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ResourceAccessPolicyProperty
+          ResourceAccessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceAccessPolicyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceAccessPolicyProperty):
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.ResourceAccessPolicyProperty
@@ -1697,8 +1699,8 @@ public open class CfnFunctionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionConfigurationProperty):
-          FunctionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          FunctionConfigurationProperty
+          FunctionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FunctionConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FunctionConfigurationProperty):
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionConfigurationProperty
@@ -1920,7 +1922,8 @@ public open class CfnFunctionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionProperty):
-          FunctionProperty = CdkObjectWrappers.wrap(cdkObject) as FunctionProperty
+          FunctionProperty = CdkObjectWrappers.wrap(cdkObject) as? FunctionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FunctionProperty):
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionProperty =
@@ -2301,7 +2304,8 @@ public open class CfnFunctionDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.ExecutionProperty):
-          ExecutionProperty = CdkObjectWrappers.wrap(cdkObject) as ExecutionProperty
+          ExecutionProperty = CdkObjectWrappers.wrap(cdkObject) as? ExecutionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExecutionProperty):
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.ExecutionProperty =

@@ -373,7 +373,8 @@ public interface StateMachineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineProps):
-        StateMachineProps = CdkObjectWrappers.wrap(cdkObject) as StateMachineProps
+        StateMachineProps = CdkObjectWrappers.wrap(cdkObject) as? StateMachineProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StateMachineProps):
         software.amazon.awscdk.services.stepfunctions.StateMachineProps = (wrapped as

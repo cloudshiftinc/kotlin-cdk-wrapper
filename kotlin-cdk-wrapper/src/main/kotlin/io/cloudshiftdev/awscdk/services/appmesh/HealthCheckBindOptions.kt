@@ -74,7 +74,8 @@ public interface HealthCheckBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HealthCheckBindOptions):
-        HealthCheckBindOptions = CdkObjectWrappers.wrap(cdkObject) as HealthCheckBindOptions
+        HealthCheckBindOptions = CdkObjectWrappers.wrap(cdkObject) as? HealthCheckBindOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HealthCheckBindOptions):
         software.amazon.awscdk.services.appmesh.HealthCheckBindOptions = (wrapped as

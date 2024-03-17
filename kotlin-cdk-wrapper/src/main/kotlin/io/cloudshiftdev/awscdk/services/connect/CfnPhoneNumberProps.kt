@@ -288,7 +288,8 @@ public interface CfnPhoneNumberProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnPhoneNumberProps):
-        CfnPhoneNumberProps = CdkObjectWrappers.wrap(cdkObject) as CfnPhoneNumberProps
+        CfnPhoneNumberProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPhoneNumberProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPhoneNumberProps):
         software.amazon.awscdk.services.connect.CfnPhoneNumberProps = (wrapped as

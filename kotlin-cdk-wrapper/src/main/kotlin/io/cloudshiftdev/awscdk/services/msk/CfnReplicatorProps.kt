@@ -341,7 +341,8 @@ public interface CfnReplicatorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicatorProps):
-        CfnReplicatorProps = CdkObjectWrappers.wrap(cdkObject) as CfnReplicatorProps
+        CfnReplicatorProps = CdkObjectWrappers.wrap(cdkObject) as? CfnReplicatorProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnReplicatorProps):
         software.amazon.awscdk.services.msk.CfnReplicatorProps = (wrapped as CdkObject).cdkObject as

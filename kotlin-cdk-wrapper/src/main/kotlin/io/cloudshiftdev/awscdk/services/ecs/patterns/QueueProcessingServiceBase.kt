@@ -69,10 +69,15 @@ public abstract class QueueProcessingServiceBase internal constructor(
    */
   public open fun sqsQueue(): IQueue = unwrap(this).getSqsQueue().let(IQueue::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase,
+  ) : QueueProcessingServiceBase(cdkObject)
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase):
-        QueueProcessingServiceBase = CdkObjectWrappers.wrap(cdkObject) as QueueProcessingServiceBase
+        QueueProcessingServiceBase = CdkObjectWrappers.wrap(cdkObject) as?
+        QueueProcessingServiceBase ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueueProcessingServiceBase):
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBase = (wrapped as

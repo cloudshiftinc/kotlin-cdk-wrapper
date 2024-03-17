@@ -316,7 +316,8 @@ public interface CfnGroupVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupVersionProps):
-        CfnGroupVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnGroupVersionProps
+        CfnGroupVersionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGroupVersionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGroupVersionProps):
         software.amazon.awscdk.services.greengrass.CfnGroupVersionProps = (wrapped as

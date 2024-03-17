@@ -846,7 +846,8 @@ public open class CfnResolverEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty):
-          IpAddressRequestProperty = CdkObjectWrappers.wrap(cdkObject) as IpAddressRequestProperty
+          IpAddressRequestProperty = CdkObjectWrappers.wrap(cdkObject) as? IpAddressRequestProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IpAddressRequestProperty):
           software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty

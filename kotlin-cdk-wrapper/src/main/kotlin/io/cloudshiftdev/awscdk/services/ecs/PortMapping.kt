@@ -371,7 +371,7 @@ public interface PortMapping {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.PortMapping): PortMapping =
-        CdkObjectWrappers.wrap(cdkObject) as PortMapping
+        CdkObjectWrappers.wrap(cdkObject) as? PortMapping ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PortMapping): software.amazon.awscdk.services.ecs.PortMapping =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.PortMapping

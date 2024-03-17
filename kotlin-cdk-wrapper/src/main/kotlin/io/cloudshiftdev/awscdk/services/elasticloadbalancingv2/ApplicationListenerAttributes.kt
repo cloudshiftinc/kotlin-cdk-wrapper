@@ -128,8 +128,8 @@ public interface ApplicationListenerAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerAttributes):
-        ApplicationListenerAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationListenerAttributes
+        ApplicationListenerAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationListenerAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationListenerAttributes):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerAttributes =

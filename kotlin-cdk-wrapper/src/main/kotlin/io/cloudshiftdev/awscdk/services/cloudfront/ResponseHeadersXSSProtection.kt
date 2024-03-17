@@ -218,8 +218,8 @@ public interface ResponseHeadersXSSProtection {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersXSSProtection):
-        ResponseHeadersXSSProtection = CdkObjectWrappers.wrap(cdkObject) as
-        ResponseHeadersXSSProtection
+        ResponseHeadersXSSProtection = CdkObjectWrappers.wrap(cdkObject) as?
+        ResponseHeadersXSSProtection ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ResponseHeadersXSSProtection):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersXSSProtection = (wrapped as

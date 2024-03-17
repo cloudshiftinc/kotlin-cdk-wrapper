@@ -370,7 +370,8 @@ public interface CfnDecoderManifestProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifestProps):
-        CfnDecoderManifestProps = CdkObjectWrappers.wrap(cdkObject) as CfnDecoderManifestProps
+        CfnDecoderManifestProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDecoderManifestProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDecoderManifestProps):
         software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifestProps = (wrapped as

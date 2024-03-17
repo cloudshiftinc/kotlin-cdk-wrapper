@@ -437,8 +437,8 @@ public interface ProvisionedClusterInstanceProps : ClusterInstanceOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.ProvisionedClusterInstanceProps):
-        ProvisionedClusterInstanceProps = CdkObjectWrappers.wrap(cdkObject) as
-        ProvisionedClusterInstanceProps
+        ProvisionedClusterInstanceProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ProvisionedClusterInstanceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProvisionedClusterInstanceProps):
         software.amazon.awscdk.services.rds.ProvisionedClusterInstanceProps = (wrapped as

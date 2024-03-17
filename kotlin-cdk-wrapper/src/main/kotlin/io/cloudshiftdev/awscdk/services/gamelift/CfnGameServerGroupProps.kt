@@ -883,7 +883,8 @@ public interface CfnGameServerGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroupProps):
-        CfnGameServerGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnGameServerGroupProps
+        CfnGameServerGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGameServerGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGameServerGroupProps):
         software.amazon.awscdk.services.gamelift.CfnGameServerGroupProps = (wrapped as

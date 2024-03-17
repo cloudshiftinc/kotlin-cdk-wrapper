@@ -329,7 +329,8 @@ public interface CfnDirectoryConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfigProps):
-        CfnDirectoryConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnDirectoryConfigProps
+        CfnDirectoryConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDirectoryConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDirectoryConfigProps):
         software.amazon.awscdk.services.appstream.CfnDirectoryConfigProps = (wrapped as

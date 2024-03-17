@@ -716,7 +716,8 @@ public interface GraphWidgetProps : MetricWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.GraphWidgetProps):
-        GraphWidgetProps = CdkObjectWrappers.wrap(cdkObject) as GraphWidgetProps
+        GraphWidgetProps = CdkObjectWrappers.wrap(cdkObject) as? GraphWidgetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GraphWidgetProps):
         software.amazon.awscdk.services.cloudwatch.GraphWidgetProps = (wrapped as

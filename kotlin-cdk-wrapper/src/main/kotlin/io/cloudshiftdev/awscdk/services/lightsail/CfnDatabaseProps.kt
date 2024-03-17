@@ -952,7 +952,8 @@ public interface CfnDatabaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDatabaseProps):
-        CfnDatabaseProps = CdkObjectWrappers.wrap(cdkObject) as CfnDatabaseProps
+        CfnDatabaseProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDatabaseProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDatabaseProps):
         software.amazon.awscdk.services.lightsail.CfnDatabaseProps = (wrapped as

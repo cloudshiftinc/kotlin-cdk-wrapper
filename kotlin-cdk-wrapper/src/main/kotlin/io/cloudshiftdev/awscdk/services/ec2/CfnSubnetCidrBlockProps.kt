@@ -159,7 +159,8 @@ public interface CfnSubnetCidrBlockProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetCidrBlockProps):
-        CfnSubnetCidrBlockProps = CdkObjectWrappers.wrap(cdkObject) as CfnSubnetCidrBlockProps
+        CfnSubnetCidrBlockProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSubnetCidrBlockProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSubnetCidrBlockProps):
         software.amazon.awscdk.services.ec2.CfnSubnetCidrBlockProps = (wrapped as

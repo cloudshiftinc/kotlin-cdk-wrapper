@@ -201,7 +201,8 @@ public interface CfnHookTypeConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnHookTypeConfigProps):
-        CfnHookTypeConfigProps = CdkObjectWrappers.wrap(cdkObject) as CfnHookTypeConfigProps
+        CfnHookTypeConfigProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHookTypeConfigProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHookTypeConfigProps):
         software.amazon.awscdk.CfnHookTypeConfigProps = (wrapped as CdkObject).cdkObject as

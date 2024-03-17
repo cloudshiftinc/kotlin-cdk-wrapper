@@ -284,7 +284,8 @@ public interface SqsEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps):
-        SqsEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as SqsEventSourceProps
+        SqsEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as? SqsEventSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SqsEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps = (wrapped as

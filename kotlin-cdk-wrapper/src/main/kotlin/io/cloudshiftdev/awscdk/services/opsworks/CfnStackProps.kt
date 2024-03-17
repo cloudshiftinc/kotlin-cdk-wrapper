@@ -1761,7 +1761,7 @@ public interface CfnStackProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStackProps):
-        CfnStackProps = CdkObjectWrappers.wrap(cdkObject) as CfnStackProps
+        CfnStackProps = CdkObjectWrappers.wrap(cdkObject) as? CfnStackProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStackProps):
         software.amazon.awscdk.services.opsworks.CfnStackProps = (wrapped as CdkObject).cdkObject as

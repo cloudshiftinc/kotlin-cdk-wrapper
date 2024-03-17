@@ -255,7 +255,8 @@ public interface LustreFileSystemProps : FileSystemProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.LustreFileSystemProps):
-        LustreFileSystemProps = CdkObjectWrappers.wrap(cdkObject) as LustreFileSystemProps
+        LustreFileSystemProps = CdkObjectWrappers.wrap(cdkObject) as? LustreFileSystemProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LustreFileSystemProps):
         software.amazon.awscdk.services.fsx.LustreFileSystemProps = (wrapped as CdkObject).cdkObject

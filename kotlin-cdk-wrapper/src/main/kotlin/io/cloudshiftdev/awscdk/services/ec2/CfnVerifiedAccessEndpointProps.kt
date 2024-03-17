@@ -607,8 +607,8 @@ public interface CfnVerifiedAccessEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpointProps):
-        CfnVerifiedAccessEndpointProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnVerifiedAccessEndpointProps
+        CfnVerifiedAccessEndpointProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnVerifiedAccessEndpointProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnVerifiedAccessEndpointProps):
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpointProps = (wrapped as

@@ -151,8 +151,8 @@ public interface CfnCodeDeployLambdaAliasUpdate {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate):
-        CfnCodeDeployLambdaAliasUpdate = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCodeDeployLambdaAliasUpdate
+        CfnCodeDeployLambdaAliasUpdate = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCodeDeployLambdaAliasUpdate ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCodeDeployLambdaAliasUpdate):
         software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate = (wrapped as CdkObject).cdkObject as

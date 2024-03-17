@@ -217,8 +217,8 @@ public interface ApplicationListenerRuleProps : BaseApplicationListenerRuleProps
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRuleProps):
-        ApplicationListenerRuleProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationListenerRuleProps
+        ApplicationListenerRuleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationListenerRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationListenerRuleProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRuleProps =

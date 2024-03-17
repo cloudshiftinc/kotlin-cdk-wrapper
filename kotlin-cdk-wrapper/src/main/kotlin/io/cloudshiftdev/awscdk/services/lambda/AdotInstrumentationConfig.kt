@@ -103,7 +103,8 @@ public interface AdotInstrumentationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AdotInstrumentationConfig):
-        AdotInstrumentationConfig = CdkObjectWrappers.wrap(cdkObject) as AdotInstrumentationConfig
+        AdotInstrumentationConfig = CdkObjectWrappers.wrap(cdkObject) as? AdotInstrumentationConfig
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AdotInstrumentationConfig):
         software.amazon.awscdk.services.lambda.AdotInstrumentationConfig = (wrapped as

@@ -147,7 +147,8 @@ public interface CfnGeoMatchSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSetProps):
-        CfnGeoMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnGeoMatchSetProps
+        CfnGeoMatchSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGeoMatchSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGeoMatchSetProps):
         software.amazon.awscdk.services.waf.regional.CfnGeoMatchSetProps = (wrapped as

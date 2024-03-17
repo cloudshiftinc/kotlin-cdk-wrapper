@@ -110,8 +110,8 @@ public interface CfnPolicyPrincipalAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachmentProps):
-        CfnPolicyPrincipalAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnPolicyPrincipalAttachmentProps
+        CfnPolicyPrincipalAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnPolicyPrincipalAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyPrincipalAttachmentProps):
         software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachmentProps = (wrapped as

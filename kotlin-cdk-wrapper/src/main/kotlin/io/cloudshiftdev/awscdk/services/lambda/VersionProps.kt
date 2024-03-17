@@ -248,7 +248,7 @@ public interface VersionProps : VersionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.VersionProps): VersionProps
-        = CdkObjectWrappers.wrap(cdkObject) as VersionProps
+        = CdkObjectWrappers.wrap(cdkObject) as? VersionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VersionProps): software.amazon.awscdk.services.lambda.VersionProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.VersionProps

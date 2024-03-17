@@ -442,8 +442,8 @@ public interface CfnRecordingConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps):
-        CfnRecordingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnRecordingConfigurationProps
+        CfnRecordingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnRecordingConfigurationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecordingConfigurationProps):
         software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps = (wrapped as

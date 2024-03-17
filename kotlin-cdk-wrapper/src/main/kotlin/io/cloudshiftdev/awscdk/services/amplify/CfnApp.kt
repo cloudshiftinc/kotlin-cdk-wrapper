@@ -1088,8 +1088,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty):
-          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnvironmentVariableProperty
+          EnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnvironmentVariableProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnvironmentVariableProperty):
           software.amazon.awscdk.services.amplify.CfnApp.EnvironmentVariableProperty = (wrapped as
@@ -1278,7 +1278,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty):
-          CustomRuleProperty = CdkObjectWrappers.wrap(cdkObject) as CustomRuleProperty
+          CustomRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? CustomRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomRuleProperty):
           software.amazon.awscdk.services.amplify.CfnApp.CustomRuleProperty = (wrapped as
@@ -1910,8 +1911,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.AutoBranchCreationConfigProperty):
-          AutoBranchCreationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AutoBranchCreationConfigProperty
+          AutoBranchCreationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AutoBranchCreationConfigProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AutoBranchCreationConfigProperty):
           software.amazon.awscdk.services.amplify.CfnApp.AutoBranchCreationConfigProperty = (wrapped
@@ -2058,7 +2059,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty):
-          BasicAuthConfigProperty = CdkObjectWrappers.wrap(cdkObject) as BasicAuthConfigProperty
+          BasicAuthConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? BasicAuthConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: BasicAuthConfigProperty):
           software.amazon.awscdk.services.amplify.CfnApp.BasicAuthConfigProperty = (wrapped as

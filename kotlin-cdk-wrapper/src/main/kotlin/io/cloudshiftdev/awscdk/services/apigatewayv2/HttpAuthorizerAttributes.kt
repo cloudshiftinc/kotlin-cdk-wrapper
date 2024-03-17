@@ -117,7 +117,8 @@ public interface HttpAuthorizerAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerAttributes):
-        HttpAuthorizerAttributes = CdkObjectWrappers.wrap(cdkObject) as HttpAuthorizerAttributes
+        HttpAuthorizerAttributes = CdkObjectWrappers.wrap(cdkObject) as? HttpAuthorizerAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpAuthorizerAttributes):
         software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerAttributes = (wrapped as

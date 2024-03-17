@@ -101,7 +101,8 @@ public interface ProfilingGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps):
-        ProfilingGroupProps = CdkObjectWrappers.wrap(cdkObject) as ProfilingGroupProps
+        ProfilingGroupProps = CdkObjectWrappers.wrap(cdkObject) as? ProfilingGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProfilingGroupProps):
         software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps = (wrapped as

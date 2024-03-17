@@ -101,7 +101,8 @@ public interface S3EventSelector {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.S3EventSelector):
-        S3EventSelector = CdkObjectWrappers.wrap(cdkObject) as S3EventSelector
+        S3EventSelector = CdkObjectWrappers.wrap(cdkObject) as? S3EventSelector ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3EventSelector):
         software.amazon.awscdk.services.cloudtrail.S3EventSelector = (wrapped as

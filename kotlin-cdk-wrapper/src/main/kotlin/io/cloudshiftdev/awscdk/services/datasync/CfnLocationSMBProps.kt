@@ -457,7 +457,8 @@ public interface CfnLocationSMBProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationSMBProps):
-        CfnLocationSMBProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationSMBProps
+        CfnLocationSMBProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationSMBProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationSMBProps):
         software.amazon.awscdk.services.datasync.CfnLocationSMBProps = (wrapped as

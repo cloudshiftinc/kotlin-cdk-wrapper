@@ -276,8 +276,8 @@ public interface CfnDataflowEndpointGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroupProps):
-        CfnDataflowEndpointGroupProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDataflowEndpointGroupProps
+        CfnDataflowEndpointGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDataflowEndpointGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataflowEndpointGroupProps):
         software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroupProps = (wrapped as

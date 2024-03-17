@@ -114,8 +114,8 @@ public interface CfnResolverQueryLoggingConfigAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociationProps):
-        CfnResolverQueryLoggingConfigAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnResolverQueryLoggingConfigAssociationProps
+        CfnResolverQueryLoggingConfigAssociationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnResolverQueryLoggingConfigAssociationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnResolverQueryLoggingConfigAssociationProps):
         software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociationProps

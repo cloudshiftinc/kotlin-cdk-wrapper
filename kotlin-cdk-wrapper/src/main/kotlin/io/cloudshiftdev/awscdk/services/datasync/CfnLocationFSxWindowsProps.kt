@@ -362,7 +362,8 @@ public interface CfnLocationFSxWindowsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps):
-        CfnLocationFSxWindowsProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationFSxWindowsProps
+        CfnLocationFSxWindowsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnLocationFSxWindowsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationFSxWindowsProps):
         software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps = (wrapped as

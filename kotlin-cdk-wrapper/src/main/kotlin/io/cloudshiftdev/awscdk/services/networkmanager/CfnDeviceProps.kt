@@ -423,7 +423,7 @@ public interface CfnDeviceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnDeviceProps):
-        CfnDeviceProps = CdkObjectWrappers.wrap(cdkObject) as CfnDeviceProps
+        CfnDeviceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDeviceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDeviceProps):
         software.amazon.awscdk.services.networkmanager.CfnDeviceProps = (wrapped as

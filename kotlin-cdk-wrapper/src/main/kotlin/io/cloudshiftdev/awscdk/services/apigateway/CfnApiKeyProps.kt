@@ -402,7 +402,7 @@ public interface CfnApiKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKeyProps):
-        CfnApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnApiKeyProps
+        CfnApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as? CfnApiKeyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnApiKeyProps):
         software.amazon.awscdk.services.apigateway.CfnApiKeyProps = (wrapped as CdkObject).cdkObject

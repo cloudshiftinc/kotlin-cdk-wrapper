@@ -414,8 +414,8 @@ public interface CfnSimulationApplicationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnSimulationApplicationProps):
-        CfnSimulationApplicationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSimulationApplicationProps
+        CfnSimulationApplicationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSimulationApplicationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSimulationApplicationProps):
         software.amazon.awscdk.services.robomaker.CfnSimulationApplicationProps = (wrapped as

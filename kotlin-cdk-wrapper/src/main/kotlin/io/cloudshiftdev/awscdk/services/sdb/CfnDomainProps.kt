@@ -75,7 +75,7 @@ public interface CfnDomainProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sdb.CfnDomainProps): CfnDomainProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnDomainProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnDomainProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDomainProps): software.amazon.awscdk.services.sdb.CfnDomainProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sdb.CfnDomainProps

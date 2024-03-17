@@ -437,7 +437,8 @@ public interface CfnLocationAzureBlobProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlobProps):
-        CfnLocationAzureBlobProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationAzureBlobProps
+        CfnLocationAzureBlobProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLocationAzureBlobProps
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLocationAzureBlobProps):
         software.amazon.awscdk.services.datasync.CfnLocationAzureBlobProps = (wrapped as

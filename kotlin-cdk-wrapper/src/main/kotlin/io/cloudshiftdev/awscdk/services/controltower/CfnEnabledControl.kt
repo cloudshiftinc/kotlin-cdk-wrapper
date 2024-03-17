@@ -431,8 +431,8 @@ public open class CfnEnabledControl internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty):
-          EnabledControlParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EnabledControlParameterProperty
+          EnabledControlParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EnabledControlParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EnabledControlParameterProperty):
           software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty

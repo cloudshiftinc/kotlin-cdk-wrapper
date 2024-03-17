@@ -481,8 +481,8 @@ public interface AwsCloudFormationStackProperties {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties):
-        AwsCloudFormationStackProperties = CdkObjectWrappers.wrap(cdkObject) as
-        AwsCloudFormationStackProperties
+        AwsCloudFormationStackProperties = CdkObjectWrappers.wrap(cdkObject) as?
+        AwsCloudFormationStackProperties ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsCloudFormationStackProperties):
         software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties = (wrapped as

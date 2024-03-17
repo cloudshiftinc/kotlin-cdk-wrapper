@@ -93,7 +93,7 @@ public interface RedirectTarget {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.RedirectTarget): RedirectTarget
-        = CdkObjectWrappers.wrap(cdkObject) as RedirectTarget
+        = CdkObjectWrappers.wrap(cdkObject) as? RedirectTarget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RedirectTarget): software.amazon.awscdk.services.s3.RedirectTarget
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.RedirectTarget

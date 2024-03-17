@@ -428,7 +428,8 @@ public interface ParamsAndSecretsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions):
-        ParamsAndSecretsOptions = CdkObjectWrappers.wrap(cdkObject) as ParamsAndSecretsOptions
+        ParamsAndSecretsOptions = CdkObjectWrappers.wrap(cdkObject) as? ParamsAndSecretsOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParamsAndSecretsOptions):
         software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions = (wrapped as

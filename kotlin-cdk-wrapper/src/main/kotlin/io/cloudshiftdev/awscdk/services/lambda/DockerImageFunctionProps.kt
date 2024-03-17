@@ -1453,7 +1453,8 @@ public interface DockerImageFunctionProps : FunctionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.DockerImageFunctionProps):
-        DockerImageFunctionProps = CdkObjectWrappers.wrap(cdkObject) as DockerImageFunctionProps
+        DockerImageFunctionProps = CdkObjectWrappers.wrap(cdkObject) as? DockerImageFunctionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageFunctionProps):
         software.amazon.awscdk.services.lambda.DockerImageFunctionProps = (wrapped as

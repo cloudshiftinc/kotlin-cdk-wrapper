@@ -233,7 +233,7 @@ public interface AwsApiProps : AwsApiInput {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.AwsApiProps):
-        AwsApiProps = CdkObjectWrappers.wrap(cdkObject) as AwsApiProps
+        AwsApiProps = CdkObjectWrappers.wrap(cdkObject) as? AwsApiProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsApiProps):
         software.amazon.awscdk.services.events.targets.AwsApiProps = (wrapped as

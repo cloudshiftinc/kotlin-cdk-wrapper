@@ -81,8 +81,8 @@ public interface LaunchTemplateRequireImdsv2AspectProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2AspectProps):
-        LaunchTemplateRequireImdsv2AspectProps = CdkObjectWrappers.wrap(cdkObject) as
-        LaunchTemplateRequireImdsv2AspectProps
+        LaunchTemplateRequireImdsv2AspectProps = CdkObjectWrappers.wrap(cdkObject) as?
+        LaunchTemplateRequireImdsv2AspectProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: LaunchTemplateRequireImdsv2AspectProps):
         software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2AspectProps = (wrapped as

@@ -636,7 +636,8 @@ public open class CfnRemediationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty):
-          ResourceValueProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceValueProperty
+          ResourceValueProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourceValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ResourceValueProperty):
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty =
@@ -748,7 +749,8 @@ public open class CfnRemediationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty):
-          ExecutionControlsProperty = CdkObjectWrappers.wrap(cdkObject) as ExecutionControlsProperty
+          ExecutionControlsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExecutionControlsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ExecutionControlsProperty):
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty
@@ -890,7 +892,8 @@ public open class CfnRemediationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty):
-          SsmControlsProperty = CdkObjectWrappers.wrap(cdkObject) as SsmControlsProperty
+          SsmControlsProperty = CdkObjectWrappers.wrap(cdkObject) as? SsmControlsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: SsmControlsProperty):
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty =
@@ -1009,7 +1012,8 @@ public open class CfnRemediationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty):
-          StaticValueProperty = CdkObjectWrappers.wrap(cdkObject) as StaticValueProperty
+          StaticValueProperty = CdkObjectWrappers.wrap(cdkObject) as? StaticValueProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: StaticValueProperty):
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty =
@@ -1181,8 +1185,8 @@ public open class CfnRemediationConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty):
-          RemediationParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RemediationParameterValueProperty
+          RemediationParameterValueProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RemediationParameterValueProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RemediationParameterValueProperty):
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty

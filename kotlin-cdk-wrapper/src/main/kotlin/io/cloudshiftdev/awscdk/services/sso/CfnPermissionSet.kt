@@ -896,8 +896,8 @@ public open class CfnPermissionSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty):
-          PermissionsBoundaryProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PermissionsBoundaryProperty
+          PermissionsBoundaryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PermissionsBoundaryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PermissionsBoundaryProperty):
           software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty =
@@ -1034,8 +1034,8 @@ public open class CfnPermissionSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty):
-          CustomerManagedPolicyReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          CustomerManagedPolicyReferenceProperty
+          CustomerManagedPolicyReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomerManagedPolicyReferenceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: CustomerManagedPolicyReferenceProperty):
           software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty

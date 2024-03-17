@@ -53,9 +53,13 @@ public abstract class ConcreteWidget internal constructor(
    */
   public override fun width(): Number = unwrap(this).getWidth()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudwatch.ConcreteWidget,
+  ) : ConcreteWidget(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.ConcreteWidget):
-        ConcreteWidget = CdkObjectWrappers.wrap(cdkObject) as ConcreteWidget
+        ConcreteWidget = CdkObjectWrappers.wrap(cdkObject) as? ConcreteWidget ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConcreteWidget):
         software.amazon.awscdk.services.cloudwatch.ConcreteWidget = (wrapped as CdkObject).cdkObject

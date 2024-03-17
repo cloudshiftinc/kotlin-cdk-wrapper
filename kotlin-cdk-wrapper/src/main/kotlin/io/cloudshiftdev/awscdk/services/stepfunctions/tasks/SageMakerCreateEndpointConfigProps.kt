@@ -548,8 +548,8 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfigProps):
-        SageMakerCreateEndpointConfigProps = CdkObjectWrappers.wrap(cdkObject) as
-        SageMakerCreateEndpointConfigProps
+        SageMakerCreateEndpointConfigProps = CdkObjectWrappers.wrap(cdkObject) as?
+        SageMakerCreateEndpointConfigProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SageMakerCreateEndpointConfigProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfigProps =

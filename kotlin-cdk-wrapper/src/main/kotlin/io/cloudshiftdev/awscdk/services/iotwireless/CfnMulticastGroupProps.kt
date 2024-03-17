@@ -278,7 +278,8 @@ public interface CfnMulticastGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnMulticastGroupProps):
-        CfnMulticastGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnMulticastGroupProps
+        CfnMulticastGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnMulticastGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnMulticastGroupProps):
         software.amazon.awscdk.services.iotwireless.CfnMulticastGroupProps = (wrapped as

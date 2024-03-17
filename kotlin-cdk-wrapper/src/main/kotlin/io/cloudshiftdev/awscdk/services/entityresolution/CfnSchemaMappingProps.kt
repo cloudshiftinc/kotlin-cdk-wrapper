@@ -231,7 +231,8 @@ public interface CfnSchemaMappingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMappingProps):
-        CfnSchemaMappingProps = CdkObjectWrappers.wrap(cdkObject) as CfnSchemaMappingProps
+        CfnSchemaMappingProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSchemaMappingProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchemaMappingProps):
         software.amazon.awscdk.services.entityresolution.CfnSchemaMappingProps = (wrapped as

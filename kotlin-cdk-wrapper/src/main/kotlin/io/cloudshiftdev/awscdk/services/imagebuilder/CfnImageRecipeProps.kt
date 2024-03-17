@@ -467,7 +467,8 @@ public interface CfnImageRecipeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipeProps):
-        CfnImageRecipeProps = CdkObjectWrappers.wrap(cdkObject) as CfnImageRecipeProps
+        CfnImageRecipeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnImageRecipeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnImageRecipeProps):
         software.amazon.awscdk.services.imagebuilder.CfnImageRecipeProps = (wrapped as

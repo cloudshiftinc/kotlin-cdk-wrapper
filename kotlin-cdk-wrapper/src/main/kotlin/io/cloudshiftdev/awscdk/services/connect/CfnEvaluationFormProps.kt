@@ -447,7 +447,8 @@ public interface CfnEvaluationFormProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationFormProps):
-        CfnEvaluationFormProps = CdkObjectWrappers.wrap(cdkObject) as CfnEvaluationFormProps
+        CfnEvaluationFormProps = CdkObjectWrappers.wrap(cdkObject) as? CfnEvaluationFormProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnEvaluationFormProps):
         software.amazon.awscdk.services.connect.CfnEvaluationFormProps = (wrapped as

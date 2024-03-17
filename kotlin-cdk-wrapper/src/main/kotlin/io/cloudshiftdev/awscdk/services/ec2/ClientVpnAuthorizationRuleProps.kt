@@ -145,8 +145,8 @@ public interface ClientVpnAuthorizationRuleProps : ClientVpnAuthorizationRuleOpt
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleProps):
-        ClientVpnAuthorizationRuleProps = CdkObjectWrappers.wrap(cdkObject) as
-        ClientVpnAuthorizationRuleProps
+        ClientVpnAuthorizationRuleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ClientVpnAuthorizationRuleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ClientVpnAuthorizationRuleProps):
         software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleProps = (wrapped as

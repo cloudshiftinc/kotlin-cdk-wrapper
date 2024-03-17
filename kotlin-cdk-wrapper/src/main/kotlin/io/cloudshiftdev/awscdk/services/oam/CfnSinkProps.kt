@@ -166,7 +166,7 @@ public interface CfnSinkProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.oam.CfnSinkProps): CfnSinkProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnSinkProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnSinkProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSinkProps): software.amazon.awscdk.services.oam.CfnSinkProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.oam.CfnSinkProps

@@ -86,7 +86,8 @@ public interface NatGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NatGatewayProps):
-        NatGatewayProps = CdkObjectWrappers.wrap(cdkObject) as NatGatewayProps
+        NatGatewayProps = CdkObjectWrappers.wrap(cdkObject) as? NatGatewayProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NatGatewayProps):
         software.amazon.awscdk.services.ec2.NatGatewayProps = (wrapped as CdkObject).cdkObject as

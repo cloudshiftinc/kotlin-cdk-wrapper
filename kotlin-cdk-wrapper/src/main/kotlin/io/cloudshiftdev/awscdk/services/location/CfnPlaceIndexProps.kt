@@ -435,7 +435,8 @@ public interface CfnPlaceIndexProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndexProps):
-        CfnPlaceIndexProps = CdkObjectWrappers.wrap(cdkObject) as CfnPlaceIndexProps
+        CfnPlaceIndexProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPlaceIndexProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPlaceIndexProps):
         software.amazon.awscdk.services.location.CfnPlaceIndexProps = (wrapped as

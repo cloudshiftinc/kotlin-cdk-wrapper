@@ -66,7 +66,7 @@ public interface MetadataEntry {
     }
 
     internal fun wrap(cdkObject: software.constructs.MetadataEntry): MetadataEntry =
-        CdkObjectWrappers.wrap(cdkObject) as MetadataEntry
+        CdkObjectWrappers.wrap(cdkObject) as? MetadataEntry ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: MetadataEntry): software.constructs.MetadataEntry = (wrapped as
         CdkObject).cdkObject as software.constructs.MetadataEntry

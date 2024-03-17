@@ -172,7 +172,8 @@ public interface CfnProjectProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot1click.CfnProjectProps):
-        CfnProjectProps = CdkObjectWrappers.wrap(cdkObject) as CfnProjectProps
+        CfnProjectProps = CdkObjectWrappers.wrap(cdkObject) as? CfnProjectProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnProjectProps):
         software.amazon.awscdk.services.iot1click.CfnProjectProps = (wrapped as CdkObject).cdkObject

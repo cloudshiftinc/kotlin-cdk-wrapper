@@ -142,7 +142,7 @@ public interface KeyGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroupProps):
-        KeyGroupProps = CdkObjectWrappers.wrap(cdkObject) as KeyGroupProps
+        KeyGroupProps = CdkObjectWrappers.wrap(cdkObject) as? KeyGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyGroupProps):
         software.amazon.awscdk.services.cloudfront.KeyGroupProps = (wrapped as CdkObject).cdkObject

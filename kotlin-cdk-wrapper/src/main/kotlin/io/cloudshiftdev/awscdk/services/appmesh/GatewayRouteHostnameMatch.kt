@@ -37,6 +37,10 @@ public abstract class GatewayRouteHostnameMatch internal constructor(
   public open fun bind(scope: Construct): GatewayRouteHostnameMatchConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(GatewayRouteHostnameMatchConfig::wrap)
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch,
+  ) : GatewayRouteHostnameMatch(cdkObject)
+
   public companion object {
     public fun endsWith(suffix: String): GatewayRouteHostnameMatch =
         software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch.endsWith(suffix).let(GatewayRouteHostnameMatch::wrap)
@@ -45,7 +49,8 @@ public abstract class GatewayRouteHostnameMatch internal constructor(
         software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch.exactly(name).let(GatewayRouteHostnameMatch::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch):
-        GatewayRouteHostnameMatch = CdkObjectWrappers.wrap(cdkObject) as GatewayRouteHostnameMatch
+        GatewayRouteHostnameMatch = CdkObjectWrappers.wrap(cdkObject) as? GatewayRouteHostnameMatch
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GatewayRouteHostnameMatch):
         software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch = (wrapped as

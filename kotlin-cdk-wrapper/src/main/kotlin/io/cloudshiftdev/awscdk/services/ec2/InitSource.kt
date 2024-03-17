@@ -35,6 +35,10 @@ public abstract class InitSource internal constructor(
    */
   public override fun elementType(): String = unwrap(this).getElementType()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.InitSource,
+  ) : InitSource(cdkObject)
+
   public companion object {
     public fun fromAsset(targetDirectory: String, path: String): InitSource =
         software.amazon.awscdk.services.ec2.InitSource.fromAsset(targetDirectory,
@@ -154,7 +158,7 @@ public abstract class InitSource internal constructor(
     ): InitSource = fromUrl(targetDirectory, url, InitSourceOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitSource): InitSource =
-        CdkObjectWrappers.wrap(cdkObject) as InitSource
+        CdkObjectWrappers.wrap(cdkObject) as? InitSource ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InitSource): software.amazon.awscdk.services.ec2.InitSource =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.InitSource

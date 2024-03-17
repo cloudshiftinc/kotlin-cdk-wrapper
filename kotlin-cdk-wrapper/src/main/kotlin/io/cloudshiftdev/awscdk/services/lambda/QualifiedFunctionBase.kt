@@ -81,9 +81,14 @@ public abstract class QualifiedFunctionBase internal constructor(
   public override fun resourceArnsForGrantInvoke(): List<String> =
       unwrap(this).getResourceArnsForGrantInvoke()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase,
+  ) : QualifiedFunctionBase(cdkObject)
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase):
-        QualifiedFunctionBase = CdkObjectWrappers.wrap(cdkObject) as QualifiedFunctionBase
+        QualifiedFunctionBase = CdkObjectWrappers.wrap(cdkObject) as? QualifiedFunctionBase ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QualifiedFunctionBase):
         software.amazon.awscdk.services.lambda.QualifiedFunctionBase = (wrapped as

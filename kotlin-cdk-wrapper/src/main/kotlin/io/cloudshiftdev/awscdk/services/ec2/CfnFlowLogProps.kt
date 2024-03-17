@@ -622,7 +622,8 @@ public interface CfnFlowLogProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLogProps):
-        CfnFlowLogProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlowLogProps
+        CfnFlowLogProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFlowLogProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFlowLogProps):
         software.amazon.awscdk.services.ec2.CfnFlowLogProps = (wrapped as CdkObject).cdkObject as

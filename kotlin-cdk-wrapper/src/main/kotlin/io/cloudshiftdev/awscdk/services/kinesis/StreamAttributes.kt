@@ -103,7 +103,8 @@ public interface StreamAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.StreamAttributes):
-        StreamAttributes = CdkObjectWrappers.wrap(cdkObject) as StreamAttributes
+        StreamAttributes = CdkObjectWrappers.wrap(cdkObject) as? StreamAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StreamAttributes):
         software.amazon.awscdk.services.kinesis.StreamAttributes = (wrapped as CdkObject).cdkObject

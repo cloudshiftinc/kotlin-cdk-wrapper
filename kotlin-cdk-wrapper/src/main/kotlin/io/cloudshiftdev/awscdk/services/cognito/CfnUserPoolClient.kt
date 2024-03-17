@@ -2108,8 +2108,8 @@ public open class CfnUserPoolClient internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty):
-          TokenValidityUnitsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TokenValidityUnitsProperty
+          TokenValidityUnitsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TokenValidityUnitsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TokenValidityUnitsProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty =
@@ -2338,8 +2338,8 @@ public open class CfnUserPoolClient internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty):
-          AnalyticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AnalyticsConfigurationProperty
+          AnalyticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalyticsConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalyticsConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty =

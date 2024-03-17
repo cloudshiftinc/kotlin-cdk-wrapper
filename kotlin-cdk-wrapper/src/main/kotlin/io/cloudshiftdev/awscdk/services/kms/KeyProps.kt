@@ -533,7 +533,7 @@ public interface KeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.KeyProps): KeyProps =
-        CdkObjectWrappers.wrap(cdkObject) as KeyProps
+        CdkObjectWrappers.wrap(cdkObject) as? KeyProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: KeyProps): software.amazon.awscdk.services.kms.KeyProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.kms.KeyProps

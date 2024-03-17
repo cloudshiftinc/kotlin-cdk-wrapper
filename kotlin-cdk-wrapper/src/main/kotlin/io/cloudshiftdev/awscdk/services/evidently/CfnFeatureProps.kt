@@ -508,7 +508,8 @@ public interface CfnFeatureProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnFeatureProps):
-        CfnFeatureProps = CdkObjectWrappers.wrap(cdkObject) as CfnFeatureProps
+        CfnFeatureProps = CdkObjectWrappers.wrap(cdkObject) as? CfnFeatureProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnFeatureProps):
         software.amazon.awscdk.services.evidently.CfnFeatureProps = (wrapped as CdkObject).cdkObject

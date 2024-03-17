@@ -536,7 +536,8 @@ public open class CfnTestGridProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProject.VpcConfigProperty):
-          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcConfigProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.devicefarm.CfnTestGridProject.VpcConfigProperty = (wrapped

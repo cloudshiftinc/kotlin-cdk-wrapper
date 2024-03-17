@@ -494,7 +494,8 @@ public open class CfnRefreshSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty):
-          ScheduleFrequencyProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduleFrequencyProperty
+          ScheduleFrequencyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScheduleFrequencyProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScheduleFrequencyProperty):
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty =
@@ -615,7 +616,8 @@ public open class CfnRefreshSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshOnDayProperty):
-          RefreshOnDayProperty = CdkObjectWrappers.wrap(cdkObject) as RefreshOnDayProperty
+          RefreshOnDayProperty = CdkObjectWrappers.wrap(cdkObject) as? RefreshOnDayProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RefreshOnDayProperty):
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshOnDayProperty =
@@ -850,8 +852,8 @@ public open class CfnRefreshSchedule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty):
-          RefreshScheduleMapProperty = CdkObjectWrappers.wrap(cdkObject) as
-          RefreshScheduleMapProperty
+          RefreshScheduleMapProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RefreshScheduleMapProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: RefreshScheduleMapProperty):
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty =

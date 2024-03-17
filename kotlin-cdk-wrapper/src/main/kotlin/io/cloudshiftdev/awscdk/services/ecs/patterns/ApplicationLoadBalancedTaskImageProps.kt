@@ -505,8 +505,8 @@ public interface ApplicationLoadBalancedTaskImageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps):
-        ApplicationLoadBalancedTaskImageProps = CdkObjectWrappers.wrap(cdkObject) as
-        ApplicationLoadBalancedTaskImageProps
+        ApplicationLoadBalancedTaskImageProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ApplicationLoadBalancedTaskImageProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedTaskImageProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps =

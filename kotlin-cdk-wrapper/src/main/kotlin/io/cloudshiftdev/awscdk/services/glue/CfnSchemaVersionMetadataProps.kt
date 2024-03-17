@@ -133,8 +133,8 @@ public interface CfnSchemaVersionMetadataProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionMetadataProps):
-        CfnSchemaVersionMetadataProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSchemaVersionMetadataProps
+        CfnSchemaVersionMetadataProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSchemaVersionMetadataProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSchemaVersionMetadataProps):
         software.amazon.awscdk.services.glue.CfnSchemaVersionMetadataProps = (wrapped as

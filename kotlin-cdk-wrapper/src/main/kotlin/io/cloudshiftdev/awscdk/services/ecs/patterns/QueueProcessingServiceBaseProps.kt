@@ -1184,8 +1184,8 @@ public interface QueueProcessingServiceBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBaseProps):
-        QueueProcessingServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as
-        QueueProcessingServiceBaseProps
+        QueueProcessingServiceBaseProps = CdkObjectWrappers.wrap(cdkObject) as?
+        QueueProcessingServiceBaseProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: QueueProcessingServiceBaseProps):
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBaseProps = (wrapped as

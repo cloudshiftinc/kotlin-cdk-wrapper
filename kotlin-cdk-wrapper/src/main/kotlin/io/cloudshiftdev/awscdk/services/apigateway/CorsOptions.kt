@@ -463,7 +463,7 @@ public interface CorsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CorsOptions):
-        CorsOptions = CdkObjectWrappers.wrap(cdkObject) as CorsOptions
+        CorsOptions = CdkObjectWrappers.wrap(cdkObject) as? CorsOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CorsOptions):
         software.amazon.awscdk.services.apigateway.CorsOptions = (wrapped as CdkObject).cdkObject as

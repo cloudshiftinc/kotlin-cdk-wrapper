@@ -110,8 +110,8 @@ public interface CfnDirectoryRegistrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistrationProps):
-        CfnDirectoryRegistrationProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnDirectoryRegistrationProps
+        CfnDirectoryRegistrationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDirectoryRegistrationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDirectoryRegistrationProps):
         software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistrationProps = (wrapped as

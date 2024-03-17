@@ -1314,8 +1314,8 @@ public interface DatabaseInstanceReadReplicaProps : DatabaseInstanceNewProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceReadReplicaProps):
-        DatabaseInstanceReadReplicaProps = CdkObjectWrappers.wrap(cdkObject) as
-        DatabaseInstanceReadReplicaProps
+        DatabaseInstanceReadReplicaProps = CdkObjectWrappers.wrap(cdkObject) as?
+        DatabaseInstanceReadReplicaProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseInstanceReadReplicaProps):
         software.amazon.awscdk.services.rds.DatabaseInstanceReadReplicaProps = (wrapped as

@@ -322,7 +322,8 @@ public interface DatabaseSecretProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseSecretProps):
-        DatabaseSecretProps = CdkObjectWrappers.wrap(cdkObject) as DatabaseSecretProps
+        DatabaseSecretProps = CdkObjectWrappers.wrap(cdkObject) as? DatabaseSecretProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DatabaseSecretProps):
         software.amazon.awscdk.services.rds.DatabaseSecretProps = (wrapped as CdkObject).cdkObject

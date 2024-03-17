@@ -230,7 +230,8 @@ public interface ConnectionSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ConnectionSourceOptions):
-        ConnectionSourceOptions = CdkObjectWrappers.wrap(cdkObject) as ConnectionSourceOptions
+        ConnectionSourceOptions = CdkObjectWrappers.wrap(cdkObject) as? ConnectionSourceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ConnectionSourceOptions):
         software.amazon.awscdk.pipelines.ConnectionSourceOptions = (wrapped as CdkObject).cdkObject

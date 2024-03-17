@@ -420,8 +420,8 @@ public interface CfnAnomalySubscriptionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscriptionProps):
-        CfnAnomalySubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAnomalySubscriptionProps
+        CfnAnomalySubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAnomalySubscriptionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAnomalySubscriptionProps):
         software.amazon.awscdk.services.ce.CfnAnomalySubscriptionProps = (wrapped as

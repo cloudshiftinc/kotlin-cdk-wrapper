@@ -203,8 +203,8 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.config.CloudFormationStackNotificationCheckProps):
-        CloudFormationStackNotificationCheckProps = CdkObjectWrappers.wrap(cdkObject) as
-        CloudFormationStackNotificationCheckProps
+        CloudFormationStackNotificationCheckProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CloudFormationStackNotificationCheckProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CloudFormationStackNotificationCheckProps):
         software.amazon.awscdk.services.config.CloudFormationStackNotificationCheckProps = (wrapped

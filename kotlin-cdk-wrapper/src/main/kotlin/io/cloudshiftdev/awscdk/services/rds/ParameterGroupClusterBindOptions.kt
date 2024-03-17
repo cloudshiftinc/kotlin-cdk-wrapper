@@ -48,8 +48,8 @@ public interface ParameterGroupClusterBindOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterBindOptions):
-        ParameterGroupClusterBindOptions = CdkObjectWrappers.wrap(cdkObject) as
-        ParameterGroupClusterBindOptions
+        ParameterGroupClusterBindOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        ParameterGroupClusterBindOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ParameterGroupClusterBindOptions):
         software.amazon.awscdk.services.rds.ParameterGroupClusterBindOptions = (wrapped as

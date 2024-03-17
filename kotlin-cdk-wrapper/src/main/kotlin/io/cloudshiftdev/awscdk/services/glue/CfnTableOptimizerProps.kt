@@ -236,7 +236,8 @@ public interface CfnTableOptimizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizerProps):
-        CfnTableOptimizerProps = CdkObjectWrappers.wrap(cdkObject) as CfnTableOptimizerProps
+        CfnTableOptimizerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnTableOptimizerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnTableOptimizerProps):
         software.amazon.awscdk.services.glue.CfnTableOptimizerProps = (wrapped as

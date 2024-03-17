@@ -158,7 +158,8 @@ public interface DockerImageDestination : AwsDestination {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageDestination):
-        DockerImageDestination = CdkObjectWrappers.wrap(cdkObject) as DockerImageDestination
+        DockerImageDestination = CdkObjectWrappers.wrap(cdkObject) as? DockerImageDestination ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DockerImageDestination):
         software.amazon.awscdk.cloudassembly.schema.DockerImageDestination = (wrapped as

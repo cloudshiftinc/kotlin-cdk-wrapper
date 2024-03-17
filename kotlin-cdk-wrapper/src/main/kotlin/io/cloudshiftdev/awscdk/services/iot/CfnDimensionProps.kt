@@ -203,7 +203,8 @@ public interface CfnDimensionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDimensionProps):
-        CfnDimensionProps = CdkObjectWrappers.wrap(cdkObject) as CfnDimensionProps
+        CfnDimensionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDimensionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDimensionProps):
         software.amazon.awscdk.services.iot.CfnDimensionProps = (wrapped as CdkObject).cdkObject as

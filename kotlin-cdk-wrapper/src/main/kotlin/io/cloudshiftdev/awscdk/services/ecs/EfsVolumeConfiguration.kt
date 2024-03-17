@@ -242,7 +242,8 @@ public interface EfsVolumeConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EfsVolumeConfiguration):
-        EfsVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as EfsVolumeConfiguration
+        EfsVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as? EfsVolumeConfiguration ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EfsVolumeConfiguration):
         software.amazon.awscdk.services.ecs.EfsVolumeConfiguration = (wrapped as

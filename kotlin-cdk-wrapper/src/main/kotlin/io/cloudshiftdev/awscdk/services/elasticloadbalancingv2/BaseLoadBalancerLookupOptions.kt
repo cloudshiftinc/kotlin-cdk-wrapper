@@ -111,8 +111,8 @@ public interface BaseLoadBalancerLookupOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerLookupOptions):
-        BaseLoadBalancerLookupOptions = CdkObjectWrappers.wrap(cdkObject) as
-        BaseLoadBalancerLookupOptions
+        BaseLoadBalancerLookupOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        BaseLoadBalancerLookupOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseLoadBalancerLookupOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerLookupOptions =

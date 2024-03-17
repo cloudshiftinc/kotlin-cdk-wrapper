@@ -580,7 +580,8 @@ public interface CfnContainerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediastore.CfnContainerProps):
-        CfnContainerProps = CdkObjectWrappers.wrap(cdkObject) as CfnContainerProps
+        CfnContainerProps = CdkObjectWrappers.wrap(cdkObject) as? CfnContainerProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnContainerProps):
         software.amazon.awscdk.services.mediastore.CfnContainerProps = (wrapped as

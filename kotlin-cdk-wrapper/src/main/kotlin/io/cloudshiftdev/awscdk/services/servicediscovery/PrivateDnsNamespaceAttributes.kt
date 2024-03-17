@@ -119,8 +119,8 @@ public interface PrivateDnsNamespaceAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes):
-        PrivateDnsNamespaceAttributes = CdkObjectWrappers.wrap(cdkObject) as
-        PrivateDnsNamespaceAttributes
+        PrivateDnsNamespaceAttributes = CdkObjectWrappers.wrap(cdkObject) as?
+        PrivateDnsNamespaceAttributes ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: PrivateDnsNamespaceAttributes):
         software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes = (wrapped as

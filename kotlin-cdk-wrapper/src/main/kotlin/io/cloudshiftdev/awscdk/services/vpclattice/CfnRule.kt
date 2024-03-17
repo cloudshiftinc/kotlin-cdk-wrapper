@@ -686,7 +686,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty):
-          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ActionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty = (wrapped as
@@ -869,7 +870,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchProperty):
-          HeaderMatchProperty = CdkObjectWrappers.wrap(cdkObject) as HeaderMatchProperty
+          HeaderMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeaderMatchProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchProperty = (wrapped as
@@ -1009,7 +1011,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchTypeProperty):
-          HeaderMatchTypeProperty = CdkObjectWrappers.wrap(cdkObject) as HeaderMatchTypeProperty
+          HeaderMatchTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? HeaderMatchTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HeaderMatchTypeProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchTypeProperty = (wrapped as
@@ -1089,7 +1092,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty):
-          FixedResponseProperty = CdkObjectWrappers.wrap(cdkObject) as FixedResponseProperty
+          FixedResponseProperty = CdkObjectWrappers.wrap(cdkObject) as? FixedResponseProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FixedResponseProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty = (wrapped as
@@ -1198,7 +1202,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty):
-          PathMatchTypeProperty = CdkObjectWrappers.wrap(cdkObject) as PathMatchTypeProperty
+          PathMatchTypeProperty = CdkObjectWrappers.wrap(cdkObject) as? PathMatchTypeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PathMatchTypeProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty = (wrapped as
@@ -1372,7 +1377,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty):
-          ForwardProperty = CdkObjectWrappers.wrap(cdkObject) as ForwardProperty
+          ForwardProperty = CdkObjectWrappers.wrap(cdkObject) as? ForwardProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ForwardProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty = (wrapped as
@@ -1497,7 +1503,7 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty):
-          MatchProperty = CdkObjectWrappers.wrap(cdkObject) as MatchProperty
+          MatchProperty = CdkObjectWrappers.wrap(cdkObject) as? MatchProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MatchProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty = (wrapped as
@@ -1649,7 +1655,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty):
-          PathMatchProperty = CdkObjectWrappers.wrap(cdkObject) as PathMatchProperty
+          PathMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? PathMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PathMatchProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty = (wrapped as
@@ -1780,8 +1787,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty):
-          WeightedTargetGroupProperty = CdkObjectWrappers.wrap(cdkObject) as
-          WeightedTargetGroupProperty
+          WeightedTargetGroupProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          WeightedTargetGroupProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: WeightedTargetGroupProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty = (wrapped
@@ -1998,7 +2005,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty):
-          HttpMatchProperty = CdkObjectWrappers.wrap(cdkObject) as HttpMatchProperty
+          HttpMatchProperty = CdkObjectWrappers.wrap(cdkObject) as? HttpMatchProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: HttpMatchProperty):
           software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty = (wrapped as

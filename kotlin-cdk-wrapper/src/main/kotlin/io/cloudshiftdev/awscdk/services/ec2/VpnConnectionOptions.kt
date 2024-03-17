@@ -191,7 +191,8 @@ public interface VpnConnectionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionOptions):
-        VpnConnectionOptions = CdkObjectWrappers.wrap(cdkObject) as VpnConnectionOptions
+        VpnConnectionOptions = CdkObjectWrappers.wrap(cdkObject) as? VpnConnectionOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VpnConnectionOptions):
         software.amazon.awscdk.services.ec2.VpnConnectionOptions = (wrapped as CdkObject).cdkObject

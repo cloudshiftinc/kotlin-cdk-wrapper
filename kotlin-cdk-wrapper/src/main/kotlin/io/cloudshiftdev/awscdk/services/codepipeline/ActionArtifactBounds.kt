@@ -146,7 +146,8 @@ public interface ActionArtifactBounds {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.ActionArtifactBounds):
-        ActionArtifactBounds = CdkObjectWrappers.wrap(cdkObject) as ActionArtifactBounds
+        ActionArtifactBounds = CdkObjectWrappers.wrap(cdkObject) as? ActionArtifactBounds ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ActionArtifactBounds):
         software.amazon.awscdk.services.codepipeline.ActionArtifactBounds = (wrapped as

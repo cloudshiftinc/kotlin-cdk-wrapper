@@ -189,7 +189,8 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions):
-        RepositoryNotifyOnOptions = CdkObjectWrappers.wrap(cdkObject) as RepositoryNotifyOnOptions
+        RepositoryNotifyOnOptions = CdkObjectWrappers.wrap(cdkObject) as? RepositoryNotifyOnOptions
+        ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RepositoryNotifyOnOptions):
         software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions = (wrapped as

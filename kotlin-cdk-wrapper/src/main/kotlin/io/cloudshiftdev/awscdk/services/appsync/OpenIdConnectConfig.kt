@@ -197,7 +197,8 @@ public interface OpenIdConnectConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.OpenIdConnectConfig):
-        OpenIdConnectConfig = CdkObjectWrappers.wrap(cdkObject) as OpenIdConnectConfig
+        OpenIdConnectConfig = CdkObjectWrappers.wrap(cdkObject) as? OpenIdConnectConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OpenIdConnectConfig):
         software.amazon.awscdk.services.appsync.OpenIdConnectConfig = (wrapped as

@@ -257,7 +257,8 @@ public interface CfnDataQualityRulesetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRulesetProps):
-        CfnDataQualityRulesetProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataQualityRulesetProps
+        CfnDataQualityRulesetProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnDataQualityRulesetProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataQualityRulesetProps):
         software.amazon.awscdk.services.glue.CfnDataQualityRulesetProps = (wrapped as

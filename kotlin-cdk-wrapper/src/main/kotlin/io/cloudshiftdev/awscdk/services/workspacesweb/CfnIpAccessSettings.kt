@@ -518,7 +518,8 @@ public open class CfnIpAccessSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.IpRuleProperty):
-          IpRuleProperty = CdkObjectWrappers.wrap(cdkObject) as IpRuleProperty
+          IpRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? IpRuleProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IpRuleProperty):
           software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.IpRuleProperty =

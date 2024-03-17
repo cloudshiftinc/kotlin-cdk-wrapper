@@ -182,7 +182,8 @@ public interface ZoneAwarenessConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig):
-        ZoneAwarenessConfig = CdkObjectWrappers.wrap(cdkObject) as ZoneAwarenessConfig
+        ZoneAwarenessConfig = CdkObjectWrappers.wrap(cdkObject) as? ZoneAwarenessConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ZoneAwarenessConfig):
         software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig = (wrapped as

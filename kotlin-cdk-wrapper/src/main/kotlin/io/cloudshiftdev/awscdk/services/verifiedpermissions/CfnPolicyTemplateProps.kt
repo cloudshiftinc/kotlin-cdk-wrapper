@@ -138,7 +138,8 @@ public interface CfnPolicyTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplateProps):
-        CfnPolicyTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnPolicyTemplateProps
+        CfnPolicyTemplateProps = CdkObjectWrappers.wrap(cdkObject) as? CfnPolicyTemplateProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnPolicyTemplateProps):
         software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplateProps = (wrapped as

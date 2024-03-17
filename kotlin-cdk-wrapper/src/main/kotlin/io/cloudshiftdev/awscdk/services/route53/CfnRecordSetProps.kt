@@ -2345,7 +2345,8 @@ public interface CfnRecordSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetProps):
-        CfnRecordSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnRecordSetProps
+        CfnRecordSetProps = CdkObjectWrappers.wrap(cdkObject) as? CfnRecordSetProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnRecordSetProps):
         software.amazon.awscdk.services.route53.CfnRecordSetProps = (wrapped as CdkObject).cdkObject

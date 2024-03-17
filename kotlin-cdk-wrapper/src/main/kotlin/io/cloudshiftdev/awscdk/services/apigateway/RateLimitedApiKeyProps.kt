@@ -503,7 +503,8 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKeyProps):
-        RateLimitedApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as RateLimitedApiKeyProps
+        RateLimitedApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as? RateLimitedApiKeyProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RateLimitedApiKeyProps):
         software.amazon.awscdk.services.apigateway.RateLimitedApiKeyProps = (wrapped as

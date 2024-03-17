@@ -270,7 +270,7 @@ public interface CfnSceneProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSceneProps):
-        CfnSceneProps = CdkObjectWrappers.wrap(cdkObject) as CfnSceneProps
+        CfnSceneProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSceneProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSceneProps):
         software.amazon.awscdk.services.iottwinmaker.CfnSceneProps = (wrapped as

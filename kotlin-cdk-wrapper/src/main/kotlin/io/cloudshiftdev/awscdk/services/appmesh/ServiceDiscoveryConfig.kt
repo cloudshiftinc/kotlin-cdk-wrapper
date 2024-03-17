@@ -151,7 +151,8 @@ public interface ServiceDiscoveryConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig):
-        ServiceDiscoveryConfig = CdkObjectWrappers.wrap(cdkObject) as ServiceDiscoveryConfig
+        ServiceDiscoveryConfig = CdkObjectWrappers.wrap(cdkObject) as? ServiceDiscoveryConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceDiscoveryConfig):
         software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig = (wrapped as

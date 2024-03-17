@@ -351,7 +351,8 @@ public interface CfnGeofenceCollectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnGeofenceCollectionProps):
-        CfnGeofenceCollectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnGeofenceCollectionProps
+        CfnGeofenceCollectionProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnGeofenceCollectionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGeofenceCollectionProps):
         software.amazon.awscdk.services.location.CfnGeofenceCollectionProps = (wrapped as

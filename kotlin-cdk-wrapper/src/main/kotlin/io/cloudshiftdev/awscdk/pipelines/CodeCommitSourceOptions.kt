@@ -194,7 +194,8 @@ public interface CodeCommitSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodeCommitSourceOptions):
-        CodeCommitSourceOptions = CdkObjectWrappers.wrap(cdkObject) as CodeCommitSourceOptions
+        CodeCommitSourceOptions = CdkObjectWrappers.wrap(cdkObject) as? CodeCommitSourceOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeCommitSourceOptions):
         software.amazon.awscdk.pipelines.CodeCommitSourceOptions = (wrapped as CdkObject).cdkObject

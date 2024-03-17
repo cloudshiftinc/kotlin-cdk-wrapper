@@ -1140,7 +1140,8 @@ public interface CfnInstanceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnInstanceProps):
-        CfnInstanceProps = CdkObjectWrappers.wrap(cdkObject) as CfnInstanceProps
+        CfnInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnInstanceProps):
         software.amazon.awscdk.services.opsworks.CfnInstanceProps = (wrapped as CdkObject).cdkObject

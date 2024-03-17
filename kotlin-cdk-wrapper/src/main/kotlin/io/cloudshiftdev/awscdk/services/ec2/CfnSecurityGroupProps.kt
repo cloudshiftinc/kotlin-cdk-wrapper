@@ -355,7 +355,8 @@ public interface CfnSecurityGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupProps):
-        CfnSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnSecurityGroupProps
+        CfnSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSecurityGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityGroupProps):
         software.amazon.awscdk.services.ec2.CfnSecurityGroupProps = (wrapped as CdkObject).cdkObject

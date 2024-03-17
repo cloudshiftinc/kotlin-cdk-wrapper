@@ -702,7 +702,7 @@ public open class CfnNetworkAclEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty):
-          IcmpProperty = CdkObjectWrappers.wrap(cdkObject) as IcmpProperty
+          IcmpProperty = CdkObjectWrappers.wrap(cdkObject) as? IcmpProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: IcmpProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty = (wrapped as
@@ -821,7 +821,8 @@ public open class CfnNetworkAclEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty):
-          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as PortRangeProperty
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortRangeProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty = (wrapped as

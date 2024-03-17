@@ -256,8 +256,8 @@ public interface OnImageScanCompletedOptions : OnEventOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions):
-        OnImageScanCompletedOptions = CdkObjectWrappers.wrap(cdkObject) as
-        OnImageScanCompletedOptions
+        OnImageScanCompletedOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        OnImageScanCompletedOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OnImageScanCompletedOptions):
         software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions = (wrapped as

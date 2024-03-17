@@ -692,8 +692,8 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRunProps):
-        EmrContainersStartJobRunProps = CdkObjectWrappers.wrap(cdkObject) as
-        EmrContainersStartJobRunProps
+        EmrContainersStartJobRunProps = CdkObjectWrappers.wrap(cdkObject) as?
+        EmrContainersStartJobRunProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: EmrContainersStartJobRunProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRunProps = (wrapped

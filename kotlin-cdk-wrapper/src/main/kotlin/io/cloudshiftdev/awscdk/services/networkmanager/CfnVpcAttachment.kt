@@ -663,7 +663,8 @@ public open class CfnVpcAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty):
-          VpcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as VpcOptionsProperty
+          VpcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? VpcOptionsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcOptionsProperty):
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty =
@@ -818,8 +819,8 @@ public open class CfnVpcAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty):
-          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ProposedSegmentChangeProperty
+          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProposedSegmentChangeProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ProposedSegmentChangeProperty):
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty

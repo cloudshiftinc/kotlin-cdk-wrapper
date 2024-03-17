@@ -740,7 +740,8 @@ public open class CfnGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnGroup.GroupVersionProperty):
-          GroupVersionProperty = CdkObjectWrappers.wrap(cdkObject) as GroupVersionProperty
+          GroupVersionProperty = CdkObjectWrappers.wrap(cdkObject) as? GroupVersionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GroupVersionProperty):
           software.amazon.awscdk.services.greengrass.CfnGroup.GroupVersionProperty = (wrapped as

@@ -89,8 +89,8 @@ public interface CfnAutoScalingReplacingUpdate {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnAutoScalingReplacingUpdate):
-        CfnAutoScalingReplacingUpdate = CdkObjectWrappers.wrap(cdkObject) as
-        CfnAutoScalingReplacingUpdate
+        CfnAutoScalingReplacingUpdate = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnAutoScalingReplacingUpdate ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnAutoScalingReplacingUpdate):
         software.amazon.awscdk.CfnAutoScalingReplacingUpdate = (wrapped as CdkObject).cdkObject as

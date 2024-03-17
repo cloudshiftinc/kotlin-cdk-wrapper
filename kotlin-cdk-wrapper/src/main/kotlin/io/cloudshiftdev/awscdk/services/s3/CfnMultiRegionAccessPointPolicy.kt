@@ -244,7 +244,8 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.PolicyStatusProperty):
-          PolicyStatusProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyStatusProperty
+          PolicyStatusProperty = CdkObjectWrappers.wrap(cdkObject) as? PolicyStatusProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PolicyStatusProperty):
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.PolicyStatusProperty =

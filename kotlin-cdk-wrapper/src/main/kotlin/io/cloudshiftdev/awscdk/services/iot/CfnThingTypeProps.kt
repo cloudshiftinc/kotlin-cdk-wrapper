@@ -270,7 +270,8 @@ public interface CfnThingTypeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThingTypeProps):
-        CfnThingTypeProps = CdkObjectWrappers.wrap(cdkObject) as CfnThingTypeProps
+        CfnThingTypeProps = CdkObjectWrappers.wrap(cdkObject) as? CfnThingTypeProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnThingTypeProps):
         software.amazon.awscdk.services.iot.CfnThingTypeProps = (wrapped as CdkObject).cdkObject as

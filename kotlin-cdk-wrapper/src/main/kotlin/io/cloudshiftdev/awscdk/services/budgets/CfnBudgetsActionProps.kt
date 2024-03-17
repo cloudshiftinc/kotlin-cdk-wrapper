@@ -393,7 +393,8 @@ public interface CfnBudgetsActionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsActionProps):
-        CfnBudgetsActionProps = CdkObjectWrappers.wrap(cdkObject) as CfnBudgetsActionProps
+        CfnBudgetsActionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnBudgetsActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnBudgetsActionProps):
         software.amazon.awscdk.services.budgets.CfnBudgetsActionProps = (wrapped as

@@ -266,8 +266,8 @@ public interface UserPoolIdentityProviderGoogleProps : UserPoolIdentityProviderP
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogleProps):
-        UserPoolIdentityProviderGoogleProps = CdkObjectWrappers.wrap(cdkObject) as
-        UserPoolIdentityProviderGoogleProps
+        UserPoolIdentityProviderGoogleProps = CdkObjectWrappers.wrap(cdkObject) as?
+        UserPoolIdentityProviderGoogleProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolIdentityProviderGoogleProps):
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogleProps = (wrapped as

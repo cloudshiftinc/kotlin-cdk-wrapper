@@ -112,7 +112,8 @@ public interface ArtifactsBucketLocation {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation):
-        ArtifactsBucketLocation = CdkObjectWrappers.wrap(cdkObject) as ArtifactsBucketLocation
+        ArtifactsBucketLocation = CdkObjectWrappers.wrap(cdkObject) as? ArtifactsBucketLocation ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ArtifactsBucketLocation):
         software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation = (wrapped as

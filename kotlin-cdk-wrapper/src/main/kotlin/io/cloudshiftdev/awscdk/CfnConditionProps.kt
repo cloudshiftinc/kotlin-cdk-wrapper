@@ -74,7 +74,7 @@ public interface CfnConditionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnConditionProps): CfnConditionProps =
-        CdkObjectWrappers.wrap(cdkObject) as CfnConditionProps
+        CdkObjectWrappers.wrap(cdkObject) as? CfnConditionProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnConditionProps): software.amazon.awscdk.CfnConditionProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.CfnConditionProps

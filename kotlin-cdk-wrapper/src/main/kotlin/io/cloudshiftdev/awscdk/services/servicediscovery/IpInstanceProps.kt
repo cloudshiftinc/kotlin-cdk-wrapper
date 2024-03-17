@@ -193,7 +193,8 @@ public interface IpInstanceProps : IpInstanceBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.IpInstanceProps):
-        IpInstanceProps = CdkObjectWrappers.wrap(cdkObject) as IpInstanceProps
+        IpInstanceProps = CdkObjectWrappers.wrap(cdkObject) as? IpInstanceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: IpInstanceProps):
         software.amazon.awscdk.services.servicediscovery.IpInstanceProps = (wrapped as

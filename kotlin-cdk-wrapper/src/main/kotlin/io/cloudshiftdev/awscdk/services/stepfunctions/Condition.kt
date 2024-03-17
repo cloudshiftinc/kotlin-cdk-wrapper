@@ -42,6 +42,10 @@ public abstract class Condition internal constructor(
    */
   public open fun renderCondition(): Any = unwrap(this).renderCondition()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.stepfunctions.Condition,
+  ) : Condition(cdkObject)
+
   public companion object {
     public fun and(conditions: Condition): Condition =
         software.amazon.awscdk.services.stepfunctions.Condition.and(conditions.let(Condition::unwrap)).let(Condition::wrap)
@@ -221,7 +225,7 @@ public abstract class Condition internal constructor(
         `value`).let(Condition::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Condition): Condition
-        = CdkObjectWrappers.wrap(cdkObject) as Condition
+        = CdkObjectWrappers.wrap(cdkObject) as? Condition ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Condition): software.amazon.awscdk.services.stepfunctions.Condition
         = (wrapped as CdkObject).cdkObject as

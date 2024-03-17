@@ -253,7 +253,8 @@ public interface HttpRouteSpecOptions : RouteSpecOptionsBase {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpRouteSpecOptions):
-        HttpRouteSpecOptions = CdkObjectWrappers.wrap(cdkObject) as HttpRouteSpecOptions
+        HttpRouteSpecOptions = CdkObjectWrappers.wrap(cdkObject) as? HttpRouteSpecOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteSpecOptions):
         software.amazon.awscdk.services.appmesh.HttpRouteSpecOptions = (wrapped as

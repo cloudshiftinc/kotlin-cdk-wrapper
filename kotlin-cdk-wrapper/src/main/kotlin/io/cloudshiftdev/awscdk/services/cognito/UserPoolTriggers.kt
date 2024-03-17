@@ -442,7 +442,8 @@ public interface UserPoolTriggers {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolTriggers):
-        UserPoolTriggers = CdkObjectWrappers.wrap(cdkObject) as UserPoolTriggers
+        UserPoolTriggers = CdkObjectWrappers.wrap(cdkObject) as? UserPoolTriggers ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: UserPoolTriggers):
         software.amazon.awscdk.services.cognito.UserPoolTriggers = (wrapped as CdkObject).cdkObject

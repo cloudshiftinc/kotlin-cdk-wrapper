@@ -33,6 +33,10 @@ import kotlin.jvm.JvmName
 public abstract class Authorization internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.Authorization,
 ) : CdkObject(cdkObject) {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.events.Authorization,
+  ) : Authorization(cdkObject)
+
   public companion object {
     public fun apiKey(apiKeyName: String, apiKeyValue: SecretValue): Authorization =
         software.amazon.awscdk.services.events.Authorization.apiKey(apiKeyName,
@@ -51,7 +55,7 @@ public abstract class Authorization internal constructor(
         oauth(OAuthAuthorizationProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.Authorization):
-        Authorization = CdkObjectWrappers.wrap(cdkObject) as Authorization
+        Authorization = CdkObjectWrappers.wrap(cdkObject) as? Authorization ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Authorization):
         software.amazon.awscdk.services.events.Authorization = (wrapped as CdkObject).cdkObject as

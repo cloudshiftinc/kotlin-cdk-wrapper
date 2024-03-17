@@ -610,7 +610,8 @@ public interface ServerDeploymentGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps):
-        ServerDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as ServerDeploymentGroupProps
+        ServerDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as?
+        ServerDeploymentGroupProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServerDeploymentGroupProps):
         software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps = (wrapped as

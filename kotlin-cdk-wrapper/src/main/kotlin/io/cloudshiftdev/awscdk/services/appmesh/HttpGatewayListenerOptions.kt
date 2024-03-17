@@ -204,7 +204,8 @@ public interface HttpGatewayListenerOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayListenerOptions):
-        HttpGatewayListenerOptions = CdkObjectWrappers.wrap(cdkObject) as HttpGatewayListenerOptions
+        HttpGatewayListenerOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpGatewayListenerOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpGatewayListenerOptions):
         software.amazon.awscdk.services.appmesh.HttpGatewayListenerOptions = (wrapped as

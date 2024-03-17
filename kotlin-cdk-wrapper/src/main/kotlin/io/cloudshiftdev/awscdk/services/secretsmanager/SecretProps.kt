@@ -589,7 +589,7 @@ public interface SecretProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretProps):
-        SecretProps = CdkObjectWrappers.wrap(cdkObject) as SecretProps
+        SecretProps = CdkObjectWrappers.wrap(cdkObject) as? SecretProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: SecretProps):
         software.amazon.awscdk.services.secretsmanager.SecretProps = (wrapped as

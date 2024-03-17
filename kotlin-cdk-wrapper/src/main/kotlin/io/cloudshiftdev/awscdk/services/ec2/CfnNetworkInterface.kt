@@ -1439,8 +1439,8 @@ public open class CfnNetworkInterface internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty):
-          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PrivateIpAddressSpecificationProperty
+          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrivateIpAddressSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty
@@ -1537,8 +1537,8 @@ public open class CfnNetworkInterface internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty):
-          Ipv6PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Ipv6PrefixSpecificationProperty
+          Ipv6PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Ipv6PrefixSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Ipv6PrefixSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty =
@@ -1712,8 +1712,8 @@ public open class CfnNetworkInterface internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty):
-          ConnectionTrackingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ConnectionTrackingSpecificationProperty
+          ConnectionTrackingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectionTrackingSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ConnectionTrackingSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty
@@ -1795,8 +1795,8 @@ public open class CfnNetworkInterface internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty):
-          InstanceIpv6AddressProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceIpv6AddressProperty
+          InstanceIpv6AddressProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceIpv6AddressProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceIpv6AddressProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty =
@@ -1893,8 +1893,8 @@ public open class CfnNetworkInterface internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty):
-          Ipv4PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          Ipv4PrefixSpecificationProperty
+          Ipv4PrefixSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Ipv4PrefixSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: Ipv4PrefixSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty =

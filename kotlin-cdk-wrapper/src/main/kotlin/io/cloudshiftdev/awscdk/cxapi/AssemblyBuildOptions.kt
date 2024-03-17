@@ -42,7 +42,8 @@ public interface AssemblyBuildOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.AssemblyBuildOptions):
-        AssemblyBuildOptions = CdkObjectWrappers.wrap(cdkObject) as AssemblyBuildOptions
+        AssemblyBuildOptions = CdkObjectWrappers.wrap(cdkObject) as? AssemblyBuildOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AssemblyBuildOptions):
         software.amazon.awscdk.cxapi.AssemblyBuildOptions = (wrapped as CdkObject).cdkObject as

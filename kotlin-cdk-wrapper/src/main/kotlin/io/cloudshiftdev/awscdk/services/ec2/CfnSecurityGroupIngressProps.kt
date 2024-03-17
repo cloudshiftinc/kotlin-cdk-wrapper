@@ -605,8 +605,8 @@ public interface CfnSecurityGroupIngressProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupIngressProps):
-        CfnSecurityGroupIngressProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnSecurityGroupIngressProps
+        CfnSecurityGroupIngressProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnSecurityGroupIngressProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSecurityGroupIngressProps):
         software.amazon.awscdk.services.ec2.CfnSecurityGroupIngressProps = (wrapped as

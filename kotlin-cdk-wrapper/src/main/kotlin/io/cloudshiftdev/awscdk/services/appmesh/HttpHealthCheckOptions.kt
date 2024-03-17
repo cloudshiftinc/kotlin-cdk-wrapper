@@ -203,7 +203,8 @@ public interface HttpHealthCheckOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpHealthCheckOptions):
-        HttpHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as HttpHealthCheckOptions
+        HttpHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as? HttpHealthCheckOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpHealthCheckOptions):
         software.amazon.awscdk.services.appmesh.HttpHealthCheckOptions = (wrapped as

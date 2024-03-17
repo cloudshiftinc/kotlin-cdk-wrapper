@@ -962,8 +962,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentParameterProperty):
-          ComponentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ComponentParameterProperty
+          ComponentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentParameterProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentParameterProperty
@@ -1262,8 +1262,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty):
-          EbsInstanceBlockDeviceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          EbsInstanceBlockDeviceSpecificationProperty
+          EbsInstanceBlockDeviceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          EbsInstanceBlockDeviceSpecificationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EbsInstanceBlockDeviceSpecificationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty
@@ -1406,8 +1406,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty):
-          ComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          ComponentConfigurationProperty
+          ComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComponentConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ComponentConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
@@ -1526,8 +1526,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty):
-          TargetContainerRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TargetContainerRepositoryProperty
+          TargetContainerRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetContainerRepositoryProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TargetContainerRepositoryProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty
@@ -1728,8 +1728,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceBlockDeviceMappingProperty):
-          InstanceBlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceBlockDeviceMappingProperty
+          InstanceBlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceBlockDeviceMappingProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceBlockDeviceMappingProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceBlockDeviceMappingProperty
@@ -1889,8 +1889,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty):
-          InstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          InstanceConfigurationProperty
+          InstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: InstanceConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty

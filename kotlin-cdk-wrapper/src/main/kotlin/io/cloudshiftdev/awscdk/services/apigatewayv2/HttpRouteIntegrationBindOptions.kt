@@ -110,8 +110,8 @@ public interface HttpRouteIntegrationBindOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationBindOptions):
-        HttpRouteIntegrationBindOptions = CdkObjectWrappers.wrap(cdkObject) as
-        HttpRouteIntegrationBindOptions
+        HttpRouteIntegrationBindOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpRouteIntegrationBindOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpRouteIntegrationBindOptions):
         software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationBindOptions = (wrapped as

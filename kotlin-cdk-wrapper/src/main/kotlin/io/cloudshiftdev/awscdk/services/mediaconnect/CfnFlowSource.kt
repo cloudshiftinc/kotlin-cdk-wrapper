@@ -1243,7 +1243,8 @@ public open class CfnFlowSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.EncryptionProperty):
-          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionProperty
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as? EncryptionProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: EncryptionProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.EncryptionProperty = (wrapped
@@ -1326,8 +1327,8 @@ public open class CfnFlowSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty):
-          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VpcInterfaceAttachmentProperty
+          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcInterfaceAttachmentProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty
@@ -1474,8 +1475,8 @@ public open class CfnFlowSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.GatewayBridgeSourceProperty):
-          GatewayBridgeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
-          GatewayBridgeSourceProperty
+          GatewayBridgeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GatewayBridgeSourceProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: GatewayBridgeSourceProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.GatewayBridgeSourceProperty =

@@ -170,7 +170,8 @@ public interface ViewerCertificateOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions):
-        ViewerCertificateOptions = CdkObjectWrappers.wrap(cdkObject) as ViewerCertificateOptions
+        ViewerCertificateOptions = CdkObjectWrappers.wrap(cdkObject) as? ViewerCertificateOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ViewerCertificateOptions):
         software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions = (wrapped as

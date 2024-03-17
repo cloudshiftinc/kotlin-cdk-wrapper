@@ -126,7 +126,8 @@ public interface BaseDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.BaseDataSourceProps):
-        BaseDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as BaseDataSourceProps
+        BaseDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as? BaseDataSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: BaseDataSourceProps):
         software.amazon.awscdk.services.appsync.BaseDataSourceProps = (wrapped as

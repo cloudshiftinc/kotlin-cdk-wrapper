@@ -167,7 +167,7 @@ public interface AdjustmentTier {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.AdjustmentTier):
-        AdjustmentTier = CdkObjectWrappers.wrap(cdkObject) as AdjustmentTier
+        AdjustmentTier = CdkObjectWrappers.wrap(cdkObject) as? AdjustmentTier ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AdjustmentTier):
         software.amazon.awscdk.services.autoscaling.AdjustmentTier = (wrapped as

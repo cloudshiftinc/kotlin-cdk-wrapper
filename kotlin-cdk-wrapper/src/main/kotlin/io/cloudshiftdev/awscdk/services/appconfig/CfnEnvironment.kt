@@ -458,7 +458,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty):
-          MonitorProperty = CdkObjectWrappers.wrap(cdkObject) as MonitorProperty
+          MonitorProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitorProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitorProperty):
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty = (wrapped as
@@ -555,7 +556,8 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty):
-          MonitorsProperty = CdkObjectWrappers.wrap(cdkObject) as MonitorsProperty
+          MonitorsProperty = CdkObjectWrappers.wrap(cdkObject) as? MonitorsProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: MonitorsProperty):
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty = (wrapped as

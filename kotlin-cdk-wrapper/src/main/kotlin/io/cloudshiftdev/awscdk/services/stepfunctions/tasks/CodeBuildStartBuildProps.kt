@@ -470,7 +470,8 @@ public interface CodeBuildStartBuildProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildProps):
-        CodeBuildStartBuildProps = CdkObjectWrappers.wrap(cdkObject) as CodeBuildStartBuildProps
+        CodeBuildStartBuildProps = CdkObjectWrappers.wrap(cdkObject) as? CodeBuildStartBuildProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CodeBuildStartBuildProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildProps = (wrapped as

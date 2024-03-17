@@ -379,7 +379,8 @@ public interface CfnSamplingRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRuleProps):
-        CfnSamplingRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnSamplingRuleProps
+        CfnSamplingRuleProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSamplingRuleProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSamplingRuleProps):
         software.amazon.awscdk.services.xray.CfnSamplingRuleProps = (wrapped as CdkObject).cdkObject

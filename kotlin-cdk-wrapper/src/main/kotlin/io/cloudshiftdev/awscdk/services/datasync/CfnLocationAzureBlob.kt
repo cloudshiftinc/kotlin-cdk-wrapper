@@ -665,8 +665,8 @@ public open class CfnLocationAzureBlob internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty):
-          AzureBlobSasConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AzureBlobSasConfigurationProperty
+          AzureBlobSasConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AzureBlobSasConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AzureBlobSasConfigurationProperty):
           software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty

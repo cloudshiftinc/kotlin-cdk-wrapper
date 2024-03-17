@@ -226,7 +226,8 @@ public interface CustomAttributeConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CustomAttributeConfig):
-        CustomAttributeConfig = CdkObjectWrappers.wrap(cdkObject) as CustomAttributeConfig
+        CustomAttributeConfig = CdkObjectWrappers.wrap(cdkObject) as? CustomAttributeConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CustomAttributeConfig):
         software.amazon.awscdk.services.cognito.CustomAttributeConfig = (wrapped as

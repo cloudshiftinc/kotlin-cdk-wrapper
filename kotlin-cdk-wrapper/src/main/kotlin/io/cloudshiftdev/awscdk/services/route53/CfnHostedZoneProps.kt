@@ -1181,7 +1181,8 @@ public interface CfnHostedZoneProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHostedZoneProps):
-        CfnHostedZoneProps = CdkObjectWrappers.wrap(cdkObject) as CfnHostedZoneProps
+        CfnHostedZoneProps = CdkObjectWrappers.wrap(cdkObject) as? CfnHostedZoneProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnHostedZoneProps):
         software.amazon.awscdk.services.route53.CfnHostedZoneProps = (wrapped as

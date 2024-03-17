@@ -153,7 +153,7 @@ public interface VariableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.VariableProps):
-        VariableProps = CdkObjectWrappers.wrap(cdkObject) as VariableProps
+        VariableProps = CdkObjectWrappers.wrap(cdkObject) as? VariableProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: VariableProps):
         software.amazon.awscdk.services.codepipeline.VariableProps = (wrapped as

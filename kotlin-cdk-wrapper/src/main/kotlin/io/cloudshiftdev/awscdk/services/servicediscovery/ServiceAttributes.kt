@@ -214,7 +214,8 @@ public interface ServiceAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceAttributes):
-        ServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as ServiceAttributes
+        ServiceAttributes = CdkObjectWrappers.wrap(cdkObject) as? ServiceAttributes ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ServiceAttributes):
         software.amazon.awscdk.services.servicediscovery.ServiceAttributes = (wrapped as

@@ -952,7 +952,7 @@ public open class CfnTaskSet internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty):
-          ScaleProperty = CdkObjectWrappers.wrap(cdkObject) as ScaleProperty
+          ScaleProperty = CdkObjectWrappers.wrap(cdkObject) as? ScaleProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ScaleProperty):
           software.amazon.awscdk.services.ecs.CfnTaskSet.ScaleProperty = (wrapped as
@@ -1204,7 +1204,8 @@ public open class CfnTaskSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty):
-          LoadBalancerProperty = CdkObjectWrappers.wrap(cdkObject) as LoadBalancerProperty
+          LoadBalancerProperty = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancerProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: LoadBalancerProperty):
           software.amazon.awscdk.services.ecs.CfnTaskSet.LoadBalancerProperty = (wrapped as
@@ -1442,7 +1443,8 @@ public open class CfnTaskSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty):
-          ServiceRegistryProperty = CdkObjectWrappers.wrap(cdkObject) as ServiceRegistryProperty
+          ServiceRegistryProperty = CdkObjectWrappers.wrap(cdkObject) as? ServiceRegistryProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: ServiceRegistryProperty):
           software.amazon.awscdk.services.ecs.CfnTaskSet.ServiceRegistryProperty = (wrapped as
@@ -1584,8 +1586,8 @@ public open class CfnTaskSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          NetworkConfigurationProperty
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnTaskSet.NetworkConfigurationProperty = (wrapped as
@@ -1813,8 +1815,8 @@ public open class CfnTaskSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty):
-          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
-          AwsVpcConfigurationProperty
+          AwsVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AwsVpcConfigurationProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AwsVpcConfigurationProperty):
           software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty = (wrapped as

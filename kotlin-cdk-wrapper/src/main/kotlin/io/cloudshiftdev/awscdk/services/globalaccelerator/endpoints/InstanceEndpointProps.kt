@@ -136,7 +136,8 @@ public interface InstanceEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpointProps):
-        InstanceEndpointProps = CdkObjectWrappers.wrap(cdkObject) as InstanceEndpointProps
+        InstanceEndpointProps = CdkObjectWrappers.wrap(cdkObject) as? InstanceEndpointProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: InstanceEndpointProps):
         software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpointProps = (wrapped

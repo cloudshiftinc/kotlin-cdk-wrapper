@@ -97,7 +97,7 @@ public interface RoleOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.RoleOptions): RoleOptions =
-        CdkObjectWrappers.wrap(cdkObject) as RoleOptions
+        CdkObjectWrappers.wrap(cdkObject) as? RoleOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: RoleOptions): software.amazon.awscdk.RoleOptions = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.RoleOptions

@@ -376,7 +376,8 @@ public interface CfnDataIntegrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegrationProps):
-        CfnDataIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataIntegrationProps
+        CfnDataIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as? CfnDataIntegrationProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnDataIntegrationProps):
         software.amazon.awscdk.services.appintegrations.CfnDataIntegrationProps = (wrapped as

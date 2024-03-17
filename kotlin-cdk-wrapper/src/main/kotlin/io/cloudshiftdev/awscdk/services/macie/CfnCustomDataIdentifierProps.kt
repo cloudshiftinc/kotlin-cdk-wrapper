@@ -416,8 +416,8 @@ public interface CfnCustomDataIdentifierProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnCustomDataIdentifierProps):
-        CfnCustomDataIdentifierProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnCustomDataIdentifierProps
+        CfnCustomDataIdentifierProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnCustomDataIdentifierProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnCustomDataIdentifierProps):
         software.amazon.awscdk.services.macie.CfnCustomDataIdentifierProps = (wrapped as

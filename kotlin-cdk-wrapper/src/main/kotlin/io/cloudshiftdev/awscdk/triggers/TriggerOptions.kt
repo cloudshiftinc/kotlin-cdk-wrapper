@@ -211,7 +211,7 @@ public interface TriggerOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.triggers.TriggerOptions): TriggerOptions =
-        CdkObjectWrappers.wrap(cdkObject) as TriggerOptions
+        CdkObjectWrappers.wrap(cdkObject) as? TriggerOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: TriggerOptions): software.amazon.awscdk.triggers.TriggerOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.triggers.TriggerOptions

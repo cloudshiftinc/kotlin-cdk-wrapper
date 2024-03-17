@@ -266,7 +266,7 @@ public interface CorsRule {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.CorsRule): CorsRule =
-        CdkObjectWrappers.wrap(cdkObject) as CorsRule
+        CdkObjectWrappers.wrap(cdkObject) as? CorsRule ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CorsRule): software.amazon.awscdk.services.s3.CorsRule = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.s3.CorsRule

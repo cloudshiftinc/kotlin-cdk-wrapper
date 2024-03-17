@@ -74,7 +74,8 @@ public interface AddNetworkActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps):
-        AddNetworkActionProps = CdkObjectWrappers.wrap(cdkObject) as AddNetworkActionProps
+        AddNetworkActionProps = CdkObjectWrappers.wrap(cdkObject) as? AddNetworkActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddNetworkActionProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps = (wrapped as

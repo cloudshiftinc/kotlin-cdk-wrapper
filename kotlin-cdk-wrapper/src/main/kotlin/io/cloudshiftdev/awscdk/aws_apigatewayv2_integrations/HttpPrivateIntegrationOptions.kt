@@ -180,8 +180,8 @@ public interface HttpPrivateIntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpPrivateIntegrationOptions):
-        HttpPrivateIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as
-        HttpPrivateIntegrationOptions
+        HttpPrivateIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpPrivateIntegrationOptions ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpPrivateIntegrationOptions):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpPrivateIntegrationOptions =

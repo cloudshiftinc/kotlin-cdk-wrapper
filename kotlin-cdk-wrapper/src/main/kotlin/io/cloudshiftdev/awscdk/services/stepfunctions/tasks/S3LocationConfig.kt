@@ -72,7 +72,8 @@ public interface S3LocationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig):
-        S3LocationConfig = CdkObjectWrappers.wrap(cdkObject) as S3LocationConfig
+        S3LocationConfig = CdkObjectWrappers.wrap(cdkObject) as? S3LocationConfig ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: S3LocationConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig = (wrapped as

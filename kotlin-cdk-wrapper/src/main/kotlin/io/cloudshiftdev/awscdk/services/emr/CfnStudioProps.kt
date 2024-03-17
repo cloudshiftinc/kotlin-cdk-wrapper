@@ -681,7 +681,7 @@ public interface CfnStudioProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnStudioProps): CfnStudioProps
-        = CdkObjectWrappers.wrap(cdkObject) as CfnStudioProps
+        = CdkObjectWrappers.wrap(cdkObject) as? CfnStudioProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnStudioProps): software.amazon.awscdk.services.emr.CfnStudioProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.emr.CfnStudioProps

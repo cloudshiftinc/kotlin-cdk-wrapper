@@ -161,7 +161,8 @@ public interface ProductStackProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStackProps):
-        ProductStackProps = CdkObjectWrappers.wrap(cdkObject) as ProductStackProps
+        ProductStackProps = CdkObjectWrappers.wrap(cdkObject) as? ProductStackProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: ProductStackProps):
         software.amazon.awscdk.services.servicecatalog.ProductStackProps = (wrapped as

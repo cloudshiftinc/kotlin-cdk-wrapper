@@ -696,7 +696,8 @@ public interface CfnServiceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnServiceProps):
-        CfnServiceProps = CdkObjectWrappers.wrap(cdkObject) as CfnServiceProps
+        CfnServiceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServiceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceProps):
         software.amazon.awscdk.services.apprunner.CfnServiceProps = (wrapped as CdkObject).cdkObject

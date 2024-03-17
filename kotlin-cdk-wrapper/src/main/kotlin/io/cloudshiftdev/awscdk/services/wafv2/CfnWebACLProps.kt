@@ -898,7 +898,7 @@ public interface CfnWebACLProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLProps):
-        CfnWebACLProps = CdkObjectWrappers.wrap(cdkObject) as CfnWebACLProps
+        CfnWebACLProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWebACLProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWebACLProps):
         software.amazon.awscdk.services.wafv2.CfnWebACLProps = (wrapped as CdkObject).cdkObject as

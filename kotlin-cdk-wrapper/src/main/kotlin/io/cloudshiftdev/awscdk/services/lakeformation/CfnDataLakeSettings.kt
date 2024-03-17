@@ -1235,8 +1235,8 @@ public open class CfnDataLakeSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty):
-          PrincipalPermissionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          PrincipalPermissionsProperty
+          PrincipalPermissionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PrincipalPermissionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PrincipalPermissionsProperty):
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty
@@ -1319,7 +1319,8 @@ public open class CfnDataLakeSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty):
-          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as DataLakePrincipalProperty
+          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataLakePrincipalProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DataLakePrincipalProperty):
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty

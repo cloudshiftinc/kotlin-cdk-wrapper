@@ -526,7 +526,8 @@ public open class CfnVirtualRouter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty):
-          VirtualRouterSpecProperty = CdkObjectWrappers.wrap(cdkObject) as VirtualRouterSpecProperty
+          VirtualRouterSpecProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualRouterSpecProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualRouterSpecProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
@@ -640,7 +641,8 @@ public open class CfnVirtualRouter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty):
-          PortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as PortMappingProperty
+          PortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? PortMappingProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: PortMappingProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty = (wrapped as
@@ -753,8 +755,8 @@ public open class CfnVirtualRouter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty):
-          VirtualRouterListenerProperty = CdkObjectWrappers.wrap(cdkObject) as
-          VirtualRouterListenerProperty
+          VirtualRouterListenerProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VirtualRouterListenerProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: VirtualRouterListenerProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty =

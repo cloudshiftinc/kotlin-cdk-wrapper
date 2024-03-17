@@ -132,8 +132,8 @@ public interface CfnUserPoolUserToGroupAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachmentProps):
-        CfnUserPoolUserToGroupAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
-        CfnUserPoolUserToGroupAttachmentProps
+        CfnUserPoolUserToGroupAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as?
+        CfnUserPoolUserToGroupAttachmentProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnUserPoolUserToGroupAttachmentProps):
         software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachmentProps = (wrapped as

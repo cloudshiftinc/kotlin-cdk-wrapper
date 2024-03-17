@@ -568,7 +568,8 @@ public interface AddApplicationTargetsProps : AddRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps):
-        AddApplicationTargetsProps = CdkObjectWrappers.wrap(cdkObject) as AddApplicationTargetsProps
+        AddApplicationTargetsProps = CdkObjectWrappers.wrap(cdkObject) as?
+        AddApplicationTargetsProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AddApplicationTargetsProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps = (wrapped

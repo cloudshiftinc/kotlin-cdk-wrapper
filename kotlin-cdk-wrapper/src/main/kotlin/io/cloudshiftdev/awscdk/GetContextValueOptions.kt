@@ -142,7 +142,8 @@ public interface GetContextValueOptions : GetContextKeyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.GetContextValueOptions):
-        GetContextValueOptions = CdkObjectWrappers.wrap(cdkObject) as GetContextValueOptions
+        GetContextValueOptions = CdkObjectWrappers.wrap(cdkObject) as? GetContextValueOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: GetContextValueOptions):
         software.amazon.awscdk.GetContextValueOptions = (wrapped as CdkObject).cdkObject as

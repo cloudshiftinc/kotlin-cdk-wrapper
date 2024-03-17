@@ -235,7 +235,8 @@ public interface CfnServiceActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceActionProps):
-        CfnServiceActionProps = CdkObjectWrappers.wrap(cdkObject) as CfnServiceActionProps
+        CfnServiceActionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnServiceActionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnServiceActionProps):
         software.amazon.awscdk.services.servicecatalog.CfnServiceActionProps = (wrapped as

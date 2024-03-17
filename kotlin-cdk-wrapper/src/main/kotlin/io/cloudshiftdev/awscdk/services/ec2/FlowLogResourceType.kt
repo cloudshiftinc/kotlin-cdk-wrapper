@@ -45,6 +45,10 @@ public abstract class FlowLogResourceType internal constructor(
     unwrap(this).setResourceType(`value`)
   }
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType,
+  ) : FlowLogResourceType(cdkObject)
+
   public companion object {
     public fun fromNetworkInterfaceId(id: String): FlowLogResourceType =
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromNetworkInterfaceId(id).let(FlowLogResourceType::wrap)
@@ -62,7 +66,8 @@ public abstract class FlowLogResourceType internal constructor(
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromVpc(vpc.let(IVpc::unwrap)).let(FlowLogResourceType::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType):
-        FlowLogResourceType = CdkObjectWrappers.wrap(cdkObject) as FlowLogResourceType
+        FlowLogResourceType = CdkObjectWrappers.wrap(cdkObject) as? FlowLogResourceType ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: FlowLogResourceType):
         software.amazon.awscdk.services.ec2.FlowLogResourceType = (wrapped as CdkObject).cdkObject

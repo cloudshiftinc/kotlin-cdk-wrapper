@@ -146,7 +146,8 @@ public interface OriginGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps):
-        OriginGroupProps = CdkObjectWrappers.wrap(cdkObject) as OriginGroupProps
+        OriginGroupProps = CdkObjectWrappers.wrap(cdkObject) as? OriginGroupProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: OriginGroupProps):
         software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps = (wrapped as

@@ -582,7 +582,8 @@ public open class CfnAnalysisTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty):
-          AnalysisSourceProperty = CdkObjectWrappers.wrap(cdkObject) as AnalysisSourceProperty
+          AnalysisSourceProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisSourceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisSourceProperty):
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty =
@@ -675,7 +676,8 @@ public open class CfnAnalysisTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty):
-          AnalysisSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as AnalysisSchemaProperty
+          AnalysisSchemaProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisSchemaProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisSchemaProperty):
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty =
@@ -835,7 +837,8 @@ public open class CfnAnalysisTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty):
-          AnalysisParameterProperty = CdkObjectWrappers.wrap(cdkObject) as AnalysisParameterProperty
+          AnalysisParameterProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisParameterProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: AnalysisParameterProperty):
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty =

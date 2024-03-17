@@ -382,8 +382,8 @@ public open class CfnTransitGatewayConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty):
-          TransitGatewayConnectOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
-          TransitGatewayConnectOptionsProperty
+          TransitGatewayConnectOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TransitGatewayConnectOptionsProperty ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: TransitGatewayConnectOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty

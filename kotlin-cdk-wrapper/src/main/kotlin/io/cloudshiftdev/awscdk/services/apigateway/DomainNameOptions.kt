@@ -246,7 +246,8 @@ public interface DomainNameOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.DomainNameOptions):
-        DomainNameOptions = CdkObjectWrappers.wrap(cdkObject) as DomainNameOptions
+        DomainNameOptions = CdkObjectWrappers.wrap(cdkObject) as? DomainNameOptions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: DomainNameOptions):
         software.amazon.awscdk.services.apigateway.DomainNameOptions = (wrapped as

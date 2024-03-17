@@ -294,7 +294,8 @@ public interface NumericConditions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.NumericConditions):
-        NumericConditions = CdkObjectWrappers.wrap(cdkObject) as NumericConditions
+        NumericConditions = CdkObjectWrappers.wrap(cdkObject) as? NumericConditions ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: NumericConditions):
         software.amazon.awscdk.services.sns.NumericConditions = (wrapped as CdkObject).cdkObject as

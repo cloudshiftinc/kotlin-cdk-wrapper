@@ -414,7 +414,7 @@ public interface CfnSpaceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpaceProps):
-        CfnSpaceProps = CdkObjectWrappers.wrap(cdkObject) as CfnSpaceProps
+        CfnSpaceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnSpaceProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnSpaceProps):
         software.amazon.awscdk.services.sagemaker.CfnSpaceProps = (wrapped as CdkObject).cdkObject

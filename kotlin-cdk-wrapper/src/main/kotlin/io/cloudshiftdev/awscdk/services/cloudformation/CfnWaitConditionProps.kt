@@ -231,7 +231,8 @@ public interface CfnWaitConditionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitConditionProps):
-        CfnWaitConditionProps = CdkObjectWrappers.wrap(cdkObject) as CfnWaitConditionProps
+        CfnWaitConditionProps = CdkObjectWrappers.wrap(cdkObject) as? CfnWaitConditionProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnWaitConditionProps):
         software.amazon.awscdk.services.cloudformation.CfnWaitConditionProps = (wrapped as

@@ -612,7 +612,8 @@ public interface CfnGameSessionQueueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueueProps):
-        CfnGameSessionQueueProps = CdkObjectWrappers.wrap(cdkObject) as CfnGameSessionQueueProps
+        CfnGameSessionQueueProps = CdkObjectWrappers.wrap(cdkObject) as? CfnGameSessionQueueProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnGameSessionQueueProps):
         software.amazon.awscdk.services.gamelift.CfnGameSessionQueueProps = (wrapped as

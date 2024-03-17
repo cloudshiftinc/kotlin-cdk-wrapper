@@ -65,6 +65,10 @@ public abstract class State internal constructor(
    */
   public open fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.stepfunctions.State,
+  ) : State(cdkObject)
+
   public companion object {
     public fun filterNextables(states: List<State>): List<INextable> =
         software.amazon.awscdk.services.stepfunctions.State.filterNextables(states.map(State::unwrap)).map(INextable::wrap)
@@ -102,7 +106,7 @@ public abstract class State internal constructor(
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.State): State =
-        CdkObjectWrappers.wrap(cdkObject) as State
+        CdkObjectWrappers.wrap(cdkObject) as? State ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: State): software.amazon.awscdk.services.stepfunctions.State =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.stepfunctions.State

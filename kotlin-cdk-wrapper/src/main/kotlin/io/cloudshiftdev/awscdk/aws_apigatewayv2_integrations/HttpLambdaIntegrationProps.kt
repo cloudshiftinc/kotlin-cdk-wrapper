@@ -123,7 +123,8 @@ public interface HttpLambdaIntegrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps):
-        HttpLambdaIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as HttpLambdaIntegrationProps
+        HttpLambdaIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as?
+        HttpLambdaIntegrationProps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: HttpLambdaIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps = (wrapped

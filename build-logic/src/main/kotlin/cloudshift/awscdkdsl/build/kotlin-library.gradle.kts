@@ -96,6 +96,6 @@ kotlin {
     }
     kotlinDaemonJvmArgs = when {
         System.getenv("CI") != null -> listOf("-Xms20g", "-Xmx20g")
-        else -> listOf("-Xms12g", "-Xmx12g")
+        else -> listOf("-Xms10g", "-Xmx10g")
     }
 }

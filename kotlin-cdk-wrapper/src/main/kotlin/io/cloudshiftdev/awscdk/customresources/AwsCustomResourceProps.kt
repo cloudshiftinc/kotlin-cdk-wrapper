@@ -666,7 +666,8 @@ public interface AwsCustomResourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.customresources.AwsCustomResourceProps):
-        AwsCustomResourceProps = CdkObjectWrappers.wrap(cdkObject) as AwsCustomResourceProps
+        AwsCustomResourceProps = CdkObjectWrappers.wrap(cdkObject) as? AwsCustomResourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: AwsCustomResourceProps):
         software.amazon.awscdk.customresources.AwsCustomResourceProps = (wrapped as

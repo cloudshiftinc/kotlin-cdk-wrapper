@@ -494,7 +494,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty):
-          FailedReasonProperty = CdkObjectWrappers.wrap(cdkObject) as FailedReasonProperty
+          FailedReasonProperty = CdkObjectWrappers.wrap(cdkObject) as? FailedReasonProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: FailedReasonProperty):
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty = (wrapped as
@@ -575,7 +576,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty):
-          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as NetworkInterfaceProperty
+          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkInterfaceProperty
+          ?: Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: NetworkInterfaceProperty):
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty = (wrapped

@@ -186,7 +186,7 @@ public interface StackSteps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.StackSteps): StackSteps =
-        CdkObjectWrappers.wrap(cdkObject) as StackSteps
+        CdkObjectWrappers.wrap(cdkObject) as? StackSteps ?: Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: StackSteps): software.amazon.awscdk.pipelines.StackSteps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.pipelines.StackSteps

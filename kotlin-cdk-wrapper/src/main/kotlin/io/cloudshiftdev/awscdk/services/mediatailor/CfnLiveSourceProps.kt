@@ -227,7 +227,8 @@ public interface CfnLiveSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSourceProps):
-        CfnLiveSourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnLiveSourceProps
+        CfnLiveSourceProps = CdkObjectWrappers.wrap(cdkObject) as? CfnLiveSourceProps ?:
+        Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: CfnLiveSourceProps):
         software.amazon.awscdk.services.mediatailor.CfnLiveSourceProps = (wrapped as

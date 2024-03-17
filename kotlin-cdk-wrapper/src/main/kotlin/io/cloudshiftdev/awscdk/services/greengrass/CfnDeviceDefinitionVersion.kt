@@ -426,7 +426,8 @@ public open class CfnDeviceDefinitionVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion.DeviceProperty):
-          DeviceProperty = CdkObjectWrappers.wrap(cdkObject) as DeviceProperty
+          DeviceProperty = CdkObjectWrappers.wrap(cdkObject) as? DeviceProperty ?:
+          Wrapper(cdkObject)
 
       internal fun unwrap(wrapped: DeviceProperty):
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion.DeviceProperty =
