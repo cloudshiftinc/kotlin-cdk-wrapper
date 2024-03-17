@@ -25,7 +25,6 @@ dependencyResolutionManagement {
 
 include(":kotlin-cdk-wrapper")
 include(":kotlin-cdk-wrapper-common")
-include(":kotlin-cdk-wrapper-extensions")
 
 gradleEnterprise {
     if (System.getenv("CI") != null) {
