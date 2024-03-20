@@ -41,8 +41,8 @@ public open class LinuxParameters internal constructor(
    *
    * @param cap 
    */
-  public open fun addCapabilities(cap: Capability) {
-    unwrap(this).addCapabilities(cap.let(Capability::unwrap))
+  public open fun addCapabilities(vararg cap: Capability) {
+    unwrap(this).addCapabilities(*cap.map(Capability::unwrap).toTypedArray())
   }
 
   /**
@@ -50,8 +50,8 @@ public open class LinuxParameters internal constructor(
    *
    * @param device 
    */
-  public open fun addDevices(device: Device) {
-    unwrap(this).addDevices(device.let(Device::unwrap))
+  public open fun addDevices(vararg device: Device) {
+    unwrap(this).addDevices(*device.map(Device::unwrap).toTypedArray())
   }
 
   /**
@@ -71,8 +71,8 @@ public open class LinuxParameters internal constructor(
    *
    * @param tmpfs 
    */
-  public open fun addTmpfs(tmpfs: Tmpfs) {
-    unwrap(this).addTmpfs(tmpfs.let(Tmpfs::unwrap))
+  public open fun addTmpfs(vararg tmpfs: Tmpfs) {
+    unwrap(this).addTmpfs(*tmpfs.map(Tmpfs::unwrap).toTypedArray())
   }
 
   /**
@@ -92,8 +92,8 @@ public open class LinuxParameters internal constructor(
    *
    * @param cap 
    */
-  public open fun dropCapabilities(cap: Capability) {
-    unwrap(this).dropCapabilities(cap.let(Capability::unwrap))
+  public open fun dropCapabilities(vararg cap: Capability) {
+    unwrap(this).dropCapabilities(*cap.map(Capability::unwrap).toTypedArray())
   }
 
   /**

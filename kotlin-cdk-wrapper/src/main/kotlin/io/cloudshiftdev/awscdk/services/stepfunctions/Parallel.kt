@@ -156,8 +156,8 @@ public open class Parallel internal constructor(
    *
    * @param branches 
    */
-  public open fun branch(branches: IChainable): Parallel =
-      unwrap(this).branch(branches.let(IChainable::unwrap)).let(Parallel::wrap)
+  public open fun branch(vararg branches: IChainable): Parallel =
+      unwrap(this).branch(*branches.map(IChainable::unwrap).toTypedArray()).let(Parallel::wrap)
 
   /**
    * Continuable states of this Chainable.

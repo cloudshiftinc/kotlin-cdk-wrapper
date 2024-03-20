@@ -20,7 +20,7 @@ public interface ITrigger : IConstruct {
    *
    * @param scopes A list of construct scopes which this trigger will depend on. 
    */
-  public fun executeAfter(scopes: Construct)
+  public fun executeAfter(vararg scopes: Construct)
 
   /**
    * Adds this trigger as a dependency on other constructs.
@@ -30,7 +30,7 @@ public interface ITrigger : IConstruct {
    *
    * @param scopes A list of construct scopes which will take a dependency on this trigger. 
    */
-  public fun executeBefore(scopes: Construct)
+  public fun executeBefore(vararg scopes: Construct)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.triggers.ITrigger,
@@ -43,8 +43,8 @@ public interface ITrigger : IConstruct {
      *
      * @param scopes A list of construct scopes which this trigger will depend on. 
      */
-    override fun executeAfter(scopes: Construct) {
-      unwrap(this).executeAfter(scopes.let(Construct::unwrap))
+    override fun executeAfter(vararg scopes: Construct) {
+      unwrap(this).executeAfter(*scopes.map(Construct::unwrap).toTypedArray())
     }
 
     /**
@@ -55,8 +55,8 @@ public interface ITrigger : IConstruct {
      *
      * @param scopes A list of construct scopes which will take a dependency on this trigger. 
      */
-    override fun executeBefore(scopes: Construct) {
-      unwrap(this).executeBefore(scopes.let(Construct::unwrap))
+    override fun executeBefore(vararg scopes: Construct) {
+      unwrap(this).executeBefore(*scopes.map(Construct::unwrap).toTypedArray())
     }
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)

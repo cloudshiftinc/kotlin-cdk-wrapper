@@ -43,8 +43,8 @@ public open class ClientAttributes internal constructor(
    *
    * @param attributes a list of custom attributes to add to the set. 
    */
-  public open fun withCustomAttributes(attributes: String): ClientAttributes =
-      unwrap(this).withCustomAttributes(attributes).let(ClientAttributes::wrap)
+  public open fun withCustomAttributes(vararg attributes: String): ClientAttributes =
+      unwrap(this).withCustomAttributes(*attributes).let(ClientAttributes::wrap)
 
   /**
    * Creates a custom ClientAttributes with the specified attributes.

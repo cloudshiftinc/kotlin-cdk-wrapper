@@ -129,8 +129,8 @@ public open class ExternalService internal constructor(
    *
    * @param _targets 
    */
-  public override fun registerLoadBalancerTargets(targets: EcsTarget) {
-    unwrap(this).registerLoadBalancerTargets(targets.let(EcsTarget::unwrap))
+  public override fun registerLoadBalancerTargets(vararg targets: EcsTarget) {
+    unwrap(this).registerLoadBalancerTargets(*targets.map(EcsTarget::unwrap).toTypedArray())
   }
 
   /**

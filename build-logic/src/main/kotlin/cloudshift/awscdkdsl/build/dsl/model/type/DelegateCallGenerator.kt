@@ -31,7 +31,7 @@ internal class DelegateCallGenerator(
                 else -> receiverName(cdkObjectName)
             }
             spec.parameters.forEach {
-                parameter(it.name, it.type)
+                parameter(it.name, it.type, it.varargs)
             }
         }.build()
     }
@@ -49,7 +49,7 @@ private class DelegatedCall(
     private var receiverType: ClassName? = null
     private var receiverName: String? = null
 
-    private data class Parameter(val name: String, val type: TypeName)
+    private data class Parameter(val name: String, val type: TypeName, val vararg : Boolean)
     private data class CallSegment(val formatStr: String, val formatArgs: List<Any>)
 
     private val parameters = mutableListOf<Parameter>()
@@ -62,8 +62,8 @@ private class DelegatedCall(
         this.receiverType = receiver
     }
 
-    fun parameter(name: String, type: TypeName) {
-        parameters.add(Parameter(name, type))
+    fun parameter(name: String, type: TypeName, vararg: Boolean) {
+        parameters.add(Parameter(name, type, vararg))
     }
 
     fun build(): CodeBlock {
@@ -194,8 +194,10 @@ private class DelegatedCall(
     private fun maybeUnwrapParameter(parameter: Parameter): CallSegment {
         return when {
             parameter.type.mapClassName() != parameter.type -> {
-                unwrapValue(parameter.name, parameter.type)
+                unwrapValue(parameter.name, parameter.type, parameter.vararg)
             }
+
+            parameter.vararg -> CallSegment("*%N", listOf(parameter.name))
 
             else -> {
                 CallSegment("%N", listOf(parameter.name))
@@ -203,7 +205,7 @@ private class DelegatedCall(
         }
     }
 
-    private fun unwrapValue(name: String, type: TypeName): CallSegment {
+    private fun unwrapValue(name: String, type: TypeName, vararg : Boolean): CallSegment {
         val nullable = if (type.isNullable) "?" else ""
         val nullableListSuffix = if (type.isNullable) " ?: emptyList()" else ""
         val defaultCallSegment = CallSegment("%N", listOf(name))
@@ -254,6 +256,10 @@ private class DelegatedCall(
                 else -> defaultCallSegment
             }
 
+            vararg -> CallSegment(
+                "*%N$nullable.map(%T::unwrap).toTypedArray()",
+                listOf(name, type.mapClassName()),
+            )
             type.isCdkClass -> CallSegment(
                 "%N$nullable.let(%T::unwrap)",
                 listOf(name, type.mapClassName()),

@@ -50,8 +50,8 @@ public open class Alarm internal constructor(
    *
    * @param actions 
    */
-  public override fun addAlarmAction(actions: IAlarmAction) {
-    unwrap(this).addAlarmAction(actions.let(IAlarmAction::unwrap))
+  public override fun addAlarmAction(vararg actions: IAlarmAction) {
+    unwrap(this).addAlarmAction(*actions.map(IAlarmAction::unwrap).toTypedArray())
   }
 
   /**

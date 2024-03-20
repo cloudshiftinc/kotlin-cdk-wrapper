@@ -128,8 +128,8 @@ public open class AutoScalingGroup internal constructor(
    *
    * @param commands 
    */
-  public override fun addUserData(commands: String) {
-    unwrap(this).addUserData(commands)
+  public override fun addUserData(vararg commands: String) {
+    unwrap(this).addUserData(*commands)
   }
 
   /**

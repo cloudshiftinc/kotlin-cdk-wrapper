@@ -45,8 +45,8 @@ public open class ManagedPolicy internal constructor(
    *
    * @param statement 
    */
-  public open fun addStatements(statement: PolicyStatement) {
-    unwrap(this).addStatements(statement.let(PolicyStatement::unwrap))
+  public open fun addStatements(vararg statement: PolicyStatement) {
+    unwrap(this).addStatements(*statement.map(PolicyStatement::unwrap).toTypedArray())
   }
 
   /**

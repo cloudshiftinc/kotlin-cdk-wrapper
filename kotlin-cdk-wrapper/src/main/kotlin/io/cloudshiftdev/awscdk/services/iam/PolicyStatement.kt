@@ -70,8 +70,8 @@ public open class PolicyStatement internal constructor(
    * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_action.html)
    * @param actions actions that will be allowed. 
    */
-  public open fun addActions(actions: String) {
-    unwrap(this).addActions(actions)
+  public open fun addActions(vararg actions: String) {
+    unwrap(this).addActions(*actions)
   }
 
   /**
@@ -176,8 +176,8 @@ public open class PolicyStatement internal constructor(
    * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_notaction.html)
    * @param notActions actions that will be denied. 
    */
-  public open fun addNotActions(notActions: String) {
-    unwrap(this).addNotActions(notActions)
+  public open fun addNotActions(vararg notActions: String) {
+    unwrap(this).addNotActions(*notActions)
   }
 
   /**
@@ -187,8 +187,8 @@ public open class PolicyStatement internal constructor(
    * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_notprincipal.html)
    * @param notPrincipals IAM principals that will be denied access. 
    */
-  public open fun addNotPrincipals(notPrincipals: IPrincipal) {
-    unwrap(this).addNotPrincipals(notPrincipals.let(IPrincipal::unwrap))
+  public open fun addNotPrincipals(vararg notPrincipals: IPrincipal) {
+    unwrap(this).addNotPrincipals(*notPrincipals.map(IPrincipal::unwrap).toTypedArray())
   }
 
   /**
@@ -201,8 +201,8 @@ public open class PolicyStatement internal constructor(
    * @param arns Amazon Resource Names (ARNs) of the resources that this policy statement does not
    * apply to. 
    */
-  public open fun addNotResources(arns: String) {
-    unwrap(this).addNotResources(arns)
+  public open fun addNotResources(vararg arns: String) {
+    unwrap(this).addNotResources(*arns)
   }
 
   /**
@@ -211,8 +211,8 @@ public open class PolicyStatement internal constructor(
    * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)
    * @param principals IAM principals that will be added. 
    */
-  public open fun addPrincipals(principals: IPrincipal) {
-    unwrap(this).addPrincipals(principals.let(IPrincipal::unwrap))
+  public open fun addPrincipals(vararg principals: IPrincipal) {
+    unwrap(this).addPrincipals(*principals.map(IPrincipal::unwrap).toTypedArray())
   }
 
   /**
@@ -223,8 +223,8 @@ public open class PolicyStatement internal constructor(
    * @param arns Amazon Resource Names (ARNs) of the resources that this policy statement applies
    * to. 
    */
-  public open fun addResources(arns: String) {
-    unwrap(this).addResources(arns)
+  public open fun addResources(vararg arns: String) {
+    unwrap(this).addResources(*arns)
   }
 
   /**

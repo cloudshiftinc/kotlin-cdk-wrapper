@@ -33,7 +33,7 @@ public interface IEmailIdentity : IResource {
    * @param grantee the principal (no-op if undefined). 
    * @param actions the set of actions to allow. 
    */
-  public fun grant(grantee: IGrantable, actions: String): Grant
+  public fun grant(grantee: IGrantable, vararg actions: String): Grant
 
   /**
    * Permits an IAM principal the send email action.
@@ -93,8 +93,8 @@ public interface IEmailIdentity : IResource {
      * @param grantee the principal (no-op if undefined). 
      * @param actions the set of actions to allow. 
      */
-    override fun grant(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Permits an IAM principal the send email action.

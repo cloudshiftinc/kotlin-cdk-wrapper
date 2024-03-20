@@ -31,8 +31,8 @@ public abstract class UserData internal constructor(
    *
    * @param commands 
    */
-  public open fun addCommands(commands: String) {
-    unwrap(this).addCommands(commands)
+  public open fun addCommands(vararg commands: String) {
+    unwrap(this).addCommands(*commands)
   }
 
   /**
@@ -59,8 +59,8 @@ public abstract class UserData internal constructor(
    *
    * @param commands 
    */
-  public open fun addOnExitCommands(commands: String) {
-    unwrap(this).addOnExitCommands(commands)
+  public open fun addOnExitCommands(vararg commands: String) {
+    unwrap(this).addOnExitCommands(*commands)
   }
 
   /**

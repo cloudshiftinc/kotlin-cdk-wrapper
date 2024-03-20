@@ -94,8 +94,8 @@ public open class DatabaseCluster internal constructor(
    *
    * @param securityGroups The security groups to add. 
    */
-  public open fun addSecurityGroups(securityGroups: ISecurityGroup) {
-    unwrap(this).addSecurityGroups(securityGroups.let(ISecurityGroup::unwrap))
+  public open fun addSecurityGroups(vararg securityGroups: ISecurityGroup) {
+    unwrap(this).addSecurityGroups(*securityGroups.map(ISecurityGroup::unwrap).toTypedArray())
   }
 
   /**

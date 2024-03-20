@@ -441,9 +441,9 @@ public abstract class GraphqlApiBase internal constructor(
   public override fun grant(
     grantee: IGrantable,
     resources: IamResource,
-    actions: String,
+    vararg actions: String,
   ): Grant = unwrap(this).grant(grantee.let(IGrantable::unwrap), resources.let(IamResource::unwrap),
-      actions).let(Grant::wrap)
+      *actions).let(Grant::wrap)
 
   /**
    * Adds an IAM policy statement for Mutation access to this GraphQLApi to an IAM principal's
@@ -452,8 +452,8 @@ public abstract class GraphqlApiBase internal constructor(
    * @param grantee The principal. 
    * @param fields The fields to grant access to that are Mutations (leave blank for all). 
    */
-  public override fun grantMutation(grantee: IGrantable, fields: String): Grant =
-      unwrap(this).grantMutation(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
+  public override fun grantMutation(grantee: IGrantable, vararg fields: String): Grant =
+      unwrap(this).grantMutation(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
 
   /**
    * Adds an IAM policy statement for Query access to this GraphQLApi to an IAM principal's policy.
@@ -461,8 +461,8 @@ public abstract class GraphqlApiBase internal constructor(
    * @param grantee The principal. 
    * @param fields The fields to grant access to that are Queries (leave blank for all). 
    */
-  public override fun grantQuery(grantee: IGrantable, fields: String): Grant =
-      unwrap(this).grantQuery(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
+  public override fun grantQuery(grantee: IGrantable, vararg fields: String): Grant =
+      unwrap(this).grantQuery(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
 
   /**
    * Adds an IAM policy statement for Subscription access to this GraphQLApi to an IAM principal's
@@ -471,8 +471,8 @@ public abstract class GraphqlApiBase internal constructor(
    * @param grantee The principal. 
    * @param fields The fields to grant access to that are Subscriptions (leave blank for all). 
    */
-  public override fun grantSubscription(grantee: IGrantable, fields: String): Grant =
-      unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
+  public override fun grantSubscription(grantee: IGrantable, vararg fields: String): Grant =
+      unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,

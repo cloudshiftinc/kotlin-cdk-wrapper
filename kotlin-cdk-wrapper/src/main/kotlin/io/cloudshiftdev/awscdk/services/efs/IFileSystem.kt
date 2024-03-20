@@ -40,7 +40,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
    * @param grantee 
    * @param actions 
    */
-  public fun grant(grantee: IGrantable, actions: String): Grant
+  public fun grant(grantee: IGrantable, vararg actions: String): Grant
 
   /**
    * Grant read permissions for this file system to an IAM principal.
@@ -139,8 +139,8 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
      * @param grantee 
      * @param actions 
      */
-    override fun grant(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Grant read permissions for this file system to an IAM principal.

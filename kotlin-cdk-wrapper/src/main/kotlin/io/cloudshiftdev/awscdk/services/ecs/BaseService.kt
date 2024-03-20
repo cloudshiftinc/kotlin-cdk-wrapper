@@ -497,8 +497,8 @@ public abstract class BaseService internal constructor(
    *
    * @param targets 
    */
-  public open fun registerLoadBalancerTargets(targets: EcsTarget) {
-    unwrap(this).registerLoadBalancerTargets(targets.let(EcsTarget::unwrap))
+  public open fun registerLoadBalancerTargets(vararg targets: EcsTarget) {
+    unwrap(this).registerLoadBalancerTargets(*targets.map(EcsTarget::unwrap).toTypedArray())
   }
 
   /**

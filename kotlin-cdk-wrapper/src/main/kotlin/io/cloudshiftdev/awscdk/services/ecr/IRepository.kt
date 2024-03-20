@@ -46,7 +46,7 @@ public interface IRepository : IResource {
    * @param grantee 
    * @param actions 
    */
-  public fun grant(grantee: IGrantable, actions: String): Grant
+  public fun grant(grantee: IGrantable, vararg actions: String): Grant
 
   /**
    * Grant the given identity permissions to pull images in this repository.
@@ -354,8 +354,8 @@ public interface IRepository : IResource {
      * @param grantee 
      * @param actions 
      */
-    override fun grant(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Grant the given identity permissions to pull images in this repository.

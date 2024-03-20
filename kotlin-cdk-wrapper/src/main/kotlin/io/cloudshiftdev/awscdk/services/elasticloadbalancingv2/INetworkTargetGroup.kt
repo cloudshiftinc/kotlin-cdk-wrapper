@@ -17,7 +17,7 @@ public interface INetworkTargetGroup : ITargetGroup {
    *
    * @param targets 
    */
-  public fun addTarget(targets: INetworkLoadBalancerTarget)
+  public fun addTarget(vararg targets: INetworkLoadBalancerTarget)
 
   /**
    * All metrics available for this target group.
@@ -42,8 +42,8 @@ public interface INetworkTargetGroup : ITargetGroup {
      *
      * @param targets 
      */
-    override fun addTarget(targets: INetworkLoadBalancerTarget) {
-      unwrap(this).addTarget(targets.let(INetworkLoadBalancerTarget::unwrap))
+    override fun addTarget(vararg targets: INetworkLoadBalancerTarget) {
+      unwrap(this).addTarget(*targets.map(INetworkLoadBalancerTarget::unwrap).toTypedArray())
     }
 
     /**

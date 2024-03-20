@@ -52,8 +52,8 @@ public open class NetworkTargetGroup internal constructor(
    *
    * @param targets 
    */
-  public override fun addTarget(targets: INetworkLoadBalancerTarget) {
-    unwrap(this).addTarget(targets.let(INetworkLoadBalancerTarget::unwrap))
+  public override fun addTarget(vararg targets: INetworkLoadBalancerTarget) {
+    unwrap(this).addTarget(*targets.map(INetworkLoadBalancerTarget::unwrap).toTypedArray())
   }
 
   /**

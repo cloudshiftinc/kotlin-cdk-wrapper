@@ -51,8 +51,8 @@ public open class BastionHostLinux internal constructor(
    *
    * @param peer 
    */
-  public open fun allowSshAccessFrom(peer: IPeer) {
-    unwrap(this).allowSshAccessFrom(peer.let(IPeer::unwrap))
+  public open fun allowSshAccessFrom(vararg peer: IPeer) {
+    unwrap(this).allowSshAccessFrom(*peer.map(IPeer::unwrap).toTypedArray())
   }
 
   /**

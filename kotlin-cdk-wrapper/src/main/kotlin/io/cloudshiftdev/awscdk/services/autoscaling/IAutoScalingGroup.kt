@@ -47,7 +47,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
    *
    * @param commands 
    */
-  public fun addUserData(commands: String)
+  public fun addUserData(vararg commands: String)
 
   /**
    * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
@@ -240,8 +240,8 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      *
      * @param commands 
      */
-    override fun addUserData(commands: String) {
-      unwrap(this).addUserData(commands)
+    override fun addUserData(vararg commands: String) {
+      unwrap(this).addUserData(*commands)
     }
 
     /**

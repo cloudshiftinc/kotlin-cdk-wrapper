@@ -130,8 +130,8 @@ public open class FileSystem internal constructor(
    * @param grantee Principal to grant right to. 
    * @param actions The actions to grant. 
    */
-  public override fun grant(grantee: IGrantable, actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+  public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
   /**
    * Grant read permissions for this file system to an IAM principal.

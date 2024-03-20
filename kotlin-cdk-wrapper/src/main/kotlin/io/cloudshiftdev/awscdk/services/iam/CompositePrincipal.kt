@@ -46,8 +46,8 @@ public open class CompositePrincipal internal constructor(
    *
    * @param principals IAM principals that will be added to the composite principal. 
    */
-  public open fun addPrincipals(principals: IPrincipal): CompositePrincipal =
-      unwrap(this).addPrincipals(principals.let(IPrincipal::unwrap)).let(CompositePrincipal::wrap)
+  public open fun addPrincipals(vararg principals: IPrincipal): CompositePrincipal =
+      unwrap(this).addPrincipals(*principals.map(IPrincipal::unwrap).toTypedArray()).let(CompositePrincipal::wrap)
 
   /**
    * Add the principal to the AssumeRolePolicyDocument.

@@ -46,8 +46,8 @@ public open class Activity internal constructor(
    * @param identity The principal. 
    * @param actions The list of desired actions. 
    */
-  public open fun grant(identity: IGrantable, actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), actions).let(Grant::wrap)
+  public open fun grant(identity: IGrantable, vararg actions: String): Grant =
+      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
   /**
    * Return the given named metric for this Activity.

@@ -56,8 +56,8 @@ public open class ContainerDefinition internal constructor(
    *
    * @param containerDependencies 
    */
-  public open fun addContainerDependencies(containerDependencies: ContainerDependency) {
-    unwrap(this).addContainerDependencies(containerDependencies.let(ContainerDependency::unwrap))
+  public open fun addContainerDependencies(vararg containerDependencies: ContainerDependency) {
+    unwrap(this).addContainerDependencies(*containerDependencies.map(ContainerDependency::unwrap).toTypedArray())
   }
 
   /**
@@ -86,8 +86,8 @@ public open class ContainerDefinition internal constructor(
    *
    * @param inferenceAcceleratorResources 
    */
-  public open fun addInferenceAcceleratorResource(inferenceAcceleratorResources: String) {
-    unwrap(this).addInferenceAcceleratorResource(inferenceAcceleratorResources)
+  public open fun addInferenceAcceleratorResource(vararg inferenceAcceleratorResources: String) {
+    unwrap(this).addInferenceAcceleratorResource(*inferenceAcceleratorResources)
   }
 
   /**
@@ -123,8 +123,8 @@ public open class ContainerDefinition internal constructor(
    *
    * @param mountPoints 
    */
-  public open fun addMountPoints(mountPoints: MountPoint) {
-    unwrap(this).addMountPoints(mountPoints.let(MountPoint::unwrap))
+  public open fun addMountPoints(vararg mountPoints: MountPoint) {
+    unwrap(this).addMountPoints(*mountPoints.map(MountPoint::unwrap).toTypedArray())
   }
 
   /**
@@ -142,8 +142,8 @@ public open class ContainerDefinition internal constructor(
    *
    * @param portMappings 
    */
-  public open fun addPortMappings(portMappings: PortMapping) {
-    unwrap(this).addPortMappings(portMappings.let(PortMapping::unwrap))
+  public open fun addPortMappings(vararg portMappings: PortMapping) {
+    unwrap(this).addPortMappings(*portMappings.map(PortMapping::unwrap).toTypedArray())
   }
 
   /**
@@ -215,8 +215,8 @@ public open class ContainerDefinition internal constructor(
    *
    * @param ulimits 
    */
-  public open fun addUlimits(ulimits: Ulimit) {
-    unwrap(this).addUlimits(ulimits.let(Ulimit::unwrap))
+  public open fun addUlimits(vararg ulimits: Ulimit) {
+    unwrap(this).addUlimits(*ulimits.map(Ulimit::unwrap).toTypedArray())
   }
 
   /**
@@ -233,8 +233,8 @@ public open class ContainerDefinition internal constructor(
    *
    * @param volumesFrom 
    */
-  public open fun addVolumesFrom(volumesFrom: VolumeFrom) {
-    unwrap(this).addVolumesFrom(volumesFrom.let(VolumeFrom::unwrap))
+  public open fun addVolumesFrom(vararg volumesFrom: VolumeFrom) {
+    unwrap(this).addVolumesFrom(*volumesFrom.map(VolumeFrom::unwrap).toTypedArray())
   }
 
   /**

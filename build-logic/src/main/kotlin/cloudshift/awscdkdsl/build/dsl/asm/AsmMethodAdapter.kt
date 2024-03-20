@@ -59,7 +59,6 @@ internal class AsmMethodAdapter(
             argumentTypes.mapIndexed { index: Int, type: Type ->
                 val parameterName =
                     when {
-                        delegate.parameters != null -> delegate.parameters[index].name
                         sourceMethod?.parameterNames?.get(index) != null -> sourceMethod.parameterNames[index]
                         delegate.localVariables != null ->
                             when {
@@ -89,7 +88,8 @@ internal class AsmMethodAdapter(
 
                 val nullable = allAnnotations.any { it.toString().lowercase().contains("nullable") }
 
-                AsmParameterAdapter(name = parameterName, type = theType, nullable = nullable)
+                val vararg = sourceMethod?.parameterVarArgs?.get(index) ?: false
+                AsmParameterAdapter(name = parameterName, type = theType, nullable = nullable, vararg)
             }
         }
 

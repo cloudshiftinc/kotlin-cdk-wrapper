@@ -45,8 +45,8 @@ public open class MultipartUserData internal constructor(
    *
    * @param commands 
    */
-  public override fun addCommands(commands: String) {
-    unwrap(this).addCommands(commands)
+  public override fun addCommands(vararg commands: String) {
+    unwrap(this).addCommands(*commands)
   }
 
   /**
@@ -73,8 +73,8 @@ public open class MultipartUserData internal constructor(
    *
    * @param commands 
    */
-  public override fun addOnExitCommands(commands: String) {
-    unwrap(this).addOnExitCommands(commands)
+  public override fun addOnExitCommands(vararg commands: String) {
+    unwrap(this).addOnExitCommands(*commands)
   }
 
   /**

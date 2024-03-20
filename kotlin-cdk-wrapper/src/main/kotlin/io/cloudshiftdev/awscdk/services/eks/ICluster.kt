@@ -101,7 +101,7 @@ public interface ICluster : IResource, IConnectable {
    * @param id logical id of this manifest. 
    * @param manifest a list of Kubernetes resource specifications. 
    */
-  public fun addManifest(id: String, manifest: Map<String, Any>): KubernetesManifest
+  public fun addManifest(id: String, vararg manifest: Map<String, Any>): KubernetesManifest
 
   /**
    * Creates a new service account with corresponding IAM Role (IRSA).
@@ -410,8 +410,8 @@ public interface ICluster : IResource, IConnectable {
      * @param id logical id of this manifest. 
      * @param manifest a list of Kubernetes resource specifications. 
      */
-    override fun addManifest(id: String, manifest: Map<String, Any>): KubernetesManifest =
-        unwrap(this).addManifest(id, manifest).let(KubernetesManifest::wrap)
+    override fun addManifest(id: String, vararg manifest: Map<String, Any>): KubernetesManifest =
+        unwrap(this).addManifest(id, *manifest).let(KubernetesManifest::wrap)
 
     /**
      * Creates a new service account with corresponding IAM Role (IRSA).

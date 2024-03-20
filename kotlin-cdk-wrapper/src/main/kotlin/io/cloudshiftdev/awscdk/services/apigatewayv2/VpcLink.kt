@@ -42,8 +42,8 @@ public open class VpcLink internal constructor(
    *
    * @param groups 
    */
-  public open fun addSecurityGroups(groups: ISecurityGroup) {
-    unwrap(this).addSecurityGroups(groups.let(ISecurityGroup::unwrap))
+  public open fun addSecurityGroups(vararg groups: ISecurityGroup) {
+    unwrap(this).addSecurityGroups(*groups.map(ISecurityGroup::unwrap).toTypedArray())
   }
 
   /**
@@ -51,8 +51,8 @@ public open class VpcLink internal constructor(
    *
    * @param subnets 
    */
-  public open fun addSubnets(subnets: ISubnet) {
-    unwrap(this).addSubnets(subnets.let(ISubnet::unwrap))
+  public open fun addSubnets(vararg subnets: ISubnet) {
+    unwrap(this).addSubnets(*subnets.map(ISubnet::unwrap).toTypedArray())
   }
 
   /**

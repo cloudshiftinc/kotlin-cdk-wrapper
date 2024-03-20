@@ -22,7 +22,7 @@ public interface IApplicationTargetGroup : ITargetGroup {
    *
    * @param targets 
    */
-  public fun addTarget(targets: IApplicationLoadBalancerTarget)
+  public fun addTarget(vararg targets: IApplicationLoadBalancerTarget)
 
   /**
    * All metrics available for this target group.
@@ -90,8 +90,8 @@ public interface IApplicationTargetGroup : ITargetGroup {
      *
      * @param targets 
      */
-    override fun addTarget(targets: IApplicationLoadBalancerTarget) {
-      unwrap(this).addTarget(targets.let(IApplicationLoadBalancerTarget::unwrap))
+    override fun addTarget(vararg targets: IApplicationLoadBalancerTarget) {
+      unwrap(this).addTarget(*targets.map(IApplicationLoadBalancerTarget::unwrap).toTypedArray())
     }
 
     /**

@@ -149,8 +149,8 @@ public open class UserPool internal constructor(
    * @param grantee 
    * @param actions 
    */
-  public override fun grant(grantee: IGrantable, actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+  public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
   /**
    * Get all identity providers registered with this user pool.

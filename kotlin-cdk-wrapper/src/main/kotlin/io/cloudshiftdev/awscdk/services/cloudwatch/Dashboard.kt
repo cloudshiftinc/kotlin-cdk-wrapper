@@ -56,8 +56,8 @@ public open class Dashboard internal constructor(
    *
    * @param widgets 
    */
-  public open fun addWidgets(widgets: IWidget) {
-    unwrap(this).addWidgets(widgets.let(IWidget::unwrap))
+  public open fun addWidgets(vararg widgets: IWidget) {
+    unwrap(this).addWidgets(*widgets.map(IWidget::unwrap).toTypedArray())
   }
 
   /**

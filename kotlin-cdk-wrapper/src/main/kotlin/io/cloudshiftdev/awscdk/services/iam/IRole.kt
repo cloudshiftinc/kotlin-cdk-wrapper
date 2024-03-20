@@ -22,7 +22,7 @@ public interface IRole : IIdentity {
    * @param grantee 
    * @param actions 
    */
-  public fun grant(grantee: IPrincipal, actions: String): Grant
+  public fun grant(grantee: IPrincipal, vararg actions: String): Grant
 
   /**
    * Grant permissions to the given principal to assume this role.
@@ -130,8 +130,8 @@ public interface IRole : IIdentity {
      * @param grantee 
      * @param actions 
      */
-    override fun grant(grantee: IPrincipal, actions: String): Grant =
-        unwrap(this).grant(grantee.let(IPrincipal::unwrap), actions).let(Grant::wrap)
+    override fun grant(grantee: IPrincipal, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IPrincipal::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Grant permissions to the given principal to assume this role.
