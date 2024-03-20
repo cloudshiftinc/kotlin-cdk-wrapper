@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEnvironment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentProps,
+  ) :
+      this(software.amazon.awscdk.services.datazone.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnvironmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnvironmentProps(props)
+  )
+
   /**
    * The identifier of the AWS account in which an environment exists.
    */

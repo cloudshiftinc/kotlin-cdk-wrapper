@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDisk internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDiskProps,
+  ) :
+      this(software.amazon.awscdk.services.lightsail.CfnDisk(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDiskProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDiskProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDiskProps(props)
+  )
+
   /**
    * An array of add-ons for the disk.
    */

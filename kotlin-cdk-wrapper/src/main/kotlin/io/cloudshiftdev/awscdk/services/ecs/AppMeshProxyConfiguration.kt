@@ -47,6 +47,14 @@ import kotlin.jvm.JvmName
 public open class AppMeshProxyConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration,
 ) : ProxyConfiguration(cdkObject) {
+  public constructor(props: AppMeshProxyConfigurationConfigProps) :
+      this(software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration(props.let(AppMeshProxyConfigurationConfigProps::unwrap))
+  )
+
+  public constructor(props: AppMeshProxyConfigurationConfigProps.Builder.() -> Unit) :
+      this(AppMeshProxyConfigurationConfigProps(props)
+  )
+
   /**
    * Called when the proxy configuration is configured on a task definition.
    *

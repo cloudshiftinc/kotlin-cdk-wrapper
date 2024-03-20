@@ -49,6 +49,22 @@ public open class CfnHttpNamespace internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHttpNamespaceProps,
+  ) :
+      this(software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHttpNamespaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHttpNamespaceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHttpNamespaceProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the namespace, such as
    * `arn:aws:service-discovery:us-east-1:123456789012:http-namespace/http-namespace-a1bzhi` .

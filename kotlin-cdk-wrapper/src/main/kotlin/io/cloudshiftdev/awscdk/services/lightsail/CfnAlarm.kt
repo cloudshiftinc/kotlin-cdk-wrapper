@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAlarm internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnAlarm,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAlarmProps,
+  ) :
+      this(software.amazon.awscdk.services.lightsail.CfnAlarm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAlarmProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAlarmProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAlarmProps(props)
+  )
+
   /**
    * The name of the alarm.
    */

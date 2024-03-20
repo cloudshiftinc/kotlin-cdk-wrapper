@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Connection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.Connection,
 ) : Resource(cdkObject), IConnection {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ConnectionProps,
+  ) :
+      this(software.amazon.awscdk.services.events.Connection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ConnectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ConnectionProps.Builder.() -> Unit,
+  ) : this(scope, id, ConnectionProps(props)
+  )
+
   /**
    * The ARN of the connection created.
    */

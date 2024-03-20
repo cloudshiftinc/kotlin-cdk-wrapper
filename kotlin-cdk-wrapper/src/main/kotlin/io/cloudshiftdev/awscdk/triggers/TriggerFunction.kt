@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class TriggerFunction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.triggers.TriggerFunction,
 ) : Function(cdkObject), ITrigger {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TriggerFunctionProps,
+  ) :
+      this(software.amazon.awscdk.triggers.TriggerFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TriggerFunctionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TriggerFunctionProps.Builder.() -> Unit,
+  ) : this(scope, id, TriggerFunctionProps(props)
+  )
+
   /**
    * Adds trigger dependencies.
    *

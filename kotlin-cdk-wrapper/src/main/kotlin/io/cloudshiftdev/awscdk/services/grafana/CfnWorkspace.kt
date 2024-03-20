@@ -85,6 +85,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWorkspace internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.grafana.CfnWorkspace,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkspaceProps,
+  ) :
+      this(software.amazon.awscdk.services.grafana.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWorkspaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkspaceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWorkspaceProps(props)
+  )
+
   /**
    * Specifies whether the workspace can access AWS resources in this AWS account only, or whether
    * it can also access AWS resources in other accounts in the same organization.

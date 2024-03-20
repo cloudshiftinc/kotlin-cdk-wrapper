@@ -205,6 +205,22 @@ public open class CfnApplication internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.applicationinsights.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationProps,
+  ) :
+      this(software.amazon.awscdk.services.applicationinsights.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationProps(props)
+  )
+
   /**
    * If set to true, the managed policies for SSM and CW will be attached to the instance roles if
    * they are missing.

@@ -33,6 +33,15 @@ public open class S3EventSourceV2 internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.S3EventSourceV2,
 ) : CdkObject(cdkObject), IEventSource {
+  public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket, props: S3EventSourceProps) :
+      this(software.amazon.awscdk.services.lambda.eventsources.S3EventSourceV2(bucket.let(CloudshiftdevAwscdkServicesS3IBucket::unwrap),
+      props.let(S3EventSourceProps::unwrap))
+  )
+
+  public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket,
+      props: S3EventSourceProps.Builder.() -> Unit) : this(bucket, S3EventSourceProps(props)
+  )
+
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
    *

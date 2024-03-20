@@ -69,6 +69,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRuleset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRulesetProps,
+  ) :
+      this(software.amazon.awscdk.services.databrew.CfnRuleset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRulesetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRulesetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRulesetProps(props)
+  )
+
   /**
    * The description of the ruleset.
    */

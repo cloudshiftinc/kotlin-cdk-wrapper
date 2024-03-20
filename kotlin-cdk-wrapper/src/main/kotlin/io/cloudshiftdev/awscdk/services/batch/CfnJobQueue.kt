@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnJobQueue internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJobQueueProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.CfnJobQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnJobQueueProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJobQueueProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnJobQueueProps(props)
+  )
+
   /**
    * Returns the job queue ARN, such as `batch: *us-east-1* : *111122223333* :job-queue/
    * *JobQueueName*` .

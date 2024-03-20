@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class RequestAuthorizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.RequestAuthorizer,
 ) : Authorizer(cdkObject), IAuthorizer {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RequestAuthorizerProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.RequestAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RequestAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RequestAuthorizerProps.Builder.() -> Unit,
+  ) : this(scope, id, RequestAuthorizerProps(props)
+  )
+
   /**
    * The ARN of the authorizer to be used in permission policies, such as IAM and resource-based
    * grants.

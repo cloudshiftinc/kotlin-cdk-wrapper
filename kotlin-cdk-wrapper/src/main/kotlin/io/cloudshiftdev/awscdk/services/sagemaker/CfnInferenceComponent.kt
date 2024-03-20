@@ -88,6 +88,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInferenceComponent internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnInferenceComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInferenceComponentProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnInferenceComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInferenceComponentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInferenceComponentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInferenceComponentProps(props)
+  )
+
   /**
    * The time when the inference component was created.
    */

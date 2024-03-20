@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGCMChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnGCMChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGCMChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnGCMChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGCMChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGCMChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGCMChannelProps(props)
+  )
+
   /**
    * The Web API key, also called the *server key* , that you received from Google to communicate
    * with Google services.

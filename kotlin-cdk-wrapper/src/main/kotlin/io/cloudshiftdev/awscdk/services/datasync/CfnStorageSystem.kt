@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStorageSystem internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStorageSystemProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnStorageSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStorageSystemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStorageSystemProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStorageSystemProps(props)
+  )
+
   /**
    * Specifies the Amazon Resource Name (ARN) of the DataSync agent that connects to and reads from
    * your on-premises storage system's management interface.

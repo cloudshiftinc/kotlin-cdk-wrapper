@@ -174,6 +174,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVirtualGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVirtualGatewayProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.CfnVirtualGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVirtualGatewayProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVirtualGatewayProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVirtualGatewayProps(props)
+  )
+
   /**
    * The full Amazon Resource Name (ARN) for the virtual gateway.
    */

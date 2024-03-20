@@ -63,6 +63,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFlowLog internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLog,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowLogProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnFlowLog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFlowLogProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowLogProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFlowLogProps(props)
+  )
+
   /**
    * The ID of the flow log.
    *

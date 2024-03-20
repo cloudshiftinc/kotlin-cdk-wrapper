@@ -23,6 +23,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EcsApplication internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplication,
 ) : Resource(cdkObject), IEcsApplication {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codedeploy.EcsApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsApplicationProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.EcsApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EcsApplicationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsApplicationProps.Builder.() -> Unit,
+  ) : this(scope, id, EcsApplicationProps(props)
+  )
+
   /**
    *
    */

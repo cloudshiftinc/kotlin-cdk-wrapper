@@ -38,6 +38,17 @@ import kotlin.collections.List
 public open class FluentdLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.FluentdLogDriver,
 ) : LogDriver(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.ecs.FluentdLogDriver()
+  )
+
+  public constructor(props: FluentdLogDriverProps) :
+      this(software.amazon.awscdk.services.ecs.FluentdLogDriver(props.let(FluentdLogDriverProps::unwrap))
+  )
+
+  public constructor(props: FluentdLogDriverProps.Builder.() -> Unit) :
+      this(FluentdLogDriverProps(props)
+  )
+
   /**
    * Called when the log driver is configured on a container.
    *

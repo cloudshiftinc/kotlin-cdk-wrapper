@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccountAlias internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAlias,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountAliasProps,
+  ) :
+      this(software.amazon.awscdk.services.supportapp.CfnAccountAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccountAliasProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountAliasProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccountAliasProps(props)
+  )
+
   /**
    * An alias or short name for an AWS account .
    */

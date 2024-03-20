@@ -42,6 +42,22 @@ public open class CfnTransitGatewayPeering internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayPeeringProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayPeeringProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayPeeringProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayPeeringProps(props)
+  )
+
   /**
    * The ARN of the core network.
    */

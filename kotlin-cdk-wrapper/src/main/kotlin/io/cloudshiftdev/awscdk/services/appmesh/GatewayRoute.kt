@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class GatewayRoute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRoute,
 ) : Resource(cdkObject), IGatewayRoute {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GatewayRouteProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.GatewayRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(GatewayRouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GatewayRouteProps.Builder.() -> Unit,
+  ) : this(scope, id, GatewayRouteProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the GatewayRoute.
    */

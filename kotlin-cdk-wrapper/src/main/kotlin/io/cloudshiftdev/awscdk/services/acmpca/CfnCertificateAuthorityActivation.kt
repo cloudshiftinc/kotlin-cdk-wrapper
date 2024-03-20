@@ -41,6 +41,22 @@ public open class CfnCertificateAuthorityActivation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCertificateAuthorityActivationProps,
+  ) :
+      this(software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCertificateAuthorityActivationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCertificateAuthorityActivationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCertificateAuthorityActivationProps(props)
+  )
+
   /**
    * The complete Base64 PEM-encoded certificate chain, including the certificate authority
    * certificate.

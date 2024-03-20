@@ -30,6 +30,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ProxyResource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.ProxyResource,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProxyResourceProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.ProxyResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ProxyResourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProxyResourceProps.Builder.() -> Unit,
+  ) : this(scope, id, ProxyResourceProps(props)
+  )
+
   /**
    * Defines a new method for this resource.
    *

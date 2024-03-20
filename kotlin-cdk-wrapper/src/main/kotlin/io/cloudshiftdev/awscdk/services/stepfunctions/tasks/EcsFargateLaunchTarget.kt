@@ -48,6 +48,18 @@ public open class EcsFargateLaunchTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget,
 ) : CdkObject(cdkObject), IEcsLaunchTarget {
+  public constructor() :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget()
+  )
+
+  public constructor(options: EcsFargateLaunchTargetOptions) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget(options.let(EcsFargateLaunchTargetOptions::unwrap))
+  )
+
+  public constructor(options: EcsFargateLaunchTargetOptions.Builder.() -> Unit) :
+      this(EcsFargateLaunchTargetOptions(options)
+  )
+
   /**
    * Called when the Fargate launch type configured on RunTask.
    *

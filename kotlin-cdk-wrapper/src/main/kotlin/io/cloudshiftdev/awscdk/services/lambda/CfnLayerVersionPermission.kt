@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLayerVersionPermission internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionPermission,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLayerVersionPermissionProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.CfnLayerVersionPermission(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLayerVersionPermissionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLayerVersionPermissionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLayerVersionPermissionProps(props)
+  )
+
   /**
    * The API action that grants access to the layer.
    */

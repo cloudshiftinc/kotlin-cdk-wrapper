@@ -67,6 +67,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRecordingConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecordingConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.ivs.CfnRecordingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRecordingConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecordingConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRecordingConfigurationProps(props)
+  )
+
   /**
    * The recording configuration ARN.
    *

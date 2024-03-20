@@ -37,6 +37,21 @@ public open class LambdaDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.destinations.LambdaDestination,
 ) : CdkObject(cdkObject), IDestination {
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
+      this(software.amazon.awscdk.services.lambda.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+  )
+
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
+      options: LambdaDestinationOptions) :
+      this(software.amazon.awscdk.services.lambda.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
+      options.let(LambdaDestinationOptions::unwrap))
+  )
+
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
+      options: LambdaDestinationOptions.Builder.() -> Unit) : this(fn,
+      LambdaDestinationOptions(options)
+  )
+
   /**
    * Returns a destination configuration.
    *

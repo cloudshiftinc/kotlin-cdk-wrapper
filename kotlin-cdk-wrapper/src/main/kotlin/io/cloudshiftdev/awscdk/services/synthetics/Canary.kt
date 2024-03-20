@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Canary internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.Canary,
 ) : Resource(cdkObject), IConnectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CanaryProps,
+  ) :
+      this(software.amazon.awscdk.services.synthetics.Canary(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CanaryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CanaryProps.Builder.() -> Unit,
+  ) : this(scope, id, CanaryProps(props)
+  )
+
   /**
    * Bucket where data from each canary run is stored.
    */

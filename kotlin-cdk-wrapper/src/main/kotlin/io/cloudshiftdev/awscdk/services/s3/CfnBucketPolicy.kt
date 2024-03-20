@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBucketPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.CfnBucketPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBucketPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnBucketPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBucketPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBucketPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBucketPolicyProps(props)
+  )
+
   /**
    * The name of the Amazon S3 bucket to which the policy applies.
    */

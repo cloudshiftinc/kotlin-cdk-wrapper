@@ -35,6 +35,22 @@ public open class CfnDefaultViewAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDefaultViewAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDefaultViewAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDefaultViewAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDefaultViewAssociationProps(props)
+  )
+
   /**
    * The unique identifier of the principal for which the specified view was made the default for
    * the AWS Region that contains the view.

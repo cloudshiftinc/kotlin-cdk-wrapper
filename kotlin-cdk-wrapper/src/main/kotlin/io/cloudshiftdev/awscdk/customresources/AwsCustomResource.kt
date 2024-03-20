@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class AwsCustomResource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.customresources.AwsCustomResource,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IGrantable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AwsCustomResourceProps,
+  ) :
+      this(software.amazon.awscdk.customresources.AwsCustomResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AwsCustomResourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AwsCustomResourceProps.Builder.() -> Unit,
+  ) : this(scope, id, AwsCustomResourceProps(props)
+  )
+
   /**
    * The principal to grant permissions to.
    */

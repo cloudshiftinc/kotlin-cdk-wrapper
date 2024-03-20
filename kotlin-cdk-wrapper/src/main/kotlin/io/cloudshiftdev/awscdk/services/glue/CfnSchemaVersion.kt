@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSchemaVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchemaVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnSchemaVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSchemaVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchemaVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSchemaVersionProps(props)
+  )
+
   /**
    * Represents the version ID associated with the schema version.
    */

@@ -186,6 +186,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnForm internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnForm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFormProps,
+  ) :
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnForm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFormProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFormProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFormProps(props)
+  )
+
   /**
    * The unique ID of the Amplify app associated with the form.
    */

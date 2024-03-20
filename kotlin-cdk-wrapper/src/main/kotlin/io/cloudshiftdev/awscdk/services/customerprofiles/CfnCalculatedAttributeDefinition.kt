@@ -68,6 +68,22 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCalculatedAttributeDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCalculatedAttributeDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCalculatedAttributeDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCalculatedAttributeDefinitionProps(props)
+  )
+
   /**
    * The timestamp of when the calculated attribute definition was created.
    */

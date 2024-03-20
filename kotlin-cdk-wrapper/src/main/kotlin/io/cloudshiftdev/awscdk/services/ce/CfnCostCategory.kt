@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCostCategory internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ce.CfnCostCategory,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCostCategoryProps,
+  ) :
+      this(software.amazon.awscdk.services.ce.CfnCostCategory(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCostCategoryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCostCategoryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCostCategoryProps(props)
+  )
+
   /**
    * The unique identifier for your Cost Category.
    */

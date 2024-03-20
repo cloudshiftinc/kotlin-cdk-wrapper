@@ -28,6 +28,13 @@ import kotlin.jvm.JvmName
 public open class TableWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.TableWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: TableWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.TableWidget(props.let(TableWidgetProps::unwrap))
+  )
+
+  public constructor(props: TableWidgetProps.Builder.() -> Unit) : this(TableWidgetProps(props)
+  )
+
   /**
    * Add another metric.
    *

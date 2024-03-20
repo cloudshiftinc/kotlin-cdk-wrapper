@@ -327,6 +327,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.dms.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEndpointProps(props)
+  )
+
   /**
    * A value that can be used for cross-account validation.
    */

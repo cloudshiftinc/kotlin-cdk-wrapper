@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEndpointAccess internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccess,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointAccessProps,
+  ) :
+      this(software.amazon.awscdk.services.redshift.CfnEndpointAccess(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEndpointAccessProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointAccessProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEndpointAccessProps(props)
+  )
+
   /**
    * The DNS address of the endpoint.
    */

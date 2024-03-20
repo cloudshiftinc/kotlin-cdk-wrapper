@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAssessmentTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTemplate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssessmentTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.inspector.CfnAssessmentTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAssessmentTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssessmentTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAssessmentTemplateProps(props)
+  )
+
   /**
    * The ARN of the assessment target to be included in the assessment template.
    */

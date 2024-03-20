@@ -39,6 +39,27 @@ public open class UntrustedCodeBoundaryPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy,
 ) : ManagedPolicy(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UntrustedCodeBoundaryPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UntrustedCodeBoundaryPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UntrustedCodeBoundaryPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, UntrustedCodeBoundaryPolicyProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy].
    */

@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccount internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccount,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountProps,
+  ) :
+      this(software.amazon.awscdk.services.certificatemanager.CfnAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccountProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccountProps(props)
+  )
+
   /**
    * ID of the AWS account that owns the certificate.
    */

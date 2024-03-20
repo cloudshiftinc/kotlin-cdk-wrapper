@@ -30,6 +30,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class OriginAccessIdentity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentity,
 ) : Resource(cdkObject), IOriginAccessIdentity {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudfront.OriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: OriginAccessIdentityProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.OriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(OriginAccessIdentityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: OriginAccessIdentityProps.Builder.() -> Unit,
+  ) : this(scope, id, OriginAccessIdentityProps(props)
+  )
+
   /**
    * The Amazon S3 canonical user ID for the origin access identity, used when giving the origin
    * access identity read permission to an object in Amazon S3.

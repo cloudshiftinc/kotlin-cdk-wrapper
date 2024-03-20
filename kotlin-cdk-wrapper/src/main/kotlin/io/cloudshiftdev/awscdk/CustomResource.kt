@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CustomResource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CustomResource,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomResourceProps,
+  ) :
+      this(software.amazon.awscdk.CustomResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CustomResourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomResourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CustomResourceProps(props)
+  )
+
   /**
    * Returns the value of an attribute of the custom resource of an arbitrary type.
    *

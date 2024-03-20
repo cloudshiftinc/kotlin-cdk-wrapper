@@ -60,6 +60,22 @@ public open class CallApiGatewayRestApiEndpoint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CallApiGatewayRestApiEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CallApiGatewayRestApiEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CallApiGatewayRestApiEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CallApiGatewayRestApiEndpointProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint].

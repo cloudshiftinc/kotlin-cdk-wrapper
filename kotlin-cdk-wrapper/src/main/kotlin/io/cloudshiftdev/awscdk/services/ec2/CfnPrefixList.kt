@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPrefixList internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPrefixListProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnPrefixList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPrefixListProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPrefixListProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPrefixListProps(props)
+  )
+
   /**
    * The IP address type.
    */

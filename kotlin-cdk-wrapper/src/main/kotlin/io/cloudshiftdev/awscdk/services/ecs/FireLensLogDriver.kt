@@ -35,6 +35,14 @@ import kotlin.collections.Map
 public open class FireLensLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.FireLensLogDriver,
 ) : LogDriver(cdkObject) {
+  public constructor(props: FireLensLogDriverProps) :
+      this(software.amazon.awscdk.services.ecs.FireLensLogDriver(props.let(FireLensLogDriverProps::unwrap))
+  )
+
+  public constructor(props: FireLensLogDriverProps.Builder.() -> Unit) :
+      this(FireLensLogDriverProps(props)
+  )
+
   /**
    * Called when the log driver is configured on a container.
    *

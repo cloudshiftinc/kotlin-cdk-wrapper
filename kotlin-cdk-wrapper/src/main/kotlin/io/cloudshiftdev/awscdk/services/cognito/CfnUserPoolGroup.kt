@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserPoolGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolGroupProps(props)
+  )
+
   /**
    * A string containing the description of the group.
    */

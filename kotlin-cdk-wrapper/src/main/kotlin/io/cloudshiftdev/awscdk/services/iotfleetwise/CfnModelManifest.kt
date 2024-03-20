@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnModelManifest internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnModelManifest,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelManifestProps,
+  ) :
+      this(software.amazon.awscdk.services.iotfleetwise.CfnModelManifest(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnModelManifestProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelManifestProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnModelManifestProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the vehicle model.
    */

@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAlias internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnAlias,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAliasProps,
+  ) :
+      this(software.amazon.awscdk.services.gamelift.CfnAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAliasProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAliasProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAliasProps(props)
+  )
+
   /**
    * A unique identifier for the alias. For example,
    * `arn:aws:gamelift:us-west-1::alias/alias-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912`.

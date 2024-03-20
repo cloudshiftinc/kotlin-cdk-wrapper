@@ -96,6 +96,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrass.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGroupProps(props)
+  )
+
   /**
    * The ARN of the `Group` , such as `arn:aws:greengrass:us-east-1: 
    * :/greengrass/definition/groups/1234a5b6-78cd-901e-2fgh-3i45j6k178l9` .

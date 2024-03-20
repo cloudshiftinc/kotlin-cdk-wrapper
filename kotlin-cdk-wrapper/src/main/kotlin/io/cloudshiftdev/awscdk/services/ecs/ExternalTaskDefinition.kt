@@ -29,6 +29,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ExternalTaskDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinition,
 ) : TaskDefinition(cdkObject), IExternalTaskDefinition {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.ExternalTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ExternalTaskDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.ExternalTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ExternalTaskDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ExternalTaskDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, ExternalTaskDefinitionProps(props)
+  )
+
   /**
    * Overriden method to throw error as interface accelerators are not supported for external tasks.
    *

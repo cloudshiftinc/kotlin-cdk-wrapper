@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBucket internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnBucket,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBucketProps,
+  ) :
+      this(software.amazon.awscdk.services.lightsail.CfnBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBucketProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBucketProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBucketProps(props)
+  )
+
   /**
    * An object that describes the access rules for the bucket.
    */

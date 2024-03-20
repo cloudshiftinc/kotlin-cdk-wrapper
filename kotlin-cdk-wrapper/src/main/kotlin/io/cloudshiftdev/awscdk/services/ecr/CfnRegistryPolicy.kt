@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRegistryPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnRegistryPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRegistryPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.ecr.CfnRegistryPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRegistryPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRegistryPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRegistryPolicyProps(props)
+  )
+
   /**
    * The account ID of the private registry the policy is associated with.
    */

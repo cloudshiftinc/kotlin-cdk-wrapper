@@ -80,6 +80,22 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiGatewayManagedOverridesProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApiGatewayManagedOverridesProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiGatewayManagedOverridesProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApiGatewayManagedOverridesProps(props)
+  )
+
   /**
    * The ID of the API for which to override the configuration of API Gateway-managed resources.
    */

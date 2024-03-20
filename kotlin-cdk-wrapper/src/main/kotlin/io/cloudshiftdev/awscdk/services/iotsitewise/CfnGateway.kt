@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGatewayProps,
+  ) :
+      this(software.amazon.awscdk.services.iotsitewise.CfnGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGatewayProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGatewayProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGatewayProps(props)
+  )
+
   /**
    * The ID for the gateway.
    */

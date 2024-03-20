@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class AsgCapacityProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.AsgCapacityProvider,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AsgCapacityProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.AsgCapacityProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AsgCapacityProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AsgCapacityProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, AsgCapacityProviderProps(props)
+  )
+
   /**
    * Auto Scaling Group.
    */

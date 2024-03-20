@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class FileSystem internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.efs.FileSystem,
 ) : Resource(cdkObject), IFileSystem {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FileSystemProps,
+  ) :
+      this(software.amazon.awscdk.services.efs.FileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FileSystemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FileSystemProps.Builder.() -> Unit,
+  ) : this(scope, id, FileSystemProps(props)
+  )
+
   /**
    * create access point from this filesystem.
    *

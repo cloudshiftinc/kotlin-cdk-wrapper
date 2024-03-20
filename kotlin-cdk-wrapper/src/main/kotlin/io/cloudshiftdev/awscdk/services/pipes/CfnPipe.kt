@@ -325,6 +325,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPipe internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pipes.CfnPipe,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPipeProps,
+  ) :
+      this(software.amazon.awscdk.services.pipes.CfnPipe(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPipeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPipeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPipeProps(props)
+  )
+
   /**
    * The ARN of the pipe.
    */

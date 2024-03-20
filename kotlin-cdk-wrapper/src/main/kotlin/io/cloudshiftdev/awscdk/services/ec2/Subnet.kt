@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Subnet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Subnet,
 ) : Resource(cdkObject), ISubnet {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SubnetProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.Subnet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SubnetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SubnetProps.Builder.() -> Unit,
+  ) : this(scope, id, SubnetProps(props)
+  )
+
   /**
    * Create a default route that points to a passed IGW, with a dependency on the IGW's attachment
    * to the VPC.

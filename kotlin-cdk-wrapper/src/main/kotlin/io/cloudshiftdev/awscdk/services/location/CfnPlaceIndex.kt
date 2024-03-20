@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPlaceIndex internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.location.CfnPlaceIndex,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlaceIndexProps,
+  ) :
+      this(software.amazon.awscdk.services.location.CfnPlaceIndex(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPlaceIndexProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlaceIndexProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPlaceIndexProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across
    * AWS .

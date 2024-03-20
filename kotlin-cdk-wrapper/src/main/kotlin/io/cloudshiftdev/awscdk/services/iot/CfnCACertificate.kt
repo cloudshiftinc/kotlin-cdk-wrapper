@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCACertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnCACertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCACertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnCACertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCACertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCACertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCACertificateProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) for the CA certificate. For example:.
    *

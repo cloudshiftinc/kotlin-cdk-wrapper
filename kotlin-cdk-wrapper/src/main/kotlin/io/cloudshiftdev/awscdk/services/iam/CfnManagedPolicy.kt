@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnManagedPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnManagedPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnManagedPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnManagedPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnManagedPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnManagedPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnManagedPolicyProps(props)
+  )
+
   /**
    * The number of principal entities (users, groups, and roles) that the policy is attached to.
    */

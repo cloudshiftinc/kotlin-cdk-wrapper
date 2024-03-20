@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class HostedZone internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.HostedZone,
 ) : Resource(cdkObject), IHostedZone {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HostedZoneProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.HostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(HostedZoneProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HostedZoneProps.Builder.() -> Unit,
+  ) : this(scope, id, HostedZoneProps(props)
+  )
+
   /**
    * Add another VPC to this private hosted zone.
    *

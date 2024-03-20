@@ -77,6 +77,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWebACL internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWebACLProps,
+  ) :
+      this(software.amazon.awscdk.services.wafv2.CfnWebACL(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWebACLProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWebACLProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWebACLProps(props)
+  )
+
   /**
    * Specifies custom configurations for the associations between the web ACL and protected
    * resources.

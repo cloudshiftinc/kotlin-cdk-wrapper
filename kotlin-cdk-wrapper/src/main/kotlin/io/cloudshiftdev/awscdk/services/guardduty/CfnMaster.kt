@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMaster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnMaster,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMasterProps,
+  ) :
+      this(software.amazon.awscdk.services.guardduty.CfnMaster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMasterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMasterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMasterProps(props)
+  )
+
   /**
    * The unique ID of the detector of the GuardDuty member account.
    */

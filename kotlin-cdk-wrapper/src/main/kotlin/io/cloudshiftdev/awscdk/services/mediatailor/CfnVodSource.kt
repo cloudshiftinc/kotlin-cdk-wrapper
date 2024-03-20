@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVodSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnVodSource,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVodSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.mediatailor.CfnVodSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVodSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVodSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVodSourceProps(props)
+  )
+
   /**
    * The ARN of the VOD source.</p>.
    */

@@ -58,6 +58,22 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityPoolRoleAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIdentityPoolRoleAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityPoolRoleAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIdentityPoolRoleAttachmentProps(props)
+  )
+
   /**
    * The resource ID.
    */

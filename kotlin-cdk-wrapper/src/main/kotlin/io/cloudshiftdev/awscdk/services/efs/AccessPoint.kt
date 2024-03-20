@@ -28,6 +28,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class AccessPoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.efs.AccessPoint,
 ) : Resource(cdkObject), IAccessPoint {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AccessPointProps,
+  ) :
+      this(software.amazon.awscdk.services.efs.AccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AccessPointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AccessPointProps.Builder.() -> Unit,
+  ) : this(scope, id, AccessPointProps(props)
+  )
+
   /**
    * The ARN of the Access Point.
    */

@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStandard internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.securityhub.CfnStandard,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStandardProps,
+  ) :
+      this(software.amazon.awscdk.services.securityhub.CfnStandard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStandardProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStandardProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStandardProps(props)
+  )
+
   /**
    * The ARN of a resource that represents your subscription to a supported standard.
    */

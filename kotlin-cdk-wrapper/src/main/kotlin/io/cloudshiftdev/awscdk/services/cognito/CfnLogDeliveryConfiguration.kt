@@ -46,6 +46,22 @@ public open class CfnLogDeliveryConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogDeliveryConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLogDeliveryConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogDeliveryConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLogDeliveryConfigurationProps(props)
+  )
+
   /**
    * A user pool ID, for example `us-east-1_EXAMPLE` .
    */

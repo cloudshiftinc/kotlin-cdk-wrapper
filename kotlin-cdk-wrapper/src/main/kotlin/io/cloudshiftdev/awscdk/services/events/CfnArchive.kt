@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnArchive internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.CfnArchive,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnArchiveProps,
+  ) :
+      this(software.amazon.awscdk.services.events.CfnArchive(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnArchiveProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnArchiveProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnArchiveProps(props)
+  )
+
   /**
    * The name for the archive to create.
    */

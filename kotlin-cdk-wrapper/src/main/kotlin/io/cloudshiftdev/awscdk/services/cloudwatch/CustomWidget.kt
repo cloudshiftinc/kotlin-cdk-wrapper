@@ -29,6 +29,13 @@ import kotlin.collections.List
 public open class CustomWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CustomWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: CustomWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.CustomWidget(props.let(CustomWidgetProps::unwrap))
+  )
+
+  public constructor(props: CustomWidgetProps.Builder.() -> Unit) : this(CustomWidgetProps(props)
+  )
+
   /**
    * Return the widget JSON for use in the dashboard.
    */

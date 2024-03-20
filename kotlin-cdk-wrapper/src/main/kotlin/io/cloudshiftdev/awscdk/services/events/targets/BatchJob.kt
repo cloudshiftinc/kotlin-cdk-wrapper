@@ -66,6 +66,37 @@ import software.constructs.IConstruct as SoftwareConstructsIConstruct
 public open class BatchJob internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.BatchJob,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(
+    jobQueueArn: String,
+    jobQueueScope: CloudshiftdevConstructsIConstruct,
+    jobDefinitionArn: String,
+    jobDefinitionScope: CloudshiftdevConstructsIConstruct,
+  ) : this(software.amazon.awscdk.services.events.targets.BatchJob(jobQueueArn,
+      jobQueueScope.let(CloudshiftdevConstructsIConstruct::unwrap), jobDefinitionArn,
+      jobDefinitionScope.let(CloudshiftdevConstructsIConstruct::unwrap))
+  )
+
+  public constructor(
+    jobQueueArn: String,
+    jobQueueScope: CloudshiftdevConstructsIConstruct,
+    jobDefinitionArn: String,
+    jobDefinitionScope: CloudshiftdevConstructsIConstruct,
+    props: BatchJobProps,
+  ) : this(software.amazon.awscdk.services.events.targets.BatchJob(jobQueueArn,
+      jobQueueScope.let(CloudshiftdevConstructsIConstruct::unwrap), jobDefinitionArn,
+      jobDefinitionScope.let(CloudshiftdevConstructsIConstruct::unwrap),
+      props.let(BatchJobProps::unwrap))
+  )
+
+  public constructor(
+    jobQueueArn: String,
+    jobQueueScope: CloudshiftdevConstructsIConstruct,
+    jobDefinitionArn: String,
+    jobDefinitionScope: CloudshiftdevConstructsIConstruct,
+    props: BatchJobProps.Builder.() -> Unit,
+  ) : this(jobQueueArn, jobQueueScope, jobDefinitionArn, jobDefinitionScope, BatchJobProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger queue this batch job as a result from an
    * EventBridge event.

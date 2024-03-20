@@ -42,6 +42,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Secret internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.Secret,
 ) : Resource(cdkObject), ISecret {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.secretsmanager.Secret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SecretProps,
+  ) :
+      this(software.amazon.awscdk.services.secretsmanager.Secret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SecretProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SecretProps.Builder.() -> Unit,
+  ) : this(scope, id, SecretProps(props)
+  )
+
   /**
    * Adds a replica region for the secret.
    *

@@ -94,6 +94,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStackSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackSetProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudformation.CfnStackSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStackSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStackSetProps(props)
+  )
+
   /**
    * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.
    */

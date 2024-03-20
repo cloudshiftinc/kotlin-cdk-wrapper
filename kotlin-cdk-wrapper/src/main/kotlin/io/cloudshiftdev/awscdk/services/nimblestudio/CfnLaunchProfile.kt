@@ -78,6 +78,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLaunchProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLaunchProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLaunchProfileProps(props)
+  )
+
   /**
    * The unique identifier for the launch profile resource.
    */

@@ -46,6 +46,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGroupProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) for the specified `AWS::IAM::Group` resource.
    *

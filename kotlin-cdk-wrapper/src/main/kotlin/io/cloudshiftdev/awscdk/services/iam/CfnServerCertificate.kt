@@ -72,6 +72,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServerCertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnServerCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.CfnServerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnServerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServerCertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServerCertificateProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) for the specified `AWS::IAM::ServerCertificate`
    * resource.

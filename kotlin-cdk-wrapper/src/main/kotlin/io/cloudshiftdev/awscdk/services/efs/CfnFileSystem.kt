@@ -76,6 +76,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFileSystem internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFileSystemProps,
+  ) :
+      this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFileSystemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFileSystemProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFileSystemProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the EFS file system.
    *

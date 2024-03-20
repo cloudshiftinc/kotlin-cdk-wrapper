@@ -63,6 +63,27 @@ public open class NetworkMultipleTargetGroupsEc2Service internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2Service,
 ) : NetworkMultipleTargetGroupsServiceBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkMultipleTargetGroupsEc2ServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NetworkMultipleTargetGroupsEc2ServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkMultipleTargetGroupsEc2ServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, NetworkMultipleTargetGroupsEc2ServiceProps(props)
+  )
+
   /**
    * The EC2 service in this construct.
    */

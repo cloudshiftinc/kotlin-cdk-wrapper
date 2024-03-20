@@ -99,6 +99,22 @@ public open class CfnPrincipalPermissions internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPrincipalPermissionsProps,
+  ) :
+      this(software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPrincipalPermissionsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPrincipalPermissionsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPrincipalPermissionsProps(props)
+  )
+
   /**
    * Json encoding of the input principal.
    *

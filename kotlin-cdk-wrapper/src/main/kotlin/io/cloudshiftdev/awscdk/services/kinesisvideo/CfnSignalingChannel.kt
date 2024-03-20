@@ -44,6 +44,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSignalingChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSignalingChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSignalingChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSignalingChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSignalingChannelProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the signaling channel.
    */

@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class RealtimeLogConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.RealtimeLogConfig,
 ) : Resource(cdkObject), IRealtimeLogConfig {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RealtimeLogConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.RealtimeLogConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RealtimeLogConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RealtimeLogConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, RealtimeLogConfigProps(props)
+  )
+
   /**
    * The arn of the realtime log config.
    */

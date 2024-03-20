@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPCGatewayAttachment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCGatewayAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCGatewayAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCGatewayAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCGatewayAttachmentProps(props)
+  )
+
   /**
    * Used to identify if this resource is an Internet Gateway or Vpn Gateway Attachment.
    */

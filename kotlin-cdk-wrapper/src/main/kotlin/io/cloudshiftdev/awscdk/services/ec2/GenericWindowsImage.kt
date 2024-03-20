@@ -30,6 +30,20 @@ import kotlin.collections.Map
 public open class GenericWindowsImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.GenericWindowsImage,
 ) : CdkObject(cdkObject), IMachineImage {
+  public constructor(amiMap: Map<String, String>) :
+      this(software.amazon.awscdk.services.ec2.GenericWindowsImage(amiMap)
+  )
+
+  public constructor(amiMap: Map<String, String>, props: GenericWindowsImageProps) :
+      this(software.amazon.awscdk.services.ec2.GenericWindowsImage(amiMap,
+      props.let(GenericWindowsImageProps::unwrap))
+  )
+
+  public constructor(amiMap: Map<String, String>,
+      props: GenericWindowsImageProps.Builder.() -> Unit) : this(amiMap,
+      GenericWindowsImageProps(props)
+  )
+
   /**
    * Return the image to use in the given context.
    *

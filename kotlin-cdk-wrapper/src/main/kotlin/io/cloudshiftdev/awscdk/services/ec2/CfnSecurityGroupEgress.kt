@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSecurityGroupEgress internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityGroupEgressProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecurityGroupEgressProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityGroupEgressProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecurityGroupEgressProps(props)
+  )
+
   /**
    *
    */

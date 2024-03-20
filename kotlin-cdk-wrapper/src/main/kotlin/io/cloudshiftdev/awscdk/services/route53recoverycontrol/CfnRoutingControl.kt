@@ -42,6 +42,22 @@ public open class CfnRoutingControl internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoutingControlProps,
+  ) :
+      this(software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRoutingControlProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoutingControlProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRoutingControlProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the routing control.
    */

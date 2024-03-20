@@ -46,6 +46,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTrafficMirrorFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrafficMirrorFilterProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTrafficMirrorFilterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrafficMirrorFilterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTrafficMirrorFilterProps(props)
+  )
+
   /**
    *
    */

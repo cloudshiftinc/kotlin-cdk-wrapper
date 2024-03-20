@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnParameterGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.memorydb.CfnParameterGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnParameterGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.memorydb.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnParameterGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnParameterGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnParameterGroupProps(props)
+  )
+
   /**
    * When you pass the logical ID of this resource to the intrinsic `Ref` function, Ref returns the
    * ARN of the parameter group, such as

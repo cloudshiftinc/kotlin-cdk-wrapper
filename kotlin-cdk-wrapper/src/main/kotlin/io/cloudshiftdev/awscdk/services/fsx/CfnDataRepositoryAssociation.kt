@@ -70,6 +70,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataRepositoryAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataRepositoryAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataRepositoryAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataRepositoryAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataRepositoryAssociationProps(props)
+  )
+
   /**
    * Returns the data repository association's system generated Association ID.
    *

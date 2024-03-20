@@ -50,6 +50,18 @@ public open class EcsEc2LaunchTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget,
 ) : CdkObject(cdkObject), IEcsLaunchTarget {
+  public constructor() :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget()
+  )
+
+  public constructor(options: EcsEc2LaunchTargetOptions) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget(options.let(EcsEc2LaunchTargetOptions::unwrap))
+  )
+
+  public constructor(options: EcsEc2LaunchTargetOptions.Builder.() -> Unit) :
+      this(EcsEc2LaunchTargetOptions(options)
+  )
+
   /**
    * Called when the EC2 launch type is configured on RunTask.
    *

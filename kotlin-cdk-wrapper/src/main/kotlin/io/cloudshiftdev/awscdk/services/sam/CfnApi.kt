@@ -104,6 +104,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApi internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sam.CfnApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiProps,
+  ) :
+      this(software.amazon.awscdk.services.sam.CfnApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApiProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApiProps(props)
+  )
+
   /**
    *
    */

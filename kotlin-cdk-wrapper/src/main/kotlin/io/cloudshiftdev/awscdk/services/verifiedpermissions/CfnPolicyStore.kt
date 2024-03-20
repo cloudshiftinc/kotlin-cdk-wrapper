@@ -46,6 +46,22 @@ public open class CfnPolicyStore internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyStoreProps,
+  ) :
+      this(software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPolicyStoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyStoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPolicyStoreProps(props)
+  )
+
   /**
    * The [Amazon Resource Name
    * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the new or

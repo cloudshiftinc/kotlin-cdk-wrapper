@@ -91,6 +91,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventTypeProps,
+  ) :
+      this(software.amazon.awscdk.services.frauddetector.CfnEventType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventTypeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventTypeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventTypeProps(props)
+  )
+
   /**
    * The event type ARN.
    */

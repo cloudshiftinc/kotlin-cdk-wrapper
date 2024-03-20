@@ -169,6 +169,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAlarmModel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAlarmModelProps,
+  ) :
+      this(software.amazon.awscdk.services.iotevents.CfnAlarmModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAlarmModelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAlarmModelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAlarmModelProps(props)
+  )
+
   /**
    * Contains the configuration information of alarm state changes.
    */

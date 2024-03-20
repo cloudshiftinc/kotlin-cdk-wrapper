@@ -68,6 +68,22 @@ public open class CfnResolverEndpoint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResolverEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResolverEndpointProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the resolver endpoint, such as
    * `arn:aws:route53resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi` .

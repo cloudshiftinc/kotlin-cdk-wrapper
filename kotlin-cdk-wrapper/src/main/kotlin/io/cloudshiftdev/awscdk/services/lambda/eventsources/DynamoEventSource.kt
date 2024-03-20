@@ -43,6 +43,16 @@ public open class DynamoEventSource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource,
 ) : StreamEventSource(cdkObject) {
+  public constructor(table: CloudshiftdevAwscdkServicesDynamodbITable,
+      props: DynamoEventSourceProps) :
+      this(software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource(table.let(CloudshiftdevAwscdkServicesDynamodbITable::unwrap),
+      props.let(DynamoEventSourceProps::unwrap))
+  )
+
+  public constructor(table: CloudshiftdevAwscdkServicesDynamodbITable,
+      props: DynamoEventSourceProps.Builder.() -> Unit) : this(table, DynamoEventSourceProps(props)
+  )
+
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
    *

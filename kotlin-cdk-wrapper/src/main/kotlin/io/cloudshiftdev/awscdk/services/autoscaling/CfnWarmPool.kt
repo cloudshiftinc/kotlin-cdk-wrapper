@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWarmPool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnWarmPool,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWarmPoolProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.CfnWarmPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWarmPoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWarmPoolProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWarmPoolProps(props)
+  )
+
   /**
    * The name of the Auto Scaling group.
    */

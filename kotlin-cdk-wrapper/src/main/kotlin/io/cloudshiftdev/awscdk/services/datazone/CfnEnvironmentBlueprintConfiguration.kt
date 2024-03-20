@@ -48,6 +48,22 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentBlueprintConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnvironmentBlueprintConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentBlueprintConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnvironmentBlueprintConfigurationProps(props)
+  )
+
   /**
    * The timestamp of when an environment blueprint was created.
    */

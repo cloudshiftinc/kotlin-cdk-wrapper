@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConnectPeer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectPeerProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnConnectPeer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConnectPeerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectPeerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConnectPeerProps(props)
+  )
+
   /**
    *
    */

@@ -43,6 +43,22 @@ public open class CfnNetworkInsightsAccessScopeAnalysis internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysis,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInsightsAccessScopeAnalysisProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysis(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkInsightsAccessScopeAnalysisProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInsightsAccessScopeAnalysisProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkInsightsAccessScopeAnalysisProps(props)
+  )
+
   /**
    * The number of network interfaces analyzed.
    */

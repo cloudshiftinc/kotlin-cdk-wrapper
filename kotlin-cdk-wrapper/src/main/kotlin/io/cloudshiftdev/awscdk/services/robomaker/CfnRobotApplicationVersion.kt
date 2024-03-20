@@ -34,6 +34,22 @@ public open class CfnRobotApplicationVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRobotApplicationVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRobotApplicationVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRobotApplicationVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRobotApplicationVersionProps(props)
+  )
+
   /**
    * The application information for the robot application.
    */

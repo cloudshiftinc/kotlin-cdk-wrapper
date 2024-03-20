@@ -27,6 +27,21 @@ import software.amazon.awscdk.services.sagemaker.IEndpoint as AmazonAwscdkServic
 public open class SagemakerIntegration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegration,
 ) : AwsIntegration(cdkObject) {
+  public constructor(endpoint: CloudshiftdevAwscdkServicesSagemakerIEndpoint) :
+      this(software.amazon.awscdk.services.apigateway.SagemakerIntegration(endpoint.let(CloudshiftdevAwscdkServicesSagemakerIEndpoint::unwrap))
+  )
+
+  public constructor(endpoint: CloudshiftdevAwscdkServicesSagemakerIEndpoint,
+      options: SagemakerIntegrationOptions) :
+      this(software.amazon.awscdk.services.apigateway.SagemakerIntegration(endpoint.let(CloudshiftdevAwscdkServicesSagemakerIEndpoint::unwrap),
+      options.let(SagemakerIntegrationOptions::unwrap))
+  )
+
+  public constructor(endpoint: CloudshiftdevAwscdkServicesSagemakerIEndpoint,
+      options: SagemakerIntegrationOptions.Builder.() -> Unit) : this(endpoint,
+      SagemakerIntegrationOptions(options)
+  )
+
   /**
    * Can be overridden by subclasses to allow the integration to interact with the method being
    * integrated, access the REST API object, method ARNs, etc.

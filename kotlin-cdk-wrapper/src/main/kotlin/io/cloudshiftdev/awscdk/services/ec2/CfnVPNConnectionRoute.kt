@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPNConnectionRoute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnectionRoute,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPNConnectionRouteProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPNConnectionRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPNConnectionRouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPNConnectionRouteProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPNConnectionRouteProps(props)
+  )
+
   /**
    * The CIDR block associated with the local subnet of the customer network.
    */

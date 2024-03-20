@@ -160,6 +160,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserPool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolProps(props)
+  )
+
   /**
    * Use this setting to define which verified available method a user can use to recover their
    * password when they call `ForgotPassword` .

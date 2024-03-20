@@ -56,6 +56,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ParameterGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.ParameterGroup,
 ) : Resource(cdkObject), IParameterGroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ParameterGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.ParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ParameterGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ParameterGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, ParameterGroupProps(props)
+  )
+
   /**
    * Add a parameter to this parameter group.
    *

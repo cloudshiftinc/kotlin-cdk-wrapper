@@ -45,6 +45,22 @@ public open class CfnRepositoryLink internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codestarconnections.CfnRepositoryLink,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRepositoryLinkProps,
+  ) :
+      this(software.amazon.awscdk.services.codestarconnections.CfnRepositoryLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRepositoryLinkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRepositoryLinkProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRepositoryLinkProps(props)
+  )
+
   /**
    * The name of the external provider where your third-party code repository is configured.
    */

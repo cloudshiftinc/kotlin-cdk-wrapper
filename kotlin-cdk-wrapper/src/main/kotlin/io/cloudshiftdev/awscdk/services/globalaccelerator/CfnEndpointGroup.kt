@@ -60,6 +60,22 @@ public open class CfnEndpointGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEndpointGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEndpointGroupProps(props)
+  )
+
   /**
    * The ARN of the endpoint group, such as
    * `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz/endpoint-group/098765zyxwvu`

@@ -36,6 +36,22 @@ public open class StepFunctionsInvokeActivity internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StepFunctionsInvokeActivityProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(StepFunctionsInvokeActivityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StepFunctionsInvokeActivityProps.Builder.() -> Unit,
+  ) : this(scope, id, StepFunctionsInvokeActivityProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity].

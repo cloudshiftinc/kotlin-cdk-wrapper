@@ -56,6 +56,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFuotaTask internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnFuotaTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFuotaTaskProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnFuotaTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFuotaTaskProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFuotaTaskProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFuotaTaskProps(props)
+  )
+
   /**
    * The ID of the multicast group to associate with a FUOTA task.
    */

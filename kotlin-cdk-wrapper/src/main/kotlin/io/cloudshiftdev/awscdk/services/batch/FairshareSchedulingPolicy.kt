@@ -47,6 +47,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class FairshareSchedulingPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicy,
 ) : Resource(cdkObject), IFairshareSchedulingPolicy, ISchedulingPolicy {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.batch.FairshareSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FairshareSchedulingPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.FairshareSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FairshareSchedulingPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FairshareSchedulingPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, FairshareSchedulingPolicyProps(props)
+  )
+
   /**
    * Add a share this to this Fairshare SchedulingPolicy.
    *

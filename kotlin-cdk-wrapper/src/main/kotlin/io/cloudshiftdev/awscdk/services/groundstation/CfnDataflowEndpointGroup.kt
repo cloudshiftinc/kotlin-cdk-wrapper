@@ -92,6 +92,22 @@ public open class CfnDataflowEndpointGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataflowEndpointGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataflowEndpointGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataflowEndpointGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataflowEndpointGroupProps(props)
+  )
+
   /**
    * The ARN of the dataflow endpoint group, such as
    * `arn:aws:groundstation:us-east-2:1234567890:dataflow-endpoint-group/9940bf3b-d2ba-427e-9906-842b5e5d2296`

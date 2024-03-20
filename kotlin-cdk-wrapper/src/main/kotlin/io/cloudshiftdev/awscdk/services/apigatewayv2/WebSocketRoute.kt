@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class WebSocketRoute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRoute,
 ) : Resource(cdkObject), IWebSocketRoute {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WebSocketRouteProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(WebSocketRouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WebSocketRouteProps.Builder.() -> Unit,
+  ) : this(scope, id, WebSocketRouteProps(props)
+  )
+
   /**
    * Integration response ID.
    */

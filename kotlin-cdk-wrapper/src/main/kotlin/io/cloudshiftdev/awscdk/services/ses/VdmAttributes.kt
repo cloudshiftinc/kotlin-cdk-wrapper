@@ -24,6 +24,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VdmAttributes internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.VdmAttributes,
 ) : Resource(cdkObject), IVdmAttributes {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ses.VdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VdmAttributesProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.VdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VdmAttributesProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VdmAttributesProps.Builder.() -> Unit,
+  ) : this(scope, id, VdmAttributesProps(props)
+  )
+
   /**
    * The name of the resource behind the Virtual Deliverablity Manager attributes.
    */

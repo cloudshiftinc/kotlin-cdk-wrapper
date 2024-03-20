@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BastionHostLinux internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.BastionHostLinux,
 ) : Resource(cdkObject), IInstance {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BastionHostLinuxProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.BastionHostLinux(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BastionHostLinuxProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BastionHostLinuxProps.Builder.() -> Unit,
+  ) : this(scope, id, BastionHostLinuxProps(props)
+  )
+
   /**
    * Allow SSH access from the given peer or peers.
    *

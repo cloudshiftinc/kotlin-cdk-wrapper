@@ -86,6 +86,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBackupPlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.CfnBackupPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBackupPlanProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.CfnBackupPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBackupPlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBackupPlanProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBackupPlanProps(props)
+  )
+
   /**
    * An Amazon Resource Name (ARN) that uniquely identifies a backup plan;
    *

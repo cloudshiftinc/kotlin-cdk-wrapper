@@ -63,6 +63,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInstanceStorageConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceStorageConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnInstanceStorageConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInstanceStorageConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceStorageConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInstanceStorageConfigProps(props)
+  )
+
   /**
    * The existing association identifier that uniquely identifies the resource type and storage
    * config for the given instance ID.

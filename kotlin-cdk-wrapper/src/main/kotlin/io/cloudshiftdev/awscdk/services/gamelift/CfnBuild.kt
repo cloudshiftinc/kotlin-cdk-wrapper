@@ -49,6 +49,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBuild internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBuildProps,
+  ) :
+      this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBuildProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBuildProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBuildProps(props)
+  )
+
   /**
    * A unique identifier for the build.
    */

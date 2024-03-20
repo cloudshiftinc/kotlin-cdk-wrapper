@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAuthPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnAuthPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAuthPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.vpclattice.CfnAuthPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAuthPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAuthPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAuthPolicyProps(props)
+  )
+
   /**
    * The state of the auth policy.
    *

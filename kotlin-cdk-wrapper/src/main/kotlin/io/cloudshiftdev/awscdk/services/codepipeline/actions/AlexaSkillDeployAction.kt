@@ -36,6 +36,14 @@ public open class AlexaSkillDeployAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployAction,
 ) : Action(cdkObject) {
+  public constructor(props: AlexaSkillDeployActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployAction(props.let(AlexaSkillDeployActionProps::unwrap))
+  )
+
+  public constructor(props: AlexaSkillDeployActionProps.Builder.() -> Unit) :
+      this(AlexaSkillDeployActionProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.codepipeline.actions.AlexaSkillDeployAction].

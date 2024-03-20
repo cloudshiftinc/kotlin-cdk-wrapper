@@ -74,6 +74,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServerlessCache internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerlessCacheProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticache.CfnServerlessCache(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServerlessCacheProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerlessCacheProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServerlessCacheProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the serverless cache.
    */

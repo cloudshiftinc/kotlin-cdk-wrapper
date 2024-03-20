@@ -74,6 +74,14 @@ public open class CodeCommitSourceAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction,
 ) : Action(cdkObject) {
+  public constructor(props: CodeCommitSourceActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction(props.let(CodeCommitSourceActionProps::unwrap))
+  )
+
+  public constructor(props: CodeCommitSourceActionProps.Builder.() -> Unit) :
+      this(CodeCommitSourceActionProps(props)
+  )
+
   /**
    * The variables emitted by this action.
    */

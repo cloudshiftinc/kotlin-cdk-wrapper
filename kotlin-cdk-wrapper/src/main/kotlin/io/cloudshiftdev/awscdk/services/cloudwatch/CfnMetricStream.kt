@@ -88,6 +88,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMetricStream internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMetricStreamProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudwatch.CfnMetricStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMetricStreamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMetricStreamProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMetricStreamProps(props)
+  )
+
   /**
    * The ARN of the metric stream.
    */

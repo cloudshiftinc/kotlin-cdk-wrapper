@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGeofenceCollection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.location.CfnGeofenceCollection,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGeofenceCollectionProps,
+  ) :
+      this(software.amazon.awscdk.services.location.CfnGeofenceCollection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGeofenceCollectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGeofenceCollectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGeofenceCollectionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the geofence collection resource.
    *

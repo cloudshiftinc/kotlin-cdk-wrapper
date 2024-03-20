@@ -57,6 +57,27 @@ public open class ApplicationLoadBalancedEc2Service internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2Service,
 ) : ApplicationLoadBalancedServiceBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationLoadBalancedEc2ServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApplicationLoadBalancedEc2ServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationLoadBalancedEc2ServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, ApplicationLoadBalancedEc2ServiceProps(props)
+  )
+
   /**
    * The EC2 service in this construct.
    */

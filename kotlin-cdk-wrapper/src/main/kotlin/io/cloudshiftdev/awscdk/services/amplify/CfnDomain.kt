@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDomain internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.amplify.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainProps,
+  ) :
+      this(software.amazon.awscdk.services.amplify.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDomainProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDomainProps(props)
+  )
+
   /**
    * The unique ID for an Amplify app.
    */

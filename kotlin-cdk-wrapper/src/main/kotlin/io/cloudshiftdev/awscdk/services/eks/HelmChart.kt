@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class HelmChart internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.HelmChart,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HelmChartProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.HelmChart(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(HelmChartProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HelmChartProps.Builder.() -> Unit,
+  ) : this(scope, id, HelmChartProps(props)
+  )
+
   /**
    *
    */

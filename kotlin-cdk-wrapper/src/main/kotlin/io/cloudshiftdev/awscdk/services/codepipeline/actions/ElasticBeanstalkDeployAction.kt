@@ -34,6 +34,14 @@ public open class ElasticBeanstalkDeployAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction,
 ) : Action(cdkObject) {
+  public constructor(props: ElasticBeanstalkDeployActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction(props.let(ElasticBeanstalkDeployActionProps::unwrap))
+  )
+
+  public constructor(props: ElasticBeanstalkDeployActionProps.Builder.() -> Unit) :
+      this(ElasticBeanstalkDeployActionProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction].

@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReplicationSubnetGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationSubnetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReplicationSubnetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationSubnetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReplicationSubnetGroupProps(props)
+  )
+
   /**
    *
    */

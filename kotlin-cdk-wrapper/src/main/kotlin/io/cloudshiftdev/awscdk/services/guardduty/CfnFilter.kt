@@ -68,6 +68,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFilterProps,
+  ) :
+      this(software.amazon.awscdk.services.guardduty.CfnFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFilterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFilterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFilterProps(props)
+  )
+
   /**
    * Specifies the action that is to be applied to the findings that match the filter.
    */

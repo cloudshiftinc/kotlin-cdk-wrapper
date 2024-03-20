@@ -35,6 +35,22 @@ public open class EmrContainersCreateVirtualCluster internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrContainersCreateVirtualClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EmrContainersCreateVirtualClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrContainersCreateVirtualClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, EmrContainersCreateVirtualClusterProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster].

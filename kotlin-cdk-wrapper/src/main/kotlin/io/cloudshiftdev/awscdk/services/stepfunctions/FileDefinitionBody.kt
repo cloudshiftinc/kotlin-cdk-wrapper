@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
+import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -30,6 +31,19 @@ import kotlin.jvm.JvmName
 public open class FileDefinitionBody internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.FileDefinitionBody,
 ) : DefinitionBody(cdkObject) {
+  public constructor(path: String) :
+      this(software.amazon.awscdk.services.stepfunctions.FileDefinitionBody(path)
+  )
+
+  public constructor(path: String, options: AssetOptions) :
+      this(software.amazon.awscdk.services.stepfunctions.FileDefinitionBody(path,
+      options.let(AssetOptions::unwrap))
+  )
+
+  public constructor(path: String, options: AssetOptions.Builder.() -> Unit) : this(path,
+      AssetOptions(options)
+  )
+
   /**
    * @param scope 
    * @param _sfnPrincipal 

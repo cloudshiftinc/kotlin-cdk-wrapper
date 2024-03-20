@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVirtualMFADevice internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnVirtualMFADevice,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVirtualMFADeviceProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnVirtualMFADevice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVirtualMFADeviceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVirtualMFADeviceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVirtualMFADeviceProps(props)
+  )
+
   /**
    * Returns the serial number for the specified `AWS::IAM::VirtualMFADevice` resource.
    */

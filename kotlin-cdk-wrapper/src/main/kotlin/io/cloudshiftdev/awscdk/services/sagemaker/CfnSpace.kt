@@ -103,6 +103,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSpace internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSpaceProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnSpace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSpaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSpaceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSpaceProps(props)
+  )
+
   /**
    * The space's Amazon Resource Name (ARN).
    */

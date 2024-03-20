@@ -31,6 +31,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VpcEndpointService internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.VpcEndpointService,
 ) : Resource(cdkObject), IVpcEndpointService {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpcEndpointServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.VpcEndpointService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VpcEndpointServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpcEndpointServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, VpcEndpointServiceProps(props)
+  )
+
   /**
    * Whether to require manual acceptance of new connections to the service.
    */

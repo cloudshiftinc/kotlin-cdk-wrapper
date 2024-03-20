@@ -42,6 +42,22 @@ public open class CfnPolicyTemplate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPolicyTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPolicyTemplateProps(props)
+  )
+
   /**
    * The unique identifier of the new or modified policy template.
    */

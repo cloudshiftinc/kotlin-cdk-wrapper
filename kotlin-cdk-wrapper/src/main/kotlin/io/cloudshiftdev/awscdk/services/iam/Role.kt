@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Role internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.Role,
 ) : Resource(cdkObject), IRole {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RoleProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.Role(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RoleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RoleProps.Builder.() -> Unit,
+  ) : this(scope, id, RoleProps(props)
+  )
+
   /**
    * Attaches a managed policy to this role.
    *

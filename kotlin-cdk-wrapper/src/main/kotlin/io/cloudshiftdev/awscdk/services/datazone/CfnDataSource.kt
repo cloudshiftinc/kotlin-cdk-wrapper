@@ -100,6 +100,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.datazone.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataSourceProps(props)
+  )
+
   /**
    * The metadata forms attached to the assets that the data source works with.
    */

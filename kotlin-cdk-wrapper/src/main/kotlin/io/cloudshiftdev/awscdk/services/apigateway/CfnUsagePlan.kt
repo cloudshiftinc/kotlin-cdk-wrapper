@@ -75,6 +75,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUsagePlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUsagePlanProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUsagePlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUsagePlanProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUsagePlanProps(props)
+  )
+
   /**
    * The associated API stages of a usage plan.
    */

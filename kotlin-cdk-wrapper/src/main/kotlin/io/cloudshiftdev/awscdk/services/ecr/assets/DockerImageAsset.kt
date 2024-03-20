@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DockerImageAsset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAsset,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DockerImageAssetProps,
+  ) :
+      this(software.amazon.awscdk.services.ecr.assets.DockerImageAsset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DockerImageAssetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DockerImageAssetProps.Builder.() -> Unit,
+  ) : this(scope, id, DockerImageAssetProps(props)
+  )
+
   /**
    * Adds CloudFormation template metadata to the specified resource with information that indicates
    * which resource property is mapped to this local asset.

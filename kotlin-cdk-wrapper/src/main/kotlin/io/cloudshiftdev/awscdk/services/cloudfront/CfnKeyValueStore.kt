@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnKeyValueStore internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyValueStore,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeyValueStoreProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnKeyValueStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnKeyValueStoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeyValueStoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnKeyValueStoreProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the key value store.
    */

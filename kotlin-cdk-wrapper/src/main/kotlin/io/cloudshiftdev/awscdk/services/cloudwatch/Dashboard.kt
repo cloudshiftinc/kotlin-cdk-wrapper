@@ -35,6 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Dashboard internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Dashboard,
 ) : Resource(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudwatch.Dashboard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DashboardProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudwatch.Dashboard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DashboardProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DashboardProps.Builder.() -> Unit,
+  ) : this(scope, id, DashboardProps(props)
+  )
+
   /**
    * Add a variable to the dashboard.
    *

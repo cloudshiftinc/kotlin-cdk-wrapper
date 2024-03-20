@@ -44,6 +44,14 @@ import kotlin.collections.List
 public open class DataProtectionPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.DataProtectionPolicy,
 ) : CdkObject(cdkObject) {
+  public constructor(props: DataProtectionPolicyProps) :
+      this(software.amazon.awscdk.services.logs.DataProtectionPolicy(props.let(DataProtectionPolicyProps::unwrap))
+  )
+
+  public constructor(props: DataProtectionPolicyProps.Builder.() -> Unit) :
+      this(DataProtectionPolicyProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.DataProtectionPolicy].
    */

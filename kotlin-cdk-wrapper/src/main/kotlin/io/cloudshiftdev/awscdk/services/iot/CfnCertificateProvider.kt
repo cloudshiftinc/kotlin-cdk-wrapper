@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCertificateProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnCertificateProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCertificateProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnCertificateProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCertificateProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCertificateProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCertificateProviderProps(props)
+  )
+
   /**
    * A list of the operations that the certificate provider will use to generate certificates.
    */

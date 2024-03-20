@@ -30,6 +30,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ApiKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.ApiKey,
 ) : Resource(cdkObject), IApiKey {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigateway.ApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApiKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.ApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApiKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApiKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, ApiKeyProps(props)
+  )
+
   /**
    * Permits the IAM principal all read operations through this key.
    *

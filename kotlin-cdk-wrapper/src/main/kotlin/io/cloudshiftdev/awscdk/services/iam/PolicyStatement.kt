@@ -40,6 +40,17 @@ import kotlin.jvm.JvmName
 public open class PolicyStatement internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.PolicyStatement,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.iam.PolicyStatement()
+  )
+
+  public constructor(props: PolicyStatementProps) :
+      this(software.amazon.awscdk.services.iam.PolicyStatement(props.let(PolicyStatementProps::unwrap))
+  )
+
+  public constructor(props: PolicyStatementProps.Builder.() -> Unit) :
+      this(PolicyStatementProps(props)
+  )
+
   /**
    * The Actions added to this statement.
    */

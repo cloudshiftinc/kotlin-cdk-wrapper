@@ -42,6 +42,22 @@ public open class CrossAccountZoneDelegationRecord internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CrossAccountZoneDelegationRecordProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CrossAccountZoneDelegationRecordProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CrossAccountZoneDelegationRecordProps.Builder.() -> Unit,
+  ) : this(scope, id, CrossAccountZoneDelegationRecordProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.route53.CrossAccountZoneDelegationRecord].

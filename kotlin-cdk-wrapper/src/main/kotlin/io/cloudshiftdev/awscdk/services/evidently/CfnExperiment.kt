@@ -88,6 +88,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnExperiment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnExperiment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnExperimentProps,
+  ) :
+      this(software.amazon.awscdk.services.evidently.CfnExperiment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnExperimentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnExperimentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnExperimentProps(props)
+  )
+
   /**
    * The ARN of the experiment.
    *

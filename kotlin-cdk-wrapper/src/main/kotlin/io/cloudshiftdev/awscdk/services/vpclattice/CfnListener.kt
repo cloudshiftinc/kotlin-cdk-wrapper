@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnListener internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnListener,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnListenerProps,
+  ) :
+      this(software.amazon.awscdk.services.vpclattice.CfnListener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnListenerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnListenerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnListenerProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the listener.
    */

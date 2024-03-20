@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStudioSessionMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.emr.CfnStudioSessionMapping,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStudioSessionMappingProps,
+  ) :
+      this(software.amazon.awscdk.services.emr.CfnStudioSessionMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStudioSessionMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStudioSessionMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStudioSessionMappingProps(props)
+  )
+
   /**
    * The name of the user or group.
    */

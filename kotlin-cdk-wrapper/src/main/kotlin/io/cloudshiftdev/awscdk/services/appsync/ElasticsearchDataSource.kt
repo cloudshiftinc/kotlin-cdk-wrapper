@@ -41,6 +41,24 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ElasticsearchDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.ElasticsearchDataSource,
 ) : BackedDataSource(cdkObject) {
+  @Deprecated(message = "deprecated in CDK")
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ElasticsearchDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.ElasticsearchDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ElasticsearchDataSourceProps::unwrap))
+  )
+
+  @Deprecated(message = "deprecated in CDK")
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ElasticsearchDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, ElasticsearchDataSourceProps(props)
+  )
+
   /**
    * (deprecated) A fluent builder for
    * [io.cloudshiftdev.awscdk.services.appsync.ElasticsearchDataSource].

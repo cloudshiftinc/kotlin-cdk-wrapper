@@ -92,6 +92,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTag internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnTag,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTagProps,
+  ) :
+      this(software.amazon.awscdk.services.lakeformation.CfnTag(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTagProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTagProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTagProps(props)
+  )
+
   /**
    * Catalog id string, not less than 1 or more than 255 bytes long, matching the [single-line
    * string

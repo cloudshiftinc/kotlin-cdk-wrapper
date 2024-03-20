@@ -50,6 +50,13 @@ import kotlin.Unit
 public open class S3 internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.actions.S3,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
+  public constructor(props: S3Props) :
+      this(software.amazon.awscdk.services.ses.actions.S3(props.let(S3Props::unwrap))
+  )
+
+  public constructor(props: S3Props.Builder.() -> Unit) : this(S3Props(props)
+  )
+
   /**
    * Returns the receipt rule action specification.
    *

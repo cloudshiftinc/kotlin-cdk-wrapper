@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDashboard internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnDashboard,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDashboardProps,
+  ) :
+      this(software.amazon.awscdk.services.iotsitewise.CfnDashboard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDashboardProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDashboardProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDashboardProps(props)
+  )
+
   /**
    * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the
    * dashboard, which has the following format.

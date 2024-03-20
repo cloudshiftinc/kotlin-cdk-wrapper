@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRegexPatternSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRegexPatternSetProps,
+  ) :
+      this(software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRegexPatternSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRegexPatternSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRegexPatternSetProps(props)
+  )
+
   /**
    *
    */

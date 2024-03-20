@@ -27,6 +27,14 @@ import kotlin.collections.List
 public open class SingleValueWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.SingleValueWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: SingleValueWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.SingleValueWidget(props.let(SingleValueWidgetProps::unwrap))
+  )
+
+  public constructor(props: SingleValueWidgetProps.Builder.() -> Unit) :
+      this(SingleValueWidgetProps(props)
+  )
+
   /**
    * Return the widget JSON for use in the dashboard.
    */

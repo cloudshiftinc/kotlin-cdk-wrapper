@@ -29,6 +29,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCodeDeployBlueGreenHook internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenHook,
 ) : CfnHook(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCodeDeployBlueGreenHookProps,
+  ) :
+      this(software.amazon.awscdk.CfnCodeDeployBlueGreenHook(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCodeDeployBlueGreenHookProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCodeDeployBlueGreenHookProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCodeDeployBlueGreenHookProps(props)
+  )
+
   /**
    * Additional options for the blue/green deployment.
    *

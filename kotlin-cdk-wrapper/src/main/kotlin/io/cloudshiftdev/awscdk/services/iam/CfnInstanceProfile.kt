@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInstanceProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnInstanceProfile,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnInstanceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInstanceProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInstanceProfileProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) for the instance profile. For example:.
    *

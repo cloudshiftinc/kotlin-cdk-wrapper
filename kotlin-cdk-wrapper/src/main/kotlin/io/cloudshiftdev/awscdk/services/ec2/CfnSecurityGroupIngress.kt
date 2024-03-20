@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSecurityGroupIngress internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroupIngress,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityGroupIngressProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnSecurityGroupIngress(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecurityGroupIngressProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityGroupIngressProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecurityGroupIngressProps(props)
+  )
+
   /**
    * The Security Group Rule Id.
    */

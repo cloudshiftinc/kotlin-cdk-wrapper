@@ -72,6 +72,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the Amazon ECS cluster, such as
    * `arn:aws:ecs:us-east-2:123456789012:cluster/MyECSCluster` .

@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserToGroupAddition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnUserToGroupAddition,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserToGroupAdditionProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnUserToGroupAddition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserToGroupAdditionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserToGroupAdditionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserToGroupAdditionProps(props)
+  )
+
   /**
    *
    */

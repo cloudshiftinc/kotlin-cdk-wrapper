@@ -40,6 +40,22 @@ public open class CallAwsService internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CallAwsServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CallAwsServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CallAwsServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, CallAwsServiceProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.CallAwsService].
    */

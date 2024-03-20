@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDimension internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnDimension,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDimensionProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnDimension(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDimensionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDimensionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDimensionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the dimension.
    */

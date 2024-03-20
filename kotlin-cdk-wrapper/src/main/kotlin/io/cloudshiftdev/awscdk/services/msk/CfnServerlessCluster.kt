@@ -56,6 +56,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServerlessCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerlessClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.msk.CfnServerlessCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServerlessClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerlessClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServerlessClusterProps(props)
+  )
+
   /**
    *
    */

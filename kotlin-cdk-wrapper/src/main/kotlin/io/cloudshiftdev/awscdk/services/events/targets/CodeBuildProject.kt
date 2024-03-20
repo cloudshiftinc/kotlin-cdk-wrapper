@@ -42,6 +42,20 @@ import software.amazon.awscdk.services.codebuild.IProject as AmazonAwscdkService
 public open class CodeBuildProject internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.CodeBuildProject,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(project: CloudshiftdevAwscdkServicesCodebuildIProject) :
+      this(software.amazon.awscdk.services.events.targets.CodeBuildProject(project.let(CloudshiftdevAwscdkServicesCodebuildIProject::unwrap))
+  )
+
+  public constructor(project: CloudshiftdevAwscdkServicesCodebuildIProject,
+      props: CodeBuildProjectProps) :
+      this(software.amazon.awscdk.services.events.targets.CodeBuildProject(project.let(CloudshiftdevAwscdkServicesCodebuildIProject::unwrap),
+      props.let(CodeBuildProjectProps::unwrap))
+  )
+
+  public constructor(project: CloudshiftdevAwscdkServicesCodebuildIProject,
+      props: CodeBuildProjectProps.Builder.() -> Unit) : this(project, CodeBuildProjectProps(props)
+  )
+
   /**
    * Allows using build projects as event rule targets.
    *

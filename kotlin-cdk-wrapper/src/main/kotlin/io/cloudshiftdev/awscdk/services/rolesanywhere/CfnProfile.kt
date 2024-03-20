@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.rolesanywhere.CfnProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProfileProps(props)
+  )
+
   /**
    * The ARN of the profile.
    */

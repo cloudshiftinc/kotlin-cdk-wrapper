@@ -102,6 +102,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConnection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.CfnConnection,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectionProps,
+  ) :
+      this(software.amazon.awscdk.services.events.CfnConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConnectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConnectionProps(props)
+  )
+
   /**
    * The ARN of the connection that was created by the request.
    */

@@ -41,6 +41,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class UserPool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPool,
 ) : Resource(cdkObject), IUserPool {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cognito.UserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.UserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UserPoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolProps.Builder.() -> Unit,
+  ) : this(scope, id, UserPoolProps(props)
+  )
+
   /**
    * Add a new app client to this user pool.
    *

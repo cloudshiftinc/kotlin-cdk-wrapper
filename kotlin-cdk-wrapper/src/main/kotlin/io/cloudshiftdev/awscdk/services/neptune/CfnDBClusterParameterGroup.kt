@@ -55,6 +55,22 @@ public open class CfnDBClusterParameterGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.neptune.CfnDBClusterParameterGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBClusterParameterGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.neptune.CfnDBClusterParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBClusterParameterGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBClusterParameterGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBClusterParameterGroupProps(props)
+  )
+
   /**
    *
    */

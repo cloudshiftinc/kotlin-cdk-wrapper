@@ -46,6 +46,27 @@ public open class CfnTrustStoreRevocation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrustStoreRevocationProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTrustStoreRevocationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrustStoreRevocationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTrustStoreRevocationProps(props)
+  )
+
   /**
    * The revocation ID of the revocation file.
    */

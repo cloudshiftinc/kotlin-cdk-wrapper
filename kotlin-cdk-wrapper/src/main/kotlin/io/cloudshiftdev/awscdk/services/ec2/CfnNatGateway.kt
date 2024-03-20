@@ -69,6 +69,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNatGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNatGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNatGatewayProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnNatGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNatGatewayProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNatGatewayProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNatGatewayProps(props)
+  )
+
   /**
    * [Public NAT gateway only] The allocation ID of the Elastic IP address that's associated with
    * the NAT gateway.

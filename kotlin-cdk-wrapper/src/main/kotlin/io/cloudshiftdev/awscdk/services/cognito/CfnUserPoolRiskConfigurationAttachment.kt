@@ -100,6 +100,22 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolRiskConfigurationAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolRiskConfigurationAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolRiskConfigurationAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolRiskConfigurationAttachmentProps(props)
+  )
+
   /**
    * The account takeover risk configuration object, including the `NotifyConfiguration` object and
    * `Actions` to take if there is an account takeover.

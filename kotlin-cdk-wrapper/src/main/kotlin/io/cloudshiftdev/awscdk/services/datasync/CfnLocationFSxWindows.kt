@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationFSxWindows internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxWindows,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationFSxWindowsProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationFSxWindows(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationFSxWindowsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationFSxWindowsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationFSxWindowsProps(props)
+  )
+
   /**
    * The ARN of the specified FSx for Windows Server file system location.
    */

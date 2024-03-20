@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAnomalyMonitor internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ce.CfnAnomalyMonitor,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnomalyMonitorProps,
+  ) :
+      this(software.amazon.awscdk.services.ce.CfnAnomalyMonitor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAnomalyMonitorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnomalyMonitorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAnomalyMonitorProps(props)
+  )
+
   /**
    * The date when the monitor was created.
    */

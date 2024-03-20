@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAssignment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sso.CfnAssignment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssignmentProps,
+  ) :
+      this(software.amazon.awscdk.services.sso.CfnAssignment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAssignmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssignmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAssignmentProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

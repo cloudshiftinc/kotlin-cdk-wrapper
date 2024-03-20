@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAuthorizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnAuthorizer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAuthorizerProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAuthorizerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAuthorizerProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the authorizer.
    */

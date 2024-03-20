@@ -86,6 +86,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.opsworks.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInstanceProps(props)
+  )
+
   /**
    * The default AWS OpsWorks Stacks agent version.
    *

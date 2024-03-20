@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVariantStore internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.omics.CfnVariantStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVariantStoreProps,
+  ) :
+      this(software.amazon.awscdk.services.omics.CfnVariantStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVariantStoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVariantStoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVariantStoreProps(props)
+  )
+
   /**
    * When the store was created.
    */

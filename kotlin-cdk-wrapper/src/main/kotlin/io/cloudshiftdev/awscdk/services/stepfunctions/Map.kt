@@ -49,6 +49,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Map internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Map,
 ) : MapBase(cdkObject), INextable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.stepfunctions.Map(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: MapProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.Map(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(MapProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: MapProps.Builder.() -> Unit,
+  ) : this(scope, id, MapProps(props)
+  )
+
   /**
    * Add a recovery handler for this state.
    *

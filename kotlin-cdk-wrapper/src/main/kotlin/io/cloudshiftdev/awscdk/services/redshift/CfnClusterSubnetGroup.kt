@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnClusterSubnetGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterSubnetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.redshift.CfnClusterSubnetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterSubnetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterSubnetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterSubnetGroupProps(props)
+  )
+
   /**
    * The name of the cluster subnet group.
    */

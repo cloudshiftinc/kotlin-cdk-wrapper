@@ -30,6 +30,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class KubernetesPatch internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.KubernetesPatch,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KubernetesPatchProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.KubernetesPatch(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(KubernetesPatchProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KubernetesPatchProps.Builder.() -> Unit,
+  ) : this(scope, id, KubernetesPatchProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.eks.KubernetesPatch].
    */

@@ -54,6 +54,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPlacementGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnPlacementGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnPlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlacementGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnPlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPlacementGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlacementGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPlacementGroupProps(props)
+  )
+
   /**
    * The name of the placement group.
    */

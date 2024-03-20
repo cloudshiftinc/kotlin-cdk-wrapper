@@ -96,6 +96,27 @@ public open class CfnDataLakeSettings internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataLakeSettingsProps,
+  ) :
+      this(software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataLakeSettingsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataLakeSettingsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataLakeSettingsProps(props)
+  )
+
   /**
    * A list of AWS Lake Formation principals.
    */

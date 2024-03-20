@@ -47,6 +47,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDHCPOptions internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptions,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnDHCPOptions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDHCPOptionsProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnDHCPOptions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDHCPOptionsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDHCPOptionsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDHCPOptionsProps(props)
+  )
+
   /**
    * The ID of the DHCP options set.
    */

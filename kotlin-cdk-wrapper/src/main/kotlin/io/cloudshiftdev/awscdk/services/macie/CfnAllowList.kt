@@ -90,6 +90,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAllowList internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.macie.CfnAllowList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAllowListProps,
+  ) :
+      this(software.amazon.awscdk.services.macie.CfnAllowList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAllowListProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAllowListProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAllowListProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the allow list.
    */

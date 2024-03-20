@@ -76,6 +76,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.mediatailor.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnChannelProps(props)
+  )
+
   /**
    * The ARN of the channel.</p>.
    */

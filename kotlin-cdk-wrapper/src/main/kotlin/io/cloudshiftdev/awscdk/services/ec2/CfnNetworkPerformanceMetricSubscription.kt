@@ -36,6 +36,22 @@ public open class CfnNetworkPerformanceMetricSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscription,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkPerformanceMetricSubscriptionProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkPerformanceMetricSubscriptionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkPerformanceMetricSubscriptionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkPerformanceMetricSubscriptionProps(props)
+  )
+
   /**
    * The Region or Availability Zone that's the target for the subscription.
    */

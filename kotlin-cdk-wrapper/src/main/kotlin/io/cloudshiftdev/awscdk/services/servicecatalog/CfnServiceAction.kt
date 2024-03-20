@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServiceAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnServiceAction,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceActionProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnServiceAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServiceActionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceActionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServiceActionProps(props)
+  )
+
   /**
    * The language code.
    */

@@ -61,6 +61,27 @@ public open class CfnDeliveryStream internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeliveryStreamProps,
+  ) :
+      this(software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeliveryStreamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeliveryStreamProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeliveryStreamProps(props)
+  )
+
   /**
    * Describes the configuration of a destination in the Serverless offering for Amazon OpenSearch
    * Service.

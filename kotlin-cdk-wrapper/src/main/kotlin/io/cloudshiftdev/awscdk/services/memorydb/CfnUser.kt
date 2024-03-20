@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUser internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.memorydb.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserProps,
+  ) :
+      this(software.amazon.awscdk.services.memorydb.CfnUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserProps(props)
+  )
+
   /**
    * Access permissions string used for this user.
    */

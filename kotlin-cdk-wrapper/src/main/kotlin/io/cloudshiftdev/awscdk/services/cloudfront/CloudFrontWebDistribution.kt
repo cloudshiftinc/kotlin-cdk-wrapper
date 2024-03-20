@@ -64,6 +64,22 @@ public open class CloudFrontWebDistribution internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution,
 ) : Resource(cdkObject), IDistribution {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CloudFrontWebDistributionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CloudFrontWebDistributionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CloudFrontWebDistributionProps.Builder.() -> Unit,
+  ) : this(scope, id, CloudFrontWebDistributionProps(props)
+  )
+
   /**
    * The domain name created by CloudFront for this distribution.
    *

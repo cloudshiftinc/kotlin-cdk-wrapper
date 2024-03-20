@@ -28,6 +28,17 @@ import kotlin.collections.List
 public open class JournaldLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.JournaldLogDriver,
 ) : LogDriver(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.ecs.JournaldLogDriver()
+  )
+
+  public constructor(props: JournaldLogDriverProps) :
+      this(software.amazon.awscdk.services.ecs.JournaldLogDriver(props.let(JournaldLogDriverProps::unwrap))
+  )
+
+  public constructor(props: JournaldLogDriverProps.Builder.() -> Unit) :
+      this(JournaldLogDriverProps(props)
+  )
+
   /**
    * Called when the log driver is configured on a container.
    *

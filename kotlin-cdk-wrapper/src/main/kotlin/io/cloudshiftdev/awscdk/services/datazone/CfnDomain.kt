@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDomain internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainProps,
+  ) :
+      this(software.amazon.awscdk.services.datazone.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDomainProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDomainProps(props)
+  )
+
   /**
    * The ARN of the Amazon DataZone domain.
    */

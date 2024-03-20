@@ -42,6 +42,19 @@ public open class ResolveSsmParameterAtLaunchImage internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage,
 ) : CdkObject(cdkObject), IMachineImage {
+  public constructor(parameterName: String) :
+      this(software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage(parameterName)
+  )
+
+  public constructor(parameterName: String, props: SsmParameterImageOptions) :
+      this(software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage(parameterName,
+      props.let(SsmParameterImageOptions::unwrap))
+  )
+
+  public constructor(parameterName: String, props: SsmParameterImageOptions.Builder.() -> Unit) :
+      this(parameterName, SsmParameterImageOptions(props)
+  )
+
   /**
    * Return the image to use in the given context.
    *

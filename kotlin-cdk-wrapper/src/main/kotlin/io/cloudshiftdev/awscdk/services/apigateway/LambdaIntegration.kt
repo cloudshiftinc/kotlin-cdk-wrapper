@@ -27,6 +27,21 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
 public open class LambdaIntegration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.LambdaIntegration,
 ) : AwsIntegration(cdkObject) {
+  public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
+      this(software.amazon.awscdk.services.apigateway.LambdaIntegration(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+  )
+
+  public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+      options: LambdaIntegrationOptions) :
+      this(software.amazon.awscdk.services.apigateway.LambdaIntegration(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
+      options.let(LambdaIntegrationOptions::unwrap))
+  )
+
+  public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+      options: LambdaIntegrationOptions.Builder.() -> Unit) : this(handler,
+      LambdaIntegrationOptions(options)
+  )
+
   /**
    * Can be overridden by subclasses to allow the integration to interact with the method being
    * integrated, access the REST API object, method ARNs, etc.

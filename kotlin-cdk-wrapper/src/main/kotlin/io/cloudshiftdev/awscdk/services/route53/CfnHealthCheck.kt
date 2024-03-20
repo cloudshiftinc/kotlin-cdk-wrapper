@@ -100,6 +100,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHealthCheck internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHealthCheckProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CfnHealthCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHealthCheckProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHealthCheckProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHealthCheckProps(props)
+  )
+
   /**
    * The identifier that Amazon Route 53 assigned to the health check when you created it.
    *

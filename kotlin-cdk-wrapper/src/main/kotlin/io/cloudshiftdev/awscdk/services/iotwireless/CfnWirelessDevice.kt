@@ -81,6 +81,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWirelessDevice internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWirelessDeviceProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnWirelessDevice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWirelessDeviceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWirelessDeviceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWirelessDeviceProps(props)
+  )
+
   /**
    * The ARN of the wireless device created.
    */

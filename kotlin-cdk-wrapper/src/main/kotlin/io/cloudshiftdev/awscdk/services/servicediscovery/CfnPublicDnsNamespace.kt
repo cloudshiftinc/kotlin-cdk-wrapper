@@ -67,6 +67,22 @@ public open class CfnPublicDnsNamespace internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublicDnsNamespaceProps,
+  ) :
+      this(software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPublicDnsNamespaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublicDnsNamespaceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPublicDnsNamespaceProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the public namespace.
    */

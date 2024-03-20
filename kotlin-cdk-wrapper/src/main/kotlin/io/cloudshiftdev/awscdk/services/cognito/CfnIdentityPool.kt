@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIdentityPool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPool,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityPoolProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnIdentityPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIdentityPoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityPoolProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIdentityPoolProps(props)
+  )
+
   /**
    * Enables the Basic (Classic) authentication flow.
    */

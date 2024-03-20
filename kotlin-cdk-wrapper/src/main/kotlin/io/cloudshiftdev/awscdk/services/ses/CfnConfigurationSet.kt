@@ -83,6 +83,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConfigurationSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationSetProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigurationSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigurationSetProps(props)
+  )
+
   /**
    * Specifies whether messages that use the configuration set are required to use Transport Layer
    * Security (TLS).

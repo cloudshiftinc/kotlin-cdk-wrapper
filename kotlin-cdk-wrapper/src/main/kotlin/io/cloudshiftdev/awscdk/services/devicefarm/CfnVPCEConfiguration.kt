@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPCEConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCEConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCEConfigurationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the VPC endpoint.
    *

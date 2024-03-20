@@ -68,6 +68,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReplicationConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.dms.CfnReplicationConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.dms.CfnReplicationConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReplicationConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReplicationConfigProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the Replication Config.
    */

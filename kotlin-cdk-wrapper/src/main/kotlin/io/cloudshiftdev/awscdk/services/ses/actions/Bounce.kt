@@ -36,6 +36,13 @@ import kotlin.jvm.JvmName
 public open class Bounce internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.actions.Bounce,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
+  public constructor(props: BounceProps) :
+      this(software.amazon.awscdk.services.ses.actions.Bounce(props.let(BounceProps::unwrap))
+  )
+
+  public constructor(props: BounceProps.Builder.() -> Unit) : this(BounceProps(props)
+  )
+
   /**
    * Returns the receipt rule action specification.
    *

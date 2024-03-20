@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SnsPublish internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SnsPublish,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SnsPublishProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SnsPublish(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SnsPublishProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SnsPublishProps.Builder.() -> Unit,
+  ) : this(scope, id, SnsPublishProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.SnsPublish].
    */

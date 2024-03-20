@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnModelPackageGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelPackageGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnModelPackageGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelPackageGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnModelPackageGroupProps(props)
+  )
+
   /**
    * The time when the model group was created.
    */

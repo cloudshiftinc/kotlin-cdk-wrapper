@@ -64,6 +64,22 @@ public open class CfnConfigurationSet internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationSetProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigurationSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigurationSetProps(props)
+  )
+
   /**
    *
    */

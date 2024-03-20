@@ -63,6 +63,14 @@ public open class CloudFormationExecuteChangeSetAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetAction,
 ) : Action(cdkObject) {
+  public constructor(props: CloudFormationExecuteChangeSetActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetAction(props.let(CloudFormationExecuteChangeSetActionProps::unwrap))
+  )
+
+  public constructor(props: CloudFormationExecuteChangeSetActionProps.Builder.() -> Unit) :
+      this(CloudFormationExecuteChangeSetActionProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetAction].

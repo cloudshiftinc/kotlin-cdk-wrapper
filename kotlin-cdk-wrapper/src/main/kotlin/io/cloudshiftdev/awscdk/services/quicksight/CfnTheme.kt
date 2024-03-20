@@ -106,6 +106,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTheme internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThemeProps,
+  ) :
+      this(software.amazon.awscdk.services.quicksight.CfnTheme(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnThemeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThemeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnThemeProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the theme.
    */

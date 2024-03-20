@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEntityType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEntityTypeProps,
+  ) :
+      this(software.amazon.awscdk.services.frauddetector.CfnEntityType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEntityTypeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEntityTypeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEntityTypeProps(props)
+  )
+
   /**
    * The entity type ARN.
    */

@@ -50,6 +50,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataQualityRuleset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.glue.CfnDataQualityRuleset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataQualityRulesetProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnDataQualityRuleset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataQualityRulesetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataQualityRulesetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataQualityRulesetProps(props)
+  )
+
   /**
    *
    */

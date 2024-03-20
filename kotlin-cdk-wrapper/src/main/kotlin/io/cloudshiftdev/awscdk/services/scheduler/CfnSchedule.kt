@@ -137,6 +137,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSchedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.scheduler.CfnSchedule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduleProps,
+  ) :
+      this(software.amazon.awscdk.services.scheduler.CfnSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScheduleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScheduleProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the Amazon EventBridge Scheduler schedule.
    */

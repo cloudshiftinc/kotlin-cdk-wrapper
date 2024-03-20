@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMountTarget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.efs.CfnMountTarget,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMountTargetProps,
+  ) :
+      this(software.amazon.awscdk.services.efs.CfnMountTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMountTargetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMountTargetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMountTargetProps(props)
+  )
+
   /**
    * The ID of the Amazon EFS file system that the mount target provides access to.
    *

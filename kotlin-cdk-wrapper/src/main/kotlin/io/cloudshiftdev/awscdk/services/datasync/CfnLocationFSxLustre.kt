@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationFSxLustre internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxLustre,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationFSxLustreProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationFSxLustre(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationFSxLustreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationFSxLustreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationFSxLustreProps(props)
+  )
+
   /**
    * The ARN of the specified FSx for Lustre file system location.
    */

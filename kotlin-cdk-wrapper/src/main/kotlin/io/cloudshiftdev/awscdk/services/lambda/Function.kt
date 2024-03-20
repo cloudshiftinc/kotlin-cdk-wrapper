@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Function internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.Function,
 ) : FunctionBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FunctionProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.Function(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FunctionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FunctionProps.Builder.() -> Unit,
+  ) : this(scope, id, FunctionProps(props)
+  )
+
   /**
    * Defines an alias for this function.
    *

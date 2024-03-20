@@ -61,6 +61,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTheme internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnTheme(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThemeProps,
+  ) :
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnTheme(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnThemeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThemeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnThemeProps(props)
+  )
+
   /**
    * The unique ID for the Amplify app associated with the theme.
    */

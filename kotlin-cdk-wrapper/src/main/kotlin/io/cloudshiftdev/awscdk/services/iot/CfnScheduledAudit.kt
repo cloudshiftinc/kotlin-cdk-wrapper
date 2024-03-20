@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScheduledAudit internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnScheduledAudit,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduledAuditProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnScheduledAudit(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScheduledAuditProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduledAuditProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScheduledAuditProps(props)
+  )
+
   /**
    * The ARN of the scheduled audit.
    */

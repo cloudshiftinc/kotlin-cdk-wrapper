@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class HttpIntegration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpIntegration,
 ) : Resource(cdkObject), IHttpIntegration {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpIntegrationProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.HttpIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(HttpIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpIntegrationProps.Builder.() -> Unit,
+  ) : this(scope, id, HttpIntegrationProps(props)
+  )
+
   /**
    * The HTTP API associated with this integration.
    */

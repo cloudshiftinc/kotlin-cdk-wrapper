@@ -30,6 +30,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Activity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Activity,
 ) : Resource(cdkObject), IActivity {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.stepfunctions.Activity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ActivityProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.Activity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ActivityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ActivityProps.Builder.() -> Unit,
+  ) : this(scope, id, ActivityProps(props)
+  )
+
   /**
    * The ARN of the activity.
    */

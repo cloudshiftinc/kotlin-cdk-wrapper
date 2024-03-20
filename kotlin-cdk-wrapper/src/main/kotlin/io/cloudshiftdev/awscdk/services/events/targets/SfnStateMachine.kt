@@ -46,6 +46,20 @@ import software.amazon.awscdk.services.stepfunctions.IStateMachine as AmazonAwsc
 public open class SfnStateMachine internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.SfnStateMachine,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(machine: CloudshiftdevAwscdkServicesStepfunctionsIStateMachine) :
+      this(software.amazon.awscdk.services.events.targets.SfnStateMachine(machine.let(CloudshiftdevAwscdkServicesStepfunctionsIStateMachine::unwrap))
+  )
+
+  public constructor(machine: CloudshiftdevAwscdkServicesStepfunctionsIStateMachine,
+      props: SfnStateMachineProps) :
+      this(software.amazon.awscdk.services.events.targets.SfnStateMachine(machine.let(CloudshiftdevAwscdkServicesStepfunctionsIStateMachine::unwrap),
+      props.let(SfnStateMachineProps::unwrap))
+  )
+
+  public constructor(machine: CloudshiftdevAwscdkServicesStepfunctionsIStateMachine,
+      props: SfnStateMachineProps.Builder.() -> Unit) : this(machine, SfnStateMachineProps(props)
+  )
+
   /**
    * Returns a properties that are used in an Rule to trigger this State Machine.
    *

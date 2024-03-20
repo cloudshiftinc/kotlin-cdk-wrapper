@@ -47,6 +47,22 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTemplateGroupAccessControlEntryProps,
+  ) :
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTemplateGroupAccessControlEntryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTemplateGroupAccessControlEntryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTemplateGroupAccessControlEntryProps(props)
+  )
+
   /**
    * Permissions to allow or deny an Active Directory group to enroll or autoenroll certificates
    * issued against a template.

@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventStream internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnEventStream,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventStreamProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnEventStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventStreamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventStreamProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventStreamProps(props)
+  )
+
   /**
    * The unique identifier for the Amazon Pinpoint application that you want to export data from.
    */

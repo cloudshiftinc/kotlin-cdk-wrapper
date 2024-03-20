@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventInvokeConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventInvokeConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.CfnEventInvokeConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventInvokeConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventInvokeConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventInvokeConfigProps(props)
+  )
+
   /**
    * A destination for events after they have been sent to a function for processing.
    */

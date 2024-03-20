@@ -82,6 +82,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLicense internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLicenseProps,
+  ) :
+      this(software.amazon.awscdk.services.licensemanager.CfnLicense(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLicenseProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLicenseProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLicenseProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the license.
    */

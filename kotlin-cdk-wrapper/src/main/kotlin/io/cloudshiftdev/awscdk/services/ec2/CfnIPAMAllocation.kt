@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPAMAllocation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMAllocation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMAllocationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAMAllocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPAMAllocationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMAllocationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPAMAllocationProps(props)
+  )
+
   /**
    * The ID of an allocation.
    */

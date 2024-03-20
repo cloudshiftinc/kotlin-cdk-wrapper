@@ -108,6 +108,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStreamProcessor internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rekognition.CfnStreamProcessor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamProcessorProps,
+  ) :
+      this(software.amazon.awscdk.services.rekognition.CfnStreamProcessor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStreamProcessorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamProcessorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStreamProcessorProps(props)
+  )
+
   /**
    * Amazon Resource Name for the newly created stream processor.
    */

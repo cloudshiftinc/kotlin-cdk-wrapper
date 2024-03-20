@@ -42,6 +42,22 @@ public open class CfnResolverRuleAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverRuleAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResolverRuleAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverRuleAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResolverRuleAssociationProps(props)
+  )
+
   /**
    * The name of an association between a resolver rule and a VPC, such as `test.example.com in beta
    * VPC` .

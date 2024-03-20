@@ -41,6 +41,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Trail internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.Trail,
 ) : Resource(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudtrail.Trail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TrailProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudtrail.Trail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TrailProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TrailProps.Builder.() -> Unit,
+  ) : this(scope, id, TrailProps(props)
+  )
+
   /**
    * When an event occurs in your account, CloudTrail evaluates whether the event matches the
    * settings for your trails.

@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Project internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.Project,
 ) : Resource(cdkObject), IProject {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProjectProps,
+  ) :
+      this(software.amazon.awscdk.services.codebuild.Project(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ProjectProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProjectProps.Builder.() -> Unit,
+  ) : this(scope, id, ProjectProps(props)
+  )
+
   /**
    * Adds a fileSystemLocation to the Project.
    *

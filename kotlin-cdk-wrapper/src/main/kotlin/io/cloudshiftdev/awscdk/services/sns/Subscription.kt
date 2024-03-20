@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Subscription internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sns.Subscription,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SubscriptionProps,
+  ) :
+      this(software.amazon.awscdk.services.sns.Subscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SubscriptionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SubscriptionProps.Builder.() -> Unit,
+  ) : this(scope, id, SubscriptionProps(props)
+  )
+
   /**
    * The DLQ associated with this subscription if present.
    */

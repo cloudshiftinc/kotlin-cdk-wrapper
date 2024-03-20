@@ -87,6 +87,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResolver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnResolver,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnResolver(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResolverProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResolverProps(props)
+  )
+
   /**
    * The AWS AppSync GraphQL API to which you want to attach this resolver.
    */

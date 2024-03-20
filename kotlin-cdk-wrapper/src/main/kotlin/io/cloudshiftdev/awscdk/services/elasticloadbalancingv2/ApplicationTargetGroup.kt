@@ -40,6 +40,27 @@ public open class ApplicationTargetGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup,
 ) : TargetGroupBase(cdkObject), IApplicationTargetGroup {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationTargetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApplicationTargetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationTargetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, ApplicationTargetGroupProps(props)
+  )
+
   /**
    * Add a load balancing target to this target group.
    *

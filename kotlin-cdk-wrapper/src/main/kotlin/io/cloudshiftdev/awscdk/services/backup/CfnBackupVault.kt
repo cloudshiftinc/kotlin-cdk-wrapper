@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBackupVault internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.CfnBackupVault,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBackupVaultProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.CfnBackupVault(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBackupVaultProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBackupVaultProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBackupVaultProps(props)
+  )
+
   /**
    * A resource-based policy that is used to manage access permissions on the target backup vault.
    */

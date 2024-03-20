@@ -64,6 +64,22 @@ public open class CfnSizeConstraintSet internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSizeConstraintSetProps,
+  ) :
+      this(software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSizeConstraintSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSizeConstraintSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSizeConstraintSetProps(props)
+  )
+
   /**
    *
    */

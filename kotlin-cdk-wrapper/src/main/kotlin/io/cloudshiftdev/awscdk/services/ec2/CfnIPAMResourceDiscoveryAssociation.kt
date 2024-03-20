@@ -46,6 +46,22 @@ public open class CfnIPAMResourceDiscoveryAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMResourceDiscoveryAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPAMResourceDiscoveryAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMResourceDiscoveryAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPAMResourceDiscoveryAssociationProps(props)
+  )
+
   /**
    * The IPAM ARN.
    */

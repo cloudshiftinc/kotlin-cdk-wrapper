@@ -41,6 +41,22 @@ public open class CfnTransitGatewayRouteTableAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTableAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayRouteTableAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTableAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayRouteTableAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayRouteTableAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayRouteTableAssociationProps(props)
+  )
+
   /**
    *
    */

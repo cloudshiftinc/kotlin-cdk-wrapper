@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventStream internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnEventStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventStreamProps,
+  ) :
+      this(software.amazon.awscdk.services.customerprofiles.CfnEventStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventStreamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventStreamProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventStreamProps(props)
+  )
+
   /**
    * The timestamp of when the export was created.
    */

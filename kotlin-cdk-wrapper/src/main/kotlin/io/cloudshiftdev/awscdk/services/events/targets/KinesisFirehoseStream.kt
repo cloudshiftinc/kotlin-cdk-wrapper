@@ -36,6 +36,21 @@ public open class KinesisFirehoseStream internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.events.targets.KinesisFirehoseStream,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream) :
+      this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream::unwrap))
+  )
+
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream,
+      props: KinesisFirehoseStreamProps) :
+      this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream::unwrap),
+      props.let(KinesisFirehoseStreamProps::unwrap))
+  )
+
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream,
+      props: KinesisFirehoseStreamProps.Builder.() -> Unit) : this(stream,
+      KinesisFirehoseStreamProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger this Firehose Stream as a result from a Event
    * Bridge event.

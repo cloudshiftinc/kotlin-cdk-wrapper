@@ -37,6 +37,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReceiptRuleSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ses.CfnReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReceiptRuleSetProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.CfnReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReceiptRuleSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReceiptRuleSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReceiptRuleSetProps(props)
+  )
+
   /**
    *
    */

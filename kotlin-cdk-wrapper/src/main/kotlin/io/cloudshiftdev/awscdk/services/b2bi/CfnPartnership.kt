@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPartnership internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnership,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPartnershipProps,
+  ) :
+      this(software.amazon.awscdk.services.b2bi.CfnPartnership(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPartnershipProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPartnershipProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPartnershipProps(props)
+  )
+
   /**
    * Returns a timestamp for creation date and time of the partnership.
    */

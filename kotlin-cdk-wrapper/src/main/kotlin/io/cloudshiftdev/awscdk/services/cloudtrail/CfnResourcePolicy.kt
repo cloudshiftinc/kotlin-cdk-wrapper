@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResourcePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnResourcePolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourcePolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudtrail.CfnResourcePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourcePolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourcePolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourcePolicyProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

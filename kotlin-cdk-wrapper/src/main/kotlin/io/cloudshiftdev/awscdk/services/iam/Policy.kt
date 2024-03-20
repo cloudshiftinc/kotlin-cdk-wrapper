@@ -41,6 +41,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Policy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.Policy,
 ) : Resource(cdkObject), IPolicy, IGrantable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.Policy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.Policy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, PolicyProps(props)
+  )
+
   /**
    * Adds a statement to the policy document.
    *

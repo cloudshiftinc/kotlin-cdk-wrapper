@@ -22,6 +22,14 @@ import kotlin.Unit
 public open class BounceTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.actions.BounceTemplate,
 ) : CdkObject(cdkObject) {
+  public constructor(props: BounceTemplateProps) :
+      this(software.amazon.awscdk.services.ses.actions.BounceTemplate(props.let(BounceTemplateProps::unwrap))
+  )
+
+  public constructor(props: BounceTemplateProps.Builder.() -> Unit) :
+      this(BounceTemplateProps(props)
+  )
+
   /**
    *
    */

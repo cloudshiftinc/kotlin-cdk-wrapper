@@ -54,6 +54,22 @@ public open class CfnApplicationVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationVersionProps(props)
+  )
+
   /**
    * The name of the Elastic Beanstalk application that is associated with this application version.
    */

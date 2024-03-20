@@ -89,6 +89,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDBInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.neptune.CfnDBInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.neptune.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBInstanceProps(props)
+  )
+
   /**
    * Indicates that major version upgrades are allowed.
    */

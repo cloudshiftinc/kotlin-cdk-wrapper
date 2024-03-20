@@ -81,6 +81,22 @@ public open class CfnSafetyRule internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSafetyRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSafetyRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSafetyRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSafetyRuleProps(props)
+  )
+
   /**
    * An assertion rule enforces that, when you change a routing control state, that the criteria
    * that you set in the rule configuration is met.

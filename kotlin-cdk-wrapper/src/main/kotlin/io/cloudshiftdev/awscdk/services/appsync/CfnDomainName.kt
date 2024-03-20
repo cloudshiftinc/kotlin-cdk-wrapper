@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDomainName internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnDomainName,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainNameProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDomainNameProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainNameProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDomainNameProps(props)
+  )
+
   /**
    * The domain name provided by AWS AppSync .
    */

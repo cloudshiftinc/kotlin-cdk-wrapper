@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnDestination,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDestinationProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDestinationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDestinationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDestinationProps(props)
+  )
+
   /**
    * The ARN of the destination created.
    */

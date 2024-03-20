@@ -99,6 +99,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.lightsail.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInstanceProps(props)
+  )
+
   /**
    * An array of add-ons for the instance.
    */

@@ -49,6 +49,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnThingType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnThingType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iot.CfnThingType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThingTypeProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnThingType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnThingTypeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThingTypeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnThingTypeProps(props)
+  )
+
   /**
    * The thing type arn.
    */

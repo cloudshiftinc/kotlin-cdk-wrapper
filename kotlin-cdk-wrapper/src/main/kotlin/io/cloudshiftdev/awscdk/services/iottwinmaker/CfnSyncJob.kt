@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSyncJob internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnSyncJob,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSyncJobProps,
+  ) :
+      this(software.amazon.awscdk.services.iottwinmaker.CfnSyncJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSyncJobProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSyncJobProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSyncJobProps(props)
+  )
+
   /**
    * The SyncJob ARN.
    */

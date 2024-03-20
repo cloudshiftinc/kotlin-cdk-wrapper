@@ -53,6 +53,22 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayPeeringAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayPeeringAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayPeeringAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayPeeringAttachmentProps(props)
+  )
+
   /**
    * The time the transit gateway peering attachment was created.
    */

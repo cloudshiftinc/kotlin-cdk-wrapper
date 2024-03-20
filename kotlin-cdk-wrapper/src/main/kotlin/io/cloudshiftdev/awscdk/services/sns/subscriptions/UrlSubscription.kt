@@ -34,6 +34,19 @@ public open class UrlSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sns.subscriptions.UrlSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
+  public constructor(url: String) :
+      this(software.amazon.awscdk.services.sns.subscriptions.UrlSubscription(url)
+  )
+
+  public constructor(url: String, props: UrlSubscriptionProps) :
+      this(software.amazon.awscdk.services.sns.subscriptions.UrlSubscription(url,
+      props.let(UrlSubscriptionProps::unwrap))
+  )
+
+  public constructor(url: String, props: UrlSubscriptionProps.Builder.() -> Unit) : this(url,
+      UrlSubscriptionProps(props)
+  )
+
   /**
    * Returns a configuration for a URL to subscribe to an SNS topic.
    *

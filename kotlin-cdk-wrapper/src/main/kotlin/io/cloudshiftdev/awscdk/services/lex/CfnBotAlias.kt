@@ -88,6 +88,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBotAlias internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lex.CfnBotAlias,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBotAliasProps,
+  ) :
+      this(software.amazon.awscdk.services.lex.CfnBotAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBotAliasProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBotAliasProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBotAliasProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the bot alias.
    */

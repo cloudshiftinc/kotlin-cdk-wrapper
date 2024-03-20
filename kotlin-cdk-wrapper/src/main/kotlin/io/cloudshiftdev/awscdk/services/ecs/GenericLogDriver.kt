@@ -30,6 +30,14 @@ import kotlin.collections.Map
 public open class GenericLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.GenericLogDriver,
 ) : LogDriver(cdkObject) {
+  public constructor(props: GenericLogDriverProps) :
+      this(software.amazon.awscdk.services.ecs.GenericLogDriver(props.let(GenericLogDriverProps::unwrap))
+  )
+
+  public constructor(props: GenericLogDriverProps.Builder.() -> Unit) :
+      this(GenericLogDriverProps(props)
+  )
+
   /**
    * Called when the log driver is configured on a container.
    *

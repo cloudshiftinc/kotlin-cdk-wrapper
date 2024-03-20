@@ -40,6 +40,35 @@ import kotlin.collections.Map
 public open class TagManager internal constructor(
   internal override val cdkObject: software.amazon.awscdk.TagManager,
 ) : CdkObject(cdkObject) {
+  public constructor(tagType: TagType, resourceTypeName: String) :
+      this(software.amazon.awscdk.TagManager(tagType.let(TagType::unwrap), resourceTypeName)
+  )
+
+  public constructor(
+    tagType: TagType,
+    resourceTypeName: String,
+    initialTags: Any,
+  ) : this(software.amazon.awscdk.TagManager(tagType.let(TagType::unwrap), resourceTypeName,
+      initialTags)
+  )
+
+  public constructor(
+    tagType: TagType,
+    resourceTypeName: String,
+    initialTags: Any,
+    options: TagManagerOptions,
+  ) : this(software.amazon.awscdk.TagManager(tagType.let(TagType::unwrap), resourceTypeName,
+      initialTags, options.let(TagManagerOptions::unwrap))
+  )
+
+  public constructor(
+    tagType: TagType,
+    resourceTypeName: String,
+    initialTags: Any,
+    options: TagManagerOptions.Builder.() -> Unit,
+  ) : this(tagType, resourceTypeName, initialTags, TagManagerOptions(options)
+  )
+
   /**
    * Determine if the aspect applies here.
    *

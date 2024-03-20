@@ -32,6 +32,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CnameInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.CnameInstance,
 ) : InstanceBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CnameInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.servicediscovery.CnameInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CnameInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CnameInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CnameInstanceProps(props)
+  )
+
   /**
    * The domain name returned by DNS queries for the instance.
    */

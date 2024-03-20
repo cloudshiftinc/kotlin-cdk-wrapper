@@ -33,6 +33,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class PlacementGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.PlacementGroup,
 ) : Resource(cdkObject), IPlacementGroup {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.PlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PlacementGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.PlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PlacementGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PlacementGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, PlacementGroupProps(props)
+  )
+
   /**
    * The number of partitions.
    *

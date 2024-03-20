@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class NonIpInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.NonIpInstance,
 ) : InstanceBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NonIpInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.servicediscovery.NonIpInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NonIpInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NonIpInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, NonIpInstanceProps(props)
+  )
+
   /**
    * The Id of the instance.
    */

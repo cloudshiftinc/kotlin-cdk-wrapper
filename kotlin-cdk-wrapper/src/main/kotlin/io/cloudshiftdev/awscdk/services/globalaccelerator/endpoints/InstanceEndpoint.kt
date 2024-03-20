@@ -34,6 +34,21 @@ public open class InstanceEndpoint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
+  public constructor(instance: CloudshiftdevAwscdkServicesEc2IInstance) :
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint(instance.let(CloudshiftdevAwscdkServicesEc2IInstance::unwrap))
+  )
+
+  public constructor(instance: CloudshiftdevAwscdkServicesEc2IInstance,
+      options: InstanceEndpointProps) :
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint(instance.let(CloudshiftdevAwscdkServicesEc2IInstance::unwrap),
+      options.let(InstanceEndpointProps::unwrap))
+  )
+
+  public constructor(instance: CloudshiftdevAwscdkServicesEc2IInstance,
+      options: InstanceEndpointProps.Builder.() -> Unit) : this(instance,
+      InstanceEndpointProps(options)
+  )
+
   /**
    * The region where the endpoint is located.
    *

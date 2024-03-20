@@ -43,6 +43,22 @@ public open class CfnSubnetNetworkAclAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetNetworkAclAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSubnetNetworkAclAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetNetworkAclAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSubnetNetworkAclAssociationProps(props)
+  )
+
   /**
    * Returns the value of this object's AssociationId property.
    */

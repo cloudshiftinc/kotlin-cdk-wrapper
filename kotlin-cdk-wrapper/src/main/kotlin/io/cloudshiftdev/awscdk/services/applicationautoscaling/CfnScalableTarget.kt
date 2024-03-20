@@ -76,6 +76,22 @@ public open class CfnScalableTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScalableTargetProps,
+  ) :
+      this(software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScalableTargetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScalableTargetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScalableTargetProps(props)
+  )
+
   /**
    * This value can be returned by using the Ref function.
    *

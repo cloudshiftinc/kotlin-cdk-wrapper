@@ -36,6 +36,14 @@ public open class GitHubSourceAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction,
 ) : Action(cdkObject) {
+  public constructor(props: GitHubSourceActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction(props.let(GitHubSourceActionProps::unwrap))
+  )
+
+  public constructor(props: GitHubSourceActionProps.Builder.() -> Unit) :
+      this(GitHubSourceActionProps(props)
+  )
+
   /**
    * The variables emitted by this action.
    */

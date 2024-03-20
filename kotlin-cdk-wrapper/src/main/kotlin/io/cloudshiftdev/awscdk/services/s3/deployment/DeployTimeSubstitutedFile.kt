@@ -40,6 +40,22 @@ public open class DeployTimeSubstitutedFile internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile,
 ) : BucketDeployment(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DeployTimeSubstitutedFileProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DeployTimeSubstitutedFileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DeployTimeSubstitutedFileProps.Builder.() -> Unit,
+  ) : this(scope, id, DeployTimeSubstitutedFileProps(props)
+  )
+
   /**
    *
    */

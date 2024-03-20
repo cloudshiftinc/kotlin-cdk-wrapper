@@ -34,6 +34,25 @@ public open class ApplicationLoadBalancerEndpoint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
+  public
+      constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer)
+      :
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer::unwrap))
+  )
+
+  public
+      constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer,
+      options: ApplicationLoadBalancerEndpointOptions) :
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer::unwrap),
+      options.let(ApplicationLoadBalancerEndpointOptions::unwrap))
+  )
+
+  public
+      constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer,
+      options: ApplicationLoadBalancerEndpointOptions.Builder.() -> Unit) : this(loadBalancer,
+      ApplicationLoadBalancerEndpointOptions(options)
+  )
+
   /**
    * The region where the endpoint is located.
    *

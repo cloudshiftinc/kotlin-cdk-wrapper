@@ -59,6 +59,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccessGrantsLocation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsLocation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.s3.CfnAccessGrantsLocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessGrantsLocationProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnAccessGrantsLocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessGrantsLocationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessGrantsLocationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessGrantsLocationProps(props)
+  )
+
   /**
    * The ARN of the location you are registering.
    */

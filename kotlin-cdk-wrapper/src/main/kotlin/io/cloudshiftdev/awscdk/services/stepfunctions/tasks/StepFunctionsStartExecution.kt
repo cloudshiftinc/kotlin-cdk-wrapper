@@ -53,6 +53,22 @@ public open class StepFunctionsStartExecution internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsStartExecution,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StepFunctionsStartExecutionProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsStartExecution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(StepFunctionsStartExecutionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StepFunctionsStartExecutionProps.Builder.() -> Unit,
+  ) : this(scope, id, StepFunctionsStartExecutionProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.StepFunctionsStartExecution].

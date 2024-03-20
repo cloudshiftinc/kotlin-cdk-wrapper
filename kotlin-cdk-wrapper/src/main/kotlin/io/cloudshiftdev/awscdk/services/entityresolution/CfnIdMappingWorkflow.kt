@@ -74,6 +74,22 @@ public open class CfnIdMappingWorkflow internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdMappingWorkflowProps,
+  ) :
+      this(software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIdMappingWorkflowProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdMappingWorkflowProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIdMappingWorkflowProps(props)
+  )
+
   /**
    * The time of this IdMappingWorkflow got created.
    */

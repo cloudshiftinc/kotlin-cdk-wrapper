@@ -36,6 +36,19 @@ public open class SnsEventSource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.SnsEventSource,
 ) : CdkObject(cdkObject), IEventSource {
+  public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic) :
+      this(software.amazon.awscdk.services.lambda.eventsources.SnsEventSource(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap))
+  )
+
+  public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic, props: SnsEventSourceProps) :
+      this(software.amazon.awscdk.services.lambda.eventsources.SnsEventSource(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap),
+      props.let(SnsEventSourceProps::unwrap))
+  )
+
+  public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic,
+      props: SnsEventSourceProps.Builder.() -> Unit) : this(topic, SnsEventSourceProps(props)
+  )
+
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
    *

@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVirtualService internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVirtualServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.CfnVirtualService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVirtualServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVirtualServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVirtualServiceProps(props)
+  )
+
   /**
    * The full Amazon Resource Name (ARN) for the virtual service.
    */

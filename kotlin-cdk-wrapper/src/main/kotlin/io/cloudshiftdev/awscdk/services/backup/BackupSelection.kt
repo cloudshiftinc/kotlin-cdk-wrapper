@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BackupSelection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.BackupSelection,
 ) : Resource(cdkObject), IGrantable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BackupSelectionProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.BackupSelection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BackupSelectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BackupSelectionProps.Builder.() -> Unit,
+  ) : this(scope, id, BackupSelectionProps(props)
+  )
+
   /**
    * The identifier of the backup plan.
    */

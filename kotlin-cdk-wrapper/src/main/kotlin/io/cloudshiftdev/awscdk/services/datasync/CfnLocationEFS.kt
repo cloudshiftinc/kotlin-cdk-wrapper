@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationEFS internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationEFSProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationEFS(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationEFSProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationEFSProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationEFSProps(props)
+  )
+
   /**
    * Specifies the Amazon Resource Name (ARN) of the access point that DataSync uses to access the
    * Amazon EFS file system.

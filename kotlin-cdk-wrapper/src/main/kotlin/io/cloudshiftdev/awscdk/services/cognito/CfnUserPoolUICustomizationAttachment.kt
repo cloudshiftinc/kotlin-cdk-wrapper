@@ -51,6 +51,22 @@ public open class CfnUserPoolUICustomizationAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolUICustomizationAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolUICustomizationAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolUICustomizationAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolUICustomizationAttachmentProps(props)
+  )
+
   /**
    * The resource ID.
    */

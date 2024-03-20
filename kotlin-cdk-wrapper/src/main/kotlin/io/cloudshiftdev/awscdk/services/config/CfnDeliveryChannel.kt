@@ -89,6 +89,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDeliveryChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeliveryChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CfnDeliveryChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeliveryChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeliveryChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeliveryChannelProps(props)
+  )
+
   /**
    *
    */

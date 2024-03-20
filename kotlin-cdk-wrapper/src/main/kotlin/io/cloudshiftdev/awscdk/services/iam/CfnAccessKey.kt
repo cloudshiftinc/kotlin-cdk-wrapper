@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccessKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnAccessKey,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnAccessKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessKeyProps(props)
+  )
+
   /**
    *
    */

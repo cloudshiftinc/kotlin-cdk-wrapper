@@ -95,6 +95,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnDataSource,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataSourceProps(props)
+  )
+
   /**
    * Unique AWS AppSync GraphQL API identifier where this data source will be created.
    */

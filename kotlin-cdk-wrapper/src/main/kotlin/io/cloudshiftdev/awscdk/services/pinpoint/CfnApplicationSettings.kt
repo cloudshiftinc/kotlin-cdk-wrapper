@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApplicationSettings internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationSettingsProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnApplicationSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationSettingsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationSettingsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationSettingsProps(props)
+  )
+
   /**
    * The unique identifier for the Amazon Pinpoint application.
    */

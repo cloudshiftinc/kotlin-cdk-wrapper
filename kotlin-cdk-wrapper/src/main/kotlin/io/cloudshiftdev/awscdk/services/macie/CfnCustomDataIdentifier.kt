@@ -67,6 +67,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCustomDataIdentifier internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.macie.CfnCustomDataIdentifier,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomDataIdentifierProps,
+  ) :
+      this(software.amazon.awscdk.services.macie.CfnCustomDataIdentifier(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCustomDataIdentifierProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomDataIdentifierProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCustomDataIdentifierProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the custom data identifier.
    */

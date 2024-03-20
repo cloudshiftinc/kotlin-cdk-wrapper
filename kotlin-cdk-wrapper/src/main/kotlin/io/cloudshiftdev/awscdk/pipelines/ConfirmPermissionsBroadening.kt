@@ -29,6 +29,15 @@ import kotlin.jvm.JvmName
 public open class ConfirmPermissionsBroadening internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening,
 ) : Step(cdkObject), ICodePipelineActionFactory {
+  public constructor(id: String, props: PermissionsBroadeningCheckProps) :
+      this(software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening(id,
+      props.let(PermissionsBroadeningCheckProps::unwrap))
+  )
+
+  public constructor(id: String, props: PermissionsBroadeningCheckProps.Builder.() -> Unit) :
+      this(id, PermissionsBroadeningCheckProps(props)
+  )
+
   /**
    * Create the desired Action and add it to the pipeline.
    *

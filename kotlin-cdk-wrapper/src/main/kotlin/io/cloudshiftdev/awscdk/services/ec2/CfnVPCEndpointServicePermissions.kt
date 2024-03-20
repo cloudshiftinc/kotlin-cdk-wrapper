@@ -40,6 +40,22 @@ public open class CfnVPCEndpointServicePermissions internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEndpointServicePermissionsProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCEndpointServicePermissionsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEndpointServicePermissionsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCEndpointServicePermissionsProps(props)
+  )
+
   /**
    * The Amazon Resource Names (ARN) of one or more principals (for example, users, IAM roles, and
    * AWS accounts ).

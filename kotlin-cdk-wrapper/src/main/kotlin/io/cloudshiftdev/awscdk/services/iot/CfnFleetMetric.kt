@@ -56,6 +56,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFleetMetric internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnFleetMetric,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFleetMetricProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnFleetMetric(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFleetMetricProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFleetMetricProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFleetMetricProps(props)
+  )
+
   /**
    * The field to aggregate.
    */

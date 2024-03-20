@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDatabase internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDatabase,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatabaseProps,
+  ) :
+      this(software.amazon.awscdk.services.lightsail.CfnDatabase(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDatabaseProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatabaseProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDatabaseProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the database (for example,
    * `arn:aws:lightsail:us-east-2:123456789101:RelationalDatabase/244ad76f-8aad-4741-809f-12345EXAMPLE`

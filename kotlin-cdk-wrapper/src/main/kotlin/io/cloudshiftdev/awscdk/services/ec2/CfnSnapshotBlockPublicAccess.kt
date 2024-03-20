@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSnapshotBlockPublicAccess internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSnapshotBlockPublicAccessProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSnapshotBlockPublicAccessProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSnapshotBlockPublicAccessProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSnapshotBlockPublicAccessProps(props)
+  )
+
   /**
    * `Ref` returns the ID of the AWS account.
    */

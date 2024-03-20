@@ -37,6 +37,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ReportGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.ReportGroup,
 ) : Resource(cdkObject), IReportGroup {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codebuild.ReportGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ReportGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.codebuild.ReportGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ReportGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ReportGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, ReportGroupProps(props)
+  )
+
   /**
    * Grants the given entity permissions to write (that is, upload reports to) this report group.
    *

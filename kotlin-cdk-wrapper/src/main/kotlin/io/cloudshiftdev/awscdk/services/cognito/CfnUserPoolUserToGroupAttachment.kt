@@ -34,6 +34,22 @@ public open class CfnUserPoolUserToGroupAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolUserToGroupAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolUserToGroupAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolUserToGroupAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolUserToGroupAttachmentProps(props)
+  )
+
   /**
    * The name of the group that you want to add your user to.
    */

@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNetworkProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnNetworkProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.devicefarm.CfnNetworkProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkProfileProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the network profile.
    *

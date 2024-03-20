@@ -30,6 +30,16 @@ import kotlin.Unit
 public open class Stop internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.actions.Stop,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
+  public constructor() : this(software.amazon.awscdk.services.ses.actions.Stop()
+  )
+
+  public constructor(props: StopProps) :
+      this(software.amazon.awscdk.services.ses.actions.Stop(props.let(StopProps::unwrap))
+  )
+
+  public constructor(props: StopProps.Builder.() -> Unit) : this(StopProps(props)
+  )
+
   /**
    * Returns the receipt rule action specification.
    *

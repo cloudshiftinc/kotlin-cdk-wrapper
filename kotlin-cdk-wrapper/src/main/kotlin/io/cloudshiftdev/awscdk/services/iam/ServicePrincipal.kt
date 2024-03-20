@@ -28,6 +28,19 @@ import kotlin.collections.Map
 public open class ServicePrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.ServicePrincipal,
 ) : PrincipalBase(cdkObject) {
+  public constructor(service: String) :
+      this(software.amazon.awscdk.services.iam.ServicePrincipal(service)
+  )
+
+  public constructor(service: String, opts: ServicePrincipalOpts) :
+      this(software.amazon.awscdk.services.iam.ServicePrincipal(service,
+      opts.let(ServicePrincipalOpts::unwrap))
+  )
+
+  public constructor(service: String, opts: ServicePrincipalOpts.Builder.() -> Unit) : this(service,
+      ServicePrincipalOpts(opts)
+  )
+
   /**
    * Return whether or not this principal is equal to the given principal.
    */

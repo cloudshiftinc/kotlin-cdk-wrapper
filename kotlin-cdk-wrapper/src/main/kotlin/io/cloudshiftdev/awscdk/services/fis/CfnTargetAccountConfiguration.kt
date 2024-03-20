@@ -41,6 +41,22 @@ public open class CfnTargetAccountConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTargetAccountConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTargetAccountConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTargetAccountConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTargetAccountConfigurationProps(props)
+  )
+
   /**
    * The AWS account ID of the target account.
    */

@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCodeSigningConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCodeSigningConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.CfnCodeSigningConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCodeSigningConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCodeSigningConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCodeSigningConfigProps(props)
+  )
+
   /**
    * List of allowed publishers.
    */

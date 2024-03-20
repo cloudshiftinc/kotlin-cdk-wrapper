@@ -79,6 +79,27 @@ public open class CfnTargetGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTargetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTargetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTargetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTargetGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the load balancer that routes traffic to this target group.
    */

@@ -35,6 +35,13 @@ import kotlin.Unit
 public open class RawEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.RawEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
+  public constructor(props: RawEndpointProps) :
+      this(software.amazon.awscdk.services.globalaccelerator.RawEndpoint(props.let(RawEndpointProps::unwrap))
+  )
+
+  public constructor(props: RawEndpointProps.Builder.() -> Unit) : this(RawEndpointProps(props)
+  )
+
   /**
    * The region where the endpoint is located.
    *

@@ -78,6 +78,22 @@ public open class CfnIdentitySource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentitySourceProps,
+  ) :
+      this(software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIdentitySourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentitySourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIdentitySourceProps(props)
+  )
+
   /**
    *
    */

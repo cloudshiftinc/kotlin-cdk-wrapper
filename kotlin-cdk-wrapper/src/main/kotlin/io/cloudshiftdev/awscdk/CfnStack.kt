@@ -101,6 +101,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStack internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnStack,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackProps,
+  ) : this(software.amazon.awscdk.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
+      props.let(CfnStackProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStackProps(props)
+  )
+
   /**
    * Returns the unique ID of the change set.
    */

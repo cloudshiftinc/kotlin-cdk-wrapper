@@ -38,6 +38,22 @@ public open class CfnTransitGatewayMulticastDomainAssociation internal construct
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayMulticastDomainAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayMulticastDomainAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayMulticastDomainAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayMulticastDomainAssociationProps(props)
+  )
+
   /**
    * The ID of the resource.
    */

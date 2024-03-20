@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSkill internal constructor(
   internal override val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSkillProps,
+  ) :
+      this(software.amazon.awscdk.alexa.ask.CfnSkill(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSkillProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSkillProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSkillProps(props)
+  )
+
   /**
    *
    */

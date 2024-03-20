@@ -52,6 +52,14 @@ public open class SelfManagedKafkaEventSource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSource,
 ) : StreamEventSource(cdkObject) {
+  public constructor(props: SelfManagedKafkaEventSourceProps) :
+      this(software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSource(props.let(SelfManagedKafkaEventSourceProps::unwrap))
+  )
+
+  public constructor(props: SelfManagedKafkaEventSourceProps.Builder.() -> Unit) :
+      this(SelfManagedKafkaEventSourceProps(props)
+  )
+
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
    *

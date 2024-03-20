@@ -90,6 +90,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.vpclattice.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRuleProps(props)
+  )
+
   /**
    * Describes the action for a rule.
    */

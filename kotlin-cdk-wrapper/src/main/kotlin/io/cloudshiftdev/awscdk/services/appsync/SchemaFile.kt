@@ -52,6 +52,13 @@ import kotlin.jvm.JvmName
 public open class SchemaFile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.SchemaFile,
 ) : CdkObject(cdkObject), ISchema {
+  public constructor(options: SchemaProps) :
+      this(software.amazon.awscdk.services.appsync.SchemaFile(options.let(SchemaProps::unwrap))
+  )
+
+  public constructor(options: SchemaProps.Builder.() -> Unit) : this(SchemaProps(options)
+  )
+
   /**
    * Called when the GraphQL Api is initialized to allow this object to bind to the stack.
    *

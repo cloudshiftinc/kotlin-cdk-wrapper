@@ -72,6 +72,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnOIDCProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnOIDCProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOIDCProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnOIDCProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOIDCProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOIDCProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOIDCProviderProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) for the specified `AWS::IAM::OIDCProvider` resource.
    */

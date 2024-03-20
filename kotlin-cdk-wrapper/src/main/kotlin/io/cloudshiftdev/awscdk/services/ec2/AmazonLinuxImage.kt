@@ -39,6 +39,17 @@ import kotlin.jvm.JvmName
 public open class AmazonLinuxImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImage,
 ) : GenericSSMParameterImage(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.ec2.AmazonLinuxImage()
+  )
+
+  public constructor(props: AmazonLinuxImageProps) :
+      this(software.amazon.awscdk.services.ec2.AmazonLinuxImage(props.let(AmazonLinuxImageProps::unwrap))
+  )
+
+  public constructor(props: AmazonLinuxImageProps.Builder.() -> Unit) :
+      this(AmazonLinuxImageProps(props)
+  )
+
   /**
    * Return the image to use in the given context.
    *

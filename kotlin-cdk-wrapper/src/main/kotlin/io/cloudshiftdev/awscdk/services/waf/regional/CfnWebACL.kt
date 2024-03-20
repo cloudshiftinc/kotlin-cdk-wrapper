@@ -68,6 +68,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWebACL internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWebACLProps,
+  ) :
+      this(software.amazon.awscdk.services.waf.regional.CfnWebACL(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWebACLProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWebACLProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWebACLProps(props)
+  )
+
   /**
    *
    */

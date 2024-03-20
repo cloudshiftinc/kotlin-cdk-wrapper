@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNetworkSettings internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkSettingsProps,
+  ) :
+      this(software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkSettingsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkSettingsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkSettingsProps(props)
+  )
+
   /**
    * A list of web portal ARNs that this network settings is associated with.
    */

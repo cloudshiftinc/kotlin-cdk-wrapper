@@ -57,6 +57,22 @@ public open class CfnTransitGatewayRouteTableAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayRouteTableAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayRouteTableAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayRouteTableAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayRouteTableAttachmentProps(props)
+  )
+
   /**
    * The ID of the transit gateway route table attachment.
    */

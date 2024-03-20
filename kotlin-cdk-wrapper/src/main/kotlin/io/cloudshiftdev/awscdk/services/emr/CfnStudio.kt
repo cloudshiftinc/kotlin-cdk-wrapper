@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStudio internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.emr.CfnStudio,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStudioProps,
+  ) :
+      this(software.amazon.awscdk.services.emr.CfnStudio(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStudioProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStudioProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStudioProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the Amazon EMR Studio.
    *

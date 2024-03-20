@@ -99,6 +99,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.fms.CfnPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPolicyProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the policy.
    */

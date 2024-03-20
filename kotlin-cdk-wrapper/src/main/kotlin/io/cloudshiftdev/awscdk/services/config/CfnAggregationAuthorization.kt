@@ -42,6 +42,22 @@ public open class CfnAggregationAuthorization internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.config.CfnAggregationAuthorization,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAggregationAuthorizationProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CfnAggregationAuthorization(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAggregationAuthorizationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAggregationAuthorizationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAggregationAuthorizationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the aggregation object.
    */

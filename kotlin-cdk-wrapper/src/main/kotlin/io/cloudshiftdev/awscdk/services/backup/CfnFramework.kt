@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFramework internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.CfnFramework,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFrameworkProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.CfnFramework(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFrameworkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFrameworkProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFrameworkProps(props)
+  )
+
   /**
    * The UTC time when you created your framework.
    */

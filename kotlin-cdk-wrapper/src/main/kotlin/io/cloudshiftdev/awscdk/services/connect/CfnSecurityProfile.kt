@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSecurityProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecurityProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecurityProfileProps(props)
+  )
+
   /**
    * The list of tags that a security profile uses to restrict access to resources in Amazon
    * Connect.

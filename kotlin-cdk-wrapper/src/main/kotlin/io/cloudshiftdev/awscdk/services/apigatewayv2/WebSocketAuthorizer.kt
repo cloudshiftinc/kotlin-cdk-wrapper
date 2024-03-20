@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class WebSocketAuthorizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer,
 ) : Resource(cdkObject), IWebSocketAuthorizer {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WebSocketAuthorizerProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(WebSocketAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WebSocketAuthorizerProps.Builder.() -> Unit,
+  ) : this(scope, id, WebSocketAuthorizerProps(props)
+  )
+
   /**
    * Id of the Authorizer.
    */

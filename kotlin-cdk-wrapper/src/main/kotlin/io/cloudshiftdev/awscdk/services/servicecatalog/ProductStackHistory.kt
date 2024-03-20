@@ -39,6 +39,22 @@ public open class ProductStackHistory internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.ProductStackHistory,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProductStackHistoryProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.ProductStackHistory(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ProductStackHistoryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProductStackHistoryProps.Builder.() -> Unit,
+  ) : this(scope, id, ProductStackHistoryProps(props)
+  )
+
   /**
    * Retains product stack template as a snapshot when deployed and retrieves a
    * CloudFormationProductVersion for the current product version.

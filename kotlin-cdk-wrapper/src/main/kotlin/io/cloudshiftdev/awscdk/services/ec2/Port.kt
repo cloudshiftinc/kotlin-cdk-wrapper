@@ -30,6 +30,13 @@ import kotlin.Unit
 public open class Port internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Port,
 ) : CdkObject(cdkObject) {
+  public constructor(props: PortProps) :
+      this(software.amazon.awscdk.services.ec2.Port(props.let(PortProps::unwrap))
+  )
+
+  public constructor(props: PortProps.Builder.() -> Unit) : this(PortProps(props)
+  )
+
   /**
    * Whether the rule containing this port range can be inlined into a securitygroup or not.
    */

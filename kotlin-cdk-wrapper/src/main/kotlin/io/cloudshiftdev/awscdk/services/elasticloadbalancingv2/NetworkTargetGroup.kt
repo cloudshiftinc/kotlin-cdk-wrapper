@@ -47,6 +47,22 @@ public open class NetworkTargetGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup,
 ) : TargetGroupBase(cdkObject), INetworkTargetGroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkTargetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NetworkTargetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkTargetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, NetworkTargetGroupProps(props)
+  )
+
   /**
    * Add a load balancing target to this target group.
    *

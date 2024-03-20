@@ -69,6 +69,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPolicyProps(props)
+  )
+
   /**
    *
    */

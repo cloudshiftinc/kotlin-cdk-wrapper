@@ -31,6 +31,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class AwsAuth internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.AwsAuth,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AwsAuthProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.AwsAuth(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AwsAuthProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AwsAuthProps.Builder.() -> Unit,
+  ) : this(scope, id, AwsAuthProps(props)
+  )
+
   /**
    * Additional AWS account to add to the aws-auth configmap.
    *

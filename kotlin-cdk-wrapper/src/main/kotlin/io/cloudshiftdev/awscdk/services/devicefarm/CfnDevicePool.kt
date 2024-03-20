@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDevicePool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDevicePoolProps,
+  ) :
+      this(software.amazon.awscdk.services.devicefarm.CfnDevicePool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDevicePoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDevicePoolProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDevicePoolProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the device pool.
    *

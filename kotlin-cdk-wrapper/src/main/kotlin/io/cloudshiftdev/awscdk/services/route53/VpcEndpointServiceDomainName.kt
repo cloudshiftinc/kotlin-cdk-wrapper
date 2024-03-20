@@ -30,6 +30,22 @@ public open class VpcEndpointServiceDomainName internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpcEndpointServiceDomainNameProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VpcEndpointServiceDomainNameProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpcEndpointServiceDomainNameProps.Builder.() -> Unit,
+  ) : this(scope, id, VpcEndpointServiceDomainNameProps(props)
+  )
+
   /**
    * The domain name associated with the private DNS configuration.
    */

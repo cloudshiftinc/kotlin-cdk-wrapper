@@ -31,6 +31,23 @@ import kotlin.collections.List
 public open class Tag internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Tag,
 ) : CdkObject(cdkObject), IAspect {
+  public constructor(key: String, `value`: String) : this(software.amazon.awscdk.Tag(key, `value`)
+  )
+
+  public constructor(
+    key: String,
+    `value`: String,
+    props: TagProps,
+  ) : this(software.amazon.awscdk.Tag(key, `value`, props.let(TagProps::unwrap))
+  )
+
+  public constructor(
+    key: String,
+    `value`: String,
+    props: TagProps.Builder.() -> Unit,
+  ) : this(key, `value`, TagProps(props)
+  )
+
   /**
    * The string key for the tag.
    */

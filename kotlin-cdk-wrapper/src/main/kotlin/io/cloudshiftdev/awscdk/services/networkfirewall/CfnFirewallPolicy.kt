@@ -90,6 +90,22 @@ public open class CfnFirewallPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFirewallPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFirewallPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFirewallPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFirewallPolicyProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `FirewallPolicy` .
    */

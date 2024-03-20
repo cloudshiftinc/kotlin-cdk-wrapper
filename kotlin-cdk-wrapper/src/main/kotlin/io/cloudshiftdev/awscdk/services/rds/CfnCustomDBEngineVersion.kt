@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCustomDBEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomDBEngineVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCustomDBEngineVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomDBEngineVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCustomDBEngineVersionProps(props)
+  )
+
   /**
    * The ARN of the custom engine version.
    */

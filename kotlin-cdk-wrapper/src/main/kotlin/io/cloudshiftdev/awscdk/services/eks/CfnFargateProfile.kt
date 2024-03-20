@@ -85,6 +85,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFargateProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFargateProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.CfnFargateProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFargateProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFargateProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFargateProfileProps(props)
+  )
+
   /**
    * The ARN of the cluster, such as
    * `arn:aws:eks:us-west-2:666666666666:fargateprofile/myCluster/myFargateProfile/1cb1a11a-1dc1-1d11-cf11-1111f11fa111`

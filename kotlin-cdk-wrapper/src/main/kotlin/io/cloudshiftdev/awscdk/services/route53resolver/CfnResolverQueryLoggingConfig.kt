@@ -35,6 +35,27 @@ public open class CfnResolverQueryLoggingConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverQueryLoggingConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResolverQueryLoggingConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverQueryLoggingConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResolverQueryLoggingConfigProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the query logging configuration.
    */

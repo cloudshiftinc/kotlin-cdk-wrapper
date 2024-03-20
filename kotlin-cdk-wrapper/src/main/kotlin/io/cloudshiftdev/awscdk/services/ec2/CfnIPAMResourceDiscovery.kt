@@ -47,6 +47,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPAMResourceDiscovery internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMResourceDiscoveryProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPAMResourceDiscoveryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMResourceDiscoveryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPAMResourceDiscoveryProps(props)
+  )
+
   /**
    * The resource discovery ARN.
    */

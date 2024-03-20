@@ -76,6 +76,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnExtension internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnExtensionProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.CfnExtension(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnExtensionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnExtensionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnExtensionProps(props)
+  )
+
   /**
    * The actions defined in the extension.
    */

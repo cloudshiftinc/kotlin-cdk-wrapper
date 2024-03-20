@@ -24,6 +24,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DedicatedIpPool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.DedicatedIpPool,
 ) : Resource(cdkObject), IDedicatedIpPool {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ses.DedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DedicatedIpPoolProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.DedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DedicatedIpPoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DedicatedIpPoolProps.Builder.() -> Unit,
+  ) : this(scope, id, DedicatedIpPoolProps(props)
+  )
+
   /**
    * The name of the dedicated IP pool.
    */

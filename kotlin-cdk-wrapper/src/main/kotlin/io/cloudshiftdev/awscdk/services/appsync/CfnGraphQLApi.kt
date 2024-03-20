@@ -108,6 +108,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGraphQLApi internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGraphQLApiProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnGraphQLApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGraphQLApiProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGraphQLApiProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGraphQLApiProps(props)
+  )
+
   /**
    * A list of additional authentication providers for the `GraphqlApi` API.
    */

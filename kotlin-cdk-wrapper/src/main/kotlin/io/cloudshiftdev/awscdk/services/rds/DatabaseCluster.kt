@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DatabaseCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseCluster,
 ) : DatabaseClusterBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DatabaseClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.DatabaseCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DatabaseClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DatabaseClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, DatabaseClusterProps(props)
+  )
+
   /**
    * Adds the multi user rotation to this cluster.
    *

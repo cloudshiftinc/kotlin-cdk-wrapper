@@ -29,6 +29,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class PrivateHostedZone internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.PrivateHostedZone,
 ) : HostedZone(cdkObject), IPrivateHostedZone {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrivateHostedZoneProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.PrivateHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PrivateHostedZoneProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrivateHostedZoneProps.Builder.() -> Unit,
+  ) : this(scope, id, PrivateHostedZoneProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.route53.PrivateHostedZone].
    */

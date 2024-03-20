@@ -50,6 +50,22 @@ public open class ScheduledFargateTask internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTask,
 ) : ScheduledTaskBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ScheduledFargateTaskProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ScheduledFargateTaskProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ScheduledFargateTaskProps.Builder.() -> Unit,
+  ) : this(scope, id, ScheduledFargateTaskProps(props)
+  )
+
   /**
    * The ECS task in this construct.
    */

@@ -57,6 +57,14 @@ public open class CloudFormationCreateUpdateStackAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction,
 ) : Action(cdkObject) {
+  public constructor(props: CloudFormationCreateUpdateStackActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction(props.let(CloudFormationCreateUpdateStackActionProps::unwrap))
+  )
+
+  public constructor(props: CloudFormationCreateUpdateStackActionProps.Builder.() -> Unit) :
+      this(CloudFormationCreateUpdateStackActionProps(props)
+  )
+
   /**
    * Add statement to the service role assumed by CloudFormation while executing this action.
    *

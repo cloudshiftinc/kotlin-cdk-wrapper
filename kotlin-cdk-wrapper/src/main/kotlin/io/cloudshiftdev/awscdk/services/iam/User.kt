@@ -31,6 +31,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class User internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.User,
 ) : Resource(cdkObject), IIdentity, IUser {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.User(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.User(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UserProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserProps.Builder.() -> Unit,
+  ) : this(scope, id, UserProps(props)
+  )
+
   /**
    * Attaches a managed policy to the user.
    *

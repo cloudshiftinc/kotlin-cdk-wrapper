@@ -60,6 +60,27 @@ public open class CfnLoadBalancer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoadBalancerProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLoadBalancerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoadBalancerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLoadBalancerProps(props)
+  )
+
   /**
    * The ID of the Amazon Route 53 hosted zone associated with the load balancer.
    *

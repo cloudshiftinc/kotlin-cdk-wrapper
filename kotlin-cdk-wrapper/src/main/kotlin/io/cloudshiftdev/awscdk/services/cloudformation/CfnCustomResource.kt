@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCustomResource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnCustomResource,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomResourceProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudformation.CfnCustomResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCustomResourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomResourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCustomResourceProps(props)
+  )
+
   /**
    *
    */

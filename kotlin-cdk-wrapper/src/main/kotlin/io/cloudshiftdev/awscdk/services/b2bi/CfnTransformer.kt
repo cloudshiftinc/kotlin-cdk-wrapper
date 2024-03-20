@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTransformer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransformerProps,
+  ) :
+      this(software.amazon.awscdk.services.b2bi.CfnTransformer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransformerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransformerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransformerProps(props)
+  )
+
   /**
    * Returns a timestamp indicating when the transformer was created.
    *

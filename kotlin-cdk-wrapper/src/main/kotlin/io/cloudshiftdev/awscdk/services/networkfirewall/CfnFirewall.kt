@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFirewall internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewall,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFirewallProps,
+  ) :
+      this(software.amazon.awscdk.services.networkfirewall.CfnFirewall(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFirewallProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFirewallProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFirewallProps(props)
+  )
+
   /**
    * The unique IDs of the firewall endpoints for all of the subnets that you attached to the
    * firewall.

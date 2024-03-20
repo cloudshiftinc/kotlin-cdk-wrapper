@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ScalableTaskCount internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ScalableTaskCount,
 ) : BaseScalableAttribute(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ScalableTaskCountProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.ScalableTaskCount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ScalableTaskCountProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ScalableTaskCountProps.Builder.() -> Unit,
+  ) : this(scope, id, ScalableTaskCountProps(props)
+  )
+
   /**
    * Scales in or out to achieve a target CPU utilization.
    *

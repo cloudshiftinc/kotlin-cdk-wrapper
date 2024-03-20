@@ -79,6 +79,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTrigger internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTriggerProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnTrigger(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTriggerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTriggerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTriggerProps(props)
+  )
+
   /**
    * The actions initiated by this trigger.
    */

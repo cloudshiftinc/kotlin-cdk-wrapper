@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMatchmakingRuleSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMatchmakingRuleSetProps,
+  ) :
+      this(software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMatchmakingRuleSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMatchmakingRuleSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMatchmakingRuleSetProps(props)
+  )
+
   /**
    * The unique Amazon Resource Name (ARN) assigned to the rule set.
    */

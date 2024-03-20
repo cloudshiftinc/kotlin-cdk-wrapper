@@ -216,6 +216,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDBInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.rds.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBInstanceProps(props)
+  )
+
   /**
    * The amount of storage in gibibytes (GiB) to be initially allocated for the database instance.
    */

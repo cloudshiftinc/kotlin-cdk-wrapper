@@ -42,6 +42,27 @@ public open class HttpLambdaAuthorizer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+  public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
+      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer(id,
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+    props: HttpLambdaAuthorizerProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer(id,
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
+      props.let(HttpLambdaAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+    props: HttpLambdaAuthorizerProps.Builder.() -> Unit,
+  ) : this(id, handler, HttpLambdaAuthorizerProps(props)
+  )
+
   /**
    * Bind this authorizer to a specified Http route.
    *

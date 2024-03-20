@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -66,6 +67,18 @@ import kotlin.jvm.JvmName
 public open class AssetCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.AssetCode,
 ) : Code(cdkObject) {
+  public constructor(path: String) : this(software.amazon.awscdk.services.appsync.AssetCode(path)
+  )
+
+  public constructor(path: String, options: AssetOptions) :
+      this(software.amazon.awscdk.services.appsync.AssetCode(path,
+      options.let(AssetOptions::unwrap))
+  )
+
+  public constructor(path: String, options: AssetOptions.Builder.() -> Unit) : this(path,
+      AssetOptions(options)
+  )
+
   /**
    * Bind source code to an AppSync Function or resolver.
    *

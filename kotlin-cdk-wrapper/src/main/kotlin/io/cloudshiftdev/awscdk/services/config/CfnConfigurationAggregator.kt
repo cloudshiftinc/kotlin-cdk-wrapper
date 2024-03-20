@@ -59,6 +59,27 @@ public open class CfnConfigurationAggregator internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.config.CfnConfigurationAggregator,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.config.CfnConfigurationAggregator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationAggregatorProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CfnConfigurationAggregator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigurationAggregatorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationAggregatorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigurationAggregatorProps(props)
+  )
+
   /**
    * Provides a list of source accounts and regions to be aggregated.
    */

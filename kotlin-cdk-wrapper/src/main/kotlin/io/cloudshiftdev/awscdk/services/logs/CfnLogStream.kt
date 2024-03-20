@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLogStream internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CfnLogStream,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogStreamProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.CfnLogStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLogStreamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogStreamProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLogStreamProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

@@ -64,6 +64,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSimulation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.simspaceweaver.CfnSimulation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSimulationProps,
+  ) :
+      this(software.amazon.awscdk.services.simspaceweaver.CfnSimulation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSimulationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSimulationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSimulationProps(props)
+  )
+
   /**
    * The JSON blob that the
    * [DescribeSimulation](https://docs.aws.amazon.com/simspaceweaver/latest/APIReference/API_DescribeSimulation.html)

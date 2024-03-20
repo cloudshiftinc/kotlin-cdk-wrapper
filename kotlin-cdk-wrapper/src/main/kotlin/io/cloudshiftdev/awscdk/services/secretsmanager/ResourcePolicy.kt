@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ResourcePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.ResourcePolicy,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ResourcePolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.secretsmanager.ResourcePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ResourcePolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ResourcePolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, ResourcePolicyProps(props)
+  )
+
   /**
    * The IAM policy document for this policy.
    */

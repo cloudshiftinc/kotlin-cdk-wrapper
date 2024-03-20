@@ -56,6 +56,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRoom internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ivschat.CfnRoom,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ivschat.CfnRoom(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoomProps,
+  ) :
+      this(software.amazon.awscdk.services.ivschat.CfnRoom(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRoomProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoomProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRoomProps(props)
+  )
+
   /**
    * The room ARN.
    *

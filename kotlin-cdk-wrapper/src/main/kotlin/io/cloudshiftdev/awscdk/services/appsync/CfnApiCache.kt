@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApiCache internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnApiCache,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiCacheProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnApiCache(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApiCacheProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiCacheProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApiCacheProps(props)
+  )
+
   /**
    * Caching behavior.
    */

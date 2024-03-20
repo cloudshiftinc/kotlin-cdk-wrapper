@@ -38,6 +38,22 @@ public open class CfnOriginEndpointPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginEndpointPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOriginEndpointPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginEndpointPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOriginEndpointPolicyProps(props)
+  )
+
   /**
    * The name of the channel group associated with the origin endpoint policy.
    */

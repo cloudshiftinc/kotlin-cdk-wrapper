@@ -103,6 +103,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLayer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLayerProps,
+  ) :
+      this(software.amazon.awscdk.services.opsworks.CfnLayer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLayerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLayerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLayerProps(props)
+  )
+
   /**
    *
    */

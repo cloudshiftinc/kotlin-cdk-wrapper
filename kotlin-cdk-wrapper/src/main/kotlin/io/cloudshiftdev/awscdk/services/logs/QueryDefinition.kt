@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class QueryDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.QueryDefinition,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: QueryDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.QueryDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(QueryDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: QueryDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, QueryDefinitionProps(props)
+  )
+
   /**
    * The ID of the query definition.
    */

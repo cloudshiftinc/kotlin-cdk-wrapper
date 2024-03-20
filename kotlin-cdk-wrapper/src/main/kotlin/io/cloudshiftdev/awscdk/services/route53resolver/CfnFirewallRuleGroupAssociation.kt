@@ -46,6 +46,22 @@ public open class CfnFirewallRuleGroupAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFirewallRuleGroupAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFirewallRuleGroupAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFirewallRuleGroupAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFirewallRuleGroupAssociationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the firewall rule group association.
    */

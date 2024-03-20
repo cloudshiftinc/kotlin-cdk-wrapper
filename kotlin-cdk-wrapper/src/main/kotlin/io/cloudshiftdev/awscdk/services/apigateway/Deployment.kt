@@ -75,6 +75,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Deployment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.Deployment,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DeploymentProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.Deployment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DeploymentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DeploymentProps.Builder.() -> Unit,
+  ) : this(scope, id, DeploymentProps(props)
+  )
+
   /**
    * Adds a component to the hash that determines this Deployment resource's logical ID.
    *

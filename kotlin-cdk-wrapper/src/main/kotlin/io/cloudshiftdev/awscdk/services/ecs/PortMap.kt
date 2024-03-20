@@ -32,6 +32,15 @@ import kotlin.Unit
 public open class PortMap internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.PortMap,
 ) : CdkObject(cdkObject) {
+  public constructor(networkmode: NetworkMode, pm: PortMapping) :
+      this(software.amazon.awscdk.services.ecs.PortMap(networkmode.let(NetworkMode::unwrap),
+      pm.let(PortMapping::unwrap))
+  )
+
+  public constructor(networkmode: NetworkMode, pm: PortMapping.Builder.() -> Unit) :
+      this(networkmode, PortMapping(pm)
+  )
+
   /**
    * The networking mode to use for the containers in the task.
    */

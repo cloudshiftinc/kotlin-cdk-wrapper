@@ -28,6 +28,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class FlowLog internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.FlowLog,
 ) : Resource(cdkObject), IFlowLog {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FlowLogProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.FlowLog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FlowLogProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FlowLogProps.Builder.() -> Unit,
+  ) : this(scope, id, FlowLogProps(props)
+  )
+
   /**
    * The S3 bucket to publish flow logs to.
    */

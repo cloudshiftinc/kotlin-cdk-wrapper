@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReplicationConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.ecr.CfnReplicationConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReplicationConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReplicationConfigurationProps(props)
+  )
+
   /**
    * The account ID of the destination registry.
    */

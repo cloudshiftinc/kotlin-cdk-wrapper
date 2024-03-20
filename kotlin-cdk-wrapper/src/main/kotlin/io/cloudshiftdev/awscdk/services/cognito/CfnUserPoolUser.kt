@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserPoolUser internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUser,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolUserProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolUserProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolUserProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolUserProps(props)
+  )
+
   /**
    * A map of custom key-value pairs that you can provide as input for any custom workflows that
    * this action triggers.

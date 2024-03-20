@@ -49,6 +49,13 @@ import kotlin.jvm.JvmName
 public open class EcsTask internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.EcsTask,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(props: EcsTaskProps) :
+      this(software.amazon.awscdk.services.events.targets.EcsTask(props.let(EcsTaskProps::unwrap))
+  )
+
+  public constructor(props: EcsTaskProps.Builder.() -> Unit) : this(EcsTaskProps(props)
+  )
+
   /**
    * Allows using tasks as target of EventBridge events.
    *

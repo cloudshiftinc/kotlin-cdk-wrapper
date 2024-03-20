@@ -29,6 +29,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class HttpStage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStage,
 ) : Resource(cdkObject), IHttpStage, IStage {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpStageProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.HttpStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(HttpStageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpStageProps.Builder.() -> Unit,
+  ) : this(scope, id, HttpStageProps(props)
+  )
+
   /**
    * The API this stage is associated to.
    */

@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CustomRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.CustomRule,
 ) : Resource(cdkObject), IRule {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CustomRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CustomRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CustomRuleProps(props)
+  )
+
   /**
    * The arn of the rule.
    */

@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Extension internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.Extension,
 ) : Resource(cdkObject), IExtension {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ExtensionProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.Extension(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ExtensionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ExtensionProps.Builder.() -> Unit,
+  ) : this(scope, id, ExtensionProps(props)
+  )
+
   /**
    * The actions for the extension.
    */

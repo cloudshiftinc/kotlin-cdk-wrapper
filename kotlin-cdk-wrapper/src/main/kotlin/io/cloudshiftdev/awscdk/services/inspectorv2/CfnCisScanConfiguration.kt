@@ -74,6 +74,27 @@ public open class CfnCisScanConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCisScanConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCisScanConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCisScanConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCisScanConfigurationProps(props)
+  )
+
   /**
    * The CIS scan configuration's scan configuration ARN.
    */

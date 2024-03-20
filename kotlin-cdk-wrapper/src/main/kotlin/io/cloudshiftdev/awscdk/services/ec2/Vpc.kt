@@ -60,6 +60,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Vpc internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Vpc,
 ) : Resource(cdkObject), IVpc {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.Vpc(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpcProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.Vpc(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VpcProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpcProps.Builder.() -> Unit,
+  ) : this(scope, id, VpcProps(props)
+  )
+
   /**
    * Adds a new client VPN endpoint to this VPC.
    *

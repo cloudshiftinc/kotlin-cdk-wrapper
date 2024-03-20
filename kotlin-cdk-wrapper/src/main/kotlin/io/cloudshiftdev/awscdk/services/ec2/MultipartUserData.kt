@@ -40,6 +40,17 @@ import kotlin.jvm.JvmName
 public open class MultipartUserData internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.MultipartUserData,
 ) : UserData(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.ec2.MultipartUserData()
+  )
+
+  public constructor(opts: MultipartUserDataOptions) :
+      this(software.amazon.awscdk.services.ec2.MultipartUserData(opts.let(MultipartUserDataOptions::unwrap))
+  )
+
+  public constructor(opts: MultipartUserDataOptions.Builder.() -> Unit) :
+      this(MultipartUserDataOptions(opts)
+  )
+
   /**
    * Add one or more commands to the user data.
    *

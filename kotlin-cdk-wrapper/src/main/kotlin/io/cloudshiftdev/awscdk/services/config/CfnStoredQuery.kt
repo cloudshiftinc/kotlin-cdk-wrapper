@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStoredQuery internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.CfnStoredQuery,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStoredQueryProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CfnStoredQuery(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStoredQueryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStoredQueryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStoredQueryProps(props)
+  )
+
   /**
    * Amazon Resource Name (ARN) of the query.
    *

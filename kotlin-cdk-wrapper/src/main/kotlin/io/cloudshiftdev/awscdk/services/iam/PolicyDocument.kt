@@ -40,6 +40,17 @@ import kotlin.jvm.JvmName
 public open class PolicyDocument internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.PolicyDocument,
 ) : CdkObject(cdkObject), IResolvable {
+  public constructor() : this(software.amazon.awscdk.services.iam.PolicyDocument()
+  )
+
+  public constructor(props: PolicyDocumentProps) :
+      this(software.amazon.awscdk.services.iam.PolicyDocument(props.let(PolicyDocumentProps::unwrap))
+  )
+
+  public constructor(props: PolicyDocumentProps.Builder.() -> Unit) :
+      this(PolicyDocumentProps(props)
+  )
+
   /**
    * Adds a statement to the policy document.
    *

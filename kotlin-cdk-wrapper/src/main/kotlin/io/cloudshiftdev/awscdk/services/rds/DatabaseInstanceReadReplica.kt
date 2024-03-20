@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DatabaseInstanceReadReplica internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica,
 ) : DatabaseInstanceBase(cdkObject), IDatabaseInstance {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DatabaseInstanceReadReplicaProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DatabaseInstanceReadReplicaProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DatabaseInstanceReadReplicaProps.Builder.() -> Unit,
+  ) : this(scope, id, DatabaseInstanceReadReplicaProps(props)
+  )
+
   /**
    * The log group is created when `cloudwatchLogsExports` is set.
    *

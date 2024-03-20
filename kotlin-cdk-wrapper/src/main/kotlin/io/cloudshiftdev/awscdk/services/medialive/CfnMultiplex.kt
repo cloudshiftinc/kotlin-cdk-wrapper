@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMultiplex internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMultiplexProps,
+  ) :
+      this(software.amazon.awscdk.services.medialive.CfnMultiplex(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMultiplexProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMultiplexProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMultiplexProps(props)
+  )
+
   /**
    * The unique arn of the multiplex.
    */

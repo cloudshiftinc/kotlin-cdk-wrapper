@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Method internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.Method,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: MethodProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.Method(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(MethodProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: MethodProps.Builder.() -> Unit,
+  ) : this(scope, id, MethodProps(props)
+  )
+
   /**
    * Add a method response to this method.
    *

@@ -56,6 +56,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLogAnomalyDetector internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CfnLogAnomalyDetector,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.logs.CfnLogAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogAnomalyDetectorProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.CfnLogAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLogAnomalyDetectorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogAnomalyDetectorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLogAnomalyDetectorProps(props)
+  )
+
   /**
    * The ID of the account to create the anomaly detector in.
    */

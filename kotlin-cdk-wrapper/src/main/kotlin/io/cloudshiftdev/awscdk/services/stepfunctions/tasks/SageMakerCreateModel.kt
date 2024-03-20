@@ -50,6 +50,22 @@ public open class SageMakerCreateModel internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel,
 ) : TaskStateBase(cdkObject), IGrantable, IConnectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SageMakerCreateModelProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SageMakerCreateModelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SageMakerCreateModelProps.Builder.() -> Unit,
+  ) : this(scope, id, SageMakerCreateModelProps(props)
+  )
+
   /**
    * Add the security group to all instances via the launch configuration security groups array.
    *

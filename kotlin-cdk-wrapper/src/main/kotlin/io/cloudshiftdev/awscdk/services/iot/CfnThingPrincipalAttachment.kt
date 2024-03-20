@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnThingPrincipalAttachment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThingPrincipalAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnThingPrincipalAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThingPrincipalAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnThingPrincipalAttachmentProps(props)
+  )
+
   /**
    *
    */

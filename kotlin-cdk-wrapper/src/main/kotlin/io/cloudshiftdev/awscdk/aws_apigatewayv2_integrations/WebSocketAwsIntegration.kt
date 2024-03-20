@@ -49,6 +49,15 @@ public open class WebSocketAwsIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration,
 ) : WebSocketRouteIntegration(cdkObject) {
+  public constructor(id: String, props: WebSocketAwsIntegrationProps) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration(id,
+      props.let(WebSocketAwsIntegrationProps::unwrap))
+  )
+
+  public constructor(id: String, props: WebSocketAwsIntegrationProps.Builder.() -> Unit) : this(id,
+      WebSocketAwsIntegrationProps(props)
+  )
+
   /**
    * Bind this integration to the route.
    *

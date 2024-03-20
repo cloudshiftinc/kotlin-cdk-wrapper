@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class PublicHostedZone internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.PublicHostedZone,
 ) : HostedZone(cdkObject), IPublicHostedZone {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PublicHostedZoneProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.PublicHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PublicHostedZoneProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PublicHostedZoneProps.Builder.() -> Unit,
+  ) : this(scope, id, PublicHostedZoneProps(props)
+  )
+
   /**
    * Adds a delegation from this zone to a designated zone.
    *

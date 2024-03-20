@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlanProps,
+  ) :
+      this(software.amazon.awscdk.services.ssmcontacts.CfnPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlanProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPlanProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `Plan` resource.
    */

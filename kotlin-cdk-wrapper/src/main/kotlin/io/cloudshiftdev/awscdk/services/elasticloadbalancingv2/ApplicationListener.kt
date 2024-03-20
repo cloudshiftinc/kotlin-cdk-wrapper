@@ -51,6 +51,22 @@ public open class ApplicationListener internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener,
 ) : BaseListener(cdkObject), IApplicationListener {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationListenerProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApplicationListenerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationListenerProps.Builder.() -> Unit,
+  ) : this(scope, id, ApplicationListenerProps(props)
+  )
+
   /**
    * Perform the given default action on incoming requests.
    *

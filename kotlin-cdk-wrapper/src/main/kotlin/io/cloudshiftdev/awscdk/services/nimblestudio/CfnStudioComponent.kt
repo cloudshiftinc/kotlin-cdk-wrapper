@@ -96,6 +96,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStudioComponent internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStudioComponentProps,
+  ) :
+      this(software.amazon.awscdk.services.nimblestudio.CfnStudioComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStudioComponentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStudioComponentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStudioComponentProps(props)
+  )
+
   /**
    * The unique identifier for the studio component resource.
    */

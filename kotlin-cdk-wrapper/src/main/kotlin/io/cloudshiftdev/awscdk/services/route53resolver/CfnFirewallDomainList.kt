@@ -51,6 +51,27 @@ public open class CfnFirewallDomainList internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFirewallDomainListProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFirewallDomainListProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFirewallDomainListProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFirewallDomainListProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the firewall domain list.
    */

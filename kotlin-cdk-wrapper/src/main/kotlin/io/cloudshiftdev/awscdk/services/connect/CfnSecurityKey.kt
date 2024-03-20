@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSecurityKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnSecurityKey,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnSecurityKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecurityKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecurityKeyProps(props)
+  )
+
   /**
    * An `AssociationId` is automatically generated when a storage config is associated with an
    * instance.

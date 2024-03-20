@@ -31,6 +31,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CompositeAlarm internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CompositeAlarm,
 ) : AlarmBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CompositeAlarmProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudwatch.CompositeAlarm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CompositeAlarmProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CompositeAlarmProps.Builder.() -> Unit,
+  ) : this(scope, id, CompositeAlarmProps(props)
+  )
+
   /**
    * ARN of this alarm.
    */

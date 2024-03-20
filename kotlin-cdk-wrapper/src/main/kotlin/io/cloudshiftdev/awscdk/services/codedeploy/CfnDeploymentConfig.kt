@@ -66,6 +66,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDeploymentConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeploymentConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeploymentConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeploymentConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeploymentConfigProps(props)
+  )
+
   /**
    * The destination platform type for the deployment ( `Lambda` , `Server` , or `ECS` ).
    */

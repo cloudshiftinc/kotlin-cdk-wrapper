@@ -61,6 +61,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnOrganization internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.organizations.CfnOrganization,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.organizations.CfnOrganization(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOrganizationProps,
+  ) :
+      this(software.amazon.awscdk.services.organizations.CfnOrganization(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOrganizationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOrganizationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOrganizationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of an organization.
    */

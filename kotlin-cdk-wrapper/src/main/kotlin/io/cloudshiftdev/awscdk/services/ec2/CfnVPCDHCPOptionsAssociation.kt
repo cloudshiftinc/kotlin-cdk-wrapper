@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPCDHCPOptionsAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCDHCPOptionsAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCDHCPOptionsAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCDHCPOptionsAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCDHCPOptionsAssociationProps(props)
+  )
+
   /**
    * The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC.
    */

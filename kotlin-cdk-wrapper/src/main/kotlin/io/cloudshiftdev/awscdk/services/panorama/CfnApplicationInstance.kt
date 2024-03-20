@@ -56,6 +56,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApplicationInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.panorama.CfnApplicationInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.panorama.CfnApplicationInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationInstanceProps(props)
+  )
+
   /**
    * The ID of an application instance to replace with the new instance.
    */

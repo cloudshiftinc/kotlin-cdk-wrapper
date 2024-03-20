@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGroupVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnGroupVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrass.CfnGroupVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGroupVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGroupVersionProps(props)
+  )
+
   /**
    *
    */

@@ -36,6 +36,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDatastore internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.healthimaging.CfnDatastore,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.healthimaging.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatastoreProps,
+  ) :
+      this(software.amazon.awscdk.services.healthimaging.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDatastoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatastoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDatastoreProps(props)
+  )
+
   /**
    * The timestamp when the data store was created.
    */

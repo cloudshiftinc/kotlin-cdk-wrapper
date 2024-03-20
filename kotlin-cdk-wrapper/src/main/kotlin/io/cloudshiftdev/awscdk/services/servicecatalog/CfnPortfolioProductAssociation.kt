@@ -38,6 +38,22 @@ public open class CfnPortfolioProductAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPortfolioProductAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPortfolioProductAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPortfolioProductAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPortfolioProductAssociationProps(props)
+  )
+
   /**
    * The language code.
    */

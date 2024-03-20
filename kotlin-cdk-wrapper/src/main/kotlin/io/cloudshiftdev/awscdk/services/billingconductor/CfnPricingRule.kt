@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPricingRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.billingconductor.CfnPricingRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPricingRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.billingconductor.CfnPricingRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPricingRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPricingRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPricingRuleProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) used to uniquely identify a pricing rule.
    */

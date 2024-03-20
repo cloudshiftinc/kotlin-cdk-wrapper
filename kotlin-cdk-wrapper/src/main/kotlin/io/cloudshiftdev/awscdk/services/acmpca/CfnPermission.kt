@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPermission internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.acmpca.CfnPermission,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPermissionProps,
+  ) :
+      this(software.amazon.awscdk.services.acmpca.CfnPermission(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPermissionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPermissionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPermissionProps(props)
+  )
+
   /**
    * The private CA actions that can be performed by the designated AWS service.
    */

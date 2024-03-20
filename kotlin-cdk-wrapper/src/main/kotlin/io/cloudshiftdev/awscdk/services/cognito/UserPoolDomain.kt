@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class UserPoolDomain internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolDomain,
 ) : Resource(cdkObject), IUserPoolDomain {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolDomainProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.UserPoolDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UserPoolDomainProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolDomainProps.Builder.() -> Unit,
+  ) : this(scope, id, UserPoolDomainProps(props)
+  )
+
   /**
    * The URL to the hosted UI associated with this domain.
    *

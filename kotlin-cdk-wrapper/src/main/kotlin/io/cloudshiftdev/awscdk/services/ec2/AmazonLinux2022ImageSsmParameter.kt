@@ -33,6 +33,14 @@ public open class AmazonLinux2022ImageSsmParameter internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter,
 ) : AmazonLinuxImageSsmParameterBase(cdkObject) {
+  public constructor(props: AmazonLinux2022ImageSsmParameterProps) :
+      this(software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter(props.let(AmazonLinux2022ImageSsmParameterProps::unwrap))
+  )
+
+  public constructor(props: AmazonLinux2022ImageSsmParameterProps.Builder.() -> Unit) :
+      this(AmazonLinux2022ImageSsmParameterProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter].
    */

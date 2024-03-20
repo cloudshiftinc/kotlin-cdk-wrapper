@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAssistantAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.wisdom.CfnAssistantAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssistantAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.wisdom.CfnAssistantAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAssistantAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssistantAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAssistantAssociationProps(props)
+  )
+
   /**
    * The identifier of the Wisdom assistant.
    */

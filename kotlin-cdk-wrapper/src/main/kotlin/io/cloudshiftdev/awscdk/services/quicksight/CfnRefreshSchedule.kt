@@ -51,6 +51,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRefreshSchedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.quicksight.CfnRefreshSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRefreshScheduleProps,
+  ) :
+      this(software.amazon.awscdk.services.quicksight.CfnRefreshSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRefreshScheduleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRefreshScheduleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRefreshScheduleProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the refresh schedule.
    */

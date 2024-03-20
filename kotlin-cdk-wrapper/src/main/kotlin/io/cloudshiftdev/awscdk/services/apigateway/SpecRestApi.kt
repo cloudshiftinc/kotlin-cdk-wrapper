@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SpecRestApi internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.SpecRestApi,
 ) : RestApiBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SpecRestApiProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.SpecRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SpecRestApiProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SpecRestApiProps.Builder.() -> Unit,
+  ) : this(scope, id, SpecRestApiProps(props)
+  )
+
   /**
    * The ID of this API Gateway RestApi.
    */

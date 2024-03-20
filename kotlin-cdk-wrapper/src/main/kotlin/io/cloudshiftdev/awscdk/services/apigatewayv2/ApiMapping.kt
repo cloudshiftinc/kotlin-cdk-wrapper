@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ApiMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMapping,
 ) : Resource(cdkObject), IApiMapping {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApiMappingProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.ApiMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApiMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApiMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, ApiMappingProps(props)
+  )
+
   /**
    * ID of the API Mapping.
    */

@@ -29,6 +29,22 @@ import kotlin.jvm.JvmName
 public open class CloudAssemblyBuilder internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.CloudAssemblyBuilder,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.cxapi.CloudAssemblyBuilder()
+  )
+
+  public constructor(outdir: String) :
+      this(software.amazon.awscdk.cxapi.CloudAssemblyBuilder(outdir)
+  )
+
+  public constructor(outdir: String, props: CloudAssemblyBuilderProps) :
+      this(software.amazon.awscdk.cxapi.CloudAssemblyBuilder(outdir,
+      props.let(CloudAssemblyBuilderProps::unwrap))
+  )
+
+  public constructor(outdir: String, props: CloudAssemblyBuilderProps.Builder.() -> Unit) :
+      this(outdir, CloudAssemblyBuilderProps(props)
+  )
+
   /**
    * Adds an artifact into the cloud assembly.
    *

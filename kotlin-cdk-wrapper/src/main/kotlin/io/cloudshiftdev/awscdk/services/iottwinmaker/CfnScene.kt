@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScene internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnScene,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSceneProps,
+  ) :
+      this(software.amazon.awscdk.services.iottwinmaker.CfnScene(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSceneProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSceneProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSceneProps(props)
+  )
+
   /**
    * The scene ARN.
    */

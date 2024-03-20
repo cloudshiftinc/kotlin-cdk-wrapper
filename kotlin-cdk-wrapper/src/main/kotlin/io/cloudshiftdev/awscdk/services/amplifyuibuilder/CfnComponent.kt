@@ -38,6 +38,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnComponent internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnComponentProps,
+  ) :
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnComponentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnComponentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnComponentProps(props)
+  )
+
   /**
    * The unique ID of the Amplify app associated with the component.
    */

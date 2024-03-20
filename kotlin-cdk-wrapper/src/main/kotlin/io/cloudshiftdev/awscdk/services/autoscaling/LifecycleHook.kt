@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LifecycleHook internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.LifecycleHook,
 ) : Resource(cdkObject), ILifecycleHook {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LifecycleHookProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.LifecycleHook(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LifecycleHookProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LifecycleHookProps.Builder.() -> Unit,
+  ) : this(scope, id, LifecycleHookProps(props)
+  )
+
   /**
    * The name of this lifecycle hook.
    */

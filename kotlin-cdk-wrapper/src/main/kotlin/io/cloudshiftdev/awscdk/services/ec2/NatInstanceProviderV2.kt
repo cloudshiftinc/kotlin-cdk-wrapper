@@ -31,6 +31,13 @@ import kotlin.jvm.JvmName
 public open class NatInstanceProviderV2 internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProviderV2,
 ) : NatProvider(cdkObject), IConnectable {
+  public constructor(props: NatInstanceProps) :
+      this(software.amazon.awscdk.services.ec2.NatInstanceProviderV2(props.let(NatInstanceProps::unwrap))
+  )
+
+  public constructor(props: NatInstanceProps.Builder.() -> Unit) : this(NatInstanceProps(props)
+  )
+
   /**
    * Called by the VPC to configure NAT.
    *

@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class StateMachine internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachine,
 ) : Resource(cdkObject), IStateMachine {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StateMachineProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.StateMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(StateMachineProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StateMachineProps.Builder.() -> Unit,
+  ) : this(scope, id, StateMachineProps(props)
+  )
+
   /**
    * Add the given statement to the role's policy.
    *

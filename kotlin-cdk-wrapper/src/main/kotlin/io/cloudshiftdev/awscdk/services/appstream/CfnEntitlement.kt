@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEntitlement internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnEntitlement,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEntitlementProps,
+  ) :
+      this(software.amazon.awscdk.services.appstream.CfnEntitlement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEntitlementProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEntitlementProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEntitlementProps(props)
+  )
+
   /**
    * Specifies whether to entitle all apps or only selected apps.
    */

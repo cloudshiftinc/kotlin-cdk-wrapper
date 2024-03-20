@@ -27,6 +27,14 @@ import kotlin.Unit
 public open class LustreMaintenanceTime internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTime,
 ) : CdkObject(cdkObject) {
+  public constructor(props: LustreMaintenanceTimeProps) :
+      this(software.amazon.awscdk.services.fsx.LustreMaintenanceTime(props.let(LustreMaintenanceTimeProps::unwrap))
+  )
+
+  public constructor(props: LustreMaintenanceTimeProps.Builder.() -> Unit) :
+      this(LustreMaintenanceTimeProps(props)
+  )
+
   /**
    * Converts a day, hour, and minute into a timestamp as used by FSx for Lustre's
    * weeklyMaintenanceStartTime field.

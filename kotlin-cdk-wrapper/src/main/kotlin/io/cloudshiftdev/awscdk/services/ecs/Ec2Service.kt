@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Ec2Service internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.Ec2Service,
 ) : BaseService(cdkObject), IEc2Service {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: Ec2ServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.Ec2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(Ec2ServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: Ec2ServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, Ec2ServiceProps(props)
+  )
+
   /**
    * Adds one or more placement constraints to use for tasks in the service.
    *

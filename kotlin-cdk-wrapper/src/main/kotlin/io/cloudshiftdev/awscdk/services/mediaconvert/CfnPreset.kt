@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPreset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediaconvert.CfnPreset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPresetProps,
+  ) :
+      this(software.amazon.awscdk.services.mediaconvert.CfnPreset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPresetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPresetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPresetProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the output preset, such as
    * `arn:aws:mediaconvert:us-west-2:123456789012` .

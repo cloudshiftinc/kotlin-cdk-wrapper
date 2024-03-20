@@ -177,6 +177,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScalingPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScalingPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.CfnScalingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScalingPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScalingPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScalingPolicyProps(props)
+  )
+
   /**
    * Specifies how the scaling adjustment is interpreted (for example, an absolute number or a
    * percentage).

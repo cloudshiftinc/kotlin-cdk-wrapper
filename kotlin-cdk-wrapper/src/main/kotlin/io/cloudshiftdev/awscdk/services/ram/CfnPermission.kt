@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPermission internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ram.CfnPermission,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPermissionProps,
+  ) :
+      this(software.amazon.awscdk.services.ram.CfnPermission(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPermissionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPermissionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPermissionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the new permission.
    */

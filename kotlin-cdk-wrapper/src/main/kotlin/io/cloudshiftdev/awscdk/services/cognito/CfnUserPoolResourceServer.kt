@@ -49,6 +49,22 @@ public open class CfnUserPoolResourceServer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolResourceServerProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolResourceServerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolResourceServerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolResourceServerProps(props)
+  )
+
   /**
    * The resource ID.
    */

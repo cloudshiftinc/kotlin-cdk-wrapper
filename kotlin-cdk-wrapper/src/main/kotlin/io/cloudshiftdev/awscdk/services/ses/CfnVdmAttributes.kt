@@ -40,6 +40,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVdmAttributes internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ses.CfnVdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVdmAttributesProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.CfnVdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVdmAttributesProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVdmAttributesProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVdmAttributesProps(props)
+  )
+
   /**
    * Unique identifier for this resource.
    */

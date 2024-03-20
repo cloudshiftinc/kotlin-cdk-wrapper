@@ -64,6 +64,22 @@ public open class CfnConnectAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkmanager.CfnConnectAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnConnectAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConnectAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConnectAttachmentProps(props)
+  )
+
   /**
    * The ID of the Connect attachment.
    */

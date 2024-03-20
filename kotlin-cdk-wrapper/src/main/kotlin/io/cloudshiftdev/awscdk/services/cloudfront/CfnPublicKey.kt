@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPublicKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKey,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublicKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnPublicKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPublicKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublicKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPublicKeyProps(props)
+  )
+
   /**
    * The date and time when the public key was uploaded.
    */

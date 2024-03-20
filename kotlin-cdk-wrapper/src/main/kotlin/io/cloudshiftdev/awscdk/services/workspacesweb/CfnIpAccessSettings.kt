@@ -58,6 +58,22 @@ public open class CfnIpAccessSettings internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIpAccessSettingsProps,
+  ) :
+      this(software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIpAccessSettingsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIpAccessSettingsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIpAccessSettingsProps(props)
+  )
+
   /**
    * Additional encryption context of the IP access settings.
    */

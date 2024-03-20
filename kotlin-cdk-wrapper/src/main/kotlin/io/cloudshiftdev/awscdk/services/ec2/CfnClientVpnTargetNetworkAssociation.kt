@@ -37,6 +37,22 @@ public open class CfnClientVpnTargetNetworkAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClientVpnTargetNetworkAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClientVpnTargetNetworkAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClientVpnTargetNetworkAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClientVpnTargetNetworkAssociationProps(props)
+  )
+
   /**
    *
    */

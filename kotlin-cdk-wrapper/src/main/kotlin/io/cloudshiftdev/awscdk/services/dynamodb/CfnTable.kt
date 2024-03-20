@@ -153,6 +153,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTableProps,
+  ) :
+      this(software.amazon.awscdk.services.dynamodb.CfnTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTableProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTableProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTableProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the DynamoDB table, such as
    * `arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable` .

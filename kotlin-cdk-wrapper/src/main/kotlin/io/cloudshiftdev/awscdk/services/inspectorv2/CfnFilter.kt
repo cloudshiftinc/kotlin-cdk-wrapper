@@ -190,6 +190,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.inspectorv2.CfnFilter,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFilterProps,
+  ) :
+      this(software.amazon.awscdk.services.inspectorv2.CfnFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFilterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFilterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFilterProps(props)
+  )
+
   /**
    * The Amazon Resource Number (ARN) associated with this filter.
    */

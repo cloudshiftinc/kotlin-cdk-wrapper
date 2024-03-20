@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTrackerConsumer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.location.CfnTrackerConsumer,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrackerConsumerProps,
+  ) :
+      this(software.amazon.awscdk.services.location.CfnTrackerConsumer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTrackerConsumerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrackerConsumerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTrackerConsumerProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the geofence collection to be associated to tracker
    * resource.

@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.amazonmq.CfnConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigurationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the Amazon MQ configuration.
    *

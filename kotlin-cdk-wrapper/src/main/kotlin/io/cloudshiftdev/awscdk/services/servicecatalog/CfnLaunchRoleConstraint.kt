@@ -38,6 +38,22 @@ public open class CfnLaunchRoleConstraint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchRoleConstraintProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLaunchRoleConstraintProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchRoleConstraintProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLaunchRoleConstraintProps(props)
+  )
+
   /**
    * The language code.
    */

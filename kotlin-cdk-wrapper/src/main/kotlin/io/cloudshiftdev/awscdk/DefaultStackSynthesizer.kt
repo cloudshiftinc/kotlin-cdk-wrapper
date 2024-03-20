@@ -40,6 +40,17 @@ import kotlin.jvm.JvmName
 public open class DefaultStackSynthesizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.DefaultStackSynthesizer,
 ) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
+  public constructor() : this(software.amazon.awscdk.DefaultStackSynthesizer()
+  )
+
+  public constructor(props: DefaultStackSynthesizerProps) :
+      this(software.amazon.awscdk.DefaultStackSynthesizer(props.let(DefaultStackSynthesizerProps::unwrap))
+  )
+
+  public constructor(props: DefaultStackSynthesizerProps.Builder.() -> Unit) :
+      this(DefaultStackSynthesizerProps(props)
+  )
+
   /**
    * Register a Docker Image Asset.
    *

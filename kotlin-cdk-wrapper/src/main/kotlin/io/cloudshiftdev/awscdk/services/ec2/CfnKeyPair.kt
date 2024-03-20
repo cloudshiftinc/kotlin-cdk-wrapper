@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnKeyPair internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnKeyPair,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeyPairProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnKeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnKeyPairProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeyPairProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnKeyPairProps(props)
+  )
+
   /**
    * If you created the key pair using Amazon EC2:.
    *

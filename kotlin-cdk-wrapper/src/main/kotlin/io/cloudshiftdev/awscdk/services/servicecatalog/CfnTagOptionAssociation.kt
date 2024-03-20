@@ -33,6 +33,22 @@ public open class CfnTagOptionAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTagOptionAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTagOptionAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTagOptionAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTagOptionAssociationProps(props)
+  )
+
   /**
    *
    */

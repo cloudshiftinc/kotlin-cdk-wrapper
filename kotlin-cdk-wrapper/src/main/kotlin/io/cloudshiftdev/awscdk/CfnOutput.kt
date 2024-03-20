@@ -39,6 +39,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnOutput internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnOutput,
 ) : CfnElement(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOutputProps,
+  ) : this(software.amazon.awscdk.CfnOutput(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
+      props.let(CfnOutputProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOutputProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOutputProps(props)
+  )
+
   /**
    * A condition to associate with this output value.
    *

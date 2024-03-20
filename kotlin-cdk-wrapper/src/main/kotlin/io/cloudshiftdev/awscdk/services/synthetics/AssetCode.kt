@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -66,6 +67,19 @@ import kotlin.jvm.JvmName
 public open class AssetCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.AssetCode,
 ) : Code(cdkObject) {
+  public constructor(assetPath: String) :
+      this(software.amazon.awscdk.services.synthetics.AssetCode(assetPath)
+  )
+
+  public constructor(assetPath: String, options: AssetOptions) :
+      this(software.amazon.awscdk.services.synthetics.AssetCode(assetPath,
+      options.let(AssetOptions::unwrap))
+  )
+
+  public constructor(assetPath: String, options: AssetOptions.Builder.() -> Unit) : this(assetPath,
+      AssetOptions(options)
+  )
+
   /**
    * Called when the canary is initialized to allow this object to bind to the stack, add resources
    * and have fun.

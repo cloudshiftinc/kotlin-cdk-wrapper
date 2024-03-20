@@ -85,6 +85,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConfigurationRecorder internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.CfnConfigurationRecorder,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationRecorderProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CfnConfigurationRecorder(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigurationRecorderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationRecorderProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigurationRecorderProps(props)
+  )
+
   /**
    *
    */

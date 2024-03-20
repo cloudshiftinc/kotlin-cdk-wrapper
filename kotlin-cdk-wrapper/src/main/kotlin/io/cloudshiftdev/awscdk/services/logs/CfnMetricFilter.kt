@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMetricFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMetricFilterProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.CfnMetricFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMetricFilterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMetricFilterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMetricFilterProps(props)
+  )
+
   /**
    * The name of the metric filter.
    */

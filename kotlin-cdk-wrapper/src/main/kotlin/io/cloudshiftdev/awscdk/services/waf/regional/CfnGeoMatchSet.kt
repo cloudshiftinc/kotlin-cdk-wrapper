@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGeoMatchSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGeoMatchSetProps,
+  ) :
+      this(software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGeoMatchSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGeoMatchSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGeoMatchSetProps(props)
+  )
+
   /**
    *
    */

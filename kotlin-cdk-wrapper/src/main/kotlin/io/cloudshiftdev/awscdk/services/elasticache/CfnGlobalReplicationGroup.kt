@@ -66,6 +66,22 @@ public open class CfnGlobalReplicationGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGlobalReplicationGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGlobalReplicationGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGlobalReplicationGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGlobalReplicationGroupProps(props)
+  )
+
   /**
    * The ID used to associate a secondary cluster to the Global Replication Group.
    */

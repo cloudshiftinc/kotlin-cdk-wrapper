@@ -144,6 +144,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccount internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.organizations.CfnAccount,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountProps,
+  ) :
+      this(software.amazon.awscdk.services.organizations.CfnAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccountProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccountProps(props)
+  )
+
   /**
    * The account name given to the account when it was created.
    */

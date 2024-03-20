@@ -41,6 +41,27 @@ public open class HttpServiceDiscoveryIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration,
 ) : HttpRouteIntegration(cdkObject) {
+  public constructor(id: String, service: CloudshiftdevAwscdkServicesServicediscoveryIService) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration(id,
+      service.let(CloudshiftdevAwscdkServicesServicediscoveryIService::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    service: CloudshiftdevAwscdkServicesServicediscoveryIService,
+    props: HttpServiceDiscoveryIntegrationProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration(id,
+      service.let(CloudshiftdevAwscdkServicesServicediscoveryIService::unwrap),
+      props.let(HttpServiceDiscoveryIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    service: CloudshiftdevAwscdkServicesServicediscoveryIService,
+    props: HttpServiceDiscoveryIntegrationProps.Builder.() -> Unit,
+  ) : this(id, service, HttpServiceDiscoveryIntegrationProps(props)
+  )
+
   /**
    * Bind this integration to the route.
    *

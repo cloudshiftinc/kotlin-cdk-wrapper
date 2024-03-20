@@ -35,6 +35,22 @@ public open class CfnIntegrationAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.connect.CfnIntegrationAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIntegrationAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnIntegrationAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIntegrationAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIntegrationAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIntegrationAssociationProps(props)
+  )
+
   /**
    * Identifier of the association with an Amazon Connect instance.
    */

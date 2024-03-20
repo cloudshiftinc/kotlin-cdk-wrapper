@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class TokenAuthorizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.TokenAuthorizer,
 ) : Authorizer(cdkObject), IAuthorizer {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TokenAuthorizerProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.TokenAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TokenAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TokenAuthorizerProps.Builder.() -> Unit,
+  ) : this(scope, id, TokenAuthorizerProps(props)
+  )
+
   /**
    * The ARN of the authorizer to be used in permission policies, such as IAM and resource-based
    * grants.

@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EksContainerDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.EksContainerDefinition,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IEksContainerDefinition {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EksContainerDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.EksContainerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EksContainerDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EksContainerDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, EksContainerDefinitionProps(props)
+  )
+
   /**
    * Mount a Volume to this container.
    *

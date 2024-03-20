@@ -55,6 +55,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSchedulingPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchedulingPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSchedulingPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchedulingPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSchedulingPolicyProps(props)
+  )
+
   /**
    * Returns the scheduling policy ARN, such as `batch: *us-east-1* : *111122223333*
    * :scheduling-policy/ *HighPriority*` .

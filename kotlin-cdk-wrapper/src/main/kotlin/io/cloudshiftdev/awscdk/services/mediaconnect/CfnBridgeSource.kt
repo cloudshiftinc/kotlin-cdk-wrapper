@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBridgeSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeSource,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBridgeSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.mediaconnect.CfnBridgeSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBridgeSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBridgeSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBridgeSourceProps(props)
+  )
+
   /**
    * The ARN of the bridge that you want to describe.
    */

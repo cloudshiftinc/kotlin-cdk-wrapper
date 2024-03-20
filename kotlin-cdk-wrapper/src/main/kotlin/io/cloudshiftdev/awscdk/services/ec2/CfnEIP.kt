@@ -47,6 +47,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEIP internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnEIP,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnEIP(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEIPProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnEIP(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEIPProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEIPProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEIPProps(props)
+  )
+
   /**
    * The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC.
    *

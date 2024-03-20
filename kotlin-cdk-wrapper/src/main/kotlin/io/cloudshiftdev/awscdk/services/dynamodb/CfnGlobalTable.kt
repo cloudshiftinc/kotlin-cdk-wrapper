@@ -257,6 +257,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGlobalTable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGlobalTableProps,
+  ) :
+      this(software.amazon.awscdk.services.dynamodb.CfnGlobalTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGlobalTableProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGlobalTableProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGlobalTableProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the DynamoDB table, such as
    * `arn:aws:dynamodb:us-east-2:123456789012:table/myDynamoDBTable` .

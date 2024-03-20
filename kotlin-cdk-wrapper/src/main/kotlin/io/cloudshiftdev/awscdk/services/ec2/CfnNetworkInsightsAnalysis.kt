@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNetworkInsightsAnalysis internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInsightsAnalysisProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkInsightsAnalysisProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInsightsAnalysisProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkInsightsAnalysisProps(props)
+  )
+
   /**
    * The member accounts that contain resources that the path can traverse.
    */

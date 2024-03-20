@@ -30,6 +30,14 @@ public open class ContainerDefinition internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition,
 ) : CdkObject(cdkObject), IContainerDefinition {
+  public constructor(options: ContainerDefinitionOptions) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinition(options.let(ContainerDefinitionOptions::unwrap))
+  )
+
+  public constructor(options: ContainerDefinitionOptions.Builder.() -> Unit) :
+      this(ContainerDefinitionOptions(options)
+  )
+
   /**
    * Called when the ContainerDefinition type configured on Sagemaker Task.
    *

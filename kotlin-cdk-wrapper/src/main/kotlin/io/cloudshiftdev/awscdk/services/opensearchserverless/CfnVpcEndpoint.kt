@@ -40,6 +40,22 @@ public open class CfnVpcEndpoint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVpcEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVpcEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVpcEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVpcEndpointProps(props)
+  )
+
   /**
    * The unique identifier of the endpoint.
    *

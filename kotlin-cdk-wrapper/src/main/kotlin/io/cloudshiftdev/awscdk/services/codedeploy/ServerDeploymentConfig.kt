@@ -24,6 +24,22 @@ public open class ServerDeploymentConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), IServerDeploymentConfig {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerDeploymentConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ServerDeploymentConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerDeploymentConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, ServerDeploymentConfigProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.ServerDeploymentConfig].
    */

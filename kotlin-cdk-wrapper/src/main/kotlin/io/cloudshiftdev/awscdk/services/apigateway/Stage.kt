@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Stage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.Stage,
 ) : StageBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StageProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.Stage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(StageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StageProps.Builder.() -> Unit,
+  ) : this(scope, id, StageProps(props)
+  )
+
   /**
    * RestApi to which this stage is associated.
    */

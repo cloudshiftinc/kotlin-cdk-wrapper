@@ -72,6 +72,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAppImageConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAppImageConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnAppImageConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAppImageConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAppImageConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAppImageConfigProps(props)
+  )
+
   /**
    * The name of the AppImageConfig.
    */

@@ -122,6 +122,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnComponentVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.greengrassv2.CfnComponentVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnComponentVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrassv2.CfnComponentVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnComponentVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnComponentVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnComponentVersionProps(props)
+  )
+
   /**
    * The ARN of the component version.
    */

@@ -35,6 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Queue internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sqs.Queue,
 ) : QueueBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.sqs.Queue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: QueueProps,
+  ) :
+      this(software.amazon.awscdk.services.sqs.Queue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(QueueProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: QueueProps.Builder.() -> Unit,
+  ) : this(scope, id, QueueProps(props)
+  )
+
   /**
    * If this queue is configured with a dead-letter queue, this is the dead-letter queue settings.
    */

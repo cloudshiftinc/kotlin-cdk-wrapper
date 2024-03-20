@@ -33,6 +33,22 @@ public open class CognitoUserPoolsAuthorizer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer,
 ) : Authorizer(cdkObject), IAuthorizer {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CognitoUserPoolsAuthorizerProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CognitoUserPoolsAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CognitoUserPoolsAuthorizerProps.Builder.() -> Unit,
+  ) : this(scope, id, CognitoUserPoolsAuthorizerProps(props)
+  )
+
   /**
    * The authorization type of this authorizer.
    */

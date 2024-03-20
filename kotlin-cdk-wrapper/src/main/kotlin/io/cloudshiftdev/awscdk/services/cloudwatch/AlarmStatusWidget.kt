@@ -26,6 +26,14 @@ import kotlin.collections.List
 public open class AlarmStatusWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmStatusWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: AlarmStatusWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.AlarmStatusWidget(props.let(AlarmStatusWidgetProps::unwrap))
+  )
+
+  public constructor(props: AlarmStatusWidgetProps.Builder.() -> Unit) :
+      this(AlarmStatusWidgetProps(props)
+  )
+
   /**
    * Place the widget at a given position.
    *

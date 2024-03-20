@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHookVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHookVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudformation.CfnHookVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHookVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHookVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHookVersionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the hook.
    */

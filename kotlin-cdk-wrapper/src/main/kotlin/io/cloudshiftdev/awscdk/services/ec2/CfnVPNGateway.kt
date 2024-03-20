@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPNGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPNGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPNGatewayProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPNGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPNGatewayProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPNGatewayProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPNGatewayProps(props)
+  )
+
   /**
    * The private Autonomous System Number (ASN) for the Amazon side of a BGP session.
    */

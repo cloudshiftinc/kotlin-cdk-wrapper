@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class UserPoolResourceServer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServer,
 ) : Resource(cdkObject), IUserPoolResourceServer {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolResourceServerProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.UserPoolResourceServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UserPoolResourceServerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolResourceServerProps.Builder.() -> Unit,
+  ) : this(scope, id, UserPoolResourceServerProps(props)
+  )
+
   /**
    * Resource server id.
    */

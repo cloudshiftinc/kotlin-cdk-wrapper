@@ -51,6 +51,22 @@ public open class CfnHostedConfigurationVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHostedConfigurationVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHostedConfigurationVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHostedConfigurationVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHostedConfigurationVersionProps(props)
+  )
+
   /**
    * The application ID.
    */

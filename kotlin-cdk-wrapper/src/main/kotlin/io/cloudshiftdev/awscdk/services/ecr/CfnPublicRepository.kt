@@ -52,6 +52,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPublicRepository internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecr.CfnPublicRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublicRepositoryProps,
+  ) :
+      this(software.amazon.awscdk.services.ecr.CfnPublicRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPublicRepositoryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublicRepositoryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPublicRepositoryProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) for the specified `AWS::ECR::PublicRepository` resource.
    *

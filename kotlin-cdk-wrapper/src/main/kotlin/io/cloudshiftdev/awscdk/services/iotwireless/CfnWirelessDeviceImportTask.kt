@@ -57,6 +57,22 @@ public open class CfnWirelessDeviceImportTask internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWirelessDeviceImportTaskProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWirelessDeviceImportTaskProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWirelessDeviceImportTaskProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWirelessDeviceImportTaskProps(props)
+  )
+
   /**
    * The ARN (Amazon Resource Name) of the import task.
    */

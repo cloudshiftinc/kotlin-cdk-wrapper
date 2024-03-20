@@ -116,6 +116,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSamplingRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.xray.CfnSamplingRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSamplingRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.xray.CfnSamplingRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSamplingRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSamplingRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSamplingRuleProps(props)
+  )
+
   /**
    * The sampling rule ARN that was created or updated.
    */

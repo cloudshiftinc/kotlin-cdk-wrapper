@@ -28,6 +28,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LayerVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.LayerVersion,
 ) : Resource(cdkObject), ILayerVersion {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LayerVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.LayerVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LayerVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LayerVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, LayerVersionProps(props)
+  )
+
   /**
    * Add permission for this layer version to specific entities.
    *

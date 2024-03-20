@@ -48,6 +48,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccessGrantsInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.s3.CfnAccessGrantsInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessGrantsInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnAccessGrantsInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessGrantsInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessGrantsInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessGrantsInstanceProps(props)
+  )
+
   /**
    * The ARN of the S3 Access Grants instance.
    */

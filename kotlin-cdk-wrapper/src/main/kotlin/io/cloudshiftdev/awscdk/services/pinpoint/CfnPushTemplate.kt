@@ -91,6 +91,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPushTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPushTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnPushTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPushTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPushTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPushTemplateProps(props)
+  )
+
   /**
    * The message template to use for the ADM (Amazon Device Messaging) channel.
    */

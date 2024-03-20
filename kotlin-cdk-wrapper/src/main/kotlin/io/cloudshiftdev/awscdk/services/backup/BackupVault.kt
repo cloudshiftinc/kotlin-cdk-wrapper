@@ -34,6 +34,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BackupVault internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.BackupVault,
 ) : Resource(cdkObject), IBackupVault {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.backup.BackupVault(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BackupVaultProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.BackupVault(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BackupVaultProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BackupVaultProps.Builder.() -> Unit,
+  ) : this(scope, id, BackupVaultProps(props)
+  )
+
   /**
    * Adds a statement to the vault access policy.
    *

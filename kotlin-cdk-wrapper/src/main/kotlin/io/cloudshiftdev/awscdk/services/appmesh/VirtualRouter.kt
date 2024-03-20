@@ -24,6 +24,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VirtualRouter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouter,
 ) : Resource(cdkObject), IVirtualRouter {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VirtualRouterProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.VirtualRouter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VirtualRouterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VirtualRouterProps.Builder.() -> Unit,
+  ) : this(scope, id, VirtualRouterProps(props)
+  )
+
   /**
    * Add a single route to the router.
    *

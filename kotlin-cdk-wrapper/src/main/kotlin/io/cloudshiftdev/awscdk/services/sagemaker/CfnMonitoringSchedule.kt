@@ -154,6 +154,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMonitoringSchedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMonitoringScheduleProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMonitoringScheduleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMonitoringScheduleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMonitoringScheduleProps(props)
+  )
+
   /**
    * The time when the monitoring schedule was created.
    */

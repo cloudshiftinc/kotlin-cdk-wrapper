@@ -76,6 +76,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTransitGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayProps(props)
+  )
+
   /**
    * A private Autonomous System Number (ASN) for the Amazon side of a BGP session.
    */

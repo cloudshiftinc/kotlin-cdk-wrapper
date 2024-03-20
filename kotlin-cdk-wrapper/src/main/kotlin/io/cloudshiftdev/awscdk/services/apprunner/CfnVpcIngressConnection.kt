@@ -58,6 +58,22 @@ public open class CfnVpcIngressConnection internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVpcIngressConnectionProps,
+  ) :
+      this(software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVpcIngressConnectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVpcIngressConnectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVpcIngressConnectionProps(props)
+  )
+
   /**
    * The domain name associated with the VPC Ingress Connection resource.
    */

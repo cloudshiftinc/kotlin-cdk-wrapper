@@ -39,6 +39,19 @@ public open class CloudWatchLogGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.events.targets.CloudWatchLogGroup,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(logGroup: CloudshiftdevAwscdkServicesLogsILogGroup) :
+      this(software.amazon.awscdk.services.events.targets.CloudWatchLogGroup(logGroup.let(CloudshiftdevAwscdkServicesLogsILogGroup::unwrap))
+  )
+
+  public constructor(logGroup: CloudshiftdevAwscdkServicesLogsILogGroup, props: LogGroupProps) :
+      this(software.amazon.awscdk.services.events.targets.CloudWatchLogGroup(logGroup.let(CloudshiftdevAwscdkServicesLogsILogGroup::unwrap),
+      props.let(LogGroupProps::unwrap))
+  )
+
+  public constructor(logGroup: CloudshiftdevAwscdkServicesLogsILogGroup,
+      props: LogGroupProps.Builder.() -> Unit) : this(logGroup, LogGroupProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to log an event into a CloudWatch LogGroup.
    *

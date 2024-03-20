@@ -64,6 +64,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInput internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.medialive.CfnInput,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.medialive.CfnInput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInputProps,
+  ) :
+      this(software.amazon.awscdk.services.medialive.CfnInput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInputProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInputProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInputProps(props)
+  )
+
   /**
    * The ARN of the MediaLive input.
    *

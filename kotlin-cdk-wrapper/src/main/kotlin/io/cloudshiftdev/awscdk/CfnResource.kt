@@ -37,6 +37,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnResource,
 ) : CfnRefElement(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceProps,
+  ) : this(software.amazon.awscdk.CfnResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourceProps(props)
+  )
+
   /**
    * Syntactic sugar for `addOverride(path, undefined)`.
    *

@@ -35,6 +35,21 @@ public open class KinesisDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.logs.destinations.KinesisDestination,
 ) : CdkObject(cdkObject), ILogSubscriptionDestination {
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream) :
+      this(software.amazon.awscdk.services.logs.destinations.KinesisDestination(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap))
+  )
+
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
+      props: KinesisDestinationProps) :
+      this(software.amazon.awscdk.services.logs.destinations.KinesisDestination(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap),
+      props.let(KinesisDestinationProps::unwrap))
+  )
+
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
+      props: KinesisDestinationProps.Builder.() -> Unit) : this(stream,
+      KinesisDestinationProps(props)
+  )
+
   /**
    * Return the properties required to send subscription events to this destination.
    *

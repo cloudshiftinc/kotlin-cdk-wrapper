@@ -63,6 +63,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWorkteam internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkteamProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWorkteamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkteamProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWorkteamProps(props)
+  )
+
   /**
    *
    */

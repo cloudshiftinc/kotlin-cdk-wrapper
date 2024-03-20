@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVolumeAttachment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVolumeAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVolumeAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVolumeAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVolumeAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVolumeAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVolumeAttachmentProps(props)
+  )
+
   /**
    * The device name (for example, `/dev/sdh` or `xvdh` ).
    */

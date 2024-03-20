@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Volume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Volume,
 ) : Resource(cdkObject), IVolume {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VolumeProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.Volume(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VolumeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VolumeProps.Builder.() -> Unit,
+  ) : this(scope, id, VolumeProps(props)
+  )
+
   /**
    * The availability zone that the EBS Volume is contained within (ex: us-west-2a).
    */

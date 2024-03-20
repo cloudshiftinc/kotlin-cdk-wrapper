@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDevice internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnDevice,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeviceProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnDevice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeviceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeviceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeviceProps(props)
+  )
+
   /**
    * The time that the device was created.
    */

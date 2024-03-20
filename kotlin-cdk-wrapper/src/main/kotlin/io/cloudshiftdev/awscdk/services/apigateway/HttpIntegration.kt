@@ -38,6 +38,19 @@ import kotlin.jvm.JvmName
 public open class HttpIntegration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.HttpIntegration,
 ) : Integration(cdkObject) {
+  public constructor(url: String) :
+      this(software.amazon.awscdk.services.apigateway.HttpIntegration(url)
+  )
+
+  public constructor(url: String, props: HttpIntegrationProps) :
+      this(software.amazon.awscdk.services.apigateway.HttpIntegration(url,
+      props.let(HttpIntegrationProps::unwrap))
+  )
+
+  public constructor(url: String, props: HttpIntegrationProps.Builder.() -> Unit) : this(url,
+      HttpIntegrationProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.HttpIntegration].
    */

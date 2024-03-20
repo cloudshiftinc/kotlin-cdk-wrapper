@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnQueuePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sqs.CfnQueuePolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnQueuePolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.sqs.CfnQueuePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnQueuePolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnQueuePolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnQueuePolicyProps(props)
+  )
+
   /**
    * The provider-assigned unique ID for this managed resource.
    */

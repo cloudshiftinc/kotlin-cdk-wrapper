@@ -31,6 +31,15 @@ import kotlin.jvm.JvmName
 public open class NatInstanceProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProvider,
 ) : NatProvider(cdkObject), IConnectable {
+  @Deprecated(message = "deprecated in CDK")
+  public constructor(props: NatInstanceProps) :
+      this(software.amazon.awscdk.services.ec2.NatInstanceProvider(props.let(NatInstanceProps::unwrap))
+  )
+
+  @Deprecated(message = "deprecated in CDK")
+  public constructor(props: NatInstanceProps.Builder.() -> Unit) : this(NatInstanceProps(props)
+  )
+
   /**
    * (deprecated) Called by the VPC to configure NAT.
    *

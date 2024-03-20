@@ -28,6 +28,13 @@ import kotlin.jvm.JvmName
 public open class GraphWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.GraphWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: GraphWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.GraphWidget(props.let(GraphWidgetProps::unwrap))
+  )
+
+  public constructor(props: GraphWidgetProps.Builder.() -> Unit) : this(GraphWidgetProps(props)
+  )
+
   /**
    * Add another metric to the left Y axis of the GraphWidget.
    *

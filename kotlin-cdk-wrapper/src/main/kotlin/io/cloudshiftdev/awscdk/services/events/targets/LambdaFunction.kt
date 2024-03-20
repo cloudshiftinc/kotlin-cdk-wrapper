@@ -44,6 +44,20 @@ import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesL
 public open class LambdaFunction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.LambdaFunction,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
+      this(software.amazon.awscdk.services.events.targets.LambdaFunction(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+  )
+
+  public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+      props: LambdaFunctionProps) :
+      this(software.amazon.awscdk.services.events.targets.LambdaFunction(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
+      props.let(LambdaFunctionProps::unwrap))
+  )
+
+  public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+      props: LambdaFunctionProps.Builder.() -> Unit) : this(handler, LambdaFunctionProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger this Lambda as a result from an EventBridge
    * event.

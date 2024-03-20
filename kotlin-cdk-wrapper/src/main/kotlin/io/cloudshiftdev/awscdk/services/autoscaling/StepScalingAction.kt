@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class StepScalingAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.StepScalingAction,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StepScalingActionProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.StepScalingAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(StepScalingActionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StepScalingActionProps.Builder.() -> Unit,
+  ) : this(scope, id, StepScalingActionProps(props)
+  )
+
   /**
    * Add an adjusment interval to the ScalingAction.
    *

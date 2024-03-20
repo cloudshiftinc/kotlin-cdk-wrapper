@@ -33,6 +33,22 @@ public open class CfnElasticLoadBalancerAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnElasticLoadBalancerAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnElasticLoadBalancerAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnElasticLoadBalancerAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnElasticLoadBalancerAttachmentProps(props)
+  )
+
   /**
    *
    */

@@ -54,6 +54,22 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMicrosoftTeamsChannelConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMicrosoftTeamsChannelConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMicrosoftTeamsChannelConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMicrosoftTeamsChannelConfigurationProps(props)
+  )
+
   /**
    * Amazon Resource Name (ARN) of the configuration.
    */

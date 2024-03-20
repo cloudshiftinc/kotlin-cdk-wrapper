@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationNFS internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationNFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationNFSProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationNFS(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationNFSProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationNFSProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationNFSProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the NFS location that you created.
    */

@@ -27,6 +27,14 @@ public open class TimeBasedCanaryTrafficRouting internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting,
 ) : TrafficRouting(cdkObject) {
+  public constructor(props: TimeBasedCanaryTrafficRoutingProps) :
+      this(software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting(props.let(TimeBasedCanaryTrafficRoutingProps::unwrap))
+  )
+
+  public constructor(props: TimeBasedCanaryTrafficRoutingProps.Builder.() -> Unit) :
+      this(TimeBasedCanaryTrafficRoutingProps(props)
+  )
+
   /**
    * Return a TrafficRoutingConfig of type `TimeBasedCanary`.
    *

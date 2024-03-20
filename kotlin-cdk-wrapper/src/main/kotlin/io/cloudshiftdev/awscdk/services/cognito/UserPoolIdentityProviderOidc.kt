@@ -67,6 +67,22 @@ public open class UserPoolIdentityProviderOidc internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidc,
 ) : Resource(cdkObject), IUserPoolIdentityProvider {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolIdentityProviderOidcProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidc(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UserPoolIdentityProviderOidcProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolIdentityProviderOidcProps.Builder.() -> Unit,
+  ) : this(scope, id, UserPoolIdentityProviderOidcProps(props)
+  )
+
   /**
    * The primary identifier of this identity provider.
    */

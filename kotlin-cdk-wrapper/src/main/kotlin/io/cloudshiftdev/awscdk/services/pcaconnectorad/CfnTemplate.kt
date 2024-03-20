@@ -288,6 +288,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTemplateProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) that was returned when you called
    * [CreateTemplate](https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_CreateTemplate.html)

@@ -103,6 +103,22 @@ public open class CfnLaunchConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLaunchConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLaunchConfigurationProps(props)
+  )
+
   /**
    * Specifies whether to assign a public IPv4 address to the group's instances.
    */

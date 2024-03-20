@@ -43,6 +43,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnStage,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ivs.CfnStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStageProps,
+  ) :
+      this(software.amazon.awscdk.services.ivs.CfnStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStageProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStageProps(props)
+  )
+
   /**
    * ID of the active session within the stage.
    *

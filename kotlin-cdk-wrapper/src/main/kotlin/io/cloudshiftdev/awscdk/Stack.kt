@@ -47,6 +47,32 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Stack internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Stack,
 ) : CloudshiftdevConstructsConstruct(cdkObject), ITaggable {
+  public constructor() : this(software.amazon.awscdk.Stack()
+  )
+
+  public constructor(scope: CloudshiftdevConstructsConstruct) :
+      this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct::unwrap))
+  )
+
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StackProps,
+  ) : this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
+      props.let(StackProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StackProps.Builder.() -> Unit,
+  ) : this(scope, id, StackProps(props)
+  )
+
   /**
    * The AWS account into which this stack will be deployed.
    *

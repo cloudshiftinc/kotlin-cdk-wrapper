@@ -36,6 +36,22 @@ public open class CfnAccessPointPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessPointPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessPointPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessPointPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessPointPolicyProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

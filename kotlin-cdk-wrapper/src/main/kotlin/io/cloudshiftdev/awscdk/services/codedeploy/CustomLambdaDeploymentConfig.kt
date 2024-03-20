@@ -39,6 +39,24 @@ public open class CustomLambdaDeploymentConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig,
 ) : Resource(cdkObject), ILambdaDeploymentConfig {
+  @Deprecated(message = "deprecated in CDK")
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomLambdaDeploymentConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CustomLambdaDeploymentConfigProps::unwrap))
+  )
+
+  @Deprecated(message = "deprecated in CDK")
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomLambdaDeploymentConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CustomLambdaDeploymentConfigProps(props)
+  )
+
   /**
    * (deprecated) The arn of the deployment config.
    *

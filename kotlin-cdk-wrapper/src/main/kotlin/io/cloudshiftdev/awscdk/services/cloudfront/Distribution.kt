@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Distribution internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.Distribution,
 ) : Resource(cdkObject), IDistribution {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DistributionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.Distribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DistributionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DistributionProps.Builder.() -> Unit,
+  ) : this(scope, id, DistributionProps(props)
+  )
+
   /**
    * Adds a new behavior to this distribution for the given pathPattern.
    *

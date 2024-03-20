@@ -37,6 +37,17 @@ import kotlin.Unit
 public open class StringAttribute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.StringAttribute,
 ) : CdkObject(cdkObject), ICustomAttribute {
+  public constructor() : this(software.amazon.awscdk.services.cognito.StringAttribute()
+  )
+
+  public constructor(props: StringAttributeProps) :
+      this(software.amazon.awscdk.services.cognito.StringAttribute(props.let(StringAttributeProps::unwrap))
+  )
+
+  public constructor(props: StringAttributeProps.Builder.() -> Unit) :
+      this(StringAttributeProps(props)
+  )
+
   /**
    * Bind this custom attribute type to the values as expected by CloudFormation.
    */

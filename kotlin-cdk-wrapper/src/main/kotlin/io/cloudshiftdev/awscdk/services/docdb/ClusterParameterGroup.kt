@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ClusterParameterGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.docdb.ClusterParameterGroup,
 ) : Resource(cdkObject), IClusterParameterGroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ClusterParameterGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.docdb.ClusterParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ClusterParameterGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ClusterParameterGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, ClusterParameterGroupProps(props)
+  )
+
   /**
    * The name of the parameter group.
    */

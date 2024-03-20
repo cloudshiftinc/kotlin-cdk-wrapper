@@ -137,6 +137,22 @@ public open class CfnModelBiasJobDefinition internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelBiasJobDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnModelBiasJobDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelBiasJobDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnModelBiasJobDefinitionProps(props)
+  )
+
   /**
    * The time when the job definition was created.
    */

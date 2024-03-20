@@ -46,6 +46,13 @@ import kotlin.Unit
 public open class AwsLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.AwsLogDriver,
 ) : LogDriver(cdkObject) {
+  public constructor(props: AwsLogDriverProps) :
+      this(software.amazon.awscdk.services.ecs.AwsLogDriver(props.let(AwsLogDriverProps::unwrap))
+  )
+
+  public constructor(props: AwsLogDriverProps.Builder.() -> Unit) : this(AwsLogDriverProps(props)
+  )
+
   /**
    * Called when the log driver is configured on a container.
    *

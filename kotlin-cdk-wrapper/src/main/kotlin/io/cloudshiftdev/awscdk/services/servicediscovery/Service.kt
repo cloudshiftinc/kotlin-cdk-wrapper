@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Service internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicediscovery.Service,
 ) : Resource(cdkObject), IService {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.servicediscovery.Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, ServiceProps(props)
+  )
+
   /**
    * The discovery type used by this service.
    */

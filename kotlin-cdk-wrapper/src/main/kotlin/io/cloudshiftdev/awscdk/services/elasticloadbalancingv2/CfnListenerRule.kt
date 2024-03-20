@@ -134,6 +134,22 @@ public open class CfnListenerRule internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnListenerRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnListenerRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnListenerRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnListenerRuleProps(props)
+  )
+
   /**
    * The actions.
    */

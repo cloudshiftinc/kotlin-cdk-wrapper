@@ -47,6 +47,22 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterCapacityProviderAssociationsProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterCapacityProviderAssociationsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterCapacityProviderAssociationsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterCapacityProviderAssociationsProps(props)
+  )
+
   /**
    * The capacity providers to associate with the cluster.
    */

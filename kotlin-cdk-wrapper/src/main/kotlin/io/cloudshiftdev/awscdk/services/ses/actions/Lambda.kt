@@ -35,6 +35,13 @@ import kotlin.Unit
 public open class Lambda internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.actions.Lambda,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
+  public constructor(props: LambdaProps) :
+      this(software.amazon.awscdk.services.ses.actions.Lambda(props.let(LambdaProps::unwrap))
+  )
+
+  public constructor(props: LambdaProps.Builder.() -> Unit) : this(LambdaProps(props)
+  )
+
   /**
    * Returns the receipt rule action specification.
    *

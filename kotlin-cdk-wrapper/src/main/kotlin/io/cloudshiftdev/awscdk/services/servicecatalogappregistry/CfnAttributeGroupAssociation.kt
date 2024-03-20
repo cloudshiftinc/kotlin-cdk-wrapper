@@ -37,6 +37,22 @@ public open class CfnAttributeGroupAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAttributeGroupAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAttributeGroupAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAttributeGroupAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAttributeGroupAssociationProps(props)
+  )
+
   /**
    * The name or ID of the application.
    */

@@ -56,6 +56,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccessPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessPolicyProps(props)
+  )
+
   /**
    * The identity for this access policy.
    */

@@ -27,6 +27,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHook internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnHook,
 ) : CfnElement(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHookProps,
+  ) : this(software.amazon.awscdk.CfnHook(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
+      props.let(CfnHookProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHookProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHookProps(props)
+  )
+
   /**
    * The type of the hook (for example, "AWS::CodeDeploy::BlueGreen").
    */

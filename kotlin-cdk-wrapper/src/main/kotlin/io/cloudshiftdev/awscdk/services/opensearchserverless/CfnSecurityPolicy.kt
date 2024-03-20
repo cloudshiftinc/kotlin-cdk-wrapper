@@ -48,6 +48,22 @@ public open class CfnSecurityPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecurityPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecurityPolicyProps(props)
+  )
+
   /**
    * The description of the security policy.
    */

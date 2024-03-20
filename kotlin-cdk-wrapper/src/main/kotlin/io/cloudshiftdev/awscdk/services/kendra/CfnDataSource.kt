@@ -434,6 +434,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.kendra.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataSourceProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the data source. For example:.
    *

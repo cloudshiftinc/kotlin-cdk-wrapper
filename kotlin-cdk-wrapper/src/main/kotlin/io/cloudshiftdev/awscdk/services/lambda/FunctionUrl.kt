@@ -31,6 +31,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class FunctionUrl internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.FunctionUrl,
 ) : Resource(cdkObject), IFunctionUrl {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FunctionUrlProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.FunctionUrl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FunctionUrlProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FunctionUrlProps.Builder.() -> Unit,
+  ) : this(scope, id, FunctionUrlProps(props)
+  )
+
   /**
    * The ARN of the function this URL refers to.
    */

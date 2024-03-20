@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dax.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.dax.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterProps(props)
+  )
+
   /**
    * Returns the ARN of the DAX cluster. For example:.
    *

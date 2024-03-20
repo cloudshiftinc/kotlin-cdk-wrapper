@@ -33,6 +33,13 @@ import kotlin.jvm.JvmName
 public open class GaugeWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: GaugeWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.GaugeWidget(props.let(GaugeWidgetProps::unwrap))
+  )
+
+  public constructor(props: GaugeWidgetProps.Builder.() -> Unit) : this(GaugeWidgetProps(props)
+  )
+
   /**
    * Add another metric to the left Y axis of the GaugeWidget.
    *

@@ -103,6 +103,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccountAuditConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountAuditConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccountAuditConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountAuditConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccountAuditConfigurationProps(props)
+  )
+
   /**
    * The ID of the account.
    */

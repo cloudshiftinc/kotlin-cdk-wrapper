@@ -71,6 +71,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWebhook internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWebhookProps,
+  ) :
+      this(software.amazon.awscdk.services.codepipeline.CfnWebhook(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWebhookProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWebhookProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWebhookProps(props)
+  )
+
   /**
    *
    */

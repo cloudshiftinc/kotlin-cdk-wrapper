@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEnvironmentEC2 internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentEC2Props,
+  ) :
+      this(software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnvironmentEC2Props::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentEC2Props.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnvironmentEC2Props(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the development environment, such as
    * `arn:aws:cloud9:us-east-2:123456789012:environment:2bc3642873c342e485f7e0c561234567` .

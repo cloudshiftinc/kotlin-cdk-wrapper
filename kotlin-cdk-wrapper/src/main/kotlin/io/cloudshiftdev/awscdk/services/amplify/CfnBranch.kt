@@ -67,6 +67,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBranch internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.amplify.CfnBranch,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBranchProps,
+  ) :
+      this(software.amazon.awscdk.services.amplify.CfnBranch(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBranchProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBranchProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBranchProps(props)
+  )
+
   /**
    * The unique ID for an Amplify app.
    */

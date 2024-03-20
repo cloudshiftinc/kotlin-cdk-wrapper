@@ -105,6 +105,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSecurityProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iot.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecurityProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecurityProfileProps(props)
+  )
+
   /**
    * A list of metrics whose data is retained (stored).
    */

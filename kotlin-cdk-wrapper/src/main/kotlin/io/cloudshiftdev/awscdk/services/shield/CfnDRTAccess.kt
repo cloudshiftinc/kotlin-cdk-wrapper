@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDRTAccess internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.shield.CfnDRTAccess,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDRTAccessProps,
+  ) :
+      this(software.amazon.awscdk.services.shield.CfnDRTAccess(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDRTAccessProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDRTAccessProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDRTAccessProps(props)
+  )
+
   /**
    * The ID of the account that submitted the template.
    */

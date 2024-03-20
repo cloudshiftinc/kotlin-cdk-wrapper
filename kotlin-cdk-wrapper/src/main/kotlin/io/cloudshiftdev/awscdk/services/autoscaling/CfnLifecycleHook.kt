@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLifecycleHook internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnLifecycleHook,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLifecycleHookProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.CfnLifecycleHook(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLifecycleHookProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLifecycleHookProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLifecycleHookProps(props)
+  )
+
   /**
    * The name of the Auto Scaling group.
    */

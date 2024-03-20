@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class MetricFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.MetricFilter,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: MetricFilterProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.MetricFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(MetricFilterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: MetricFilterProps.Builder.() -> KotlinUnit,
+  ) : this(scope, id, MetricFilterProps(props)
+  )
+
   /**
    * Return the given named metric for this Metric Filter.
    *

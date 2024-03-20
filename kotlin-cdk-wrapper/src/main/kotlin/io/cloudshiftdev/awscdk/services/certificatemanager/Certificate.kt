@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Certificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.certificatemanager.Certificate,
 ) : Resource(cdkObject), ICertificate {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.certificatemanager.Certificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, CertificateProps(props)
+  )
+
   /**
    * The certificate's ARN.
    */

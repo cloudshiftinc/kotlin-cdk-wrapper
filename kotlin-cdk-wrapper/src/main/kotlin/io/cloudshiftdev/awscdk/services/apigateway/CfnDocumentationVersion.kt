@@ -40,6 +40,22 @@ public open class CfnDocumentationVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigateway.CfnDocumentationVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDocumentationVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnDocumentationVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDocumentationVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDocumentationVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDocumentationVersionProps(props)
+  )
+
   /**
    * A description about the new documentation snapshot.
    */

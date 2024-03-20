@@ -39,6 +39,27 @@ public open class HttpUserPoolAuthorizer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+  public constructor(id: String, pool: CloudshiftdevAwscdkServicesCognitoIUserPool) :
+      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer(id,
+      pool.let(CloudshiftdevAwscdkServicesCognitoIUserPool::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    pool: CloudshiftdevAwscdkServicesCognitoIUserPool,
+    props: HttpUserPoolAuthorizerProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer(id,
+      pool.let(CloudshiftdevAwscdkServicesCognitoIUserPool::unwrap),
+      props.let(HttpUserPoolAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    pool: CloudshiftdevAwscdkServicesCognitoIUserPool,
+    props: HttpUserPoolAuthorizerProps.Builder.() -> Unit,
+  ) : this(id, pool, HttpUserPoolAuthorizerProps(props)
+  )
+
   /**
    * Bind this authorizer to a specified Http route.
    *

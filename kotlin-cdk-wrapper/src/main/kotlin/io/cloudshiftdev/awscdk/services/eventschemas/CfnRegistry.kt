@@ -43,6 +43,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRegistry internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.eventschemas.CfnRegistry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRegistryProps,
+  ) :
+      this(software.amazon.awscdk.services.eventschemas.CfnRegistry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRegistryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRegistryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRegistryProps(props)
+  )
+
   /**
    * The ARN of the registry.
    */

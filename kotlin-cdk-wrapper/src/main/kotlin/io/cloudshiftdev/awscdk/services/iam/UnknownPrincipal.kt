@@ -37,6 +37,14 @@ import kotlin.jvm.JvmName
 public open class UnknownPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipal,
 ) : CdkObject(cdkObject), IPrincipal {
+  public constructor(props: UnknownPrincipalProps) :
+      this(software.amazon.awscdk.services.iam.UnknownPrincipal(props.let(UnknownPrincipalProps::unwrap))
+  )
+
+  public constructor(props: UnknownPrincipalProps.Builder.() -> Unit) :
+      this(UnknownPrincipalProps(props)
+  )
+
   /**
    * Add to the policy of this principal.
    *

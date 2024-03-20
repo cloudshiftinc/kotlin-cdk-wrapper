@@ -36,6 +36,27 @@ public open class LambdaDeploymentConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), ILambdaDeploymentConfig {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LambdaDeploymentConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LambdaDeploymentConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LambdaDeploymentConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, LambdaDeploymentConfigProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.LambdaDeploymentConfig].
    */

@@ -67,6 +67,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServiceProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iotwireless.CfnServiceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnServiceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServiceProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServiceProfileProps(props)
+  )
+
   /**
    * The ARN of the service profile created.
    */

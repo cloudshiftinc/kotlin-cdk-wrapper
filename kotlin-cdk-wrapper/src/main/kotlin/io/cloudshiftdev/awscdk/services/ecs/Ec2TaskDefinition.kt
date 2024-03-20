@@ -33,6 +33,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Ec2TaskDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.Ec2TaskDefinition,
 ) : TaskDefinition(cdkObject), IEc2TaskDefinition {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.Ec2TaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: Ec2TaskDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.Ec2TaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(Ec2TaskDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: Ec2TaskDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, Ec2TaskDefinitionProps(props)
+  )
+
   /**
    * Tasks running in AWSVPC networking mode requires an additional environment variable for the
    * region to be sourced.

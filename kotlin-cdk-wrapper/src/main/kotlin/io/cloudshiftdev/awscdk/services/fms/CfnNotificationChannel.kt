@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNotificationChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fms.CfnNotificationChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNotificationChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.fms.CfnNotificationChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNotificationChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNotificationChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNotificationChannelProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

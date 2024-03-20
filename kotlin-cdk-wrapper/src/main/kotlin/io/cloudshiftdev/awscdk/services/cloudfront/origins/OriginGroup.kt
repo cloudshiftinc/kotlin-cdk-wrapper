@@ -38,6 +38,13 @@ import kotlin.jvm.JvmName
 public open class OriginGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroup,
 ) : CdkObject(cdkObject), IOrigin {
+  public constructor(props: OriginGroupProps) :
+      this(software.amazon.awscdk.services.cloudfront.origins.OriginGroup(props.let(OriginGroupProps::unwrap))
+  )
+
+  public constructor(props: OriginGroupProps.Builder.() -> Unit) : this(OriginGroupProps(props)
+  )
+
   /**
    * The method called when a given Origin is added (for the first time) to a Distribution.
    *

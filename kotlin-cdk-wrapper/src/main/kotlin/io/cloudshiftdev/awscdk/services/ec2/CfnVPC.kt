@@ -56,6 +56,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPC internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPC,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnVPC(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPC(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCProps(props)
+  )
+
   /**
    * The primary IPv4 CIDR block for the VPC.
    *

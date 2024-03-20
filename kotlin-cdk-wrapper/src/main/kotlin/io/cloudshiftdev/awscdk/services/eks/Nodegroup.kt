@@ -83,6 +83,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Nodegroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.Nodegroup,
 ) : Resource(cdkObject), INodegroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NodegroupProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.Nodegroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NodegroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NodegroupProps.Builder.() -> Unit,
+  ) : this(scope, id, NodegroupProps(props)
+  )
+
   /**
    * the Amazon EKS cluster resource.
    */

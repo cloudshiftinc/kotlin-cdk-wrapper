@@ -43,6 +43,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEIPAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnEIPAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnEIPAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEIPAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnEIPAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEIPAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEIPAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEIPAssociationProps(props)
+  )
+
   /**
    * The allocation ID.
    */

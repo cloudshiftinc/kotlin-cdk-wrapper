@@ -43,6 +43,22 @@ public open class EventBridgePutEvents internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EventBridgePutEventsProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EventBridgePutEventsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EventBridgePutEventsProps.Builder.() -> Unit,
+  ) : this(scope, id, EventBridgePutEventsProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EventBridgePutEvents].

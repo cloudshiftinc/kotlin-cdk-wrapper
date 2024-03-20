@@ -66,6 +66,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDeviceProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnDeviceProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iotwireless.CfnDeviceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeviceProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnDeviceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeviceProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeviceProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeviceProfileProps(props)
+  )
+
   /**
    * The ARN of the device profile created.
    */

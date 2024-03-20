@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVpcLink internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnVpcLink,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVpcLinkProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnVpcLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVpcLinkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVpcLinkProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVpcLinkProps(props)
+  )
+
   /**
    * The ID for the VPC link.
    *

@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnQueryDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CfnQueryDefinition,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnQueryDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.CfnQueryDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnQueryDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnQueryDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnQueryDefinitionProps(props)
+  )
+
   /**
    * The ID of the query definition.
    */

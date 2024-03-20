@@ -44,6 +44,22 @@ public open class NetworkListener internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener,
 ) : BaseListener(cdkObject), INetworkListener {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkListenerProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NetworkListenerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkListenerProps.Builder.() -> Unit,
+  ) : this(scope, id, NetworkListenerProps(props)
+  )
+
   /**
    * Perform the given Action on incoming requests.
    *

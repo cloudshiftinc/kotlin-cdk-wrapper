@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResourceCollection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceCollectionProps,
+  ) :
+      this(software.amazon.awscdk.services.devopsguru.CfnResourceCollection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourceCollectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceCollectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourceCollectionProps(props)
+  )
+
   /**
    * The type of AWS resource collections to return.
    *

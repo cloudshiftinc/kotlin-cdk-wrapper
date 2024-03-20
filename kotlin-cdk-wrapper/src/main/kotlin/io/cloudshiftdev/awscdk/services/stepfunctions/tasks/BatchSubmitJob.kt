@@ -42,6 +42,22 @@ public open class BatchSubmitJob internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BatchSubmitJobProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BatchSubmitJobProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BatchSubmitJobProps.Builder.() -> Unit,
+  ) : this(scope, id, BatchSubmitJobProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.BatchSubmitJob].
    */

@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LambdaInvoke internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LambdaInvokeProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LambdaInvokeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LambdaInvokeProps.Builder.() -> Unit,
+  ) : this(scope, id, LambdaInvokeProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.LambdaInvoke].
    */

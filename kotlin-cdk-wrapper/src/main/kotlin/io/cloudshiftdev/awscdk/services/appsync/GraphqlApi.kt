@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class GraphqlApi internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApi,
 ) : GraphqlApiBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GraphqlApiProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.GraphqlApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(GraphqlApiProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GraphqlApiProps.Builder.() -> Unit,
+  ) : this(scope, id, GraphqlApiProps(props)
+  )
+
   /**
    * Add an environment variable to the construct.
    *

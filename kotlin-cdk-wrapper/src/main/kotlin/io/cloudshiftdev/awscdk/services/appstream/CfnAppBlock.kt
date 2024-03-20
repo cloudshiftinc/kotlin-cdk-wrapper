@@ -79,6 +79,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAppBlock internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnAppBlock,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAppBlockProps,
+  ) :
+      this(software.amazon.awscdk.services.appstream.CfnAppBlock(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAppBlockProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAppBlockProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAppBlockProps(props)
+  )
+
   /**
    * The ARN of the app block.
    */

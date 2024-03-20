@@ -36,6 +36,18 @@ import kotlin.Unit
 public open class ManualApprovalStep internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.ManualApprovalStep,
 ) : Step(cdkObject) {
+  public constructor(id: String) : this(software.amazon.awscdk.pipelines.ManualApprovalStep(id)
+  )
+
+  public constructor(id: String, props: ManualApprovalStepProps) :
+      this(software.amazon.awscdk.pipelines.ManualApprovalStep(id,
+      props.let(ManualApprovalStepProps::unwrap))
+  )
+
+  public constructor(id: String, props: ManualApprovalStepProps.Builder.() -> Unit) : this(id,
+      ManualApprovalStepProps(props)
+  )
+
   /**
    * The comment associated with this manual approval.
    *

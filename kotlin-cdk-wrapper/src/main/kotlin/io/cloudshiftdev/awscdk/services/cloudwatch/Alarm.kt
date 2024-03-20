@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Alarm internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Alarm,
 ) : AlarmBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AlarmProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudwatch.Alarm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AlarmProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AlarmProps.Builder.() -> Unit,
+  ) : this(scope, id, AlarmProps(props)
+  )
+
   /**
    * Trigger this action if the alarm fires.
    *

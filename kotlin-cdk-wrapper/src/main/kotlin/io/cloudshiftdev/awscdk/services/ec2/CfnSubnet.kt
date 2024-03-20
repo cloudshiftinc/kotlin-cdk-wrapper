@@ -69,6 +69,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSubnet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSubnet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnSubnet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSubnetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSubnetProps(props)
+  )
+
   /**
    * Indicates whether a network interface created in this subnet receives an IPv6 address.
    *

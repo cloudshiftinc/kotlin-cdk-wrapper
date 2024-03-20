@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRobot internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.robomaker.CfnRobot,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRobotProps,
+  ) :
+      this(software.amazon.awscdk.services.robomaker.CfnRobot(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRobotProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRobotProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRobotProps(props)
+  )
+
   /**
    * The architecture of the robot.
    */

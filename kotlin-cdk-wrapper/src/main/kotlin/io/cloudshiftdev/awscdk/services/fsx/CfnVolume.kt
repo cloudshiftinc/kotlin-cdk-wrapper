@@ -124,6 +124,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnVolume,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVolumeProps,
+  ) :
+      this(software.amazon.awscdk.services.fsx.CfnVolume(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVolumeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVolumeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVolumeProps(props)
+  )
+
   /**
    * Returns the volume's Amazon Resource Name (ARN).
    *

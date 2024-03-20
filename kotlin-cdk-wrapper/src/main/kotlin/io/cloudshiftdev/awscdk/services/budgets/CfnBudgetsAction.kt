@@ -73,6 +73,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBudgetsAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetsAction,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBudgetsActionProps,
+  ) :
+      this(software.amazon.awscdk.services.budgets.CfnBudgetsAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBudgetsActionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBudgetsActionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBudgetsActionProps(props)
+  )
+
   /**
    * The trigger threshold of the action.
    */

@@ -59,6 +59,27 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceNetworkVpcAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServiceNetworkVpcAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceNetworkVpcAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServiceNetworkVpcAssociationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the association between the service network and the VPC.
    */

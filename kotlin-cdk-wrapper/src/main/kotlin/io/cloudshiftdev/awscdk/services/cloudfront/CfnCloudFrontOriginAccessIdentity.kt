@@ -45,6 +45,22 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCloudFrontOriginAccessIdentityProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCloudFrontOriginAccessIdentityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCloudFrontOriginAccessIdentityProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCloudFrontOriginAccessIdentityProps(props)
+  )
+
   /**
    * The ID for the origin access identity, for example, `E74FTE3AJFJ256A` .
    */

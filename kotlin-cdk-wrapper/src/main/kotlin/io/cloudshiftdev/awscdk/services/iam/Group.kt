@@ -32,6 +32,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Group internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.Group,
 ) : Resource(cdkObject), IGroup {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.Group(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GroupProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.Group(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(GroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GroupProps.Builder.() -> Unit,
+  ) : this(scope, id, GroupProps(props)
+  )
+
   /**
    * Attaches a managed policy to this group.
    *

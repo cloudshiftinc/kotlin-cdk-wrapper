@@ -42,6 +42,22 @@ public open class NotificationRule internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codestarnotifications.NotificationRule,
 ) : Resource(cdkObject), INotificationRule {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NotificationRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.codestarnotifications.NotificationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NotificationRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NotificationRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, NotificationRuleProps(props)
+  )
+
   /**
    * Adds target to notification rule.
    *

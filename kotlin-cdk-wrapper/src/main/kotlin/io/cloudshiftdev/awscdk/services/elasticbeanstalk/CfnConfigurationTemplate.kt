@@ -70,6 +70,22 @@ public open class CfnConfigurationTemplate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigurationTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigurationTemplateProps(props)
+  )
+
   /**
    * The name of the Elastic Beanstalk application to associate with this configuration template.
    */

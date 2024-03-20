@@ -55,6 +55,22 @@ public open class CfnOriginAccessControl internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginAccessControlProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOriginAccessControlProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginAccessControlProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOriginAccessControlProps(props)
+  )
+
   /**
    * The unique identifier of the origin access control.
    */

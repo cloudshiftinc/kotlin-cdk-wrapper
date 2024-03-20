@@ -49,6 +49,27 @@ public open class NetworkLoadBalancedFargateService internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateService,
 ) : NetworkLoadBalancedServiceBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkLoadBalancedFargateServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NetworkLoadBalancedFargateServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkLoadBalancedFargateServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, NetworkLoadBalancedFargateServiceProps(props)
+  )
+
   /**
    *
    */

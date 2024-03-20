@@ -32,6 +32,14 @@ import kotlin.Unit
 public open class SecretPathVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.SecretPathVolume,
 ) : EksVolume(cdkObject) {
+  public constructor(options: SecretPathVolumeOptions) :
+      this(software.amazon.awscdk.services.batch.SecretPathVolume(options.let(SecretPathVolumeOptions::unwrap))
+  )
+
+  public constructor(options: SecretPathVolumeOptions.Builder.() -> Unit) :
+      this(SecretPathVolumeOptions(options)
+  )
+
   /**
    * Specifies whether the secret or the secret's keys must be defined.
    *

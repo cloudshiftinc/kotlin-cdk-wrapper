@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHost internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnHost,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHostProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnHost(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHostProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHostProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHostProps(props)
+  )
+
   /**
    * The ID of the Outpost hardware asset on which the Dedicated Host is allocated.
    */

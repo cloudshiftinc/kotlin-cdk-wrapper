@@ -307,6 +307,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnModelPackage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelPackageProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnModelPackageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelPackageProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnModelPackageProps(props)
+  )
+
   /**
    * An array of additional Inference Specification objects.
    */

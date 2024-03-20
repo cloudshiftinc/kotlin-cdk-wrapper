@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResolverRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResolverRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResolverRuleProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the resolver rule, such as
    * `arn:aws:route53resolver:us-east-1:123456789012:resolver-rule/resolver-rule-a1bzhi` .

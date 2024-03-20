@@ -30,6 +30,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDNSSEC internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CfnDNSSEC,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDNSSECProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CfnDNSSEC(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDNSSECProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDNSSECProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDNSSECProps(props)
+  )
+
   /**
    * A unique string (ID) that is used to identify a hosted zone.
    */

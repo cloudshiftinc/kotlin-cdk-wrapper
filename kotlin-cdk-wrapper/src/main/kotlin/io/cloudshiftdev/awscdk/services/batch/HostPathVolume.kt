@@ -31,6 +31,14 @@ import kotlin.Unit
 public open class HostPathVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.HostPathVolume,
 ) : EksVolume(cdkObject) {
+  public constructor(options: HostPathVolumeOptions) :
+      this(software.amazon.awscdk.services.batch.HostPathVolume(options.let(HostPathVolumeOptions::unwrap))
+  )
+
+  public constructor(options: HostPathVolumeOptions.Builder.() -> Unit) :
+      this(HostPathVolumeOptions(options)
+  )
+
   /**
    * The path of the file or directory on the host to mount into containers on the pod.
    *

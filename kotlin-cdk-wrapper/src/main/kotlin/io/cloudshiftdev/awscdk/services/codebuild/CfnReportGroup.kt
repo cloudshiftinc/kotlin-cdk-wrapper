@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReportGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReportGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.codebuild.CfnReportGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReportGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReportGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReportGroupProps(props)
+  )
+
   /**
    * The ARN of the AWS CodeBuild report group, such as
    * `arn:aws:codebuild:region:123456789012:report-group/myReportGroupName` .

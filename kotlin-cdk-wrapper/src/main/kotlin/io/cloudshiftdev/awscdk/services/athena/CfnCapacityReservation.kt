@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCapacityReservation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapacityReservationProps,
+  ) :
+      this(software.amazon.awscdk.services.athena.CfnCapacityReservation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCapacityReservationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapacityReservationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCapacityReservationProps(props)
+  )
+
   /**
    * The number of data processing units currently allocated.
    */

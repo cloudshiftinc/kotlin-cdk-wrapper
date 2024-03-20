@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.xray.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.xray.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGroupProps(props)
+  )
+
   /**
    * The group ARN that was created or updated.
    */

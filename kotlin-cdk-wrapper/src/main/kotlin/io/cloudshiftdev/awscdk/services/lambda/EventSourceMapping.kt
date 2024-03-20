@@ -77,6 +77,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EventSourceMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.EventSourceMapping,
 ) : Resource(cdkObject), IEventSourceMapping {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EventSourceMappingProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.EventSourceMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EventSourceMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EventSourceMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, EventSourceMappingProps(props)
+  )
+
   /**
    * The ARN of the event source mapping (i.e.
    * arn:aws:lambda:region:account-id:event-source-mapping/event-source-mapping-id).

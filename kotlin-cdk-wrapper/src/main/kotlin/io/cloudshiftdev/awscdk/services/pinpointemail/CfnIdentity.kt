@@ -70,6 +70,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIdentity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpointemail.CfnIdentity,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpointemail.CfnIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIdentityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIdentityProps(props)
+  )
+
   /**
    *
    */

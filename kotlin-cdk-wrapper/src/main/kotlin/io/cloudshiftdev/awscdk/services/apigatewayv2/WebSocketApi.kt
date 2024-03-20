@@ -36,6 +36,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class WebSocketApi internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApi,
 ) : Resource(cdkObject), IWebSocketApi, IApi {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WebSocketApiProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(WebSocketApiProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WebSocketApiProps.Builder.() -> Unit,
+  ) : this(scope, id, WebSocketApiProps(props)
+  )
+
   /**
    * Add a new route.
    *

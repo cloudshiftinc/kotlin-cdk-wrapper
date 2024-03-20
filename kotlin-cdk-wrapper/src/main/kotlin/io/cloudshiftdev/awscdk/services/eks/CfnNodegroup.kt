@@ -96,6 +96,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNodegroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNodegroupProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.CfnNodegroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNodegroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNodegroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNodegroupProps(props)
+  )
+
   /**
    * The AMI type for your node group.
    */

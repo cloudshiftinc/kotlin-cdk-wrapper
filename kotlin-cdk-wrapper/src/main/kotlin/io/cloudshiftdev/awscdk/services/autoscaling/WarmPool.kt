@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class WarmPool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.WarmPool,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WarmPoolProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.WarmPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(WarmPoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WarmPoolProps.Builder.() -> Unit,
+  ) : this(scope, id, WarmPoolProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.autoscaling.WarmPool].
    */

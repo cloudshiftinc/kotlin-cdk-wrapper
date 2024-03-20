@@ -32,6 +32,19 @@ public open class EmailSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sns.subscriptions.EmailSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
+  public constructor(emailAddress: String) :
+      this(software.amazon.awscdk.services.sns.subscriptions.EmailSubscription(emailAddress)
+  )
+
+  public constructor(emailAddress: String, props: EmailSubscriptionProps) :
+      this(software.amazon.awscdk.services.sns.subscriptions.EmailSubscription(emailAddress,
+      props.let(EmailSubscriptionProps::unwrap))
+  )
+
+  public constructor(emailAddress: String, props: EmailSubscriptionProps.Builder.() -> Unit) :
+      this(emailAddress, EmailSubscriptionProps(props)
+  )
+
   /**
    * Returns a configuration for an email address to subscribe to an SNS topic.
    *

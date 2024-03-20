@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCustomMetric internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnCustomMetric,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomMetricProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnCustomMetric(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCustomMetricProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomMetricProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCustomMetricProps(props)
+  )
+
   /**
    * The Amazon Resource Number (ARN) of the custom metric;
    *

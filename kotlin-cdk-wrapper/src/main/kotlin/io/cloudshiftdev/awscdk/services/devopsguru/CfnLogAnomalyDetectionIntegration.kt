@@ -32,6 +32,27 @@ public open class CfnLogAnomalyDetectionIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogAnomalyDetectionIntegrationProps,
+  ) :
+      this(software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLogAnomalyDetectionIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogAnomalyDetectionIntegrationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLogAnomalyDetectionIntegrationProps(props)
+  )
+
   /**
    * The account ID associated with the integration of DevOps Guru with CloudWatch log groups for
    * log anomaly detection.

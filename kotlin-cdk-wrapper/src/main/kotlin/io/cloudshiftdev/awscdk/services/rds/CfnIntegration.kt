@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIntegration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.CfnIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIntegrationProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.CfnIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIntegrationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIntegrationProps(props)
+  )
+
   /**
    * An optional set of non-secret key–value pairs that contains additional contextual information
    * about the data.

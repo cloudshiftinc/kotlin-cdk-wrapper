@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFeature internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnFeature,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFeatureProps,
+  ) :
+      this(software.amazon.awscdk.services.evidently.CfnFeature(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFeatureProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFeatureProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFeatureProps(props)
+  )
+
   /**
    * The ARN of the feature.
    *

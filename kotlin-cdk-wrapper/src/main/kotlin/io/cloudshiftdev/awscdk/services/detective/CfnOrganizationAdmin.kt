@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnOrganizationAdmin internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.detective.CfnOrganizationAdmin,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOrganizationAdminProps,
+  ) :
+      this(software.amazon.awscdk.services.detective.CfnOrganizationAdmin(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOrganizationAdminProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOrganizationAdminProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOrganizationAdminProps(props)
+  )
+
   /**
    * The AWS account identifier of the account to designate as the Detective administrator account
    * for the organization.

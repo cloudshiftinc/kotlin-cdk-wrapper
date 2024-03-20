@@ -27,6 +27,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class KeyPair internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.KeyPair,
 ) : Resource(cdkObject), IKeyPair {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.KeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KeyPairProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.KeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(KeyPairProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KeyPairProps.Builder.() -> Unit,
+  ) : this(scope, id, KeyPairProps(props)
+  )
+
   /**
    * The format of the key pair.
    */

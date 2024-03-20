@@ -40,6 +40,14 @@ public open class EcrSourceAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction,
 ) : Action(cdkObject) {
+  public constructor(props: EcrSourceActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction(props.let(EcrSourceActionProps::unwrap))
+  )
+
+  public constructor(props: EcrSourceActionProps.Builder.() -> Unit) :
+      this(EcrSourceActionProps(props)
+  )
+
   /**
    * The variables emitted by this action.
    */

@@ -30,6 +30,18 @@ public open class LaunchTemplateRequireImdsv2Aspect internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect,
 ) : CdkObject(cdkObject), IAspect {
+  public constructor() :
+      this(software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect()
+  )
+
+  public constructor(props: LaunchTemplateRequireImdsv2AspectProps) :
+      this(software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect(props.let(LaunchTemplateRequireImdsv2AspectProps::unwrap))
+  )
+
+  public constructor(props: LaunchTemplateRequireImdsv2AspectProps.Builder.() -> Unit) :
+      this(LaunchTemplateRequireImdsv2AspectProps(props)
+  )
+
   /**
    * All aspects can visit an IConstruct.
    *

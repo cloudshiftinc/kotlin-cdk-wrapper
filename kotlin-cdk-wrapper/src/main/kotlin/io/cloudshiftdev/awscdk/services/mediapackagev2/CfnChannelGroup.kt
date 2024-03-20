@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnChannelGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnChannelGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnChannelGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnChannelGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnChannelGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the channel group.
    */

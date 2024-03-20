@@ -69,6 +69,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFunction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFunctionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFunctionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFunctionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFunctionProps(props)
+  )
+
   /**
    * The ARN of the function. For example:.
    *

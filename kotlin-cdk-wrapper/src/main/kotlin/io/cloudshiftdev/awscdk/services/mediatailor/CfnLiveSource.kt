@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLiveSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnLiveSource,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLiveSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.mediatailor.CfnLiveSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLiveSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLiveSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLiveSourceProps(props)
+  )
+
   /**
    * The ARN of the live source.</p>.
    */

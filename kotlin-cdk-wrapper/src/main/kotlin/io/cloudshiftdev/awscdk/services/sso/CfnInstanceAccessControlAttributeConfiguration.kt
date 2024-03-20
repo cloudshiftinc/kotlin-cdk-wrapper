@@ -67,6 +67,22 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
   internal override val cdkObject:
       software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceAccessControlAttributeConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInstanceAccessControlAttributeConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceAccessControlAttributeConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInstanceAccessControlAttributeConfigurationProps(props)
+  )
+
   /**
    * Lists the attributes that are configured for ABAC in the specified IAM Identity Center
    * instance.

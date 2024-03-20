@@ -116,6 +116,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWorkGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.athena.CfnWorkGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWorkGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWorkGroupProps(props)
+  )
+
   /**
    * The date and time the workgroup was created, as a UNIX timestamp in seconds.
    *

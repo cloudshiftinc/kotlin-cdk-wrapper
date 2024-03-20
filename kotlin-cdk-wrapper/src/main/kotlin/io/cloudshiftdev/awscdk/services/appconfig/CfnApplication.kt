@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApplication internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationProps(props)
+  )
+
   /**
    * The application ID.
    */

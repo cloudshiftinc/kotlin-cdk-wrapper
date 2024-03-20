@@ -72,6 +72,22 @@ public open class CfnInfrastructureConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInfrastructureConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInfrastructureConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInfrastructureConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInfrastructureConfigurationProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of the infrastructure configuration.
    *

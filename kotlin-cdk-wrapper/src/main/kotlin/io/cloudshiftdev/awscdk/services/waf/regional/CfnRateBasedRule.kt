@@ -74,6 +74,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRateBasedRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRateBasedRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.waf.regional.CfnRateBasedRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRateBasedRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRateBasedRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRateBasedRuleProps(props)
+  )
+
   /**
    *
    */

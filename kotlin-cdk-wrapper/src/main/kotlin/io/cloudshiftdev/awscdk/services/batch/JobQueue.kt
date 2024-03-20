@@ -45,6 +45,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class JobQueue internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.JobQueue,
 ) : Resource(cdkObject), IJobQueue {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.batch.JobQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: JobQueueProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.JobQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(JobQueueProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: JobQueueProps.Builder.() -> Unit,
+  ) : this(scope, id, JobQueueProps(props)
+  )
+
   /**
    * Add a `ComputeEnvironment` to this Queue.
    *

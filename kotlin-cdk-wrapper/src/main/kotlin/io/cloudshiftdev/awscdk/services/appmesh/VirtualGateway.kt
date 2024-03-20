@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VirtualGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGateway,
 ) : Resource(cdkObject), IVirtualGateway {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VirtualGatewayProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.VirtualGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VirtualGatewayProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VirtualGatewayProps.Builder.() -> Unit,
+  ) : this(scope, id, VirtualGatewayProps(props)
+  )
+
   /**
    * Utility method to add a new GatewayRoute to the VirtualGateway.
    *

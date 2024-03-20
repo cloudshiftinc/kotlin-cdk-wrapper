@@ -36,6 +36,22 @@ public open class DynamoDeleteItem internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItem,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DynamoDeleteItemProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DynamoDeleteItemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DynamoDeleteItemProps.Builder.() -> Unit,
+  ) : this(scope, id, DynamoDeleteItemProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.DynamoDeleteItem].
    */

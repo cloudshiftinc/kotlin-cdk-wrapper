@@ -72,6 +72,22 @@ public open class CfnApplicationOutput internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationOutputProps,
+  ) :
+      this(software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationOutputProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationOutputProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationOutputProps(props)
+  )
+
   /**
    * The name of the application.
    */

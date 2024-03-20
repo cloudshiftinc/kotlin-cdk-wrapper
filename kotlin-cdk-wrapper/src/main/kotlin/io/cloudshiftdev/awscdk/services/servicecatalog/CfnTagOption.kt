@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTagOption internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOption,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTagOptionProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnTagOption(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTagOptionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTagOptionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTagOptionProps(props)
+  )
+
   /**
    * The TagOption active state.
    */

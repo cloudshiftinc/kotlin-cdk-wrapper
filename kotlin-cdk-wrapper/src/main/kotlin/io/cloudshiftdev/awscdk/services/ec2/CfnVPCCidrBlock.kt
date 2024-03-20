@@ -63,6 +63,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPCCidrBlock internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCCidrBlock,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCCidrBlockProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCCidrBlock(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCCidrBlockProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCCidrBlockProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCCidrBlockProps(props)
+  )
+
   /**
    * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC.
    */

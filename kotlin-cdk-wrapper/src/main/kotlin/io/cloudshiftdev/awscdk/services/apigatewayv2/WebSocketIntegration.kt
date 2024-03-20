@@ -44,6 +44,22 @@ public open class WebSocketIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration,
 ) : Resource(cdkObject), IWebSocketIntegration {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WebSocketIntegrationProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(WebSocketIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WebSocketIntegrationProps.Builder.() -> Unit,
+  ) : this(scope, id, WebSocketIntegrationProps(props)
+  )
+
   /**
    * Id of the integration.
    */

@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EndpointGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.EndpointGroup,
 ) : Resource(cdkObject), IEndpointGroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EndpointGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.globalaccelerator.EndpointGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EndpointGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EndpointGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, EndpointGroupProps(props)
+  )
+
   /**
    * Add an endpoint.
    *

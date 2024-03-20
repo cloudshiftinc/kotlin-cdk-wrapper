@@ -43,6 +43,14 @@ public open class S3SourceAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.S3SourceAction,
 ) : Action(cdkObject) {
+  public constructor(props: S3SourceActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.S3SourceAction(props.let(S3SourceActionProps::unwrap))
+  )
+
+  public constructor(props: S3SourceActionProps.Builder.() -> Unit) :
+      this(S3SourceActionProps(props)
+  )
+
   /**
    * The variables emitted by this action.
    */

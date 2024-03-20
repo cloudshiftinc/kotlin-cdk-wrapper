@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -65,6 +66,19 @@ import kotlin.jvm.JvmName
 public open class AssetImportSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.AssetImportSource,
 ) : ImportSource(cdkObject) {
+  public constructor(path: String) :
+      this(software.amazon.awscdk.services.cloudfront.AssetImportSource(path)
+  )
+
+  public constructor(path: String, options: AssetOptions) :
+      this(software.amazon.awscdk.services.cloudfront.AssetImportSource(path,
+      options.let(AssetOptions::unwrap))
+  )
+
+  public constructor(path: String, options: AssetOptions.Builder.() -> Unit) : this(path,
+      AssetOptions(options)
+  )
+
   /**
    * the path to the local file.
    */

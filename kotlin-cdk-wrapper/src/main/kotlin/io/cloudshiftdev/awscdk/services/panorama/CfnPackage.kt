@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPackage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.panorama.CfnPackage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPackageProps,
+  ) :
+      this(software.amazon.awscdk.services.panorama.CfnPackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPackageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPackageProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPackageProps(props)
+  )
+
   /**
    * The package's ARN.
    */

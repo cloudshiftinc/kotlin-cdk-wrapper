@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResourceSpecificLogging internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnResourceSpecificLogging,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceSpecificLoggingProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnResourceSpecificLogging(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourceSpecificLoggingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceSpecificLoggingProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourceSpecificLoggingProps(props)
+  )
+
   /**
    * The target Id.
    */

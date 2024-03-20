@@ -43,6 +43,22 @@ public open class CfnLocalGatewayRouteTableVPCAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocalGatewayRouteTableVPCAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocalGatewayRouteTableVPCAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocalGatewayRouteTableVPCAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocalGatewayRouteTableVPCAssociationProps(props)
+  )
+
   /**
    * The ID of the local gateway.
    */

@@ -93,6 +93,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResponsePlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResponsePlanProps,
+  ) :
+      this(software.amazon.awscdk.services.ssmincidents.CfnResponsePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResponsePlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResponsePlanProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResponsePlanProps(props)
+  )
+
   /**
    * The actions that the response plan starts at the beginning of an incident.
    */

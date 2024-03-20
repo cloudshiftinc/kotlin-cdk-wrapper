@@ -47,6 +47,22 @@ public open class CfnConfiguredTableAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfiguredTableAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfiguredTableAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfiguredTableAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfiguredTableAssociationProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of the specified configured table association.
    *

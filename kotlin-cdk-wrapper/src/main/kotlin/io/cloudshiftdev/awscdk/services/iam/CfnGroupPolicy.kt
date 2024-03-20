@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGroupPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnGroupPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnGroupPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGroupPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGroupPolicyProps(props)
+  )
+
   /**
    * The name of the group to associate the policy with.
    */

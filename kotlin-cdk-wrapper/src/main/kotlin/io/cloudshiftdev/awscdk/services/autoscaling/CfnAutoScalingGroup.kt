@@ -208,6 +208,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAutoScalingGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAutoScalingGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAutoScalingGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAutoScalingGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAutoScalingGroupProps(props)
+  )
+
   /**
    * The name of the Auto Scaling group.
    *

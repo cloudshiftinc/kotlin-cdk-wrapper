@@ -25,6 +25,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BackupPlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.BackupPlan,
 ) : Resource(cdkObject), IBackupPlan {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.backup.BackupPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BackupPlanProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.BackupPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BackupPlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BackupPlanProps.Builder.() -> Unit,
+  ) : this(scope, id, BackupPlanProps(props)
+  )
+
   /**
    * Adds a rule to a plan.
    *

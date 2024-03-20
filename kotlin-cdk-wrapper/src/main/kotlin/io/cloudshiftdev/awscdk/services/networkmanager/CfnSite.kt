@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSite internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnSite,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSiteProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnSite(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSiteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSiteProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSiteProps(props)
+  )
+
   /**
    * The time that the site was created.
    */

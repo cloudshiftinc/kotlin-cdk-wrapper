@@ -49,6 +49,22 @@ public open class AthenaStartQueryExecution internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecution,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AthenaStartQueryExecutionProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AthenaStartQueryExecutionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AthenaStartQueryExecutionProps.Builder.() -> Unit,
+  ) : this(scope, id, AthenaStartQueryExecutionProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecution].

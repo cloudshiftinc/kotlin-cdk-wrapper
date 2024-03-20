@@ -56,6 +56,27 @@ public open class CfnStateMachineAlias internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStateMachineAliasProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStateMachineAliasProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStateMachineAliasProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStateMachineAliasProps(props)
+  )
+
   /**
    * Returns the ARN of the state machine alias.
    *

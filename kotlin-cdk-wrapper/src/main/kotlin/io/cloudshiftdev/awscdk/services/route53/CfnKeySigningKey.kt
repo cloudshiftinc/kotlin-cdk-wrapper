@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnKeySigningKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CfnKeySigningKey,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeySigningKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CfnKeySigningKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnKeySigningKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeySigningKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnKeySigningKeyProps(props)
+  )
+
   /**
    * The unique string (ID) that is used to identify a hosted zone.
    */

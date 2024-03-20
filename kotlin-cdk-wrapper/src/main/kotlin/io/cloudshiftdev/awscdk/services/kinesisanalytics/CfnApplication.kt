@@ -88,6 +88,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApplication internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationProps,
+  ) :
+      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationProps(props)
+  )
+
   /**
    * One or more SQL statements that read input data, transform it, and generate output.
    */

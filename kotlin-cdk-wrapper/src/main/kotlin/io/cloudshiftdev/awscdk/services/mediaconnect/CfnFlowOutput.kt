@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFlowOutput internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowOutputProps,
+  ) :
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlowOutput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFlowOutputProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowOutputProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFlowOutputProps(props)
+  )
+
   /**
    * The ARN of the output.
    */

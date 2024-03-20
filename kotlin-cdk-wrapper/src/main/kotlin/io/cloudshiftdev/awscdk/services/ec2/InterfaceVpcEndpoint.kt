@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class InterfaceVpcEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint,
 ) : VpcEndpoint(cdkObject), IInterfaceVpcEndpoint {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: InterfaceVpcEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(InterfaceVpcEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: InterfaceVpcEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, InterfaceVpcEndpointProps(props)
+  )
+
   /**
    * Access to network connections.
    */

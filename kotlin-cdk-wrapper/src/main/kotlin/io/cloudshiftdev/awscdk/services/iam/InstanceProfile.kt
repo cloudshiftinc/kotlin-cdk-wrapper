@@ -29,6 +29,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class InstanceProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.InstanceProfile,
 ) : Resource(cdkObject), IInstanceProfile {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.InstanceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: InstanceProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.InstanceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(InstanceProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: InstanceProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, InstanceProfileProps(props)
+  )
+
   /**
    * Returns the ARN of this InstanceProfile.
    */

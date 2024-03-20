@@ -38,6 +38,22 @@ public open class ScalableTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.applicationautoscaling.ScalableTarget,
 ) : Resource(cdkObject), IScalableTarget {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ScalableTargetProps,
+  ) :
+      this(software.amazon.awscdk.services.applicationautoscaling.ScalableTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ScalableTargetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ScalableTargetProps.Builder.() -> Unit,
+  ) : this(scope, id, ScalableTargetProps(props)
+  )
+
   /**
    * Add a policy statement to the role's policy.
    *

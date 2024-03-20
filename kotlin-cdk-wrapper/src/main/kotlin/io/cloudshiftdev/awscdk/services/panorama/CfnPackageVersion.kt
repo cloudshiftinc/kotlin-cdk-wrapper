@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPackageVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.panorama.CfnPackageVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPackageVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.panorama.CfnPackageVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPackageVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPackageVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPackageVersionProps(props)
+  )
+
   /**
    * Whether the package version is the latest version.
    */

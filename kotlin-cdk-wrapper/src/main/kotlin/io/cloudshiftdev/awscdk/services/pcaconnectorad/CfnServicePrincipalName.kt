@@ -35,6 +35,27 @@ public open class CfnServicePrincipalName internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServicePrincipalNameProps,
+  ) :
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServicePrincipalNameProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServicePrincipalNameProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServicePrincipalNameProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) that was returned when you called
    * [CreateConnector.html](https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_CreateConnector.html)

@@ -114,6 +114,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnComponentType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnComponentType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnComponentTypeProps,
+  ) :
+      this(software.amazon.awscdk.services.iottwinmaker.CfnComponentType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnComponentTypeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnComponentTypeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnComponentTypeProps(props)
+  )
+
   /**
    * The ARN of the component type.
    */

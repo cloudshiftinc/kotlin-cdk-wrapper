@@ -36,6 +36,17 @@ import kotlin.Unit
 public open class DateTimeAttribute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.DateTimeAttribute,
 ) : CdkObject(cdkObject), ICustomAttribute {
+  public constructor() : this(software.amazon.awscdk.services.cognito.DateTimeAttribute()
+  )
+
+  public constructor(props: CustomAttributeProps) :
+      this(software.amazon.awscdk.services.cognito.DateTimeAttribute(props.let(CustomAttributeProps::unwrap))
+  )
+
+  public constructor(props: CustomAttributeProps.Builder.() -> Unit) :
+      this(CustomAttributeProps(props)
+  )
+
   /**
    * Bind this custom attribute type to the values as expected by CloudFormation.
    */

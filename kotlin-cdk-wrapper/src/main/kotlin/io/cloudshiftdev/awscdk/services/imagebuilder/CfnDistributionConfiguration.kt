@@ -77,6 +77,22 @@ public open class CfnDistributionConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDistributionConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDistributionConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDistributionConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDistributionConfigurationProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of this distribution configuration.
    *

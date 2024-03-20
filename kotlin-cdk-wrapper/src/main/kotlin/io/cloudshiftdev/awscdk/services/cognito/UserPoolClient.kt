@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class UserPoolClient internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolClient,
 ) : Resource(cdkObject), IUserPoolClient {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolClientProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.UserPoolClient(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UserPoolClientProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UserPoolClientProps.Builder.() -> Unit,
+  ) : this(scope, id, UserPoolClientProps(props)
+  )
+
   /**
    * The OAuth flows enabled for this client.
    */

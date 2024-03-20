@@ -37,6 +37,22 @@ public open class CfnLaunchTemplateConstraint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchTemplateConstraintProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLaunchTemplateConstraintProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchTemplateConstraintProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLaunchTemplateConstraintProps(props)
+  )
+
   /**
    * The language code.
    */

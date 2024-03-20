@@ -46,6 +46,13 @@ import kotlin.Unit
 public open class Sns internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.actions.Sns,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
+  public constructor(props: SnsProps) :
+      this(software.amazon.awscdk.services.ses.actions.Sns(props.let(SnsProps::unwrap))
+  )
+
+  public constructor(props: SnsProps.Builder.() -> Unit) : this(SnsProps(props)
+  )
+
   /**
    * Returns the receipt rule action specification.
    *

@@ -128,6 +128,27 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInsightsAccessScopeProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkInsightsAccessScopeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInsightsAccessScopeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkInsightsAccessScopeProps(props)
+  )
+
   /**
    * The creation date.
    */

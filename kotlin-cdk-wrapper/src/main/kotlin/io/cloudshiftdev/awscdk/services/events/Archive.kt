@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Archive internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.Archive,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ArchiveProps,
+  ) :
+      this(software.amazon.awscdk.services.events.Archive(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ArchiveProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ArchiveProps.Builder.() -> Unit,
+  ) : this(scope, id, ArchiveProps(props)
+  )
+
   /**
    * The ARN of the archive created.
    */

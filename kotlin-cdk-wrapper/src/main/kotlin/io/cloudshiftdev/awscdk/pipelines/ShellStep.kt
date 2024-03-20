@@ -39,6 +39,14 @@ import kotlin.collections.Map
 public open class ShellStep internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.ShellStep,
 ) : Step(cdkObject) {
+  public constructor(id: String, props: ShellStepProps) :
+      this(software.amazon.awscdk.pipelines.ShellStep(id, props.let(ShellStepProps::unwrap))
+  )
+
+  public constructor(id: String, props: ShellStepProps.Builder.() -> Unit) : this(id,
+      ShellStepProps(props)
+  )
+
   /**
    * Add an additional output FileSet based on a directory.
    *

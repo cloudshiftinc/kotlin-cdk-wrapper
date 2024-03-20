@@ -63,6 +63,22 @@ public open class CfnDataIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appintegrations.CfnDataIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataIntegrationProps,
+  ) :
+      this(software.amazon.awscdk.services.appintegrations.CfnDataIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataIntegrationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataIntegrationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the DataIntegration.
    */

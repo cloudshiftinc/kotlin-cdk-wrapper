@@ -31,6 +31,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DomainName internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.DomainName,
 ) : Resource(cdkObject), IDomainName {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DomainNameProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.DomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DomainNameProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DomainNameProps.Builder.() -> Unit,
+  ) : this(scope, id, DomainNameProps(props)
+  )
+
   /**
    * Maps this domain to an API endpoint.
    *

@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRestoreTestingPlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRestoreTestingPlanProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.CfnRestoreTestingPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRestoreTestingPlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRestoreTestingPlanProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRestoreTestingPlanProps(props)
+  )
+
   /**
    * An Amazon Resource Name (ARN) that uniquely identifies a restore testing plan.
    */

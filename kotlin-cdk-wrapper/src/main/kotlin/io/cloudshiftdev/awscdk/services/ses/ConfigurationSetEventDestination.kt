@@ -37,6 +37,22 @@ public open class ConfigurationSetEventDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ses.ConfigurationSetEventDestination,
 ) : Resource(cdkObject), IConfigurationSetEventDestination {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ConfigurationSetEventDestinationProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.ConfigurationSetEventDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ConfigurationSetEventDestinationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ConfigurationSetEventDestinationProps.Builder.() -> Unit,
+  ) : this(scope, id, ConfigurationSetEventDestinationProps(props)
+  )
+
   /**
    * The ID of the configuration set event destination.
    */

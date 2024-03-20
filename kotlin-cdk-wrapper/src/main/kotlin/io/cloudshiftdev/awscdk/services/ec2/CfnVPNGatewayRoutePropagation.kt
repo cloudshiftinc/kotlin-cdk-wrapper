@@ -43,6 +43,22 @@ public open class CfnVPNGatewayRoutePropagation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPNGatewayRoutePropagationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPNGatewayRoutePropagationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPNGatewayRoutePropagationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPNGatewayRoutePropagationProps(props)
+  )
+
   /**
    * The ID of the VPN gateway.
    */

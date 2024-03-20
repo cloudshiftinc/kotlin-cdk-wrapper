@@ -32,6 +32,19 @@ public open class CfnEipEndpoint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
+  public constructor(eip: CloudshiftdevAwscdkServicesEc2CfnEIP) :
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint(eip.let(CloudshiftdevAwscdkServicesEc2CfnEIP::unwrap))
+  )
+
+  public constructor(eip: CloudshiftdevAwscdkServicesEc2CfnEIP, options: CfnEipEndpointProps) :
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint(eip.let(CloudshiftdevAwscdkServicesEc2CfnEIP::unwrap),
+      options.let(CfnEipEndpointProps::unwrap))
+  )
+
+  public constructor(eip: CloudshiftdevAwscdkServicesEc2CfnEIP,
+      options: CfnEipEndpointProps.Builder.() -> Unit) : this(eip, CfnEipEndpointProps(options)
+  )
+
   /**
    * The region where the endpoint is located.
    *

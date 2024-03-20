@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EksJobDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.EksJobDefinition,
 ) : Resource(cdkObject), IEksJobDefinition, IJobDefinition {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EksJobDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.EksJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EksJobDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EksJobDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, EksJobDefinitionProps(props)
+  )
+
   /**
    * Add a RetryStrategy to this JobDefinition.
    *

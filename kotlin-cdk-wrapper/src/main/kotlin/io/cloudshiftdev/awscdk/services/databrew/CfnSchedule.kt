@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSchedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnSchedule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduleProps,
+  ) :
+      this(software.amazon.awscdk.services.databrew.CfnSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScheduleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScheduleProps(props)
+  )
+
   /**
    * The dates and times when the job is to run.
    */

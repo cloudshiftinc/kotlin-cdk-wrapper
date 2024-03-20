@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class HttpRoute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRoute,
 ) : Resource(cdkObject), IHttpRoute {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpRouteProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.HttpRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(HttpRouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpRouteProps.Builder.() -> Unit,
+  ) : this(scope, id, HttpRouteProps(props)
+  )
+
   /**
    * Grant access to invoke the route.
    *

@@ -172,6 +172,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDeploymentGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeploymentGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeploymentGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeploymentGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeploymentGroupProps(props)
+  )
+
   /**
    * Information about the Amazon CloudWatch alarms that are associated with the deployment group.
    */

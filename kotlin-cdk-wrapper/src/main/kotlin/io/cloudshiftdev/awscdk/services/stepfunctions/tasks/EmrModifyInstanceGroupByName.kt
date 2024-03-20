@@ -40,6 +40,22 @@ public open class EmrModifyInstanceGroupByName internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrModifyInstanceGroupByNameProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EmrModifyInstanceGroupByNameProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrModifyInstanceGroupByNameProps.Builder.() -> Unit,
+  ) : this(scope, id, EmrModifyInstanceGroupByNameProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName].

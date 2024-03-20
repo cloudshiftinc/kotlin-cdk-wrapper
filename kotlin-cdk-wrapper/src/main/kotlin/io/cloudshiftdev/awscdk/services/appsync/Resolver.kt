@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Resolver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.Resolver,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ResolverProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.Resolver(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ResolverProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ResolverProps.Builder.() -> Unit,
+  ) : this(scope, id, ResolverProps(props)
+  )
+
   /**
    * the ARN of the resolver.
    */

@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnXssMatchSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.waf.CfnXssMatchSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnXssMatchSetProps,
+  ) :
+      this(software.amazon.awscdk.services.waf.CfnXssMatchSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnXssMatchSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnXssMatchSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnXssMatchSetProps(props)
+  )
+
   /**
    *
    */

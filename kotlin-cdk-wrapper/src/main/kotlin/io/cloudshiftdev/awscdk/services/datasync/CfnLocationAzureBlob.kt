@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationAzureBlob internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationAzureBlobProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationAzureBlob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationAzureBlobProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationAzureBlobProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationAzureBlobProps(props)
+  )
+
   /**
    * Specifies the Amazon Resource Name (ARN) of the DataSync agent that can connect with your Azure
    * Blob Storage container.

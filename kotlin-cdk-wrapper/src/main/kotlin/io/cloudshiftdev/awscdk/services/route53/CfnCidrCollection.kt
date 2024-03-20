@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCidrCollection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCidrCollectionProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CfnCidrCollection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCidrCollectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCidrCollectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCidrCollectionProps(props)
+  )
+
   /**
    * "The Amazon resource name (ARN) to uniquely identify the AWS resource.
    */

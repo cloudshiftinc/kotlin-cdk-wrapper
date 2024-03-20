@@ -129,6 +129,17 @@ import kotlin.jvm.JvmName
 public open class CfnParametersCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnParametersCode,
 ) : Code(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.lambda.CfnParametersCode()
+  )
+
+  public constructor(props: CfnParametersCodeProps) :
+      this(software.amazon.awscdk.services.lambda.CfnParametersCode(props.let(CfnParametersCodeProps::unwrap))
+  )
+
+  public constructor(props: CfnParametersCodeProps.Builder.() -> Unit) :
+      this(CfnParametersCodeProps(props)
+  )
+
   /**
    * Create a parameters map from this instance's CloudFormation parameters.
    *

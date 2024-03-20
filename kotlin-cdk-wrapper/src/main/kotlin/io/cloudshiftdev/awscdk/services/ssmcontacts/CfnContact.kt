@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnContact internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContactProps,
+  ) :
+      this(software.amazon.awscdk.services.ssmcontacts.CfnContact(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnContactProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContactProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnContactProps(props)
+  )
+
   /**
    * The unique and identifiable alias of the contact or escalation plan.
    */

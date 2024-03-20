@@ -47,6 +47,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServiceNetwork internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetwork,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetwork(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceNetworkProps,
+  ) :
+      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetwork(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServiceNetworkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceNetworkProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServiceNetworkProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the service network.
    */

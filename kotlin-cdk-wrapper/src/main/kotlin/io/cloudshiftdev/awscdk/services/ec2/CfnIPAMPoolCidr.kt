@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPAMPoolCidr internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMPoolCidrProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPAMPoolCidrProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMPoolCidrProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPAMPoolCidrProps(props)
+  )
+
   /**
    * The IPAM pool CIDR ID.
    */

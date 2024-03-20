@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSmsTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSmsTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSmsTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnSmsTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSmsTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSmsTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSmsTemplateProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the message template.
    */

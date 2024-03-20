@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LambdaDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.LambdaDataSource,
 ) : BackedDataSource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LambdaDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.LambdaDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LambdaDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LambdaDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, LambdaDataSourceProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.appsync.LambdaDataSource].
    */

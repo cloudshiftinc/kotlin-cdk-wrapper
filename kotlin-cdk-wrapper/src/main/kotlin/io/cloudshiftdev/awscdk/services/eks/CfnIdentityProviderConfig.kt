@@ -68,6 +68,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIdentityProviderConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityProviderConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.CfnIdentityProviderConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIdentityProviderConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityProviderConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIdentityProviderConfigProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) associated with the identity provider config.
    */

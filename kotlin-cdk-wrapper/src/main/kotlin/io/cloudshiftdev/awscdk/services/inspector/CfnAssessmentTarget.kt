@@ -33,6 +33,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAssessmentTarget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTarget,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.inspector.CfnAssessmentTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssessmentTargetProps,
+  ) :
+      this(software.amazon.awscdk.services.inspector.CfnAssessmentTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAssessmentTargetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssessmentTargetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAssessmentTargetProps(props)
+  )
+
   /**
    * The name of the Amazon Inspector assessment target.
    */

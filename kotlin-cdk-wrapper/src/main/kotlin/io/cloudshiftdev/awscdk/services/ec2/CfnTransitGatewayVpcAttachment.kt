@@ -50,6 +50,22 @@ public open class CfnTransitGatewayVpcAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayVpcAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayVpcAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayVpcAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayVpcAttachmentProps(props)
+  )
+
   /**
    * The IDs of one or more subnets to add.
    */

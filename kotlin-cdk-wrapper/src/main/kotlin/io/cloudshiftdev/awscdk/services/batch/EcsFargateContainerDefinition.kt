@@ -43,6 +43,22 @@ public open class EcsFargateContainerDefinition internal constructor(
       software.amazon.awscdk.services.batch.EcsFargateContainerDefinition,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IEcsFargateContainerDefinition,
     IEcsContainerDefinition {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsFargateContainerDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.EcsFargateContainerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EcsFargateContainerDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsFargateContainerDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, EcsFargateContainerDefinitionProps(props)
+  )
+
   /**
    * Add a Volume to this container.
    *

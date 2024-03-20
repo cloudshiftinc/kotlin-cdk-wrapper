@@ -54,6 +54,22 @@ public open class EvaluateExpression internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpression,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EvaluateExpressionProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpression(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EvaluateExpressionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EvaluateExpressionProps.Builder.() -> Unit,
+  ) : this(scope, id, EvaluateExpressionProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EvaluateExpression].
    */

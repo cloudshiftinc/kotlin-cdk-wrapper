@@ -60,6 +60,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPartnerAccount internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iotwireless.CfnPartnerAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPartnerAccountProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnPartnerAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPartnerAccountProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPartnerAccountProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPartnerAccountProps(props)
+  )
+
   /**
    * Whether the partner account is linked to the AWS account.
    */

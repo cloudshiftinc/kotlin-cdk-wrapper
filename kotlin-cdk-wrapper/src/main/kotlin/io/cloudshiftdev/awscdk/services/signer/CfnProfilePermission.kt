@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProfilePermission internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.signer.CfnProfilePermission,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfilePermissionProps,
+  ) :
+      this(software.amazon.awscdk.services.signer.CfnProfilePermission(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProfilePermissionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfilePermissionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProfilePermissionProps(props)
+  )
+
   /**
    * The AWS Signer action permitted as part of cross-account permissions.
    */

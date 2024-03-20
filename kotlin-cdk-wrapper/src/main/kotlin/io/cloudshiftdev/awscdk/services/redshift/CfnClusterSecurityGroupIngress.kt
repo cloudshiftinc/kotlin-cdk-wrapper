@@ -55,6 +55,22 @@ public open class CfnClusterSecurityGroupIngress internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngress,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterSecurityGroupIngressProps,
+  ) :
+      this(software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngress(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterSecurityGroupIngressProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterSecurityGroupIngressProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterSecurityGroupIngressProps(props)
+  )
+
   /**
    * Specifies an inbound (ingress) rule for an Amazon Redshift security group.
    */

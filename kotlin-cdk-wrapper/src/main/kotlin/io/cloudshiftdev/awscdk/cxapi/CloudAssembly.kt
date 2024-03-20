@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.cloudassembly.schema.AssemblyManifest
+import io.cloudshiftdev.awscdk.cloudassembly.schema.LoadManifestOptions
 import io.cloudshiftdev.awscdk.cloudassembly.schema.RuntimeInfo
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -30,6 +31,18 @@ import kotlin.collections.List
 public open class CloudAssembly internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.CloudAssembly,
 ) : CdkObject(cdkObject) {
+  public constructor(directory: String) : this(software.amazon.awscdk.cxapi.CloudAssembly(directory)
+  )
+
+  public constructor(directory: String, loadOptions: LoadManifestOptions) :
+      this(software.amazon.awscdk.cxapi.CloudAssembly(directory,
+      loadOptions.let(LoadManifestOptions::unwrap))
+  )
+
+  public constructor(directory: String, loadOptions: LoadManifestOptions.Builder.() -> Unit) :
+      this(directory, LoadManifestOptions(loadOptions)
+  )
+
   /**
    * All artifacts included in this assembly.
    */

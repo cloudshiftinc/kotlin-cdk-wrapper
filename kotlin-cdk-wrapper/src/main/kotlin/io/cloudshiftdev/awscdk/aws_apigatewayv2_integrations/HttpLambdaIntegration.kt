@@ -36,6 +36,27 @@ public open class HttpLambdaIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration,
 ) : HttpRouteIntegration(cdkObject) {
+  public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration(id,
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+    props: HttpLambdaIntegrationProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration(id,
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
+      props.let(HttpLambdaIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+    props: HttpLambdaIntegrationProps.Builder.() -> Unit,
+  ) : this(id, handler, HttpLambdaIntegrationProps(props)
+  )
+
   /**
    * Bind this integration to the route.
    *

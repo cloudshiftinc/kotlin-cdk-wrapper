@@ -26,6 +26,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SamlProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.SamlProvider,
 ) : Resource(cdkObject), ISamlProvider {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SamlProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.SamlProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SamlProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SamlProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, SamlProviderProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the provider.
    */

@@ -70,6 +70,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMember internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.managedblockchain.CfnMember,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMemberProps,
+  ) :
+      this(software.amazon.awscdk.services.managedblockchain.CfnMember(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMemberProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMemberProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMemberProps(props)
+  )
+
   /**
    * The unique identifier of the member.
    */

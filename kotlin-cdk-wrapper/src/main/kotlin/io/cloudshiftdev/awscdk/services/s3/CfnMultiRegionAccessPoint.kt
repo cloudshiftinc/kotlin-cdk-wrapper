@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMultiRegionAccessPoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMultiRegionAccessPointProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMultiRegionAccessPointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMultiRegionAccessPointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMultiRegionAccessPointProps(props)
+  )
+
   /**
    * The alias for the Multi-Region Access Point.
    *

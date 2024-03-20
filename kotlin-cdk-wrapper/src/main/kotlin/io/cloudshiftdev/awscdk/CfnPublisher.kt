@@ -38,6 +38,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPublisher internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnPublisher,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublisherProps,
+  ) : this(software.amazon.awscdk.CfnPublisher(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPublisherProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublisherProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPublisherProps(props)
+  )
+
   /**
    * Whether you accept the [Terms and
    * Conditions](https://docs.aws.amazon.com/https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf)

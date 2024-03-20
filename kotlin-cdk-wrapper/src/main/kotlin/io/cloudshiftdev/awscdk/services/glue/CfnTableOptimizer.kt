@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTableOptimizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizer,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTableOptimizerProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnTableOptimizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTableOptimizerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTableOptimizerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTableOptimizerProps(props)
+  )
+
   /**
    *
    */

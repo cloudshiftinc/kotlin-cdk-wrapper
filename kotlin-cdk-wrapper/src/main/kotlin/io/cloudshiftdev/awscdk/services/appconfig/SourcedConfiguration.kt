@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SourcedConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.SourcedConfiguration,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IConfiguration, IExtensible {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SourcedConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.SourcedConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SourcedConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SourcedConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, SourcedConfigurationProps(props)
+  )
+
   /**
    * Adds an extension association to the configuration profile.
    *

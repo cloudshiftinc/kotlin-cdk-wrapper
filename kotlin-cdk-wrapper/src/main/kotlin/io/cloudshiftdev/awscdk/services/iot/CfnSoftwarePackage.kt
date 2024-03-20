@@ -49,6 +49,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSoftwarePackage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackage,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iot.CfnSoftwarePackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSoftwarePackageProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnSoftwarePackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSoftwarePackageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSoftwarePackageProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSoftwarePackageProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the package.
    */

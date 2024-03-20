@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnActivity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CfnActivity,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnActivityProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.CfnActivity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnActivityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnActivityProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnActivityProps(props)
+  )
+
   /**
    * Returns the ARN of the resource.
    */

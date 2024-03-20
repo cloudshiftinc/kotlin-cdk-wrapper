@@ -76,6 +76,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFindingsFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilter,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFindingsFilterProps,
+  ) :
+      this(software.amazon.awscdk.services.macie.CfnFindingsFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFindingsFilterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFindingsFilterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFindingsFilterProps(props)
+  )
+
   /**
    * The action to perform on findings that match the filter criteria ( `FindingCriteria` ).
    *

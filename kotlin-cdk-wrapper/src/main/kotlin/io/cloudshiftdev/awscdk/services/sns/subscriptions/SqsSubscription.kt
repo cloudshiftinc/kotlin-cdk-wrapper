@@ -31,6 +31,19 @@ public open class SqsSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sns.subscriptions.SqsSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
+      this(software.amazon.awscdk.services.sns.subscriptions.SqsSubscription(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
+  )
+
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue, props: SqsSubscriptionProps) :
+      this(software.amazon.awscdk.services.sns.subscriptions.SqsSubscription(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap),
+      props.let(SqsSubscriptionProps::unwrap))
+  )
+
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue,
+      props: SqsSubscriptionProps.Builder.() -> Unit) : this(queue, SqsSubscriptionProps(props)
+  )
+
   /**
    * Returns a configuration for an SQS queue to subscribe to an SNS topic.
    *

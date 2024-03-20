@@ -47,6 +47,22 @@ public open class CfnIntegrationResponse internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIntegrationResponseProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIntegrationResponseProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIntegrationResponseProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIntegrationResponseProps(props)
+  )
+
   /**
    * The API identifier.
    */

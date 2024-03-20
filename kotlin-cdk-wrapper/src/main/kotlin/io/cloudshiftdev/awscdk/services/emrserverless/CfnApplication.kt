@@ -121,6 +121,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApplication internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.emrserverless.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationProps,
+  ) :
+      this(software.amazon.awscdk.services.emrserverless.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationProps(props)
+  )
+
   /**
    * The CPU architecture of an application.
    */
