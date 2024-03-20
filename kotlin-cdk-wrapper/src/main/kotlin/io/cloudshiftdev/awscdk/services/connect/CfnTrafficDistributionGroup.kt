@@ -44,6 +44,22 @@ public open class CfnTrafficDistributionGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrafficDistributionGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTrafficDistributionGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrafficDistributionGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTrafficDistributionGroupProps(props)
+  )
+
   /**
    * Describes whether this is the default traffic distribution group.
    */

@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIndex internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnIndex,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIndexProps,
+  ) :
+      this(software.amazon.awscdk.services.resourceexplorer2.CfnIndex(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIndexProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIndexProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIndexProps(props)
+  )
+
   /**
    * The ARN of the new index for the AWS Region . For example:.
    *

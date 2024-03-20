@@ -52,6 +52,22 @@ public open class CfnUserAccessLoggingSettings internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserAccessLoggingSettingsProps,
+  ) :
+      this(software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserAccessLoggingSettingsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserAccessLoggingSettingsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserAccessLoggingSettingsProps(props)
+  )
+
   /**
    * A list of web portal ARNs that this user access logging settings is associated with.
    */

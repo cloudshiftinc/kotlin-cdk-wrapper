@@ -39,6 +39,25 @@ public open class HttpUrlIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration,
 ) : HttpRouteIntegration(cdkObject) {
+  public constructor(id: String, url: String) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration(id, url)
+  )
+
+  public constructor(
+    id: String,
+    url: String,
+    props: HttpUrlIntegrationProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration(id, url,
+      props.let(HttpUrlIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    url: String,
+    props: HttpUrlIntegrationProps.Builder.() -> Unit,
+  ) : this(id, url, HttpUrlIntegrationProps(props)
+  )
+
   /**
    * Bind this integration to the route.
    *

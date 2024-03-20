@@ -38,6 +38,22 @@ public open class CfnSyncConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSyncConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSyncConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSyncConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSyncConfigurationProps(props)
+  )
+
   /**
    * The owner ID for the repository associated with a specific sync configuration, such as the
    * owner ID in GitHub.

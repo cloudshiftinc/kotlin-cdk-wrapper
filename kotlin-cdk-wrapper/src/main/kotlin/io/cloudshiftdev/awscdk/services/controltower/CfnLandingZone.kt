@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLandingZone internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZone,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLandingZoneProps,
+  ) :
+      this(software.amazon.awscdk.services.controltower.CfnLandingZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLandingZoneProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLandingZoneProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLandingZoneProps(props)
+  )
+
   /**
    * The ARN of the landing zone.
    */

@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReplicationInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dms.CfnReplicationInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.dms.CfnReplicationInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReplicationInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReplicationInstanceProps(props)
+  )
+
   /**
    * The amount of storage (in gigabytes) to be initially allocated for the replication instance.
    */

@@ -52,6 +52,22 @@ public open class CfnEnclaveCertificateIamRoleAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnclaveCertificateIamRoleAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnclaveCertificateIamRoleAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnclaveCertificateIamRoleAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnclaveCertificateIamRoleAssociationProps(props)
+  )
+
   /**
    * The name of the Amazon S3 bucket to which the certificate was uploaded.
    */

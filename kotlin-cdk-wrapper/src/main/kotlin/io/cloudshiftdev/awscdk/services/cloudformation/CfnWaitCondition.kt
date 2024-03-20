@@ -63,6 +63,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWaitCondition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitCondition,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudformation.CfnWaitCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWaitConditionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudformation.CfnWaitCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWaitConditionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWaitConditionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWaitConditionProps(props)
+  )
+
   /**
    *
    */

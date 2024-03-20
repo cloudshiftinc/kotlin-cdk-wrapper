@@ -38,6 +38,22 @@ public open class ApplicationListenerRule internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRule,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationListenerRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApplicationListenerRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationListenerRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, ApplicationListenerRuleProps(props)
+  )
+
   /**
    * Add a non-standard condition to this rule.
    *

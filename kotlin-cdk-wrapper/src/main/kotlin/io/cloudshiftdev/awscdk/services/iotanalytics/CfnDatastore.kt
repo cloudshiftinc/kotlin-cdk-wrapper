@@ -94,6 +94,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDatastore internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iotanalytics.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatastoreProps,
+  ) :
+      this(software.amazon.awscdk.services.iotanalytics.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDatastoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatastoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDatastoreProps(props)
+  )
+
   /**
    *
    */

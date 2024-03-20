@@ -45,6 +45,13 @@ import kotlin.Unit
 public open class Variable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codepipeline.Variable,
 ) : CdkObject(cdkObject) {
+  public constructor(props: VariableProps) :
+      this(software.amazon.awscdk.services.codepipeline.Variable(props.let(VariableProps::unwrap))
+  )
+
+  public constructor(props: VariableProps.Builder.() -> Unit) : this(VariableProps(props)
+  )
+
   /**
    * Reference the variable name at Pipeline actions.
    *

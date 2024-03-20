@@ -38,6 +38,28 @@ public open class HttpNlbIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration,
 ) : HttpRouteIntegration(cdkObject) {
+  public constructor(id: String,
+      listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration(id,
+      listener.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener,
+    props: HttpNlbIntegrationProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration(id,
+      listener.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener::unwrap),
+      props.let(HttpNlbIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener,
+    props: HttpNlbIntegrationProps.Builder.() -> Unit,
+  ) : this(id, listener, HttpNlbIntegrationProps(props)
+  )
+
   /**
    * Bind this integration to the route.
    *

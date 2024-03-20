@@ -29,6 +29,22 @@ public open class JenkinsProvider internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider,
 ) : BaseJenkinsProvider(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: JenkinsProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(JenkinsProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: JenkinsProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, JenkinsProviderProps(props)
+  )
+
   /**
    *
    */

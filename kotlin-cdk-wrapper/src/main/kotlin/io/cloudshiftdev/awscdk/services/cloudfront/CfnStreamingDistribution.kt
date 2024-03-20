@@ -72,6 +72,22 @@ public open class CfnStreamingDistribution internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamingDistributionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStreamingDistributionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamingDistributionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStreamingDistributionProps(props)
+  )
+
   /**
    * The domain name of the resource, such as `d111111abcdef8.cloudfront.net` .
    */

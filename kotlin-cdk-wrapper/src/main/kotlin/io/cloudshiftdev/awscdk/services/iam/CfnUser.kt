@@ -62,6 +62,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUser internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.CfnUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) for the specified `AWS::IAM::User` resource.
    *

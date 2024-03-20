@@ -158,6 +158,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFileSystem internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFileSystemProps,
+  ) :
+      this(software.amazon.awscdk.services.fsx.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFileSystemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFileSystemProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFileSystemProps(props)
+  )
+
   /**
    * Returns the FSx for Windows file system's DNSName.
    *

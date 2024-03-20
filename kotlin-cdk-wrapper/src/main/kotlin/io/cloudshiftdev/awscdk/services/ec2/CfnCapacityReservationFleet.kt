@@ -65,6 +65,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCapacityReservationFleet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapacityReservationFleetProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCapacityReservationFleetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapacityReservationFleetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCapacityReservationFleetProps(props)
+  )
+
   /**
    * The strategy used by the Capacity Reservation Fleet to determine which of the specified
    * instance types to use.

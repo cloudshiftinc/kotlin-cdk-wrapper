@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EksCall internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EksCall,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EksCallProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EksCall(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EksCallProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EksCallProps.Builder.() -> Unit,
+  ) : this(scope, id, EksCallProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EksCall].
    */

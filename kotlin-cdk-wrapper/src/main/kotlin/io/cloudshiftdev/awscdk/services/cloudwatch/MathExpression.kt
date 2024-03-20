@@ -44,6 +44,14 @@ import kotlin.jvm.JvmName
 public open class MathExpression internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.MathExpression,
 ) : CdkObject(cdkObject), IMetric {
+  public constructor(props: MathExpressionProps) :
+      this(software.amazon.awscdk.services.cloudwatch.MathExpression(props.let(MathExpressionProps::unwrap))
+  )
+
+  public constructor(props: MathExpressionProps.Builder.() -> Unit) :
+      this(MathExpressionProps(props)
+  )
+
   /**
    * The hex color code, prefixed with '#' (e.g. '#00ff00'), to use when this metric is rendered on
    * a graph. The `Color` class has a set of standard colors that can be used here.

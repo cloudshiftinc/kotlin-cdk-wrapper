@@ -51,6 +51,27 @@ public open class CfnRecoveryGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecoveryGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRecoveryGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecoveryGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRecoveryGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the recovery group.
    */

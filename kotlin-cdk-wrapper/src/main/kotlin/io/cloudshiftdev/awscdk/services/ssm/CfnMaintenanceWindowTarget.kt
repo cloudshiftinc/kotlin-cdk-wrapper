@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMaintenanceWindowTarget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMaintenanceWindowTargetProps,
+  ) :
+      this(software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMaintenanceWindowTargetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMaintenanceWindowTargetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMaintenanceWindowTargetProps(props)
+  )
+
   /**
    *
    */

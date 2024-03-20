@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BucketDeployment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.deployment.BucketDeployment,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BucketDeploymentProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.deployment.BucketDeployment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BucketDeploymentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BucketDeploymentProps.Builder.() -> Unit,
+  ) : this(scope, id, BucketDeploymentProps(props)
+  )
+
   /**
    * Add an additional source to the bucket deployment.
    *

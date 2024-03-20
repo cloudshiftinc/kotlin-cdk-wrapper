@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNetworkAclEntry internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkAclEntryProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnNetworkAclEntry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkAclEntryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkAclEntryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkAclEntryProps(props)
+  )
+
   /**
    * The ID of the network ACL entry.
    */

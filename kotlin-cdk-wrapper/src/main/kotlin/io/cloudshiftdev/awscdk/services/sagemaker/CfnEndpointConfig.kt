@@ -177,6 +177,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEndpointConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnEndpointConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEndpointConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEndpointConfigProps(props)
+  )
+
   /**
    * Specifies configuration for how an endpoint performs asynchronous inference.
    */

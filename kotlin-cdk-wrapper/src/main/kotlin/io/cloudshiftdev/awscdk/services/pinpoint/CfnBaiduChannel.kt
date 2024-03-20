@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBaiduChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnBaiduChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBaiduChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnBaiduChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBaiduChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBaiduChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBaiduChannelProps(props)
+  )
+
   /**
    * The API key that you received from the Baidu Cloud Push service to communicate with the
    * service.

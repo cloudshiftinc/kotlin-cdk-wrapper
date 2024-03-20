@@ -71,6 +71,22 @@ public open class CfnConnectorDefinition internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.greengrass.CfnConnectorDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectorDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrass.CfnConnectorDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConnectorDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectorDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConnectorDefinitionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `ConnectorDefinition` , such as
    * `arn:aws:greengrass:us-east-1: 

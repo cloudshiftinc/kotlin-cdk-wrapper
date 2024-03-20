@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnKnowledgeBase internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKnowledgeBaseProps,
+  ) :
+      this(software.amazon.awscdk.services.wisdom.CfnKnowledgeBase(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnKnowledgeBaseProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKnowledgeBaseProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnKnowledgeBaseProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the knowledge base.
    */

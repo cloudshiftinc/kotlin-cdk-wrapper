@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProtectionGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.shield.CfnProtectionGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProtectionGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.shield.CfnProtectionGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProtectionGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProtectionGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProtectionGroupProps(props)
+  )
+
   /**
    * Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and
    * report events.

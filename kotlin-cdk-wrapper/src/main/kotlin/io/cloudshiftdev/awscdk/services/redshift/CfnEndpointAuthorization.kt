@@ -42,6 +42,22 @@ public open class CfnEndpointAuthorization internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.redshift.CfnEndpointAuthorization,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointAuthorizationProps,
+  ) :
+      this(software.amazon.awscdk.services.redshift.CfnEndpointAuthorization(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEndpointAuthorizationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointAuthorizationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEndpointAuthorizationProps(props)
+  )
+
   /**
    * The AWS account ID of either the cluster owner (grantor) or grantee.
    */

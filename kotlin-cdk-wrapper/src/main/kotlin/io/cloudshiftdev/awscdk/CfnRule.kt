@@ -39,6 +39,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnRule,
 ) : CfnRefElement(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRuleProps,
+  ) : this(software.amazon.awscdk.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
+      props.let(CfnRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRuleProps(props)
+  )
+
   /**
    * Adds an assertion to the rule.
    *

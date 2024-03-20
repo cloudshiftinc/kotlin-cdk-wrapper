@@ -33,6 +33,22 @@ public open class EmrCancelStep internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStep,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrCancelStepProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStep(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EmrCancelStepProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrCancelStepProps.Builder.() -> Unit,
+  ) : this(scope, id, EmrCancelStepProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EmrCancelStep].
    */

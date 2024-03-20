@@ -64,6 +64,22 @@ public open class CfnLoggingConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoggingConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLoggingConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoggingConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLoggingConfigurationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `Firewall` that the logging configuration is associated
    * with.

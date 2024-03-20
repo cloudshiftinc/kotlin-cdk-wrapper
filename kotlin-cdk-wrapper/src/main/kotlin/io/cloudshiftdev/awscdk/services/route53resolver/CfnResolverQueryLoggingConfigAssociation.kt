@@ -38,6 +38,27 @@ public open class CfnResolverQueryLoggingConfigAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverQueryLoggingConfigAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResolverQueryLoggingConfigAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverQueryLoggingConfigAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResolverQueryLoggingConfigAssociationProps(props)
+  )
+
   /**
    * The date and time that the VPC was associated with the query logging configuration, in Unix
    * time format and Coordinated Universal Time (UTC).

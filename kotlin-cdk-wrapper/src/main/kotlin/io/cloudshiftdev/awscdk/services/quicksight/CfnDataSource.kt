@@ -377,6 +377,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.quicksight.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.quicksight.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataSourceProps(props)
+  )
+
   /**
    * A set of alternate data source parameters that you want to share for the credentials stored
    * with this data source.

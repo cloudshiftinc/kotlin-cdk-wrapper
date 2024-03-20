@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class TagOptions internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.TagOptions,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TagOptionsProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.TagOptions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TagOptionsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TagOptionsProps.Builder.() -> Unit,
+  ) : this(scope, id, TagOptionsProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.servicecatalog.TagOptions].
    */

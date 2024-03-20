@@ -46,6 +46,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Key internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kms.Key,
 ) : Resource(cdkObject), IKey {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.kms.Key(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KeyProps,
+  ) :
+      this(software.amazon.awscdk.services.kms.Key(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(KeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KeyProps.Builder.() -> Unit,
+  ) : this(scope, id, KeyProps(props)
+  )
+
   /**
    * Defines a new alias for the key.
    *

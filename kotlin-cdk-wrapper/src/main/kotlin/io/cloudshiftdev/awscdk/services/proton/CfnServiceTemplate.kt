@@ -51,6 +51,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServiceTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.proton.CfnServiceTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.proton.CfnServiceTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.proton.CfnServiceTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServiceTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServiceTemplateProps(props)
+  )
+
   /**
    * Returns the service template ARN.
    */

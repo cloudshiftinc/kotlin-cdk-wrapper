@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDBInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.docdb.CfnDBInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.docdb.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBInstanceProps(props)
+  )
+
   /**
    * The connection endpoint for the instance.
    *

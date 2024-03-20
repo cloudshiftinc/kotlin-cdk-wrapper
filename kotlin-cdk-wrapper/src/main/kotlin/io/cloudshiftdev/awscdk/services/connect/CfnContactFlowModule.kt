@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnContactFlowModule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnContactFlowModule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContactFlowModuleProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnContactFlowModule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnContactFlowModuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContactFlowModuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnContactFlowModuleProps(props)
+  )
+
   /**
    * `Ref` returns the Amazon Resource Name (ARN) of the flow module. For example:.
    *

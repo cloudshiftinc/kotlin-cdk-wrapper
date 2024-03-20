@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Version internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.Version,
 ) : QualifiedFunctionBase(cdkObject), IVersion {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VersionProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.Version(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VersionProps.Builder.() -> Unit,
+  ) : this(scope, id, VersionProps(props)
+  )
+
   /**
    * (deprecated) Defines an alias for this version.
    *

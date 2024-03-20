@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVariable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnVariable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVariableProps,
+  ) :
+      this(software.amazon.awscdk.services.frauddetector.CfnVariable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVariableProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVariableProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVariableProps(props)
+  )
+
   /**
    * The ARN of the variable.
    */

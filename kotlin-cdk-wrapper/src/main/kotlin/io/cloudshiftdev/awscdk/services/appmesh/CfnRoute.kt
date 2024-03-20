@@ -256,6 +256,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRoute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnRoute,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRouteProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.CfnRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRouteProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRouteProps(props)
+  )
+
   /**
    * The full Amazon Resource Name (ARN) for the route.
    */

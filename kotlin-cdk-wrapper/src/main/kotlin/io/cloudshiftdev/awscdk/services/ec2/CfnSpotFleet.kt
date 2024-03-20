@@ -303,6 +303,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSpotFleet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSpotFleet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSpotFleetProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnSpotFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSpotFleetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSpotFleetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSpotFleetProps(props)
+  )
+
   /**
    * The ID of the Spot Fleet.
    */

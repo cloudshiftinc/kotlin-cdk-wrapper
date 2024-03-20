@@ -77,6 +77,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMultiplexprogram internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMultiplexprogramProps,
+  ) :
+      this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMultiplexprogramProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMultiplexprogramProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMultiplexprogramProps(props)
+  )
+
   /**
    * The unique ID of the channel.
    */

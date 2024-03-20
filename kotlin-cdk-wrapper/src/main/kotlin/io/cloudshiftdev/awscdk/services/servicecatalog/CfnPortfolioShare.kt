@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPortfolioShare internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolioShare,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPortfolioShareProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolioShare(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPortfolioShareProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPortfolioShareProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPortfolioShareProps(props)
+  )
+
   /**
    * The language code.
    */

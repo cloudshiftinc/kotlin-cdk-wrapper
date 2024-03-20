@@ -46,6 +46,22 @@ public open class CfnSecretTargetAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecretTargetAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecretTargetAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecretTargetAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecretTargetAttachmentProps(props)
+  )
+
   /**
    *
    */

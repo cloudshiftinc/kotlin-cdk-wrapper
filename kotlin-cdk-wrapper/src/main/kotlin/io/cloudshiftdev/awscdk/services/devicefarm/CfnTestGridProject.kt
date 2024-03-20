@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTestGridProject internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.devicefarm.CfnTestGridProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTestGridProjectProps,
+  ) :
+      this(software.amazon.awscdk.services.devicefarm.CfnTestGridProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTestGridProjectProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTestGridProjectProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTestGridProjectProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `TestGrid` project.
    *

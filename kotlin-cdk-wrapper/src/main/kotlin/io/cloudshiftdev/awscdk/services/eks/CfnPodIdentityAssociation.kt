@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPodIdentityAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.CfnPodIdentityAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPodIdentityAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.CfnPodIdentityAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPodIdentityAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPodIdentityAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPodIdentityAssociationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the association.
    */

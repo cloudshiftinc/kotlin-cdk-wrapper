@@ -29,6 +29,26 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCondition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnCondition,
 ) : CfnElement(cdkObject), ICfnConditionExpression, IResolvable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.CfnCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConditionProps,
+  ) : this(software.amazon.awscdk.CfnCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConditionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConditionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConditionProps(props)
+  )
+
   /**
    * The condition statement.
    */

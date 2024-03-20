@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNode,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNodeProps,
+  ) :
+      this(software.amazon.awscdk.services.managedblockchain.CfnNode(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNodeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNodeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNodeProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the node.
    */

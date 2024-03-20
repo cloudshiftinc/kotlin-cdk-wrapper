@@ -72,6 +72,22 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVerifiedAccessTrustProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVerifiedAccessTrustProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVerifiedAccessTrustProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVerifiedAccessTrustProviderProps(props)
+  )
+
   /**
    * The creation time.
    */

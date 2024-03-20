@@ -47,6 +47,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Pipeline internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codepipeline.Pipeline,
 ) : Resource(cdkObject), IPipeline {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codepipeline.Pipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PipelineProps,
+  ) :
+      this(software.amazon.awscdk.services.codepipeline.Pipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PipelineProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PipelineProps.Builder.() -> Unit,
+  ) : this(scope, id, PipelineProps(props)
+  )
+
   /**
    * Creates a new Stage, and adds it to this Pipeline.
    *

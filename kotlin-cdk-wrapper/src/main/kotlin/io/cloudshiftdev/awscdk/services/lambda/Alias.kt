@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Alias internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.Alias,
 ) : QualifiedFunctionBase(cdkObject), IAlias {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AliasProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.Alias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AliasProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AliasProps.Builder.() -> Unit,
+  ) : this(scope, id, AliasProps(props)
+  )
+
   /**
    * Configure provisioned concurrency autoscaling on a function alias.
    *

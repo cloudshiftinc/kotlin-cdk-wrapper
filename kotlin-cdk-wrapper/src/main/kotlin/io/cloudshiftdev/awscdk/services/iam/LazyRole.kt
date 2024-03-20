@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LazyRole internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.LazyRole,
 ) : Resource(cdkObject), IRole {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LazyRoleProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.LazyRole(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LazyRoleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LazyRoleProps.Builder.() -> Unit,
+  ) : this(scope, id, LazyRoleProps(props)
+  )
+
   /**
    * Attaches a managed policy to this role.
    *

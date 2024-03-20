@@ -46,6 +46,22 @@ public open class CfnStateMachineVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStateMachineVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStateMachineVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStateMachineVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStateMachineVersionProps(props)
+  )
+
   /**
    * Returns the ARN of the state machine version.
    *

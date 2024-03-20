@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ExternalService internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ExternalService,
 ) : BaseService(cdkObject), IExternalService {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ExternalServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.ExternalService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ExternalServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ExternalServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, ExternalServiceProps(props)
+  )
+
   /**
    * Overriden method to throw error as `associateCloudMapService` is not supported for external
    * service.

@@ -40,6 +40,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWALWorkspace internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.emr.CfnWALWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWALWorkspaceProps,
+  ) :
+      this(software.amazon.awscdk.services.emr.CfnWALWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWALWorkspaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWALWorkspaceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWALWorkspaceProps(props)
+  )
+
   /**
    * Tag Manager which manages the tags for this resource.
    */

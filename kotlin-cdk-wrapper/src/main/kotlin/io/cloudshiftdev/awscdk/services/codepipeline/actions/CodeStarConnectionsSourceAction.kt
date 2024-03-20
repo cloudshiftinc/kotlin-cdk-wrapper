@@ -31,6 +31,14 @@ public open class CodeStarConnectionsSourceAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction,
 ) : Action(cdkObject) {
+  public constructor(props: CodeStarConnectionsSourceActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction(props.let(CodeStarConnectionsSourceActionProps::unwrap))
+  )
+
+  public constructor(props: CodeStarConnectionsSourceActionProps.Builder.() -> Unit) :
+      this(CodeStarConnectionsSourceActionProps(props)
+  )
+
   /**
    * The variables emitted by this action.
    */

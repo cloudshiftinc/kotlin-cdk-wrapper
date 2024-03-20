@@ -48,6 +48,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBrowserSettings internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBrowserSettingsProps,
+  ) :
+      this(software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBrowserSettingsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBrowserSettingsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBrowserSettingsProps(props)
+  )
+
   /**
    * Additional encryption context of the browser settings.
    */

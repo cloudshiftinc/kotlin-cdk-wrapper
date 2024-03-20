@@ -63,6 +63,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMembership internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnMembership,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMembershipProps,
+  ) :
+      this(software.amazon.awscdk.services.cleanrooms.CfnMembership(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMembershipProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMembershipProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMembershipProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of the specified membership.
    *

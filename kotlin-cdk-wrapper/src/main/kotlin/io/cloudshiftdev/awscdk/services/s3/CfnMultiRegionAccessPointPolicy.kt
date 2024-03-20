@@ -43,6 +43,22 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMultiRegionAccessPointPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMultiRegionAccessPointPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMultiRegionAccessPointPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMultiRegionAccessPointPolicyProps(props)
+  )
+
   /**
    * The Policy Status associated with this Multi Region Access Point.
    */

@@ -88,6 +88,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnServer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.transfer.CfnServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerProps,
+  ) :
+      this(software.amazon.awscdk.services.transfer.CfnServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServerProps(props)
+  )
+
   /**
    * The Amazon Resource Name associated with the server, in the form `arn:aws:transfer:region:
    * *account-id* :server/ *server-id* /` .

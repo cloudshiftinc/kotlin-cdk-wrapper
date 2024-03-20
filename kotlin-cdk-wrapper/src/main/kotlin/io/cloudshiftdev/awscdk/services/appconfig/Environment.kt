@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Environment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.Environment,
 ) : Resource(cdkObject), IEnvironment, IExtensible {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EnvironmentProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.Environment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EnvironmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EnvironmentProps.Builder.() -> Unit,
+  ) : this(scope, id, EnvironmentProps(props)
+  )
+
   /**
    * Adds an extension association to the environment.
    *

@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBackupSelection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.CfnBackupSelection,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBackupSelectionProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.CfnBackupSelection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBackupSelectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBackupSelectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBackupSelectionProps(props)
+  )
+
   /**
    * Uniquely identifies a backup plan.
    */

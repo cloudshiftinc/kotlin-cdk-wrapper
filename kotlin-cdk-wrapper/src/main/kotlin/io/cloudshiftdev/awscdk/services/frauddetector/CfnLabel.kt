@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLabel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnLabel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLabelProps,
+  ) :
+      this(software.amazon.awscdk.services.frauddetector.CfnLabel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLabelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLabelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLabelProps(props)
+  )
+
   /**
    * The ARN of the label.
    */

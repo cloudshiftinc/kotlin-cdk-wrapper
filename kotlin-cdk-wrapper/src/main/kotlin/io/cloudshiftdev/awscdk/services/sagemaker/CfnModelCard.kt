@@ -185,6 +185,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnModelCard internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelCardProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnModelCard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnModelCardProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelCardProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnModelCardProps(props)
+  )
+
   /**
    * The domain associated with the user.
    */

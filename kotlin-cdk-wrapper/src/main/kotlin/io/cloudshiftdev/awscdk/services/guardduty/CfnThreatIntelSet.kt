@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnThreatIntelSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnThreatIntelSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThreatIntelSetProps,
+  ) :
+      this(software.amazon.awscdk.services.guardduty.CfnThreatIntelSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnThreatIntelSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThreatIntelSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnThreatIntelSetProps(props)
+  )
+
   /**
    * A Boolean value that indicates whether GuardDuty is to start using the uploaded ThreatIntelSet.
    */

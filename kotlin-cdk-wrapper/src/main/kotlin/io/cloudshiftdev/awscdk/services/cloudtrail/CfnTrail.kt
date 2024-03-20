@@ -82,6 +82,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTrail internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrailProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudtrail.CfnTrail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTrailProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrailProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTrailProps(props)
+  )
+
   /**
    * Specifies the settings for advanced event selectors.
    */

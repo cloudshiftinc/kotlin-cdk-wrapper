@@ -106,6 +106,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCrawler internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCrawlerProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnCrawler(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCrawlerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCrawlerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCrawlerProps(props)
+  )
+
   /**
    *
    */

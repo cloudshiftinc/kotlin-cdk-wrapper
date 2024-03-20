@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInclude internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cloudformation.include.CfnInclude,
 ) : CfnElement(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIncludeProps,
+  ) :
+      this(software.amazon.awscdk.cloudformation.include.CfnInclude(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIncludeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIncludeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIncludeProps(props)
+  )
+
   /**
    * Returns the CfnCondition object from the 'Conditions' section of the CloudFormation template
    * with the given name.

@@ -78,6 +78,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStack internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnStack,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackProps,
+  ) :
+      this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStackProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStackProps(props)
+  )
+
   /**
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */

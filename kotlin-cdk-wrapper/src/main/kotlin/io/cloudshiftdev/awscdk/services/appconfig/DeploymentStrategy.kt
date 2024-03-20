@@ -30,6 +30,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DeploymentStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategy,
 ) : Resource(cdkObject), IDeploymentStrategy {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DeploymentStrategyProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.DeploymentStrategy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DeploymentStrategyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DeploymentStrategyProps.Builder.() -> Unit,
+  ) : this(scope, id, DeploymentStrategyProps(props)
+  )
+
   /**
    * The deployment duration in minutes of the deployment strategy.
    */

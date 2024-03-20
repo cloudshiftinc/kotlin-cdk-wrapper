@@ -59,6 +59,27 @@ public open class CfnExtensionAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appconfig.CfnExtensionAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.appconfig.CfnExtensionAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnExtensionAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.CfnExtensionAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnExtensionAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnExtensionAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnExtensionAssociationProps(props)
+  )
+
   /**
    * The ARN of the extension defined in the association.
    */

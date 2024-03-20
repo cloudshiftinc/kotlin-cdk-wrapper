@@ -53,6 +53,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPCEndpointService internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointService,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEndpointServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCEndpointServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEndpointServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCEndpointServiceProps(props)
+  )
+
   /**
    * Indicates whether requests from service consumers to create an endpoint to your service must be
    * accepted.

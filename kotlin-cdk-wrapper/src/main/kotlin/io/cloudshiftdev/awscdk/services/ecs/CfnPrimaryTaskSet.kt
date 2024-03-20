@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPrimaryTaskSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPrimaryTaskSetProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPrimaryTaskSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPrimaryTaskSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPrimaryTaskSetProps(props)
+  )
+
   /**
    * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service that
    * the task set exists in.

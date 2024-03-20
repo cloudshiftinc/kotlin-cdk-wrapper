@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCollection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rekognition.CfnCollection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCollectionProps,
+  ) :
+      this(software.amazon.awscdk.services.rekognition.CfnCollection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCollectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCollectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCollectionProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name of the collection.
    */

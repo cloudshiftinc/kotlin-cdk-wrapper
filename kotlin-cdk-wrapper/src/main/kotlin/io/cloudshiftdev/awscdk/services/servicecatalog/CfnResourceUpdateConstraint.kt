@@ -37,6 +37,22 @@ public open class CfnResourceUpdateConstraint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceUpdateConstraintProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourceUpdateConstraintProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceUpdateConstraintProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourceUpdateConstraintProps(props)
+  )
+
   /**
    * The language code.
    */

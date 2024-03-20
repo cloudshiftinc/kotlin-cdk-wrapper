@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNamespace internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNamespaceProps,
+  ) :
+      this(software.amazon.awscdk.services.redshiftserverless.CfnNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNamespaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNamespaceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNamespaceProps(props)
+  )
+
   /**
    * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the namespace's
    * admin credentials secret.

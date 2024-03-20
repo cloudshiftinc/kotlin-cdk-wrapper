@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPortfolio internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.CfnPortfolio,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPortfolioProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolio(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPortfolioProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPortfolioProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPortfolioProps(props)
+  )
+
   /**
    * The language code.
    */

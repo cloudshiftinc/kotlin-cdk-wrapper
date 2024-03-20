@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CustomState internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CustomState,
 ) : State(cdkObject), IChainable, INextable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomStateProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.CustomState(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CustomStateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomStateProps.Builder.() -> Unit,
+  ) : this(scope, id, CustomStateProps(props)
+  )
+
   /**
    * Add a recovery handler for this state.
    *

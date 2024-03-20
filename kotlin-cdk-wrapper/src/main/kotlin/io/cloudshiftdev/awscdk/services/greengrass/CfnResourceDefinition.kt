@@ -112,6 +112,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResourceDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnResourceDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrass.CfnResourceDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourceDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourceDefinitionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `ResourceDefinition` , such as
    * `arn:aws:greengrass:us-east-1: 

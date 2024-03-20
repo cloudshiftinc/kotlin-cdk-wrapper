@@ -40,6 +40,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Rule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.Rule,
 ) : Resource(cdkObject), IRule {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.events.Rule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RuleProps,
+  ) :
+      this(software.amazon.awscdk.services.events.Rule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RuleProps.Builder.() -> Unit,
+  ) : this(scope, id, RuleProps(props)
+  )
+
   /**
    * Adds an event pattern filter to this rule.
    *

@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPolicyProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the AWS IoT policy, such as
    * `arn:aws:iot:us-east-2:123456789012:policy/MyPolicy` .

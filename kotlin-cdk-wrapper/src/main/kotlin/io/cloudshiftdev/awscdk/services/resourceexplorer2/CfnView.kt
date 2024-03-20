@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnView internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnViewProps,
+  ) :
+      this(software.amazon.awscdk.services.resourceexplorer2.CfnView(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnViewProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnViewProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnViewProps(props)
+  )
+
   /**
    * The ARN of the new view. For example:.
    *

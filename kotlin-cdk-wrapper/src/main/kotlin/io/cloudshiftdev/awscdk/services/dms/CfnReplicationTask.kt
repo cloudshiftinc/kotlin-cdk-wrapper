@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReplicationTask internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dms.CfnReplicationTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationTaskProps,
+  ) :
+      this(software.amazon.awscdk.services.dms.CfnReplicationTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReplicationTaskProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationTaskProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReplicationTaskProps(props)
+  )
+
   /**
    *
    */

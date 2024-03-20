@@ -32,6 +32,21 @@ public open class FunctionUrlOrigin internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin,
 ) : OriginBase(cdkObject) {
+  public constructor(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl) :
+      this(software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl::unwrap))
+  )
+
+  public constructor(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl,
+      props: FunctionUrlOriginProps) :
+      this(software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl::unwrap),
+      props.let(FunctionUrlOriginProps::unwrap))
+  )
+
+  public constructor(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl,
+      props: FunctionUrlOriginProps.Builder.() -> Unit) : this(lambdaFunctionUrl,
+      FunctionUrlOriginProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.cloudfront.origins.FunctionUrlOrigin].
    */

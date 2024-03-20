@@ -95,6 +95,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAnomalyDetector internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnomalyDetectorProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAnomalyDetectorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnomalyDetectorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAnomalyDetectorProps(props)
+  )
+
   /**
    *
    */

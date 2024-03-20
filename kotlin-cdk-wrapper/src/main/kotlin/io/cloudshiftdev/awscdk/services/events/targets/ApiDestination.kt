@@ -43,6 +43,21 @@ import software.amazon.awscdk.services.events.IApiDestination as AmazonAwscdkSer
 public open class ApiDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.ApiDestination,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(apiDestination: CloudshiftdevAwscdkServicesEventsIApiDestination) :
+      this(software.amazon.awscdk.services.events.targets.ApiDestination(apiDestination.let(CloudshiftdevAwscdkServicesEventsIApiDestination::unwrap))
+  )
+
+  public constructor(apiDestination: CloudshiftdevAwscdkServicesEventsIApiDestination,
+      props: ApiDestinationProps) :
+      this(software.amazon.awscdk.services.events.targets.ApiDestination(apiDestination.let(CloudshiftdevAwscdkServicesEventsIApiDestination::unwrap),
+      props.let(ApiDestinationProps::unwrap))
+  )
+
+  public constructor(apiDestination: CloudshiftdevAwscdkServicesEventsIApiDestination,
+      props: ApiDestinationProps.Builder.() -> Unit) : this(apiDestination,
+      ApiDestinationProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger API destinations from an EventBridge event.
    *

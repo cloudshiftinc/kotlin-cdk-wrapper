@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventBus internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.CfnEventBus,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventBusProps,
+  ) :
+      this(software.amazon.awscdk.services.events.CfnEventBus(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventBusProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventBusProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventBusProps(props)
+  )
+
   /**
    * The ARN of the event bus, such as
    * `arn:aws:events:us-east-2:123456789012:event-bus/aws.partner/PartnerName/acct1/repo1` .

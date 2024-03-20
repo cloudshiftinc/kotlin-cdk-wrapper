@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSegment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnSegment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSegmentProps,
+  ) :
+      this(software.amazon.awscdk.services.evidently.CfnSegment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSegmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSegmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSegmentProps(props)
+  )
+
   /**
    * The ARN of the segment.
    *

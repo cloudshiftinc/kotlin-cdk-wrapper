@@ -171,6 +171,22 @@ public open class CfnPackagingConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPackagingConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPackagingConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPackagingConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPackagingConfigurationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the packaging configuration.
    *

@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUrl internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnUrl,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUrlProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.CfnUrl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUrlProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUrlProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUrlProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the function.
    */

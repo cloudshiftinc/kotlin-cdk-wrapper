@@ -67,6 +67,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStudio internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudio,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStudioProps,
+  ) :
+      this(software.amazon.awscdk.services.nimblestudio.CfnStudio(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStudioProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStudioProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStudioProps(props)
+  )
+
   /**
    * The IAM role that studio admins assume when logging in to the Nimble Studio portal.
    */

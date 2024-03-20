@@ -30,6 +30,14 @@ import kotlin.jvm.JvmName
 public open class AwsIntegration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.AwsIntegration,
 ) : Integration(cdkObject) {
+  public constructor(props: AwsIntegrationProps) :
+      this(software.amazon.awscdk.services.apigateway.AwsIntegration(props.let(AwsIntegrationProps::unwrap))
+  )
+
+  public constructor(props: AwsIntegrationProps.Builder.() -> Unit) :
+      this(AwsIntegrationProps(props)
+  )
+
   /**
    * Can be overridden by subclasses to allow the integration to interact with the method being
    * integrated, access the REST API object, method ARNs, etc.

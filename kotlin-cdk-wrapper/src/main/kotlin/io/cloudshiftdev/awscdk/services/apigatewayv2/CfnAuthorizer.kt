@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAuthorizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAuthorizerProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAuthorizerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAuthorizerProps(props)
+  )
+
   /**
    * The API identifier.
    */

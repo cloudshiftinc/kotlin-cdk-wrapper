@@ -34,6 +34,22 @@ public open class CfnLinkAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkmanager.CfnLinkAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLinkAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnLinkAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLinkAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLinkAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLinkAssociationProps(props)
+  )
+
   /**
    * The device ID for the link association.
    */

@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSchema internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.personalize.CfnSchema,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchemaProps,
+  ) :
+      this(software.amazon.awscdk.services.personalize.CfnSchema(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSchemaProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchemaProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSchemaProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the schema.
    */

@@ -33,6 +33,16 @@ import kotlin.collections.List
 public open class QueryString internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.QueryString,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.logs.QueryString()
+  )
+
+  public constructor(props: QueryStringProps) :
+      this(software.amazon.awscdk.services.logs.QueryString(props.let(QueryStringProps::unwrap))
+  )
+
+  public constructor(props: QueryStringProps.Builder.() -> Unit) : this(QueryStringProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.QueryString].
    */

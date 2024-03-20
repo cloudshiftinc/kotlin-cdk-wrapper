@@ -27,6 +27,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Resource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.Resource,
 ) : ResourceBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ResourceProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.Resource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ResourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ResourceProps.Builder.() -> Unit,
+  ) : this(scope, id, ResourceProps(props)
+  )
+
   /**
    * The rest API that this resource is part of.
    *

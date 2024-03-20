@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBasePathMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnBasePathMapping,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBasePathMappingProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnBasePathMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBasePathMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBasePathMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBasePathMappingProps(props)
+  )
+
   /**
    * The base path name that callers of the API must provide as part of the URL after the domain
    * name.

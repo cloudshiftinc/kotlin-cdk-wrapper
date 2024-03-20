@@ -30,6 +30,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EmailIdentity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.EmailIdentity,
 ) : Resource(cdkObject), IEmailIdentity {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmailIdentityProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.EmailIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EmailIdentityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmailIdentityProps.Builder.() -> Unit,
+  ) : this(scope, id, EmailIdentityProps(props)
+  )
+
   /**
    * The host name for the first token that you have to add to the DNS configurationfor your domain.
    */

@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPortal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPortalProps,
+  ) :
+      this(software.amazon.awscdk.services.iotsitewise.CfnPortal(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPortalProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPortalProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPortalProps(props)
+  )
+
   /**
    * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor
    * portal.

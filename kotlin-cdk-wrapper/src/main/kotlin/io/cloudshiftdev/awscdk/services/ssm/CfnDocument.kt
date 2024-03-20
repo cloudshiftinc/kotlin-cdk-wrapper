@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDocument internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnDocument,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDocumentProps,
+  ) :
+      this(software.amazon.awscdk.services.ssm.CfnDocument(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDocumentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDocumentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDocumentProps(props)
+  )
+
   /**
    * A list of key-value pairs that describe attachments to a version of a document.
    */

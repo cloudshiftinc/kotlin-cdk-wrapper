@@ -41,6 +41,22 @@ public open class GlueStartJobRun internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GlueStartJobRunProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(GlueStartJobRunProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GlueStartJobRunProps.Builder.() -> Unit,
+  ) : this(scope, id, GlueStartJobRunProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.GlueStartJobRun].
    */

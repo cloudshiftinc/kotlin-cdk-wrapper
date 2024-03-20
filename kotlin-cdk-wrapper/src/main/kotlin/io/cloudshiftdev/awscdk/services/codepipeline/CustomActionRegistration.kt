@@ -55,6 +55,22 @@ public open class CustomActionRegistration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.CustomActionRegistration,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomActionRegistrationProps,
+  ) :
+      this(software.amazon.awscdk.services.codepipeline.CustomActionRegistration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CustomActionRegistrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomActionRegistrationProps.Builder.() -> Unit,
+  ) : this(scope, id, CustomActionRegistrationProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codepipeline.CustomActionRegistration].
    */

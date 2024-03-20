@@ -40,6 +40,17 @@ import kotlin.jvm.JvmName
 public open class BootstraplessSynthesizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.BootstraplessSynthesizer,
 ) : DefaultStackSynthesizer(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.BootstraplessSynthesizer()
+  )
+
+  public constructor(props: BootstraplessSynthesizerProps) :
+      this(software.amazon.awscdk.BootstraplessSynthesizer(props.let(BootstraplessSynthesizerProps::unwrap))
+  )
+
+  public constructor(props: BootstraplessSynthesizerProps.Builder.() -> Unit) :
+      this(BootstraplessSynthesizerProps(props)
+  )
+
   /**
    * Register a Docker Image Asset.
    *

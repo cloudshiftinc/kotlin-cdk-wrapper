@@ -63,6 +63,27 @@ public open class NetworkMultipleTargetGroupsFargateService internal constructor
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsFargateService,
 ) : NetworkMultipleTargetGroupsServiceBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkMultipleTargetGroupsFargateServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NetworkMultipleTargetGroupsFargateServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkMultipleTargetGroupsFargateServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, NetworkMultipleTargetGroupsFargateServiceProps(props)
+  )
+
   /**
    * Determines whether the service will be assigned a public IP address.
    */

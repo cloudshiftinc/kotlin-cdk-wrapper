@@ -81,6 +81,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTargetGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTargetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.vpclattice.CfnTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTargetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTargetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTargetGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the target group.
    */

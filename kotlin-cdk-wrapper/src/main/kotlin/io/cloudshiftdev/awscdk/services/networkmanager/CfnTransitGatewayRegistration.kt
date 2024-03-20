@@ -40,6 +40,22 @@ public open class CfnTransitGatewayRegistration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayRegistrationProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayRegistrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayRegistrationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayRegistrationProps(props)
+  )
+
   /**
    * The ID of the global network.
    */

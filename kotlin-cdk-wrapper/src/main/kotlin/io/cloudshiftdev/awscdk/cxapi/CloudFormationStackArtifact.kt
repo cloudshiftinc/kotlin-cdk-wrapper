@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
+import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactManifest
 import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactType
 import io.cloudshiftdev.awscdk.cloudassembly.schema.AssetManifestProperties
 import io.cloudshiftdev.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties
@@ -72,6 +73,22 @@ import kotlin.jvm.JvmName
 public open class CloudFormationStackArtifact internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.CloudFormationStackArtifact,
 ) : CloudArtifact(cdkObject) {
+  public constructor(
+    assembly: CloudAssembly,
+    artifactId: String,
+    artifact: ArtifactManifest,
+  ) :
+      this(software.amazon.awscdk.cxapi.CloudFormationStackArtifact(assembly.let(CloudAssembly::unwrap),
+      artifactId, artifact.let(ArtifactManifest::unwrap))
+  )
+
+  public constructor(
+    assembly: CloudAssembly,
+    artifactId: String,
+    artifact: ArtifactManifest.Builder.() -> Unit,
+  ) : this(assembly, artifactId, ArtifactManifest(artifact)
+  )
+
   /**
    * Any assets associated with this stack.
    */

@@ -45,6 +45,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPlaybackKeyPair internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlaybackKeyPairProps,
+  ) :
+      this(software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPlaybackKeyPairProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlaybackKeyPairProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPlaybackKeyPairProps(props)
+  )
+
   /**
    * Key-pair ARN.
    *

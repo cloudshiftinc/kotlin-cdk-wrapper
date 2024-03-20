@@ -107,6 +107,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTask internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTaskProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTaskProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTaskProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTaskProps(props)
+  )
+
   /**
    * The ARNs of the destination elastic network interfaces (ENIs) that were created for your
    * subnet.

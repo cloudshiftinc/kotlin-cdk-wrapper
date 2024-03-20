@@ -30,6 +30,26 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnMapping,
 ) : CfnRefElement(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.CfnMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMappingProps,
+  ) : this(software.amazon.awscdk.CfnMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMappingProps(props)
+  )
+
   /**
    * @return A reference to a value in the map based on the two keys.
    * If mapping is lazy, the value from the map or default value is returned instead of the

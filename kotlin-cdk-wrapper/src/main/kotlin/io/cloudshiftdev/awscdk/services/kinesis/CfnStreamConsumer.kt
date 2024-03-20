@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStreamConsumer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kinesis.CfnStreamConsumer,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamConsumerProps,
+  ) :
+      this(software.amazon.awscdk.services.kinesis.CfnStreamConsumer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStreamConsumerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamConsumerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStreamConsumerProps(props)
+  )
+
   /**
    * When you register a consumer, Kinesis Data Streams generates an ARN for it.
    *

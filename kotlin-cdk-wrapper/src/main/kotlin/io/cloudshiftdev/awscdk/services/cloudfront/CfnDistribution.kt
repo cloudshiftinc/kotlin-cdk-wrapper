@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDistribution internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDistributionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnDistribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDistributionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDistributionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDistributionProps(props)
+  )
+
   /**
    * The domain name of the resource, such as `d111111abcdef8.cloudfront.net` .
    */

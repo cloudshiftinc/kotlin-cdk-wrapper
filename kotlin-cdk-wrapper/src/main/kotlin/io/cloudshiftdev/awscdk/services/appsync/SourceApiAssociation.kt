@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SourceApiAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociation,
 ) : Resource(cdkObject), ISourceApiAssociation {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SourceApiAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.SourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SourceApiAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SourceApiAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, SourceApiAssociationProps(props)
+  )
+
   /**
    * The underlying CFN source api association resource.
    */

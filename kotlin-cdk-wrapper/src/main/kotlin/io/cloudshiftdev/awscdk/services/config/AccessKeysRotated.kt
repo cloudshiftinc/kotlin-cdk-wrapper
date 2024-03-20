@@ -28,6 +28,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class AccessKeysRotated internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.AccessKeysRotated,
 ) : ManagedRule(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.config.AccessKeysRotated(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AccessKeysRotatedProps,
+  ) :
+      this(software.amazon.awscdk.services.config.AccessKeysRotated(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AccessKeysRotatedProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AccessKeysRotatedProps.Builder.() -> Unit,
+  ) : this(scope, id, AccessKeysRotatedProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.config.AccessKeysRotated].
    */

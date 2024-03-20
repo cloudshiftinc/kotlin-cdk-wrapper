@@ -27,6 +27,16 @@ import kotlin.collections.List
 public open class Spacer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Spacer,
 ) : CdkObject(cdkObject), IWidget {
+  public constructor() : this(software.amazon.awscdk.services.cloudwatch.Spacer()
+  )
+
+  public constructor(props: SpacerProps) :
+      this(software.amazon.awscdk.services.cloudwatch.Spacer(props.let(SpacerProps::unwrap))
+  )
+
+  public constructor(props: SpacerProps.Builder.() -> Unit) : this(SpacerProps(props)
+  )
+
   /**
    * The amount of vertical grid units the widget will take up.
    */

@@ -35,6 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Stream internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kinesis.Stream,
 ) : Resource(cdkObject), IStream {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.kinesis.Stream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StreamProps,
+  ) :
+      this(software.amazon.awscdk.services.kinesis.Stream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(StreamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StreamProps.Builder.() -> Unit,
+  ) : this(scope, id, StreamProps(props)
+  )
+
   /**
    * Optional KMS encryption key associated with this stream.
    */

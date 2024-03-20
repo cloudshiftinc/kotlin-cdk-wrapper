@@ -64,6 +64,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EcsRunTask internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask,
 ) : TaskStateBase(cdkObject), IConnectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsRunTaskProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EcsRunTaskProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsRunTaskProps.Builder.() -> Unit,
+  ) : this(scope, id, EcsRunTaskProps(props)
+  )
+
   /**
    * Manage allowed network traffic for this service.
    */

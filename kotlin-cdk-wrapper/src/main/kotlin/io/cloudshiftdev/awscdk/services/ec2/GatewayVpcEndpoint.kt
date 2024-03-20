@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class GatewayVpcEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpoint,
 ) : VpcEndpoint(cdkObject), IGatewayVpcEndpoint {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GatewayVpcEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.GatewayVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(GatewayVpcEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GatewayVpcEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, GatewayVpcEndpointProps(props)
+  )
+
   /**
    * The date and time the gateway VPC endpoint was created.
    */

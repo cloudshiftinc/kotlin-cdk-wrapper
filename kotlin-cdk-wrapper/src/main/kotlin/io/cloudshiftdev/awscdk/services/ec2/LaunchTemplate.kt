@@ -43,6 +43,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LaunchTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplate,
 ) : Resource(cdkObject), ILaunchTemplate, IGrantable, IConnectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.LaunchTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LaunchTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.LaunchTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LaunchTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LaunchTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, LaunchTemplateProps(props)
+  )
+
   /**
    * Add the security group to the instance.
    *

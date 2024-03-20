@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSAMLProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnSAMLProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSAMLProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnSAMLProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSAMLProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSAMLProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSAMLProviderProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) for the specified `AWS::IAM::SAMLProvider` resource.
    */

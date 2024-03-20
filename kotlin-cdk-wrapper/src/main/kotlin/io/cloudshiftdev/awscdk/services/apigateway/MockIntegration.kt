@@ -85,6 +85,17 @@ import kotlin.collections.Map
 public open class MockIntegration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.MockIntegration,
 ) : Integration(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.apigateway.MockIntegration()
+  )
+
+  public constructor(options: IntegrationOptions) :
+      this(software.amazon.awscdk.services.apigateway.MockIntegration(options.let(IntegrationOptions::unwrap))
+  )
+
+  public constructor(options: IntegrationOptions.Builder.() -> Unit) :
+      this(IntegrationOptions(options)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.MockIntegration].
    */

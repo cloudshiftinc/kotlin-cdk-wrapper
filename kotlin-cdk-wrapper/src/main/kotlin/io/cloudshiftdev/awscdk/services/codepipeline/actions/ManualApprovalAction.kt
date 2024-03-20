@@ -33,6 +33,14 @@ public open class ManualApprovalAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction,
 ) : Action(cdkObject) {
+  public constructor(props: ManualApprovalActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction(props.let(ManualApprovalActionProps::unwrap))
+  )
+
+  public constructor(props: ManualApprovalActionProps.Builder.() -> Unit) :
+      this(ManualApprovalActionProps(props)
+  )
+
   /**
    * grant the provided principal the permissions to approve or reject this manual approval action.
    *

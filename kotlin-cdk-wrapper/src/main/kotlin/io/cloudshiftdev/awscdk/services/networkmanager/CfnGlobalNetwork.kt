@@ -40,6 +40,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGlobalNetwork internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGlobalNetworkProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGlobalNetworkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGlobalNetworkProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGlobalNetworkProps(props)
+  )
+
   /**
    * The ARN of the global network.
    *

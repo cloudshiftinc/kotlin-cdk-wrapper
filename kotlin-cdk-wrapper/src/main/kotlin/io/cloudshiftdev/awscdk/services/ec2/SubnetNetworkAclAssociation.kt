@@ -30,6 +30,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SubnetNetworkAclAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation,
 ) : Resource(cdkObject), ISubnetNetworkAclAssociation {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SubnetNetworkAclAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SubnetNetworkAclAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SubnetNetworkAclAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, SubnetNetworkAclAssociationProps(props)
+  )
+
   /**
    * ID for the current Network ACL.
    */

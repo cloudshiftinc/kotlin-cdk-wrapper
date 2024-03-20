@@ -33,6 +33,17 @@ import kotlin.collections.List
 public open class JsonFileLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.JsonFileLogDriver,
 ) : LogDriver(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.ecs.JsonFileLogDriver()
+  )
+
+  public constructor(props: JsonFileLogDriverProps) :
+      this(software.amazon.awscdk.services.ecs.JsonFileLogDriver(props.let(JsonFileLogDriverProps::unwrap))
+  )
+
+  public constructor(props: JsonFileLogDriverProps.Builder.() -> Unit) :
+      this(JsonFileLogDriverProps(props)
+  )
+
   /**
    * Called when the log driver is configured on a container.
    *

@@ -145,6 +145,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.acmpca.CfnCertificate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.acmpca.CfnCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCertificateProps(props)
+  )
+
   /**
    * Specifies X.509 certificate information to be included in the issued certificate. An
    * `APIPassthrough` or `APICSRPassthrough` template variant must be selected, or else this parameter

@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnOptionGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOptionGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.CfnOptionGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOptionGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOptionGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOptionGroupProps(props)
+  )
+
   /**
    * Specifies the name of the engine that this option group should be associated with.
    */

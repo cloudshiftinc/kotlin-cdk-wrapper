@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ScheduledAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.ScheduledAction,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ScheduledActionProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.ScheduledAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ScheduledActionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ScheduledActionProps.Builder.() -> Unit,
+  ) : this(scope, id, ScheduledActionProps(props)
+  )
+
   /**
    * The name of the scheduled action.
    */

@@ -60,6 +60,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDomainName internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainNameProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDomainNameProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainNameProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDomainNameProps(props)
+  )
+
   /**
    * The Amazon CloudFront distribution domain name that's mapped to the custom domain name.
    *

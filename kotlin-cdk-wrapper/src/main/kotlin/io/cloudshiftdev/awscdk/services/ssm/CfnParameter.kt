@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnParameter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnParameter,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnParameterProps,
+  ) :
+      this(software.amazon.awscdk.services.ssm.CfnParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnParameterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnParameterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnParameterProps(props)
+  )
+
   /**
    * A regular expression used to validate the parameter value.
    */

@@ -95,6 +95,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBudget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.budgets.CfnBudget,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBudgetProps,
+  ) :
+      this(software.amazon.awscdk.services.budgets.CfnBudget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBudgetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBudgetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBudgetProps(props)
+  )
+
   /**
    *
    */

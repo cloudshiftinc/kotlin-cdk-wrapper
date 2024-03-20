@@ -60,6 +60,27 @@ public open class ApplicationLoadBalancedFargateService internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService,
 ) : ApplicationLoadBalancedServiceBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationLoadBalancedFargateServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApplicationLoadBalancedFargateServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationLoadBalancedFargateServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, ApplicationLoadBalancedFargateServiceProps(props)
+  )
+
   /**
    * Determines whether the service will be assigned a public IP address.
    */

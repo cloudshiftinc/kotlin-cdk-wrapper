@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class PublicSubnet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.PublicSubnet,
 ) : Subnet(cdkObject), IPublicSubnet {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PublicSubnetProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.PublicSubnet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PublicSubnetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PublicSubnetProps.Builder.() -> Unit,
+  ) : this(scope, id, PublicSubnetProps(props)
+  )
+
   /**
    * Creates a new managed NAT gateway attached to this public subnet.
    *

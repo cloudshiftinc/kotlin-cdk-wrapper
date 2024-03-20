@@ -29,6 +29,17 @@ import kotlin.Unit
 public open class BottleRocketImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImage,
 ) : CdkObject(cdkObject), IMachineImage {
+  public constructor() : this(software.amazon.awscdk.services.ecs.BottleRocketImage()
+  )
+
+  public constructor(props: BottleRocketImageProps) :
+      this(software.amazon.awscdk.services.ecs.BottleRocketImage(props.let(BottleRocketImageProps::unwrap))
+  )
+
+  public constructor(props: BottleRocketImageProps.Builder.() -> Unit) :
+      this(BottleRocketImageProps(props)
+  )
+
   /**
    * Return the correct image.
    *

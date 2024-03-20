@@ -40,6 +40,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRunGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.omics.CfnRunGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.omics.CfnRunGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRunGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.omics.CfnRunGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRunGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRunGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRunGroupProps(props)
+  )
+
   /**
    * The run group's ARN.
    */

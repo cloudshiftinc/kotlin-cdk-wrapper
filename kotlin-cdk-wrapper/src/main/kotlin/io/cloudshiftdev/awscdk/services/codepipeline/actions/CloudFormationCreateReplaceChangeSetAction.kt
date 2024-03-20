@@ -74,6 +74,14 @@ public open class CloudFormationCreateReplaceChangeSetAction internal constructo
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetAction,
 ) : Action(cdkObject) {
+  public constructor(props: CloudFormationCreateReplaceChangeSetActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateReplaceChangeSetAction(props.let(CloudFormationCreateReplaceChangeSetActionProps::unwrap))
+  )
+
+  public constructor(props: CloudFormationCreateReplaceChangeSetActionProps.Builder.() -> Unit) :
+      this(CloudFormationCreateReplaceChangeSetActionProps(props)
+  )
+
   /**
    * Add statement to the service role assumed by CloudFormation while executing this action.
    *

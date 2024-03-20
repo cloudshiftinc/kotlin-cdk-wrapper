@@ -90,6 +90,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDBCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.neptune.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.neptune.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBClusterProps(props)
+  )
+
   /**
    * Provides a list of the Amazon Identity and Access Management (IAM) roles that are associated
    * with the DB cluster.

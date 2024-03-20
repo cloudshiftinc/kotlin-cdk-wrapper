@@ -94,6 +94,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPartition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnPartition,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPartitionProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnPartition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPartitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPartitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPartitionProps(props)
+  )
+
   /**
    *
    */

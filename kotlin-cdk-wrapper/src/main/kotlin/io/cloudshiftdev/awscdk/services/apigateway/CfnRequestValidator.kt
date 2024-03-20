@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRequestValidator internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnRequestValidator,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRequestValidatorProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnRequestValidator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRequestValidatorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRequestValidatorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRequestValidatorProps(props)
+  )
+
   /**
    * The ID for the request validator.
    *

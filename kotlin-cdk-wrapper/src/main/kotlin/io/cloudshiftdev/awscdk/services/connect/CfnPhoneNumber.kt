@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPhoneNumber internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnPhoneNumber,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPhoneNumberProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnPhoneNumber(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPhoneNumberProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPhoneNumberProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPhoneNumberProps(props)
+  )
+
   /**
    * The phone number, in E.164 format.
    */

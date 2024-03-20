@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class OpenIdConnectProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.OpenIdConnectProvider,
 ) : io.cloudshiftdev.awscdk.services.iam.OpenIdConnectProvider(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: OpenIdConnectProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.OpenIdConnectProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(OpenIdConnectProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: OpenIdConnectProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, OpenIdConnectProviderProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.eks.OpenIdConnectProvider].
    */

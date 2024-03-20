@@ -33,6 +33,27 @@ public open class CfnResolverDNSSECConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverDNSSECConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResolverDNSSECConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverDNSSECConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResolverDNSSECConfigProps(props)
+  )
+
   /**
    * The primary identifier of this `ResolverDNSSECConfig` resource.
    *

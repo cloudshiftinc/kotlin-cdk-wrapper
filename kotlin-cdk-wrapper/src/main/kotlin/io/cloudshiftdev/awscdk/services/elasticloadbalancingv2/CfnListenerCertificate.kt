@@ -40,6 +40,22 @@ public open class CfnListenerCertificate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnListenerCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnListenerCertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnListenerCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnListenerCertificateProps(props)
+  )
+
   /**
    *
    */

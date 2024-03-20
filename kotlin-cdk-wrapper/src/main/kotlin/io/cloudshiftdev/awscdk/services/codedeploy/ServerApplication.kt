@@ -23,6 +23,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ServerApplication internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.ServerApplication,
 ) : Resource(cdkObject), IServerApplication {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codedeploy.ServerApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerApplicationProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.ServerApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ServerApplicationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerApplicationProps.Builder.() -> Unit,
+  ) : this(scope, id, ServerApplicationProps(props)
+  )
+
   /**
    *
    */

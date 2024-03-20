@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRole internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnRole,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoleProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnRole(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRoleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRoleProps(props)
+  )
+
   /**
    * The trust policy that is associated with this role.
    */

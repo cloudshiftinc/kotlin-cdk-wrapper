@@ -70,6 +70,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSoftwarePackageVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSoftwarePackageVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSoftwarePackageVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSoftwarePackageVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSoftwarePackageVersionProps(props)
+  )
+
   /**
    * Error reason for a package version failure during creation or update.
    */

@@ -321,6 +321,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnJobDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJobDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.CfnJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnJobDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJobDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnJobDefinitionProps(props)
+  )
+
   /**
    *
    */

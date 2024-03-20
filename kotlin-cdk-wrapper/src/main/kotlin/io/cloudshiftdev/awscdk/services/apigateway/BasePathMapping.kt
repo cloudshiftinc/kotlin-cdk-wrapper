@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BasePathMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.BasePathMapping,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BasePathMappingProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.BasePathMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BasePathMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BasePathMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, BasePathMappingProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.BasePathMapping].
    */

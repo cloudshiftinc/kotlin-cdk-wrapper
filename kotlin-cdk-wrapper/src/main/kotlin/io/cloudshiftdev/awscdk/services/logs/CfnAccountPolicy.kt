@@ -98,6 +98,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccountPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CfnAccountPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.CfnAccountPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccountPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccountPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccountPolicyProps(props)
+  )
+
   /**
    * The account ID of the account where this policy was created.
    *

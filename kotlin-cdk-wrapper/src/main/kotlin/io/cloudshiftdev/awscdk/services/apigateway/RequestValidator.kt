@@ -30,6 +30,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class RequestValidator internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.RequestValidator,
 ) : Resource(cdkObject), IRequestValidator {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RequestValidatorProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.RequestValidator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RequestValidatorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RequestValidatorProps.Builder.() -> Unit,
+  ) : this(scope, id, RequestValidatorProps(props)
+  )
+
   /**
    * ID of the request validator, such as abc123.
    */

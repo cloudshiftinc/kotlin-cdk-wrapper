@@ -35,6 +35,22 @@ public open class EmrContainersDeleteVirtualCluster internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualCluster,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrContainersDeleteVirtualClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EmrContainersDeleteVirtualClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrContainersDeleteVirtualClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, EmrContainersDeleteVirtualClusterProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualCluster].

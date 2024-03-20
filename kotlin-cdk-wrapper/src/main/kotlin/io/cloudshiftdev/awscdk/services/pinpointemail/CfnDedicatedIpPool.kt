@@ -39,6 +39,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDedicatedIpPool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDedicatedIpPoolProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDedicatedIpPoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDedicatedIpPoolProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDedicatedIpPoolProps(props)
+  )
+
   /**
    *
    */

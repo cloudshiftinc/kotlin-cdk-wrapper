@@ -38,6 +38,22 @@ public open class CfnLaunchNotificationConstraint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchNotificationConstraintProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLaunchNotificationConstraintProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchNotificationConstraintProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLaunchNotificationConstraintProps(props)
+  )
+
   /**
    * The language code.
    */

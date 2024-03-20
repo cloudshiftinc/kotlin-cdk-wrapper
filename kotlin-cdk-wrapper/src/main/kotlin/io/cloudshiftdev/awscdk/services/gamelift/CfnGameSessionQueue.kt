@@ -69,6 +69,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGameSessionQueue internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGameSessionQueueProps,
+  ) :
+      this(software.amazon.awscdk.services.gamelift.CfnGameSessionQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGameSessionQueueProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGameSessionQueueProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGameSessionQueueProps(props)
+  )
+
   /**
    * The unique Amazon Resource Name (ARN) for the `GameSessionQueue` .
    */

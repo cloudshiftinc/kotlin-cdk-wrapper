@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnClusterSecurityGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterSecurityGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterSecurityGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterSecurityGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterSecurityGroupProps(props)
+  )
+
   /**
    *
    */

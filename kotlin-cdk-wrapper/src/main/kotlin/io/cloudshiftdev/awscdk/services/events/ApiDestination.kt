@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ApiDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.ApiDestination,
 ) : Resource(cdkObject), IApiDestination {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApiDestinationProps,
+  ) :
+      this(software.amazon.awscdk.services.events.ApiDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApiDestinationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApiDestinationProps.Builder.() -> Unit,
+  ) : this(scope, id, ApiDestinationProps(props)
+  )
+
   /**
    * The ARN of the Api Destination created.
    */

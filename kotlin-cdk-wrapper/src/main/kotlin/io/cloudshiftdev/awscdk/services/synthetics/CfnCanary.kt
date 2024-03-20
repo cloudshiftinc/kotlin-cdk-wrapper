@@ -114,6 +114,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCanary internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCanaryProps,
+  ) :
+      this(software.amazon.awscdk.services.synthetics.CfnCanary(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCanaryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCanaryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCanaryProps(props)
+  )
+
   /**
    * A structure that contains the configuration for canary artifacts, including the
    * encryption-at-rest settings for artifacts that the canary uploads to Amazon S3.

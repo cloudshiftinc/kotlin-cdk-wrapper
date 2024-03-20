@@ -46,6 +46,22 @@ public open class NetworkLoadBalancer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer,
 ) : BaseLoadBalancer(cdkObject), INetworkLoadBalancer {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkLoadBalancerProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NetworkLoadBalancerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkLoadBalancerProps.Builder.() -> Unit,
+  ) : this(scope, id, NetworkLoadBalancerProps(props)
+  )
+
   /**
    * Add a listener to this load balancer.
    *

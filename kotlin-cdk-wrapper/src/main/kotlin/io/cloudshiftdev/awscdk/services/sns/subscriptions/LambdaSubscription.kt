@@ -40,6 +40,20 @@ public open class LambdaSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
+      this(software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+  )
+
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction, props: LambdaSubscriptionProps)
+      :
+      this(software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
+      props.let(LambdaSubscriptionProps::unwrap))
+  )
+
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
+      props: LambdaSubscriptionProps.Builder.() -> Unit) : this(fn, LambdaSubscriptionProps(props)
+  )
+
   /**
    * Returns a configuration for a Lambda function to subscribe to an SNS topic.
    *

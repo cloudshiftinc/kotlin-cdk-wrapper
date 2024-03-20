@@ -29,6 +29,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ProfilingGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup,
 ) : Resource(cdkObject), IProfilingGroup {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProfilingGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ProfilingGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProfilingGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, ProfilingGroupProps(props)
+  )
+
   /**
    * Grant access to publish profiling information to the Profiling Group to the given identity.
    *

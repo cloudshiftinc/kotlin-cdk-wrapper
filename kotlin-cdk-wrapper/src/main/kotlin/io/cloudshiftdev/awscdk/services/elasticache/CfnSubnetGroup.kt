@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSubnetGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticache.CfnSubnetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSubnetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSubnetGroupProps(props)
+  )
+
   /**
    * The name for the cache subnet group.
    *

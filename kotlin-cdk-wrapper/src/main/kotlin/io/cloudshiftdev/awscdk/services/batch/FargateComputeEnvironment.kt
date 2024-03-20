@@ -46,6 +46,22 @@ public open class FargateComputeEnvironment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.FargateComputeEnvironment,
 ) : Resource(cdkObject), IFargateComputeEnvironment, IManagedComputeEnvironment, IComputeEnvironment
     {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FargateComputeEnvironmentProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.FargateComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FargateComputeEnvironmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FargateComputeEnvironmentProps.Builder.() -> Unit,
+  ) : this(scope, id, FargateComputeEnvironmentProps(props)
+  )
+
   /**
    * The ARN of this compute environment.
    */

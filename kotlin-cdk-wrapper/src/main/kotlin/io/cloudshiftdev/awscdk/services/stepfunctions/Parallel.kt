@@ -68,6 +68,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Parallel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Parallel,
 ) : State(cdkObject), INextable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.stepfunctions.Parallel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ParallelProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.Parallel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ParallelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ParallelProps.Builder.() -> Unit,
+  ) : this(scope, id, ParallelProps(props)
+  )
+
   /**
    * Add a recovery handler for this state.
    *

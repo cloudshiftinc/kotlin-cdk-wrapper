@@ -112,6 +112,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class FirelensLogRouter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.FirelensLogRouter,
 ) : ContainerDefinition(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FirelensLogRouterProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.FirelensLogRouter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FirelensLogRouterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FirelensLogRouterProps.Builder.() -> Unit,
+  ) : this(scope, id, FirelensLogRouterProps(props)
+  )
+
   /**
    * Firelens configuration.
    */

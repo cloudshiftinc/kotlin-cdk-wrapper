@@ -46,6 +46,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LogGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.LogGroup,
 ) : Resource(cdkObject), ILogGroup {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.logs.LogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LogGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.LogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LogGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LogGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, LogGroupProps(props)
+  )
+
   /**
    * Create a new Metric Filter on this Log Group.
    *

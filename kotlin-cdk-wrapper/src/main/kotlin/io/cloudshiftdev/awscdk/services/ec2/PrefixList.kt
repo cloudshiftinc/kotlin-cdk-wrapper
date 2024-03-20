@@ -25,6 +25,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class PrefixList internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.PrefixList,
 ) : Resource(cdkObject), IPrefixList {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.PrefixList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrefixListProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.PrefixList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PrefixListProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrefixListProps.Builder.() -> Unit,
+  ) : this(scope, id, PrefixListProps(props)
+  )
+
   /**
    * The address family of the prefix list.
    */

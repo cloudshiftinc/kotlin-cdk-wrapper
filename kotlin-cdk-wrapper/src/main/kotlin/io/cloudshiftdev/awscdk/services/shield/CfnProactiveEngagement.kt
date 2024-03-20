@@ -70,6 +70,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProactiveEngagement internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.shield.CfnProactiveEngagement,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProactiveEngagementProps,
+  ) :
+      this(software.amazon.awscdk.services.shield.CfnProactiveEngagement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProactiveEngagementProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProactiveEngagementProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProactiveEngagementProps(props)
+  )
+
   /**
    * The ID of the account that submitted the template.
    */

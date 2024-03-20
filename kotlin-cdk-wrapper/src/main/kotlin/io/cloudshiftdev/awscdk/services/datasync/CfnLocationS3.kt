@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationS3 internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationS3,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationS3Props,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationS3(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationS3Props::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationS3Props.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationS3Props(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the specified Amazon S3 location.
    */

@@ -77,6 +77,19 @@ import kotlin.jvm.JvmName
 public open class AssetImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.AssetImage,
 ) : ContainerImage(cdkObject) {
+  public constructor(directory: String) :
+      this(software.amazon.awscdk.services.ecs.AssetImage(directory)
+  )
+
+  public constructor(directory: String, props: AssetImageProps) :
+      this(software.amazon.awscdk.services.ecs.AssetImage(directory,
+      props.let(AssetImageProps::unwrap))
+  )
+
+  public constructor(directory: String, props: AssetImageProps.Builder.() -> Unit) : this(directory,
+      AssetImageProps(props)
+  )
+
   /**
    * Called when the image is used by a ContainerDefinition.
    *

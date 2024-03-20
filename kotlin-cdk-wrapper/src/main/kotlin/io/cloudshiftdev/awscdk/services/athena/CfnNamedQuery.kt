@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNamedQuery internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.athena.CfnNamedQuery,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNamedQueryProps,
+  ) :
+      this(software.amazon.awscdk.services.athena.CfnNamedQuery(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNamedQueryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNamedQueryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNamedQueryProps(props)
+  )
+
   /**
    * The unique ID of the query.
    */

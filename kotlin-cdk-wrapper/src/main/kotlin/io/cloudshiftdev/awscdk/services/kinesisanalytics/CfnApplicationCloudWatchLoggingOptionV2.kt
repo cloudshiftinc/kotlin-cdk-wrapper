@@ -45,6 +45,22 @@ public open class CfnApplicationCloudWatchLoggingOptionV2 internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationCloudWatchLoggingOptionV2Props,
+  ) :
+      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationCloudWatchLoggingOptionV2Props::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationCloudWatchLoggingOptionV2Props.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationCloudWatchLoggingOptionV2Props(props)
+  )
+
   /**
    * The name of the application.
    */

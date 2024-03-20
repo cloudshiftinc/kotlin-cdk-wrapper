@@ -36,6 +36,14 @@ import kotlin.collections.List
 public open class S3CsvItemReader internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.S3CsvItemReader,
 ) : CdkObject(cdkObject), IItemReader {
+  public constructor(props: S3CsvItemReaderProps) :
+      this(software.amazon.awscdk.services.stepfunctions.S3CsvItemReader(props.let(S3CsvItemReaderProps::unwrap))
+  )
+
+  public constructor(props: S3CsvItemReaderProps.Builder.() -> Unit) :
+      this(S3CsvItemReaderProps(props)
+  )
+
   /**
    * S3 Bucket containing a file with a list to iterate over.
    */

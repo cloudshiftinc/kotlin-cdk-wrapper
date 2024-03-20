@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAlert internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAlertProps,
+  ) :
+      this(software.amazon.awscdk.services.lookoutmetrics.CfnAlert(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAlertProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAlertProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAlertProps(props)
+  )
+
   /**
    * Action that will be triggered when there is an alert.
    */

@@ -95,6 +95,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnResourceDataSync internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnResourceDataSync,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceDataSyncProps,
+  ) :
+      this(software.amazon.awscdk.services.ssm.CfnResourceDataSync(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourceDataSyncProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceDataSyncProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourceDataSyncProps(props)
+  )
+
   /**
    * The name of the resource data sync.
    */

@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CustomPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.CustomPolicy,
 ) : Resource(cdkObject), IRule {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CustomPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CustomPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CustomPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CustomPolicyProps(props)
+  )
+
   /**
    * The arn of the rule.
    */

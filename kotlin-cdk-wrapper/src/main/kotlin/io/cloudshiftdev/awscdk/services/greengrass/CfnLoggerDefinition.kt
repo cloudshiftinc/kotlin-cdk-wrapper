@@ -72,6 +72,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLoggerDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoggerDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrass.CfnLoggerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLoggerDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoggerDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLoggerDefinitionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `LoggerDefinition` , such as
    * `arn:aws:greengrass:us-east-1: 

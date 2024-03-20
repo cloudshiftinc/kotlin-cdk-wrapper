@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPredefinedAttribute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttribute,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPredefinedAttributeProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnPredefinedAttribute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPredefinedAttributeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPredefinedAttributeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPredefinedAttributeProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

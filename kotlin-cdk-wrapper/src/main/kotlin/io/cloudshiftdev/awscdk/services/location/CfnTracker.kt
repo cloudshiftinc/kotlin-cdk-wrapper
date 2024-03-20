@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTracker internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.location.CfnTracker,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrackerProps,
+  ) :
+      this(software.amazon.awscdk.services.location.CfnTracker(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTrackerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrackerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTrackerProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the tracker resource.
    *

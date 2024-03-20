@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnOutcome internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnOutcome,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOutcomeProps,
+  ) :
+      this(software.amazon.awscdk.services.frauddetector.CfnOutcome(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOutcomeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOutcomeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOutcomeProps(props)
+  )
+
   /**
    * The ARN of the outcome.
    */

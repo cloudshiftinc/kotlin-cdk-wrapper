@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFlowEntitlement internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowEntitlementProps,
+  ) :
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFlowEntitlementProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowEntitlementProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFlowEntitlementProps(props)
+  )
+
   /**
    * The entitlement ARN.
    */

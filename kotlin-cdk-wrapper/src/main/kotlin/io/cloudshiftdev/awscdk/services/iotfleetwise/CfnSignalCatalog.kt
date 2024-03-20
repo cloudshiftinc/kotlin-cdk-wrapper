@@ -92,6 +92,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSignalCatalog internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSignalCatalogProps,
+  ) :
+      this(software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSignalCatalogProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSignalCatalogProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSignalCatalogProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the signal catalog.
    */

@@ -28,6 +28,20 @@ import software.amazon.awscdk.services.apigateway.RestApiBase as AmazonAwscdkSer
 public open class RestApiOrigin internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.RestApiOrigin,
 ) : OriginBase(cdkObject) {
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApiBase) :
+      this(software.amazon.awscdk.services.cloudfront.origins.RestApiOrigin(restApi.let(CloudshiftdevAwscdkServicesApigatewayRestApiBase::unwrap))
+  )
+
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApiBase,
+      props: RestApiOriginProps) :
+      this(software.amazon.awscdk.services.cloudfront.origins.RestApiOrigin(restApi.let(CloudshiftdevAwscdkServicesApigatewayRestApiBase::unwrap),
+      props.let(RestApiOriginProps::unwrap))
+  )
+
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApiBase,
+      props: RestApiOriginProps.Builder.() -> Unit) : this(restApi, RestApiOriginProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.cloudfront.origins.RestApiOrigin].
    */

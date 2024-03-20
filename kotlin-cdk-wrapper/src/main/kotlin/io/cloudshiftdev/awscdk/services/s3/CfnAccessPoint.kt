@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccessPoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessPoint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessPointProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessPointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessPointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessPointProps(props)
+  )
+
   /**
    * The alias for this access point.
    */

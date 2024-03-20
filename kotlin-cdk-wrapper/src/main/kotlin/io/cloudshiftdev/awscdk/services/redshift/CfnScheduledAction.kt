@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScheduledAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduledActionProps,
+  ) :
+      this(software.amazon.awscdk.services.redshift.CfnScheduledAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScheduledActionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduledActionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScheduledActionProps(props)
+  )
+
   /**
    * List of times when the scheduled action will run.
    */

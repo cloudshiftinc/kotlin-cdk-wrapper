@@ -83,6 +83,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRecordSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CfnRecordSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecordSetProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CfnRecordSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRecordSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecordSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRecordSetProps(props)
+  )
+
   /**
    * *Alias resource record sets only:* Information about the AWS resource, such as a CloudFront
    * distribution or an Amazon S3 bucket, that you want to route traffic to.

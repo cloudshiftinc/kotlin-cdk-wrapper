@@ -30,6 +30,13 @@ public open class JenkinsAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.JenkinsAction,
 ) : Action(cdkObject) {
+  public constructor(props: JenkinsActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.JenkinsAction(props.let(JenkinsActionProps::unwrap))
+  )
+
+  public constructor(props: JenkinsActionProps.Builder.() -> Unit) : this(JenkinsActionProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codepipeline.actions.JenkinsAction].
    */

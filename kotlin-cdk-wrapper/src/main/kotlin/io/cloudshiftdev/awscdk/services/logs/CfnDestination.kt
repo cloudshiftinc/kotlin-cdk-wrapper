@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CfnDestination,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDestinationProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.CfnDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDestinationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDestinationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDestinationProps(props)
+  )
+
   /**
    * The ARN of the CloudWatch Logs destination, such as
    * `arn:aws:logs:us-west-1:123456789012:destination:MyDestination` .

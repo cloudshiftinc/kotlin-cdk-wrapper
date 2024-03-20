@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
+import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactManifest
 import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactType
 import io.cloudshiftdev.awscdk.cloudassembly.schema.AssetManifestProperties
 import io.cloudshiftdev.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties
@@ -72,6 +73,22 @@ import kotlin.jvm.JvmName
 public open class NestedCloudAssemblyArtifact internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact,
 ) : CloudArtifact(cdkObject) {
+  public constructor(
+    assembly: CloudAssembly,
+    name: String,
+    artifact: ArtifactManifest,
+  ) :
+      this(software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact(assembly.let(CloudAssembly::unwrap),
+      name, artifact.let(ArtifactManifest::unwrap))
+  )
+
+  public constructor(
+    assembly: CloudAssembly,
+    name: String,
+    artifact: ArtifactManifest.Builder.() -> Unit,
+  ) : this(assembly, name, ArtifactManifest(artifact)
+  )
+
   /**
    * The relative directory name of the asset manifest.
    */

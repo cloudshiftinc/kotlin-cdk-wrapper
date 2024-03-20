@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDeviceFleet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnDeviceFleet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeviceFleetProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnDeviceFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeviceFleetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeviceFleetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeviceFleetProps(props)
+  )
+
   /**
    * A description of the fleet.
    */

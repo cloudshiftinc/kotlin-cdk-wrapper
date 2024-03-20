@@ -34,6 +34,21 @@ public open class LambdaDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.logs.destinations.LambdaDestination,
 ) : CdkObject(cdkObject), ILogSubscriptionDestination {
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
+      this(software.amazon.awscdk.services.logs.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+  )
+
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
+      options: LambdaDestinationOptions) :
+      this(software.amazon.awscdk.services.logs.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
+      options.let(LambdaDestinationOptions::unwrap))
+  )
+
+  public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
+      options: LambdaDestinationOptions.Builder.() -> Unit) : this(fn,
+      LambdaDestinationOptions(options)
+  )
+
   /**
    * Return the properties required to send subscription events to this destination.
    *

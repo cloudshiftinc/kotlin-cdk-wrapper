@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAnnotationStore internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.omics.CfnAnnotationStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnnotationStoreProps,
+  ) :
+      this(software.amazon.awscdk.services.omics.CfnAnnotationStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAnnotationStoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnnotationStoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAnnotationStoreProps(props)
+  )
+
   /**
    * When the store was created.
    */

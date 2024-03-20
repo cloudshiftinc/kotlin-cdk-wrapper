@@ -46,6 +46,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ProductStack internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStack,
 ) : Stack(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.servicecatalog.ProductStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProductStackProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.ProductStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ProductStackProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProductStackProps.Builder.() -> Unit,
+  ) : this(scope, id, ProductStackProps(props)
+  )
+
   /**
    * The name of the CloudFormation template file emitted to the output directory during synthesis.
    *

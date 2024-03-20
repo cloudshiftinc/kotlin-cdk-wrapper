@@ -41,6 +41,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGrant internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.licensemanager.CfnGrant,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.licensemanager.CfnGrant(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGrantProps,
+  ) :
+      this(software.amazon.awscdk.services.licensemanager.CfnGrant(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGrantProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGrantProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGrantProps(props)
+  )
+
   /**
    * Allowed operations for the grant.
    */

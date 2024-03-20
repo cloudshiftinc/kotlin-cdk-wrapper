@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMap internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.location.CfnMap,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMapProps,
+  ) :
+      this(software.amazon.awscdk.services.location.CfnMap(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMapProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMapProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMapProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the map resource. Used to specify a resource across all AWS
    * .

@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Table internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dynamodb.Table,
 ) : TableBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TableProps,
+  ) :
+      this(software.amazon.awscdk.services.dynamodb.Table(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TableProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TableProps.Builder.() -> Unit,
+  ) : this(scope, id, TableProps(props)
+  )
+
   /**
    * Add a global secondary index of table.
    *

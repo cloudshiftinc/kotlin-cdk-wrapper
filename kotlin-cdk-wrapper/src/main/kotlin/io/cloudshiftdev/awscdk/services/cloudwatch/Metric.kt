@@ -44,6 +44,13 @@ import kotlin.jvm.JvmName
 public open class Metric internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Metric,
 ) : CdkObject(cdkObject), IMetric {
+  public constructor(props: MetricProps) :
+      this(software.amazon.awscdk.services.cloudwatch.Metric(props.let(MetricProps::unwrap))
+  )
+
+  public constructor(props: MetricProps.Builder.() -> kotlin.Unit) : this(MetricProps(props)
+  )
+
   /**
    * Account which this metric comes from.
    */

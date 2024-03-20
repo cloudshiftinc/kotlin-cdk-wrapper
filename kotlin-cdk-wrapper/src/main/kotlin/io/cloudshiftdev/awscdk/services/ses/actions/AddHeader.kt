@@ -46,6 +46,13 @@ import kotlin.Unit
 public open class AddHeader internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.actions.AddHeader,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
+  public constructor(props: AddHeaderProps) :
+      this(software.amazon.awscdk.services.ses.actions.AddHeader(props.let(AddHeaderProps::unwrap))
+  )
+
+  public constructor(props: AddHeaderProps.Builder.() -> Unit) : this(AddHeaderProps(props)
+  )
+
   /**
    * Returns the receipt rule action specification.
    *

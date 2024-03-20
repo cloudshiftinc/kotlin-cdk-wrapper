@@ -122,6 +122,22 @@ public open class CfnResponseHeadersPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResponseHeadersPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResponseHeadersPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResponseHeadersPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResponseHeadersPolicyProps(props)
+  )
+
   /**
    * The unique identifier for the response headers policy.
    *

@@ -36,6 +36,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EventBus internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.EventBus,
 ) : Resource(cdkObject), IEventBus {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EventBusProps,
+  ) :
+      this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EventBusProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EventBusProps.Builder.() -> Unit,
+  ) : this(scope, id, EventBusProps(props)
+  )
+
   /**
    * Adds a statement to the IAM resource policy associated with this event bus.
    *

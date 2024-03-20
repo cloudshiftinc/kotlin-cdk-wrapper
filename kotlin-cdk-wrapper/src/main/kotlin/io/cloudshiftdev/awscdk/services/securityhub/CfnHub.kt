@@ -58,6 +58,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHub internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.securityhub.CfnHub,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.securityhub.CfnHub(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHubProps,
+  ) :
+      this(software.amazon.awscdk.services.securityhub.CfnHub(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHubProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHubProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHubProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `Hub` resource that was retrieved.
    */

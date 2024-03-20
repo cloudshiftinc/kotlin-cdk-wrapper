@@ -337,6 +337,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFlow internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appflow.CfnFlow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowProps,
+  ) :
+      this(software.amazon.awscdk.services.appflow.CfnFlow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFlowProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFlowProps(props)
+  )
+
   /**
    * The flow's Amazon Resource Name (ARN).
    */

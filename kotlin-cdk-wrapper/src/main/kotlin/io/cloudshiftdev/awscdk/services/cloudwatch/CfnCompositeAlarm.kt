@@ -68,6 +68,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCompositeAlarm internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCompositeAlarmProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCompositeAlarmProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCompositeAlarmProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCompositeAlarmProps(props)
+  )
+
   /**
    * Indicates whether actions should be executed during any changes to the alarm state of the
    * composite alarm.

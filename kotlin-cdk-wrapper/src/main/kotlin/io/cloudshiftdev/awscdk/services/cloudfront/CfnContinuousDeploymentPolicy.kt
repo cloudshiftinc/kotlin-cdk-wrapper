@@ -83,6 +83,22 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContinuousDeploymentPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnContinuousDeploymentPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContinuousDeploymentPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnContinuousDeploymentPolicyProps(props)
+  )
+
   /**
    * The identifier of the cotinuous deployment policy.
    */

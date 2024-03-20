@@ -31,6 +31,26 @@ public open class SecretRotationApplication internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.secretsmanager.SecretRotationApplication,
 ) : CdkObject(cdkObject) {
+  public constructor(applicationId: String, semanticVersion: String) :
+      this(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication(applicationId,
+      semanticVersion)
+  )
+
+  public constructor(
+    applicationId: String,
+    semanticVersion: String,
+    options: SecretRotationApplicationOptions,
+  ) : this(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication(applicationId,
+      semanticVersion, options.let(SecretRotationApplicationOptions::unwrap))
+  )
+
+  public constructor(
+    applicationId: String,
+    semanticVersion: String,
+    options: SecretRotationApplicationOptions.Builder.() -> Unit,
+  ) : this(applicationId, semanticVersion, SecretRotationApplicationOptions(options)
+  )
+
   /**
    * Returns the application ARN for the current partition.
    *

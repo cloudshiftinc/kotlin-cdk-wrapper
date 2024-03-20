@@ -80,6 +80,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRestApi internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRestApiProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRestApiProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRestApiProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRestApiProps(props)
+  )
+
   /**
    * The source of the API key for metering requests according to a usage plan.
    */

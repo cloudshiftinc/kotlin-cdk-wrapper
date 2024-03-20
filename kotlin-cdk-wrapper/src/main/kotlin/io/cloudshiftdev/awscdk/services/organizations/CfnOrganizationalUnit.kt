@@ -56,6 +56,22 @@ public open class CfnOrganizationalUnit internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.organizations.CfnOrganizationalUnit,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOrganizationalUnitProps,
+  ) :
+      this(software.amazon.awscdk.services.organizations.CfnOrganizationalUnit(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOrganizationalUnitProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOrganizationalUnitProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOrganizationalUnitProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of this OU.
    *

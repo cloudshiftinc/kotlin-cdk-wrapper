@@ -116,6 +116,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEntity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iottwinmaker.CfnEntity,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEntityProps,
+  ) :
+      this(software.amazon.awscdk.services.iottwinmaker.CfnEntity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEntityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEntityProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEntityProps(props)
+  )
+
   /**
    * The entity ARN.
    */

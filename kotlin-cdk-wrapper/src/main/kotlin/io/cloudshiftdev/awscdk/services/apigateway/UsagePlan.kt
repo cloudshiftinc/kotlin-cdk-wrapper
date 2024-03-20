@@ -35,6 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class UsagePlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.UsagePlan,
 ) : Resource(cdkObject), IUsagePlan {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigateway.UsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UsagePlanProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.UsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UsagePlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UsagePlanProps.Builder.() -> Unit,
+  ) : this(scope, id, UsagePlanProps(props)
+  )
+
   /**
    * Adds an ApiKey.
    *

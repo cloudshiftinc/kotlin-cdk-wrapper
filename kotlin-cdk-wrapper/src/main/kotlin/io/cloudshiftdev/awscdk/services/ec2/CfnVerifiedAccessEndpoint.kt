@@ -75,6 +75,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVerifiedAccessEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVerifiedAccessEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVerifiedAccessEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVerifiedAccessEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVerifiedAccessEndpointProps(props)
+  )
+
   /**
    * The DNS name for users to reach your application.
    */

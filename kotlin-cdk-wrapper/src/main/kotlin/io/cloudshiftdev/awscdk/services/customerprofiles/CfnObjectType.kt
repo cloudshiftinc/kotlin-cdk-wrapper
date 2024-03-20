@@ -68,6 +68,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnObjectType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnObjectType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnObjectTypeProps,
+  ) :
+      this(software.amazon.awscdk.services.customerprofiles.CfnObjectType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnObjectTypeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnObjectTypeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnObjectTypeProps(props)
+  )
+
   /**
    * Indicates whether a profile should be created when data is received if one doesn’t exist for an
    * object of this type.

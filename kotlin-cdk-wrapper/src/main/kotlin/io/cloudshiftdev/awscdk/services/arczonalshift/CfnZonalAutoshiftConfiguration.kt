@@ -62,6 +62,27 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnZonalAutoshiftConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnZonalAutoshiftConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnZonalAutoshiftConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnZonalAutoshiftConfigurationProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

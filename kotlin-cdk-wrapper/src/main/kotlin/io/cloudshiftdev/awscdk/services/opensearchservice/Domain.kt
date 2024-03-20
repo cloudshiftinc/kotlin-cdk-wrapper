@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Domain internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.opensearchservice.Domain,
 ) : Resource(cdkObject), IDomain, IConnectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DomainProps,
+  ) :
+      this(software.amazon.awscdk.services.opensearchservice.Domain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DomainProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DomainProps.Builder.() -> Unit,
+  ) : this(scope, id, DomainProps(props)
+  )
+
   /**
    * Add policy statements to the domain access policy.
    *

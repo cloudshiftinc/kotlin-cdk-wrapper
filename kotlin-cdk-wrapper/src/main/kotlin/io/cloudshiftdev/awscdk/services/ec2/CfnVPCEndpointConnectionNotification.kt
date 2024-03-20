@@ -44,6 +44,22 @@ public open class CfnVPCEndpointConnectionNotification internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEndpointConnectionNotificationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCEndpointConnectionNotificationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEndpointConnectionNotificationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCEndpointConnectionNotificationProps(props)
+  )
+
   /**
    * The ID of the notification.
    */

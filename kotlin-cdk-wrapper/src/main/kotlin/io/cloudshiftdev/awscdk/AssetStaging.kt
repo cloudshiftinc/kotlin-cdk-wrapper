@@ -74,6 +74,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class AssetStaging internal constructor(
   internal override val cdkObject: software.amazon.awscdk.AssetStaging,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AssetStagingProps,
+  ) : this(software.amazon.awscdk.AssetStaging(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AssetStagingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AssetStagingProps.Builder.() -> Unit,
+  ) : this(scope, id, AssetStagingProps(props)
+  )
+
   /**
    * Absolute path to the asset data.
    *

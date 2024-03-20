@@ -42,6 +42,22 @@ public open class CfnStackSetConstraint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackSetConstraintProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStackSetConstraintProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackSetConstraintProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStackSetConstraintProps(props)
+  )
+
   /**
    * The language code.
    */

@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHoursOfOperation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHoursOfOperationProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnHoursOfOperation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHoursOfOperationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHoursOfOperationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHoursOfOperationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the hours of operation.
    */

@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VirtualNode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNode,
 ) : Resource(cdkObject), IVirtualNode {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VirtualNodeProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.VirtualNode(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VirtualNodeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VirtualNodeProps.Builder.() -> Unit,
+  ) : this(scope, id, VirtualNodeProps(props)
+  )
+
   /**
    * Add a Virtual Services that this node is expected to send outbound traffic to.
    *

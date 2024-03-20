@@ -81,6 +81,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRecordSetGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.route53.CfnRecordSetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecordSetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CfnRecordSetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRecordSetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecordSetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRecordSetGroupProps(props)
+  )
+
   /**
    * Specifies a coordinate of the east–west position of a geographic point on the surface of the
    * Earth.

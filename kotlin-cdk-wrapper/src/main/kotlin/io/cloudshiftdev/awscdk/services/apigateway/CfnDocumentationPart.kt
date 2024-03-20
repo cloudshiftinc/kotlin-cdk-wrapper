@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDocumentationPart internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPart,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDocumentationPartProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnDocumentationPart(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDocumentationPartProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDocumentationPartProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDocumentationPartProps(props)
+  )
+
   /**
    * The ID for the documentation part.
    */

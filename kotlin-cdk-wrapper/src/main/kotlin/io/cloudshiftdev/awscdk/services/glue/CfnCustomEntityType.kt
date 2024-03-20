@@ -43,6 +43,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCustomEntityType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnCustomEntityType,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.glue.CfnCustomEntityType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomEntityTypeProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnCustomEntityType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCustomEntityTypeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomEntityTypeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCustomEntityTypeProps(props)
+  )
+
   /**
    *
    */

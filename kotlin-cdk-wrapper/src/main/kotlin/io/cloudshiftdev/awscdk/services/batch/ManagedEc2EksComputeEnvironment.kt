@@ -92,6 +92,22 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment,
 ) : Resource(cdkObject), IManagedComputeEnvironment, IComputeEnvironment {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ManagedEc2EksComputeEnvironmentProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ManagedEc2EksComputeEnvironmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ManagedEc2EksComputeEnvironmentProps.Builder.() -> Unit,
+  ) : this(scope, id, ManagedEc2EksComputeEnvironmentProps(props)
+  )
+
   /**
    * Add an instance class to this compute environment.
    *

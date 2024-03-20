@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSubnetCidrBlock internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetCidrBlockProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSubnetCidrBlockProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetCidrBlockProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSubnetCidrBlockProps(props)
+  )
+
   /**
    * The ID of the association.
    */

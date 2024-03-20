@@ -24,6 +24,14 @@ public open class TimeBasedLinearTrafficRouting internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting,
 ) : TrafficRouting(cdkObject) {
+  public constructor(props: TimeBasedLinearTrafficRoutingProps) :
+      this(software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting(props.let(TimeBasedLinearTrafficRoutingProps::unwrap))
+  )
+
+  public constructor(props: TimeBasedLinearTrafficRoutingProps.Builder.() -> Unit) :
+      this(TimeBasedLinearTrafficRoutingProps(props)
+  )
+
   /**
    * Return a TrafficRoutingConfig of type `TimeBasedLinear`.
    *

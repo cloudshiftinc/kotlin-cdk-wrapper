@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LustreFileSystem internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fsx.LustreFileSystem,
 ) : FileSystemBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LustreFileSystemProps,
+  ) :
+      this(software.amazon.awscdk.services.fsx.LustreFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LustreFileSystemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LustreFileSystemProps.Builder.() -> Unit,
+  ) : this(scope, id, LustreFileSystemProps(props)
+  )
+
   /**
    * The security groups/rules used to allow network connections to the file system.
    */

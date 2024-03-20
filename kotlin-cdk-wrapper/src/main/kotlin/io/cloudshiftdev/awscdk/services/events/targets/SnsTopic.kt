@@ -30,6 +30,19 @@ import software.amazon.awscdk.services.sns.ITopic as AmazonAwscdkServicesSnsITop
 public open class SnsTopic internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.SnsTopic,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic) :
+      this(software.amazon.awscdk.services.events.targets.SnsTopic(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap))
+  )
+
+  public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic, props: SnsTopicProps) :
+      this(software.amazon.awscdk.services.events.targets.SnsTopic(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap),
+      props.let(SnsTopicProps::unwrap))
+  )
+
+  public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic,
+      props: SnsTopicProps.Builder.() -> Unit) : this(topic, SnsTopicProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger this SNS topic as a result from an EventBridge
    * event.

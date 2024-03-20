@@ -95,6 +95,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProtection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.shield.CfnProtection,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProtectionProps,
+  ) :
+      this(software.amazon.awscdk.services.shield.CfnProtection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProtectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProtectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProtectionProps(props)
+  )
+
   /**
    * The automatic application layer DDoS mitigation settings for the protection.
    */

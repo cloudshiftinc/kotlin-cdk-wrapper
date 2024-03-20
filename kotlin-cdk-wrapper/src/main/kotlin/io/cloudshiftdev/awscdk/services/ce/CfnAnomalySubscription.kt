@@ -67,6 +67,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAnomalySubscription internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnomalySubscriptionProps,
+  ) :
+      this(software.amazon.awscdk.services.ce.CfnAnomalySubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAnomalySubscriptionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnomalySubscriptionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAnomalySubscriptionProps(props)
+  )
+
   /**
    * Your unique account identifier.
    */

@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSubscriptionTarget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubscriptionTargetProps,
+  ) :
+      this(software.amazon.awscdk.services.datazone.CfnSubscriptionTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSubscriptionTargetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubscriptionTargetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSubscriptionTargetProps(props)
+  )
+
   /**
    * The asset types included in the subscription target.
    */

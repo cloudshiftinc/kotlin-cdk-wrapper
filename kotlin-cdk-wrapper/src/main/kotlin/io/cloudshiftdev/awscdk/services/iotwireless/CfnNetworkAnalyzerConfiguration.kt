@@ -49,6 +49,22 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkAnalyzerConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkAnalyzerConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkAnalyzerConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkAnalyzerConfigurationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the resource.
    */

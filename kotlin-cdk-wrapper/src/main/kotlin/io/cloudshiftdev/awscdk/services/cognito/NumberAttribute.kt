@@ -37,6 +37,17 @@ import kotlin.Unit
 public open class NumberAttribute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.NumberAttribute,
 ) : CdkObject(cdkObject), ICustomAttribute {
+  public constructor() : this(software.amazon.awscdk.services.cognito.NumberAttribute()
+  )
+
+  public constructor(props: NumberAttributeProps) :
+      this(software.amazon.awscdk.services.cognito.NumberAttribute(props.let(NumberAttributeProps::unwrap))
+  )
+
+  public constructor(props: NumberAttributeProps.Builder.() -> Unit) :
+      this(NumberAttributeProps(props)
+  )
+
   /**
    * Bind this custom attribute type to the values as expected by CloudFormation.
    */

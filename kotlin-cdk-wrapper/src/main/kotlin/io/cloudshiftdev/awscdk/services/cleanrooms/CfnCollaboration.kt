@@ -71,6 +71,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCollaboration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnCollaboration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCollaborationProps,
+  ) :
+      this(software.amazon.awscdk.services.cleanrooms.CfnCollaboration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCollaborationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCollaborationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCollaborationProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of the specified collaboration.
    *

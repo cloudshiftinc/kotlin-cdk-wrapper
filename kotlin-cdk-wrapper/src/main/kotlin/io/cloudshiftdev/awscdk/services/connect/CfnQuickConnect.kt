@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnQuickConnect internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnQuickConnect,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnQuickConnectProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnQuickConnect(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnQuickConnectProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnQuickConnectProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnQuickConnectProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the quick connect.
    */

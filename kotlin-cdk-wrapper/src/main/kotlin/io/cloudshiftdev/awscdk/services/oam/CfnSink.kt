@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSink internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.oam.CfnSink,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSinkProps,
+  ) :
+      this(software.amazon.awscdk.services.oam.CfnSink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSinkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSinkProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSinkProps(props)
+  )
+
   /**
    * The ARN of the sink.
    *

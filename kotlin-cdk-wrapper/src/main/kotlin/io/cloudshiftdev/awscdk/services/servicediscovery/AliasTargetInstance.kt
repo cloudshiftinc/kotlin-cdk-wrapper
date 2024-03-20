@@ -37,6 +37,22 @@ public open class AliasTargetInstance internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicediscovery.AliasTargetInstance,
 ) : InstanceBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AliasTargetInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.servicediscovery.AliasTargetInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AliasTargetInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AliasTargetInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, AliasTargetInstanceProps(props)
+  )
+
   /**
    * The Route53 DNS name of the alias target.
    */

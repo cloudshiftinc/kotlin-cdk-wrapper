@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMemberInvitation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMemberInvitationProps,
+  ) :
+      this(software.amazon.awscdk.services.detective.CfnMemberInvitation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMemberInvitationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMemberInvitationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMemberInvitationProps(props)
+  )
+
   /**
    * Whether to send an invitation email to the member account.
    */

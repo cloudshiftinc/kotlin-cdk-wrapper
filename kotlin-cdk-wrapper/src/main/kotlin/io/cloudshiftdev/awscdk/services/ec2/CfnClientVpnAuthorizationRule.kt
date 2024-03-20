@@ -44,6 +44,22 @@ public open class CfnClientVpnAuthorizationRule internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClientVpnAuthorizationRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClientVpnAuthorizationRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClientVpnAuthorizationRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClientVpnAuthorizationRuleProps(props)
+  )
+
   /**
    * The ID of the group to grant access to, for example, the Active Directory group or identity
    * provider (IdP) group.

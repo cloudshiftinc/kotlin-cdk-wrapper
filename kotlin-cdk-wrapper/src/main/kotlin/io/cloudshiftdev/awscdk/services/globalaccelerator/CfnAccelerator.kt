@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccelerator internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnAccelerator,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAcceleratorProps,
+  ) :
+      this(software.amazon.awscdk.services.globalaccelerator.CfnAccelerator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAcceleratorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAcceleratorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAcceleratorProps(props)
+  )
+
   /**
    * The ARN of the accelerator, such as
    * `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh` .

@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApiMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiMapping,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiMappingProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.CfnApiMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApiMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApiMappingProps(props)
+  )
+
   /**
    * The API identifier.
    */

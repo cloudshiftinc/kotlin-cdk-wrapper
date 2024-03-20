@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LogRetention internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.LogRetention,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LogRetentionProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.LogRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LogRetentionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LogRetentionProps.Builder.() -> Unit,
+  ) : this(scope, id, LogRetentionProps(props)
+  )
+
   /**
    * The ARN of the LogGroup.
    */

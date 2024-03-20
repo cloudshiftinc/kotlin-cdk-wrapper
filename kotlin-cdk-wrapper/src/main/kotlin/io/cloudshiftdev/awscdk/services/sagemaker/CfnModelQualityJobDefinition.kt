@@ -142,6 +142,22 @@ public open class CfnModelQualityJobDefinition internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelQualityJobDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnModelQualityJobDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModelQualityJobDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnModelQualityJobDefinitionProps(props)
+  )
+
   /**
    * The time when the job definition was created.
    */

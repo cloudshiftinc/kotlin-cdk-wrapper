@@ -39,6 +39,22 @@ public open class CfnSubnetRouteTableAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetRouteTableAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSubnetRouteTableAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetRouteTableAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSubnetRouteTableAssociationProps(props)
+  )
+
   /**
    * The ID of the subnet route table association.
    */

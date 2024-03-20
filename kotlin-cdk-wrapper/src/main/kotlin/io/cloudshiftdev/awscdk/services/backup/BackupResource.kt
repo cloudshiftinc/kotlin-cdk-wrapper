@@ -55,6 +55,31 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BackupResource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backup.BackupResource,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.backup.BackupResource()
+  )
+
+  public constructor(resource: String) :
+      this(software.amazon.awscdk.services.backup.BackupResource(resource)
+  )
+
+  public constructor(resource: String, tagCondition: TagCondition) :
+      this(software.amazon.awscdk.services.backup.BackupResource(resource,
+      tagCondition.let(TagCondition::unwrap))
+  )
+
+  public constructor(resource: String, tagCondition: TagCondition.Builder.() -> Unit) :
+      this(resource, TagCondition(tagCondition)
+  )
+
+  public constructor(
+    resource: String,
+    tagCondition: TagCondition,
+    construct: CloudshiftdevConstructsConstruct,
+  ) : this(software.amazon.awscdk.services.backup.BackupResource(resource,
+      tagCondition.let(TagCondition::unwrap),
+      construct.let(CloudshiftdevConstructsConstruct::unwrap))
+  )
+
   /**
    * A construct.
    */

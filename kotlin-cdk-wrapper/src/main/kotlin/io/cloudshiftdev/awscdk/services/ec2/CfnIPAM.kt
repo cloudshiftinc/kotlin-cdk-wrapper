@@ -58,6 +58,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPAM internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAM,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAM(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAM(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPAMProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPAMProps(props)
+  )
+
   /**
    * The ARN of the IPAM.
    */

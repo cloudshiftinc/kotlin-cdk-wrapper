@@ -37,6 +37,14 @@ public open class LambdaInvokeAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction,
 ) : Action(cdkObject) {
+  public constructor(props: LambdaInvokeActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction(props.let(LambdaInvokeActionProps::unwrap))
+  )
+
+  public constructor(props: LambdaInvokeActionProps.Builder.() -> Unit) :
+      this(LambdaInvokeActionProps(props)
+  )
+
   /**
    * Reference a CodePipeline variable defined by the Lambda function this action points to.
    *

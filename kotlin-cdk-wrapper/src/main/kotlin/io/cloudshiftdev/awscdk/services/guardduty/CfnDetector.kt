@@ -74,6 +74,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDetector internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDetectorProps,
+  ) :
+      this(software.amazon.awscdk.services.guardduty.CfnDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDetectorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDetectorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDetectorProps(props)
+  )
+
   /**
    *
    */

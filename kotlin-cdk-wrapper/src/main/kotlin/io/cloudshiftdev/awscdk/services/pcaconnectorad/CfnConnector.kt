@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConnector internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnConnector,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectorProps,
+  ) :
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnConnector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConnectorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConnectorProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) that was returned when you called
    * [CreateConnector](https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_CreateConnector.html)

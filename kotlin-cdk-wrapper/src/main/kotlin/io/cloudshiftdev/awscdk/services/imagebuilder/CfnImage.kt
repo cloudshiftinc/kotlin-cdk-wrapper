@@ -73,6 +73,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnImageProps,
+  ) :
+      this(software.amazon.awscdk.services.imagebuilder.CfnImage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnImageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnImageProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnImageProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of the image.
    *

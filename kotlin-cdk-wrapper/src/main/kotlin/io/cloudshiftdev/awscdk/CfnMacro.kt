@@ -36,6 +36,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMacro internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnMacro,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMacroProps,
+  ) : this(software.amazon.awscdk.CfnMacro(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
+      props.let(CfnMacroProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMacroProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMacroProps(props)
+  )
+
   /**
    *
    */

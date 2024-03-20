@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserPoolDomain internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolDomain,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolDomainProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolDomainProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolDomainProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolDomainProps(props)
+  )
+
   /**
    * The Amazon CloudFront endpoint that you use as the target of the alias that you set up with
    * your Domain Name Service (DNS) provider.

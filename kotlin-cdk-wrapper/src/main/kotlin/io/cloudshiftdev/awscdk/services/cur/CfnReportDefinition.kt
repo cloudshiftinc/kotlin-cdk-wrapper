@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReportDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cur.CfnReportDefinition,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReportDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.cur.CfnReportDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReportDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReportDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReportDefinitionProps(props)
+  )
+
   /**
    * A list of manifests that you want AWS to create for this report.
    */

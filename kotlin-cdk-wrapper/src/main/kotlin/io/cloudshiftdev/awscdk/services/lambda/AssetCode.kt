@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -48,6 +49,17 @@ import kotlin.jvm.JvmName
 public open class AssetCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.AssetCode,
 ) : Code(cdkObject) {
+  public constructor(path: String) : this(software.amazon.awscdk.services.lambda.AssetCode(path)
+  )
+
+  public constructor(path: String, options: AssetOptions) :
+      this(software.amazon.awscdk.services.lambda.AssetCode(path, options.let(AssetOptions::unwrap))
+  )
+
+  public constructor(path: String, options: AssetOptions.Builder.() -> Unit) : this(path,
+      AssetOptions(options)
+  )
+
   /**
    * Called when the lambda or layer is initialized to allow this object to bind to the stack, add
    * resources and have fun.

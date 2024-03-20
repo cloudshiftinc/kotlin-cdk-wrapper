@@ -59,6 +59,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEnvironmentTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.proton.CfnEnvironmentTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.proton.CfnEnvironmentTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnvironmentTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnvironmentTemplateProps(props)
+  )
+
   /**
    * Returns the ARN of the environment template.
    */

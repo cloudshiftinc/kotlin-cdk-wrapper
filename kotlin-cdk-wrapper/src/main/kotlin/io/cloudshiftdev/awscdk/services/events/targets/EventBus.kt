@@ -30,6 +30,19 @@ import software.amazon.awscdk.services.events.IEventBus as AmazonAwscdkServicesE
 public open class EventBus internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.EventBus,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(eventBus: CloudshiftdevAwscdkServicesEventsIEventBus) :
+      this(software.amazon.awscdk.services.events.targets.EventBus(eventBus.let(CloudshiftdevAwscdkServicesEventsIEventBus::unwrap))
+  )
+
+  public constructor(eventBus: CloudshiftdevAwscdkServicesEventsIEventBus, props: EventBusProps) :
+      this(software.amazon.awscdk.services.events.targets.EventBus(eventBus.let(CloudshiftdevAwscdkServicesEventsIEventBus::unwrap),
+      props.let(EventBusProps::unwrap))
+  )
+
+  public constructor(eventBus: CloudshiftdevAwscdkServicesEventsIEventBus,
+      props: EventBusProps.Builder.() -> Unit) : this(eventBus, EventBusProps(props)
+  )
+
   /**
    * Returns the rule target specification.
    *

@@ -129,6 +129,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnDataset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatasetProps,
+  ) :
+      this(software.amazon.awscdk.services.databrew.CfnDataset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDatasetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatasetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDatasetProps(props)
+  )
+
   /**
    * The file format of a dataset that is created from an Amazon S3 file or folder.
    */

@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEmailChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEmailChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnEmailChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEmailChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEmailChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEmailChannelProps(props)
+  )
+
   /**
    * The unique identifier for the Amazon Pinpoint application that you're specifying the email
    * channel for.

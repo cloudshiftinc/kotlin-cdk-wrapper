@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnClientVpnRoute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnRoute,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClientVpnRouteProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnClientVpnRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClientVpnRouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClientVpnRouteProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClientVpnRouteProps(props)
+  )
+
   /**
    *
    */

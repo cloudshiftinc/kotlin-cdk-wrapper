@@ -36,6 +36,13 @@ import kotlin.collections.List
 public open class ResultWriter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.ResultWriter,
 ) : CdkObject(cdkObject) {
+  public constructor(props: ResultWriterProps) :
+      this(software.amazon.awscdk.services.stepfunctions.ResultWriter(props.let(ResultWriterProps::unwrap))
+  )
+
+  public constructor(props: ResultWriterProps.Builder.() -> Unit) : this(ResultWriterProps(props)
+  )
+
   /**
    * S3 Bucket in which to save Map Run results.
    */

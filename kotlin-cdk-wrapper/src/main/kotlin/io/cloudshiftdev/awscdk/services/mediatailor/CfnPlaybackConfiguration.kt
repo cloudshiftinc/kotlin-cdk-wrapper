@@ -86,6 +86,22 @@ public open class CfnPlaybackConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlaybackConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPlaybackConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlaybackConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPlaybackConfigurationProps(props)
+  )
+
   /**
    * The URL for the ad decision server (ADS).
    */

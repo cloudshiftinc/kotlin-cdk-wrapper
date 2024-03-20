@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventSubscription internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnEventSubscription,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventSubscriptionProps,
+  ) :
+      this(software.amazon.awscdk.services.redshift.CfnEventSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventSubscriptionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventSubscriptionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventSubscriptionProps(props)
+  )
+
   /**
    * The name of the Amazon Redshift event notification subscription.
    */

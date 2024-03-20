@@ -56,6 +56,22 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSiteToSiteVpnAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSiteToSiteVpnAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSiteToSiteVpnAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSiteToSiteVpnAttachmentProps(props)
+  )
+
   /**
    * The ID of the site-to-site VPN attachment.
    */

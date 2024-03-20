@@ -74,6 +74,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.forecast.CfnDataset,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatasetProps,
+  ) :
+      this(software.amazon.awscdk.services.forecast.CfnDataset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDatasetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDatasetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDatasetProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the dataset.
    */

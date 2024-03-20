@@ -29,6 +29,16 @@ import kotlin.jvm.JvmName
 public open class Wave internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.Wave,
 ) : CdkObject(cdkObject) {
+  public constructor(id: String) : this(software.amazon.awscdk.pipelines.Wave(id)
+  )
+
+  public constructor(id: String, props: WaveProps) : this(software.amazon.awscdk.pipelines.Wave(id,
+      props.let(WaveProps::unwrap))
+  )
+
+  public constructor(id: String, props: WaveProps.Builder.() -> Unit) : this(id, WaveProps(props)
+  )
+
   /**
    * Add an additional step to run after all of the stages in this wave.
    *

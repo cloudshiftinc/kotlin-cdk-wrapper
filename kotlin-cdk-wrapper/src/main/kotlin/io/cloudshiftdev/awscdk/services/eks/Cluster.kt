@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Cluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.Cluster,
 ) : Resource(cdkObject), ICluster {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.Cluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, ClusterProps(props)
+  )
+
   /**
    * Add nodes to this EKS cluster.
    *

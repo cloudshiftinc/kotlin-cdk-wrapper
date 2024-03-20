@@ -34,6 +34,22 @@ public open class CfnStackFleetAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appstream.CfnStackFleetAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackFleetAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.appstream.CfnStackFleetAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStackFleetAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStackFleetAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStackFleetAssociationProps(props)
+  )
+
   /**
    *
    */

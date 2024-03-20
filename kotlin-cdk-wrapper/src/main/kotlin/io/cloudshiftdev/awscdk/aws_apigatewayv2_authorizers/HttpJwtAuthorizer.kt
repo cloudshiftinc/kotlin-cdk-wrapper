@@ -37,6 +37,21 @@ public open class HttpJwtAuthorizer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+  public constructor(
+    id: String,
+    jwtIssuer: String,
+    props: HttpJwtAuthorizerProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer(id, jwtIssuer,
+      props.let(HttpJwtAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    jwtIssuer: String,
+    props: HttpJwtAuthorizerProps.Builder.() -> Unit,
+  ) : this(id, jwtIssuer, HttpJwtAuthorizerProps(props)
+  )
+
   /**
    * Bind this authorizer to a specified Http route.
    *

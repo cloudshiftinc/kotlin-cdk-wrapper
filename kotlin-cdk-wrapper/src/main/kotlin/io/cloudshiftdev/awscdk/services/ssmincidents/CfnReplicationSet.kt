@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReplicationSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationSetProps,
+  ) :
+      this(software.amazon.awscdk.services.ssmincidents.CfnReplicationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReplicationSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicationSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReplicationSetProps(props)
+  )
+
   /**
    * The ARN of the ReplicationSet.
    */

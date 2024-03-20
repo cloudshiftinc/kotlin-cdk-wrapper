@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Listener internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.globalaccelerator.Listener,
 ) : Resource(cdkObject), IListener {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ListenerProps,
+  ) :
+      this(software.amazon.awscdk.services.globalaccelerator.Listener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ListenerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ListenerProps.Builder.() -> Unit,
+  ) : this(scope, id, ListenerProps(props)
+  )
+
   /**
    * Add a new endpoint group to this listener.
    *

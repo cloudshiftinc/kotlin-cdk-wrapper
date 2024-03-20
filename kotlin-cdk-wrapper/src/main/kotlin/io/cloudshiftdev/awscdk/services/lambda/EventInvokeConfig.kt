@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EventInvokeConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfig,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EventInvokeConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.EventInvokeConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EventInvokeConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EventInvokeConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, EventInvokeConfigProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.lambda.EventInvokeConfig].
    */

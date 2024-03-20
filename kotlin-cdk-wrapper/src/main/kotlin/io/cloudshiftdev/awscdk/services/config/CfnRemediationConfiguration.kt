@@ -57,6 +57,22 @@ public open class CfnRemediationConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.config.CfnRemediationConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRemediationConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CfnRemediationConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRemediationConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRemediationConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRemediationConfigurationProps(props)
+  )
+
   /**
    *
    */

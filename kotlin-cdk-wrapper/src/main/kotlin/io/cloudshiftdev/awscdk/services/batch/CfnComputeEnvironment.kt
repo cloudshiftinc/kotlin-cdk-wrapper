@@ -193,6 +193,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnComputeEnvironment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnComputeEnvironmentProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.CfnComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnComputeEnvironmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnComputeEnvironmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnComputeEnvironmentProps(props)
+  )
+
   /**
    * Returns the compute environment ARN, such as `batch: *us-east-1* : *111122223333*
    * :compute-environment/ *ComputeEnvironmentName*` .

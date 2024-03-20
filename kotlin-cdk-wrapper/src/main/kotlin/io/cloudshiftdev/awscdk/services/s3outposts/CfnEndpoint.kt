@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.s3outposts.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEndpointProps(props)
+  )
+
   /**
    * The container for the type of connectivity used to access the Amazon S3 on Outposts endpoint.
    */

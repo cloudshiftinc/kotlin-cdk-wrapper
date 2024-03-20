@@ -70,6 +70,14 @@ public open class CodeBuildAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction,
 ) : Action(cdkObject) {
+  public constructor(props: CodeBuildActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction(props.let(CodeBuildActionProps::unwrap))
+  )
+
+  public constructor(props: CodeBuildActionProps.Builder.() -> Unit) :
+      this(CodeBuildActionProps(props)
+  )
+
   /**
    * Reference a CodePipeline variable defined by the CodeBuild project this action points to.
    *

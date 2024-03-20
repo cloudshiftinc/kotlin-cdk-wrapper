@@ -52,6 +52,22 @@ public open class CfnAPNSVoipSandboxChannel internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAPNSVoipSandboxChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAPNSVoipSandboxChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAPNSVoipSandboxChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAPNSVoipSandboxChannelProps(props)
+  )
+
   /**
    * The unique identifier for the application that the APNs VoIP sandbox channel applies to.
    */

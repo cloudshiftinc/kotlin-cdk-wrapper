@@ -80,6 +80,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNetworkInsightsPath internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInsightsPathProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkInsightsPathProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInsightsPathProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkInsightsPathProps(props)
+  )
+
   /**
    * The time stamp when the path was created.
    */

@@ -112,6 +112,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScalingPlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScalingPlanProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScalingPlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScalingPlanProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScalingPlanProps(props)
+  )
+
   /**
    * A CloudFormation stack or a set of tags.
    */

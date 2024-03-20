@@ -89,6 +89,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLifecyclePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLifecyclePolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLifecyclePolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLifecyclePolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLifecyclePolicyProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the lifecycle policy resource.
    */

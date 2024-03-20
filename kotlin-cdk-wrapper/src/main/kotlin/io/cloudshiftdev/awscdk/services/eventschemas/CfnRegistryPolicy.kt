@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRegistryPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRegistryPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRegistryPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRegistryPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRegistryPolicyProps(props)
+  )
+
   /**
    * The ID of the policy.
    */

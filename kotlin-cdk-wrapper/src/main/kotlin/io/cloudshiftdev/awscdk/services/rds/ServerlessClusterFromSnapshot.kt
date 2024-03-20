@@ -40,6 +40,22 @@ public open class ServerlessClusterFromSnapshot internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshot,
 ) : Resource(cdkObject), IServerlessCluster {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerlessClusterFromSnapshotProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshot(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ServerlessClusterFromSnapshotProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerlessClusterFromSnapshotProps.Builder.() -> Unit,
+  ) : this(scope, id, ServerlessClusterFromSnapshotProps(props)
+  )
+
   /**
    * Renders the secret attachment target specifications.
    */

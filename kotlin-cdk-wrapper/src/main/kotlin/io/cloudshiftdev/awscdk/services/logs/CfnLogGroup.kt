@@ -56,6 +56,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLogGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CfnLogGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.logs.CfnLogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.CfnLogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLogGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLogGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLogGroupProps(props)
+  )
+
   /**
    * The ARN of the log group, such as
    * `arn:aws:logs:us-west-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*`.

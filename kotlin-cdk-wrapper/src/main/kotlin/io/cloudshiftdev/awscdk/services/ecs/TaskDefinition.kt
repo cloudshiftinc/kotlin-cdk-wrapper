@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class TaskDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.TaskDefinition,
 ) : Resource(cdkObject), ITaskDefinition {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TaskDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.TaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TaskDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TaskDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, TaskDefinitionProps(props)
+  )
+
   /**
    * Adds a new container to the task definition.
    *

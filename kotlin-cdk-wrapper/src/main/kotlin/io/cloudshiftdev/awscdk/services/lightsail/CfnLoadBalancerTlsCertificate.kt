@@ -43,6 +43,22 @@ public open class CfnLoadBalancerTlsCertificate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoadBalancerTlsCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLoadBalancerTlsCertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoadBalancerTlsCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLoadBalancerTlsCertificateProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the SSL/TLS certificate.
    */

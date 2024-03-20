@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDevEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnDevEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDevEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnDevEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDevEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDevEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDevEndpointProps(props)
+  )
+
   /**
    * A map of arguments used to configure the `DevEndpoint` .
    */

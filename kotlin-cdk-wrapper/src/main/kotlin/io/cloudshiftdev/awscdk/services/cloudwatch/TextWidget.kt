@@ -24,6 +24,13 @@ import kotlin.collections.List
 public open class TextWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.TextWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: TextWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.TextWidget(props.let(TextWidgetProps::unwrap))
+  )
+
+  public constructor(props: TextWidgetProps.Builder.() -> Unit) : this(TextWidgetProps(props)
+  )
+
   /**
    * Place the widget at a given position.
    *

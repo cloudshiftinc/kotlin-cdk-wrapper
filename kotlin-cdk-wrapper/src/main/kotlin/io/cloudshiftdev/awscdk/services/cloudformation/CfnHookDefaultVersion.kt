@@ -37,6 +37,27 @@ public open class CfnHookDefaultVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHookDefaultVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHookDefaultVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHookDefaultVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHookDefaultVersionProps(props)
+  )
+
   /**
    * The Amazon Resource Number (ARN) of the activated extension, in this account and Region.
    */

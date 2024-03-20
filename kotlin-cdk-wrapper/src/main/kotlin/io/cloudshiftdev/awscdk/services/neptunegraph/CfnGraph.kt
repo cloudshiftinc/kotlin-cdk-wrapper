@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGraph internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.neptunegraph.CfnGraph,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGraphProps,
+  ) :
+      this(software.amazon.awscdk.services.neptunegraph.CfnGraph(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGraphProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGraphProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGraphProps(props)
+  )
+
   /**
    * The connection endpoint for the graph.
    *

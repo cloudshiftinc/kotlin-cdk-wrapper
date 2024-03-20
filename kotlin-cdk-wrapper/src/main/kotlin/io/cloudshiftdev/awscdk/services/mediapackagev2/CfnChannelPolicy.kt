@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnChannelPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannelPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnChannelPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.mediapackagev2.CfnChannelPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnChannelPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnChannelPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnChannelPolicyProps(props)
+  )
+
   /**
    * The name of the channel group associated with the channel policy.
    */

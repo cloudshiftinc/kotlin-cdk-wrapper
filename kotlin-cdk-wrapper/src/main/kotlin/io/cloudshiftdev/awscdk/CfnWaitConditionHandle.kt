@@ -50,6 +50,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWaitConditionHandle internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnWaitConditionHandle,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.CfnWaitConditionHandle(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWaitConditionHandleProps,
+  ) :
+      this(software.amazon.awscdk.CfnWaitConditionHandle(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWaitConditionHandleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWaitConditionHandleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWaitConditionHandleProps(props)
+  )
+
   /**
    * A unique identifier for the resource.
    */

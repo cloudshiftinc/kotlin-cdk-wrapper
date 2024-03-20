@@ -26,6 +26,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class TarballImageAsset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.assets.TarballImageAsset,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TarballImageAssetProps,
+  ) :
+      this(software.amazon.awscdk.services.ecr.assets.TarballImageAsset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TarballImageAssetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TarballImageAssetProps.Builder.() -> Unit,
+  ) : this(scope, id, TarballImageAssetProps(props)
+  )
+
   /**
    * A hash of this asset, which is available at construction time.
    *

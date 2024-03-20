@@ -34,6 +34,19 @@ public open class SqsEventSource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.SqsEventSource,
 ) : CdkObject(cdkObject), IEventSource {
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
+      this(software.amazon.awscdk.services.lambda.eventsources.SqsEventSource(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
+  )
+
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue, props: SqsEventSourceProps) :
+      this(software.amazon.awscdk.services.lambda.eventsources.SqsEventSource(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap),
+      props.let(SqsEventSourceProps::unwrap))
+  )
+
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue,
+      props: SqsEventSourceProps.Builder.() -> Unit) : this(queue, SqsEventSourceProps(props)
+  )
+
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
    *

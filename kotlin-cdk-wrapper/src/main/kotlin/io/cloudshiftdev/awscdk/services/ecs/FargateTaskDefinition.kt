@@ -43,6 +43,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class FargateTaskDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinition,
 ) : TaskDefinition(cdkObject), IFargateTaskDefinition {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.FargateTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FargateTaskDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.FargateTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FargateTaskDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FargateTaskDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, FargateTaskDefinitionProps(props)
+  )
+
   /**
    * The amount (in GiB) of ephemeral storage to be allocated to the task.
    */

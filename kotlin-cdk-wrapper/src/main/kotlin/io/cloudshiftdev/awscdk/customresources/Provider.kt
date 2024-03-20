@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Provider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.customresources.Provider,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProviderProps,
+  ) :
+      this(software.amazon.awscdk.customresources.Provider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, ProviderProps(props)
+  )
+
   /**
    * The user-defined AWS Lambda function which is invoked asynchronously in order to determine if
    * the operation is complete.

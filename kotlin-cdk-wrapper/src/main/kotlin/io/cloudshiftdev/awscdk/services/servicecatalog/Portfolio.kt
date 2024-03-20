@@ -29,6 +29,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Portfolio internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.servicecatalog.Portfolio,
 ) : Resource(cdkObject), IPortfolio {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PortfolioProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.Portfolio(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PortfolioProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PortfolioProps.Builder.() -> Unit,
+  ) : this(scope, id, PortfolioProps(props)
+  )
+
   /**
    * Associate portfolio with the given product.
    *

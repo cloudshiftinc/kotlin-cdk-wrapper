@@ -79,6 +79,22 @@ public open class CfnResourceSet internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceSetProps,
+  ) :
+      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourceSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourceSetProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the resource set.
    */

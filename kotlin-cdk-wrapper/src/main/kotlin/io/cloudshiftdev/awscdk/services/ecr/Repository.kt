@@ -36,6 +36,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Repository internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.Repository,
 ) : RepositoryBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecr.Repository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RepositoryProps,
+  ) :
+      this(software.amazon.awscdk.services.ecr.Repository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RepositoryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RepositoryProps.Builder.() -> Unit,
+  ) : this(scope, id, RepositoryProps(props)
+  )
+
   /**
    * Add a life cycle rule to the repository.
    *

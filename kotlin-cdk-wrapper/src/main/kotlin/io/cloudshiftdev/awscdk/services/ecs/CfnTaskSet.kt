@@ -82,6 +82,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTaskSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTaskSetProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.CfnTaskSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTaskSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTaskSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTaskSetProps(props)
+  )
+
   /**
    * The ID of the task set.
    */

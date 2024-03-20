@@ -97,6 +97,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHostedZone internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.route53.CfnHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHostedZoneProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CfnHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHostedZoneProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHostedZoneProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHostedZoneProps(props)
+  )
+
   /**
    * The ID that Amazon Route 53 assigned to the hosted zone when you created it.
    */

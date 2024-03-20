@@ -51,6 +51,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Cluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.Cluster,
 ) : Resource(cdkObject), ICluster {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.Cluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.Cluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, ClusterProps(props)
+  )
+
   /**
    * This method adds an Auto Scaling Group Capacity Provider to a cluster.
    *

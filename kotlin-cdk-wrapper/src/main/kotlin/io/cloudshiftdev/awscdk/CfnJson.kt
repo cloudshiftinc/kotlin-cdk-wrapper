@@ -40,6 +40,21 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnJson internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnJson,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IResolvable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJsonProps,
+  ) : this(software.amazon.awscdk.CfnJson(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
+      props.let(CfnJsonProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJsonProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnJsonProps(props)
+  )
+
   /**
    * The creation stack of this resolvable which will be appended to errors thrown during
    * resolution.

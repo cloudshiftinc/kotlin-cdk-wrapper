@@ -58,6 +58,22 @@ public open class CfnNotificationRule internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNotificationRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNotificationRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNotificationRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNotificationRuleProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the notification rule.
    */

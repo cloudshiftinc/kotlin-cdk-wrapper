@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCapacityProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.CfnCapacityProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapacityProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.CfnCapacityProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCapacityProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapacityProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCapacityProviderProps(props)
+  )
+
   /**
    * The Auto Scaling group settings for the capacity provider.
    */

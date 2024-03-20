@@ -53,6 +53,15 @@ import kotlin.collections.Map
 public open class App internal constructor(
   internal override val cdkObject: software.amazon.awscdk.App,
 ) : Stage(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.App()
+  )
+
+  public constructor(props: AppProps) : this(software.amazon.awscdk.App(props.let(AppProps::unwrap))
+  )
+
+  public constructor(props: AppProps.Builder.() -> Unit) : this(AppProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.App].
    */

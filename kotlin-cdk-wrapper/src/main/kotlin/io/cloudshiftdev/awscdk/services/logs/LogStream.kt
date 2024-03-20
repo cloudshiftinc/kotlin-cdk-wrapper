@@ -32,6 +32,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LogStream internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.LogStream,
 ) : Resource(cdkObject), ILogStream {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LogStreamProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.LogStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LogStreamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LogStreamProps.Builder.() -> Unit,
+  ) : this(scope, id, LogStreamProps(props)
+  )
+
   /**
    * The name of this log stream.
    */

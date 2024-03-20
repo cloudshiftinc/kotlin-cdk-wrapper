@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.waf.CfnIPSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPSetProps,
+  ) :
+      this(software.amazon.awscdk.services.waf.CfnIPSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPSetProps(props)
+  )
+
   /**
    *
    */

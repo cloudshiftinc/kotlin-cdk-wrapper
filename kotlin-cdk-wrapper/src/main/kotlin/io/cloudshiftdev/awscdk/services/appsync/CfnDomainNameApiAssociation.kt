@@ -34,6 +34,22 @@ public open class CfnDomainNameApiAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainNameApiAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDomainNameApiAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainNameApiAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDomainNameApiAssociationProps(props)
+  )
+
   /**
    * The API ID.
    */

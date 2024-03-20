@@ -67,6 +67,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventBusPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.CfnEventBusPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventBusPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.events.CfnEventBusPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventBusPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventBusPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventBusPolicyProps(props)
+  )
+
   /**
    * The action that you are enabling the other account to perform.
    */

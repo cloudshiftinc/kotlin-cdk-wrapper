@@ -42,6 +42,22 @@ public open class CfnIdentityProvider internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIdentityProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIdentityProviderProps(props)
+  )
+
   /**
    * The ARN of the identity provider.
    */

@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFlowTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFlowTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFlowTemplateProps(props)
+  )
+
   /**
    *
    */

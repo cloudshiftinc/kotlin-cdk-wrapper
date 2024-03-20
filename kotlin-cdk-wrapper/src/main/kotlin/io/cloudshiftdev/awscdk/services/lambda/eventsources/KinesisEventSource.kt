@@ -37,6 +37,17 @@ public open class KinesisEventSource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource,
 ) : StreamEventSource(cdkObject) {
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
+      props: KinesisEventSourceProps) :
+      this(software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap),
+      props.let(KinesisEventSourceProps::unwrap))
+  )
+
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
+      props: KinesisEventSourceProps.Builder.() -> Unit) : this(stream,
+      KinesisEventSourceProps(props)
+  )
+
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
    *

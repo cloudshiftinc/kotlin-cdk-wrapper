@@ -188,6 +188,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAssetModel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAssetModel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssetModelProps,
+  ) :
+      this(software.amazon.awscdk.services.iotsitewise.CfnAssetModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAssetModelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssetModelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAssetModelProps(props)
+  )
+
   /**
    * The composite asset models that are part of this asset model.
    */

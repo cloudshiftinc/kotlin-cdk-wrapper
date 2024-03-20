@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ContainerDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ContainerDefinition,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ContainerDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.ContainerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ContainerDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ContainerDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, ContainerDefinitionProps(props)
+  )
+
   /**
    * This method adds one or more container dependencies to the container.
    *

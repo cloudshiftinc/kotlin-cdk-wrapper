@@ -85,6 +85,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserPoolClient internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolClient,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolClientProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolClient(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserPoolClientProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserPoolClientProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserPoolClientProps(props)
+  )
+
   /**
    * The access token time limit.
    */

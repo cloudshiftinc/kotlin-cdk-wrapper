@@ -44,6 +44,14 @@ import kotlin.collections.List
 public open class SplunkLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.SplunkLogDriver,
 ) : LogDriver(cdkObject) {
+  public constructor(props: SplunkLogDriverProps) :
+      this(software.amazon.awscdk.services.ecs.SplunkLogDriver(props.let(SplunkLogDriverProps::unwrap))
+  )
+
+  public constructor(props: SplunkLogDriverProps.Builder.() -> Unit) :
+      this(SplunkLogDriverProps(props)
+  )
+
   /**
    * Called when the log driver is configured on a container.
    *

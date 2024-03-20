@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPAMScope internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMScope,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMScopeProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAMScope(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPAMScopeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMScopeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPAMScopeProps(props)
+  )
+
   /**
    * The ARN of the scope.
    */

@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class TopicPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sns.TopicPolicy,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TopicPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.sns.TopicPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TopicPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TopicPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, TopicPolicyProps(props)
+  )
+
   /**
    * The IAM policy document for this policy.
    */

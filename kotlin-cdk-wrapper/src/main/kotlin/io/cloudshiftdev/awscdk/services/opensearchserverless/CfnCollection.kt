@@ -59,6 +59,22 @@ public open class CfnCollection internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.opensearchserverless.CfnCollection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCollectionProps,
+  ) :
+      this(software.amazon.awscdk.services.opensearchserverless.CfnCollection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCollectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCollectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCollectionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the collection.
    *

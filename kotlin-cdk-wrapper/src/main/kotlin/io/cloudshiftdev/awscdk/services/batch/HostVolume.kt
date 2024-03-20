@@ -33,6 +33,14 @@ import kotlin.Unit
 public open class HostVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.HostVolume,
 ) : EcsVolume(cdkObject) {
+  public constructor(options: HostVolumeOptions) :
+      this(software.amazon.awscdk.services.batch.HostVolume(options.let(HostVolumeOptions::unwrap))
+  )
+
+  public constructor(options: HostVolumeOptions.Builder.() -> Unit) :
+      this(HostVolumeOptions(options)
+  )
+
   /**
    * The path on the host machine this container will have access to.
    */

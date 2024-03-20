@@ -76,6 +76,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.ssm.CfnAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAssociationProps(props)
+  )
+
   /**
    * By default, when you create a new association, the system runs it immediately after it is
    * created and then according to the schedule you specified.

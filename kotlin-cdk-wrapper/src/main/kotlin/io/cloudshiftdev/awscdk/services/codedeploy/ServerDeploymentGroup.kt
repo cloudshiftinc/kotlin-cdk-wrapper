@@ -37,6 +37,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ServerDeploymentGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup,
 ) : Resource(cdkObject), IServerDeploymentGroup {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerDeploymentGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ServerDeploymentGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerDeploymentGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, ServerDeploymentGroupProps(props)
+  )
+
   /**
    * Associates an additional alarm with this Deployment Group.
    *

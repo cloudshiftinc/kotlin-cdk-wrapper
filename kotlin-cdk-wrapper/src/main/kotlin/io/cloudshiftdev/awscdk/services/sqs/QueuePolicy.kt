@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class QueuePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sqs.QueuePolicy,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: QueuePolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.sqs.QueuePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(QueuePolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: QueuePolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, QueuePolicyProps(props)
+  )
+
   /**
    * The IAM policy document for this policy.
    */

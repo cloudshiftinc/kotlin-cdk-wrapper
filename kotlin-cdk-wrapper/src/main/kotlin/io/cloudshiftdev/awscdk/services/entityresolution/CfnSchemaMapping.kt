@@ -56,6 +56,22 @@ public open class CfnSchemaMapping internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.entityresolution.CfnSchemaMapping,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchemaMappingProps,
+  ) :
+      this(software.amazon.awscdk.services.entityresolution.CfnSchemaMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSchemaMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchemaMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSchemaMappingProps(props)
+  )
+
   /**
    * The time of this SchemaMapping got created.
    */

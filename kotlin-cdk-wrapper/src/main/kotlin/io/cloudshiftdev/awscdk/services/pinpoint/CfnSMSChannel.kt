@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSMSChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSMSChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSMSChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnSMSChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSMSChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSMSChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSMSChannelProps(props)
+  )
+
   /**
    * The unique identifier for the Amazon Pinpoint application that the SMS channel applies to.
    */

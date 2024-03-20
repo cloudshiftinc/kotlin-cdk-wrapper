@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStorageVirtualMachine internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStorageVirtualMachineProps,
+  ) :
+      this(software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStorageVirtualMachineProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStorageVirtualMachineProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStorageVirtualMachineProps(props)
+  )
+
   /**
    * Describes the Microsoft Active Directory configuration to which the SVM is joined, if
    * applicable.

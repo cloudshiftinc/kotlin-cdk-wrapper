@@ -91,6 +91,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSecret internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.secretsmanager.CfnSecret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecretProps,
+  ) :
+      this(software.amazon.awscdk.services.secretsmanager.CfnSecret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecretProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecretProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecretProps(props)
+  )
+
   /**
    * The ARN of the secret.
    */

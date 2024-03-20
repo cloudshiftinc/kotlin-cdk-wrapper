@@ -81,6 +81,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnImageRecipe internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnImageRecipeProps,
+  ) :
+      this(software.amazon.awscdk.services.imagebuilder.CfnImageRecipe(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnImageRecipeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnImageRecipeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnImageRecipeProps(props)
+  )
+
   /**
    * Before you create a new AMI, Image Builder launches temporary Amazon EC2 instances to build and
    * test your image configuration.

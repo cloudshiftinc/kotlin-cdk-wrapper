@@ -45,6 +45,27 @@ public open class CfnEnvironmentAccountConnection internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentAccountConnectionProps,
+  ) :
+      this(software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnvironmentAccountConnectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentAccountConnectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnvironmentAccountConnectionProps(props)
+  )
+
   /**
    * Returns the environment account connection ARN.
    */

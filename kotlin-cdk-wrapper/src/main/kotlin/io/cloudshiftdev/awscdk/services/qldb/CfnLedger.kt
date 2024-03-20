@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLedger internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.qldb.CfnLedger,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLedgerProps,
+  ) :
+      this(software.amazon.awscdk.services.qldb.CfnLedger(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLedgerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLedgerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLedgerProps(props)
+  )
+
   /**
    *
    */

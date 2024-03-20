@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSnapshot internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshot,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSnapshotProps,
+  ) :
+      this(software.amazon.awscdk.services.fsx.CfnSnapshot(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSnapshotProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSnapshotProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSnapshotProps(props)
+  )
+
   /**
    *
    */

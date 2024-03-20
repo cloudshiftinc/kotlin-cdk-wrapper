@@ -75,6 +75,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMitigationAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnMitigationAction,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMitigationActionProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnMitigationAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMitigationActionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMitigationActionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMitigationActionProps(props)
+  )
+
   /**
    * The friendly name of the mitigation action.
    */

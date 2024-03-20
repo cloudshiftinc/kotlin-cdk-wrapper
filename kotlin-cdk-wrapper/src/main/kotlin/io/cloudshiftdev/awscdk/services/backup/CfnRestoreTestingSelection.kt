@@ -76,6 +76,22 @@ public open class CfnRestoreTestingSelection internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.backup.CfnRestoreTestingSelection,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRestoreTestingSelectionProps,
+  ) :
+      this(software.amazon.awscdk.services.backup.CfnRestoreTestingSelection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRestoreTestingSelectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRestoreTestingSelectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRestoreTestingSelectionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target
    * resource;

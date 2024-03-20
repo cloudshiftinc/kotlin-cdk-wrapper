@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VirtualService internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualService,
 ) : Resource(cdkObject), IVirtualService {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VirtualServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.VirtualService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VirtualServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VirtualServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, VirtualServiceProps(props)
+  )
+
   /**
    * The Mesh which the VirtualService belongs to.
    */

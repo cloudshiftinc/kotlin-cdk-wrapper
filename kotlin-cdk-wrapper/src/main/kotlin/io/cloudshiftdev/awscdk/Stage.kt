@@ -45,6 +45,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Stage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Stage,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.Stage(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StageProps,
+  ) : this(software.amazon.awscdk.Stage(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
+      props.let(StageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StageProps.Builder.() -> Unit,
+  ) : this(scope, id, StageProps(props)
+  )
+
   /**
    * The default account for all resources defined within this stage.
    */

@@ -37,6 +37,13 @@ import kotlin.collections.List
 public open class GelfLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.GelfLogDriver,
 ) : LogDriver(cdkObject) {
+  public constructor(props: GelfLogDriverProps) :
+      this(software.amazon.awscdk.services.ecs.GelfLogDriver(props.let(GelfLogDriverProps::unwrap))
+  )
+
+  public constructor(props: GelfLogDriverProps.Builder.() -> Unit) : this(GelfLogDriverProps(props)
+  )
+
   /**
    * Called when the log driver is configured on a container.
    *

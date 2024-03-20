@@ -48,6 +48,22 @@ public open class CfnControlPanel internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnControlPanelProps,
+  ) :
+      this(software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnControlPanelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnControlPanelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnControlPanelProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the control panel.
    */

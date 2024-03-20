@@ -32,6 +32,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApprovedOrigin internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnApprovedOrigin,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApprovedOriginProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnApprovedOrigin(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApprovedOriginProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApprovedOriginProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApprovedOriginProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

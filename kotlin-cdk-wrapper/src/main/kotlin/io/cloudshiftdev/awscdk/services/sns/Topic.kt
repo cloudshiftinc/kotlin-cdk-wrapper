@@ -34,6 +34,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Topic internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sns.Topic,
 ) : TopicBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.sns.Topic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TopicProps,
+  ) :
+      this(software.amazon.awscdk.services.sns.Topic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TopicProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TopicProps.Builder.() -> Unit,
+  ) : this(scope, id, TopicProps(props)
+  )
+
   /**
    * Adds a delivery status logging configuration to the topic.
    *

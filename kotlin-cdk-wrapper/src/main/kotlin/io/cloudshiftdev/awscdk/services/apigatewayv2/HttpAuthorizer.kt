@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class HttpAuthorizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer,
 ) : Resource(cdkObject), IHttpAuthorizer {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpAuthorizerProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(HttpAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpAuthorizerProps.Builder.() -> Unit,
+  ) : this(scope, id, HttpAuthorizerProps(props)
+  )
+
   /**
    * Id of the Authorizer.
    */

@@ -68,6 +68,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnThingGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iot.CfnThingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThingGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnThingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnThingGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnThingGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnThingGroupProps(props)
+  )
+
   /**
    * The thing group ARN.
    */

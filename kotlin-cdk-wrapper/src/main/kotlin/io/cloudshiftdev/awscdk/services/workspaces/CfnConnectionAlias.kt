@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConnectionAlias internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.workspaces.CfnConnectionAlias,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectionAliasProps,
+  ) :
+      this(software.amazon.awscdk.services.workspaces.CfnConnectionAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConnectionAliasProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectionAliasProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConnectionAliasProps(props)
+  )
+
   /**
    * The identifier of the connection alias, returned as a string.
    */

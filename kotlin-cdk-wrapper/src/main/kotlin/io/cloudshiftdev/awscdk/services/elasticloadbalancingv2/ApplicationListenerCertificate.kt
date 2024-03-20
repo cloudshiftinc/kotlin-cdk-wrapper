@@ -32,6 +32,22 @@ public open class ApplicationListenerCertificate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationListenerCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApplicationListenerCertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationListenerCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, ApplicationListenerCertificateProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate].

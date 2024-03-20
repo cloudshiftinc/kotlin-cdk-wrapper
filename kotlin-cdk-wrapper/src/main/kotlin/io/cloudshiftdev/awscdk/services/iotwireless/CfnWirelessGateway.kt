@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWirelessGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessGateway,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWirelessGatewayProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnWirelessGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWirelessGatewayProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWirelessGatewayProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWirelessGatewayProps(props)
+  )
+
   /**
    * The ARN of the wireless gateway created.
    */

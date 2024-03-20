@@ -77,6 +77,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFunctionConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFunctionConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnFunctionConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFunctionConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFunctionConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFunctionConfigurationProps(props)
+  )
+
   /**
    * The AWS AppSync GraphQL API that you want to attach using this function.
    */

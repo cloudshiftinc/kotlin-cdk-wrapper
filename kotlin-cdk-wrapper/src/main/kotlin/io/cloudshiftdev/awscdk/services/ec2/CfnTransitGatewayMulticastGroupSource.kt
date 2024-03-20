@@ -41,6 +41,22 @@ public open class CfnTransitGatewayMulticastGroupSource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayMulticastGroupSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayMulticastGroupSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayMulticastGroupSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayMulticastGroupSourceProps(props)
+  )
+
   /**
    * Information about the registered transit gateway multicast domain group members.
    */

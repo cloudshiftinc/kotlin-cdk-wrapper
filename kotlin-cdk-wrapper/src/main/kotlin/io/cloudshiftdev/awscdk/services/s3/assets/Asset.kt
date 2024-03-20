@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Asset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.assets.Asset,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IAsset {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AssetProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.assets.Asset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AssetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AssetProps.Builder.() -> Unit,
+  ) : this(scope, id, AssetProps(props)
+  )
+
   /**
    * Adds CloudFormation template metadata to the specified resource with information that indicates
    * which resource property is mapped to this local asset.

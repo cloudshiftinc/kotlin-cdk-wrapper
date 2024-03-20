@@ -86,6 +86,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReplicaKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kms.CfnReplicaKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicaKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.kms.CfnReplicaKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReplicaKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicaKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReplicaKeyProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the replica key, such as
    * `arn:aws:kms:us-west-2:111122223333:key/mrk-1234abcd12ab34cd56ef1234567890ab` .

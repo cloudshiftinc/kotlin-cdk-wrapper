@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAlias internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnAlias,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAliasProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.CfnAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAliasProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAliasProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAliasProps(props)
+  )
+
   /**
    *
    */

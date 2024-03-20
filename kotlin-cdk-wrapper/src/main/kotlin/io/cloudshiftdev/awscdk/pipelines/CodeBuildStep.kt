@@ -68,6 +68,14 @@ import kotlin.jvm.JvmName
 public open class CodeBuildStep internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.CodeBuildStep,
 ) : ShellStep(cdkObject) {
+  public constructor(id: String, props: CodeBuildStepProps) :
+      this(software.amazon.awscdk.pipelines.CodeBuildStep(id, props.let(CodeBuildStepProps::unwrap))
+  )
+
+  public constructor(id: String, props: CodeBuildStepProps.Builder.() -> Unit) : this(id,
+      CodeBuildStepProps(props)
+  )
+
   /**
    * Custom execution role to be used for the Code Build Action.
    *

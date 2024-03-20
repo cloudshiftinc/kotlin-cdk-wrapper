@@ -80,6 +80,22 @@ public open class CfnRotationSchedule internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRotationScheduleProps,
+  ) :
+      this(software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRotationScheduleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRotationScheduleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRotationScheduleProps(props)
+  )
+
   /**
    *
    */

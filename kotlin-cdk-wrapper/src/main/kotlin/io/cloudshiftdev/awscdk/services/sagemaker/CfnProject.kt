@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProject internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProjectProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProjectProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProjectProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProjectProps(props)
+  )
+
   /**
    * The time that the project was created.
    */

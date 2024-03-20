@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEgressOnlyInternetGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEgressOnlyInternetGatewayProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEgressOnlyInternetGatewayProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEgressOnlyInternetGatewayProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEgressOnlyInternetGatewayProps(props)
+  )
+
   /**
    * The ID of the egress-only internet gateway.
    */

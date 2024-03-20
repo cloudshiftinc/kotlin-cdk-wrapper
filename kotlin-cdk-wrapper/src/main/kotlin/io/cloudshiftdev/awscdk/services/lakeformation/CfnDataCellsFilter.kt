@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataCellsFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataCellsFilterProps,
+  ) :
+      this(software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataCellsFilterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataCellsFilterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataCellsFilterProps(props)
+  )
+
   /**
    * An array of UTF-8 strings.
    */

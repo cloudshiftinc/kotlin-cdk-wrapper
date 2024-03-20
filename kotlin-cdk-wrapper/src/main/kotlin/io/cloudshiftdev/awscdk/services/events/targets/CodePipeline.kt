@@ -36,6 +36,21 @@ import software.amazon.awscdk.services.codepipeline.IPipeline as AmazonAwscdkSer
 public open class CodePipeline internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.CodePipeline,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(pipeline: CloudshiftdevAwscdkServicesCodepipelineIPipeline) :
+      this(software.amazon.awscdk.services.events.targets.CodePipeline(pipeline.let(CloudshiftdevAwscdkServicesCodepipelineIPipeline::unwrap))
+  )
+
+  public constructor(pipeline: CloudshiftdevAwscdkServicesCodepipelineIPipeline,
+      options: CodePipelineTargetOptions) :
+      this(software.amazon.awscdk.services.events.targets.CodePipeline(pipeline.let(CloudshiftdevAwscdkServicesCodepipelineIPipeline::unwrap),
+      options.let(CodePipelineTargetOptions::unwrap))
+  )
+
+  public constructor(pipeline: CloudshiftdevAwscdkServicesCodepipelineIPipeline,
+      options: CodePipelineTargetOptions.Builder.() -> Unit) : this(pipeline,
+      CodePipelineTargetOptions(options)
+  )
+
   /**
    * Returns the rule target specification.
    *

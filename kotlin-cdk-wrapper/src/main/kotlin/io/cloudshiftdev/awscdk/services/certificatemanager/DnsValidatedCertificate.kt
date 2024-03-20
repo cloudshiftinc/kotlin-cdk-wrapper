@@ -61,6 +61,24 @@ public open class DnsValidatedCertificate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate,
 ) : Resource(cdkObject), ICertificate, ITaggable {
+  @Deprecated(message = "deprecated in CDK")
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DnsValidatedCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DnsValidatedCertificateProps::unwrap))
+  )
+
+  @Deprecated(message = "deprecated in CDK")
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DnsValidatedCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, DnsValidatedCertificateProps(props)
+  )
+
   /**
    * (deprecated) Apply the given removal policy to this resource.
    *

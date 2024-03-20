@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMaintenanceWindow internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMaintenanceWindowProps,
+  ) :
+      this(software.amazon.awscdk.services.ssm.CfnMaintenanceWindow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMaintenanceWindowProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMaintenanceWindowProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMaintenanceWindowProps(props)
+  )
+
   /**
    * Enables a maintenance window task to run on managed instances, even if you have not registered
    * those instances as targets.

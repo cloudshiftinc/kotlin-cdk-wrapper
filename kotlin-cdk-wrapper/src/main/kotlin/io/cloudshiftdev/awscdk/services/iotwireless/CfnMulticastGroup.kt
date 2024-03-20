@@ -56,6 +56,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMulticastGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnMulticastGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMulticastGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnMulticastGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMulticastGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMulticastGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMulticastGroupProps(props)
+  )
+
   /**
    * The ID of the wireless device to associate with a multicast group.
    */

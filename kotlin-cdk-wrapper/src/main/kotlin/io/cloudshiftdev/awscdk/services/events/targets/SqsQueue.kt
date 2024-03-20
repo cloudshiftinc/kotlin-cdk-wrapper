@@ -29,6 +29,19 @@ import software.amazon.awscdk.services.sqs.IQueue as AmazonAwscdkServicesSqsIQue
 public open class SqsQueue internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.SqsQueue,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
+      this(software.amazon.awscdk.services.events.targets.SqsQueue(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
+  )
+
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue, props: SqsQueueProps) :
+      this(software.amazon.awscdk.services.events.targets.SqsQueue(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap),
+      props.let(SqsQueueProps::unwrap))
+  )
+
+  public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue,
+      props: SqsQueueProps.Builder.() -> Unit) : this(queue, SqsQueueProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger this SQS queue as a result from an EventBridge
    * event.

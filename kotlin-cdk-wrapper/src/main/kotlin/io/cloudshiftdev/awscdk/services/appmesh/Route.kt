@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Route internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.Route,
 ) : Resource(cdkObject), IRoute {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RouteProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.Route(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RouteProps.Builder.() -> Unit,
+  ) : this(scope, id, RouteProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the route.
    */

@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEnabledControl internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControl,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnabledControlProps,
+  ) :
+      this(software.amazon.awscdk.services.controltower.CfnEnabledControl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnabledControlProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnabledControlProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnabledControlProps(props)
+  )
+
   /**
    * Tag Manager which manages the tags for this resource.
    */

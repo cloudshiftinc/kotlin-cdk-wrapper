@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInstanceConnectEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceConnectEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInstanceConnectEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceConnectEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInstanceConnectEndpointProps(props)
+  )
+
   /**
    * The ID of the EC2 Instance Connect Endpoint.
    */

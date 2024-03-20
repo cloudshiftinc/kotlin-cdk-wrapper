@@ -64,6 +64,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRepository internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRepositoryProps,
+  ) :
+      this(software.amazon.awscdk.services.codecommit.CfnRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRepositoryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRepositoryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRepositoryProps(props)
+  )
+
   /**
    * When you pass the logical ID of this resource, the function returns the Amazon Resource Name
    * (ARN) of the repository.

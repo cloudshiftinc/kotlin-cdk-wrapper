@@ -48,6 +48,22 @@ public open class CfnSlackWorkspaceConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSlackWorkspaceConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSlackWorkspaceConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSlackWorkspaceConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSlackWorkspaceConfigurationProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

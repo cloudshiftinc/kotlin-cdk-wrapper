@@ -88,6 +88,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kms.CfnKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.kms.CfnKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.kms.CfnKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnKeyProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the KMS key, such as
    * `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab` .

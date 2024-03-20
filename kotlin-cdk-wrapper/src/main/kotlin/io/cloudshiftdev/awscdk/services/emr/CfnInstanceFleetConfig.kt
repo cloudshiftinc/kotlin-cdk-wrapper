@@ -104,6 +104,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInstanceFleetConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceFleetConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.emr.CfnInstanceFleetConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInstanceFleetConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInstanceFleetConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInstanceFleetConfigProps(props)
+  )
+
   /**
    *
    */

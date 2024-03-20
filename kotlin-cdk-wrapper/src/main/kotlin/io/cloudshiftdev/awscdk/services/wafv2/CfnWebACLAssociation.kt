@@ -72,6 +72,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWebACLAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACLAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWebACLAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.wafv2.CfnWebACLAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWebACLAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWebACLAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWebACLAssociationProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

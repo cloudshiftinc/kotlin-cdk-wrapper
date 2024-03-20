@@ -45,6 +45,22 @@ public open class CfnAttributeGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAttributeGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAttributeGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAttributeGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAttributeGroupProps(props)
+  )
+
   /**
    * The Amazon resource name (ARN) that specifies the attribute group across services.
    */

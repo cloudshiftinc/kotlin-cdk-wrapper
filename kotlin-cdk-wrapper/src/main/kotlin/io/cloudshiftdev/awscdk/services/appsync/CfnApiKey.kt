@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApiKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnApiKey,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApiKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApiKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApiKeyProps(props)
+  )
+
   /**
    * Unique AWS AppSync GraphQL API ID for this API key.
    */

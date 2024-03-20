@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMissionProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.groundstation.CfnMissionProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMissionProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.groundstation.CfnMissionProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMissionProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMissionProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMissionProfileProps(props)
+  )
+
   /**
    * The ARN of the mission profile, such as
    * `arn:aws:groundstation:us-east-2:1234567890:mission-profile/9940bf3b-d2ba-427e-9906-842b5e5d2296`

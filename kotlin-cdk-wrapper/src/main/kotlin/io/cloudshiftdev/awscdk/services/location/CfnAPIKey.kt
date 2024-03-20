@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAPIKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.location.CfnAPIKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAPIKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.location.CfnAPIKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAPIKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAPIKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAPIKeyProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the resource.
    *

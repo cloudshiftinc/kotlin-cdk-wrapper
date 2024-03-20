@@ -59,6 +59,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVirtualCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVirtualClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVirtualClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVirtualClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVirtualClusterProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the project, such as
    * `arn:aws:emr-containers:us-east-1:123456789012:/virtualclusters/ab4rp1abcs8xz47n3x0example` .

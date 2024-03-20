@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSchemaVersionMetadata internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchemaVersionMetadataProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSchemaVersionMetadataProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSchemaVersionMetadataProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSchemaVersionMetadataProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

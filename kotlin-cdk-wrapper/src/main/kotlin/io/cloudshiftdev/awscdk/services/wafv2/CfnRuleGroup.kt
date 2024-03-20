@@ -483,6 +483,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRuleGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRuleGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.wafv2.CfnRuleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRuleGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRuleGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRuleGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the rule group.
    */

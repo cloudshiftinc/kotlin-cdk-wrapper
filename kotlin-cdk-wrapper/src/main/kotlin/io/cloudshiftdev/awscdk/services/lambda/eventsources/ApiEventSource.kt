@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.services.apigateway.AuthorizationType
 import io.cloudshiftdev.awscdk.services.apigateway.IAuthorizer
 import io.cloudshiftdev.awscdk.services.apigateway.IModel
 import io.cloudshiftdev.awscdk.services.apigateway.IRequestValidator
+import io.cloudshiftdev.awscdk.services.apigateway.MethodOptions
 import io.cloudshiftdev.awscdk.services.apigateway.MethodResponse
 import io.cloudshiftdev.awscdk.services.apigateway.RequestValidatorOptions
 import io.cloudshiftdev.awscdk.services.lambda.IEventSource
@@ -61,6 +62,25 @@ public open class ApiEventSource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.ApiEventSource,
 ) : CdkObject(cdkObject), IEventSource {
+  public constructor(method: String, path: String) :
+      this(software.amazon.awscdk.services.lambda.eventsources.ApiEventSource(method, path)
+  )
+
+  public constructor(
+    method: String,
+    path: String,
+    options: MethodOptions,
+  ) : this(software.amazon.awscdk.services.lambda.eventsources.ApiEventSource(method, path,
+      options.let(MethodOptions::unwrap))
+  )
+
+  public constructor(
+    method: String,
+    path: String,
+    options: MethodOptions.Builder.() -> Unit,
+  ) : this(method, path, MethodOptions(options)
+  )
+
   /**
    * Called by `lambda.addEventSource` to allow the event source to bind to this function.
    *

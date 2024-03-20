@@ -24,6 +24,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Succeed internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Succeed,
 ) : State(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.stepfunctions.Succeed(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SucceedProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.Succeed(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SucceedProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SucceedProps.Builder.() -> Unit,
+  ) : this(scope, id, SucceedProps(props)
+  )
+
   /**
    * Continuable states of this Chainable.
    */

@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class RecordSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.RecordSet,
 ) : Resource(cdkObject), IRecordSet {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RecordSetProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.RecordSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RecordSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RecordSetProps.Builder.() -> Unit,
+  ) : this(scope, id, RecordSetProps(props)
+  )
+
   /**
    * The domain name of the record.
    */

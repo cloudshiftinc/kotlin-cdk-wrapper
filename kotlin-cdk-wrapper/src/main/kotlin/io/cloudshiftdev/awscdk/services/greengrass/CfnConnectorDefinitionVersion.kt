@@ -60,6 +60,22 @@ public open class CfnConnectorDefinitionVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectorDefinitionVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConnectorDefinitionVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectorDefinitionVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConnectorDefinitionVersionProps(props)
+  )
+
   /**
    *
    */

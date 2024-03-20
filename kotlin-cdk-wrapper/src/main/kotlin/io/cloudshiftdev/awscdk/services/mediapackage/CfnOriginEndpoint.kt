@@ -201,6 +201,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnOriginEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOriginEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOriginEndpointProps(props)
+  )
+
   /**
    * The endpoint's unique system-generated resource name, based on the AWS record.
    */

@@ -63,6 +63,22 @@ public open class CfnSqlInjectionMatchSet internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSqlInjectionMatchSetProps,
+  ) :
+      this(software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSqlInjectionMatchSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSqlInjectionMatchSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSqlInjectionMatchSetProps(props)
+  )
+
   /**
    *
    */

@@ -41,6 +41,22 @@ public open class CfnCustomerGatewayAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomerGatewayAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCustomerGatewayAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomerGatewayAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCustomerGatewayAssociationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the customer gateway.
    */

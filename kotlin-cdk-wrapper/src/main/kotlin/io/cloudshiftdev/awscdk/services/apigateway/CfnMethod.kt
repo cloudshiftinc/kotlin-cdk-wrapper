@@ -89,6 +89,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMethod internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMethodProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnMethod(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMethodProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMethodProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMethodProps(props)
+  )
+
   /**
    * A boolean flag specifying whether a valid ApiKey is required to invoke this method.
    */

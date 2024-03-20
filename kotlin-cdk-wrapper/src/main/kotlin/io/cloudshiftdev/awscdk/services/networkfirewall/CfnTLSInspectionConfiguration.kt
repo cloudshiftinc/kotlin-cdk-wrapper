@@ -89,6 +89,22 @@ public open class CfnTLSInspectionConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTLSInspectionConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTLSInspectionConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTLSInspectionConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTLSInspectionConfigurationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the TLS inspection configuration.
    */

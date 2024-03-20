@@ -72,6 +72,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventDataStore internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventDataStoreProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventDataStoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventDataStoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventDataStoreProps(props)
+  )
+
   /**
    * The advanced event selectors to use to select the events for the data store.
    */

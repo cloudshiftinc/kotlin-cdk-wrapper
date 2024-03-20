@@ -40,6 +40,22 @@ public open class CfnIdentityPoolPrincipalTag internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityPoolPrincipalTagProps,
+  ) :
+      this(software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIdentityPoolPrincipalTagProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIdentityPoolPrincipalTagProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIdentityPoolPrincipalTagProps(props)
+  )
+
   /**
    * The identity pool that you want to associate with this principal tag map.
    */

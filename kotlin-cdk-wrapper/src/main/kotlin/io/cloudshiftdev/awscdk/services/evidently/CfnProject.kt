@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProject internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProjectProps,
+  ) :
+      this(software.amazon.awscdk.services.evidently.CfnProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProjectProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProjectProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProjectProps(props)
+  )
+
   /**
    * Use this parameter if the project will use *client-side evaluation powered by AWS AppConfig* .
    */

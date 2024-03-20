@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CnameRecord internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CnameRecord,
 ) : RecordSet(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CnameRecordProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CnameRecord(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CnameRecordProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CnameRecordProps.Builder.() -> Unit,
+  ) : this(scope, id, CnameRecordProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.route53.CnameRecord].
    */

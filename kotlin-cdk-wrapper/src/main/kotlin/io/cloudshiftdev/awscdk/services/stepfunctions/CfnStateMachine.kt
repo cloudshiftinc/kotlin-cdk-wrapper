@@ -74,6 +74,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStateMachine internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachine,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStateMachineProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStateMachineProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStateMachineProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStateMachineProps(props)
+  )
+
   /**
    * Returns the ARN of the resource.
    */

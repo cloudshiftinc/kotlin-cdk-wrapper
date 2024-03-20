@@ -181,6 +181,26 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class NestedStack internal constructor(
   internal override val cdkObject: software.amazon.awscdk.NestedStack,
 ) : Stack(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.NestedStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NestedStackProps,
+  ) : this(software.amazon.awscdk.NestedStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NestedStackProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NestedStackProps.Builder.() -> Unit,
+  ) : this(scope, id, NestedStackProps(props)
+  )
+
   /**
    * If this is a nested stack, this represents its `AWS::CloudFormation::Stack` resource.
    *

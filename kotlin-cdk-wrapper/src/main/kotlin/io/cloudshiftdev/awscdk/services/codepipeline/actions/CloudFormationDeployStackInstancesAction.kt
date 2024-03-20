@@ -56,6 +56,14 @@ public open class CloudFormationDeployStackInstancesAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesAction,
 ) : Action(cdkObject) {
+  public constructor(props: CloudFormationDeployStackInstancesActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesAction(props.let(CloudFormationDeployStackInstancesActionProps::unwrap))
+  )
+
+  public constructor(props: CloudFormationDeployStackInstancesActionProps.Builder.() -> Unit) :
+      this(CloudFormationDeployStackInstancesActionProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesAction].

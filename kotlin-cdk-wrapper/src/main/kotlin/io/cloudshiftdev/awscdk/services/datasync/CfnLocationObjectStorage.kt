@@ -54,6 +54,22 @@ public open class CfnLocationObjectStorage internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.datasync.CfnLocationObjectStorage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationObjectStorageProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationObjectStorage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationObjectStorageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationObjectStorageProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationObjectStorageProps(props)
+  )
+
   /**
    * Specifies the access key (for example, a user name) if credentials are required to authenticate
    * with the object storage server.

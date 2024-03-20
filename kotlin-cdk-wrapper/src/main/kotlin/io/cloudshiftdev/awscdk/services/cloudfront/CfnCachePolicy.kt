@@ -78,6 +78,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCachePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCachePolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnCachePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCachePolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCachePolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCachePolicyProps(props)
+  )
+
   /**
    * The unique identifier for the cache policy.
    *

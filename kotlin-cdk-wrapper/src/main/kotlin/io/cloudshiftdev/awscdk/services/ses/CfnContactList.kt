@@ -50,6 +50,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnContactList internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.CfnContactList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ses.CfnContactList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContactListProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.CfnContactList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnContactListProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContactListProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnContactListProps(props)
+  )
+
   /**
    * The name of the contact list.
    */

@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationSMB internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationSMB,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationSMBProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationSMB(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationSMBProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationSMBProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationSMBProps(props)
+  )
+
   /**
    * The Amazon Resource Names (ARNs) of agents to use for a Server Message Block (SMB) location.
    */

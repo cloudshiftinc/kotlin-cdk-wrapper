@@ -66,6 +66,22 @@ public open class CfnRepositoryAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRepositoryAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRepositoryAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRepositoryAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRepositoryAssociationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the
    * [`RepositoryAssociation`](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html)

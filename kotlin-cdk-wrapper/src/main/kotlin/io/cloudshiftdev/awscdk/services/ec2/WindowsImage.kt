@@ -40,6 +40,19 @@ import kotlin.Unit
 public open class WindowsImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.WindowsImage,
 ) : GenericSSMParameterImage(cdkObject) {
+  public constructor(version: WindowsVersion) :
+      this(software.amazon.awscdk.services.ec2.WindowsImage(version.let(WindowsVersion::unwrap))
+  )
+
+  public constructor(version: WindowsVersion, props: WindowsImageProps) :
+      this(software.amazon.awscdk.services.ec2.WindowsImage(version.let(WindowsVersion::unwrap),
+      props.let(WindowsImageProps::unwrap))
+  )
+
+  public constructor(version: WindowsVersion, props: WindowsImageProps.Builder.() -> Unit) :
+      this(version, WindowsImageProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.WindowsImage].
    */

@@ -44,6 +44,22 @@ public open class BedrockInvokeModel internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BedrockInvokeModelProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BedrockInvokeModelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BedrockInvokeModelProps.Builder.() -> Unit,
+  ) : this(scope, id, BedrockInvokeModelProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.BedrockInvokeModel].
    */

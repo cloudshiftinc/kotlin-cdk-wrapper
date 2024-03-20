@@ -195,7 +195,7 @@ internal object WrapperTypeGenerator {
         val usableConstructors =
             cdkClass.publicConstructors.filter { it.parameters.none { it.type.isJssiClass } }
 
-        if (cdkBuilder == null && cdkClass.className.isOuterClass() && usableConstructors.isNotEmpty()) {
+        if (cdkClass.className.isOuterClass() && usableConstructors.isNotEmpty()) {
             val constructors = generateMethods(
                 usableConstructors,
                 cdkClass,
@@ -403,7 +403,6 @@ internal object WrapperTypeGenerator {
 
     private const val CdkObjectName = "cdkObject"
     private val CdkObject = ClassName("io.cloudshiftdev.awscdk.common", "CdkObject")
-    private val Construct = ClassName("software.constructs", "Construct")
 }
 
 private fun TypeSpec.Builder.wrappedClassConstructor(

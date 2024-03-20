@@ -110,6 +110,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.redshift.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterProps(props)
+  )
+
   /**
    * If `true` , major version upgrades can be applied during the maintenance window to the Amazon
    * Redshift engine that is running on the cluster.

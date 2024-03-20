@@ -56,6 +56,15 @@ public open class HttpStepFunctionsIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegration,
 ) : HttpRouteIntegration(cdkObject) {
+  public constructor(id: String, props: HttpStepFunctionsIntegrationProps) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegration(id,
+      props.let(HttpStepFunctionsIntegrationProps::unwrap))
+  )
+
+  public constructor(id: String, props: HttpStepFunctionsIntegrationProps.Builder.() -> Unit) :
+      this(id, HttpStepFunctionsIntegrationProps(props)
+  )
+
   /**
    * Bind this integration to the route.
    *

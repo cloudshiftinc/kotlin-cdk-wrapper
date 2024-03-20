@@ -86,6 +86,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnContainerRecipe internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContainerRecipeProps,
+  ) :
+      this(software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnContainerRecipeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContainerRecipeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnContainerRecipeProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of the container recipe.
    *

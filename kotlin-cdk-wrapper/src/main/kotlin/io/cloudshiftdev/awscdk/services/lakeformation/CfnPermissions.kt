@@ -79,6 +79,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPermissions internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnPermissions,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPermissionsProps,
+  ) :
+      this(software.amazon.awscdk.services.lakeformation.CfnPermissions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPermissionsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPermissionsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPermissionsProps(props)
+  )
+
   /**
    * A unique identifier for the batch permissions request entry.
    */

@@ -105,6 +105,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScheduledQuery internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduledQueryProps,
+  ) :
+      this(software.amazon.awscdk.services.timestream.CfnScheduledQuery(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScheduledQueryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduledQueryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScheduledQueryProps(props)
+  )
+
   /**
    * The `ARN` of the scheduled query.
    */

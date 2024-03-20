@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class KeyGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroup,
 ) : Resource(cdkObject), IKeyGroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KeyGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.KeyGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(KeyGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KeyGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, KeyGroupProps(props)
+  )
+
   /**
    * The ID of the key group.
    */

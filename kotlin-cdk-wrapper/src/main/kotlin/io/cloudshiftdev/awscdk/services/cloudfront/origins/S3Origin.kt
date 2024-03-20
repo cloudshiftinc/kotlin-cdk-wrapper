@@ -50,6 +50,19 @@ import software.amazon.awscdk.services.s3.IBucket as AmazonAwscdkServicesS3IBuck
 public open class S3Origin internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3Origin,
 ) : CdkObject(cdkObject), IOrigin {
+  public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket) :
+      this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket::unwrap))
+  )
+
+  public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket, props: S3OriginProps) :
+      this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket::unwrap),
+      props.let(S3OriginProps::unwrap))
+  )
+
+  public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket,
+      props: S3OriginProps.Builder.() -> Unit) : this(bucket, S3OriginProps(props)
+  )
+
   /**
    * The method called when a given Origin is added (for the first time) to a Distribution.
    *

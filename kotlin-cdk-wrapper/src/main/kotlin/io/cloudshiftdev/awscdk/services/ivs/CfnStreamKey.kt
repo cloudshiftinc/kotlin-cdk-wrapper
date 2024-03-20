@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStreamKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ivs.CfnStreamKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.ivs.CfnStreamKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStreamKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStreamKeyProps(props)
+  )
+
   /**
    * The stream-key ARN.
    *

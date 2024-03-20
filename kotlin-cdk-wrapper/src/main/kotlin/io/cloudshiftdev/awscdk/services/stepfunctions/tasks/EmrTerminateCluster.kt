@@ -32,6 +32,22 @@ public open class EmrTerminateCluster internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateCluster,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrTerminateClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EmrTerminateClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrTerminateClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, EmrTerminateClusterProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EmrTerminateCluster].

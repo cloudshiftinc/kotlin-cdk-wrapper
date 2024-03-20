@@ -35,6 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class RateLimitedApiKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKey,
 ) : Resource(cdkObject), IApiKey {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigateway.RateLimitedApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RateLimitedApiKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.RateLimitedApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RateLimitedApiKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RateLimitedApiKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, RateLimitedApiKeyProps(props)
+  )
+
   /**
    * Permits the IAM principal all read operations through this key.
    *

@@ -108,6 +108,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEventSourceMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnEventSourceMapping,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventSourceMappingProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.CfnEventSourceMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventSourceMappingProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventSourceMappingProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventSourceMappingProps(props)
+  )
+
   /**
    * Specific configuration settings for an Amazon Managed Streaming for Apache Kafka (Amazon MSK)
    * event source.

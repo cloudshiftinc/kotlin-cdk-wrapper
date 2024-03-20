@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CaaRecord internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CaaRecord,
 ) : RecordSet(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CaaRecordProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.CaaRecord(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CaaRecordProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CaaRecordProps.Builder.() -> Unit,
+  ) : this(scope, id, CaaRecordProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.route53.CaaRecord].
    */

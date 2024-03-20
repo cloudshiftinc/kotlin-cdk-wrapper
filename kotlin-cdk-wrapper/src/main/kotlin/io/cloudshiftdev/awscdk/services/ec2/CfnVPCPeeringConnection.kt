@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPCPeeringConnection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCPeeringConnectionProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCPeeringConnectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCPeeringConnectionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCPeeringConnectionProps(props)
+  )
+
   /**
    * The ID of the peering connection.
    */

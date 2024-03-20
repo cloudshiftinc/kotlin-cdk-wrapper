@@ -35,6 +35,22 @@ public open class CfnServiceActionAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceActionAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServiceActionAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceActionAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServiceActionAssociationProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

@@ -72,6 +72,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ServerlessCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.ServerlessCluster,
 ) : Resource(cdkObject), IServerlessCluster {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerlessClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.ServerlessCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ServerlessClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServerlessClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, ServerlessClusterProps(props)
+  )
+
   /**
    * Adds the multi user rotation to this cluster.
    *

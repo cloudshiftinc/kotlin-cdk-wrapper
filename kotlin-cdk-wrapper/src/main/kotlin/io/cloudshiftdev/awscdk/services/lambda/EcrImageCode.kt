@@ -35,6 +35,20 @@ import software.amazon.awscdk.services.ecr.IRepository as AmazonAwscdkServicesEc
 public open class EcrImageCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.EcrImageCode,
 ) : Code(cdkObject) {
+  public constructor(repository: CloudshiftdevAwscdkServicesEcrIRepository) :
+      this(software.amazon.awscdk.services.lambda.EcrImageCode(repository.let(CloudshiftdevAwscdkServicesEcrIRepository::unwrap))
+  )
+
+  public constructor(repository: CloudshiftdevAwscdkServicesEcrIRepository,
+      props: EcrImageCodeProps) :
+      this(software.amazon.awscdk.services.lambda.EcrImageCode(repository.let(CloudshiftdevAwscdkServicesEcrIRepository::unwrap),
+      props.let(EcrImageCodeProps::unwrap))
+  )
+
+  public constructor(repository: CloudshiftdevAwscdkServicesEcrIRepository,
+      props: EcrImageCodeProps.Builder.() -> Unit) : this(repository, EcrImageCodeProps(props)
+  )
+
   /**
    * Called when the lambda or layer is initialized to allow this object to bind to the stack, add
    * resources and have fun.

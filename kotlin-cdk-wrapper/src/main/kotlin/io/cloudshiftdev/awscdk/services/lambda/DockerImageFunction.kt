@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DockerImageFunction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.DockerImageFunction,
 ) : Function(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DockerImageFunctionProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.DockerImageFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DockerImageFunctionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DockerImageFunctionProps.Builder.() -> Unit,
+  ) : this(scope, id, DockerImageFunctionProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.lambda.DockerImageFunction].
    */

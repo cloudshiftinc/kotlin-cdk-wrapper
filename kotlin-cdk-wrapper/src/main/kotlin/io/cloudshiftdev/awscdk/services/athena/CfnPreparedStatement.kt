@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPreparedStatement internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.athena.CfnPreparedStatement,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPreparedStatementProps,
+  ) :
+      this(software.amazon.awscdk.services.athena.CfnPreparedStatement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPreparedStatementProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPreparedStatementProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPreparedStatementProps(props)
+  )
+
   /**
    * The description of the prepared statement.
    */

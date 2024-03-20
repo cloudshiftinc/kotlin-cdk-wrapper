@@ -232,6 +232,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDomain internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDomainProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDomainProps(props)
+  )
+
   /**
    * Specifies the VPC used for non-EFS traffic.
    *

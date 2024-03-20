@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocalGatewayRoute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocalGatewayRouteProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocalGatewayRouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocalGatewayRouteProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocalGatewayRouteProps(props)
+  )
+
   /**
    * The state of the local gateway route table.
    */

@@ -68,6 +68,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnImageBuilder internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnImageBuilderProps,
+  ) :
+      this(software.amazon.awscdk.services.appstream.CfnImageBuilder(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnImageBuilderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnImageBuilderProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnImageBuilderProps(props)
+  )
+
   /**
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */

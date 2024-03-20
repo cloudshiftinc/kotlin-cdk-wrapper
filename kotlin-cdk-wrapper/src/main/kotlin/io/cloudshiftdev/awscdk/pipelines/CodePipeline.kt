@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CodePipeline internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.CodePipeline,
 ) : PipelineBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CodePipelineProps,
+  ) :
+      this(software.amazon.awscdk.pipelines.CodePipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CodePipelineProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CodePipelineProps.Builder.() -> Unit,
+  ) : this(scope, id, CodePipelineProps(props)
+  )
+
   /**
    * The CodePipeline pipeline that deploys the CDK app.
    *

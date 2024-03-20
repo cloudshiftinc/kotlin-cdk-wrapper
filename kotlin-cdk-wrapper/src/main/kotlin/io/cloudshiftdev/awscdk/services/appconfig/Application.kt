@@ -34,6 +34,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Application internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.Application,
 ) : Resource(cdkObject), IApplication, IExtensible {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.appconfig.Application(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.Application(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApplicationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationProps.Builder.() -> Unit,
+  ) : this(scope, id, ApplicationProps(props)
+  )
+
   /**
    * Adds an environment.
    *

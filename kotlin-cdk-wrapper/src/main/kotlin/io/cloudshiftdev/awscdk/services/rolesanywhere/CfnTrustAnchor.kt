@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTrustAnchor internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrustAnchorProps,
+  ) :
+      this(software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTrustAnchorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrustAnchorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTrustAnchorProps(props)
+  )
+
   /**
    * The ARN of the trust anchor.
    */

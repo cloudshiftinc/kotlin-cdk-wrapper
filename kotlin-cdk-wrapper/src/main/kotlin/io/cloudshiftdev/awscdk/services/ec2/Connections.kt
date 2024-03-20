@@ -39,6 +39,16 @@ import kotlin.jvm.JvmName
 public open class Connections internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Connections,
 ) : CdkObject(cdkObject), IConnectable {
+  public constructor() : this(software.amazon.awscdk.services.ec2.Connections()
+  )
+
+  public constructor(props: ConnectionsProps) :
+      this(software.amazon.awscdk.services.ec2.Connections(props.let(ConnectionsProps::unwrap))
+  )
+
+  public constructor(props: ConnectionsProps.Builder.() -> Unit) : this(ConnectionsProps(props)
+  )
+
   /**
    * Add a security group to the list of security groups managed by this object.
    *

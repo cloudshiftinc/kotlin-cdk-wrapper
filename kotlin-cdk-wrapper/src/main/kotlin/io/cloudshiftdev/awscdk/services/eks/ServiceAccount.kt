@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ServiceAccount internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.ServiceAccount,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IPrincipal {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServiceAccountProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.ServiceAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ServiceAccountProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServiceAccountProps.Builder.() -> Unit,
+  ) : this(scope, id, ServiceAccountProps(props)
+  )
+
   /**
    * Add to the policy of this principal.
    *

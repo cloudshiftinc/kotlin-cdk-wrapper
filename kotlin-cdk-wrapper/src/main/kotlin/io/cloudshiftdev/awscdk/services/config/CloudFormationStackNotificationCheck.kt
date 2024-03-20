@@ -36,6 +36,27 @@ public open class CloudFormationStackNotificationCheck internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck,
 ) : ManagedRule(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CloudFormationStackNotificationCheckProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CloudFormationStackNotificationCheckProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CloudFormationStackNotificationCheckProps.Builder.() -> Unit,
+  ) : this(scope, id, CloudFormationStackNotificationCheckProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.config.CloudFormationStackNotificationCheck].

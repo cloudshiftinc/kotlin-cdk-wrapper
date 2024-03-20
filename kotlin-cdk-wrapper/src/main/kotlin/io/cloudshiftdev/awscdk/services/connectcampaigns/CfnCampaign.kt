@@ -71,6 +71,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCampaign internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCampaignProps,
+  ) :
+      this(software.amazon.awscdk.services.connectcampaigns.CfnCampaign(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCampaignProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCampaignProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCampaignProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the high-volume outbound campaign.
    */

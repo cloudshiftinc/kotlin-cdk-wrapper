@@ -45,6 +45,22 @@ public open class SqsSendMessage internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessage,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SqsSendMessageProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SqsSendMessageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SqsSendMessageProps.Builder.() -> Unit,
+  ) : this(scope, id, SqsSendMessageProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.SqsSendMessage].
    */

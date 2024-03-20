@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSecurityGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticache.CfnSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSecurityGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSecurityGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSecurityGroupProps(props)
+  )
+
   /**
    *
    */

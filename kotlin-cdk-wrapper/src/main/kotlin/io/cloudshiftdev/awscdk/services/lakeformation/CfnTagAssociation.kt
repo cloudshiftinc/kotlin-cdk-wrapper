@@ -97,6 +97,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTagAssociation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lakeformation.CfnTagAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTagAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.lakeformation.CfnTagAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTagAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTagAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTagAssociationProps(props)
+  )
+
   /**
    * Json encoding of the input resource.
    *

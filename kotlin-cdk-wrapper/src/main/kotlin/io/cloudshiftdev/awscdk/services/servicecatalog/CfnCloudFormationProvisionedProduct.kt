@@ -76,6 +76,27 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCloudFormationProvisionedProductProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCloudFormationProvisionedProductProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCloudFormationProvisionedProductProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCloudFormationProvisionedProductProps(props)
+  )
+
   /**
    * The language code.
    */

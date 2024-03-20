@@ -32,6 +32,22 @@ public open class BitBucketSourceCredentials internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BitBucketSourceCredentialsProps,
+  ) :
+      this(software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BitBucketSourceCredentialsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BitBucketSourceCredentialsProps.Builder.() -> Unit,
+  ) : this(scope, id, BitBucketSourceCredentialsProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codebuild.BitBucketSourceCredentials].
    */

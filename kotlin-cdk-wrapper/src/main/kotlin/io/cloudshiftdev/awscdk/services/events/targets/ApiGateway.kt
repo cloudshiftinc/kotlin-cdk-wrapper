@@ -54,6 +54,20 @@ import software.amazon.awscdk.services.apigateway.RestApi as AmazonAwscdkService
 public open class ApiGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.ApiGateway,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApi) :
+      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayRestApi::unwrap))
+  )
+
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApi, props: ApiGatewayProps)
+      :
+      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayRestApi::unwrap),
+      props.let(ApiGatewayProps::unwrap))
+  )
+
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApi,
+      props: ApiGatewayProps.Builder.() -> Unit) : this(restApi, ApiGatewayProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger this API Gateway REST APIs as a result from an
    * EventBridge event.

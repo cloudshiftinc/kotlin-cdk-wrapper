@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRealtimeLogConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRealtimeLogConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRealtimeLogConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRealtimeLogConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRealtimeLogConfigProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the real-time log configuration.
    *

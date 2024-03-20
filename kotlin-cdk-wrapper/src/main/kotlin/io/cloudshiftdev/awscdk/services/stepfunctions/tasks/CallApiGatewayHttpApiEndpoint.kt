@@ -41,6 +41,22 @@ public open class CallApiGatewayHttpApiEndpoint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpoint,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CallApiGatewayHttpApiEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CallApiGatewayHttpApiEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CallApiGatewayHttpApiEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CallApiGatewayHttpApiEndpointProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpoint].

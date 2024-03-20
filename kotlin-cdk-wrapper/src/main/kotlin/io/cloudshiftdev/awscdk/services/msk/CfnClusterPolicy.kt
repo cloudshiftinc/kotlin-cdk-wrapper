@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnClusterPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.msk.CfnClusterPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.msk.CfnClusterPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterPolicyProps(props)
+  )
+
   /**
    * The current version of the policy attached to the specified cluster.
    */

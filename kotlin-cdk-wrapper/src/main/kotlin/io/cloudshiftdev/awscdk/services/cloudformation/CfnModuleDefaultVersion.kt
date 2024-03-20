@@ -49,6 +49,27 @@ public open class CfnModuleDefaultVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModuleDefaultVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnModuleDefaultVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnModuleDefaultVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnModuleDefaultVersionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the module version to set as the default version.
    */

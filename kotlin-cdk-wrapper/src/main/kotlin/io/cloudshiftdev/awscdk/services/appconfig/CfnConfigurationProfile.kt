@@ -78,6 +78,22 @@ public open class CfnConfigurationProfile internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appconfig.CfnConfigurationProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.appconfig.CfnConfigurationProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigurationProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigurationProfileProps(props)
+  )
+
   /**
    * The application ID.
    */

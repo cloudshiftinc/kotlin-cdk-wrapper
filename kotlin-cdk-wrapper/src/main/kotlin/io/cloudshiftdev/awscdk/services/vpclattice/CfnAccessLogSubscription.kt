@@ -49,6 +49,22 @@ public open class CfnAccessLogSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessLogSubscriptionProps,
+  ) :
+      this(software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessLogSubscriptionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessLogSubscriptionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessLogSubscriptionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the access log subscription.
    */

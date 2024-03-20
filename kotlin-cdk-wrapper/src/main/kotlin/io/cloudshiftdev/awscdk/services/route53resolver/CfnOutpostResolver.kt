@@ -45,6 +45,22 @@ public open class CfnOutpostResolver internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnOutpostResolver,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOutpostResolverProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnOutpostResolver(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOutpostResolverProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOutpostResolverProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOutpostResolverProps(props)
+  )
+
   /**
    * The ARN (Amazon Resource Name) for the Resolver on an Outpost.
    */

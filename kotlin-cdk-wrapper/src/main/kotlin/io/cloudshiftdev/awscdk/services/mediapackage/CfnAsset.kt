@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAsset internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediapackage.CfnAsset,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssetProps,
+  ) :
+      this(software.amazon.awscdk.services.mediapackage.CfnAsset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAssetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAssetProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the asset.
    *

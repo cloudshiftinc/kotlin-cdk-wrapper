@@ -45,6 +45,22 @@ public open class CfnMonitoringSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMonitoringSubscriptionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMonitoringSubscriptionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMonitoringSubscriptionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMonitoringSubscriptionProps(props)
+  )
+
   /**
    * The ID of the distribution that you are enabling metrics for.
    */

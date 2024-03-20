@@ -59,6 +59,22 @@ public open class CfnResourceVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudformation.CfnResourceVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudformation.CfnResourceVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResourceVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResourceVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResourceVersionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the extension.
    */

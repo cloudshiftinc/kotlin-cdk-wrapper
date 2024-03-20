@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLoadBalancer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnLoadBalancer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoadBalancerProps,
+  ) :
+      this(software.amazon.awscdk.services.lightsail.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLoadBalancerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoadBalancerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLoadBalancerProps(props)
+  )
+
   /**
    * The Lightsail instances to attach to the load balancer.
    */

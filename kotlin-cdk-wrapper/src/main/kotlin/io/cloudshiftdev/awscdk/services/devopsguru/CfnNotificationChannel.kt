@@ -60,6 +60,22 @@ public open class CfnNotificationChannel internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.devopsguru.CfnNotificationChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNotificationChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.devopsguru.CfnNotificationChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNotificationChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNotificationChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNotificationChannelProps(props)
+  )
+
   /**
    * The ID of the notification channel.
    */

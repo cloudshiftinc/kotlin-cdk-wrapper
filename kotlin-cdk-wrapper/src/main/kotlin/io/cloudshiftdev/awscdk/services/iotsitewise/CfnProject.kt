@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProject internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProjectProps,
+  ) :
+      this(software.amazon.awscdk.services.iotsitewise.CfnProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProjectProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProjectProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProjectProps(props)
+  )
+
   /**
    * A list that contains the IDs of each asset associated with the project.
    */

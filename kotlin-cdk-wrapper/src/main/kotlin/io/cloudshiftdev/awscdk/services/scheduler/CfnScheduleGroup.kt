@@ -50,6 +50,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScheduleGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.scheduler.CfnScheduleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduleGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.scheduler.CfnScheduleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScheduleGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScheduleGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScheduleGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the schedule group.
    */

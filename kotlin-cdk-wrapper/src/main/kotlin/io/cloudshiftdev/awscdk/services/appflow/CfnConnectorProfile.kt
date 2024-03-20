@@ -300,6 +300,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConnectorProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appflow.CfnConnectorProfile,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectorProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.appflow.CfnConnectorProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConnectorProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConnectorProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConnectorProfileProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the connector profile.
    */

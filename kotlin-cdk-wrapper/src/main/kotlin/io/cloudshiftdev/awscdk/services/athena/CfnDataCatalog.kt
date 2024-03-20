@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDataCatalog internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.athena.CfnDataCatalog,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataCatalogProps,
+  ) :
+      this(software.amazon.awscdk.services.athena.CfnDataCatalog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataCatalogProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataCatalogProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataCatalogProps(props)
+  )
+
   /**
    * A description of the data catalog.
    */

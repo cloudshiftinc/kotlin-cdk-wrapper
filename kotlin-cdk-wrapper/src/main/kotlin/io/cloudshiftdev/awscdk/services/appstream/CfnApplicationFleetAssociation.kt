@@ -35,6 +35,22 @@ public open class CfnApplicationFleetAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationFleetAssociationProps,
+  ) :
+      this(software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnApplicationFleetAssociationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnApplicationFleetAssociationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnApplicationFleetAssociationProps(props)
+  )
+
   /**
    * The ARN of the application.
    */

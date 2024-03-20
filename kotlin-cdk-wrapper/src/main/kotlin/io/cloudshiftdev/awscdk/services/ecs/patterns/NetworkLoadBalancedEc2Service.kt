@@ -51,6 +51,27 @@ public open class NetworkLoadBalancedEc2Service internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2Service,
 ) : NetworkLoadBalancedServiceBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkLoadBalancedEc2ServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NetworkLoadBalancedEc2ServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NetworkLoadBalancedEc2ServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, NetworkLoadBalancedEc2ServiceProps(props)
+  )
+
   /**
    * The ECS service in this construct.
    */

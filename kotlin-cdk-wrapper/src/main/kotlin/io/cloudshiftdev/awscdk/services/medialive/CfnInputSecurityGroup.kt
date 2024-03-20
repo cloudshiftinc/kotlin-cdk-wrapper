@@ -47,6 +47,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInputSecurityGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.medialive.CfnInputSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInputSecurityGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.medialive.CfnInputSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInputSecurityGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInputSecurityGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInputSecurityGroupProps(props)
+  )
+
   /**
    * The ARN of the MediaLive input security group.
    *

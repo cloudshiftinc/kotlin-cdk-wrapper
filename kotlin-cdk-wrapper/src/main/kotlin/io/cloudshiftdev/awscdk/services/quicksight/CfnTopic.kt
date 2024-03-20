@@ -241,6 +241,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTopic internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.quicksight.CfnTopic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTopicProps,
+  ) :
+      this(software.amazon.awscdk.services.quicksight.CfnTopic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTopicProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTopicProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTopicProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the topic.
    */

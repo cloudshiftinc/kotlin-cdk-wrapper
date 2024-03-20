@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSigningProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSigningProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.signer.CfnSigningProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSigningProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSigningProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSigningProfileProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the signing profile created.
    */

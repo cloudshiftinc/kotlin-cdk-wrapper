@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDetectorModel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotevents.CfnDetectorModel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDetectorModelProps,
+  ) :
+      this(software.amazon.awscdk.services.iotevents.CfnDetectorModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDetectorModelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDetectorModelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDetectorModelProps(props)
+  )
+
   /**
    * Information that defines how a detector operates.
    */

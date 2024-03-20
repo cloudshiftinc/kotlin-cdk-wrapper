@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBatchScramSecret internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.msk.CfnBatchScramSecret,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBatchScramSecretProps,
+  ) :
+      this(software.amazon.awscdk.services.msk.CfnBatchScramSecret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBatchScramSecretProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBatchScramSecretProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBatchScramSecretProps(props)
+  )
+
   /**
    *
    */

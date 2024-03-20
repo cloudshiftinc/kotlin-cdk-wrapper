@@ -29,6 +29,17 @@ import kotlin.Unit
 public open class EksOptimizedImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.EksOptimizedImage,
 ) : CdkObject(cdkObject), IMachineImage {
+  public constructor() : this(software.amazon.awscdk.services.eks.EksOptimizedImage()
+  )
+
+  public constructor(props: EksOptimizedImageProps) :
+      this(software.amazon.awscdk.services.eks.EksOptimizedImage(props.let(EksOptimizedImageProps::unwrap))
+  )
+
+  public constructor(props: EksOptimizedImageProps.Builder.() -> Unit) :
+      this(EksOptimizedImageProps(props)
+  )
+
   /**
    * Return the correct image.
    *

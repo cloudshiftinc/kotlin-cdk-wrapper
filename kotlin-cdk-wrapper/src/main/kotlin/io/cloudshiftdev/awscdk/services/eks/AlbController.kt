@@ -38,6 +38,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class AlbController internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.AlbController,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AlbControllerProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.AlbController(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AlbControllerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AlbControllerProps.Builder.() -> Unit,
+  ) : this(scope, id, AlbControllerProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.eks.AlbController].
    */

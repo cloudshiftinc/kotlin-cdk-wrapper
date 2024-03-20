@@ -82,6 +82,15 @@ import kotlin.jvm.JvmName
 public open class AssetImageCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.AssetImageCode,
 ) : Code(cdkObject) {
+  public constructor(directory: String, props: AssetImageCodeProps) :
+      this(software.amazon.awscdk.services.lambda.AssetImageCode(directory,
+      props.let(AssetImageCodeProps::unwrap))
+  )
+
+  public constructor(directory: String, props: AssetImageCodeProps.Builder.() -> Unit) :
+      this(directory, AssetImageCodeProps(props)
+  )
+
   /**
    * Called when the lambda or layer is initialized to allow this object to bind to the stack, add
    * resources and have fun.

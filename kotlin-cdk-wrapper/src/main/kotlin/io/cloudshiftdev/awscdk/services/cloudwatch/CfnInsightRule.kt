@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInsightRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnInsightRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInsightRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudwatch.CfnInsightRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInsightRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInsightRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInsightRuleProps(props)
+  )
+
   /**
    * The ARN of the Contributor Insights rule, such as
    * `arn:aws:cloudwatch:us-west-2:123456789012:insight-rule/MyInsightRuleName` .

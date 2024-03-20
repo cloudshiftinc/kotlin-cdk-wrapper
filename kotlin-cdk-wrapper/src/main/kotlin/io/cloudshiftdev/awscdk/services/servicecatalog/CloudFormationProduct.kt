@@ -39,6 +39,22 @@ public open class CloudFormationProduct internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CloudFormationProduct,
 ) : Product(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CloudFormationProductProps,
+  ) :
+      this(software.amazon.awscdk.services.servicecatalog.CloudFormationProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CloudFormationProductProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CloudFormationProductProps.Builder.() -> Unit,
+  ) : this(scope, id, CloudFormationProductProps(props)
+  )
+
   /**
    * The asset bucket of a product created via product stack.
    *

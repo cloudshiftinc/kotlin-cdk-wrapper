@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Instance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Instance,
 ) : Resource(cdkObject), IInstance {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: InstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.Instance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(InstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: InstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, InstanceProps(props)
+  )
+
   /**
    * Add the security group to the instance.
    *

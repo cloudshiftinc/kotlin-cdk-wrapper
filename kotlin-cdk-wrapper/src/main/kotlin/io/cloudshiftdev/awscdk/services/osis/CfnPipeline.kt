@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPipeline internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPipelineProps,
+  ) :
+      this(software.amazon.awscdk.services.osis.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPipelineProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPipelineProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPipelineProps(props)
+  )
+
   /**
    * A list of the ingestion endpoints for the pipeline that you can send data to.
    *

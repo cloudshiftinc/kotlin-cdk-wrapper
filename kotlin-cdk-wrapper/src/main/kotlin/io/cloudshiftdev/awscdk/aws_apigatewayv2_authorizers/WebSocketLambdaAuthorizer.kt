@@ -40,6 +40,27 @@ public open class WebSocketLambdaAuthorizer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer,
 ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
+  public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
+      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer(id,
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+    props: WebSocketLambdaAuthorizerProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer(id,
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
+      props.let(WebSocketLambdaAuthorizerProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    handler: CloudshiftdevAwscdkServicesLambdaIFunction,
+    props: WebSocketLambdaAuthorizerProps.Builder.() -> Unit,
+  ) : this(id, handler, WebSocketLambdaAuthorizerProps(props)
+  )
+
   /**
    * Bind this authorizer to a specified WebSocket route.
    *

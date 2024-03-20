@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class KubectlProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.KubectlProvider,
 ) : NestedStack(cdkObject), IKubectlProvider {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KubectlProviderProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.KubectlProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(KubectlProviderProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KubectlProviderProps.Builder.() -> Unit,
+  ) : this(scope, id, KubectlProviderProps(props)
+  )
+
   /**
    * The IAM execution role of the handler.
    */

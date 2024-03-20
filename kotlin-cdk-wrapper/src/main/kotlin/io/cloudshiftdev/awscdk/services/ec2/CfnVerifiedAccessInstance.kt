@@ -73,6 +73,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVerifiedAccessInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVerifiedAccessInstanceProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVerifiedAccessInstanceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVerifiedAccessInstanceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVerifiedAccessInstanceProps(props)
+  )
+
   /**
    * The creation time.
    */

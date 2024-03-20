@@ -38,6 +38,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServiceLinkedRole internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CfnServiceLinkedRole,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iam.CfnServiceLinkedRole(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceLinkedRoleProps,
+  ) :
+      this(software.amazon.awscdk.services.iam.CfnServiceLinkedRole(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServiceLinkedRoleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServiceLinkedRoleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServiceLinkedRoleProps(props)
+  )
+
   /**
    * Returns the friendly name that identifies the role.
    *

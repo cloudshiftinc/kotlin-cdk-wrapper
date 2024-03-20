@@ -63,6 +63,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationHDFS internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationHDFSProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationHDFS(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationHDFSProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationHDFSProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationHDFSProps(props)
+  )
+
   /**
    * The Amazon Resource Names (ARNs) of the agents that are used to connect to the HDFS cluster.
    */

@@ -45,6 +45,27 @@ public open class CfnTrustStore internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrustStoreProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTrustStoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTrustStoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTrustStoreProps(props)
+  )
+
   /**
    * The number of ca certificates in the trust store.
    */

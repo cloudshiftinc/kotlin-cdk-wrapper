@@ -52,6 +52,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRouteCalculator internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.location.CfnRouteCalculator,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRouteCalculatorProps,
+  ) :
+      this(software.amazon.awscdk.services.location.CfnRouteCalculator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRouteCalculatorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRouteCalculatorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRouteCalculatorProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) for the route calculator resource.
    *

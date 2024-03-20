@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnLocation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationProps,
+  ) :
+      this(software.amazon.awscdk.services.gamelift.CfnLocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationProps(props)
+  )
+
   /**
    * A unique identifier for the custom location.
    *

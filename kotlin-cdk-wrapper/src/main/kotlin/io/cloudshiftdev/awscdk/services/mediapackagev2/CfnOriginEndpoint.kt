@@ -115,6 +115,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnOriginEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOriginEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOriginEndpointProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the origin endpoint.
    */

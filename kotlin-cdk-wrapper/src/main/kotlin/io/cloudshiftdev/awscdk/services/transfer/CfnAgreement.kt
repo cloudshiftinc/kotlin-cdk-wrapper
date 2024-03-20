@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAgreement internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnAgreement,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAgreementProps,
+  ) :
+      this(software.amazon.awscdk.services.transfer.CfnAgreement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAgreementProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAgreementProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAgreementProps(props)
+  )
+
   /**
    * Connectors are used to send files using either the AS2 or SFTP protocol.
    */

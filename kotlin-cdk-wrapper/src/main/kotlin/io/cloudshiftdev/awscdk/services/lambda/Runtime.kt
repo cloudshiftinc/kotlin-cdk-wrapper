@@ -37,6 +37,28 @@ import kotlin.collections.List
 public open class Runtime internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.Runtime,
 ) : CdkObject(cdkObject) {
+  public constructor(name: String) : this(software.amazon.awscdk.services.lambda.Runtime(name)
+  )
+
+  public constructor(name: String, family: RuntimeFamily) :
+      this(software.amazon.awscdk.services.lambda.Runtime(name, family.let(RuntimeFamily::unwrap))
+  )
+
+  public constructor(
+    name: String,
+    family: RuntimeFamily,
+    props: LambdaRuntimeProps,
+  ) : this(software.amazon.awscdk.services.lambda.Runtime(name, family.let(RuntimeFamily::unwrap),
+      props.let(LambdaRuntimeProps::unwrap))
+  )
+
+  public constructor(
+    name: String,
+    family: RuntimeFamily,
+    props: LambdaRuntimeProps.Builder.() -> Unit,
+  ) : this(name, family, LambdaRuntimeProps(props)
+  )
+
   /**
    * The bundling Docker image for this runtime.
    */

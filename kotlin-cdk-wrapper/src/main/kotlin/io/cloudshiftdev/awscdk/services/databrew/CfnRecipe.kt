@@ -63,6 +63,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRecipe internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnRecipe,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecipeProps,
+  ) :
+      this(software.amazon.awscdk.services.databrew.CfnRecipe(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRecipeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRecipeProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRecipeProps(props)
+  )
+
   /**
    * The description of the recipe.
    */

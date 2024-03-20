@@ -65,6 +65,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDirectoryBucket internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3express.CfnDirectoryBucket,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDirectoryBucketProps,
+  ) :
+      this(software.amazon.awscdk.services.s3express.CfnDirectoryBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDirectoryBucketProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDirectoryBucketProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDirectoryBucketProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of the specified bucket.
    *

@@ -58,6 +58,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScript internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnScript,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScriptProps,
+  ) :
+      this(software.amazon.awscdk.services.gamelift.CfnScript(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnScriptProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnScriptProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnScriptProps(props)
+  )
+
   /**
    * The unique Amazon Resource Name (ARN) for the script.
    */

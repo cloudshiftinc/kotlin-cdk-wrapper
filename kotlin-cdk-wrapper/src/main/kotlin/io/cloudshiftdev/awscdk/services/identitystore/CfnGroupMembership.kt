@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGroupMembership internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembership,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupMembershipProps,
+  ) :
+      this(software.amazon.awscdk.services.identitystore.CfnGroupMembership(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGroupMembershipProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGroupMembershipProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGroupMembershipProps(props)
+  )
+
   /**
    * The identifier for a `GroupMembership` in the identity store.
    */

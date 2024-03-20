@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class KubernetesObjectValue internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.KubernetesObjectValue,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KubernetesObjectValueProps,
+  ) :
+      this(software.amazon.awscdk.services.eks.KubernetesObjectValue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(KubernetesObjectValueProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KubernetesObjectValueProps.Builder.() -> Unit,
+  ) : this(scope, id, KubernetesObjectValueProps(props)
+  )
+
   /**
    * The value as a string token.
    */

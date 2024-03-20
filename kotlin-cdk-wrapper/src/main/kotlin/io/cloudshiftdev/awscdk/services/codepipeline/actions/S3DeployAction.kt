@@ -45,6 +45,14 @@ public open class S3DeployAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.S3DeployAction,
 ) : Action(cdkObject) {
+  public constructor(props: S3DeployActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.S3DeployAction(props.let(S3DeployActionProps::unwrap))
+  )
+
+  public constructor(props: S3DeployActionProps.Builder.() -> Unit) :
+      this(S3DeployActionProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codepipeline.actions.S3DeployAction].
    */

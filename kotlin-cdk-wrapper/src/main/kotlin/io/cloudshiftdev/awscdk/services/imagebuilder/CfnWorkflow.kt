@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWorkflow internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.imagebuilder.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkflowProps,
+  ) :
+      this(software.amazon.awscdk.services.imagebuilder.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWorkflowProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkflowProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWorkflowProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the workflow resource.
    */

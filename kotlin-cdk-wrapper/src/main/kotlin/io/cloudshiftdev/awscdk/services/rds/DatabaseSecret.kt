@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DatabaseSecret internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseSecret,
 ) : Secret(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DatabaseSecretProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.DatabaseSecret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DatabaseSecretProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DatabaseSecretProps.Builder.() -> Unit,
+  ) : this(scope, id, DatabaseSecretProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.rds.DatabaseSecret].
    */

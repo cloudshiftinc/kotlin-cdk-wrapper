@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGitHubRepository internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codestar.CfnGitHubRepository,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGitHubRepositoryProps,
+  ) :
+      this(software.amazon.awscdk.services.codestar.CfnGitHubRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGitHubRepositoryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGitHubRepositoryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGitHubRepositoryProps(props)
+  )
+
   /**
    *
    */

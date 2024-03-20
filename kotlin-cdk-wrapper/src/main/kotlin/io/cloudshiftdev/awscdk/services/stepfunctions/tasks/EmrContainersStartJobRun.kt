@@ -55,6 +55,22 @@ public open class EmrContainersStartJobRun internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun,
 ) : TaskStateBase(cdkObject), IGrantable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrContainersStartJobRunProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EmrContainersStartJobRunProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrContainersStartJobRunProps.Builder.() -> Unit,
+  ) : this(scope, id, EmrContainersStartJobRunProps(props)
+  )
+
   /**
    * The principal to grant permissions to.
    */

@@ -70,6 +70,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnContainer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediastore.CfnContainer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContainerProps,
+  ) :
+      this(software.amazon.awscdk.services.mediastore.CfnContainer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnContainerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContainerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnContainerProps(props)
+  )
+
   /**
    * The state of access logging on the container.
    */

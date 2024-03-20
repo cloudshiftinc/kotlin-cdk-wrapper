@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFaq internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kendra.CfnFaq,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFaqProps,
+  ) :
+      this(software.amazon.awscdk.services.kendra.CfnFaq(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFaqProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFaqProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFaqProps(props)
+  )
+
   /**
    * `arn:aws:kendra:us-west-2:111122223333:index/335c3741-41df-46a6-b5d3-61f85b787884/faq/f61995a6-cd5c-4e99-9cfc-58816d8bfaa7`.
    */

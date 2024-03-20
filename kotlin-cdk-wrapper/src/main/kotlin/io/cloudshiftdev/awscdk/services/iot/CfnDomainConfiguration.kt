@@ -60,6 +60,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDomainConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iot.CfnDomainConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnDomainConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDomainConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDomainConfigurationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the domain configuration.
    */

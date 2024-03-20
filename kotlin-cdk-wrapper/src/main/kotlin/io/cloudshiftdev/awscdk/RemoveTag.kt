@@ -31,6 +31,16 @@ import kotlin.collections.List
 public open class RemoveTag internal constructor(
   internal override val cdkObject: software.amazon.awscdk.RemoveTag,
 ) : CdkObject(cdkObject), IAspect {
+  public constructor(key: String) : this(software.amazon.awscdk.RemoveTag(key)
+  )
+
+  public constructor(key: String, props: TagProps) : this(software.amazon.awscdk.RemoveTag(key,
+      props.let(TagProps::unwrap))
+  )
+
+  public constructor(key: String, props: TagProps.Builder.() -> Unit) : this(key, TagProps(props)
+  )
+
   /**
    * The string key for the tag.
    */

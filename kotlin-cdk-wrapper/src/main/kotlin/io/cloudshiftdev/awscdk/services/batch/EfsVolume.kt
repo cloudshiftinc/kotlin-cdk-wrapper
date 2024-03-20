@@ -40,6 +40,13 @@ import kotlin.Unit
 public open class EfsVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.EfsVolume,
 ) : EcsVolume(cdkObject) {
+  public constructor(options: EfsVolumeOptions) :
+      this(software.amazon.awscdk.services.batch.EfsVolume(options.let(EfsVolumeOptions::unwrap))
+  )
+
+  public constructor(options: EfsVolumeOptions.Builder.() -> Unit) : this(EfsVolumeOptions(options)
+  )
+
   /**
    * The Amazon EFS access point ID to use.
    *

@@ -42,6 +42,22 @@ public open class PrivateDnsNamespace internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace,
 ) : Resource(cdkObject), IPrivateDnsNamespace {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrivateDnsNamespaceProps,
+  ) :
+      this(software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PrivateDnsNamespaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrivateDnsNamespaceProps.Builder.() -> Unit,
+  ) : this(scope, id, PrivateDnsNamespaceProps(props)
+  )
+
   /**
    * Creates a service within the namespace.
    *

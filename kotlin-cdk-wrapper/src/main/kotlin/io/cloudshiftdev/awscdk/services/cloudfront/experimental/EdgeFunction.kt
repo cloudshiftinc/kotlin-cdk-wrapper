@@ -99,6 +99,22 @@ public open class EdgeFunction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.experimental.EdgeFunction,
 ) : Resource(cdkObject), IVersion {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EdgeFunctionProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.experimental.EdgeFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EdgeFunctionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EdgeFunctionProps.Builder.() -> Unit,
+  ) : this(scope, id, EdgeFunctionProps(props)
+  )
+
   /**
    * Defines an alias for this version.
    *

@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDiscoverer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eventschemas.CfnDiscoverer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDiscovererProps,
+  ) :
+      this(software.amazon.awscdk.services.eventschemas.CfnDiscoverer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDiscovererProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDiscovererProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDiscovererProps(props)
+  )
+
   /**
    *
    */

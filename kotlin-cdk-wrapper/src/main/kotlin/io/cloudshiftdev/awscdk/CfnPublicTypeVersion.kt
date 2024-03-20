@@ -56,6 +56,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPublicTypeVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnPublicTypeVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.CfnPublicTypeVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublicTypeVersionProps,
+  ) :
+      this(software.amazon.awscdk.CfnPublicTypeVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPublicTypeVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPublicTypeVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPublicTypeVersionProps(props)
+  )
+
   /**
    * The Amazon Resource Number (ARN) of the extension.
    */

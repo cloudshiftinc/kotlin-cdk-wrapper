@@ -34,6 +34,13 @@ import kotlin.jvm.JvmName
 public open class Trigger internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codepipeline.Trigger,
 ) : CdkObject(cdkObject) {
+  public constructor(props: TriggerProps) :
+      this(software.amazon.awscdk.services.codepipeline.Trigger(props.let(TriggerProps::unwrap))
+  )
+
+  public constructor(props: TriggerProps.Builder.() -> Unit) : this(TriggerProps(props)
+  )
+
   /**
    * The pipeline source action where the trigger configuration.
    */

@@ -39,6 +39,22 @@ public open class LoadBalancerV2Origin internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin,
 ) : HttpOrigin(cdkObject) {
+  public constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2ILoadBalancerV2)
+      :
+      this(software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2ILoadBalancerV2::unwrap))
+  )
+
+  public constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2ILoadBalancerV2,
+      props: LoadBalancerV2OriginProps) :
+      this(software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2ILoadBalancerV2::unwrap),
+      props.let(LoadBalancerV2OriginProps::unwrap))
+  )
+
+  public constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2ILoadBalancerV2,
+      props: LoadBalancerV2OriginProps.Builder.() -> Unit) : this(loadBalancer,
+      LoadBalancerV2OriginProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.cloudfront.origins.LoadBalancerV2Origin].

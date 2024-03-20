@@ -38,6 +38,19 @@ import kotlin.collections.Map
 public open class GenericLinuxImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.GenericLinuxImage,
 ) : CdkObject(cdkObject), IMachineImage {
+  public constructor(amiMap: Map<String, String>) :
+      this(software.amazon.awscdk.services.ec2.GenericLinuxImage(amiMap)
+  )
+
+  public constructor(amiMap: Map<String, String>, props: GenericLinuxImageProps) :
+      this(software.amazon.awscdk.services.ec2.GenericLinuxImage(amiMap,
+      props.let(GenericLinuxImageProps::unwrap))
+  )
+
+  public constructor(amiMap: Map<String, String>, props: GenericLinuxImageProps.Builder.() -> Unit)
+      : this(amiMap, GenericLinuxImageProps(props)
+  )
+
   /**
    * Return the image to use in the given context.
    *

@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VpcLink internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLink,
 ) : Resource(cdkObject), IVpcLink {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpcLinkProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.VpcLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VpcLinkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpcLinkProps.Builder.() -> Unit,
+  ) : this(scope, id, VpcLinkProps(props)
+  )
+
   /**
    * Adds the provided security groups to the vpc link.
    *

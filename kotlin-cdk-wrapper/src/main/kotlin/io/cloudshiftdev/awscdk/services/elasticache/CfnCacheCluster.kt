@@ -81,6 +81,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCacheCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCacheClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticache.CfnCacheCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCacheClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCacheClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCacheClusterProps(props)
+  )
+
   /**
    * The DNS hostname of the cache node.
    *

@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLaunchTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnLaunchTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLaunchTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLaunchTemplateProps(props)
+  )
+
   /**
    * The default version of the launch template, such as 2.
    *

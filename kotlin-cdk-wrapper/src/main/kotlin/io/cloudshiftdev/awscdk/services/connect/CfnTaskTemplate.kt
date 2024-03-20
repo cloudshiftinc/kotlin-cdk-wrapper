@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTaskTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTaskTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnTaskTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTaskTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTaskTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTaskTemplateProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the task template.
    */

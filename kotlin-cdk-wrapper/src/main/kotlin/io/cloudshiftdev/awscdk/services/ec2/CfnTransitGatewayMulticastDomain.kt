@@ -48,6 +48,22 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayMulticastDomainProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayMulticastDomainProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayMulticastDomainProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayMulticastDomainProps(props)
+  )
+
   /**
    * The time the multicast domain was created.
    */

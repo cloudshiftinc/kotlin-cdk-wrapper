@@ -38,6 +38,28 @@ public open class HttpAlbIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration,
 ) : HttpRouteIntegration(cdkObject) {
+  public constructor(id: String,
+      listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationListener) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration(id,
+      listener.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationListener::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationListener,
+    props: HttpAlbIntegrationProps,
+  ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration(id,
+      listener.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationListener::unwrap),
+      props.let(HttpAlbIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    id: String,
+    listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationListener,
+    props: HttpAlbIntegrationProps.Builder.() -> Unit,
+  ) : this(id, listener, HttpAlbIntegrationProps(props)
+  )
+
   /**
    * Bind this integration to the route.
    *

@@ -55,6 +55,22 @@ public open class CfnEventIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appintegrations.CfnEventIntegration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventIntegrationProps,
+  ) :
+      this(software.amazon.awscdk.services.appintegrations.CfnEventIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEventIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEventIntegrationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEventIntegrationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the event integration.
    */

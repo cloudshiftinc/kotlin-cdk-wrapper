@@ -39,6 +39,22 @@ public open class CfnDirectoryRegistration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDirectoryRegistrationProps,
+  ) :
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDirectoryRegistrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDirectoryRegistrationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDirectoryRegistrationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) that was returned when you called
    * [CreateDirectoryRegistration](https://docs.aws.amazon.com/pca-connector-ad/latest/APIReference/API_CreateDirectoryRegistration.html)

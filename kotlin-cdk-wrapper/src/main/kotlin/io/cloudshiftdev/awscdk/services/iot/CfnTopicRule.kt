@@ -472,6 +472,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTopicRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTopicRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnTopicRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTopicRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTopicRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTopicRuleProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the AWS IoT rule, such as
    * `arn:aws:iot:us-east-2:123456789012:rule/MyIoTRule` .

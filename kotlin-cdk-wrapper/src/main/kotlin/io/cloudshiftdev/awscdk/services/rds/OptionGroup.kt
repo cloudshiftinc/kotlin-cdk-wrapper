@@ -87,6 +87,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class OptionGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.OptionGroup,
 ) : Resource(cdkObject), IOptionGroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: OptionGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.OptionGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(OptionGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: OptionGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, OptionGroupProps(props)
+  )
+
   /**
    * Adds a configuration to this OptionGroup.
    *

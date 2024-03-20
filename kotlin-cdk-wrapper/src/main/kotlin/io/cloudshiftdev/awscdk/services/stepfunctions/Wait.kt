@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Wait internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Wait,
 ) : State(cdkObject), INextable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WaitProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.Wait(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(WaitProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: WaitProps.Builder.() -> Unit,
+  ) : this(scope, id, WaitProps(props)
+  )
+
   /**
    * Continuable states of this Chainable.
    */

@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLoggingConfiguration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoggingConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLoggingConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoggingConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLoggingConfigurationProps(props)
+  )
+
   /**
    * The logging-configuration ARN.
    *

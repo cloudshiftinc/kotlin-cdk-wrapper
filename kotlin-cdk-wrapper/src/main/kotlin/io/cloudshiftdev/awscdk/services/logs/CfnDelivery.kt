@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDelivery internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CfnDelivery,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeliveryProps,
+  ) :
+      this(software.amazon.awscdk.services.logs.CfnDelivery(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeliveryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeliveryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeliveryProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) that uniquely identifies this delivery.
    */

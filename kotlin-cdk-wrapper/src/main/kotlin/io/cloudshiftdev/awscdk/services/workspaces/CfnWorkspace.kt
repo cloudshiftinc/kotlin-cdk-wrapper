@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnWorkspace internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.workspaces.CfnWorkspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkspaceProps,
+  ) :
+      this(software.amazon.awscdk.services.workspaces.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnWorkspaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnWorkspaceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnWorkspaceProps(props)
+  )
+
   /**
    * The identifier of the WorkSpace, returned as a string.
    */

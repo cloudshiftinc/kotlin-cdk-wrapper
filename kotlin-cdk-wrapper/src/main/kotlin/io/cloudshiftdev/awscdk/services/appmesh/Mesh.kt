@@ -35,6 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Mesh internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.Mesh,
 ) : Resource(cdkObject), IMesh {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.appmesh.Mesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: MeshProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.Mesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(MeshProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: MeshProps.Builder.() -> Unit,
+  ) : this(scope, id, MeshProps(props)
+  )
+
   /**
    * Adds a VirtualGateway to the Mesh.
    *

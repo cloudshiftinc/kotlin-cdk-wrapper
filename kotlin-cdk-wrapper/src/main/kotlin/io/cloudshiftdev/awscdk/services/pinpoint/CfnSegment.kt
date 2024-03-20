@@ -158,6 +158,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSegment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSegmentProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnSegment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSegmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSegmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSegmentProps(props)
+  )
+
   /**
    * The unique identifier for the Amazon Pinpoint application that the segment is associated with.
    */

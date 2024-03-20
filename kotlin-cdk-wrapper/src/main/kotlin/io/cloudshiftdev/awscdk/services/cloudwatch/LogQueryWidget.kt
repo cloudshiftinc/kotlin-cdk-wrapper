@@ -27,6 +27,14 @@ import kotlin.collections.List
 public open class LogQueryWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.LogQueryWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: LogQueryWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.LogQueryWidget(props.let(LogQueryWidgetProps::unwrap))
+  )
+
+  public constructor(props: LogQueryWidgetProps.Builder.() -> Unit) :
+      this(LogQueryWidgetProps(props)
+  )
+
   /**
    * Return the widget JSON for use in the dashboard.
    */

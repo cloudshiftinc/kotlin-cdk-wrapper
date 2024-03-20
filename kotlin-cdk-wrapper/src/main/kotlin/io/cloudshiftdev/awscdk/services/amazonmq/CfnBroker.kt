@@ -125,6 +125,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBroker internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBrokerProps,
+  ) :
+      this(software.amazon.awscdk.services.amazonmq.CfnBroker(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBrokerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBrokerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBrokerProps(props)
+  )
+
   /**
    * The AMQP endpoints of each broker instance as a list of strings.
    *

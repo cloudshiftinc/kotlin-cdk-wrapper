@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.CfnVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVersionProps(props)
+  )
+
   /**
    * The ARN of the version.
    */

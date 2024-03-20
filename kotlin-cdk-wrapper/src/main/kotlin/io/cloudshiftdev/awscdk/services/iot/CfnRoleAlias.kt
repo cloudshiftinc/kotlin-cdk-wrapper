@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRoleAlias internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnRoleAlias,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoleAliasProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnRoleAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRoleAliasProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoleAliasProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRoleAliasProps(props)
+  )
+
   /**
    * The role alias ARN.
    */

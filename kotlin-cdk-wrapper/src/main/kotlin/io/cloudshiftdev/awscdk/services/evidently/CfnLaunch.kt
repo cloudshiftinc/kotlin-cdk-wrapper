@@ -92,6 +92,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLaunch internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchProps,
+  ) :
+      this(software.amazon.awscdk.services.evidently.CfnLaunch(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLaunchProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLaunchProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLaunchProps(props)
+  )
+
   /**
    * The ARN of the launch.
    *

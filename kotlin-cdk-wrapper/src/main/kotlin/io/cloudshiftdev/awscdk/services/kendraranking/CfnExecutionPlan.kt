@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnExecutionPlan internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kendraranking.CfnExecutionPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnExecutionPlanProps,
+  ) :
+      this(software.amazon.awscdk.services.kendraranking.CfnExecutionPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnExecutionPlanProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnExecutionPlanProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnExecutionPlanProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the rescore execution plan.
    */

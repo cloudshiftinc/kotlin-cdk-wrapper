@@ -26,6 +26,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ReceiptRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.ReceiptRule,
 ) : Resource(cdkObject), IReceiptRule {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ReceiptRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.ReceiptRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ReceiptRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ReceiptRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, ReceiptRuleProps(props)
+  )
+
   /**
    * Adds an action to this receipt rule.
    *

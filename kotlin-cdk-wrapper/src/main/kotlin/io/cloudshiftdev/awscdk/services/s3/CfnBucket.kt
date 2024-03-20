@@ -56,6 +56,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBucket internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.CfnBucket,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.s3.CfnBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBucketProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBucketProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBucketProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBucketProps(props)
+  )
+
   /**
    * Configures the transfer acceleration state for an Amazon S3 bucket.
    */

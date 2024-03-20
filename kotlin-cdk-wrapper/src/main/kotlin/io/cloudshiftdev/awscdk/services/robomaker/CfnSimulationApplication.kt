@@ -66,6 +66,22 @@ public open class CfnSimulationApplication internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.robomaker.CfnSimulationApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSimulationApplicationProps,
+  ) :
+      this(software.amazon.awscdk.services.robomaker.CfnSimulationApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSimulationApplicationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSimulationApplicationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSimulationApplicationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the simulation application.
    */

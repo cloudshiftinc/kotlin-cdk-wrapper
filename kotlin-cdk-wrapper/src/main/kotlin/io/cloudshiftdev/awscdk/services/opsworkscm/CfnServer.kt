@@ -76,6 +76,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnServer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.opsworkscm.CfnServer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerProps,
+  ) :
+      this(software.amazon.awscdk.services.opsworkscm.CfnServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnServerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnServerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnServerProps(props)
+  )
+
   /**
    * Associate a public IP address with a server that you are launching.
    */

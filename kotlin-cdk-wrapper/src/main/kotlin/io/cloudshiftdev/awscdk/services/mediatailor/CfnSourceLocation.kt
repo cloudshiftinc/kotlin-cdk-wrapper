@@ -67,6 +67,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSourceLocation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediatailor.CfnSourceLocation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSourceLocationProps,
+  ) :
+      this(software.amazon.awscdk.services.mediatailor.CfnSourceLocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSourceLocationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSourceLocationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSourceLocationProps(props)
+  )
+
   /**
    * The access configuration for the source location.
    */

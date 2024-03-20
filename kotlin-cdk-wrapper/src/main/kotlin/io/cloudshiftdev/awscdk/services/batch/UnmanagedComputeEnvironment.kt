@@ -36,6 +36,27 @@ public open class UnmanagedComputeEnvironment internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment,
 ) : Resource(cdkObject), IUnmanagedComputeEnvironment, IComputeEnvironment {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UnmanagedComputeEnvironmentProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(UnmanagedComputeEnvironmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: UnmanagedComputeEnvironmentProps.Builder.() -> Unit,
+  ) : this(scope, id, UnmanagedComputeEnvironmentProps(props)
+  )
+
   /**
    * The ARN of this compute environment.
    */

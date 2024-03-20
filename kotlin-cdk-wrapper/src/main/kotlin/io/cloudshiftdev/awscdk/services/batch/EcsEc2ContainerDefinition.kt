@@ -49,6 +49,22 @@ public open class EcsEc2ContainerDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IEcsEc2ContainerDefinition, IEcsContainerDefinition
     {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsEc2ContainerDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EcsEc2ContainerDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsEc2ContainerDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, EcsEc2ContainerDefinitionProps(props)
+  )
+
   /**
    * Add a ulimit to this container.
    *

@@ -64,6 +64,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class DynamoDbDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.DynamoDbDataSource,
 ) : BackedDataSource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DynamoDbDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.DynamoDbDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DynamoDbDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DynamoDbDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, DynamoDbDataSourceProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.appsync.DynamoDbDataSource].
    */

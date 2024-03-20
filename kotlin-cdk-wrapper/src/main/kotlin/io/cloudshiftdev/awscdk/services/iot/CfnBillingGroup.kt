@@ -50,6 +50,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBillingGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.iot.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBillingGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnBillingGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnBillingGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnBillingGroupProps(props)
+  )
+
   /**
    * The ARN of the billing group.
    */

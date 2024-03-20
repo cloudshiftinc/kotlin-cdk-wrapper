@@ -36,6 +36,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class GatewayResponse internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponse,
 ) : Resource(cdkObject), IGatewayResponse {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GatewayResponseProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.GatewayResponse(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(GatewayResponseProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GatewayResponseProps.Builder.() -> Unit,
+  ) : this(scope, id, GatewayResponseProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.GatewayResponse].
    */

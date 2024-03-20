@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class RotationSchedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.RotationSchedule,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RotationScheduleProps,
+  ) :
+      this(software.amazon.awscdk.services.secretsmanager.RotationSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RotationScheduleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RotationScheduleProps.Builder.() -> Unit,
+  ) : this(scope, id, RotationScheduleProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.secretsmanager.RotationSchedule].
    */

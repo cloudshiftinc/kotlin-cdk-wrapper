@@ -204,6 +204,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.CfnRule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.events.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.events.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRuleProps(props)
+  )
+
   /**
    * The ARN of the rule, such as `arn:aws:events:us-east-2:123456789012:rule/example` .
    */

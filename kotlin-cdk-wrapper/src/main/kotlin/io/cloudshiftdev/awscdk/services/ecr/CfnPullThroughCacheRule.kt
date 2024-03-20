@@ -37,6 +37,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPullThroughCacheRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPullThroughCacheRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPullThroughCacheRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPullThroughCacheRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPullThroughCacheRuleProps(props)
+  )
+
   /**
    * The ARN of the Secrets Manager secret associated with the pull through cache rule.
    */

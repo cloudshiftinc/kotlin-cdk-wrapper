@@ -113,6 +113,22 @@ public open class CfnListener internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnListenerProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnListenerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnListenerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnListenerProps(props)
+  )
+
   /**
    * [TLS listener] The name of the Application-Layer Protocol Negotiation (ALPN) policy.
    */

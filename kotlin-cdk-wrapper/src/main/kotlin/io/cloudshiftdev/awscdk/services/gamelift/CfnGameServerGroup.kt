@@ -104,6 +104,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGameServerGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGameServerGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.gamelift.CfnGameServerGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGameServerGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGameServerGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGameServerGroupProps(props)
+  )
+
   /**
    * A unique identifier for the auto scaling group.
    */

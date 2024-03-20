@@ -59,6 +59,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMesh internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMeshProps,
+  ) :
+      this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMeshProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMeshProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMeshProps(props)
+  )
+
   /**
    * The full Amazon Resource Name (ARN) for the mesh.
    */

@@ -28,6 +28,19 @@ import software.amazon.awscdk.services.kinesis.IStream as AmazonAwscdkServicesKi
 public open class KinesisStream internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.KinesisStream,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream) :
+      this(software.amazon.awscdk.services.events.targets.KinesisStream(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap))
+  )
+
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream, props: KinesisStreamProps) :
+      this(software.amazon.awscdk.services.events.targets.KinesisStream(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap),
+      props.let(KinesisStreamProps::unwrap))
+  )
+
+  public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
+      props: KinesisStreamProps.Builder.() -> Unit) : this(stream, KinesisStreamProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger this Kinesis Stream as a result from a
    * CloudWatch event.

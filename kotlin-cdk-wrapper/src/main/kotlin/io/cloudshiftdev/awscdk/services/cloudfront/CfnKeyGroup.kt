@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnKeyGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnKeyGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeyGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnKeyGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnKeyGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnKeyGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnKeyGroupProps(props)
+  )
+
   /**
    * The identifier for the key group.
    */

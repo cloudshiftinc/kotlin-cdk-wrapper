@@ -33,6 +33,22 @@ public open class CfnResolverConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnResolverConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnResolverConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnResolverConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnResolverConfigProps(props)
+  )
+
   /**
    * The status of whether or not the Route 53 Resolver will create autodefined rules for reverse
    * DNS lookups.

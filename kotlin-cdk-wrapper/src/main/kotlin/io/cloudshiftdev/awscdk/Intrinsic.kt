@@ -34,6 +34,17 @@ import kotlin.collections.List
 public open class Intrinsic internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Intrinsic,
 ) : CdkObject(cdkObject), IResolvable {
+  public constructor(`value`: Any) : this(software.amazon.awscdk.Intrinsic(`value`)
+  )
+
+  public constructor(`value`: Any, options: IntrinsicProps) :
+      this(software.amazon.awscdk.Intrinsic(`value`, options.let(IntrinsicProps::unwrap))
+  )
+
+  public constructor(`value`: Any, options: IntrinsicProps.Builder.() -> Unit) : this(`value`,
+      IntrinsicProps(options)
+  )
+
   /**
    * The captured stack trace which represents the location in which this token was created.
    */

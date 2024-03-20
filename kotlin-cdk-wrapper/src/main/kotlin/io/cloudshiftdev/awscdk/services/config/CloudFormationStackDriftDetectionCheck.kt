@@ -34,6 +34,27 @@ public open class CloudFormationStackDriftDetectionCheck internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck,
 ) : ManagedRule(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CloudFormationStackDriftDetectionCheckProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CloudFormationStackDriftDetectionCheckProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CloudFormationStackDriftDetectionCheckProps.Builder.() -> Unit,
+  ) : this(scope, id, CloudFormationStackDriftDetectionCheckProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.config.CloudFormationStackDriftDetectionCheck].

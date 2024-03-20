@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPlacement internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot1click.CfnPlacement,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlacementProps,
+  ) :
+      this(software.amazon.awscdk.services.iot1click.CfnPlacement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPlacementProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPlacementProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPlacementProps(props)
+  )
+
   /**
    * The devices to associate with the placement, as defined by a mapping of zero or more key-value
    * pairs wherein the key is a template name and the value is a device ID.

@@ -37,6 +37,14 @@ public open class StepFunctionInvokeAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.StepFunctionInvokeAction,
 ) : Action(cdkObject) {
+  public constructor(props: StepFunctionsInvokeActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.StepFunctionInvokeAction(props.let(StepFunctionsInvokeActionProps::unwrap))
+  )
+
+  public constructor(props: StepFunctionsInvokeActionProps.Builder.() -> Unit) :
+      this(StepFunctionsInvokeActionProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.codepipeline.actions.StepFunctionInvokeAction].

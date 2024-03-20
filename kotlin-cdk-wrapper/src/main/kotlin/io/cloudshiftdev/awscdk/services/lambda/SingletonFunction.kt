@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SingletonFunction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.SingletonFunction,
 ) : FunctionBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SingletonFunctionProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.SingletonFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SingletonFunctionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SingletonFunctionProps.Builder.() -> Unit,
+  ) : this(scope, id, SingletonFunctionProps(props)
+  )
+
   /**
    * Using node.addDependency() does not work on this method as the underlying lambda function is
    * modeled as a singleton across the stack. Use this method instead to declare dependencies.

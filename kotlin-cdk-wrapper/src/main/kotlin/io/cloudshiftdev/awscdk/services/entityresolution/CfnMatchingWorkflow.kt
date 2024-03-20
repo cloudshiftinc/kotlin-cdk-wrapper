@@ -90,6 +90,22 @@ public open class CfnMatchingWorkflow internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMatchingWorkflowProps,
+  ) :
+      this(software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMatchingWorkflowProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMatchingWorkflowProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMatchingWorkflowProps(props)
+  )
+
   /**
    * The time of this MatchingWorkflow got created.
    */

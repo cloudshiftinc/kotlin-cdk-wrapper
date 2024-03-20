@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class FargateService internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.FargateService,
 ) : BaseService(cdkObject), IFargateService {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FargateServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.FargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FargateServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FargateServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, FargateServiceProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.FargateService].
    */

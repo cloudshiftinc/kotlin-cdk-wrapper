@@ -87,6 +87,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPatchBaseline internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPatchBaselineProps,
+  ) :
+      this(software.amazon.awscdk.services.ssm.CfnPatchBaseline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPatchBaselineProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPatchBaselineProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPatchBaselineProps(props)
+  )
+
   /**
    * A set of rules used to include patches in the baseline.
    */

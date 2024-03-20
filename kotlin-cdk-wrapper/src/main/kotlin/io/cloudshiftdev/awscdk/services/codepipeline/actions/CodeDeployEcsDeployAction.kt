@@ -49,6 +49,14 @@ public open class CodeDeployEcsDeployAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction,
 ) : Action(cdkObject) {
+  public constructor(props: CodeDeployEcsDeployActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction(props.let(CodeDeployEcsDeployActionProps::unwrap))
+  )
+
+  public constructor(props: CodeDeployEcsDeployActionProps.Builder.() -> Unit) :
+      this(CodeDeployEcsDeployActionProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction].

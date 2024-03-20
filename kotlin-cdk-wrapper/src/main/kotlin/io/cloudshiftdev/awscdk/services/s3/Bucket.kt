@@ -37,6 +37,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Bucket internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.Bucket,
 ) : BucketBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.s3.Bucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BucketProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.Bucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BucketProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BucketProps.Builder.() -> Unit,
+  ) : this(scope, id, BucketProps(props)
+  )
+
   /**
    * Adds a cross-origin access configuration for objects in an Amazon S3 bucket.
    *

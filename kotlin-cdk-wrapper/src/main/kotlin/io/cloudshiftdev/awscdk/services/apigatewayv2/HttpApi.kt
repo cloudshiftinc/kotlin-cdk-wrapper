@@ -35,6 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class HttpApi internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApi,
 ) : Resource(cdkObject), IHttpApi, IApi {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigatewayv2.HttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpApiProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.HttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(HttpApiProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpApiProps.Builder.() -> Unit,
+  ) : this(scope, id, HttpApiProps(props)
+  )
+
   /**
    * Add multiple routes that uses the same configuration.
    *

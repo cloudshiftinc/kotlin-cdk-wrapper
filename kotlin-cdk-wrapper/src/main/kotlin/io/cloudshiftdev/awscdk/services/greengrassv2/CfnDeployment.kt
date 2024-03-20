@@ -122,6 +122,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDeployment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.greengrassv2.CfnDeployment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeploymentProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrassv2.CfnDeployment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeploymentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeploymentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeploymentProps(props)
+  )
+
   /**
    * The ID of the deployment.
    */

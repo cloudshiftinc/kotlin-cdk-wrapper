@@ -29,6 +29,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class NoneDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.NoneDataSource,
 ) : BaseDataSource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NoneDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.NoneDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(NoneDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: NoneDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, NoneDataSourceProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.appsync.NoneDataSource].
    */

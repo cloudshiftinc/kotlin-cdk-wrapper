@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SrvRecord internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.SrvRecord,
 ) : RecordSet(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SrvRecordProps,
+  ) :
+      this(software.amazon.awscdk.services.route53.SrvRecord(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SrvRecordProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SrvRecordProps.Builder.() -> Unit,
+  ) : this(scope, id, SrvRecordProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.route53.SrvRecord].
    */

@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationFSxOpenZFS internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationFSxOpenZFSProps,
+  ) :
+      this(software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLocationFSxOpenZFSProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLocationFSxOpenZFSProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLocationFSxOpenZFSProps(props)
+  )
+
   /**
    * The ARN of the specified FSx for OpenZFS file system location.
    */

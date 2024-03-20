@@ -53,6 +53,22 @@ public open class CfnProfilingGroup internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfilingGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProfilingGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfilingGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProfilingGroupProps(props)
+  )
+
   /**
    * The agent permissions attached to this profiling group.
    */

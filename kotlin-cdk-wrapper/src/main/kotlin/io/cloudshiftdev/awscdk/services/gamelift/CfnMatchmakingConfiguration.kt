@@ -73,6 +73,22 @@ public open class CfnMatchmakingConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMatchmakingConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMatchmakingConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMatchmakingConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMatchmakingConfigurationProps(props)
+  )
+
   /**
    * A flag that determines whether a match that was created with this configuration must be
    * accepted by the matched players.

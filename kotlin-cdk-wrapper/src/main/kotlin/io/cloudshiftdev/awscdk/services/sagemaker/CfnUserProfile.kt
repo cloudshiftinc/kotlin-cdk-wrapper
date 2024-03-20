@@ -142,6 +142,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnUserProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserProfileProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the user profile, such as
    * `arn:aws:sagemaker:region:account-id:user-profile/domain-id/user-profile-name` .

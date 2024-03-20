@@ -37,6 +37,22 @@ public open class DynamoGetItem internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItem,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DynamoGetItemProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DynamoGetItemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DynamoGetItemProps.Builder.() -> Unit,
+  ) : this(scope, id, DynamoGetItemProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.DynamoGetItem].
    */

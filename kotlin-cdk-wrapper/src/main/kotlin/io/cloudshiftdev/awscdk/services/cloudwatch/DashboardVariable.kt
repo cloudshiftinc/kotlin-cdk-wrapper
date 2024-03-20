@@ -41,6 +41,14 @@ import kotlin.Unit
 public open class DashboardVariable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardVariable,
 ) : CdkObject(cdkObject), IVariable {
+  public constructor(options: DashboardVariableOptions) :
+      this(software.amazon.awscdk.services.cloudwatch.DashboardVariable(options.let(DashboardVariableOptions::unwrap))
+  )
+
+  public constructor(options: DashboardVariableOptions.Builder.() -> Unit) :
+      this(DashboardVariableOptions(options)
+  )
+
   /**
    * Return the variable JSON for use in the dashboard.
    */

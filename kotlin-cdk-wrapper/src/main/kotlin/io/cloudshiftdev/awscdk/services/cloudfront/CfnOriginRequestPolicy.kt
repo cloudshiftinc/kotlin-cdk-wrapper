@@ -71,6 +71,22 @@ public open class CfnOriginRequestPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginRequestPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOriginRequestPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOriginRequestPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOriginRequestPolicyProps(props)
+  )
+
   /**
    * The unique identifier for the origin request policy.
    *

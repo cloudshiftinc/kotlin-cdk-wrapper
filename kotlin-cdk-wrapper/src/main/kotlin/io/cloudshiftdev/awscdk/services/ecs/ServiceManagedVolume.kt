@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ServiceManagedVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ServiceManagedVolume,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServiceManagedVolumeProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.ServiceManagedVolume(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ServiceManagedVolumeProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ServiceManagedVolumeProps.Builder.() -> Unit,
+  ) : this(scope, id, ServiceManagedVolumeProps(props)
+  )
+
   /**
    * Volume configuration.
    */

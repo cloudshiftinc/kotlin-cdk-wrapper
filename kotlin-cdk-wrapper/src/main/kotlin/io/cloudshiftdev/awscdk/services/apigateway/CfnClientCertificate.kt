@@ -40,6 +40,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnClientCertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnClientCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apigateway.CfnClientCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClientCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnClientCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClientCertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClientCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClientCertificateProps(props)
+  )
+
   /**
    * The ID for the client certificate.
    *

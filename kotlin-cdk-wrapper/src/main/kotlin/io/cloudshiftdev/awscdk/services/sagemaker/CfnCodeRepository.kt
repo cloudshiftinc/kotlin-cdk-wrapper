@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCodeRepository internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCodeRepositoryProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnCodeRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCodeRepositoryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCodeRepositoryProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCodeRepositoryProps(props)
+  )
+
   /**
    * The name of the code repository, such as `myCodeRepo` .
    */

@@ -41,6 +41,22 @@ public open class TargetTrackingScalingPolicy internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.autoscaling.TargetTrackingScalingPolicy,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TargetTrackingScalingPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.TargetTrackingScalingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(TargetTrackingScalingPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: TargetTrackingScalingPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, TargetTrackingScalingPolicyProps(props)
+  )
+
   /**
    * ARN of the scaling policy.
    */

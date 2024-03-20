@@ -43,6 +43,22 @@ public open class SageMakerCreateEndpointConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SageMakerCreateEndpointConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SageMakerCreateEndpointConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SageMakerCreateEndpointConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, SageMakerCreateEndpointConfigProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig].

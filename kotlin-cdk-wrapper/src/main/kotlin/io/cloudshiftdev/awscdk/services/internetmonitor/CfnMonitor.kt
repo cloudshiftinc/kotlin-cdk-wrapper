@@ -86,6 +86,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnMonitor internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.internetmonitor.CfnMonitor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMonitorProps,
+  ) :
+      this(software.amazon.awscdk.services.internetmonitor.CfnMonitor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnMonitorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnMonitorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnMonitorProps(props)
+  )
+
   /**
    * The time when the monitor was created.
    */

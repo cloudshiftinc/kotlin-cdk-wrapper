@@ -31,6 +31,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VpnConnection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.VpnConnection,
 ) : VpnConnectionBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpnConnectionProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.VpnConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(VpnConnectionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: VpnConnectionProps.Builder.() -> Unit,
+  ) : this(scope, id, VpnConnectionProps(props)
+  )
+
   /**
    * The ASN of the customer gateway.
    */

@@ -80,6 +80,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnStage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStageProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStageProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStageProps(props)
+  )
+
   /**
    * Access log settings, including the access log format and access log destination ARN.
    */

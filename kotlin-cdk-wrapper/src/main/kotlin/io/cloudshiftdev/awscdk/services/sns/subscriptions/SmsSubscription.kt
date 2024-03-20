@@ -28,6 +28,19 @@ public open class SmsSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sns.subscriptions.SmsSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
+  public constructor(phoneNumber: String) :
+      this(software.amazon.awscdk.services.sns.subscriptions.SmsSubscription(phoneNumber)
+  )
+
+  public constructor(phoneNumber: String, props: SmsSubscriptionProps) :
+      this(software.amazon.awscdk.services.sns.subscriptions.SmsSubscription(phoneNumber,
+      props.let(SmsSubscriptionProps::unwrap))
+  )
+
+  public constructor(phoneNumber: String, props: SmsSubscriptionProps.Builder.() -> Unit) :
+      this(phoneNumber, SmsSubscriptionProps(props)
+  )
+
   /**
    * Returns a configuration used to subscribe to an SNS topic.
    *

@@ -42,6 +42,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Choice internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Choice,
 ) : State(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.stepfunctions.Choice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ChoiceProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.Choice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ChoiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ChoiceProps.Builder.() -> Unit,
+  ) : this(scope, id, ChoiceProps(props)
+  )
+
   /**
    * Return a Chain that contains all reachable end states from this Choice.
    *

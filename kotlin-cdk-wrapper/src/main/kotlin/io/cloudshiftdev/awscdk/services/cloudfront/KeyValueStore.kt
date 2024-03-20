@@ -24,6 +24,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class KeyValueStore internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.KeyValueStore,
 ) : Resource(cdkObject), IKeyValueStore {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.cloudfront.KeyValueStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KeyValueStoreProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.KeyValueStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(KeyValueStoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: KeyValueStoreProps.Builder.() -> Unit,
+  ) : this(scope, id, KeyValueStoreProps(props)
+  )
+
   /**
    * The ARN of the Key Value Store.
    */

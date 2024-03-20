@@ -66,6 +66,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRoutingProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnRoutingProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoutingProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnRoutingProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRoutingProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRoutingProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRoutingProfileProps(props)
+  )
+
   /**
    * Whether agents with this routing profile will have their routing order calculated based on
    * *time since their last inbound contact* or *longest idle time* .

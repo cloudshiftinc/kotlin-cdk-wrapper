@@ -40,6 +40,13 @@ import kotlin.jvm.JvmName
 public open class AwsApi internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.targets.AwsApi,
 ) : CdkObject(cdkObject), IRuleTarget {
+  public constructor(props: AwsApiProps) :
+      this(software.amazon.awscdk.services.events.targets.AwsApi(props.let(AwsApiProps::unwrap))
+  )
+
+  public constructor(props: AwsApiProps.Builder.() -> Unit) : this(AwsApiProps(props)
+  )
+
   /**
    * Returns a RuleTarget that can be used to trigger this AwsApi as a result from an EventBridge
    * event.

@@ -71,6 +71,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCapability internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapabilityProps,
+  ) :
+      this(software.amazon.awscdk.services.b2bi.CfnCapability(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCapabilityProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapabilityProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCapabilityProps(props)
+  )
+
   /**
    * Returns an Amazon Resource Name (ARN) for a specific AWS resource, such as a capability,
    * partnership, profile, or transformer.

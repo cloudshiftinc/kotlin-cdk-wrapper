@@ -34,6 +34,22 @@ public open class GlueDataBrewStartJobRun internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRun,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GlueDataBrewStartJobRunProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRun(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(GlueDataBrewStartJobRunProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GlueDataBrewStartJobRunProps.Builder.() -> Unit,
+  ) : this(scope, id, GlueDataBrewStartJobRunProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRun].

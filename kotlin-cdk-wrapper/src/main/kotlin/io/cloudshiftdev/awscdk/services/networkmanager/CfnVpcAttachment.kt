@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVpcAttachment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVpcAttachmentProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnVpcAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVpcAttachmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVpcAttachmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVpcAttachmentProps(props)
+  )
+
   /**
    * The ID of the VPC attachment.
    */

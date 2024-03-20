@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticache.CfnUserGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the user group.
    */

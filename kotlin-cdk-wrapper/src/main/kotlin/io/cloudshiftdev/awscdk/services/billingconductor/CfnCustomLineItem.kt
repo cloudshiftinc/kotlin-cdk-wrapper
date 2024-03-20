@@ -75,6 +75,22 @@ public open class CfnCustomLineItem internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.billingconductor.CfnCustomLineItem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomLineItemProps,
+  ) :
+      this(software.amazon.awscdk.services.billingconductor.CfnCustomLineItem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCustomLineItemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCustomLineItemProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCustomLineItemProps(props)
+  )
+
   /**
    * The AWS account in which this custom line item will be applied to.
    */

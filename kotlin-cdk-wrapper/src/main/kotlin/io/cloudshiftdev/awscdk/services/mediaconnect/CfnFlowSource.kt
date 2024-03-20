@@ -77,6 +77,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFlowSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlowSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFlowSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFlowSourceProps(props)
+  )
+
   /**
    * The IP address that the flow listens on for incoming content.
    */

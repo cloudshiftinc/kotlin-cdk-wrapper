@@ -41,6 +41,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.transfer.CfnProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.transfer.CfnProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProfileProps(props)
+  )
+
   /**
    * The `As2Id` is the *AS2-name* , as defined in the [RFC
    * 4130](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc4130) . For inbound

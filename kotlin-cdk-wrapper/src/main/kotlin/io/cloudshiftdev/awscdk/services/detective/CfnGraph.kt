@@ -44,6 +44,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGraph internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.detective.CfnGraph,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.detective.CfnGraph(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGraphProps,
+  ) :
+      this(software.amazon.awscdk.services.detective.CfnGraph(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGraphProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGraphProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGraphProps(props)
+  )
+
   /**
    * The ARN of the new behavior graph.
    */

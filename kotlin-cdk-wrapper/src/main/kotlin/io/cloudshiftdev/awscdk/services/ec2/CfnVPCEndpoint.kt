@@ -63,6 +63,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnVPCEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnVPCEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnVPCEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnVPCEndpointProps(props)
+  )
+
   /**
    * The date and time the VPC endpoint was created.
    *

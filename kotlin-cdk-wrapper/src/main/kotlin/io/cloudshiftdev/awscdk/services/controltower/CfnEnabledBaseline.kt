@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEnabledBaseline internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaseline,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnabledBaselineProps,
+  ) :
+      this(software.amazon.awscdk.services.controltower.CfnEnabledBaseline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnabledBaselineProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnabledBaselineProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnabledBaselineProps(props)
+  )
+
   /**
    * The ARN of the `EnabledBaseline` resource.
    */

@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.wafv2.CfnIPSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPSetProps,
+  ) :
+      this(software.amazon.awscdk.services.wafv2.CfnIPSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPSetProps(props)
+  )
+
   /**
    * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses
    * that you want AWS WAF to inspect for in incoming requests.

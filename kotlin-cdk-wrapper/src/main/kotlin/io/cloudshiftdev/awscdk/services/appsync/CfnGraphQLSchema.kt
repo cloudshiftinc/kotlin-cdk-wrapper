@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGraphQLSchema internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.CfnGraphQLSchema,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGraphQLSchemaProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.CfnGraphQLSchema(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnGraphQLSchemaProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnGraphQLSchemaProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnGraphQLSchemaProps(props)
+  )
+
   /**
    * The AWS AppSync GraphQL API identifier to which you want to apply this schema.
    */

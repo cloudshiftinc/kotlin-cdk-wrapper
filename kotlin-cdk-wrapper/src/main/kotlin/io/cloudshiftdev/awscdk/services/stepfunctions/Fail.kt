@@ -27,6 +27,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Fail internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Fail,
 ) : State(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.stepfunctions.Fail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FailProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.Fail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(FailProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: FailProps.Builder.() -> Unit,
+  ) : this(scope, id, FailProps(props)
+  )
+
   /**
    * Continuable states of this Chainable.
    */

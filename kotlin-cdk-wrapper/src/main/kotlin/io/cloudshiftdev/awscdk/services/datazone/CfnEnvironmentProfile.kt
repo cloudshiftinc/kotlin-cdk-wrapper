@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEnvironmentProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.datazone.CfnEnvironmentProfile,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.datazone.CfnEnvironmentProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEnvironmentProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEnvironmentProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEnvironmentProfileProps(props)
+  )
+
   /**
    * The timestamp of when an environment profile was created.
    */

@@ -35,6 +35,22 @@ public open class GitHubEnterpriseSourceCredentials internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GitHubEnterpriseSourceCredentialsProps,
+  ) :
+      this(software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(GitHubEnterpriseSourceCredentialsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: GitHubEnterpriseSourceCredentialsProps.Builder.() -> Unit,
+  ) : this(scope, id, GitHubEnterpriseSourceCredentialsProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials].

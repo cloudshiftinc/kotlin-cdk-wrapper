@@ -64,6 +64,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPermissionSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sso.CfnPermissionSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPermissionSetProps,
+  ) :
+      this(software.amazon.awscdk.services.sso.CfnPermissionSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnPermissionSetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnPermissionSetProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnPermissionSetProps(props)
+  )
+
   /**
    * The permission set ARN of the permission set, such as
    * `arn:aws:sso:::permissionSet/ins-instanceid/ps-permissionsetid` .

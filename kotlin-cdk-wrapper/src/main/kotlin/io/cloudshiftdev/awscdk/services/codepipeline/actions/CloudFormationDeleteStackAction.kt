@@ -62,6 +62,14 @@ public open class CloudFormationDeleteStackAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction,
 ) : Action(cdkObject) {
+  public constructor(props: CloudFormationDeleteStackActionProps) :
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction(props.let(CloudFormationDeleteStackActionProps::unwrap))
+  )
+
+  public constructor(props: CloudFormationDeleteStackActionProps.Builder.() -> Unit) :
+      this(CloudFormationDeleteStackActionProps(props)
+  )
+
   /**
    * Add statement to the service role assumed by CloudFormation while executing this action.
    *

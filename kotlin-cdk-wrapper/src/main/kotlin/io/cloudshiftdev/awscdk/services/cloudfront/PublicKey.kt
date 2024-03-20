@@ -35,6 +35,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class PublicKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.PublicKey,
 ) : Resource(cdkObject), IPublicKey {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PublicKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudfront.PublicKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PublicKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PublicKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, PublicKeyProps(props)
+  )
+
   /**
    * The ID of the key group.
    */

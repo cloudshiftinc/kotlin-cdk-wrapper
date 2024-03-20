@@ -62,6 +62,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCapacityReservation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapacityReservationProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnCapacityReservation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCapacityReservationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCapacityReservationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCapacityReservationProps(props)
+  )
+
   /**
    * Returns the Availability Zone in which the capacity is reserved.
    *

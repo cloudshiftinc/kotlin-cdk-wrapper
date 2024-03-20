@@ -78,6 +78,14 @@ public open class AuthenticateCognitoAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction,
 ) : ListenerAction(cdkObject) {
+  public constructor(options: AuthenticateCognitoActionProps) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction(options.let(AuthenticateCognitoActionProps::unwrap))
+  )
+
+  public constructor(options: AuthenticateCognitoActionProps.Builder.() -> Unit) :
+      this(AuthenticateCognitoActionProps(options)
+  )
+
   /**
    * Called when the action is being used in a listener.
    *

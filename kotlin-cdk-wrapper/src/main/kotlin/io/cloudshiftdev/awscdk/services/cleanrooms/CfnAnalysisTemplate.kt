@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAnalysisTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnalysisTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAnalysisTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAnalysisTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAnalysisTemplateProps(props)
+  )
+
   /**
    * The parameters of the analysis template.
    */

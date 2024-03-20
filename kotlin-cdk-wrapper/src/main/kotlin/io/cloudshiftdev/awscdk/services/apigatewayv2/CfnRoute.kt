@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRoute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnRoute,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRouteProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.CfnRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRouteProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRouteProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRouteProps(props)
+  )
+
   /**
    * The API identifier.
    */

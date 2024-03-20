@@ -52,6 +52,22 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataCatalogEncryptionSettingsProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDataCatalogEncryptionSettingsProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDataCatalogEncryptionSettingsProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDataCatalogEncryptionSettingsProps(props)
+  )
+
   /**
    *
    */

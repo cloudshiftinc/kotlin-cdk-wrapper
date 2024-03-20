@@ -28,6 +28,19 @@ import kotlin.Unit
 public open class RepositoryImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.RepositoryImage,
 ) : ContainerImage(cdkObject) {
+  public constructor(imageName: String) :
+      this(software.amazon.awscdk.services.ecs.RepositoryImage(imageName)
+  )
+
+  public constructor(imageName: String, props: RepositoryImageProps) :
+      this(software.amazon.awscdk.services.ecs.RepositoryImage(imageName,
+      props.let(RepositoryImageProps::unwrap))
+  )
+
+  public constructor(imageName: String, props: RepositoryImageProps.Builder.() -> Unit) :
+      this(imageName, RepositoryImageProps(props)
+  )
+
   /**
    * Called when the image is used by a ContainerDefinition.
    *

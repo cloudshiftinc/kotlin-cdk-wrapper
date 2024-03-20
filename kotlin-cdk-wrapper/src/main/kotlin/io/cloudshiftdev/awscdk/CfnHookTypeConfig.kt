@@ -32,6 +32,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHookTypeConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnHookTypeConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHookTypeConfigProps,
+  ) :
+      this(software.amazon.awscdk.CfnHookTypeConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHookTypeConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHookTypeConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHookTypeConfigProps(props)
+  )
+
   /**
    * The Amazon Resource Number (ARN) of the activated hook type configuration, in this account and
    * Region.

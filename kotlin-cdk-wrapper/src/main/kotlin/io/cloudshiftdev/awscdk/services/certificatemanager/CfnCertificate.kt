@@ -75,6 +75,22 @@ public open class CfnCertificate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.certificatemanager.CfnCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.certificatemanager.CfnCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCertificateProps(props)
+  )
+
   /**
    *
    */

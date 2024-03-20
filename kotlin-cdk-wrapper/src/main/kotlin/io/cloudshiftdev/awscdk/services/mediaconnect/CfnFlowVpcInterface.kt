@@ -51,6 +51,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFlowVpcInterface internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowVpcInterfaceProps,
+  ) :
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFlowVpcInterfaceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFlowVpcInterfaceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFlowVpcInterfaceProps(props)
+  )
+
   /**
    * The IDs of the network interfaces that MediaConnect created in your account.
    */

@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccessor internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.managedblockchain.CfnAccessor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessorProps,
+  ) :
+      this(software.amazon.awscdk.services.managedblockchain.CfnAccessor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessorProps(props)
+  )
+
   /**
    * The type of the accessor.
    */

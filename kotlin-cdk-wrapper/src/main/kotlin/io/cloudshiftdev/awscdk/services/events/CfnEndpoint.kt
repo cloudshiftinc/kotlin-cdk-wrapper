@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.events.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEndpointProps(props)
+  )
+
   /**
    * The ARN of the endpoint.
    */

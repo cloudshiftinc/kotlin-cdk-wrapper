@@ -172,6 +172,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnJob internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.databrew.CfnJob,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJobProps,
+  ) :
+      this(software.amazon.awscdk.services.databrew.CfnJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnJobProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJobProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnJobProps(props)
+  )
+
   /**
    * One or more artifacts that represent the AWS Glue Data Catalog output from running the job.
    */

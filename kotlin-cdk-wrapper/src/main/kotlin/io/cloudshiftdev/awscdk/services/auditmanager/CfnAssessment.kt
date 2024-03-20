@@ -86,6 +86,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAssessment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssessmentProps,
+  ) :
+      this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAssessmentProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAssessmentProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAssessmentProps(props)
+  )
+
   /**
    * The destination that evidence reports are stored in for the assessment.
    */

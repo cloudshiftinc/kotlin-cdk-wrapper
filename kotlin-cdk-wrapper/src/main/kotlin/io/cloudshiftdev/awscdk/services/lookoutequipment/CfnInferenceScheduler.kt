@@ -70,6 +70,22 @@ public open class CfnInferenceScheduler internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInferenceSchedulerProps,
+  ) :
+      this(software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnInferenceSchedulerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnInferenceSchedulerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnInferenceSchedulerProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the inference scheduler being created.
    */

@@ -69,6 +69,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRotation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnRotation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRotationProps,
+  ) :
+      this(software.amazon.awscdk.services.ssmcontacts.CfnRotation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnRotationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnRotationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnRotationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `Rotation` resource.
    */

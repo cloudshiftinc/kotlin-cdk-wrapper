@@ -79,6 +79,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTaskDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTaskDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.iotwireless.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTaskDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTaskDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTaskDefinitionProps(props)
+  )
+
   /**
    * The Amazon Resource Name of the resource.
    */

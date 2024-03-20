@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.opsworks.CfnUserProfile,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.opsworks.CfnUserProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserProfileProps(props)
+  )
+
   /**
    * Whether users can specify their own SSH public key through the My Settings page.
    */

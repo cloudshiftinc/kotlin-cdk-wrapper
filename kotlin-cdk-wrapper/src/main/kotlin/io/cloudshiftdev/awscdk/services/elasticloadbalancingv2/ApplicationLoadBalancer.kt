@@ -55,6 +55,22 @@ public open class ApplicationLoadBalancer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer,
 ) : BaseLoadBalancer(cdkObject), IApplicationLoadBalancer {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationLoadBalancerProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ApplicationLoadBalancerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ApplicationLoadBalancerProps.Builder.() -> Unit,
+  ) : this(scope, id, ApplicationLoadBalancerProps(props)
+  )
+
   /**
    * Add a new listener to this load balancer.
    *

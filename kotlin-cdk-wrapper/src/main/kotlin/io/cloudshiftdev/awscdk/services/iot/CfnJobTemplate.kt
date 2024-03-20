@@ -68,6 +68,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnJobTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJobTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnJobTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnJobTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnJobTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnJobTemplateProps(props)
+  )
+
   /**
    * The criteria that determine when and how a job abort takes place.
    */

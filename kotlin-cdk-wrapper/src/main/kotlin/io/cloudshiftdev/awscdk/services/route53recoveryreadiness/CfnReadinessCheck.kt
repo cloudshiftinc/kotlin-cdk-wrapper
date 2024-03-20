@@ -52,6 +52,27 @@ public open class CfnReadinessCheck internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReadinessCheckProps,
+  ) :
+      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReadinessCheckProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReadinessCheckProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReadinessCheckProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the readiness check.
    */

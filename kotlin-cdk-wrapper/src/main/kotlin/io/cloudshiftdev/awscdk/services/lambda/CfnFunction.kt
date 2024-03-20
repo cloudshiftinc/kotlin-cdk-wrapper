@@ -142,6 +142,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFunction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.CfnFunction,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFunctionProps,
+  ) :
+      this(software.amazon.awscdk.services.lambda.CfnFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnFunctionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnFunctionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnFunctionProps(props)
+  )
+
   /**
    * The instruction set architecture that the function supports.
    */

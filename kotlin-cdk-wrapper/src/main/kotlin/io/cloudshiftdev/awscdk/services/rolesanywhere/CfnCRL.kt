@@ -45,6 +45,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCRL internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnCRL,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCRLProps,
+  ) :
+      this(software.amazon.awscdk.services.rolesanywhere.CfnCRL(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCRLProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCRLProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCRLProps(props)
+  )
+
   /**
    *
    */

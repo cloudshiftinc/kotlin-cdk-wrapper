@@ -63,6 +63,22 @@ public open class EmrCreateCluster internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrCreateClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EmrCreateClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EmrCreateClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, EmrCreateClusterProps(props)
+  )
+
   /**
    * The autoscaling role for the EMR Cluster.
    *

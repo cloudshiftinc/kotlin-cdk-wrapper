@@ -48,6 +48,27 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNotebookInstanceLifecycleConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNotebookInstanceLifecycleConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNotebookInstanceLifecycleConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNotebookInstanceLifecycleConfigProps(props)
+  )
+
   /**
    *
    */

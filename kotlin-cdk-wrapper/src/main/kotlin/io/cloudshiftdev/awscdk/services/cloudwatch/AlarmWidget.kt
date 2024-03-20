@@ -27,6 +27,13 @@ import kotlin.jvm.JvmName
 public open class AlarmWidget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmWidget,
 ) : ConcreteWidget(cdkObject) {
+  public constructor(props: AlarmWidgetProps) :
+      this(software.amazon.awscdk.services.cloudwatch.AlarmWidget(props.let(AlarmWidgetProps::unwrap))
+  )
+
+  public constructor(props: AlarmWidgetProps.Builder.() -> Unit) : this(AlarmWidgetProps(props)
+  )
+
   /**
    * Return the widget JSON for use in the dashboard.
    */

@@ -78,6 +78,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReplicator internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.msk.CfnReplicator,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicatorProps,
+  ) :
+      this(software.amazon.awscdk.services.msk.CfnReplicator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnReplicatorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnReplicatorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnReplicatorProps(props)
+  )
+
   /**
    * Amazon Resource Name (ARN) for the created replicator.
    */

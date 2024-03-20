@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStreamingImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamingImageProps,
+  ) :
+      this(software.amazon.awscdk.services.nimblestudio.CfnStreamingImage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStreamingImageProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamingImageProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStreamingImageProps(props)
+  )
+
   /**
    * TODO</p>.
    */

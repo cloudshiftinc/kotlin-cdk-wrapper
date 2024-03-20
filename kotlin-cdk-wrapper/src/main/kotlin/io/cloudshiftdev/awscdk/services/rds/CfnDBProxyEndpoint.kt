@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDBProxyEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyEndpoint,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBProxyEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.CfnDBProxyEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBProxyEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBProxyEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBProxyEndpointProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) representing the DB proxy endpoint.
    */

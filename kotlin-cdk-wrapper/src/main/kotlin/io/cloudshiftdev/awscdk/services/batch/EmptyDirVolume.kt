@@ -35,6 +35,14 @@ import kotlin.Unit
 public open class EmptyDirVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolume,
 ) : EksVolume(cdkObject) {
+  public constructor(options: EmptyDirVolumeOptions) :
+      this(software.amazon.awscdk.services.batch.EmptyDirVolume(options.let(EmptyDirVolumeOptions::unwrap))
+  )
+
+  public constructor(options: EmptyDirVolumeOptions.Builder.() -> Unit) :
+      this(EmptyDirVolumeOptions(options)
+  )
+
   /**
    * The storage type to use for this Volume.
    *

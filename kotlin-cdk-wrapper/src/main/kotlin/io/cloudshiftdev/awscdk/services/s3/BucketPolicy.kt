@@ -43,6 +43,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BucketPolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.BucketPolicy,
 ) : Resource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BucketPolicyProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.BucketPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(BucketPolicyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: BucketPolicyProps.Builder.() -> Unit,
+  ) : this(scope, id, BucketPolicyProps(props)
+  )
+
   /**
    * Sets the removal policy for the BucketPolicy.
    *

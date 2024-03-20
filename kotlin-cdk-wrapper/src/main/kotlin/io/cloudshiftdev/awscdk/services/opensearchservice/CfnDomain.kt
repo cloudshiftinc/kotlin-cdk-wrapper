@@ -145,6 +145,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDomain internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.opensearchservice.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainProps,
+  ) :
+      this(software.amazon.awscdk.services.opensearchservice.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDomainProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDomainProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDomainProps(props)
+  )
+
   /**
    * An AWS Identity and Access Management ( IAM ) policy document that specifies who can access the
    * OpenSearch Service domain and their permissions.

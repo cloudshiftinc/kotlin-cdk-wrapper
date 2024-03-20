@@ -55,6 +55,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProvisioningTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot.CfnProvisioningTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProvisioningTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.iot.CfnProvisioningTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProvisioningTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProvisioningTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProvisioningTemplateProps(props)
+  )
+
   /**
    * The ARN that identifies the provisioning template.
    */

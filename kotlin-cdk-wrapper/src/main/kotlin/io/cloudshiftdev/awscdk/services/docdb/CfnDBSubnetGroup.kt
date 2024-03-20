@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDBSubnetGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.docdb.CfnDBSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBSubnetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.docdb.CfnDBSubnetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBSubnetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBSubnetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBSubnetGroupProps(props)
+  )
+
   /**
    *
    */

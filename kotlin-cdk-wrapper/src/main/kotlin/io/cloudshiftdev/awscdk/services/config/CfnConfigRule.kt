@@ -115,6 +115,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConfigRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.CfnConfigRule,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CfnConfigRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigRuleProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the AWS Config rule, such as
    * `arn:aws:config:us-east-1:123456789012:config-rule/config-rule-a1bzhi` .

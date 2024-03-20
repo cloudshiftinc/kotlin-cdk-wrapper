@@ -71,6 +71,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnClassifier internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.glue.CfnClassifier,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClassifierProps,
+  ) :
+      this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClassifierProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClassifierProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClassifierProps(props)
+  )
+
   /**
    *
    */

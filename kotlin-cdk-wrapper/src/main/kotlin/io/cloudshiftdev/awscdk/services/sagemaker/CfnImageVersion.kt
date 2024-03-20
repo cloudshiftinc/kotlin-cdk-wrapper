@@ -64,6 +64,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnImageVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sagemaker.CfnImageVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnImageVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.sagemaker.CfnImageVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnImageVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnImageVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnImageVersionProps(props)
+  )
+
   /**
    * The alias of the image version.
    */

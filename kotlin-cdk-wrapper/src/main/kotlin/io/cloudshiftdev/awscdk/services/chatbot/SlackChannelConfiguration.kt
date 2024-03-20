@@ -42,6 +42,22 @@ public open class SlackChannelConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.chatbot.SlackChannelConfiguration,
 ) : Resource(cdkObject), ISlackChannelConfiguration {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SlackChannelConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.chatbot.SlackChannelConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SlackChannelConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SlackChannelConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, SlackChannelConfigurationProps(props)
+  )
+
   /**
    * Adds a SNS topic that deliver notifications to AWS Chatbot.
    *

@@ -88,6 +88,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDistribution internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDistribution,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDistributionProps,
+  ) :
+      this(software.amazon.awscdk.services.lightsail.CfnDistribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDistributionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDistributionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDistributionProps(props)
+  )
+
   /**
    * Indicates whether you can update the distribution’s current bundle to another bundle.
    */

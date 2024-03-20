@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDashboard internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnDashboard,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDashboardProps,
+  ) :
+      this(software.amazon.awscdk.services.cloudwatch.CfnDashboard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDashboardProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDashboardProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDashboardProps(props)
+  )
+
   /**
    *
    */

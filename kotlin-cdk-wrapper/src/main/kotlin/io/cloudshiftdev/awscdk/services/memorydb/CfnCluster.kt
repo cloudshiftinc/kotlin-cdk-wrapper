@@ -74,6 +74,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCluster internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.memorydb.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterProps,
+  ) :
+      this(software.amazon.awscdk.services.memorydb.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnClusterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnClusterProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnClusterProps(props)
+  )
+
   /**
    * The name of the Access Control List to associate with the cluster .
    */

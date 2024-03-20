@@ -90,6 +90,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConfiguredTable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfiguredTableProps,
+  ) :
+      this(software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfiguredTableProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfiguredTableProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfiguredTableProps(props)
+  )
+
   /**
    * The columns within the underlying AWS Glue table that can be utilized within collaborations.
    */

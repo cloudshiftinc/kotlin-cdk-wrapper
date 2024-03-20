@@ -70,6 +70,22 @@ public open class AutoScalingGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.AutoScalingGroup,
 ) : Resource(cdkObject), ILoadBalancerTarget, IConnectable, IApplicationLoadBalancerTarget,
     INetworkLoadBalancerTarget, IAutoScalingGroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AutoScalingGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.autoscaling.AutoScalingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(AutoScalingGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: AutoScalingGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, AutoScalingGroupProps(props)
+  )
+
   /**
    * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
    *

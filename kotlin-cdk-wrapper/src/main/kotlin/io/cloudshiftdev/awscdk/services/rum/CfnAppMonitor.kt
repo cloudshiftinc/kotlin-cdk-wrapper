@@ -88,6 +88,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAppMonitor internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAppMonitorProps,
+  ) :
+      this(software.amazon.awscdk.services.rum.CfnAppMonitor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAppMonitorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAppMonitorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAppMonitorProps(props)
+  )
+
   /**
    * A structure that contains much of the configuration data for the app monitor.
    */

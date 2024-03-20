@@ -54,6 +54,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTransitGatewayConnect internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayConnectProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayConnectProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayConnectProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayConnectProps(props)
+  )
+
   /**
    * The creation time.
    */

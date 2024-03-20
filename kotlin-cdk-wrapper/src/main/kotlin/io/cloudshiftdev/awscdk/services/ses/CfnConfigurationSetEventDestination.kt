@@ -64,6 +64,22 @@ public open class CfnConfigurationSetEventDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationSetEventDestinationProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigurationSetEventDestinationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigurationSetEventDestinationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigurationSetEventDestinationProps(props)
+  )
+
   /**
    *
    */

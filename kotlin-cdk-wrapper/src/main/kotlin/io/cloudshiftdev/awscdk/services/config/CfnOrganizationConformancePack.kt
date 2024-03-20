@@ -53,6 +53,22 @@ public open class CfnOrganizationConformancePack internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.config.CfnOrganizationConformancePack,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOrganizationConformancePackProps,
+  ) :
+      this(software.amazon.awscdk.services.config.CfnOrganizationConformancePack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnOrganizationConformancePackProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnOrganizationConformancePackProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnOrganizationConformancePackProps(props)
+  )
+
   /**
    * A list of `ConformancePackInputParameter` objects.
    */

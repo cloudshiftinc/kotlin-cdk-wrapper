@@ -42,6 +42,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUserHierarchyGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnUserHierarchyGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserHierarchyGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnUserHierarchyGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUserHierarchyGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUserHierarchyGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUserHierarchyGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the user hierarchy group.
    */

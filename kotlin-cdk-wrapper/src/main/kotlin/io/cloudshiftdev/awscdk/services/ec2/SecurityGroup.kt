@@ -68,6 +68,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class SecurityGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.SecurityGroup,
 ) : Resource(cdkObject), ISecurityGroup {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SecurityGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.SecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SecurityGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SecurityGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, SecurityGroupProps(props)
+  )
+
   /**
    * Add an egress rule for the current security group.
    *

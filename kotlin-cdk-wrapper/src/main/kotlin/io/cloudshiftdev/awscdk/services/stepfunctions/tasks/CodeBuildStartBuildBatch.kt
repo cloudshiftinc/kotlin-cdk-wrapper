@@ -54,6 +54,22 @@ public open class CodeBuildStartBuildBatch internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CodeBuildStartBuildBatchProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CodeBuildStartBuildBatchProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CodeBuildStartBuildBatchProps.Builder.() -> Unit,
+  ) : this(scope, id, CodeBuildStartBuildBatchProps(props)
+  )
+
   /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch].

@@ -249,6 +249,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAutomationRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.securityhub.CfnAutomationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAutomationRuleProps,
+  ) :
+      this(software.amazon.awscdk.services.securityhub.CfnAutomationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAutomationRuleProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAutomationRuleProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAutomationRuleProps(props)
+  )
+
   /**
    * One or more actions to update finding fields if a finding matches the conditions specified in
    * `Criteria` .

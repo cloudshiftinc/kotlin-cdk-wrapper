@@ -64,6 +64,27 @@ public open class CfnAutoScalingConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAutoScalingConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAutoScalingConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAutoScalingConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAutoScalingConfigurationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of this auto scaling configuration.
    */

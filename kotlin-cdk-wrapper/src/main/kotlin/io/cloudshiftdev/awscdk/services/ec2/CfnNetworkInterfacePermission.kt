@@ -37,6 +37,22 @@ public open class CfnNetworkInterfacePermission internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInterfacePermissionProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnNetworkInterfacePermissionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnNetworkInterfacePermissionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnNetworkInterfacePermissionProps(props)
+  )
+
   /**
    *
    */

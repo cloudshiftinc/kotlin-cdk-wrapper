@@ -46,6 +46,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnHypervisor internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.backupgateway.CfnHypervisor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.backupgateway.CfnHypervisor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHypervisorProps,
+  ) :
+      this(software.amazon.awscdk.services.backupgateway.CfnHypervisor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnHypervisorProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnHypervisorProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnHypervisorProps(props)
+  )
+
   /**
    * Returns `HypervisorArn` , an Amazon Resource Name (ARN) that uniquely identifies a Hypervisor.
    *

@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Model internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.Model,
 ) : Resource(cdkObject), IModel {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ModelProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.Model(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ModelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ModelProps.Builder.() -> Unit,
+  ) : this(scope, id, ModelProps(props)
+  )
+
   /**
    * Returns the model name, such as 'myModel'.
    */

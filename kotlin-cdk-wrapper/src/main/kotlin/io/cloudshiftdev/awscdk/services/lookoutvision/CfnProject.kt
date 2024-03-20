@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProject internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lookoutvision.CfnProject,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProjectProps,
+  ) :
+      this(software.amazon.awscdk.services.lookoutvision.CfnProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProjectProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProjectProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProjectProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name of the project.
    */

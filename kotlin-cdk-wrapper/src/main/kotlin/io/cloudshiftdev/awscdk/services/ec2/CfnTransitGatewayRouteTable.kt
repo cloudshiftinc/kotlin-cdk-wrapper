@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTransitGatewayRouteTable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayRouteTableProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTransitGatewayRouteTableProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTransitGatewayRouteTableProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTransitGatewayRouteTableProps(props)
+  )
+
   /**
    * The ID of the transit gateway route table.
    */

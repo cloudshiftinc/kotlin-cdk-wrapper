@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class HttpDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.HttpDataSource,
 ) : BackedDataSource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.HttpDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(HttpDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: HttpDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, HttpDataSourceProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.appsync.HttpDataSource].
    */

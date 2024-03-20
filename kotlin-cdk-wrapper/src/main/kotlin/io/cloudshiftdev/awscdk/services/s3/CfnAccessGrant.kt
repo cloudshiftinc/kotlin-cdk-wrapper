@@ -72,6 +72,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAccessGrant internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessGrantProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnAccessGrant(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAccessGrantProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAccessGrantProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAccessGrantProps(props)
+  )
+
   /**
    * The configuration options of the grant location.
    */

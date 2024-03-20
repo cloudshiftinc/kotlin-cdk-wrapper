@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSourceCredential internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.CfnSourceCredential,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSourceCredentialProps,
+  ) :
+      this(software.amazon.awscdk.services.codebuild.CfnSourceCredential(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSourceCredentialProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSourceCredentialProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSourceCredentialProps(props)
+  )
+
   /**
    *
    */

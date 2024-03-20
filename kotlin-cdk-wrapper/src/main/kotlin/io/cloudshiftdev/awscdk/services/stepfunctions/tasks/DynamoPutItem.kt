@@ -38,6 +38,22 @@ public open class DynamoPutItem internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItem,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DynamoPutItemProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(DynamoPutItemProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: DynamoPutItemProps.Builder.() -> Unit,
+  ) : this(scope, id, DynamoPutItemProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.DynamoPutItem].
    */

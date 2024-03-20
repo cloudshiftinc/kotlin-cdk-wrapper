@@ -29,6 +29,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class StringListParameter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssm.StringListParameter,
 ) : Resource(cdkObject), IStringListParameter, IParameter {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StringListParameterProps,
+  ) :
+      this(software.amazon.awscdk.services.ssm.StringListParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(StringListParameterProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: StringListParameterProps.Builder.() -> Unit,
+  ) : this(scope, id, StringListParameterProps(props)
+  )
+
   /**
    * The encryption key that is used to encrypt this parameter.
    *

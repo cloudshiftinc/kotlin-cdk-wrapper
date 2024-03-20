@@ -70,6 +70,22 @@ public open class CfnSubscriptionDefinition internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubscriptionDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSubscriptionDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubscriptionDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSubscriptionDefinitionProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `SubscriptionDefinition` , such as
    * `arn:aws:greengrass:us-east-1: 

@@ -51,6 +51,22 @@ public open class CfnSuiteDefinition internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSuiteDefinitionProps,
+  ) :
+      this(software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSuiteDefinitionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSuiteDefinitionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSuiteDefinitionProps(props)
+  )
+
   /**
    * The Arn of the Suite Definition.
    */

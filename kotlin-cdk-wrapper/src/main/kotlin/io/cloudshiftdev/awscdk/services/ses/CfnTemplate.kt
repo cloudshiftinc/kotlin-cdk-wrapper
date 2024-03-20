@@ -44,6 +44,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.CfnTemplate,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ses.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.ses.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTemplateProps(props)
+  )
+
   /**
    *
    */

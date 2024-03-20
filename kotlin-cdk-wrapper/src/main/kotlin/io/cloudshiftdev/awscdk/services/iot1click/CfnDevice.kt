@@ -39,6 +39,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDevice internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iot1click.CfnDevice,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeviceProps,
+  ) :
+      this(software.amazon.awscdk.services.iot1click.CfnDevice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDeviceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDeviceProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDeviceProps(props)
+  )
+
   /**
    * The ARN of the device, such as
    * `arn:aws:iot1click:us-west-2:123456789012:devices/G030PX0312744DWM` .

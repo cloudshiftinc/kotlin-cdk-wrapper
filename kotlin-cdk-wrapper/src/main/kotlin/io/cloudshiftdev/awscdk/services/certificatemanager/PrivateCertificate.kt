@@ -34,6 +34,22 @@ public open class PrivateCertificate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.certificatemanager.PrivateCertificate,
 ) : Resource(cdkObject), ICertificate {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrivateCertificateProps,
+  ) :
+      this(software.amazon.awscdk.services.certificatemanager.PrivateCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PrivateCertificateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrivateCertificateProps.Builder.() -> Unit,
+  ) : this(scope, id, PrivateCertificateProps(props)
+  )
+
   /**
    * The certificate's ARN.
    */

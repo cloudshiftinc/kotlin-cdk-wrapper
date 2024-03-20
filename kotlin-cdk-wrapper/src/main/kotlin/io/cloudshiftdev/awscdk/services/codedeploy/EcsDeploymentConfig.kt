@@ -41,6 +41,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EcsDeploymentConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), IEcsDeploymentConfig {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsDeploymentConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(EcsDeploymentConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: EcsDeploymentConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, EcsDeploymentConfigProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.EcsDeploymentConfig].
    */

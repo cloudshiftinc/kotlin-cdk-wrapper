@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSubnetGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.memorydb.CfnSubnetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.memorydb.CfnSubnetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSubnetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSubnetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSubnetGroupProps(props)
+  )
+
   /**
    * When you pass the logical ID of this resource to the intrinsic `Ref` function, Ref returns the
    * ARN of the subnet group, such as

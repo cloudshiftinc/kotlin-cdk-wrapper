@@ -55,6 +55,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSimpleTable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSimpleTableProps,
+  ) :
+      this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSimpleTableProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSimpleTableProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSimpleTableProps(props)
+  )
+
   /**
    * Examines the CloudFormation resource and discloses attributes.
    *

@@ -69,6 +69,27 @@ public open class CfnObservabilityConfiguration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnObservabilityConfigurationProps,
+  ) :
+      this(software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnObservabilityConfigurationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnObservabilityConfigurationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnObservabilityConfigurationProps(props)
+  )
+
   /**
    * It's set to `true` for the configuration with the highest `Revision` among all configurations
    * that share the same `ObservabilityConfigurationName` .

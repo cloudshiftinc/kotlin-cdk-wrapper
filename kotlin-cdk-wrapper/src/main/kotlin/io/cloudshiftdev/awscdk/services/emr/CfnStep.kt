@@ -50,6 +50,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStep internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.emr.CfnStep,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStepProps,
+  ) :
+      this(software.amazon.awscdk.services.emr.CfnStep(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStepProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStepProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStepProps(props)
+  )
+
   /**
    * This specifies what action to take when the cluster step fails.
    */

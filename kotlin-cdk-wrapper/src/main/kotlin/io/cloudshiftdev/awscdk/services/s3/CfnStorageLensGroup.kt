@@ -101,6 +101,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStorageLensGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.CfnStorageLensGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStorageLensGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.s3.CfnStorageLensGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStorageLensGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStorageLensGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStorageLensGroupProps(props)
+  )
+
   /**
    * The ARN for the Amazon S3 Storage Lens Group.
    */

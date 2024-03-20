@@ -46,6 +46,17 @@ import kotlin.jvm.JvmName
 public open class CliCredentialsStackSynthesizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CliCredentialsStackSynthesizer,
 ) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
+  public constructor() : this(software.amazon.awscdk.CliCredentialsStackSynthesizer()
+  )
+
+  public constructor(props: CliCredentialsStackSynthesizerProps) :
+      this(software.amazon.awscdk.CliCredentialsStackSynthesizer(props.let(CliCredentialsStackSynthesizerProps::unwrap))
+  )
+
+  public constructor(props: CliCredentialsStackSynthesizerProps.Builder.() -> Unit) :
+      this(CliCredentialsStackSynthesizerProps(props)
+  )
+
   /**
    * Register a Docker Image Asset.
    *

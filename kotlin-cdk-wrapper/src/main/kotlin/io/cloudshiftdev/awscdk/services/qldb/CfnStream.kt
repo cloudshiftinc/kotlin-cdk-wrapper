@@ -61,6 +61,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStream internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.qldb.CfnStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamProps,
+  ) :
+      this(software.amazon.awscdk.services.qldb.CfnStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnStreamProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnStreamProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnStreamProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the QLDB journal stream.
    *

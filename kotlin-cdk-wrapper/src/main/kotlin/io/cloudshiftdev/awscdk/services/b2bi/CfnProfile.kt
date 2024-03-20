@@ -46,6 +46,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnProfile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.b2bi.CfnProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfileProps,
+  ) :
+      this(software.amazon.awscdk.services.b2bi.CfnProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnProfileProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnProfileProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnProfileProps(props)
+  )
+
   /**
    * Returns the timestamp for creation date and time of the profile.
    */

@@ -29,6 +29,13 @@ import kotlin.collections.List
 public open class Action internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.Action,
 ) : CdkObject(cdkObject) {
+  public constructor(props: ActionProps) :
+      this(software.amazon.awscdk.services.appconfig.Action(props.let(ActionProps::unwrap))
+  )
+
+  public constructor(props: ActionProps.Builder.() -> Unit) : this(ActionProps(props)
+  )
+
   /**
    * The action points that will trigger the extension action.
    */

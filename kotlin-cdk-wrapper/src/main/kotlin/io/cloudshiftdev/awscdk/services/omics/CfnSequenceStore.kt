@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSequenceStore internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSequenceStoreProps,
+  ) :
+      this(software.amazon.awscdk.services.omics.CfnSequenceStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnSequenceStoreProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnSequenceStoreProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnSequenceStoreProps(props)
+  )
+
   /**
    * The store's ARN.
    */

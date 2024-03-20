@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUsagePlanKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlanKey,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUsagePlanKeyProps,
+  ) :
+      this(software.amazon.awscdk.services.apigateway.CfnUsagePlanKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnUsagePlanKeyProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnUsagePlanKeyProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnUsagePlanKeyProps(props)
+  )
+
   /**
    * The ID for the usage plan key.
    *

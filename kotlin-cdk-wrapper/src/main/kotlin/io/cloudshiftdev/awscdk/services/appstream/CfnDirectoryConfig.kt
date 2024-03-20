@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDirectoryConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appstream.CfnDirectoryConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDirectoryConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.appstream.CfnDirectoryConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDirectoryConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDirectoryConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDirectoryConfigProps(props)
+  )
+
   /**
    * The certificate-based authentication properties used to authenticate SAML 2.0 Identity Provider
    * (IdP) user identities to Active Directory domain-joined streaming instances.

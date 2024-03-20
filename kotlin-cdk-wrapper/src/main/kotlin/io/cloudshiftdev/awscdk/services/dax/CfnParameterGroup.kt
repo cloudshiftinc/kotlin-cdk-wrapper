@@ -35,6 +35,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnParameterGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dax.CfnParameterGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.dax.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnParameterGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.dax.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnParameterGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnParameterGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnParameterGroupProps(props)
+  )
+
   /**
    *
    */

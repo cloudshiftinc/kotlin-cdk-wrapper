@@ -56,6 +56,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTypeActivation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnTypeActivation,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.CfnTypeActivation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTypeActivationProps,
+  ) :
+      this(software.amazon.awscdk.CfnTypeActivation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnTypeActivationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnTypeActivationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnTypeActivationProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the activated extension, in this account and Region.
    */

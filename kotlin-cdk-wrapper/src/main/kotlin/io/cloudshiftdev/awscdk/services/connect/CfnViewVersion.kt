@@ -34,6 +34,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnViewVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.connect.CfnViewVersion,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnViewVersionProps,
+  ) :
+      this(software.amazon.awscdk.services.connect.CfnViewVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnViewVersionProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnViewVersionProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnViewVersionProps(props)
+  )
+
   /**
    * Current version of the view.
    */

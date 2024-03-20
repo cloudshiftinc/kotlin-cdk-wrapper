@@ -40,6 +40,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnContactChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContactChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.ssmcontacts.CfnContactChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnContactChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnContactChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnContactChannelProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the `ContactChannel` resource.
    */

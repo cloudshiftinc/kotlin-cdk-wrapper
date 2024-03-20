@@ -33,6 +33,15 @@ import kotlin.Unit
 public open class ServiceConnect internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ServiceConnect,
 ) : CdkObject(cdkObject) {
+  public constructor(networkmode: NetworkMode, pm: PortMapping) :
+      this(software.amazon.awscdk.services.ecs.ServiceConnect(networkmode.let(NetworkMode::unwrap),
+      pm.let(PortMapping::unwrap))
+  )
+
+  public constructor(networkmode: NetworkMode, pm: PortMapping.Builder.() -> Unit) :
+      this(networkmode, PortMapping(pm)
+  )
+
   /**
    * Judge parameters can be serviceconnect logick.
    *

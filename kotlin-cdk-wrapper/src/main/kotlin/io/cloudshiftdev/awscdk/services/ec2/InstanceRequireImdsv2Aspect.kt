@@ -29,6 +29,17 @@ import kotlin.Unit
 public open class InstanceRequireImdsv2Aspect internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect,
 ) : CdkObject(cdkObject), IAspect {
+  public constructor() : this(software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect()
+  )
+
+  public constructor(props: InstanceRequireImdsv2AspectProps) :
+      this(software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect(props.let(InstanceRequireImdsv2AspectProps::unwrap))
+  )
+
+  public constructor(props: InstanceRequireImdsv2AspectProps.Builder.() -> Unit) :
+      this(InstanceRequireImdsv2AspectProps(props)
+  )
+
   /**
    * All aspects can visit an IConstruct.
    *

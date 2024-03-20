@@ -47,6 +47,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCoreNetwork internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCoreNetworkProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnCoreNetwork(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCoreNetworkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCoreNetworkProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCoreNetworkProps(props)
+  )
+
   /**
    * The ARN of the core network.
    */

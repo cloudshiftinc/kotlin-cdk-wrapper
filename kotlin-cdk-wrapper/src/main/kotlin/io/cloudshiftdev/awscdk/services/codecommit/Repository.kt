@@ -57,6 +57,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Repository internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codecommit.Repository,
 ) : Resource(cdkObject), IRepository {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RepositoryProps,
+  ) :
+      this(software.amazon.awscdk.services.codecommit.Repository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(RepositoryProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: RepositoryProps.Builder.() -> Unit,
+  ) : this(scope, id, RepositoryProps(props)
+  )
+
   /**
    * Returns a source configuration for notification rule.
    *

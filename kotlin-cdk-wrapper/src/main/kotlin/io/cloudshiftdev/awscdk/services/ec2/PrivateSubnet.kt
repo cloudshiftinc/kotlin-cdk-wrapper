@@ -33,6 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class PrivateSubnet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnet,
 ) : Subnet(cdkObject), IPrivateSubnet {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrivateSubnetProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.PrivateSubnet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(PrivateSubnetProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: PrivateSubnetProps.Builder.() -> Unit,
+  ) : this(scope, id, PrivateSubnetProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.PrivateSubnet].
    */

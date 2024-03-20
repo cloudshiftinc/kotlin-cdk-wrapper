@@ -53,6 +53,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLink internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.networkmanager.CfnLink,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLinkProps,
+  ) :
+      this(software.amazon.awscdk.services.networkmanager.CfnLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLinkProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLinkProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLinkProps(props)
+  )
+
   /**
    * The date and time that the link was created.
    */

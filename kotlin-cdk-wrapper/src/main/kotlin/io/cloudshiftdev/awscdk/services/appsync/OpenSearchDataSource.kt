@@ -48,6 +48,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class OpenSearchDataSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.OpenSearchDataSource,
 ) : BackedDataSource(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: OpenSearchDataSourceProps,
+  ) :
+      this(software.amazon.awscdk.services.appsync.OpenSearchDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(OpenSearchDataSourceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: OpenSearchDataSourceProps.Builder.() -> Unit,
+  ) : this(scope, id, OpenSearchDataSourceProps(props)
+  )
+
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.appsync.OpenSearchDataSource].
    */

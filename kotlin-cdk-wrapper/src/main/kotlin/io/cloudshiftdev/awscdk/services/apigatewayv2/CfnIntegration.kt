@@ -60,6 +60,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIntegration internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIntegrationProps,
+  ) :
+      this(software.amazon.awscdk.services.apigatewayv2.CfnIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIntegrationProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIntegrationProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIntegrationProps(props)
+  )
+
   /**
    * The API identifier.
    */

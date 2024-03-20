@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.cxapi
 
+import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactManifest
 import io.cloudshiftdev.awscdk.cloudassembly.schema.ArtifactType
 import io.cloudshiftdev.awscdk.cloudassembly.schema.AssetManifest
 import io.cloudshiftdev.awscdk.cloudassembly.schema.AssetManifestProperties
@@ -74,6 +75,21 @@ import kotlin.jvm.JvmName
 public open class AssetManifestArtifact internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.AssetManifestArtifact,
 ) : CloudArtifact(cdkObject) {
+  public constructor(
+    assembly: CloudAssembly,
+    name: String,
+    artifact: ArtifactManifest,
+  ) : this(software.amazon.awscdk.cxapi.AssetManifestArtifact(assembly.let(CloudAssembly::unwrap),
+      name, artifact.let(ArtifactManifest::unwrap))
+  )
+
+  public constructor(
+    assembly: CloudAssembly,
+    name: String,
+    artifact: ArtifactManifest.Builder.() -> Unit,
+  ) : this(assembly, name, ArtifactManifest(artifact)
+  )
+
   /**
    * Name of SSM parameter with bootstrap stack version.
    *

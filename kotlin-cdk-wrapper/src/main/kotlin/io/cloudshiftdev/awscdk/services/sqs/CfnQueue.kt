@@ -85,6 +85,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnQueue internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sqs.CfnQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.sqs.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnQueueProps,
+  ) :
+      this(software.amazon.awscdk.services.sqs.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnQueueProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnQueueProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnQueueProps(props)
+  )
+
   /**
    * Returns the Amazon Resource Name (ARN) of the queue.
    *

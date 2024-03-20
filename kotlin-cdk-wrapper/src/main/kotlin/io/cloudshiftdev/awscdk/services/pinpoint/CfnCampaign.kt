@@ -465,6 +465,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnCampaign internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCampaignProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnCampaign(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnCampaignProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnCampaignProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnCampaignProps(props)
+  )
+
   /**
    * An array of requests that defines additional treatments for the campaign, in addition to the
    * default treatment for the campaign.

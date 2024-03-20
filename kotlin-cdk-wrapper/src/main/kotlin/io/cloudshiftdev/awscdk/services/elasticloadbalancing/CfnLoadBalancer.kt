@@ -108,6 +108,22 @@ public open class CfnLoadBalancer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoadBalancerProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnLoadBalancerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnLoadBalancerProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnLoadBalancerProps(props)
+  )
+
   /**
    * Information about where and how access logs are stored for the load balancer.
    */

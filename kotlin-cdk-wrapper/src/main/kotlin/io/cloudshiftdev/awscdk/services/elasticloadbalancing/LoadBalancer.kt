@@ -41,6 +41,22 @@ public open class LoadBalancer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer,
 ) : Resource(cdkObject), IConnectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LoadBalancerProps,
+  ) :
+      this(software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LoadBalancerProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LoadBalancerProps.Builder.() -> Unit,
+  ) : this(scope, id, LoadBalancerProps(props)
+  )
+
   /**
    * Add a backend to the load balancer.
    *

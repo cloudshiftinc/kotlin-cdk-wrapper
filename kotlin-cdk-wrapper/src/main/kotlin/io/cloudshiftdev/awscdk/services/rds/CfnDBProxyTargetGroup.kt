@@ -80,6 +80,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDBProxyTargetGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBProxyTargetGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBProxyTargetGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBProxyTargetGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBProxyTargetGroupProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) representing the target group.
    */

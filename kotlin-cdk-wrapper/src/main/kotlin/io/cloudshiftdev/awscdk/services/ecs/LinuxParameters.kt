@@ -34,6 +34,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LinuxParameters internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.LinuxParameters,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LinuxParametersProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(LinuxParametersProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: LinuxParametersProps.Builder.() -> Unit,
+  ) : this(scope, id, LinuxParametersProps(props)
+  )
+
   /**
    * Adds one or more Linux capabilities to the Docker configuration of a container.
    *

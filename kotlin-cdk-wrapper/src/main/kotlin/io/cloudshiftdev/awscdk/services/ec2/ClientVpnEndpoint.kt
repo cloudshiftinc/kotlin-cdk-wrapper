@@ -37,6 +37,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class ClientVpnEndpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpoint,
 ) : Resource(cdkObject), IClientVpnEndpoint {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ClientVpnEndpointProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.ClientVpnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(ClientVpnEndpointProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: ClientVpnEndpointProps.Builder.() -> Unit,
+  ) : this(scope, id, ClientVpnEndpointProps(props)
+  )
+
   /**
    * Adds an authorization rule to this endpoint.
    *

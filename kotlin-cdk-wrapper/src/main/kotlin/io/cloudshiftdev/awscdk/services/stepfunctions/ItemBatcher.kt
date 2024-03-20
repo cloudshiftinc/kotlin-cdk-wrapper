@@ -33,6 +33,13 @@ import kotlin.collections.List
 public open class ItemBatcher internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcher,
 ) : CdkObject(cdkObject) {
+  public constructor(props: ItemBatcherProps) :
+      this(software.amazon.awscdk.services.stepfunctions.ItemBatcher(props.let(ItemBatcherProps::unwrap))
+  )
+
+  public constructor(props: ItemBatcherProps.Builder.() -> Unit) : this(ItemBatcherProps(props)
+  )
+
   /**
    * Render ItemBatcher in ASL JSON format.
    */

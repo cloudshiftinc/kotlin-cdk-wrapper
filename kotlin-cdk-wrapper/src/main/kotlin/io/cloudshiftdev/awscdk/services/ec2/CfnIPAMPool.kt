@@ -74,6 +74,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPAMPool internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPool,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMPoolProps,
+  ) :
+      this(software.amazon.awscdk.services.ec2.CfnIPAMPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnIPAMPoolProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnIPAMPoolProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnIPAMPoolProps(props)
+  )
+
   /**
    * The address family of the pool.
    */

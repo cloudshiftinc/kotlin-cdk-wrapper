@@ -55,6 +55,22 @@ public open class SageMakerCreateTransformJob internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJob,
 ) : TaskStateBase(cdkObject) {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SageMakerCreateTransformJobProps,
+  ) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(SageMakerCreateTransformJobProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: SageMakerCreateTransformJobProps.Builder.() -> Unit,
+  ) : this(scope, id, SageMakerCreateTransformJobProps(props)
+  )
+
   /**
    * The execution role for the Sagemaker transform job.
    *

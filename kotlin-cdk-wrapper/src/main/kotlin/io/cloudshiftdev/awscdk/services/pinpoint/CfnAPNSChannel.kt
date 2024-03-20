@@ -49,6 +49,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAPNSChannel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnAPNSChannel,
 ) : CfnResource(cdkObject), IInspectable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAPNSChannelProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnAPNSChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnAPNSChannelProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnAPNSChannelProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnAPNSChannelProps(props)
+  )
+
   /**
    * The unique identifier for the Amazon Pinpoint application that the APNs channel applies to.
    */

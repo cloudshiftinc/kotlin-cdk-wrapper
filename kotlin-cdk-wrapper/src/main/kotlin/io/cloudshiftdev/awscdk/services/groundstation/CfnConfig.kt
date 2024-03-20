@@ -113,6 +113,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigProps,
+  ) :
+      this(software.amazon.awscdk.services.groundstation.CfnConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnConfigProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnConfigProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnConfigProps(props)
+  )
+
   /**
    * The ARN of the config, such as
    * `arn:aws:groundstation:us-east-2:1234567890:config/tracking/9940bf3b-d2ba-427e-9906-842b5e5d2296`

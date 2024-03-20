@@ -35,6 +35,14 @@ public open class S3ObjectsItemReader internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReader,
 ) : CdkObject(cdkObject), IItemReader {
+  public constructor(props: S3ObjectsItemReaderProps) :
+      this(software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReader(props.let(S3ObjectsItemReaderProps::unwrap))
+  )
+
+  public constructor(props: S3ObjectsItemReaderProps.Builder.() -> Unit) :
+      this(S3ObjectsItemReaderProps(props)
+  )
+
   /**
    * S3 Bucket containing objects to iterate over.
    */

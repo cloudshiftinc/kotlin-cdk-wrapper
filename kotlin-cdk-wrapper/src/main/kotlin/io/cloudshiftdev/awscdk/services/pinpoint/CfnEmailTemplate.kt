@@ -44,6 +44,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnEmailTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.pinpoint.CfnEmailTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEmailTemplateProps,
+  ) :
+      this(software.amazon.awscdk.services.pinpoint.CfnEmailTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnEmailTemplateProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnEmailTemplateProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnEmailTemplateProps(props)
+  )
+
   /**
    * The Amazon Resource Name (ARN) of the message template.
    */

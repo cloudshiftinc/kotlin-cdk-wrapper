@@ -74,6 +74,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDBParameterGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.neptune.CfnDBParameterGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBParameterGroupProps,
+  ) :
+      this(software.amazon.awscdk.services.neptune.CfnDBParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(CfnDBParameterGroupProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: CfnDBParameterGroupProps.Builder.() -> Unit,
+  ) : this(scope, id, CfnDBParameterGroupProps(props)
+  )
+
   /**
    *
    */

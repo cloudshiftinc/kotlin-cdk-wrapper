@@ -56,6 +56,27 @@ public open class QueueProcessingEc2Service internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service,
 ) : QueueProcessingServiceBase(cdkObject) {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id)
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: QueueProcessingEc2ServiceProps,
+  ) :
+      this(software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      id, props.let(QueueProcessingEc2ServiceProps::unwrap))
+  )
+
+  public constructor(
+    scope: CloudshiftdevConstructsConstruct,
+    id: String,
+    props: QueueProcessingEc2ServiceProps.Builder.() -> Unit,
+  ) : this(scope, id, QueueProcessingEc2ServiceProps(props)
+  )
+
   /**
    * The EC2 service in this construct.
    */
