@@ -206,8 +206,8 @@ public open class Cluster internal constructor(
    * @param id logical id of this manifest. 
    * @param manifest a list of Kubernetes resource specifications. 
    */
-  public override fun addManifest(id: String, manifest: Map<String, Any>): KubernetesManifest =
-      unwrap(this).addManifest(id, manifest).let(KubernetesManifest::wrap)
+  public override fun addManifest(id: String, vararg manifest: Map<String, Any>): KubernetesManifest
+      = unwrap(this).addManifest(id, *manifest).let(KubernetesManifest::wrap)
 
   /**
    * Add managed nodegroup to this Amazon EKS cluster.

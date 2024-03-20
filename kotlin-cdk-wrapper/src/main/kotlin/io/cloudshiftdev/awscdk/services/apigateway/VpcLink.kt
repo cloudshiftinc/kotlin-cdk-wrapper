@@ -42,8 +42,8 @@ public open class VpcLink internal constructor(
   /**
    * @param targets 
    */
-  public open fun addTargets(targets: INetworkLoadBalancer) {
-    unwrap(this).addTargets(targets.let(INetworkLoadBalancer::unwrap))
+  public open fun addTargets(vararg targets: INetworkLoadBalancer) {
+    unwrap(this).addTargets(*targets.map(INetworkLoadBalancer::unwrap).toTypedArray())
   }
 
   /**

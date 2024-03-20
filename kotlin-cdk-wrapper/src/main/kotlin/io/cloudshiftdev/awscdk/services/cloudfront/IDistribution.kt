@@ -33,7 +33,7 @@ public interface IDistribution : IResource {
    * @param identity The principal. 
    * @param actions The set of actions to allow (i.e. "cloudfront:ListInvalidations"). 
    */
-  public fun grant(identity: IGrantable, actions: String): Grant
+  public fun grant(identity: IGrantable, vararg actions: String): Grant
 
   /**
    * Grant to create invalidations for this bucket to an IAM principal (Role/Group/User).
@@ -90,8 +90,8 @@ public interface IDistribution : IResource {
      * @param identity The principal. 
      * @param actions The set of actions to allow (i.e. "cloudfront:ListInvalidations"). 
      */
-    override fun grant(identity: IGrantable, actions: String): Grant =
-        unwrap(this).grant(identity.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grant(identity: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Grant to create invalidations for this bucket to an IAM principal (Role/Group/User).

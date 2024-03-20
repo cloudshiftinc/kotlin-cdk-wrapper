@@ -76,8 +76,8 @@ public open class Instance internal constructor(
    *
    * @param commands 
    */
-  public open fun addUserData(commands: String) {
-    unwrap(this).addUserData(commands)
+  public open fun addUserData(vararg commands: String) {
+    unwrap(this).addUserData(*commands)
   }
 
   /**

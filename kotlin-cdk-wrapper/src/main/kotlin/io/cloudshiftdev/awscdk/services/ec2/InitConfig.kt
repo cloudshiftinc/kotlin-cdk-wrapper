@@ -64,8 +64,8 @@ public open class InitConfig internal constructor(
    *
    * @param elements 
    */
-  public open fun add(elements: InitElement) {
-    unwrap(this).add(elements.let(InitElement::unwrap))
+  public open fun add(vararg elements: InitElement) {
+    unwrap(this).add(*elements.map(InitElement::unwrap).toTypedArray())
   }
 
   /**

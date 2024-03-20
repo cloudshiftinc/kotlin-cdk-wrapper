@@ -57,11 +57,11 @@ public abstract class BucketBase internal constructor(
   public override fun addEventNotification(
     event: EventType,
     dest: IBucketNotificationDestination,
-    filters: NotificationKeyFilter,
+    vararg filters: NotificationKeyFilter,
   ) {
     unwrap(this).addEventNotification(event.let(EventType::unwrap),
         dest.let(IBucketNotificationDestination::unwrap),
-        filters.let(NotificationKeyFilter::unwrap))
+        *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
   }
 
   /**
@@ -98,10 +98,10 @@ public abstract class BucketBase internal constructor(
    * @param dest The notification destination (see onEvent). 
    * @param filters Filters (see onEvent). 
    */
-  public override fun addObjectCreatedNotification(dest: IBucketNotificationDestination,
+  public override fun addObjectCreatedNotification(dest: IBucketNotificationDestination, vararg
       filters: NotificationKeyFilter) {
     unwrap(this).addObjectCreatedNotification(dest.let(IBucketNotificationDestination::unwrap),
-        filters.let(NotificationKeyFilter::unwrap))
+        *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
   }
 
   /**
@@ -128,10 +128,10 @@ public abstract class BucketBase internal constructor(
    * @param dest The notification destination (see onEvent). 
    * @param filters Filters (see onEvent). 
    */
-  public override fun addObjectRemovedNotification(dest: IBucketNotificationDestination,
+  public override fun addObjectRemovedNotification(dest: IBucketNotificationDestination, vararg
       filters: NotificationKeyFilter) {
     unwrap(this).addObjectRemovedNotification(dest.let(IBucketNotificationDestination::unwrap),
-        filters.let(NotificationKeyFilter::unwrap))
+        *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
   }
 
   /**
@@ -314,8 +314,8 @@ public abstract class BucketBase internal constructor(
    * @param keyPrefix the prefix of S3 object keys (e.g. `home/ *`). Default is "*".
    * @param allowedActions the set of S3 actions to allow. 
    */
-  public override fun grantPublicAccess(keyPrefix: String, allowedActions: String): Grant =
-      unwrap(this).grantPublicAccess(keyPrefix, allowedActions).let(Grant::wrap)
+  public override fun grantPublicAccess(keyPrefix: String, vararg allowedActions: String): Grant =
+      unwrap(this).grantPublicAccess(keyPrefix, *allowedActions).let(Grant::wrap)
 
   /**
    * Grants s3:PutObject* and s3:Abort* permissions for this bucket to an IAM principal.

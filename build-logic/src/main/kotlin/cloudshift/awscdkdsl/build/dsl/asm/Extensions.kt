@@ -47,6 +47,8 @@ internal value class AccessFlags(private val value: Int) {
 
     fun isGenerated() = isSynthetic() || isBridge()
 
+    fun isVarArgs() = flagSet(Opcodes.ACC_VARARGS)
+
     private fun flagSet(flag: Int): Boolean = (value and flag) != 0
 }
 

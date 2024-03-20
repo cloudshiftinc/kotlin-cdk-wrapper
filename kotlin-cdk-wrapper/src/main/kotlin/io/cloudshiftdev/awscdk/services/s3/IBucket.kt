@@ -46,7 +46,7 @@ public interface IBucket : IResource {
   public fun addEventNotification(
     event: EventType,
     dest: IBucketNotificationDestination,
-    filters: NotificationKeyFilter,
+    vararg filters: NotificationKeyFilter,
   )
 
   /**
@@ -83,7 +83,7 @@ public interface IBucket : IResource {
    * @param dest The notification destination (see onEvent). 
    * @param filters Filters (see onEvent). 
    */
-  public fun addObjectCreatedNotification(dest: IBucketNotificationDestination,
+  public fun addObjectCreatedNotification(dest: IBucketNotificationDestination, vararg
       filters: NotificationKeyFilter)
 
   /**
@@ -109,7 +109,7 @@ public interface IBucket : IResource {
    * @param dest The notification destination (see onEvent). 
    * @param filters Filters (see onEvent). 
    */
-  public fun addObjectRemovedNotification(dest: IBucketNotificationDestination,
+  public fun addObjectRemovedNotification(dest: IBucketNotificationDestination, vararg
       filters: NotificationKeyFilter)
 
   /**
@@ -275,7 +275,7 @@ public interface IBucket : IResource {
    * @param keyPrefix the prefix of S3 object keys (e.g. `home/ *`). Default is "*".
    * @param allowedActions the set of S3 actions to allow. 
    */
-  public fun grantPublicAccess(keyPrefix: String, allowedActions: String): Grant
+  public fun grantPublicAccess(keyPrefix: String, vararg allowedActions: String): Grant
 
   /**
    * Grants s3:PutObject* and s3:Abort* permissions for this bucket to an IAM principal.
@@ -826,11 +826,11 @@ public interface IBucket : IResource {
     override fun addEventNotification(
       event: EventType,
       dest: IBucketNotificationDestination,
-      filters: NotificationKeyFilter,
+      vararg filters: NotificationKeyFilter,
     ) {
       unwrap(this).addEventNotification(event.let(EventType::unwrap),
           dest.let(IBucketNotificationDestination::unwrap),
-          filters.let(NotificationKeyFilter::unwrap))
+          *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
     }
 
     /**
@@ -867,10 +867,10 @@ public interface IBucket : IResource {
      * @param dest The notification destination (see onEvent). 
      * @param filters Filters (see onEvent). 
      */
-    override fun addObjectCreatedNotification(dest: IBucketNotificationDestination,
+    override fun addObjectCreatedNotification(dest: IBucketNotificationDestination, vararg
         filters: NotificationKeyFilter) {
       unwrap(this).addObjectCreatedNotification(dest.let(IBucketNotificationDestination::unwrap),
-          filters.let(NotificationKeyFilter::unwrap))
+          *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
     }
 
     /**
@@ -897,10 +897,10 @@ public interface IBucket : IResource {
      * @param dest The notification destination (see onEvent). 
      * @param filters Filters (see onEvent). 
      */
-    override fun addObjectRemovedNotification(dest: IBucketNotificationDestination,
+    override fun addObjectRemovedNotification(dest: IBucketNotificationDestination, vararg
         filters: NotificationKeyFilter) {
       unwrap(this).addObjectRemovedNotification(dest.let(IBucketNotificationDestination::unwrap),
-          filters.let(NotificationKeyFilter::unwrap))
+          *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
     }
 
     /**
@@ -1102,8 +1102,8 @@ public interface IBucket : IResource {
      * @param keyPrefix the prefix of S3 object keys (e.g. `home/ *`). Default is "*".
      * @param allowedActions the set of S3 actions to allow. 
      */
-    override fun grantPublicAccess(keyPrefix: String, allowedActions: String): Grant =
-        unwrap(this).grantPublicAccess(keyPrefix, allowedActions).let(Grant::wrap)
+    override fun grantPublicAccess(keyPrefix: String, vararg allowedActions: String): Grant =
+        unwrap(this).grantPublicAccess(keyPrefix, *allowedActions).let(Grant::wrap)
 
     /**
      * Grants s3:PutObject* and s3:Abort* permissions for this bucket to an IAM principal.

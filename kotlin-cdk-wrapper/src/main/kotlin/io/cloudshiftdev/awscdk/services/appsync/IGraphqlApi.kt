@@ -412,7 +412,7 @@ public interface IGraphqlApi : IResource {
   public fun grant(
     grantee: IGrantable,
     resources: IamResource,
-    actions: String,
+    vararg actions: String,
   ): Grant
 
   /**
@@ -422,7 +422,7 @@ public interface IGraphqlApi : IResource {
    * @param grantee The principal. 
    * @param fields The fields to grant access to that are Mutations (leave blank for all). 
    */
-  public fun grantMutation(grantee: IGrantable, fields: String): Grant
+  public fun grantMutation(grantee: IGrantable, vararg fields: String): Grant
 
   /**
    * Adds an IAM policy statement for Query access to this GraphQLApi to an IAM principal's policy.
@@ -430,7 +430,7 @@ public interface IGraphqlApi : IResource {
    * @param grantee The principal. 
    * @param fields The fields to grant access to that are Queries (leave blank for all). 
    */
-  public fun grantQuery(grantee: IGrantable, fields: String): Grant
+  public fun grantQuery(grantee: IGrantable, vararg fields: String): Grant
 
   /**
    * Adds an IAM policy statement for Subscription access to this GraphQLApi to an IAM principal's
@@ -439,7 +439,7 @@ public interface IGraphqlApi : IResource {
    * @param grantee The principal. 
    * @param fields The fields to grant access to that are Subscriptions (leave blank for all). 
    */
-  public fun grantSubscription(grantee: IGrantable, fields: String): Grant
+  public fun grantSubscription(grantee: IGrantable, vararg fields: String): Grant
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appsync.IGraphqlApi,
@@ -889,9 +889,9 @@ public interface IGraphqlApi : IResource {
     override fun grant(
       grantee: IGrantable,
       resources: IamResource,
-      actions: String,
+      vararg actions: String,
     ): Grant = unwrap(this).grant(grantee.let(IGrantable::unwrap),
-        resources.let(IamResource::unwrap), actions).let(Grant::wrap)
+        resources.let(IamResource::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Adds an IAM policy statement for Mutation access to this GraphQLApi to an IAM principal's
@@ -900,8 +900,8 @@ public interface IGraphqlApi : IResource {
      * @param grantee The principal. 
      * @param fields The fields to grant access to that are Mutations (leave blank for all). 
      */
-    override fun grantMutation(grantee: IGrantable, fields: String): Grant =
-        unwrap(this).grantMutation(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
+    override fun grantMutation(grantee: IGrantable, vararg fields: String): Grant =
+        unwrap(this).grantMutation(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
 
     /**
      * Adds an IAM policy statement for Query access to this GraphQLApi to an IAM principal's
@@ -910,8 +910,8 @@ public interface IGraphqlApi : IResource {
      * @param grantee The principal. 
      * @param fields The fields to grant access to that are Queries (leave blank for all). 
      */
-    override fun grantQuery(grantee: IGrantable, fields: String): Grant =
-        unwrap(this).grantQuery(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
+    override fun grantQuery(grantee: IGrantable, vararg fields: String): Grant =
+        unwrap(this).grantQuery(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
 
     /**
      * Adds an IAM policy statement for Subscription access to this GraphQLApi to an IAM principal's
@@ -920,8 +920,8 @@ public interface IGraphqlApi : IResource {
      * @param grantee The principal. 
      * @param fields The fields to grant access to that are Subscriptions (leave blank for all). 
      */
-    override fun grantSubscription(grantee: IGrantable, fields: String): Grant =
-        unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
+    override fun grantSubscription(grantee: IGrantable, vararg fields: String): Grant =
+        unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

@@ -96,8 +96,8 @@ public open class NetworkListener internal constructor(
    * @param _id 
    * @param targetGroups 
    */
-  public open fun addTargetGroups(id: String, targetGroups: INetworkTargetGroup) {
-    unwrap(this).addTargetGroups(id, targetGroups.let(INetworkTargetGroup::unwrap))
+  public open fun addTargetGroups(id: String, vararg targetGroups: INetworkTargetGroup) {
+    unwrap(this).addTargetGroups(id, *targetGroups.map(INetworkTargetGroup::unwrap).toTypedArray())
   }
 
   /**

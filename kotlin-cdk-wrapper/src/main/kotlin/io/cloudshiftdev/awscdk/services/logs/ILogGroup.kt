@@ -112,7 +112,7 @@ public interface ILogGroup : IResourceWithPolicy {
    * @param grantee 
    * @param actions 
    */
-  public fun grant(grantee: IGrantable, actions: String): Grant
+  public fun grant(grantee: IGrantable, vararg actions: String): Grant
 
   /**
    * Give permissions to read from this log group and streams.
@@ -290,8 +290,8 @@ public interface ILogGroup : IResourceWithPolicy {
      * @param grantee 
      * @param actions 
      */
-    override fun grant(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Give permissions to read from this log group and streams.

@@ -75,8 +75,8 @@ public interface ITableV2 : ITable {
      * @param actions The set of actions to allow (i.e. "dynamodb:PutItem", "dynamodb:GetItem",
      * ...). 
      */
-    override fun grant(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Permits all DynamoDB operations ("dynamodb:*") to an IAM principal.
@@ -126,8 +126,8 @@ public interface ITableV2 : ITable {
      * @param actions The set of actions to allow (i.e. "dynamodb:DescribeStream",
      * "dynamodb:GetRecords", ...). 
      */
-    override fun grantStream(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grantStream(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grantStream(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grantStream(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Permits an IAM principal all stream data read operations for this table's stream:

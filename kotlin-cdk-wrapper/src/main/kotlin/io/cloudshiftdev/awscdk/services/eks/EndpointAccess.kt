@@ -27,8 +27,8 @@ public open class EndpointAccess internal constructor(
    *
    * @param cidr CIDR blocks. 
    */
-  public open fun onlyFrom(cidr: String): EndpointAccess =
-      unwrap(this).onlyFrom(cidr).let(EndpointAccess::wrap)
+  public open fun onlyFrom(vararg cidr: String): EndpointAccess =
+      unwrap(this).onlyFrom(*cidr).let(EndpointAccess::wrap)
 
   public companion object {
     public val PRIVATE: EndpointAccess =

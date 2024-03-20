@@ -111,8 +111,8 @@ public open class Alias internal constructor(
    * @param grantee 
    * @param actions 
    */
-  public override fun grant(grantee: IGrantable, actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+  public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
   /**
    * Grant decryption permissions using this key to the given principal.

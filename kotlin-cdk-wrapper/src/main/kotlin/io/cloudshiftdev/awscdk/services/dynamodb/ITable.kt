@@ -38,7 +38,7 @@ public interface ITable : IResource {
    * @param grantee The principal (no-op if undefined). 
    * @param actions The set of actions to allow (i.e. "dynamodb:PutItem", "dynamodb:GetItem", ...). 
    */
-  public fun grant(grantee: IGrantable, actions: String): Grant
+  public fun grant(grantee: IGrantable, vararg actions: String): Grant
 
   /**
    * Permits all DynamoDB operations ("dynamodb:*") to an IAM principal.
@@ -84,7 +84,7 @@ public interface ITable : IResource {
    * @param actions The set of actions to allow (i.e. "dynamodb:DescribeStream",
    * "dynamodb:GetRecords", ...). 
    */
-  public fun grantStream(grantee: IGrantable, actions: String): Grant
+  public fun grantStream(grantee: IGrantable, vararg actions: String): Grant
 
   /**
    * Permits an IAM principal all stream data read operations for this table's stream:
@@ -397,8 +397,8 @@ public interface ITable : IResource {
      * @param actions The set of actions to allow (i.e. "dynamodb:PutItem", "dynamodb:GetItem",
      * ...). 
      */
-    override fun grant(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Permits all DynamoDB operations ("dynamodb:*") to an IAM principal.
@@ -448,8 +448,8 @@ public interface ITable : IResource {
      * @param actions The set of actions to allow (i.e. "dynamodb:DescribeStream",
      * "dynamodb:GetRecords", ...). 
      */
-    override fun grantStream(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grantStream(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grantStream(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grantStream(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Permits an IAM principal all stream data read operations for this table's stream:

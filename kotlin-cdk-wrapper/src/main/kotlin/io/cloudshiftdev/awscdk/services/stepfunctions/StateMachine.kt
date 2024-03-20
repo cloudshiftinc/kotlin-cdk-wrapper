@@ -74,8 +74,8 @@ public open class StateMachine internal constructor(
    * @param identity 
    * @param actions 
    */
-  public override fun grant(identity: IGrantable, actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), actions).let(Grant::wrap)
+  public override fun grant(identity: IGrantable, vararg actions: String): Grant =
+      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions on all executions of the state machine.
@@ -83,8 +83,8 @@ public open class StateMachine internal constructor(
    * @param identity 
    * @param actions 
    */
-  public override fun grantExecution(identity: IGrantable, actions: String): Grant =
-      unwrap(this).grantExecution(identity.let(IGrantable::unwrap), actions).let(Grant::wrap)
+  public override fun grantExecution(identity: IGrantable, vararg actions: String): Grant =
+      unwrap(this).grantExecution(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
   /**
    * The principal this state machine is running as.

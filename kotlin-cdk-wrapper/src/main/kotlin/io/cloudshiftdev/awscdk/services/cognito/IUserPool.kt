@@ -99,7 +99,7 @@ public interface IUserPool : IResource {
    * @param grantee 
    * @param actions 
    */
-  public fun grant(grantee: IGrantable, actions: String): Grant
+  public fun grant(grantee: IGrantable, vararg actions: String): Grant
 
   /**
    * Get all identity providers registered with this user pool.
@@ -241,8 +241,8 @@ public interface IUserPool : IResource {
      * @param grantee 
      * @param actions 
      */
-    override fun grant(grantee: IGrantable, actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
+    override fun grant(grantee: IGrantable, vararg actions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
 
     /**
      * Get all identity providers registered with this user pool.

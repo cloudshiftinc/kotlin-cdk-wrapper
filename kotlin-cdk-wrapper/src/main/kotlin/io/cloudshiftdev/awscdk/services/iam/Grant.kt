@@ -39,8 +39,8 @@ public open class Grant internal constructor(
    *
    * @param constructs 
    */
-  public open fun applyBefore(constructs: IConstruct) {
-    unwrap(this).applyBefore(constructs.let(IConstruct::unwrap))
+  public open fun applyBefore(vararg constructs: IConstruct) {
+    unwrap(this).applyBefore(*constructs.map(IConstruct::unwrap).toTypedArray())
   }
 
   /**

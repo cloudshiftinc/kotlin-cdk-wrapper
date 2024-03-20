@@ -60,8 +60,8 @@ public open class SingletonFunction internal constructor(
    *
    * @param up 
    */
-  public open fun addDependency(up: IDependable) {
-    unwrap(this).addDependency(up.let(IDependable::unwrap))
+  public open fun addDependency(vararg up: IDependable) {
+    unwrap(this).addDependency(*up.map(IDependable::unwrap).toTypedArray())
   }
 
   /**
@@ -114,8 +114,8 @@ public open class SingletonFunction internal constructor(
    *
    * @param layers the layers to be added. 
    */
-  public open fun addLayers(layers: ILayerVersion) {
-    unwrap(this).addLayers(layers.let(ILayerVersion::unwrap))
+  public open fun addLayers(vararg layers: ILayerVersion) {
+    unwrap(this).addLayers(*layers.map(ILayerVersion::unwrap).toTypedArray())
   }
 
   /**

@@ -20,8 +20,8 @@ public abstract class AlarmBase internal constructor(
    *
    * @param actions 
    */
-  public open fun addAlarmAction(actions: IAlarmAction) {
-    unwrap(this).addAlarmAction(actions.let(IAlarmAction::unwrap))
+  public open fun addAlarmAction(vararg actions: IAlarmAction) {
+    unwrap(this).addAlarmAction(*actions.map(IAlarmAction::unwrap).toTypedArray())
   }
 
   /**
@@ -31,8 +31,8 @@ public abstract class AlarmBase internal constructor(
    *
    * @param actions 
    */
-  public open fun addInsufficientDataAction(actions: IAlarmAction) {
-    unwrap(this).addInsufficientDataAction(actions.let(IAlarmAction::unwrap))
+  public open fun addInsufficientDataAction(vararg actions: IAlarmAction) {
+    unwrap(this).addInsufficientDataAction(*actions.map(IAlarmAction::unwrap).toTypedArray())
   }
 
   /**
@@ -42,8 +42,8 @@ public abstract class AlarmBase internal constructor(
    *
    * @param actions 
    */
-  public open fun addOkAction(actions: IAlarmAction) {
-    unwrap(this).addOkAction(actions.let(IAlarmAction::unwrap))
+  public open fun addOkAction(vararg actions: IAlarmAction) {
+    unwrap(this).addOkAction(*actions.map(IAlarmAction::unwrap).toTypedArray())
   }
 
   /**

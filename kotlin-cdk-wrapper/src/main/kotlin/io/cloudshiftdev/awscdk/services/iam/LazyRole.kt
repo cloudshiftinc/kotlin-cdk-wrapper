@@ -120,8 +120,8 @@ public open class LazyRole internal constructor(
    * @param identity 
    * @param actions 
    */
-  public override fun grant(identity: IPrincipal, actions: String): Grant =
-      unwrap(this).grant(identity.let(IPrincipal::unwrap), actions).let(Grant::wrap)
+  public override fun grant(identity: IPrincipal, vararg actions: String): Grant =
+      unwrap(this).grant(identity.let(IPrincipal::unwrap), *actions).let(Grant::wrap)
 
   /**
    * Grant permissions to the given principal to assume this role.

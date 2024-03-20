@@ -45,8 +45,8 @@ public open class ApplicationTargetGroup internal constructor(
    *
    * @param targets 
    */
-  public override fun addTarget(targets: IApplicationLoadBalancerTarget) {
-    unwrap(this).addTarget(targets.let(IApplicationLoadBalancerTarget::unwrap))
+  public override fun addTarget(vararg targets: IApplicationLoadBalancerTarget) {
+    unwrap(this).addTarget(*targets.map(IApplicationLoadBalancerTarget::unwrap).toTypedArray())
   }
 
   /**

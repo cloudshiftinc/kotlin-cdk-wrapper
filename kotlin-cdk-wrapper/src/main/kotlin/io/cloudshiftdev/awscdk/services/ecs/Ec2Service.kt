@@ -46,8 +46,8 @@ public open class Ec2Service internal constructor(
    *
    * @param constraints 
    */
-  public open fun addPlacementConstraints(constraints: PlacementConstraint) {
-    unwrap(this).addPlacementConstraints(constraints.let(PlacementConstraint::unwrap))
+  public open fun addPlacementConstraints(vararg constraints: PlacementConstraint) {
+    unwrap(this).addPlacementConstraints(*constraints.map(PlacementConstraint::unwrap).toTypedArray())
   }
 
   /**
@@ -59,8 +59,8 @@ public open class Ec2Service internal constructor(
    *
    * @param strategies 
    */
-  public open fun addPlacementStrategies(strategies: PlacementStrategy) {
-    unwrap(this).addPlacementStrategies(strategies.let(PlacementStrategy::unwrap))
+  public open fun addPlacementStrategies(vararg strategies: PlacementStrategy) {
+    unwrap(this).addPlacementStrategies(*strategies.map(PlacementStrategy::unwrap).toTypedArray())
   }
 
   /**

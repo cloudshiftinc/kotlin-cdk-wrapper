@@ -44,8 +44,8 @@ public open class Connections internal constructor(
    *
    * @param securityGroups 
    */
-  public open fun addSecurityGroup(securityGroups: ISecurityGroup) {
-    unwrap(this).addSecurityGroup(securityGroups.let(ISecurityGroup::unwrap))
+  public open fun addSecurityGroup(vararg securityGroups: ISecurityGroup) {
+    unwrap(this).addSecurityGroup(*securityGroups.map(ISecurityGroup::unwrap).toTypedArray())
   }
 
   /**

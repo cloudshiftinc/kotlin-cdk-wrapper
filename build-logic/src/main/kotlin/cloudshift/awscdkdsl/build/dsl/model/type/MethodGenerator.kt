@@ -142,7 +142,7 @@ internal data class MethodSpec(
             model: CdkModel
         ): MethodSpec {
             val parameters = method.parameters.map {
-                Parameter(it.name, it.type)
+                Parameter(it.name, it.type, it.vararg)
             }
             val isOverride = model.isOverrideMethod(enclosingClass.className, method)
 

@@ -183,8 +183,8 @@ public open class Function internal constructor(
    *
    * @param layers the layers to be added. 
    */
-  public open fun addLayers(layers: ILayerVersion) {
-    unwrap(this).addLayers(layers.let(ILayerVersion::unwrap))
+  public open fun addLayers(vararg layers: ILayerVersion) {
+    unwrap(this).addLayers(*layers.map(ILayerVersion::unwrap).toTypedArray())
   }
 
   /**

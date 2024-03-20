@@ -34,8 +34,8 @@ public open class Wave internal constructor(
    *
    * @param steps 
    */
-  public open fun addPost(steps: Step) {
-    unwrap(this).addPost(steps.let(Step::unwrap))
+  public open fun addPost(vararg steps: Step) {
+    unwrap(this).addPost(*steps.map(Step::unwrap).toTypedArray())
   }
 
   /**
@@ -43,8 +43,8 @@ public open class Wave internal constructor(
    *
    * @param steps 
    */
-  public open fun addPre(steps: Step) {
-    unwrap(this).addPre(steps.let(Step::unwrap))
+  public open fun addPre(vararg steps: Step) {
+    unwrap(this).addPre(*steps.map(Step::unwrap).toTypedArray())
   }
 
   /**

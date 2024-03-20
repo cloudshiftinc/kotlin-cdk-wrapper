@@ -44,6 +44,7 @@ internal interface CdkClass {
             val name: String
             val type: TypeName
             val nullable: Boolean
+            val vararg : Boolean
 
             fun typeName(): TypeName =
                 when (nullable) {

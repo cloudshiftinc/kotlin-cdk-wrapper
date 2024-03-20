@@ -59,8 +59,8 @@ public open class Domain internal constructor(
    * @param accessPolicyStatements 
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun addAccessPolicies(accessPolicyStatements: PolicyStatement) {
-    unwrap(this).addAccessPolicies(accessPolicyStatements.let(PolicyStatement::unwrap))
+  public open fun addAccessPolicies(vararg accessPolicyStatements: PolicyStatement) {
+    unwrap(this).addAccessPolicies(*accessPolicyStatements.map(PolicyStatement::unwrap).toTypedArray())
   }
 
   /**

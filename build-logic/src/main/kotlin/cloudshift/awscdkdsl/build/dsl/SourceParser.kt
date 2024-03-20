@@ -64,7 +64,8 @@ internal object SourceParser {
                     CdkSourceMethod(
                         name = method.name.identifier,
                         parameterNames = method.parameters.map { it.name.identifier },
-                        comment = comment
+                        comment = comment,
+                        parameterVarArgs = method.parameters.map { it.isVarArgs }
                     )
                 }
 

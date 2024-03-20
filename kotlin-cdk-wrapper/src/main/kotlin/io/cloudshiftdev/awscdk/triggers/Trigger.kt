@@ -42,8 +42,8 @@ public open class Trigger internal constructor(
    *
    * @param scopes 
    */
-  public override fun executeAfter(scopes: CloudshiftdevConstructsConstruct) {
-    unwrap(this).executeAfter(scopes.let(CloudshiftdevConstructsConstruct::unwrap))
+  public override fun executeAfter(vararg scopes: CloudshiftdevConstructsConstruct) {
+    unwrap(this).executeAfter(*scopes.map(CloudshiftdevConstructsConstruct::unwrap).toTypedArray())
   }
 
   /**
@@ -54,8 +54,8 @@ public open class Trigger internal constructor(
    *
    * @param scopes 
    */
-  public override fun executeBefore(scopes: CloudshiftdevConstructsConstruct) {
-    unwrap(this).executeBefore(scopes.let(CloudshiftdevConstructsConstruct::unwrap))
+  public override fun executeBefore(vararg scopes: CloudshiftdevConstructsConstruct) {
+    unwrap(this).executeBefore(*scopes.map(CloudshiftdevConstructsConstruct::unwrap).toTypedArray())
   }
 
   /**

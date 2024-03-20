@@ -75,7 +75,7 @@ public interface IQueue : IResource {
    * @param grantee Principal to grant right to. 
    * @param queueActions The actions to grant. 
    */
-  public fun grant(grantee: IGrantable, queueActions: String): Grant
+  public fun grant(grantee: IGrantable, vararg queueActions: String): Grant
 
   /**
    * Grant permissions to consume messages from a queue.
@@ -507,8 +507,8 @@ public interface IQueue : IResource {
      * @param grantee Principal to grant right to. 
      * @param queueActions The actions to grant. 
      */
-    override fun grant(grantee: IGrantable, queueActions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), queueActions).let(Grant::wrap)
+    override fun grant(grantee: IGrantable, vararg queueActions: String): Grant =
+        unwrap(this).grant(grantee.let(IGrantable::unwrap), *queueActions).let(Grant::wrap)
 
     /**
      * Grant permissions to consume messages from a queue.
